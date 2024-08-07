@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppDispatch, makeStore} from "@/lib/store/Store";
 import {articleApi} from "@/lib/query/article.query";
-import HomePageCardClient from "@/app/componets/home/HomePageCardClient";
+import HomePageCardClient from "@/app/components/home/HomePageCardClient";
 
 const HomePageCard = async () => {
     const store = makeStore();

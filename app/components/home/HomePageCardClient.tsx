@@ -1,6 +1,6 @@
 "use client"
 import React, {useEffect} from 'react';
-import ArticleCard from "@/app/componets/Cards/ArticleCard";
+import ArticleCard from "@/app/components/Cards/ArticleCard";
 
 const HomePageCardClient = ({ data }: { data: any }) => {
     useEffect(() => {
