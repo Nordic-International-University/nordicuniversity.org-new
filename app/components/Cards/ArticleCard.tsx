@@ -20,7 +20,7 @@ const ArticleCard = ({
 }: SmallCardProps) => {
   return (
     <div>
-      <div className="w-full  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden ">
+      <div className="w-full  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC]">
         <Image
           src={`https://journal2.nordicun.uz${imageUrl}`}
           alt={title}

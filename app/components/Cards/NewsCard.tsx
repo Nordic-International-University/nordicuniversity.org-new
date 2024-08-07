@@ -22,7 +22,7 @@ const NewsCard = ({
   return (
     <div>
       <Link href={"/"}>
-        <div className="w-[400px]  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden shadow-lg">
+        <div className="w-[400px]  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC]">
           <Image
             src={`https://journal2.nordicun.uz${imageUrl}`}
             alt={title}
@@ -37,7 +37,7 @@ const NewsCard = ({
                 {moment(date).utc().format("YYYY-MM-DD")}
               </p>
             </div>
-            <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px]">
+            <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px] tracking-wider ">
               {title}
             </p>
             <p className="text-[11px] mt-4 text-[#478CCF] font-bold">

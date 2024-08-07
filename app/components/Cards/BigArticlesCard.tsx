@@ -20,11 +20,11 @@ const BigArticlesCard = ({
 }: SmallCardProps) => {
   return (
     <div>
-      <div className="w-full  flex-col  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden shadow-xl">
+      <div className="w-full  flex-col  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] overflow-hidden  shadow-[5px_5px_10px_0px_#D2DCE9CC]">
         <Image
           src={`https://journal2.nordicun.uz${imageUrl}`}
           alt={title}
-          className=" w-full object-cover rounded-xl   mr-1 h-[220px]  "
+          className=" w-full object-cover rounded-md   mr-1 h-[220px]  "
           width={330}
           height={200}
         />
