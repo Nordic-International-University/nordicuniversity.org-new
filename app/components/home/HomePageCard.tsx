@@ -14,7 +14,7 @@ const HomePageCard = async () => {
     return (
         <div>
 
-<HomePageCardClient data={data}/>
+<HomePageCardClient articles={data.articles} topArticles={data.topArticles}  lastArticles={data.lastArticles}/>
         </div>
     );
 };

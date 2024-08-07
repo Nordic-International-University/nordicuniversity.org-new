@@ -12,7 +12,7 @@ export const articleApi = createApi({
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () =>
-                "/article/necessary?articles=10&topArticles=10&lastArticles=10" ,
+                "/article/necessary?articles=6&topArticles=2&lastArticles=7" ,
         }),
     }),
 });
