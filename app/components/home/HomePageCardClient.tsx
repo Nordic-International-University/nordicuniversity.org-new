@@ -13,50 +13,56 @@ const HomePageCardClient = ({
   topArticles: [];
   lastArticles: [];
 }) => {
-  useEffect(() => {
-    console.log(articles, topArticles, lastArticles);
-  }, []);
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-20">
-        {articles?.map((article: any, index: number) => (
-          <div key={index}>
-            <ArticleCard
-              title={article.title}
-              date={article.createdAt}
-              category={article.category.name}
-              description={article.description}
-              author={article.author.full_name}
-              imageUrl={article.image.file_path}
-            />
+    <section className={"container"}>
+      <div className={"flex justify-between w-full mt-5 gap-5"}>
+        <div className=" flex-col flex gap-5 ">
+          <div className={"flex  gap-5"}>
+            {topArticles?.map((article: any, index: number) => (
+              <div key={index} className={"w-full"}>
+                <BigArticlesCard
+                  title={article.title}
+                  date={article.createdAt}
+                  category={article.category.name}
+                  description={article.description}
+                  author={article.author.full_name}
+                  imageUrl={article.image.file_path}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-        {lastArticles?.map((article: any, index: number) => (
-          <div key={index}>
-            <NewsCard
-              title={article.title}
-              date={article.createdAt}
-              category={article.category.name}
-              description={article.description}
-              author={article.author.full_name}
-              imageUrl={article.image.file_path}
-            />
+          <div className={"grid grid-cols-2 gap-2 w-full"}>
+            {articles?.map((article: any, index: number) => (
+              <div key={index}>
+                <ArticleCard
+                  title={article.title}
+                  date={article.createdAt}
+                  category={article.category.name}
+                  description={article.description}
+                  author={article.author.full_name}
+                  imageUrl={article.image.file_path}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-        {topArticles?.map((article: any, index: number) => (
-          <div key={index}>
-            <BigArticlesCard
-              title={article.title}
-              date={article.createdAt}
-              category={article.category.name}
-              description={article.description}
-              author={article.author.full_name}
-              imageUrl={article.image.file_path}
-            />
-          </div>
-        ))}
+        </div>
+
+        <div className=" flex flex-col gap-3">
+          {lastArticles?.map((article: any, index: number) => (
+            <div key={index}>
+              <NewsCard
+                title={article.title}
+                date={article.createdAt}
+                category={article.category.name}
+                description={article.description}
+                author={article.author.full_name}
+                imageUrl={article.image.file_path}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

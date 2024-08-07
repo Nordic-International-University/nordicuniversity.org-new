@@ -4,9 +4,8 @@ import HomeSlider from "@/app/components/home/HomeSLider";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <HomeSlider />
-      <h1 className={"text-yellow-500 text-8xl"}>hiiii</h1>
       <HomePageCard />{" "}
     </main>
   );
