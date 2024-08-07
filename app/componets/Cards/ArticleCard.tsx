@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-
+import moment from "moment";
 interface SmallCardProps {
     title: string;
     date: string;
@@ -20,21 +20,21 @@ const ArticleCard = ({
                      }:SmallCardProps) => {
     return (
         <div>
-            <div className="w-[367px] flex  bg-[#D2DCE9CC] rounded-2xl p-4">
+            <div className="w-[400px]  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden">
                 <Image
                     src={`https://journal2.nordicun.uz${imageUrl}`}
                     alt={title}
-                    className="object-cover w-1/2 rounded-b"
-                    width={100}
+                    className="object-cover  rounded-tl-xl rounded-bl-xl"
+                    width={150}
                     height={100}
                 />
-                <div className="ml-4">
-                    <div className="flex justify-between">
-                        <p className="text-[11px] text-yellow-800">{date}</p>
-                        <p className="border-4 p-1 text-[11px]">{category}</p>
+                <div className="ml-2 py-2 px-2">
+                    <div className="flex justify-between items-center">
+                        <p className="text-[11px]  text-[#BEC2CF] font-bold">     {moment(date).utc().format("YYYY-MM-DD")}</p>
+                        <p className="border-[2px] rounded p-0.5 text-[9px] text-[#BEC2CF] font-bold">{category}</p>
                     </div>
-                    <p className="font-semibold mt-2 text-green-950">{title}</p>
-                    <p className="text-[11px] mt-4">By {author}</p>
+                    <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px]">{title}</p>
+                    <p className="text-[11px] mt-4 text-[#478CCF] font-bold"> {author}</p>
                 </div>
             </div>
         </div>
