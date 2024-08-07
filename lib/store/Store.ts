@@ -9,13 +9,13 @@ const rootReducer = combineReducers({
 
 export const makeStore = () => {
     return configureStore({
-        reducer: rootReducer,
+        reducer: rootReducer ,
         middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware().concat(articleApi.middleware) ,
     });
 };
 
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = ReturnType<typeof makeStore> ;
 
-export type RootState = ReturnType<AppStore["getState"]>;
+export type RootState = ReturnType<AppStore["getState"]> ;
 export type AppDispatch = AppStore["dispatch"];
