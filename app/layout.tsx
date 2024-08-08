@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bellota_Text, Inter } from "next/font/google";
+import { Bellota_Text } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/main/Navbar";
 import React from "react";

@@ -23,11 +23,11 @@ const Navbar = () => {
           <Image src={logo} alt="nav logo" />
           <div className="flex items-center gap-14">
             <ul
-              className={`max-lg:fixed justify-center ${!isOpen ? "max-lg:-right-[100%]" : "max-lg:right-0"} max-lg:bg-white max-lg:h-screen max-lg:w-2/4 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-10 flex items-center gap-12`}
+              className={`max-lg:fixed justify-center ${!isOpen ? "max-lg:-right-[100%]" : "max-lg:right-0"} max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-10 flex items-center gap-12`}
             >
               <AiOutlineClose
                 onClick={() => dispatch(closeMenu())}
-                className="z-10 absolute top-4 right-4"
+                className="z-10 absolute max-lg:block hidden top-4 right-4"
               />
               <Link href={""}>
                 <li className="text-[#6C758F] text-[18px] font-[700]">
