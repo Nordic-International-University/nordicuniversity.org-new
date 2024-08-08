@@ -1,14 +1,19 @@
 "use client";
 
-import React, { useEffect } from "react";
 import { VolumePropsInterface } from "@/types/home.types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 const HomeVolumesClient = ({ volume }: VolumePropsInterface) => {
-  useEffect(() => {
-    console.log(volume);
-  }, []);
-
-  return <div></div>;
+  return (
+    <div>
+      <Swiper>
+        {volume.map((volume) => (
+          <SwiperSlide>{/*<Image src={} alt="" />*/}</SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 export default HomeVolumesClient;
