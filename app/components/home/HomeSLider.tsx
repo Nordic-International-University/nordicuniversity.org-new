@@ -16,7 +16,7 @@ const HomeSlider = () => {
         autoplay={{
           delay: 1500,
         }}
-        speed={1000}
+        speed={1500}
         loop={true}
         modules={[Autoplay]}
       >

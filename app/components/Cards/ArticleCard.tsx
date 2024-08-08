@@ -20,16 +20,16 @@ const ArticleCard = ({
 }: SmallCardProps) => {
   return (
     <div>
-      <div className="w-full  flex  bg-[#f2f3f7] rounded-2xl p-1 min-h-[150px] overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC]">
+      <div className="w-full  flex  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC] max-sm:h-[170px] max-[400px]:h-[200px] ">
         <Image
           src={`https://journal2.nordicun.uz${imageUrl}`}
           alt={title}
-          className="object-cover  rounded-tl-xl rounded-bl-xl"
+          className="object-cover  rounded-tl-md rounded-bl-md"
           width={150}
           height={100}
         />
-        <div className="ml-2 py-2 px-2">
-          <div className="flex justify-between items-center">
+        <div className="ml-2 py-2 px-2 w-full">
+          <div className="flex justify-between items-center ">
             <p className="text-[11px]  text-[#478CCF] font-bold">
               {" "}
               {moment(date).utc().format("YYYY-MM-DD")}
@@ -38,10 +38,13 @@ const ArticleCard = ({
               {category}
             </p>
           </div>
-          <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px]">
+          <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px] max-sm:h-[70px] max-[400px]:h-[100px]  ">
             {title}
           </p>
-          <p className="text-[11px] mt-4 text-[#478CCF] font-bold"> {author}</p>
+          <p className="text-[11px] mt-4 text-[#478CCF] font-bold ">
+            {" "}
+            {author}
+          </p>
         </div>
       </div>
     </div>
