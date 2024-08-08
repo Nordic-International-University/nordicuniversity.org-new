@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bellota_Text, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/main/Navbar";
+import React from "react";
+import StoreProvider from "@/lib/provider/StoreProvider";
 
 const inter = Bellota_Text({ subsets: ["latin"], weight: "400" });
 
@@ -18,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <StoreProvider>
+          <Navbar />
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );
