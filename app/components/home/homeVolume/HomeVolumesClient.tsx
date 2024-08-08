@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import { VolumePropsInterface } from "@/types/home.types";
 

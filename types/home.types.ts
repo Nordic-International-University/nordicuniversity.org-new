@@ -5,3 +5,9 @@ export interface RoundedInterface {
 export interface VolumePropsInterface {
   volume: Array<object>;
 }
+
+export interface homePageCardInterface {
+  articles: Array<object>;
+  topArticles: Array<object>;
+  lastArticles: Array<object>;
+}
