@@ -9,7 +9,6 @@ export default function Home() {
       <HomeSlider />
       <HomePageCard />
       <HomeVolumes />
-      <HomeNews />
     </main>
   );
 }

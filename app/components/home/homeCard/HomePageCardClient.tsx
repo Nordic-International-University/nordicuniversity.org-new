@@ -6,6 +6,7 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import Image from "next/image";
 import arrowImage from "@/public/Arrow 1.svg";
 import Link from "next/link";
+import HomeNews from "@/app/components/home/homeNews/HomeNews";
 
 const HomePageCardClient = ({
   articles,
@@ -51,6 +52,7 @@ const HomePageCardClient = ({
               <div key={index}>
                 <ArticleCard
                   title={article.title}
+                  slug={article.slug}
                   date={article.createdAt}
                   category={article.category.name}
                   description={article.description}
@@ -66,6 +68,7 @@ const HomePageCardClient = ({
               <Image src={arrowImage} alt="" className="mr-5" />
             </div>
           </Link>
+          <HomeNews />
         </div>
         <div>
           <div className=" flex flex-col gap-3">
