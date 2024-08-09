@@ -6,7 +6,7 @@ export const newsApi = createApi({
     baseUrl: "https://journal2.nordicun.uz",
     prepareHeaders: (headers) => {
       headers.set("Cache-Control", "no-store");
-      headers.set("Content-Type", "application/json"); // Установка типа содержимого для POST-запросов
+      headers.set("Content-Type", "application/json");
       return headers;
     },
   }),

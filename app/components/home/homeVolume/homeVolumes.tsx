@@ -14,4 +14,6 @@ const HomeVolumes = async () => {
   return <HomeVolumesClient volume={data} />;
 };
 
+export const revalidate = 10;
+
 export default HomeVolumes;

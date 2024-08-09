@@ -14,7 +14,13 @@ export const articleApi = createApi({
       query: () => "/article/necessary?articles=6&topArticles=2&lastArticles=7",
     }),
     getBySlug: builder.query({
-      query: (slug) => `/article/user/slug/${slug}`,
+      query: (slug) => {
+        return `/article/user/slug/${slug}`;
+      },
+      transformResponse: (response) => {
+        console.log("API response:", response);
+        return response;
+      },
     }),
   }),
 });
