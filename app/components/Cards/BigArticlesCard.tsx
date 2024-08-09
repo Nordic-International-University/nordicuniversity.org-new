@@ -20,7 +20,11 @@ const BigArticlesCard = ({
 }: SmallCardProps) => {
   return (
     <div>
-      <div className="w-full  flex-col  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] overflow-hidden  shadow-[5px_5px_10px_0px_#D2DCE9CC]">
+      <div
+        className="w-full  flex-col  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] 
+      overflow-hidden  shadow-[5px_5px_10px_0px_#D2DCE9CC] hover:shadow-[1px_3px_10px_0px_#5B99C2]
+       transition-shadow   "
+      >
         <Image
           src={`https://journal2.nordicun.uz${imageUrl}`}
           alt={title}
@@ -30,7 +34,7 @@ const BigArticlesCard = ({
         />
         <div className="ml-2 py-2 px-2">
           <div className="flex justify-between items-center">
-            <p className="border-[2px] rounded p-0.5 text-[9px] text-[#BEC2CF] font-bold">
+            <p className="border-[2px] rounded p-0.5 text-[9px] text-[#478CCF] font-bold">
               {category}
             </p>
           </div>
@@ -39,7 +43,7 @@ const BigArticlesCard = ({
           </p>
           <div className={"flex justify-between items-center"}>
             <p className="text-[11px]  text-[#478CCF] font-bold"> {author}</p>
-            <p className="text-[11px]  text-[#BEC2CF] font-bold">
+            <p className="text-[11px]  text-[#478CCF] font-bold">
               {" "}
               {moment(date).utc().format("YYYY-MM-DD")}
             </p>

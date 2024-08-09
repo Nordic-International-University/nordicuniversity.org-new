@@ -3,7 +3,9 @@ export interface RoundedInterface {
 }
 
 export interface VolumePropsInterface {
-  volume: Array<object>;
+  volume: Array<{
+    id: string;
+  }>;
 }
 
 export interface homePageCardInterface {

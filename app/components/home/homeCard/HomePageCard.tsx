@@ -1,7 +1,7 @@
 import React from "react";
-import HomePageCardClient from "@/app/components/home/homeCard/HomePageCardClient";
 import { AppDispatch, makeStore } from "@/lib/store/Store";
 import { articleApi } from "@/lib/query/article.query";
+import HomePageCardClient from "@/app/components/home/homeCard/HomePageCardClient";
 
 const HomePageCard = async () => {
   const store = makeStore();
@@ -11,7 +11,6 @@ const HomePageCard = async () => {
 
   // @ts-ignore
   const { data } = store.getState().api.queries["getPosts(undefined)"];
-
   return (
     <div>
       <HomePageCardClient

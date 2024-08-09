@@ -9,7 +9,9 @@ const HomeVolumesClient = ({ volume }: VolumePropsInterface) => {
     <div>
       <Swiper>
         {volume.map((volume) => (
-          <SwiperSlide>{/*<Image src={} alt="" />*/}</SwiperSlide>
+          <SwiperSlide key={volume.id}>
+            {/*<Image src={} alt="" />*/}
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>

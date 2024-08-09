@@ -1,9 +1,11 @@
-"use client";
 import React, { useEffect } from "react";
 import ArticleCard from "@/app/components/Cards/ArticleCard";
 import NewsCard from "@/app/components/Cards/NewsCard";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
+import Image from "next/image";
+import arrowImage from "@/public/Arrow 1.svg";
+import Link from "next/link";
 
 const HomePageCardClient = ({
   articles,
@@ -58,6 +60,12 @@ const HomePageCardClient = ({
               </div>
             ))}
           </div>
+          <Link href={"/"}>
+            <div className=" w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
+              <h1 className="ml-3">Ko'proq Maqolalar</h1>
+              <Image src={arrowImage} alt="" className="mr-5" />
+            </div>
+          </Link>
         </div>
         <div>
           <div className=" flex flex-col gap-3">
@@ -74,6 +82,12 @@ const HomePageCardClient = ({
                 />
               </div>
             ))}
+            <Link href={"/"}>
+              <div className=" w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
+                <h1 className="ml-3">Ko'proq Yangiliklar</h1>
+                <Image src={arrowImage} alt="" className="mr-5" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
