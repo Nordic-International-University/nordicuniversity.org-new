@@ -10,7 +10,7 @@ const HomeNewsClient = ({ news }: homeNewsInterface) => {
   return (
     <div>
       <Swiper>
-        <SwiperSlide key></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
       </Swiper>
     </div>
   );

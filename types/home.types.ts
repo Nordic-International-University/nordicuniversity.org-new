@@ -5,6 +5,9 @@ export interface RoundedInterface {
 export interface VolumePropsInterface {
   volume: Array<{
     id: string;
+    image: {
+      file_path: string;
+    };
   }>;
 }
 

@@ -1,8 +1,6 @@
 import React from "react";
 import { AppDispatch, makeStore } from "@/lib/store/Store";
-import { RtkQueryRunner } from "@/utils/Rtkquery.runner";
 import HomeVolumesClient from "@/app/components/home/homeVolume/HomeVolumesClient";
-import { articleApi } from "@/lib/query/article.query";
 import { volumeApi } from "@/lib/query/volume.query";
 
 const HomeVolumes = async () => {
