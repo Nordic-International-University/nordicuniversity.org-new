@@ -7,15 +7,14 @@ const HomeNews = async () => {
   const store = makeStore();
   const dispatch = store.dispatch as AppDispatch;
   // @ts-ignore
-  const result = await dispatch(
-    newsApi.endpoints.getPostsNews.initiate(undefined),
-  );
-
+  await dispatch(newsApi.endpoints.getPostsNews.initiate());
+  // @ts-ignore
+  const { data } = store.getState().news.queries["getPostsNews(undefined)"];
   // @ts-ignore
 
   return (
     <div>
-      <HomeNewsClient news={result.data.data} />
+      <HomeNewsClient news={data.data} />
     </div>
   );
 };

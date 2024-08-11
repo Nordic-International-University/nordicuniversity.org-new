@@ -1,3 +1,3 @@
 export interface slugType {
-  description: string;
+  data: { description: string; title: string };
 }

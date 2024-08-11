@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ArticleCard from "@/app/components/Cards/ArticleCard";
 import NewsCard from "@/app/components/Cards/NewsCard";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";

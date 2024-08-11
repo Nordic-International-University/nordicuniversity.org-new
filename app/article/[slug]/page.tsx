@@ -1,19 +1,36 @@
-"use client";
-import { useParams } from "next/navigation";
-import { useGetBySlugQuery } from "@/lib/query/article.query";
-import { useEffect } from "react";
+import { AppDispatch, makeStore } from "@/lib/store/Store";
+import { articleApi } from "@/lib/query/article.query";
+import ClientPage from "@/app/article/[slug]/ClientPage";
 import { slugType } from "@/types/slug.types";
 
-const ArticleDetail = () => {
-  const { slug } = useParams();
+export async function generateMetadata({ params }: any) {
+  const store = makeStore();
+  const dispatch = store.dispatch as AppDispatch;
 
-  const { data }: any = useGetBySlugQuery(slug);
-
-  return (
-    <div>
-      <p>{data?.description}</p>
-    </div>
+  const result = await dispatch(
+    articleApi.endpoints.getBySlug.initiate(params.slug),
   );
-};
 
-export default ArticleDetail;
+  const { data }: any = result;
+  return {
+    title: data?.title || "Default Title",
+    description: data?.description || "Default Description",
+  };
+}
+
+export default async function ArticleDetail({ params }: any) {
+  const store = makeStore();
+  const dispatch = store.dispatch as AppDispatch;
+
+  const result = await dispatch(
+    articleApi.endpoints.getBySlug.initiate(params.slug),
+  );
+
+  const { data } = result;
+
+  if (!data) {
+    return <div>Article not found</div>;
+  }
+
+  return <ClientPage slug={data} />;
+}

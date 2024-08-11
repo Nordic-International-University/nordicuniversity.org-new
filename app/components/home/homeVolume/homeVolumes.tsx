@@ -14,6 +14,6 @@ const HomeVolumes = async () => {
   return <HomeVolumesClient volume={data} />;
 };
 
-export const revalidate = 10;
+export const dynamic = "force-dynamic";
 
 export default HomeVolumes;

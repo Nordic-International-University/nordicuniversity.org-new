@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import { articleApi } from "@/lib/query/article.query";
 import navbarReducer from "@/lib/slice/navbar.slice";
+import aboutReducer from "@/lib/slice/about.slice";
 import { volumeApi } from "@/lib/query/volume.query";
 import { newsApi } from "@/lib/query/news.query";
 
 const rootReducer = combineReducers({
   navbar: navbarReducer,
+  about: aboutReducer,
   [volumeApi.reducerPath]: volumeApi.reducer,
   [articleApi.reducerPath]: articleApi.reducer,
   [newsApi.reducerPath]: newsApi.reducer,

@@ -15,3 +15,7 @@
     margin: 0 auto;
     padding: 0 12px;
 }
+
+.about-accordion .ant-collapse-header-text{
+    color: #6C758F;
+}

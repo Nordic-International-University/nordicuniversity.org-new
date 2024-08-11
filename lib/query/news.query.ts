@@ -5,13 +5,12 @@ export const newsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://journal2.nordicun.uz",
     prepareHeaders: (headers) => {
-      headers.set("Cache-Control", "no-store");
-      headers.set("Content-Type", "application/json");
+      headers.set("Cache-Control", "force-cache");
       return headers;
     },
   }),
   endpoints: (builder) => ({
-    getPostsNews: builder.mutation({
+    getPostsNews: builder.query({
       query: () => ({
         url: "/news/list?page=1&limit=10&lang=uz",
         method: "POST",
@@ -21,4 +20,4 @@ export const newsApi = createApi({
 });
 
 // Автоматически сгенерированные хуки для использования API запросов
-export const { useGetPostsNewsMutation } = newsApi;
+export const { useGetPostsNewsQuery } = newsApi;

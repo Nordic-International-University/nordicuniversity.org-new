@@ -14,13 +14,17 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const isOpen = useSelector((state: RootState) => state.navbar.isOpen);
+  const menuItems = useSelector((state: RootState) => state.navbar.menuItems);
+
   const dispatch = useDispatch();
 
   return (
     <nav className="py-2">
       <div className="container">
         <div className="flex items-center justify-between">
-          <Image src={logo} alt="nav logo" />
+          <Link href={"/"}>
+            <Image src={logo} alt="nav logo" />
+          </Link>
           <div className="flex items-center gap-14">
             <ul
               className={`max-lg:fixed justify-center ${!isOpen ? "max-lg:-right-[100%]" : "max-lg:right-0"} max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-10 flex items-center gap-12`}
@@ -29,31 +33,17 @@ const Navbar = () => {
                 onClick={() => dispatch(closeMenu())}
                 className="z-10 absolute max-lg:block hidden top-4 right-4"
               />
-              <Link href={""}>
-                <li className="text-[#6C758F] text-[18px] font-[700]">
-                  Jurnal haqida
-                </li>
-              </Link>
-              <Link href={""}>
-                <li className="text-[#6C758F] text-[18px] font-[700]">
-                  Yo’riqnoma
-                </li>
-              </Link>
-              <Link href={""}>
-                <li className="text-[#6C758F] text-[18px] font-[700]">
-                  Nashrlar
-                </li>
-              </Link>
-              <Link href={""}>
-                <li className="text-[#6C758F] text-[18px] font-[700]">
-                  Asosiy yo’nalishlar
-                </li>
-              </Link>
-              <Link href={""}>
-                <li className="text-[#6C758F] text-[18px] font-[700]">
-                  Bog’lanish
-                </li>
-              </Link>
+              {menuItems.map((item, index) => (
+                <Link href={item.path} key={index}>
+                  <li
+                    className={`text-[#6C758F] text-[18px] font-[700] ${
+                      item.active ? "active-class" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </li>
+                </Link>
+              ))}
             </ul>
             <div className="flex items-center gap-8">
               <Image src={earth} alt="earth" />

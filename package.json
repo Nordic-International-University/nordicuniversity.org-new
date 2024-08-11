@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "antd": "^5.20.0",
     "monet": "^0.9.3",
     "next": "14.2.5",
     "prettier": "^3.3.3",

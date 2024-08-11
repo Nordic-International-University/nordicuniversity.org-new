@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/app/components/main/Navbar";
 import React from "react";
 import StoreProvider from "@/lib/provider/StoreProvider";
+import Footer from "@/app/components/main/Footer";
 
 const inter = Bellota_Text({ subsets: ["latin"], weight: "400" });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <StoreProvider>
           <Navbar />
           {children}
+          <Footer />
         </StoreProvider>
       </body>
     </html>
