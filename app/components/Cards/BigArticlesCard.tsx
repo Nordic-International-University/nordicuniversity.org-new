@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import moment from "moment";
+import Link from "next/link";
 interface SmallCardProps {
   title: string;
   date: string;
   category: string;
   description: string;
+  slug: string;
   author: string;
   imageUrl: string;
 }
@@ -16,10 +18,11 @@ const BigArticlesCard = ({
   category,
   description,
   author,
+  slug,
   imageUrl,
 }: SmallCardProps) => {
   return (
-    <div>
+    <Link href={`/article/${slug}`} prefetch={false}>
       <div
         className="w-full  flex-col  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] 
       overflow-hidden  shadow-[5px_5px_10px_0px_#D2DCE9CC] hover:shadow-[1px_3px_10px_0px_#5B99C2]
@@ -50,7 +53,7 @@ const BigArticlesCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

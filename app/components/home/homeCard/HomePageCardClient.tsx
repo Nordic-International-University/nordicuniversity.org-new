@@ -35,6 +35,7 @@ const HomePageCardClient = ({
                 <BigArticlesCard
                   title={article.title}
                   date={article.createdAt}
+                  slug={article.slug}
                   category={article.category.name}
                   description={article.description}
                   author={article.author.full_name}
@@ -76,6 +77,7 @@ const HomePageCardClient = ({
             {lastArticles?.map((article: any, index: number) => (
               <div key={index}>
                 <NewsCard
+                  slug={article.slug}
                   title={article.title}
                   date={article.createdAt}
                   category={article.category.name}

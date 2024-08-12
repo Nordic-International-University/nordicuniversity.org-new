@@ -34,7 +34,7 @@ const Navbar = () => {
                 className="z-10 absolute max-lg:block hidden top-4 right-4"
               />
               {menuItems.map((item, index) => (
-                <Link href={item.path} key={index}>
+                <Link href={item.path} prefetch={true} key={index}>
                   <li
                     className={`text-[#6C758F] text-[18px] font-[700] ${
                       item.active ? "active-class" : ""

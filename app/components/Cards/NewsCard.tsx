@@ -10,6 +10,7 @@ interface SmallCardProps {
   description: string;
   author: string;
   imageUrl: string;
+  slug: string;
 }
 
 const NewsCard = ({
@@ -17,12 +18,13 @@ const NewsCard = ({
   date,
   category,
   description,
+  slug,
   author,
   imageUrl,
 }: SmallCardProps) => {
   return (
     <div>
-      <Link href={"/"}>
+      <Link href={`/article/${slug}`} prefetch={false}>
         <div className="w-full  flex  bg-[#f2f3f7] rounded-md p-1 min-h-[150px] overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC] max-[400px]:h-[190px] hover:shadow-[1px_3px_10px_0px_#5B99C2] transition-shadow ">
           <Image
             src={`https://journal2.nordicun.uz${imageUrl}`}
