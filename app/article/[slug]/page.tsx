@@ -32,5 +32,5 @@ export default async function ArticleDetail({ params }: any) {
     return <div>Article not found</div>;
   }
 
-  return <ClientPage slug={data} />;
+  return <ClientPage data={data} />;
 }

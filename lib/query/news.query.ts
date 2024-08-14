@@ -19,5 +19,4 @@ export const newsApi = createApi({
   }),
 });
 
-// Автоматически сгенерированные хуки для использования API запросов
 export const { useGetPostsNewsQuery } = newsApi;

@@ -11,7 +11,7 @@ const HomePageCard = async () => {
   await dispatch(articleApi.endpoints.getPosts.initiate());
 
   // @ts-ignore
-  const { data } = store.getState().api.queries["getPosts(undefined)"];
+  const { data } = store.getState().api.queries["getPosts(undefined)"] as cater;
   return (
     <div>
       <HomePageCardClient

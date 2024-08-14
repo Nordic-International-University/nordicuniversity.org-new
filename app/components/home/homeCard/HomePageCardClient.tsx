@@ -82,6 +82,7 @@ const HomePageCardClient = ({
                   description={article.description}
                   author={article.author.full_name}
                   imageUrl={article.image.file_path}
+                  slug={article.slug}
                 />
               </div>
             ))}

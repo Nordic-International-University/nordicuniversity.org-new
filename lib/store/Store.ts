@@ -5,6 +5,7 @@ import navbarReducer from "@/lib/slice/navbar.slice";
 import aboutReducer from "@/lib/slice/about.slice";
 import { volumeApi } from "@/lib/query/volume.query";
 import { newsApi } from "@/lib/query/news.query";
+import { categoryApi } from "@/lib/query/category.query";
 
 const rootReducer = combineReducers({
   navbar: navbarReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   [volumeApi.reducerPath]: volumeApi.reducer,
   [articleApi.reducerPath]: articleApi.reducer,
   [newsApi.reducerPath]: newsApi.reducer,
+  [categoryApi.reducerPath]: categoryApi.reducer,
 });
 
 export const makeStore = () => {
@@ -22,6 +24,7 @@ export const makeStore = () => {
         articleApi.middleware,
         volumeApi.middleware,
         newsApi.middleware,
+        categoryApi.middleware,
       ),
   });
 };
