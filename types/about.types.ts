@@ -9,3 +9,9 @@ export interface accordionItemType {
 export interface accordionProps {
   item: Array<accordionItemType>;
 }
+
+export interface aboutSliderProps {
+  image: any;
+  name: string;
+  description: string;
+}

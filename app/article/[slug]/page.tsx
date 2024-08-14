@@ -1,7 +1,6 @@
 import { AppDispatch, makeStore } from "@/lib/store/Store";
 import { articleApi } from "@/lib/query/article.query";
 import ClientPage from "@/app/article/[slug]/ClientPage";
-import { slugType } from "@/types/slug.types";
 
 export async function generateMetadata({ params }: any) {
   const store = makeStore();

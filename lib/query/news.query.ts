@@ -14,6 +14,7 @@ export const newsApi = createApi({
       query: () => ({
         url: "/news/list?page=1&limit=10&lang=uz",
         method: "POST",
+        keepUnusedDataFor: 0,
       }),
     }),
   }),

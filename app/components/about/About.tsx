@@ -7,12 +7,22 @@ import { RootState } from "@/lib/store/Store";
 import AccordionItem from "@/app/components/helpers/accordionItem";
 import Header from "@/app/components/main/Header";
 import { HomeOutlined } from "@ant-design/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import image_odil from "@/public/Odil Qoysinov 1.png";
+import image_aziz from "@/public/azizbek abdullayev 1.png";
+import image_sherzod from "@/public/Sherzod Mustafakulov 1.png";
+import image_oybek from "@/public/Oybek Raximberdiyev 1.png";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import Image from "next/image";
 
 const About = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const accordionItems = useSelector(
     (state: RootState) => state.about.accordionItems,
   );
+  const aboutItem = useSelector((state: RootState) => state.about.aboutItems);
 
   const beadCampItem = [
     {
@@ -82,6 +92,117 @@ const About = () => {
               </div>
               <div>
                 <RoundedSvg title="Tahririyat hayati" />
+                <Swiper
+                  slidesPerView={4}
+                  spaceBetween={30}
+                  className="mt-5 mx-0 m-0 w-[950px] overflow-hidden"
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                    },
+                    640: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                    1280: {
+                      slidesPerView: 4,
+                      spaceBetween: 30,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    <div className="relative text-center">
+                      <Image
+                        src={image_sherzod}
+                        alt="Tahririyat hayati rasm"
+                        className="w-full h-auto"
+                      />
+                      <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px]">
+                        <p className="text-xs font-semibold">
+                          Sherzod Mustafakulov
+                        </p>
+                        <p className="text-white text-[10px]">
+                          Tahririyat kengashi raisi: iqtisodiyot fanlari
+                          doktori, professor
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="relative text-center">
+                      <Image
+                        src={image_sherzod}
+                        alt="Tahririyat hayati rasm"
+                        className="w-full h-auto"
+                      />
+                      <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px]">
+                        <p className="text-xs font-semibold">
+                          Sherzod Mustafakulov
+                        </p>
+                        <p className="text-white text-[10px]">
+                          Tahririyat kengashi raisi: iqtisodiyot fanlari
+                          doktori, professor
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="relative text-center">
+                      <Image
+                        src={image_sherzod}
+                        alt="Tahririyat hayati rasm"
+                        className="w-full h-auto"
+                      />
+                      <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px]">
+                        <p className="text-xs font-semibold">
+                          Sherzod Mustafakulov
+                        </p>
+                        <p className="text-white text-[10px]">
+                          Tahririyat kengashi raisi: iqtisodiyot fanlari
+                          doktori, professor
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="relative text-center">
+                      <Image
+                        src={image_sherzod}
+                        alt="Tahririyat hayati rasm"
+                        className="w-full h-auto"
+                      />
+                      <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px]">
+                        <p className="text-xs font-semibold">
+                          Sherzod Mustafakulov
+                        </p>
+                        <p className="text-white text-[10px]">
+                          Tahririyat kengashi raisi: iqtisodiyot fanlari
+                          doktori, professor
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+                <div className="mt-5">
+                  <RoundedSvg title="Tahririyat a'zolari:" />
+                  <ul className="flex mt-5 flex-col gap-2">
+                    {aboutItem?.map((item, index) => (
+                      <li className="text-md font-normal">
+                        <span className="font-bold">{item.name}</span>-
+                        {item.title} {item.country}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="min-w-[400px]">

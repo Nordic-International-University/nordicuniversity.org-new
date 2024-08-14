@@ -46,6 +46,138 @@ const initialState = {
         "Taqrizchi tomonidan maqola mazmuni va formati maqul deb topilmasa, muallifga kamchiliklarni tuzatish uchun qayta yuboriladi. Agar maqola belgilangan muddatlarda tahririyatga qayta kelib tushmasa, jurnalning keyingi sonlarida nashr qilishga tavsiya etadi.",
     },
   ],
+  aboutItems: [
+    {
+      name: "Saidahror Gʻulomov",
+      title: "Iqtisodiyot fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Marat Raxmutlaev",
+      title: "Texnika fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Baxtiyor Salimov",
+      title: "Iqtisodiyot fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Olim Murtazayev",
+      title: "Iqtisodiyot fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Shavkat Hasanov",
+      title: "Iqtisodiyot fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Petri Juhani Raivo",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "Finlandiya",
+    },
+    {
+      name: "Pekka Auvinen",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "Finlandiya",
+    },
+    {
+      name: "Alisher Joʻrayev",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Nizomiddin Urmonov",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD), dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Mahammadsiddik Amonboyev",
+      title: "Iqtisodiyot fanlari nomzodi, dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Bruno Dallago",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "Italiya",
+    },
+    {
+      name: "Kobil Ruziyev",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "Angliya",
+    },
+    {
+      name: "Ihtiyor Bobojonov",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "Germaniya",
+    },
+    {
+      name: "Odiljon Abdurazzakov",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Nuriddin Murodullayev",
+      title: "Xalqaro Nordik universiteti prorektori",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Mirza Tulaev",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD), dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Sabirov Xasan",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD), dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Zulfiya Xamidova",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD), dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Lochin Raxmonov",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Musoxon Isakov",
+      title: "Iqtisodiyot fanlari nomzodi, dotsent",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Maxammadmurod Shomirzayev",
+      title: "Pedagogika fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Xusniddin Jo‘rayev",
+      title: "Pedagogika fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Qurbonniyoz Panjiyev",
+      title: "Pedagogika fanlari doktori, professor",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Dilafro‘z Miraliyeva",
+      title: "Pedagogika fanlari bo‘yicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Nigora Lutfullayeva",
+      title: "Psixologiya fanlari bo‘yicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
+      name: "Dilshod Nasriddinov",
+      title: "Filologiya fanlari bo‘yicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+  ],
 };
 
 const aboutSLice = createSlice({

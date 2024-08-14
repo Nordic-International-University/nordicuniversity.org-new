@@ -6,6 +6,7 @@ export const volumeApi = createApi({
   endpoints: (build) => ({
     getVolumes: build.query({
       query: () => "/volume",
+      keepUnusedDataFor: 0,
     }),
   }),
 });
