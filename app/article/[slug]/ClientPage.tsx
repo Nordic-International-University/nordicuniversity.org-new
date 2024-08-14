@@ -32,6 +32,7 @@ const ClientPage = ({ data }: { data: any }) => {
         </div>
         <div className="flex justify-end mt-4">
           <button className="text-right rounded-full border-black border-x-2 px-3 ">Continue...</button>
+          <h1>sdsd</h1>
         </div>
       </div>
     </section>
