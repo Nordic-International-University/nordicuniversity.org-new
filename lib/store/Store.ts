@@ -16,7 +16,7 @@ const rootReducer = combineReducers({
   [categoryApi.reducerPath]: categoryApi.reducer,
 });
 
-export const makeStore = () => {
+const makeStore = () => {
   return configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
@@ -29,6 +29,9 @@ export const makeStore = () => {
   });
 };
 
+const Store = makeStore();
+
+export default Store;
 export type AppStore = ReturnType<typeof makeStore>;
 export type RootState = ReturnType<AppStore["getState"]>;
 export type AppDispatch = AppStore["dispatch"];

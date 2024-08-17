@@ -1,10 +1,9 @@
-import { AppDispatch, makeStore } from "@/lib/store/Store";
+import Store, { AppDispatch } from "@/lib/store/Store";
 import { articleApi } from "@/lib/query/article.query";
 import ClientPage from "@/app/article/[slug]/ClientPage";
 
 export async function generateMetadata({ params }: any) {
-  const store = makeStore();
-  const dispatch = store.dispatch as AppDispatch;
+  const dispatch = Store.dispatch as AppDispatch;
 
   const result = await dispatch(
     articleApi.endpoints.getBySlug.initiate(params.slug),
@@ -18,8 +17,7 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function ArticleDetail({ params }: any) {
-  const store = makeStore();
-  const dispatch = store.dispatch as AppDispatch;
+  const dispatch = Store.dispatch as AppDispatch;
 
   const result = await dispatch(
     articleApi.endpoints.getBySlug.initiate(params.slug),

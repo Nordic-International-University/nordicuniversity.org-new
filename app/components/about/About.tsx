@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
@@ -16,6 +16,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
+import { useGetVolumesQuery } from "@/lib/query/volume.query";
 
 const About = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -23,7 +24,11 @@ const About = () => {
     (state: RootState) => state.about.accordionItems,
   );
   const aboutItem = useSelector((state: RootState) => state.about.aboutItems);
-
+  // @ts-ignore
+  const data = useGetPostsQuery();
+  useEffect(() => {
+    console.log(data);
+  }, []);
   const beadCampItem = [
     {
       href: "/",

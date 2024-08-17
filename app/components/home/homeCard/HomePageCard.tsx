@@ -8,10 +8,8 @@ const HomePageCard = async () => {
   const store = makeStore();
   const dispatch = store.dispatch as AppDispatch;
   // @ts-ignore
-  await dispatch(articleApi.endpoints.getPosts.initiate());
-
-  // @ts-ignore
-  const { data } = store.getState().api.queries["getPosts(undefined)"] as cater;
+  const result = await dispatch(articleApi.endpoints.getPosts.initiate());
+  const data = result.data;
   return (
     <div>
       <HomePageCardClient
