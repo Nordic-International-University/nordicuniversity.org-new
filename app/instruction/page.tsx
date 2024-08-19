@@ -10,7 +10,7 @@ export default function Page() {
         <div className="flex w-2/3 shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] px-3 py-3 rounded-[30px]">
           <div className=" px-3 py-3">
             <h1 className="text-[#36187d] font-bold text-[15px]">
-              1. ABSTRAKT (ANNOTATSIYA)
+              1. ABSTRAKT (ANNOTATSIYAz)
             </h1>
             <ul>
               <li>- Muammoning qo‘yilishi;</li>
