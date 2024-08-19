@@ -1,11 +1,10 @@
 import React from "react";
-import { AppDispatch, makeStore } from "@/lib/store/Store";
+import Store, { AppDispatch } from "@/lib/store/Store";
 import { articleApi } from "@/lib/query/article.query";
 import HomePageCardClient from "@/app/components/home/homeCard/HomePageCardClient";
-import HomeNews from "@/app/components/home/homeNews/HomeNews";
 
 const HomePageCard = async () => {
-  const store = makeStore();
+  const store = Store;
   const dispatch = store.dispatch as AppDispatch;
   // @ts-ignore
   const result = await dispatch(articleApi.endpoints.getPosts.initiate());
