@@ -13,13 +13,12 @@ export const articleApi = createApi({
     getBySlug: builder.query({
       query: (slug) => `/article/user/slug/${slug}`,
       keepUnusedDataFor: 0,
-
-      transformResponse: (response) => {
-        console.log("API response:", response);
-        return response;
-      },
+    }),
+    getByCategory: builder.query({
+      query: (id) => `/article/user/category/${id}`,
+      keepUnusedDataFor: 0,
     }),
   }),
 });
 
-export const { useGetPostsQuery, useGetBySlugQuery } = articleApi;
+export const { useGetPostsQuery, useGetBySlugQuery ,useGetByCategoryQuery} = articleApi;

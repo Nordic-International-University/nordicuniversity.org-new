@@ -53,6 +53,7 @@ const HomePageCardClient = ({
               <div key={index}>
                 <ArticleCard
                   title={article.title}
+                  width=""
                   slug={article.slug}
                   date={article.createdAt}
                   category={article.category.name}
@@ -77,7 +78,7 @@ const HomePageCardClient = ({
             {lastArticles?.map((article: any, index: number) => (
               <div key={index}>
                 <NewsCard
-                  slug={article.slug}
+
                   title={article.title}
                   date={article.createdAt}
                   category={article.category.name}
