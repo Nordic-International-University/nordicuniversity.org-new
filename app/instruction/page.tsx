@@ -5,12 +5,16 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 export default function Page() {
   return (
     <div className="container">
-      <RoundedSvg title="lmiy maqolaga qo‘yilgan talablar" />
-      <div className="flex  items-center justify-center w-full gap-4 pt-24">
+      <div> <RoundedSvg title="lmiy maqolaga qo‘yilgan talablar" /></div>
+
+      <div className="flex  items-center justify-center w-full gap-4 pt-24 pb-24">
         <div className="flex w-2/3 shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] px-3 py-3 rounded-[30px]">
           <div className=" px-3 py-3">
             <h1 className="text-[#36187d] font-bold text-[15px]">
-              1. ABSTRAKT (ANNOTATSIYAz)
+              <strong>
+                1. ABSTRAKT (ANNOTATSIYA)
+              </strong>
+
             </h1>
             <ul>
               <li>- Muammoning qo‘yilishi;</li>
@@ -103,8 +107,8 @@ export default function Page() {
             src={abstract}
             alt="img"
             width={800}
-            height={600}
-            className="w-[402px] h-[450px]"
+            height={800}
+            className="w-[1000px] h-[800px]"
           />
         </div>
       </div>
@@ -112,4 +116,5 @@ export default function Page() {
   );
 }
 
-export const dynamic = "force-dynamic";
+
+

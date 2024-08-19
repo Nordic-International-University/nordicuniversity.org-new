@@ -47,6 +47,7 @@ const About = () => {
   return (
     <>
       <Header item={beadCampItem} />
+      <h1>fuck</h1>
       <section className="mt-[80px]">
         <article className="container">
           <div className="flex items-start gap-10 justify-between">

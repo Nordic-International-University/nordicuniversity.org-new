@@ -2,9 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const volumeApi = createApi({
   reducerPath: "volumeApi",
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.BASE_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: " https://journal2.nordicun.uz" }),
   endpoints: (build) => ({
-    getVolumes: build.query({
+    getVolumes: build.query<Array<any>,void>({
       query: () => "/volume",
       keepUnusedDataFor: 0,
     }),

@@ -47,7 +47,8 @@ const Navbar = () => {
             </ul>
             <div className="flex items-center gap-8">
               <Image src={earth} alt="earth" />
-              <Image src={search} alt="search" />
+              <Link href={'/search'}>     <Image src={search} alt="search" /></Link>
+
               <RiMenu3Fill
                 onClick={() => dispatch(openMenu())}
                 className="text-2xl hidden max-lg:block"
