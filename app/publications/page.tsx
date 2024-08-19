@@ -4,8 +4,7 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import { useGetAllCategoryQuery } from "@/lib/query/category.query";
 
 const Page = () => {
-  // @ts-ignore
-  const { data } = useGetAllCategoryQuery() as categoryType;
+  const { data } = useGetAllCategoryQuery();
 
   return (
     <div className="container">

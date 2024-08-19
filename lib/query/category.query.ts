@@ -4,11 +4,8 @@ export const categoryApi = createApi({
   reducerPath: "categoryApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://journal2.nordicun.uz" }), // Ensure this environment variable is set
   endpoints: (build) => ({
-    getAllCategory: build.query({
+    getAllCategory: build.query<categoryType[], void>({
       query: () => "/category",
-      transformResponse: (response) => {
-        return response;
-      },
     }),
   }),
 });
