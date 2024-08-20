@@ -1,18 +1,17 @@
 "use client";
 
-import { VolumePropsInterface } from "@/types/home.types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-const HomeVolumesClient = ({ volume }: VolumePropsInterface) => {
+const HomeVolumesClient = ({ volume }: any) => {
   return (
     <section className="mt-8">
       <div className="swiperContainer">
         <Swiper slidesPerView={4}>
-          {volume.map((volume) => (
+          {volume.map((item: any) => (
             <SwiperSlide key={volume.id}>
               <Image
-                src={`${"https://journal2.nordicun.uz"}${volume.image.file_path}`}
+                src={`${"https://journal2.nordicun.uz"}${item.image.file_path}`}
                 width={1000}
                 height={300}
                 alt="volume"
