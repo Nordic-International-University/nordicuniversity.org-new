@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import { useGetAllCategoryQuery } from "@/lib/query/category.query";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
@@ -7,11 +7,28 @@ import { useGetVolumesQuery } from "@/lib/query/volume.query";
 import moment from "moment/moment";
 import { FaCalendarAlt } from "react-icons/fa";
 import Link from "next/link";
-const PublicationsClient = () => {
-  const { data } = useGetAllCategoryQuery();
 
-  const { data: volume } = useGetVolumesQuery();
-  console.log(data);
+
+async function getVolume() {
+
+  const res = await fetch('https://journal2.nordicun.uz/volume');
+  const data = await res.json();
+
+  return data
+}
+async function getCategory() {
+
+  const res = await fetch('https://journal2.nordicun.uz/category');
+  const data = await res.json();
+
+  return data
+}
+
+const PublicationsClient = async () => {
+ const data:any= await  getCategory()
+const volume:any= await getVolume();
+  console.log("volome",volume)
+  console.log("data",data)
   return (
     <div>
       <div className="flex ">

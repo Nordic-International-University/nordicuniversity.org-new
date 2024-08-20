@@ -8,7 +8,7 @@ const initialState: navbarInitialState = {
     { path: "/about", name: "Jurnal haqida", active: false },
     { path: "/instruction", name: "Yo’riqnoma", active: false },
     { path: "/publications", name: "Nashrlar", active: false },
-    { path: "/asosiy-yonalishlar", name: "Asosiy yo’nalishlar", active: false },
+    { path: "/volumes", name: "Asosiy yo’nalishlar", active: false },
     { path: "/boglanish", name: "Bog’lanish", active: false },
   ],
 };
