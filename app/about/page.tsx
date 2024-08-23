@@ -199,7 +199,7 @@ const Page = () => {
                 </Swiper>
                 <div className="mt-5">
                   <RoundedSvg title="Tahririyat a'zolari:" />
-                  <ul className="flex mt-5 flex-col gap-2">
+                  < ul className="flex mt-5 flex-col gap-2">
                     {aboutItem?.map((item, index) => (
                       <li className="text-md font-normal">
                         <span className="font-bold">{item.name}</span>-

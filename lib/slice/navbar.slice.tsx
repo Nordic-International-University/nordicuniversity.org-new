@@ -9,7 +9,7 @@ const initialState: navbarInitialState = {
     { path: "/instruction", name: "Yo’riqnoma", active: false },
     { path: "/publications", name: "Nashrlar", active: false },
     { path: "/volumes", name: "Asosiy yo’nalishlar", active: false },
-    { path: "/boglanish", name: "Bog’lanish", active: false },
+    { path: "/contact", name: "Bog’lanish", active: false },
   ],
 };
 

@@ -1,29 +1,18 @@
 import React from 'react';
-import Image from "next/image";
- async function getVolume() {
+import VolumeClient from "@/app/volumes/[data]/VolumeClient";
 
-    const res = await fetch('https://journal2.nordicun.uz/volume');
+async function getVolume() {
+    const res = await fetch("https://journal2.nordicun.uz/category");
     const data = await res.json();
 
- return data
+    return data;
 }
-const Page = async () => {
-  const data=await getVolume();
 
+const Page = async () => {
+    const data = await getVolume();
     return (
         <div>
-            {data.map((item: any, index: number) => (
-                <div>
-                    {item.title}
-                    <Image
-                        src={`${"https://journal2.nordicun.uz"}${item?.image?.file_path}`}
-                        alt="img"
-                        width={270}
-                        height={270}
-                        className="rounded-full"
-                    />
-                </div>
-            ))}
+            <VolumeClient data={data}/>
         </div>
     );
 };

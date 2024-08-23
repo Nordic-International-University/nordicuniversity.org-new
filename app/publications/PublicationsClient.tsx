@@ -71,33 +71,7 @@ const PublicationsClient = async () => {
             ))}
           </div>
         </div>
-        <div className=" w-1/3 ">
-          <RoundedSvg title="Asosiy Yo'nalishlar" />
-          <div>
-            {data?.map((category: any) => (
-              <div
-                key={category?.id}
-                className="flex gap-3 mb-9 border-b border-solid border-gray-600 pb-6 mt-6"
-              >
-                <Image
-                  src={`${"https://journal2.nordicun.uz"}${category?.file?.file_path}`}
-                  alt="img"
-                  width={70}
-                  height={70}
-                  className="rounded-full"
-                />
-                <Link href={`/publications/${category?.id}`}>
-                  <div className="w-full border-b-amber-900 text-[20px]">
-                    <h2 className="text-[#313131] font-extrabold">
-                      {category?.name}
-                    </h2>
-                    <p>{category.subCategories.length} ta maqola</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </div>
   );

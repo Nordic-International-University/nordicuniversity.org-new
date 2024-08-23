@@ -20,4 +20,24 @@
     color: #6C758F;
 }
 
-.app:first-letter
+.hover-line {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-line .line {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.7s ease-out;
+}
+
+.hover-line:hover .line {
+    width: 100%;
+}
+
