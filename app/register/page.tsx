@@ -1,9 +1,11 @@
-"use client"
+"use client";
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import {useForm, SubmitHandler, Controller} from "react-hook-form";
 import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
 import "react-phone-input-2/lib/style.css";
+import { useRegisterUserMutation } from "@/lib/query/register.query";
+import PhoneInput from "react-phone-number-input/min"; // Импортируйте хук из RTK Query
 
 interface IFormInput {
   phone: string;
@@ -15,22 +17,26 @@ interface IFormInput {
   profession: string;
 }
 
-
-
 const Page: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitSuccessful },
-  } = useForm<IFormInput>();
+  const { register, handleSubmit, reset, control, formState: { errors }, setValue } = useForm<IFormInput>();
+  const [registerUser, { isLoading, error, isSuccess }] = useRegisterUserMutation(); // Используем хук для мутации
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log("Received values of form: ", data.phone);
-    // Здесь можно добавить логику отправки данных на сервер
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    try {
+      const result = await registerUser({
+        number: data.phone,
+        password: data.password,
+        full_name: data.fullName,
+        science_degree: data.academicDegree,
+        job: data.workplace,
+        place_position: data.profession,
+      }).unwrap(); // Вызываем мутацию и обрабатываем результат
 
-    // Очистить поля формы после успешного сабмита``
-    reset();
+      console.log("User registered successfully:", result);
+      reset(); // Очистить поля формы после успешной регистрации
+    } catch (err) {
+      console.error("Failed to register user:", err);
+    }
   };
 
   return (
@@ -40,7 +46,7 @@ const Page: React.FC = () => {
             <Image
                 src={journal}
                 alt="image"
-                className="w-[500px] h-[700px] rounded-3xl max-md:hidden "
+                className="w-[500px] h-[700px] rounded-3xl max-md:hidden"
                 width={500}
                 height={500}
             />
@@ -50,17 +56,22 @@ const Page: React.FC = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col mb-6">
                   <strong>Telefon Raqamingiz</strong>
-                  <input
-                      placeholder="Telefon raqamingizni kiriting"
-                      type="tel"
-                      {...register("phone", {
-                        required: "Iltimos telefon raqamingizni kiriting",
-                      })}
-                      className="border-gray border-[1px] rounded py-2 px-4 pl-2"
+                  <Controller
+                      name="phone"
+                      control={control}
+                      rules={{required: "Iltimos telefon raqamingizni kiriting"}}
+                      render={({field}) => (
+                          <PhoneInput
+                              {...field}
+                              defaultCountry="UZ"
+                              placeholder="Telefon raqamingizni kiriting"
+                              value="+998"
+                              className="border-gray border-[1px] rounded py-2 px-4 pl-2"
+                              onChange={(phone) => setValue("phone", phone || "")}
+                          />
+                      )}
                   />
-                  {errors.phone && (
-                      <span>{errors.phone.message}</span>
-                  )}
+                  {errors.phone && <span>{errors.phone.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-6">
@@ -73,9 +84,7 @@ const Page: React.FC = () => {
                       })}
                       className="border-gray border-[1px] rounded py-2 px-[100px] pl-2"
                   />
-                  {errors.password && (
-                      <span>{errors.password.message}</span>
-                  )}
+                  {errors.password && <span>{errors.password.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-6">
@@ -88,9 +97,7 @@ const Page: React.FC = () => {
                       })}
                       className="border-gray border-[1px] rounded py-2 px-[100px] pl-2"
                   />
-                  {errors.fullName && (
-                      <span>{errors.fullName.message}</span>
-                  )}
+                  {errors.fullName && <span>{errors.fullName.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-6">
@@ -103,9 +110,7 @@ const Page: React.FC = () => {
                       })}
                       className="border-gray border-[1px] rounded py-2 px-[100px] pl-2"
                   />
-                  {errors.academicDegree && (
-                      <span>{errors.academicDegree.message}</span>
-                  )}
+                  {errors.academicDegree && <span>{errors.academicDegree.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-6">
@@ -118,9 +123,7 @@ const Page: React.FC = () => {
                       })}
                       className="border-gray border-[1px] rounded py-2 px-[100px] pl-2"
                   />
-                  {errors.workplace && (
-                      <span>{errors.workplace.message}</span>
-                  )}
+                  {errors.workplace && <span>{errors.workplace.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-6">
@@ -133,9 +136,7 @@ const Page: React.FC = () => {
                       })}
                       className="border-gray border-[1px] rounded py-2 px-[100px] pl-2"
                   />
-                  {errors.profession && (
-                      <span>{errors.profession.message}</span>
-                  )}
+                  {errors.profession && <span>{errors.profession.message}</span>}
                 </div>
 
                 <div className="flex flex-col mb-8">
@@ -146,27 +147,27 @@ const Page: React.FC = () => {
                       {...register("email", {
                         required: "Iltimos elektron pochtangizni kiriting",
                         pattern: {
-                          value:
-                              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                          message: "Elektron pochta notogri formatda kirgizilgan",
+                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                          message: "Elektron pochта notogri formatda kirgizilgan",
                         },
                       })}
                       className="border-gray border-[1px] rounded py-2 px-4 pl-2"
                   />
-                  {errors.email && (
-                      <span>{errors.email.message}</span>
-                  )}
+                  {errors.email && <span>{errors.email.message}</span>}
                 </div>
 
                 <button
                     type="submit"
                     className="bg-blue-600 text-white rounded px-[120px] mt-6 py-2"
+                    disabled={isLoading} // Блокируем кнопку, пока идет загрузка
                 >
                   <strong>
-                    Ro'yxatdan O'tish
+                    {isLoading ? "Loading..." : "Ro'yxatdan O'tish"}
                   </strong>
-
                 </button>
+                {/* Отображаем ошибку, если она есть */}
+                {isSuccess && <p className="text-green-500">User registered
+                  successfully!</p>} {/* Уведомление об успешной регистрации */}
               </form>
             </div>
           </div>

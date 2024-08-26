@@ -6,11 +6,13 @@ import aboutReducer from "@/lib/slice/about.slice";
 import { volumeApi } from "@/lib/query/volume.query";
 import { newsApi } from "@/lib/query/news.query";
 import { categoryApi } from "@/lib/query/category.query";
+import {registerApi} from "@/lib/query/register.query";
 
 const rootReducer = combineReducers({
   navbar: navbarReducer,
   about: aboutReducer,
   [volumeApi.reducerPath]: volumeApi.reducer,
+  [registerApi.reducerPath]: registerApi.reducer,
   [articleApi.reducerPath]: articleApi.reducer,
   [newsApi.reducerPath]: newsApi.reducer,
   [categoryApi.reducerPath]: categoryApi.reducer,
@@ -22,6 +24,7 @@ const makeStore = () => {
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(
         articleApi.middleware,
+        registerApi.middleware,
         volumeApi.middleware,
         newsApi.middleware,
         categoryApi.middleware,

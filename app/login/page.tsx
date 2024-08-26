@@ -5,6 +5,8 @@ import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import { useLoginUserMutation } from "@/lib/query/register.query"; // Импортируйте хук для мутации
+import { useRouter } from 'next/navigation'; // Импортируем useRouter из next/navigation
 
 interface IFormInput {
   phone: string;
@@ -17,21 +19,23 @@ interface IFormInput {
 }
 
 const Page: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    control,
-    formState: { errors },
-    setValue,
-  } = useForm<IFormInput>();
+  const { register, handleSubmit, reset, control, formState: { errors }, setValue } = useForm<IFormInput>();
+  const [loginUser, { isLoading, error, isSuccess }] = useLoginUserMutation(); // Используем хук для мутации
+  const router = useRouter(); // Инициализируем useRouter для перенаправления
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log("Received values of form: ", data);
-    // Здесь можно добавить логику отправки данных на сервер
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    try {
+      const result = await loginUser({
+        number: data.phone,
+        password: data.password,
+      }).unwrap(); // Вызываем мутацию и обрабатываем результат
 
-    // Очистить поля формы после успешного сабмита
-    reset();
+      console.log("User logged in successfully:", result);
+      reset(); // Очистить поля формы после успешного логина
+      router.push('/'); // Перенаправляем пользователя на главную страницу
+    } catch (err) {
+      console.error("Failed to login:", err);
+    }
   };
 
   return (
@@ -58,12 +62,11 @@ const Page: React.FC = () => {
                       render={({ field }) => (
                           <PhoneInput
                               {...field}
-                              defaultCountry="UZ"  // Используем defaultCountry вместо country
+                              defaultCountry="UZ"
                               placeholder="Telefon raqamingizni kiriting"
                               value="+998"
                               className="border-gray border-[1px] rounded py-2 px-4 pl-2"
                               onChange={(phone) => setValue("phone", phone || "")}
-
                           />
                       )}
                   />
@@ -86,9 +89,16 @@ const Page: React.FC = () => {
                 <button
                     type="submit"
                     className="bg-blue-600 text-white rounded px-[120px] mt-6 py-2"
+                    disabled={isLoading} // Блокируем кнопку, пока идет загрузка
                 >
-                  <strong className="text-[20px]">Profilga O'tish</strong>
+                  <strong className="text-[20px]">
+                    {isLoading ? "Loading..." : "Profilga O'tish"}
+                  </strong>
                 </button>
+
+                {/* Отображаем ошибку, если она есть */}
+
+                {isSuccess && <p className="text-green-500">User logged in successfully!</p>} {/* Уведомление об успешном логине */}
               </form>
             </div>
           </div>
