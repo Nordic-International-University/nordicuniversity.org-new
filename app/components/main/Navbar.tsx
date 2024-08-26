@@ -1,8 +1,6 @@
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import logo from "@/public/logo-colorful 1.svg";
-import earth from "@/public/Frame.svg";
 import search from "@/public/Vector.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
 import { closeMenu, openMenu } from "@/lib/slice/navbar.slice";
 import { AiOutlineClose } from "react-icons/ai";
+
 
 const Navbar = () => {
   const isOpen = useSelector((state: RootState) => state.navbar.isOpen);
@@ -45,13 +44,19 @@ const Navbar = () => {
                 </Link>
               ))}
             </ul>
-            <div className="flex items-center gap-8">
-              <Image src={earth} alt="earth" />
-              <Link href={'/search'}>     <Image src={search} alt="search" /></Link>
+            <div className="flex items-center gap-8 max-sm:gap-3">
+              <Link href={"/search"}>
+                <Image src={search} alt="search" />
+              </Link>
+              <Link href={'/register'}>
+                <button className="bg-blue-600 px-4 text-white py-2 rounded text-[20px] font-bold max-sm:text-[12px] max-sm:px-2 max-sm:py-1">
+                  Submit Article
+                </button>
+              </Link>
 
               <RiMenu3Fill
-                onClick={() => dispatch(openMenu())}
-                className="text-2xl hidden max-lg:block"
+                  onClick={() => dispatch(openMenu())}
+                  className="text-2xl hidden max-lg:block"
               />
             </div>
           </div>
