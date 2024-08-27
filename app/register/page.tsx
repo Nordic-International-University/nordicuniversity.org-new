@@ -3,9 +3,10 @@ import React from "react";
 import {useForm, SubmitHandler, Controller} from "react-hook-form";
 import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
-import "react-phone-input-2/lib/style.css";
+import "react-phone-number-input/style.css";
 import { useRegisterUserMutation } from "@/lib/query/register.query";
-import PhoneInput from "react-phone-number-input/min"; // Импортируйте хук из RTK Query
+import PhoneInput from "react-phone-number-input/min";
+import {message} from "antd"; // Импортируйте хук из RTK Query
 
 interface IFormInput {
   phone: string;
@@ -34,14 +35,17 @@ const Page: React.FC = () => {
 
       console.log("User registered successfully:", result);
       reset(); // Очистить поля формы после успешной регистрации
-    } catch (err) {
+    } catch (err:any) {
       console.error("Failed to register user:", err);
+      if(err.status===409){
+        message.warning("Bunday telefon raqam oldin ro'yxatdan o'tilgan")
+      }
     }
   };
 
   return (
       <div className="container">
-        <div className="flex justify-center items-center mt-10 mb-8">
+        <div className="flex justify-center items-center  h-screen">
           <div className="h-auto mr-10 max-sm:mr-0 shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] rounded-3xl">
             <Image
                 src={journal}
@@ -66,7 +70,7 @@ const Page: React.FC = () => {
                               defaultCountry="UZ"
                               placeholder="Telefon raqamingizni kiriting"
                               value="+998"
-                              className="border-gray border-[1px] rounded py-2 px-4 pl-2"
+                              className="border-gray border-[1px] rounded py-2 px-4 pl-2 "
                               onChange={(phone) => setValue("phone", phone || "")}
                           />
                       )}

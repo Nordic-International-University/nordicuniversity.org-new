@@ -9,14 +9,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
 import { closeMenu, openMenu } from "@/lib/slice/navbar.slice";
 import { AiOutlineClose } from "react-icons/ai";
+import {usePathname} from "next/navigation";
 
 
 const Navbar = () => {
   const isOpen = useSelector((state: RootState) => state.navbar.isOpen);
   const menuItems = useSelector((state: RootState) => state.navbar.menuItems);
+const pathname=usePathname()
 
   const dispatch = useDispatch();
-
+if(pathname==="/login"||pathname==="/register") return null;
   return (
     <nav className="py-2">
       <div className="container">
