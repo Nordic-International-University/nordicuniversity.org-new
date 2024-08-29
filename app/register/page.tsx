@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
-import {useForm, SubmitHandler, Controller} from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
-import "react-phone-number-input/style.css";
 import { useRegisterUserMutation } from "@/lib/query/register.query";
-import PhoneInput from "react-phone-number-input/min";
-import {message} from "antd"; // Импортируйте хук из RTK Query
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
+import { message } from "antd";
+import Cookies from "js-cookie"; // js-cookie dan import qiling
+import { useRouter } from "next/navigation"; // next/router dan useRouter hookini import qiling
 
 interface IFormInput {
   phone: string;
@@ -20,7 +22,8 @@ interface IFormInput {
 
 const Page: React.FC = () => {
   const { register, handleSubmit, reset, control, formState: { errors }, setValue } = useForm<IFormInput>();
-  const [registerUser, { isLoading, error, isSuccess }] = useRegisterUserMutation(); // Используем хук для мутации
+  const [registerUser, { isLoading, error, isSuccess }] = useRegisterUserMutation();
+  const router = useRouter(); // Router ni oling
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     try {
@@ -31,15 +34,25 @@ const Page: React.FC = () => {
         science_degree: data.academicDegree,
         job: data.workplace,
         place_position: data.profession,
-      }).unwrap(); // Вызываем мутацию и обрабатываем результат
+      }).unwrap();
 
       console.log("User registered successfully:", result);
-      reset(); // Очистить поля формы после успешной регистрации
+
+      // Tokenni cookie fayliga saqlash
+      if (result?.data?.token) {
+        Cookies.set('token', result.token, { expires: 7 }); // Tokenni 7 kunga saqlash
+        message.success("Siz muvaffaqiyatli ro'yxatdan o'tdingiz");
+
+        // "/profile" sahifasiga yo'naltirish
+        router.push('/profile');
+      }
+
+      reset(); // Formani tozalash
     } catch (err) {
       console.error("Failed to register user:", err);
+      message.error("Ro'yxatdan o'tishda xatolik yuz berdi");
     }
   };
-
   return (
       <div className="container">
         <div className="flex justify-center items-center mt-10 mb-8">

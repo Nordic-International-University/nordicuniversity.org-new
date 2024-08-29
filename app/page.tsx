@@ -4,6 +4,7 @@ import HomeVolumes from "@/app/components/home/homeVolume/homeVolumes";
 import HomeNews from "@/app/components/home/homeNews/HomeNews";
 
 export default function Home() {
+
   return (
     <main>
       <HomeSlider />

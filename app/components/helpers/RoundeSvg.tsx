@@ -6,9 +6,9 @@ const RoundedSvg = ({ title }: RoundedInterface) => {
   return (
     <div className="flex gap-2 items-center max-lg:mt-3">
       <Image src={roundedImage} alt="img" />
-      <p className="text-xl font-bold leading-[25.16px] text-indigo-900">
+      <h1 className="text-xl font-bold leading-[25.16px] text-indigo-900">
         {title}
-      </p>
+      </h1>
     </div>
   );
 };

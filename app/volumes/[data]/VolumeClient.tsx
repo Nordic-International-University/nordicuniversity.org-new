@@ -95,11 +95,15 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                             }}
                             className="flex flex-col items-center justify-center lg:w-1/2 max-lg:w-full group overflow-hidden relative"
                         >
-                            <p
-                                className={`absolute group-hover:opacity-0 group-hover:-translate-y-[600px] max-sm:hover:translate-y-0 transition-all duration-500 ease-out text-[44px] max-lg:text-[22px] tracking-[-0.04em]; ${oswald400.className}`}
-                            >
-                                {item.name}
-                            </p>
+
+                                <p
+                                    className={`absolute group-hover:opacity-0 group-hover:-translate-y-[600px] max-sm:hover:translate-y-0 transition-all duration-500 ease-out text-[44px] max-lg:text-[22px] tracking-[-0.04em]; ${oswald400.className}`}
+                                >
+                                    {item.name}
+                                </p>
+
+
+
                             <div className=" max-lg:h-[393px] max-lg:overflow-scroll">
                                 {item?.subCategories?.map(
                                     (
@@ -122,7 +126,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                                         subIndex: React.Key | null | undefined,
                                     ) => (
                                         <div key={subIndex}>
-                                            <Link href={`/publications/${item?.id}`}>
+                                            <Link href={`/publications/category/${item?.id}`}>
                                                 <p
                                                     className={`leading-7 ${oswald200.className} hover-line cursor-pointer text-[15px] font-light opacity-0 transform group-hover:my-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out after:duration-700 after:ease-out `}
                                                 >
@@ -141,13 +145,16 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                             }}
                             className="lg:w-1/2 max-lg:w-full"
                         >
-                            <Image
-                                src={`${"https://journal2.nordicun.uz"}${item?.file?.file_path}`}
-                                alt="img"
-                                width={650}
-                                height={500}
-                                className="h-auto w-full"
-                            />
+
+                                <Image
+                                    src={`${"https://journal2.nordicun.uz"}${item?.file?.file_path}`}
+                                    alt="img"
+                                    width={650}
+                                    height={500}
+                                    className="h-auto w-full"
+                                />
+
+
                         </div>
                     </div>
                 ))}

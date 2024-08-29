@@ -3,13 +3,13 @@ import React from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
-import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 import { useLoginUserMutation } from "@/lib/query/register.query"; // Импортируйте хук для мутации
 import { useRouter } from 'next/navigation';
 import {message} from "antd";
-
 import Cookies from "js-cookie";
+
 
 
 interface IFormInput {
@@ -42,7 +42,7 @@ const Page: React.FC = () => {
       }
       console.log("User logged in successfully:", result);
       reset(); // Очистить поля формы после успешного логина
-Cookies.set("access-token",result.login_data)
+
     } catch (err:any) {
       console.error("Failed to login:", err);
       if(err.status===422){
