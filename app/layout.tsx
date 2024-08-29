@@ -5,7 +5,7 @@ import Navbar from "@/app/components/main/Navbar";
 import React from "react";
 import StoreProvider from "@/lib/provider/StoreProvider";
 import Footer from "@/app/components/main/Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Bellota_Text({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
@@ -24,6 +24,7 @@ export default function RootLayout({
         <StoreProvider>
           <Navbar />
           {children}
+          <SpeedInsights />
           <Footer />
         </StoreProvider>
       </body>
