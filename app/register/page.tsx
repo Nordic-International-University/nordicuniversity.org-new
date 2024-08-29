@@ -6,6 +6,7 @@ import journal from "@/public/nature-600-min.jpg";
 import "react-phone-number-input/style.css";
 import { useRegisterUserMutation } from "@/lib/query/register.query";
 import PhoneInput from "react-phone-number-input/min";
+import {message} from "antd"; // Импортируйте хук из RTK Query
 
 interface IFormInput {
   phone: string;

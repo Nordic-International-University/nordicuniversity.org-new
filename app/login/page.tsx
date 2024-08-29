@@ -5,9 +5,12 @@ import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { useLoginUserMutation } from "@/lib/query/register.query";
+import { useLoginUserMutation } from "@/lib/query/register.query"; // Импортируйте хук для мутации
 import { useRouter } from 'next/navigation';
+import {message} from "antd";
+
 import Cookies from "js-cookie";
+
 
 interface IFormInput {
   phone: string;
@@ -38,14 +41,19 @@ const Page: React.FC = () => {
       router.push('/profile');
       }
       console.log("User logged in successfully:", result);
-    } catch (err) {
+      reset(); // Очистить поля формы после успешного логина
+Cookies.set("access-token",result.login_data)
+    } catch (err:any) {
       console.error("Failed to login:", err);
+      if(err.status===422){
+        message.warning("Parol yoki Telefon raqam notogri")
+      }
     }
   };
 
   return (
       <div className="container">
-        <div className="flex justify-center items-center mt-10 mb-8">
+        <div className="flex justify-center items-center h-screen">
           <div className="h-auto mr-10 max-sm:mr-0 shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] rounded-3xl">
             <Image
                 src={journal}
@@ -101,7 +109,7 @@ const Page: React.FC = () => {
                   </strong>
                 </button>
 
-                {/* Отображаем ошибку, если она есть */}
+
 
                 {isSuccess && <p className="text-green-500">User logged in successfully!</p>} {/* Уведомление об успешном логине */}
               </form>
