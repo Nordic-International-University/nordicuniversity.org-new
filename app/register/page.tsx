@@ -3,9 +3,9 @@ import React from "react";
 import {useForm, SubmitHandler, Controller} from "react-hook-form";
 import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
-import "react-phone-input-2/lib/style.css";
+import "react-phone-number-input/style.css";
 import { useRegisterUserMutation } from "@/lib/query/register.query";
-import PhoneInput from "react-phone-number-input/min"; // Импортируйте хук из RTK Query
+import PhoneInput from "react-phone-number-input/min";
 
 interface IFormInput {
   phone: string;

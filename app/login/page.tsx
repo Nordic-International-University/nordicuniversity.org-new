@@ -5,8 +5,9 @@ import Image from "next/image";
 import journal from "@/public/nature-600-min.jpg";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { useLoginUserMutation } from "@/lib/query/register.query"; // Импортируйте хук для мутации
-import { useRouter } from 'next/navigation'; // Импортируем useRouter из next/navigation
+import { useLoginUserMutation } from "@/lib/query/register.query";
+import { useRouter } from 'next/navigation';
+import Cookies from "js-cookie";
 
 interface IFormInput {
   phone: string;
@@ -20,7 +21,7 @@ interface IFormInput {
 
 const Page: React.FC = () => {
   const { register, handleSubmit, reset, control, formState: { errors }, setValue } = useForm<IFormInput>();
-  const [loginUser, { isLoading, error, isSuccess }] = useLoginUserMutation(); // Используем хук для мутации
+  const [loginUser, { isLoading, error, isSuccess }] = useLoginUserMutation();
   const router = useRouter(); // Инициализируем useRouter для перенаправления
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
@@ -28,11 +29,15 @@ const Page: React.FC = () => {
       const result = await loginUser({
         number: data.phone,
         password: data.password,
-      }).unwrap(); // Вызываем мутацию и обрабатываем результат
+      }).unwrap();
 
+
+      if(result.login_data.token){
+        Cookies.set('access_token',result.login_data.token)
+      reset();
+      router.push('/profile');
+      }
       console.log("User logged in successfully:", result);
-      reset(); // Очистить поля формы после успешного логина
-      router.push('/'); // Перенаправляем пользователя на главную страницу
     } catch (err) {
       console.error("Failed to login:", err);
     }
