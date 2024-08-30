@@ -40,7 +40,7 @@ const Page: React.FC = () => {
 
       // Tokenni cookie fayliga saqlash
       if (result?.data?.token) {
-        Cookies.set('token', result.token, { expires: 7 }); // Tokenni 7 kunga saqlash
+        Cookies.set('access_token', result.token, { expires: 7 }); // Tokenni 7 kunga saqlash
         message.success("Siz muvaffaqiyatli ro'yxatdan o'tdingiz");
 
         // "/profile" sahifasiga yo'naltirish

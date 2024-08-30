@@ -40,9 +40,12 @@ const NewsCard = ({
                 {moment(date).utc().format("YYYY-MM-DD")}
               </p>
             </div>
-            <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px] tracking-wider max-[400px]:h-[100px] ">
-              {title}
-            </p>
+            <div className="text-ellipsis   overflow-hidden ">
+              <p className="font-semibold text-[13px] mt-2 mb-2 text-green-950 h-[70px] tracking-wider max-[400px]:h-[100px] ">
+                {title}
+              </p>
+            </div>
+
             <p className="text-[11px] mt-4 text-[#478CCF] font-bold">
               {" "}
               Read More...
