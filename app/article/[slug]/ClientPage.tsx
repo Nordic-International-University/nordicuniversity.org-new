@@ -112,8 +112,9 @@ const Articles = ({ data }: { data: any }) => {
               ? reject
               : 0;
 
+  // @ts-ignore
   const downloadFile = async (
-      filePath: string | URL | Request | Uint8Array | undefined,
+      filePath: any,
       isFullLink: any,
   ) => {
     try {
@@ -212,7 +213,7 @@ const Articles = ({ data }: { data: any }) => {
     (
       item: {
         author: { full_name: any };
-        certificate_link: string | URL | Request | Uint8Array;
+        certificate_link: any
       },
       index: any,
     ) => {
