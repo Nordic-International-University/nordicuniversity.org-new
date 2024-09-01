@@ -12,10 +12,9 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 
-
 import { GrArticle } from "react-icons/gr";
 import Link from "next/link";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export const ArticleStatusEnum = {
   NEW: "NEW",
@@ -112,22 +111,16 @@ const Articles = ({ data }: { data: any }) => {
               ? reject
               : 0;
 
-  // @ts-ignore
-  const downloadFile = async (
-      filePath: any,
-      isFullLink: any,
-  ) => {
-    try {
 
+  const downloadFile = async (filePath: any, isFullLink: any) => {
+    try {
       const response = await fetch(
         isFullLink ? filePath : `https://journal2.nordicun.uz${filePath}`,
       );
       const blob = await response.blob();
-
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-
       const fileName = filePath.split("/").pop();
       a.download = fileName;
 
@@ -213,7 +206,7 @@ const Articles = ({ data }: { data: any }) => {
     (
       item: {
         author: { full_name: any };
-        certificate_link: any
+        certificate_link: any;
       },
       index: any,
     ) => {
@@ -289,21 +282,44 @@ const Articles = ({ data }: { data: any }) => {
                   Kalit so‘zlar:
                 </h1>
                 <div className="flex items-center max-sm:justify-center  gap-3 flex-wrap">
-                  {data?.keyword?.split(",")?.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
-                    <Button
-                      className="px-3 bg-orange-500 text-sm  h-7"
-
-                      key={index}
-                    >
-                      {item}
-                    </Button>
-                  ))}
+                  {data?.keyword
+                    ?.split(",")
+                    ?.map(
+                      (
+                        item:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined,
+                        index: React.Key | null | undefined,
+                      ) => (
+                        <Button
+                          className="px-3  text-sm text-white h-7"
+                          type="primary"
+                          key={index}
+                        >
+                          {item}
+                        </Button>
+                      ),
+                    )}
                 </div>
               </div>
             </div>
             <div className="bg-white w-full py-4 px-3 mt-4 rounded-md">
               <h2 className="inline text-sm font-bold pb-7"> Yo‘nalish:</h2>
-              <p className="inline text-sm pl-2"> {data?.category?.name}</p>
+              <Button className="inline text-[12px] ml-3.5 " type="primary">
+                {data?.category?.name}
+              </Button>
+
             </div>
             <div className="bg-white w-full py-4 px-3 mt-4 rounded-md">
               <h2 className="inline text-sm font-bold pb-7">
@@ -325,11 +341,7 @@ const Articles = ({ data }: { data: any }) => {
                 <Collapse className="bg-white" items={certificates} />
               </div>
             )}
-            {/*{data?.plagiarist_file && (*/}
-            {/*  <div className="w-full mt-4 ">*/}
-            {/*    <Collapse className="bg-white" items={[items[1]]} />*/}
-            {/*  </div>*/}
-            {/*)}*/}
+
             {data?.coAuthors?.length !== 0 && (
               <div className="mt-4 w-full bg-white pt-4 px-4">
                 <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
@@ -347,15 +359,89 @@ const Articles = ({ data }: { data: any }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {data?.coAuthors?.map((author: { id: React.Key | null | undefined; full_name: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; science_degree: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; phone_number: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; place_position: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; job: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }) => (
-                      <tr key={author.id}>
-                        <td>{author.full_name}</td>
-                        <td>{author.science_degree}</td>
-                        <td>{author.phone_number}</td>
-                        <td>{author.place_position}</td>
-                        <td>{author.job}</td>
-                      </tr>
-                    ))}
+                    {data?.coAuthors?.map(
+                      (author: {
+                        id: React.Key | null | undefined;
+                        full_name:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined;
+                        science_degree:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined;
+                        phone_number:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined;
+                        place_position:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined;
+                        job:
+                          | string
+                          | number
+                          | bigint
+                          | boolean
+                          | React.ReactElement<
+                              any,
+                              string | React.JSXElementConstructor<any>
+                            >
+                          | Iterable<React.ReactNode>
+                          | React.ReactPortal
+                          | Promise<React.AwaitedReactNode>
+                          | null
+                          | undefined;
+                      }) => (
+                        <tr key={author.id}>
+                          <td>{author.full_name}</td>
+                          <td>{author.science_degree}</td>
+                          <td>{author.phone_number}</td>
+                          <td>{author.place_position}</td>
+                          <td>{author.job}</td>
+                        </tr>
+                      ),
+                    )}
                   </tbody>
                 </Table>
               </div>
