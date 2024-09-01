@@ -95,8 +95,8 @@ const Contact = () => {
                                 alt=""
                             />
                         </div>
-                        <div className="w-[1200px] h-full max-xl:w-full max-xl:gap-4 max-md:flex-col max-xl:flex">
-                            <div className="relative h-[280px] group rounded-md w-full overflow-hidden">
+                        <div className="w-[1250px] h-screen max-xl:w-full max-xl:gap-4 max-md:flex-col max-xl:flex">
+                            <div className="relative h-[580px] group rounded-md w-full overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23977.31661227081!2d69.21817961753031!3d41.305283213841385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723535500885!5m2!1sru!2s"
                                     width="600"

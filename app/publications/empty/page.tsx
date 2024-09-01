@@ -1,5 +1,5 @@
 import React from "react";
-import errorPage from "@/public/404.jpg";
+import errorPage from "@/public/empty_state_teal.jpg"
 import leyer1 from "@/public/Ellipse.svg";
 import ellipseRight from "@/public/ellipseRight.svg";
 
@@ -33,17 +33,15 @@ const Page404 = () => {
                     />
                 </div>
                 <div className=" text-center z-10 absolute bottom-[10%] left-[50%] -translate-x-1/2 ">
-                    <h1 className="font-bold text-blue-500 max-sm:hidden">
-                        Something went wrong
-                    </h1>
-                    <h2 className="font-bold text-blue-500 max-sm:hidden">
-                        Sorry, we can't find the page you're looking for.
+
+                    <h2 className="font-bold text-blue-500 text-[20px]">
+                  Bu nashrga tegishli maolalar mavjud emas
                     </h2>
                     <Link
                         className="bg-blue-500 text-white py-2  px-2 rounded-lg mt-8 max-sm:mb-6 "
                         href={"/"}
                     >
-                        <button className="mt-8">Back to Home</button>
+                        <button className="mt-8">Bosh Saxifaga</button>
                     </Link>
 
                 </div>
