@@ -75,11 +75,11 @@ const Page = () => {
                   har ikkinchi oyning 15-sanasi Jurnalning davriyligi: bir yilda
                   5 ta son
                 </p>
-                <p className="text-[#6C758F] py-7 font-[300] text-[14px]">
+                <p className="text-[#6C758F]  font-[300] text-[14px]">
                   <span className="text-[#6C758F] font-[700]">Muassis:</span>{" "}
                   Xalqaro Nordik universiteti
                 </p>
-                <p className="text-[#6C758F] py-7 font-[300] text-[14px]">
+                <p className="text-[#6C758F] py-10 font-[300] text-[14px]">
                   <strong className="text-[#6C758F] font-[700]">
                     {" "}
                     Jurnal faoliyatining asosiy maqsadi::
@@ -146,7 +146,7 @@ const Page = () => {
                      <div className="relative text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
 
                        <Image
-                           src={image_sherzod}
+                           src={image_oybek}
                            alt="Tahririyat hayati rasm"
                            className="w-full h-full"
                        />
@@ -163,7 +163,7 @@ const Page = () => {
                    <SwiperSlide className="relative  text-center w-[205px] max-sm:w-full  ">
                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
                        <Image
-                           src={image_sherzod}
+                           src={image_odil}
                            alt="Tahririyat hayati rasm"
                            className="w-full h-full"
                        />
@@ -180,7 +180,7 @@ const Page = () => {
                    <SwiperSlide className="  text-center w-[205px] max-sm:w-full ">
                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
                        <Image
-                           src={image_sherzod}
+                           src={image_aziz}
                            alt="Tahririyat hayati rasm"
                            className="w-full h-full"
                        />
@@ -196,33 +196,51 @@ const Page = () => {
                </div>
 
 
-                <div className="mt-5">
-                  <RoundedSvg title="Tahririyat a'zolari:" />
-                  <ul className="flex flex-col gap-2 mt-5">
+                <div className="mt-3">
+                  <RoundedSvg title="Tahririyat a'zolari:"/>
+                  <table className="min-w-full mt-5 border-collapse border border-gray-200 shadow-md">
+                    <thead>
+                    <tr className="bg-blue-600 text-white">
+                      <th className="px-4 py-2 text-left font-medium">F.I.O</th>
+                      <th className="px-4 py-2 text-left font-medium">Yo'nalish</th>
+                      <th className="px-4 py-2 text-left font-medium">Davlat</th>
+                    </tr>
+                    </thead>
+                    <tbody>
                     {aboutItem?.map((item, index) => (
-                      <li key={index} className="text-md font-normal">
-                        <span className="font-bold">{item.name}</span> -{" "}
-                        {item.title} {item.country}
-                      </li>
+                        <tr
+                            key={index}
+                            className={`${
+                                index % 2 === 0 ? "bg-white" : "bg-gray-100"
+                            } hover:bg-orange-100 transition-colors duration-200`}
+                        >
+                          <td className="px-4 py-2 border border-gray-200 font-semibold">
+                            {item.name}
+                          </td>
+                          <td className="px-4 py-2 border border-gray-200">{item.title}</td>
+                          <td className="px-4 py-2 border border-gray-200">{item.country}</td>
+                        </tr>
                     ))}
-                  </ul>
+                    </tbody>
+                  </table>
+
                 </div>
               </div>
             </div>
             <div className="w-full lg:min-w-[400px]">
-              <RoundedSvg title="Ko’p beriladigan savollar" />
+              <RoundedSvg title="Ko’p beriladigan savollar"/>
               <div className="pt-[29px]">
-                <AccordionItem item={accordionItems} />
+                <AccordionItem item={accordionItems}/>
               </div>
-              <div className="mt-5">
-                <RoundedSvg title="Tahririyat manzili:" />
+              <div className="mt-3">
+                <RoundedSvg title="Tahririyat manzili:"/>
                 <div className="pt-4">
                   <iframe
-                    ref={iframeRef}
-                    className="w-full"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.992487234806!2d69.2162893762974!3d41.28726797131279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723365720858!5m2!1sru!2s"
-                    height="450"
-                    style={{ border: 0 }}
+                      ref={iframeRef}
+                      className="w-full"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.992487234806!2d69.2162893762974!3d41.28726797131279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723365720858!5m2!1sru!2s"
+                      height="450"
+                      style={{border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

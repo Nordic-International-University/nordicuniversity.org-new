@@ -37,8 +37,8 @@ const Page: React.FC = () => {
 
       if(result.login_data.token){
         Cookies.set('access_token',result.login_data.token)
-      reset();
-      router.push('/profile');
+        reset();
+        router.push('/profile');
       }
       console.log("User logged in successfully:", result);
       reset(); // Очистить поля формы после успешного логина

@@ -34,7 +34,7 @@ const PublicationPage = async ({
 
   return (
     <div className="container">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-lg:grid-cols-2">
         {categoryData.map((article: any, index: number) => (
           <BigArticlesCard
             key={index}
