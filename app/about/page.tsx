@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
 import AccordionItem from "@/app/components/helpers/accordionItem";
 
-import { HomeOutlined } from "@ant-design/icons";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import image_odil from "@/public/Odil Qoysinov 1.png";
 import image_aziz from "@/public/azizbek abdullayev 1.png";
