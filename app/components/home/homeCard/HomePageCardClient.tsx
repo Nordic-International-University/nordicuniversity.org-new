@@ -64,7 +64,7 @@ const HomePageCardClient = ({
               </div>
             ))}
           </div>
-          <Link href={"/"}>
+          <Link href={"/articles"}>
             <div className=" w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
               <h1 className="ml-3">Ko'proq Maqolalar</h1>
               <Image src={arrowImage} alt="" className="mr-5" />
