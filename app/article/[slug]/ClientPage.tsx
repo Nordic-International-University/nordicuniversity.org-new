@@ -1,20 +1,16 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Card, Container, Table } from "react-bootstrap";
-
-import { Breadcrumb, Button, Collapse, Steps } from "antd";
-import { HomeOutlined, UserOutlined } from "@ant-design/icons";
-import { FcDocument } from "react-icons/fc";
+import React, {lazy,} from "react";
+import { Container, Table } from "react-bootstrap";
+import { Button, Collapse } from "antd";
 import dayjs from "dayjs";
 import { BiDownload } from "react-icons/bi";
-import { Viewer, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-
-import { GrArticle } from "react-icons/gr";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+const Worker = lazy(() => import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })));
+const Viewer = lazy(() => import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Viewer })));
 
 export const ArticleStatusEnum = {
   NEW: "NEW",
@@ -25,92 +21,7 @@ export const ArticleStatusEnum = {
 };
 
 const Articles = ({ data }: { data: any }) => {
-  const [stepsItems, setStepsItems] = useState([]);
-
-  const [reject, setReject] = useState(0);
-  const router = useRouter();
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-
-  useEffect(() => {
-    const initialSteps: any = [
-      {
-        title: "Yangi maqola",
-        description: "Tekshirilmoqda",
-        key: ArticleStatusEnum.NEW,
-      },
-      {
-        title: "Antiplagiat",
-        description: "O‘xshashlik darajasini aniqlash",
-        key: ArticleStatusEnum.PLAGIARISM,
-      },
-      {
-        title: "Taqriz",
-        description: "Baholash va tahlil qilish jarayoni",
-        key: ArticleStatusEnum.REVIEW,
-      },
-      {
-        title: "Qabul qilindi!",
-        description: "Nashrga tayyorlanmoqda",
-        key: ArticleStatusEnum.ACCEPT,
-      },
-      {
-        title: "Nashr qilindi",
-        description: (
-          <div>
-            {data?.status === ArticleStatusEnum.ACCEPT ? (
-              <Link className="text-blue-500" href={`/articles/${data?.slug}`}>
-                Maqolani ko‘rish
-              </Link>
-            ) : (
-              <div>Maqolani ko‘rish</div>
-            )}
-          </div>
-        ),
-        key: ArticleStatusEnum.ACCEPT,
-        icon: (
-          <div className="rounded-full flex justify-center items-start">
-            <FcDocument className="text-3xl" />
-          </div>
-        ),
-        status: data?.status === ArticleStatusEnum.ACCEPT ? "success" : "",
-      },
-    ];
-
-    if (data?.status === ArticleStatusEnum.REJECTED) {
-      const rejectIndex = initialSteps.findIndex(
-        (item: { key: any }) => item.key === data?.last_status,
-      );
-
-      if (rejectIndex !== -1) {
-        initialSteps[rejectIndex] = {
-          ...initialSteps[rejectIndex],
-          description: (
-            <>
-              <span>Rad etilish sababi:</span> {data?.reason_for_rejection}
-            </>
-          ),
-          status: "error",
-        };
-        setReject(rejectIndex);
-      }
-    }
-
-    setStepsItems(initialSteps);
-  }, [data]);
-
-  const currentStep =
-    data?.status === ArticleStatusEnum.NEW
-      ? 0
-      : data?.status === ArticleStatusEnum.PLAGIARISM
-        ? 1
-        : data?.status === ArticleStatusEnum.REVIEW
-          ? 2
-          : data?.status === ArticleStatusEnum.ACCEPT
-            ? 5
-            : data?.status === ArticleStatusEnum.REJECTED
-              ? reject
-              : 0;
-
 
   const downloadFile = async (filePath: any, isFullLink: any) => {
     try {
@@ -233,31 +144,6 @@ const Articles = ({ data }: { data: any }) => {
   return (
     <>
       <div className="w-full bg-white py-6">
-        <Container className="main-font">
-          <Breadcrumb
-            items={[
-              {
-                onClick: () => router.push("/"),
-                title: <HomeOutlined />,
-                className: "cursor-pointer",
-              },
-              {
-                onClick: () => router.push("/articles"),
-                title: (
-                  <div className="flex items-center gap-1.5">
-                    <GrArticle />
-                    <span>Maqolalar</span>
-                  </div>
-                ),
-                className: "cursor-pointer hover:text-black ",
-              },
-              {
-                title: data?.title,
-                className: "cursor-pointer",
-              },
-            ]}
-          />
-        </Container>
       </div>
       <Container className="mt-10 max-sm:mb-20">
         <div className="flex items-start gap-4 max-xl:flex-col justify-between">
@@ -285,23 +171,7 @@ const Articles = ({ data }: { data: any }) => {
                   {data?.keyword
                     ?.split(",")
                     ?.map(
-                      (
-                        item:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined,
-                        index: React.Key | null | undefined,
-                      ) => (
+                      (item:any,index:number) => (
                         <Button
                           className="px-3  text-sm text-white h-7"
                           type="primary"
@@ -360,79 +230,7 @@ const Articles = ({ data }: { data: any }) => {
                   </thead>
                   <tbody>
                     {data?.coAuthors?.map(
-                      (author: {
-                        id: React.Key | null | undefined;
-                        full_name:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined;
-                        science_degree:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined;
-                        phone_number:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined;
-                        place_position:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined;
-                        job:
-                          | string
-                          | number
-                          | bigint
-                          | boolean
-                          | React.ReactElement<
-                              any,
-                              string | React.JSXElementConstructor<any>
-                            >
-                          | Iterable<React.ReactNode>
-                          | React.ReactPortal
-                          | Promise<React.AwaitedReactNode>
-                          | null
-                          | undefined;
-                      }) => (
+                      (author: any) => (
                         <tr key={author.id}>
                           <td>{author.full_name}</td>
                           <td>{author.science_degree}</td>
@@ -467,7 +265,9 @@ const Articles = ({ data }: { data: any }) => {
                 </div>
 
                 <div className="flex justify-center items-center w-full h-full">
-                  <img
+                  <Image
+                      width={400}
+                      height={300}
                     className="h-full w-full object-cover"
                     alt="Maqola muqovasi"
                     src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
@@ -529,7 +329,10 @@ const Articles = ({ data }: { data: any }) => {
                   <div className="px-4 pt-4">
                     <h2 className="text-xl">Nashr: {data?.volume?.title}</h2>
                     <div>
-                      <img
+                      <Image
+                          width={400}
+                          height={300}
+                          alt="nashr"
                         className="py-2"
                         src={`https://journal2.nordicun.uz${data?.volume?.image?.file_path}`}
                       />
