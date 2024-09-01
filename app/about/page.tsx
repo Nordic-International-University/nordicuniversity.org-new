@@ -46,7 +46,7 @@ const Page = () => {
 
   return (
     <>
-      <Header item={beadCampItem} />
+
       <section className="mt-[80px]">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-10 justify-between">
