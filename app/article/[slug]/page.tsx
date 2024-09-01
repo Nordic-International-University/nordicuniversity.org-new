@@ -1,33 +1,38 @@
-import Store, { AppDispatch } from "@/lib/store/Store";
-import { articleApi } from "@/lib/query/article.query";
-import ClientPage from "@/app/article/[slug]/ClientPage";
+import React from 'react';
+import ClientPage from '@/app/article/[slug]/ClientPage';
 
-export async function generateMetadata({ params }: any) {
-  const dispatch = Store.dispatch as AppDispatch;
-
-  const result = await dispatch(
-    articleApi.endpoints.getBySlug.initiate(params.slug),
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const response = await fetch(
+      `https://journal2.nordicun.uz/article/user/slug/${params.slug}`
   );
 
-  const { data }: any = result;
+  if (!response.ok) {
+    return {
+      title: "Default Title",
+      description: "Default Description",
+    };
+  }
+
+  const data = await response.json();
+
   return {
     title: data?.title || "Default Title",
     description: data?.description || "Default Description",
   };
 }
 
-export default async function ArticleDetail({ params }: any) {
-  const dispatch = Store.dispatch as AppDispatch;
-
-  const result = await dispatch(
-    articleApi.endpoints.getBySlug.initiate(params.slug),
+const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
+  const response = await fetch(
+      `https://journal2.nordicun.uz/article/user/slug/${params.slug}`
   );
 
-  const { data } = result;
-
-  if (!data) {
+  if (!response.ok) {
     return <div>Article not found</div>;
   }
 
+  const data = await response.json();
+
   return <ClientPage data={data} />;
-}
+};
+
+export default ArticleDetail;
