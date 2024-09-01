@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://journal.nordicuniversity.org
+
+# Sitemaps
+Sitemap: https://journal.nordicuniversity.org/sitemap.xml
