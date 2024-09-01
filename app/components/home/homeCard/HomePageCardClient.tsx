@@ -65,16 +65,19 @@ const HomePageCardClient = ({
             ))}
           </div>
           <Link href={"/articles"}>
-            <div className=" w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
+            <div className=" w-full flex group justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
               <h1 className="ml-3">Ko'proq Maqolalar</h1>
-              <Image src={arrowImage} alt="" className="mr-5" />
+              <Image src={arrowImage} alt="arrow" className="group-hover:mr-4 transition-all mr-7" />
             </div>
           </Link>
+          <div className="mb-3 mt-3">
+            <RoundedSvg title="Yangiliklar"/>
+          </div>
           <HomeNews />
         </div>
         <div>
           <div className=" flex flex-col gap-3">
-            <RoundedSvg title="Yangiliklar" />
+            <RoundedSvg title="Eng so‘ng‘i maqolalar" />
             {lastArticles?.map((article: any, index: number) => (
               <div key={index}>
                 <NewsCard
@@ -90,9 +93,9 @@ const HomePageCardClient = ({
               </div>
             ))}
             <Link href={"/"}>
-              <div className=" w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
-                <h1 className="ml-3">Ko'proq Yangiliklar</h1>
-                <Image src={arrowImage} alt="" className="mr-5" />
+              <div className="group w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
+                <h1 className="ml-3">Ko'proq eng so‘ng‘i maqolalar</h1>
+                <Image src={arrowImage} alt="arrow" className="group-hover:mr-4 transition-all mr-7" />
               </div>
             </Link>
           </div>

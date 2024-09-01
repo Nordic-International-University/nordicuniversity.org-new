@@ -1,8 +1,6 @@
 import React from "react";
-import { useGetAllCategoryQuery } from "@/lib/query/category.query";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import Image from "next/image";
-import { useGetVolumesQuery } from "@/lib/query/volume.query";
 import moment from "moment/moment";
 import { FaCalendarAlt } from "react-icons/fa";
 import Link from "next/link";
@@ -13,18 +11,33 @@ async function getVolume() {
 
   return data;
 }
-async function getCategory() {
-  const res = await fetch("https://journal2.nordicun.uz/category");
-  const data = await res.json();
 
-  return data;
+async function fetchCategoriesWithArticles() {
+  const resCategories = await fetch("https://journal2.nordicun.uz/category");
+  if (!resCategories.ok) {
+    throw new Error('Failed to fetch categories');
+  }
+  const categories = await resCategories.json();
+
+  const categoriesWithArticles = await Promise.all(
+      categories.map(async (category:any) => {
+        const resArticles = await fetch(
+            `https://journal2.nordicun.uz/article/user/category/${category.id}`
+        );
+        const articles = await resArticles.json();
+        return {
+          ...category,
+          articlesCount: articles.length,
+        };
+      })
+  );
+
+  return categoriesWithArticles;
 }
-
 const PublicationsClient = async () => {
-  const data: any = await getCategory();
+  const data: any = await fetchCategoriesWithArticles();
   const volume: any = await getVolume();
-  console.log("volome", volume);
-  console.log("data", data);
+
   return (
     <div className="container">
       <div className="flex max-xl:flex-col max-xm:w-full">
@@ -36,7 +49,7 @@ const PublicationsClient = async () => {
               <div
                 key={index}
                 className={
-                  "w-[900px]   max-lg:w-full max-sm:justify-center flex max-sm:flex-col items-center  shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] mb-9 mt-6 rounded-3xl "
+                  "w-[900px] max-lg:w-full max-sm:justify-center flex max-sm:flex-col items-center  shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] mb-9 mt-6 rounded-3xl "
                 }
               >
                 <Link href={`/publications/volume/${item.id}`}>
@@ -74,7 +87,6 @@ const PublicationsClient = async () => {
             ))}
           </div>
         </div>
-
         <div className=" w-1/3 max-xl:hidden ">
           <RoundedSvg title="Asosiy Yo'nalishlar" />
           <div>
@@ -95,7 +107,7 @@ const PublicationsClient = async () => {
                     <h2 className="text-[#313131] font-extrabold">
                       {category?.name}
                     </h2>
-                    <p>{category.subCategories.length} ta maqola</p>
+                    <p>{category.articlesCount} ta maqola</p>
                   </div>
                 </Link>
               </div>

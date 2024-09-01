@@ -44,3 +44,65 @@
 
 
 
+
+.funnel {
+    width: 300px;
+    border: 2px solid #478ccf;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.section {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #478ccf;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.abstract {
+    background-color: #d9eaf2;
+}
+
+.introduction {
+    background-color: #c9ddec;
+    clip-path: polygon(10% 0, 90% 0, 85% 100%, 15% 100%);
+}
+
+.literature {
+    background-color: #b8d0e6;
+    clip-path: polygon(15% 0, 85% 0, 80% 100%, 20% 100%);
+}
+
+.methodology {
+    background-color: #a7c3e0;
+    clip-path: polygon(20% 0, 80% 0, 75% 100%, 25% 100%);
+}
+
+.result {
+    background-color: #96b6da;
+    clip-path: polygon(25% 0, 75% 0, 70% 100%, 30% 100%);
+}
+
+.discussion {
+    background-color: #85a9d4;
+    clip-path: polygon(30% 0, 70% 0, 65% 100%, 35% 100%);
+}
+
+.conclusion {
+    background-color: #749ccd;
+    clip-path: polygon(35% 0, 65% 0, 60% 100%, 40% 100%);
+}
+
+.acknowledgement {
+    background-color: #638fc7;
+    clip-path: polygon(40% 0, 60% 0, 55% 100%, 45% 100%);
+}
+
+.references {
+    background-color: #5282c1;
+    clip-path: polygon(45% 0, 55% 0, 50% 100%, 50% 100%);
+}
+

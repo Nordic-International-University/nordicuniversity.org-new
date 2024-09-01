@@ -10,16 +10,16 @@ const HomeVolumesClient = ({ volume }: any) => {
       <div className="swiperContainer">
         <Swiper slidesPerView={4}>
           {volume.map((item: any) => (
-           <Link key={item.id} className="cursor-pointer" href={`/publications/volume/${item.id}`}>
                <SwiperSlide key={volume.id}>
+           <Link key={item.id} className="cursor-pointer hover:grayscale transition-all" href={`/publications/volume/${item.id}`}>
                    <Image
                        src={`${"https://journal2.nordicun.uz"}${item.image.file_path}`}
                        width={1000}
                        height={300}
                        alt="volume"
                    />
-               </SwiperSlide>
            </Link>
+               </SwiperSlide>
           ))}
         </Swiper>
       </div>
