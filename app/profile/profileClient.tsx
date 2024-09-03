@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Page = () => {
-
+const ProfileClient = () => {
     return (
         <div>
 
@@ -9,4 +8,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default ProfileClient;

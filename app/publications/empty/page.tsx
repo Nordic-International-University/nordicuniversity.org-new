@@ -2,7 +2,7 @@ import React from "react";
 import errorPage from "@/public/empty_state_teal.jpg"
 import leyer1 from "@/public/Ellipse.svg";
 import ellipseRight from "@/public/ellipseRight.svg";
-
+//test
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,7 +35,7 @@ const Page404 = () => {
                 <div className=" text-center z-10 absolute bottom-[10%] left-[50%] -translate-x-1/2 ">
 
                     <h2 className="font-bold text-blue-500 text-[20px]">
-                  Bu nashrga tegishli maolalar mavjud emas
+                  Bu nashrga tegishli maqolalar mavjud emas
                     </h2>
                     <Link
                         className="bg-blue-500 text-white py-2  px-2 rounded-lg mt-8 max-sm:mb-6 "

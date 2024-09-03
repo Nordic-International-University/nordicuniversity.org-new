@@ -1,18 +1,18 @@
 "use client";
-
+//something
 import React, { useEffect, useRef } from "react";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
 import AccordionItem from "@/app/components/helpers/accordionItem";
-import Header from "@/app/components/main/Header";
-import { HomeOutlined } from "@ant-design/icons";
+
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import image_odil from "@/public/Odil Qoysinov 1.png";
 import image_aziz from "@/public/azizbek abdullayev 1.png";
 import image_sherzod from "@/public/Sherzod Mustafakulov 1.png";
 import image_oybek from "@/public/Oybek Raximberdiyev 1.png";
-import {Autoplay, Navigation, Pagination} from "swiper/modules";
+import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -29,24 +29,11 @@ const Page = () => {
   useEffect(() => {
     console.log(data);
   }, []);
-  const beadCampItem = [
-    {
-      href: "/",
-      title: <HomeOutlined />,
-    },
-    {
-      href: "#",
-      title: (
-        <>
-          <span>jurnal haqida</span>
-        </>
-      ),
-    },
-  ];
+
 
   return (
     <>
-      <Header item={beadCampItem} />
+
       <section className="mt-[80px]">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-10 justify-between">
