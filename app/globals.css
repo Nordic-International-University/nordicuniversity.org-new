@@ -233,7 +233,7 @@
 }
 
 .btn {
-    width: 150px;
+    padding: 0 15px;
     background-color: #5995fd;
     border: none;
     outline: none;
@@ -321,7 +321,6 @@
     margin: 0;
     background: none;
     border: 2px solid #fff;
-    width: 130px;
     height: 41px;
     font-weight: 600;
     font-size: 0.8rem;
