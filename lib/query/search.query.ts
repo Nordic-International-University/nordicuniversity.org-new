@@ -1,27 +1,22 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const apiSlice = createApi({
-    reducerPath: 'api',
-    baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API_URL2 }), // Asosiy API URL ni kiriting
+
+export const searchApi = createApi({
+    reducerPath: 'search',
+    baseQuery: fetchBaseQuery({ baseUrl: "https://journal2.nordicun.uz"}),
     endpoints: (builder) => ({
-        fetchCategories: builder.query({
-            query: () => '/category_search',
-            keepUnusedDataFor: 0, // fetchCategories() funksiyasi uchun muqobil
-        }),
-        fetchVolumes: builder.query({
-            query: () => '/volume_search',
-            keepUnusedDataFor: 0, // fetchVolumes() funksiyasi uchun muqobil
-        }),
-        getAuthor: builder.query({
+        getAllAuthor: builder.query({
             query: () => '/author',
-            transformResponse: (response) => (response as any)?.data?.data,
-            keepUnusedDataFor: 0, // getAuthor() funksiyasi uchun muqobil
+            transformResponse(baseQueryReturnValue:any) {
+                return baseQueryReturnValue.data
+            }
         }),
         getSubCategoriesByCategoryId: builder.query({
-            query: (category) => ({
-                url: `/subcategory/${category}`,
+            query: (id_list) => ({
+                url: id_list?.length > 0 ? '/subcategory/sub' : '/subcategory',
+                method: id_list?.length > 0 ? 'POST' : 'GET',
+                body: id_list?.length > 0 ? { id_list } : undefined,
             }),
-            keepUnusedDataFor: 0, // getSubCategoriesByCategoryId() funksiyasi uchun muqobil
         }),
         getAllFilteredArticles: builder.mutation({
             query: ({ data, page, limit }) => ({
@@ -34,9 +29,7 @@ export const apiSlice = createApi({
 });
 
 export const {
-    useFetchCategoriesQuery,
-    useFetchVolumesQuery,
-    useGetAuthorQuery,
+    useGetAllAuthorQuery,
     useGetSubCategoriesByCategoryIdQuery,
     useGetAllFilteredArticlesMutation,
-} = apiSlice;
+} = searchApi;
