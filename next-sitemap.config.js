@@ -1,7 +1,7 @@
 // next-sitemap.config.js
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://journal.nordicuniversity.org",
+  siteUrl: "https://newjournal-next-js.vercel.app",
   generateRobotsTxt: true,
   changefreq: "daily",
   priority: 0.7,
