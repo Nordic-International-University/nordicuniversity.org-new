@@ -44,6 +44,7 @@ const Page = () => {
 
   const { data: categories } = useGetAllCategoryQuery();
   const { data: volume } = useGetVolumesQuery();
+  // @ts-ignore
   const { data: author } = useGetAllAuthorQuery();
   const { data: subCategories } = useGetSubCategoriesByCategoryIdQuery(
     filterState.mainFilter.Category,
