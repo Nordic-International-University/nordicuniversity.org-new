@@ -1,5 +1,5 @@
 "use client";
-import React, {lazy,} from "react";
+import React, { lazy } from "react";
 import { Container, Table } from "react-bootstrap";
 import { Button, Collapse } from "antd";
 import dayjs from "dayjs";
@@ -9,16 +9,14 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import Link from "next/link";
 import Image from "next/image";
-const Worker = lazy(() => import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })));
-const Viewer = lazy(() => import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Viewer })));
+import Head from "next/head";
+const Worker = lazy(() =>
+  import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })),
+);
+const Viewer = lazy(() =>
+  import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Viewer })),
+);
 
-export const ArticleStatusEnum = {
-  NEW: "NEW",
-  PLAGIARISM: "PLAGIARISM",
-  REVIEW: "REVIEW",
-  ACCEPT: "ACCEPT",
-  REJECTED: "REJECTED",
-};
 
 const Articles = ({ data }: { data: any }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
@@ -143,8 +141,7 @@ const Articles = ({ data }: { data: any }) => {
 
   return (
     <>
-      <div className="w-full bg-white py-6">
-      </div>
+      <div className="w-full bg-white py-6"></div>
       <Container className="mt-10 max-sm:mb-20">
         <div className="flex items-start gap-4 max-xl:flex-col justify-between">
           <div className="w-3/4 max-xl:w-full">
@@ -170,17 +167,15 @@ const Articles = ({ data }: { data: any }) => {
                 <div className="flex items-center max-sm:justify-center  gap-3 flex-wrap">
                   {data?.keyword
                     ?.split(",")
-                    ?.map(
-                      (item:any,index:number) => (
-                        <Button
-                          className="px-3  text-sm text-white h-7"
-                          type="primary"
-                          key={index}
-                        >
-                          {item}
-                        </Button>
-                      ),
-                    )}
+                    ?.map((item: any, index: number) => (
+                      <Button
+                        className="px-3  text-sm text-white h-7"
+                        type="primary"
+                        key={index}
+                      >
+                        {item}
+                      </Button>
+                    ))}
                 </div>
               </div>
             </div>
@@ -189,7 +184,6 @@ const Articles = ({ data }: { data: any }) => {
               <Button className="inline text-[12px] ml-3.5 " type="primary">
                 {data?.category?.name}
               </Button>
-
             </div>
             <div className="bg-white w-full py-4 px-3 mt-4 rounded-md">
               <h2 className="inline text-sm font-bold pb-7">
@@ -229,17 +223,15 @@ const Articles = ({ data }: { data: any }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {data?.coAuthors?.map(
-                      (author: any) => (
-                        <tr key={author.id}>
-                          <td>{author.full_name}</td>
-                          <td>{author.science_degree}</td>
-                          <td>{author.phone_number}</td>
-                          <td>{author.place_position}</td>
-                          <td>{author.job}</td>
-                        </tr>
-                      ),
-                    )}
+                    {data?.coAuthors?.map((author: any) => (
+                      <tr key={author.id}>
+                        <td>{author.full_name}</td>
+                        <td>{author.science_degree}</td>
+                        <td>{author.phone_number}</td>
+                        <td>{author.place_position}</td>
+                        <td>{author.job}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </Table>
               </div>
@@ -266,10 +258,12 @@ const Articles = ({ data }: { data: any }) => {
 
                 <div className="flex justify-center items-center w-full h-full">
                   <Image
-                      width={400}
-                      height={300}
+                    width={400}
+                    height={300}
                     className="h-full w-full object-cover"
                     alt="Maqola muqovasi"
+                    layout="responsive"
+                    priority={true}
                     src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
                   />
                 </div>
@@ -330,9 +324,9 @@ const Articles = ({ data }: { data: any }) => {
                     <h2 className="text-xl">Nashr: {data?.volume?.title}</h2>
                     <div>
                       <Image
-                          width={400}
-                          height={300}
-                          alt="nashr"
+                        width={400}
+                        height={300}
+                        alt="nashr"
                         className="py-2"
                         src={`https://journal2.nordicun.uz${data?.volume?.image?.file_path}`}
                       />
