@@ -18,7 +18,6 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  // Navbarni login va register sahifalarida ko'rsatmaslik
   if (pathname === "/login" || pathname === "/register") return null;
 
   return (
@@ -40,6 +39,7 @@ const Navbar = () => {
                 />
                 {menuItems.map((item, index) => (
                     <li
+                        onClick={() => dispatch(closeMenu())}
                         key={index}
                         className={`text-[#6C758F] text-[18px] font-[700] ${
                             item.active ? "active-class" : ""

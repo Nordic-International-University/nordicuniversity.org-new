@@ -8,6 +8,7 @@ import { newsApi } from "@/lib/query/news.query";
 import { categoryApi } from "@/lib/query/category.query";
 import {registerApi} from "@/lib/query/register.query";
 import {mySlice} from "@/lib/query/myarticle.query";
+import {searchApi} from "@/lib/query/search.query";
 
 const rootReducer = combineReducers({
   navbar: navbarReducer,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   [newsApi.reducerPath]: newsApi.reducer,
   [categoryApi.reducerPath]: categoryApi.reducer,
   [mySlice.reducerPath]: mySlice.reducer,
+  [searchApi.reducerPath]: searchApi.reducer,
 });
 
 const makeStore = () => {
@@ -30,7 +32,8 @@ const makeStore = () => {
         volumeApi.middleware,
         newsApi.middleware,
         categoryApi.middleware,
-          mySlice.middleware
+          mySlice.middleware,
+          searchApi.middleware,
 
       ),
   });

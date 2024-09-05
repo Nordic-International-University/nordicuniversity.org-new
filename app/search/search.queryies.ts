@@ -1,8 +1,13 @@
 import axios from 'axios'
 
 
-const volumeToValueAndLabel = (data:[], valueName:any, labelName:any) => {
-  return data?.map((item) => ({
+const volumeToValueAndLabel = (data: any, valueName: any, labelName: any) => {
+  if (!Array.isArray(data)) {
+    console.error("Expected data to be an array but received:", data);
+    return []; // Return an empty array or handle it as needed
+  }
+
+  return data.map((item: any) => ({
     value: item[valueName],
     label: item[labelName],
   }));
