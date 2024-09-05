@@ -1,7 +1,6 @@
 import React from 'react';
 import ClientPage from '@/app/article/[slug]/ClientPage';
 
-// Function to generate metadata dynamically
 export async function generateMetadata({ params }: { params: { slug: string } }) {
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
 
@@ -14,8 +13,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
 
     const data = await response.json();
-
-    // Generate the metadata object with Google Scholar-specific tags
     return {
         title: data.title || "Default Title",
         description: data.abstract || data.description || "Default Description",
@@ -55,11 +52,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
-
-    if (!response.ok) {
-        return <div>Article not found</div>;
-    }
-
     const data = await response.json();
 
     return <ClientPage data={data} />;

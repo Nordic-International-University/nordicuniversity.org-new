@@ -26,14 +26,14 @@ export const registerApi = createApi({
         }),
         loginUser: builder.mutation({
             query: (loginData) => ({
-                url: "/author/login",  // URL для авторизации пользователя
+                url: "/author/login",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: {
-                    phone_number: `${loginData.phone_number}`, // Телефонный номер пользователя
-                    password: loginData.password,  // Пароль пользователя
+                    phone_number: `${loginData.phone_number}`,
+                    password: loginData.password,
                 },
             }),
         }),

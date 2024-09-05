@@ -9,7 +9,8 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
+
+
 const Worker = lazy(() =>
   import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })),
 );
@@ -258,13 +259,14 @@ const Articles = ({ data }: { data: any }) => {
 
                 <div className="flex justify-center items-center w-full h-full">
                   <Image
-                    width={400}
-                    height={300}
-                    className="h-full w-full object-cover"
-                    alt="Maqola muqovasi"
-                    layout="responsive"
-                    priority={true}
-                    src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
+                      width={800}
+                      height={600}
+                      className="h-full w-full object-cover"
+                      alt="Maqola muqovasi"
+                      layout="responsive"
+                      priority={true}
+                      src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
+                      placeholder="empty"
                   />
                 </div>
               </div>

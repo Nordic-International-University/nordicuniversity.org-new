@@ -15,8 +15,11 @@ export const articleApi = createApi({
     getByCategory: builder.query({
       query: (id) => `/article/user/category/${id}`,
     }),
+    getSubcategoriesByCategory: builder.query({
+      query: (categoryId) => `/subcategory/sub/${categoryId}`,
+    }),
   }),
 });
 
-export const { useGetPostsQuery, useGetBySlugQuery, useGetByCategoryQuery } =
+export const { useGetPostsQuery, useGetBySlugQuery, useGetByCategoryQuery ,useGetSubcategoriesByCategoryQuery} =
   articleApi;

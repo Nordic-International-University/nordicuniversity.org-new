@@ -24,7 +24,7 @@ export default function TableComponent({data}: ProfileClientProps) {
                         <th className="py-3 px-6 text-left">O'qishlar soni</th>
                     </tr>
                     </thead>
-                    {data.data.Articles.map((article: any, index: number) => (
+                    {data?.data?.Articles.map((article: any, index: number) => (
                         <tbody>
                         <tr className="border-b hover:bg-gray-100 " key={index}>
                             <td className="py-4 px-6">Row 1, Data 1</td>
@@ -57,4 +57,4 @@ export default function TableComponent({data}: ProfileClientProps) {
             <Tabs defaultActiveKey="1" type="card" items={tabsItem}/>
         </div>
     );
-}
+};

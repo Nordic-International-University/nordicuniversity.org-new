@@ -18,7 +18,16 @@ export const mySlice = createApi({
         getArticleBySlug: builder.query({
             query: (slug) => `/article/user/slug/${slug}`,
         }),
+        getAuthorProfile: builder.query({
+            query: ({ token }) => ({
+                url: '/author/profile',
+                method: 'GET',
+                headers: {
+                    Authorization: `${token}`,
+                },
+            }),
+        }),
     }),
 });
 
-export const { useGetArticleBySlugQuery } = mySlice;
+export const { useGetArticleBySlugQuery,useGetAuthorProfileQuery} = mySlice;

@@ -1,12 +1,9 @@
 import React from "react";
 import ProfileClient from "@/app/profile/ProfileClient";
-import { cookies } from "next/headers";
-import { FaUserAlt } from "react-icons/fa";
 import noImag from "@/public/noUser.webp";
 import Image from "next/image";
 import Link from "next/link";
-import dayjs from "dayjs";
-import Profilrticles from "@/app/register/Profilrticles";
+import {cookies} from "next/headers";
 
 const Page = async () => {
   const token = cookies().get("access_token")?.value;
@@ -43,23 +40,23 @@ const Page = async () => {
               <div className="w-full">
                 <h1 className="text-[18px] mr-2">Telefon Raqam:</h1>
                 <span className="text-[22px] font-bold">
-                {posts.data.phone_number}
+                {posts?.data?.phone_number}
               </span>
               </div>
               <div className="w-full">
                 <h1 className="text-[18px] mr-2">Kasbi:</h1>
-                <span className="text-[22px] font-bold">{posts.data.job}</span>
+                <span className="text-[22px] font-bold">{posts?.data?.job}</span>
               </div>
               <div className="w-full">
                 <h1 className="text-[18px] mr-2">Ish Joyi:</h1>
                 <span className="text-[22px] font-bold">
-                {posts.data.place_position}
+                {posts?.data?.place_position}
               </span>
               </div>
               <div className="w-full">
                 <h1 className="text-[18px] mr-2">Ilmiy Daraja:</h1>
                 <span className="text-[22px] font-bold">
-                {posts.data.science_degree}
+                {posts?.data?.science_degree}
               </span>
               </div>
             </div>
