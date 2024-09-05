@@ -115,7 +115,7 @@ const Page = () => {
                        <Image
                            src={image_sherzod}
                            alt="Tahririyat hayati rasm"
-                           className="w-full h-full"
+                           className="w-full h-full object-cover"
                        />
                        <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
                          <p className="text-xs font-semibold ">
@@ -135,7 +135,7 @@ const Page = () => {
                        <Image
                            src={image_oybek}
                            alt="Tahririyat hayati rasm"
-                           className="w-full h-full"
+                           className="w-full h-full object-cover"
                        />
                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
                          <p className="text-xs font-semibold">
@@ -152,7 +152,7 @@ const Page = () => {
                        <Image
                            src={image_odil}
                            alt="Tahririyat hayati rasm"
-                           className="w-full h-full"
+                           className="w-full h-full object-cover"
                        />
                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
                          <p className="text-xs font-semibold">
@@ -169,7 +169,7 @@ const Page = () => {
                        <Image
                            src={image_aziz}
                            alt="Tahririyat hayati rasm"
-                           className="w-full h-full"
+                           className="w-full h-full object-cover"
                        />
                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center">
                          <p className="text-xs font-semibold">

@@ -101,7 +101,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="phone_number"
-                    placeholder="Phone Number"
+                    placeholder="Telefon Raqam"
                     value={formData.phone_number}
                     onChange={handleInputChange}
                     required
@@ -112,13 +112,13 @@ const Page: React.FC = () => {
                 <input
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="Parol"
                     value={formData.password}
                     onChange={handleInputChange}
                     required
                 />
               </div>
-              <input type="submit" value="Login" className="btn solid" disabled={isLoggingIn} />
+              <input type="submit" value="Kirish" className="btn solid" disabled={isLoggingIn} />
               {loginError && <p className="error-text">Error: {(loginError as any).message}</p>}
 
             </form>
@@ -129,7 +129,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="full_name"
-                    placeholder="Full Name"
+                    placeholder="Ism, Familiya"
                     value={formData.full_name}
                     onChange={handleInputChange}
                     required
@@ -140,7 +140,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="phone_number"
-                    placeholder="Phone Number"
+                    placeholder="Telefon Raqam"
                     value={formData.phone_number}
                     onChange={handleInputChange}
                     required
@@ -151,7 +151,7 @@ const Page: React.FC = () => {
                 <input
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="Parol"
                     value={formData.password}
                     onChange={handleInputChange}
                     required
@@ -162,7 +162,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="science_degree"
-                    placeholder="Science Degree"
+                    placeholder="Ilmiy Daraja"
                     value={formData.science_degree}
                     onChange={handleInputChange}
                 />
@@ -182,7 +182,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="job"
-                    placeholder="Job"
+                    placeholder="Kasbingiz"
                     value={formData.job}
                     onChange={handleInputChange}
                 />
@@ -192,7 +192,7 @@ const Page: React.FC = () => {
                 <input
                     type="text"
                     name="place_position"
-                    placeholder="Place Position"
+                    placeholder="Ish Joyingiz"
                     value={formData.place_position}
                     onChange={handleInputChange}
                 />
@@ -207,7 +207,7 @@ const Page: React.FC = () => {
           <div className="auth-panel auth-left-panel">
             <div className="content">
               <h3>Nordik elektron jurnali</h3>
-              <p>
+              <p className="text-[20px]">
                 Agar ro'yxatdan o'tmagaan bo'lsangiz ro'yxatdan o'tish tugmasini bosing!
               </p>
               <button className="btn transparent" id="sign-up-btn" onClick={handleSignUpClick}>
@@ -219,14 +219,14 @@ const Page: React.FC = () => {
           <div className="auth-panel auth-right-panel">
             <div className="content">
               <h3>Nordik elektron jurnali</h3>
-              <p>
-                Agar ro'yxatdan o'tgan bo'lsangiz hisobingiz mavjud bo'lsa kirish tugmasini bosing!
+              <p className="text-[20px]">
+                Agar ro'yxatdan o'tgan bo'lsangiz profilingiz mavjud bo'lsa kirish tugmasini bosing!
               </p>
               <button className="btn transparent" id="sign-up-btn" onClick={handleSignInClick}>
                 Kirish
               </button>
             </div>
-            <Image src={register} className="image" alt=""/>
+            <Image src={register} className="image" alt="register-image"/>
           </div>
         </div>
       </div>
