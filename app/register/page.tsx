@@ -6,16 +6,14 @@ import register from '@/public/register.svg';
 import Image from "next/image";
 import {useLoginUserMutation, useRegisterUserMutation} from "@/lib/query/register.query";
 import Cookies from "js-cookie";
-import {cookies} from "next/headers";
-import {redirect, useRouter} from "next/navigation";
+import {useRouter} from "next/navigation";
 import {BsTelegram} from "react-icons/bs";
-
 
 const Page: React.FC = () => {
   const [isSignUpMode, setSignUpMode] = useState(false);
   const [registerUser, { isLoading: isRegistering, isSuccess: isRegisterSuccess, error: registerError }] = useRegisterUserMutation();
   const [loginUser, { isLoading: isLoggingIn, isSuccess: isLoginSuccess, error: loginError }] = useLoginUserMutation();
-  const router = useRouter()
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     full_name: "",
@@ -46,9 +44,17 @@ const Page: React.FC = () => {
     e.preventDefault();
     try {
       const data = await registerUser(formData).unwrap();
-      Cookies.set('access_token', data.login_data.token);
-    } catch (err) {
-      console.error('Failed to register user:', err);
+      console.log(data)
+      Cookies.set('access_token', data?.data?.token);
+      console.log('User registered successfully:', data);
+      router.push('/profile');
+    } catch (err: any) {
+      if (err?.data?.status === 409) {
+        console.error('Failed to register user: User already exists.');
+      } else {
+        console.error('Failed to register user:', err);
+        // Handle other errors here
+      }
     }
   };
 
@@ -58,18 +64,23 @@ const Page: React.FC = () => {
       phone_number: formData.phone_number,
       password: formData.password,
     };
-
+    console.log(loginData)
     try {
-      const data =  await loginUser(loginData).unwrap();
+      const data = await loginUser(loginData).unwrap();
 
-      if(data.message === "USER_LOGGED_IN"){
+      if (data.message === 'USER_LOGGED_IN') {
         Cookies.set('access_token', data.login_data.token);
-        router.push('/profile')
+        router.push('/profile');
+        console.log('User logged in successfully:', data);
+      } else {
+        console.error('Login failed:', data.message);
       }
     } catch (err) {
       console.error('Failed to login:', err);
+      // Handle login error here
     }
   };
+
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

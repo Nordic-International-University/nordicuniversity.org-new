@@ -1,9 +1,15 @@
 import React from 'react';
 
-const ProfileClient = () => {
+interface ProfileClientProps {
+    data?: any
+}
+
+
+const ProfileClient = ({data}: ProfileClientProps) => {
+
     return (
         <div>
-
+zz
         </div>
     );
 };
