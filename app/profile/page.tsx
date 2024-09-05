@@ -25,7 +25,7 @@ const Page = async () => {
   return (
       <div className="container">
         <div className="flex gap-2">
-          <div className="flex flex-col items-center justify-center rounded-lg p-4 px-8 shadow-md">
+          <div className="flex flex-col items-center justify-center rounded-lg p-4 px-8 shadow-md w-[300px] h-[300px]">
             <div className="w-32 h-32 rounded-full flex items-center justify-center bg-gray-200">
               <Image src={noImag} alt="img" className="w-24 h-24" />
             </div>
@@ -65,60 +65,8 @@ const Page = async () => {
             </div>
 
             {/* Articles Table */}
-            <div className="mt-8 bg-white shadow-md rounded-lg overflow-hidden">
-              <table className="min-w-full leading-normal">
-                <thead>
-                <tr>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                    Sarlavha
-                  </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                    Holati
-                  </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                    Kategoriyasi
-                  </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                    Yaratilgan vaqt
-                  </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                    O‘qishlar soni
-                  </th>
-                </tr>
-                </thead>
-                <tbody>
-                {posts.data.Articles.map((article: { title: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; status: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; category: { name: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }; createdAt: string | number | Date | dayjs.Dayjs | null | undefined; viewsCount: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }, index: React.Key | null | undefined) => (
-                    <tr key={index}>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span className="text-[22px] font-bold overflow-hidden text-ellipsis break-words">
-                        {article.title}
-                      </span>
-                      </td>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span className="text-[22px] font-bold">
-                        {article.status}
-                      </span>
-                      </td>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span className="text-[22px] font-bold">
-                        {article.category?.name}
-                      </span>
-                      </td>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span className="text-[22px] font-bold">
-                        {dayjs(article.createdAt).format("YYYY-MM-DD HH:mm")}
-                      </span>
-                      </td>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span className="text-[22px] font-bold">
-                        {article.viewsCount}
-                      </span>
-                      </td>
-                    </tr>
-                ))}
-                </tbody>
-              </table>
-            </div>
+
+            <ProfileClient data={posts} />
           </div>
         </div>
       </div>
