@@ -43,18 +43,19 @@ export default function Page() {
               <div className="tooltip group-hover:opacity-100">
                 Ishonchli ma’lumotlarni yig‘ish va tahlil qilish metodikasi
               </div>
-            </div>
-
-            <div className="w-1/2 px-4 py-4 relative group">
-              <h1 className="text-[#36187d] font-bold text-[15px] mb-4">4. TADQIQOT NATIJASI</h1>
+              <h1 className="text-[#36187d] font-bold text-[15px] mt-8">4. TADQIQOT NATIJASI</h1>
               <ul className="list-disc list-inside text-gray-700">
                 <li>Olingan natijalarni izohlash...</li>
               </ul>
               <div className="tooltip group-hover:opacity-100">
                 Tadqiqot natijalari va ularning tahlili
               </div>
+            </div>
 
-              <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">5. DISKUSSIYA</h1>
+            <div className="w-1/2 px-4 py-4 relative group">
+
+
+              <h1 className="text-[#36187d] font-bold text-[15px]  mb-4">5. DISKUSSIYA</h1>
               <ul className="list-disc list-inside text-gray-700">
                 <li>Kirish (ilmiy topilmalarni muhokama qilish...)</li>
                 <li>Baholash (tahlil qilish...)</li>
