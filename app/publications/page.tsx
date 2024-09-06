@@ -71,14 +71,14 @@ const PublicationsClient = async () => {
                   </li>
                   <li className="flex items-center  mb-2">
                     {" "}
-                    <FaCalendarAlt className="text-[#0d6efd]" />
+                    <FaCalendarAlt className="text-[#0d6efd] mr-2" />
                     {moment(item.createdAt).utc().format("YYYY-MM-DD")}
                   </li>
                   <Link
                     href={`${"https://journal2.nordicun.uz"}${item?.source?.file_path}`}
                     target="_blank"
                   >
-                    <button className="bg-[#0d6efd] px-4 rounded-3xl text-white">
+                    <button className="bg-[#0d6efd] px-4 mb-3 rounded-3xl text-white text-[20px]">
                       Yuklab Olish
                     </button>
                   </Link>
