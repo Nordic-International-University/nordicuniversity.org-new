@@ -333,7 +333,7 @@ const CreateArticle = ({ authorId }: props) => {
                       Faqat PDF, DOC, yoki DOCX formatidagi fayllarni yuklash
                       mumkin.
                       <br />
-                      Maksimal fayl hajmi: 5 MB.
+                      Maksimal fayl hajmi: 5 MB
                     </p>
                   </Dragger>
                   {file && (
