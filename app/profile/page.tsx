@@ -18,7 +18,7 @@ const Page = async () => {
     headers,
   });
   let posts = await data.json();
-  console.log("ProfileClient", posts);
+
 
   return (
     <div className="container">
