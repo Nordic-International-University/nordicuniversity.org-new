@@ -28,7 +28,7 @@ const Page = async () => {
             <Image src={noImag} alt="img" className="w-24 h-24" />
           </div>
           <h2 className="text-2xl font-bold mb-5">{posts?.data?.full_name}</h2>
-          <Link href={"/"}>
+          <Link href={`/createarticle/${posts?.data?.id}`}>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Maqola Yuklash
             </button>
