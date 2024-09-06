@@ -77,6 +77,7 @@ const CreateArticle = ({ authorId }: props) => {
     setInputValue("");
   };
 
+
   const UploadPropsPdf: (
       field: (key: string, value: any) => void,
   ) => UploadProps = (field) => {
@@ -89,9 +90,9 @@ const CreateArticle = ({ authorId }: props) => {
     const props: UploadProps = {
       name: "file",
       multiple: false,
-      action: "https://journal2.nordicun.uz/file/upload",
+      action: "https://journal2.nordicun.uz/file/uploadFile",
       headers: {
-        Authorization: Cookies.get("access_token") || "",
+        Authorization: Cookies.get("access_token") as string,
       },
       beforeUpload(file: any) {
         const isAllowedFormat = allowedFormats.includes(file.type);
