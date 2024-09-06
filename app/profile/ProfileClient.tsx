@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Tabs, TabsProps } from "antd";
-
+import dayjs from 'dayjs';
 interface ProfileClientProps {
     data?: {
         data: {
@@ -300,7 +300,9 @@ export default function TableComponent({ data }: ProfileClientProps) {
                                 <td className="py-4 px-6 overflow-hidden line-clamp-1">{article.title}</td>
                                 <td className="py-4 px-6">{article.status}</td>
                                 <td className="py-4 px-6">{article.category.name}</td>
-                                <td className="py-4 px-6 text-nowrap">{article.createdAt}</td>
+                                <td className="py-4 px-6 text-nowrap">
+                                    {dayjs(article.createdAt).format('YYYY-MM-DD')}
+                                </td>
                                 <td className="py-4 px-6">{article.viewsCount}</td>
                             </tr>
                         ))}

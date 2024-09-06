@@ -45,32 +45,32 @@ const PublicationsClient = async () => {
                   <div className="w-full mr-7 ">
                       <RoundedSvg title={"Nashrlar"}/>
 
-                      <div className="flex-col items-center justify-center w-full">
-                          {volume?.map((item: any, index: number) => (
-                              <div
-                                  key={index}
-                                  className={
-                                      "w-full max-lg:w-full max-sm:justify-center flex max-sm:flex-col items-center  shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] mb-9 mt-6 rounded-3xl "
-                                  }
-                              >
-                                  <Link href={`/publications/volume/${item.id}`}>
-                                      <Image
-                                          src={`${"https://journal2.nordicun.uz"}${item?.image?.file_path}`}
-                                          width={540}
-                                          height={540}
-                                          alt="volume"
-                                          className="w-540px h-[540px] max-sm:w-full m-auto block"
-                                      />
-                                  </Link>
+          <div className="flex-col items-center justify-center w-full">
+            {volume?.map((item: any, index: number) => (
+              <div
+                key={index}
+                className={
+                  "w-[900px] max-lg:w-full max-sm:justify-center flex max-sm:flex-col items-center  shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] mb-9 mt-6 rounded-3xl "
+                }
+              >
+                <Link href={`/publications/volume/${item.id}`}>
+                  <Image
+                      src={`${"https://journal2.nordicun.uz"}${item?.image?.file_path}`}
+                      width={540}
+                      height={540}
+                      alt="volume"
+                      className=" max-sm:h-[340px] max-sm:w-full m-auto block"
+                  />
+                </Link>
 
-                                  <ul className="m-auto block max-sm:mb-2 ">
+                                  <ul className="m-auto block max-sm:mb-2 max-sm:text-center ">
                                       <li className="text-[#36187d] font-bold text-[20px] mb-2">
                                           {item.title}
                                       </li>
                                       <li className="mb-2">
                                           <h2>Nashr Sanasi</h2>
                                       </li>
-                                      <li className="flex items-center  mb-2">
+                                      <li className="flex items-center justify-center  mb-2">
                                           {" "}
                                           <FaCalendarAlt className="text-[#0d6efd]"/>
                                           {moment(item.createdAt).utc().format("YYYY-MM-DD")}
