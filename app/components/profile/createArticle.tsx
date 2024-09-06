@@ -91,7 +91,7 @@ const CreateArticle = ({ authorId }: props) => {
       multiple: false,
       action: "https://journal2.nordicun.uz/file/upload",
       headers: {
-        Authorization: localStorage.getItem("accessToken") || "",
+        Authorization: Cookies.get("access_token") || "",
       },
       beforeUpload(file: any) {
         const isAllowedFormat = allowedFormats.includes(file.type);
