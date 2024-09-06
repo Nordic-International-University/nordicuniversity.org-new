@@ -4,7 +4,6 @@ import React from "react";
 import { Tabs, TabsProps } from "antd";
 import dayjs from "dayjs";
 
-
 interface Article {
   title: string;
   status: string;
@@ -15,12 +14,11 @@ interface Article {
   viewsCount: number;
 }
 
-
 interface ProfileClientProps {
   data?: {
-    data:{
-      Articles:Array<any>
-    }
+    data: {
+      Articles: Array<any>;
+    };
   };
 }
 
@@ -35,7 +33,7 @@ export default function TableComponent({ data }: ProfileClientProps) {
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead className="bg-blue-500 text-white">
-              <tr>
+              <tr >
                 <th className="py-3 px-6 text-left">Sarlavha</th>
                 <th className="py-3 px-6 text-left">Holati</th>
                 <th className="py-3 px-6 text-left">Kategoriyasi</th>
@@ -44,21 +42,19 @@ export default function TableComponent({ data }: ProfileClientProps) {
               </tr>
             </thead>
             <tbody className="cursor-pointer">
-              {
-                data?.data?.Articles?.map((article: Article, index: number) => (
-                  <tr className="border-b hover:bg-gray-100" key={index}>
-                    <td className="py-4 px-6 overflow-hidden line-clamp-1">
-                      {article.title}
-                    </td>
-                    <td className="py-4 px-6">{article.status}</td>
-                    <td className="py-4 px-6">{article.category?.name}</td>
-                    <td className="py-4 px-6 text-nowrap">
-                      {dayjs(article.createdAt).format("YYYY-MM-DD")}
-                    </td>
-                    <td className="py-4 px-6">{article.viewsCount}</td>
-                  </tr>
-                ))
-              }
+              {data?.data?.Articles?.map((article: Article, index: number) => (
+                <tr className="border-b hover:bg-gray-100" key={index}>
+                  <td className="py-4 px-6 overflow-hidden line-clamp-1">
+                    {article.title}
+                  </td>
+                  <td className="py-4 px-6">{article.status}</td>
+                  <td className="py-4 px-6">{article.category?.name}</td>
+                  <td className="py-4 px-6 text-nowrap">
+                    {dayjs(article.createdAt).format("YYYY-MM-DD")}
+                  </td>
+                  <td className="py-4 px-6">{article.viewsCount}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -69,9 +65,53 @@ export default function TableComponent({ data }: ProfileClientProps) {
       label: "Ko'rsatkichlar",
       children: (
         <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-          {
-            data?.data?.Articles?.filter((article: Article, index: number) => article.status === "NEW").length
-          }
+          <tbody>
+          <tr className="border-b-gray-600 border-2">
+            <td className="py-4 px-6">Yangi Maqolalar</td>
+            <td className="py-4 px-6">
+              {
+                data?.data?.Articles?.filter(
+                    (article: Article, index: number) =>
+                        article.status === "NEW",
+                ).length
+              }
+            </td>
+          </tr>
+          <tr className="border-b-gray-600 border-2">
+            <td className="py-4 px-6">Tekshirilayotgan Maqolalar</td>
+            <td className="py-4 px-6">
+              {" "}
+              {
+                data?.data?.Articles?.filter(
+                    (article: Article, index: number) =>
+                        article.status === "REVIEW",
+                ).length
+              }
+            </td>
+          </tr>
+          <tr className="border-b-gray-600 border-2">
+            <td className="py-4 px-6">Qabul Qilingan Maqolalar</td>
+            <td className="py-4 px-6">
+              {
+                data?.data?.Articles?.filter(
+                    (article: Article, index: number) =>
+                        article.status === "ACCEPT",
+                ).length
+              }
+            </td>
+          </tr>
+          <tr className="border-b-gray-600 border-2">
+            <td className="py-4 px-6">Rad Etilgan Maqolalar</td>
+            <td className="py-4 px-6">
+              {
+                data?.data?.Articles?.filter(
+                    (article: Article, index: number) =>
+                        article.status === "ACCEPT",
+                ).length
+              }
+            </td>
+          </tr>
+          </tbody>
         </table>
       ),
     },
@@ -83,8 +123,8 @@ export default function TableComponent({ data }: ProfileClientProps) {
   ];
 
   return (
-    <div className="overflow-x-auto">
-      <Tabs defaultActiveKey="1" type="card" items={tabsItem} />
-    </div>
+      <div className="overflow-x-auto">
+        <Tabs defaultActiveKey="1" type="card" items={tabsItem}/>
+      </div>
   );
 }
