@@ -340,7 +340,7 @@ const CreateArticle = ({ authorId }: props) => {
                       <div className="mt-3 flex items-center justify-between">
                         <div className="uploaded-file-info gap-3">
                           {file.type === "application/pdf" && (
-                              <FilePdfOutlined style={{ fontSize: "20px" }} />
+                              <FilePdfOutlined style={{ fontSize: "21px" }} />
                           )}
                           {file.type === "application/msword" && (
                               <FileWordOutlined style={{ fontSize: "20px" }} />
