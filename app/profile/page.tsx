@@ -19,7 +19,6 @@ const Page = async () => {
   });
   let posts = await data.json();
 
-
   return (
     <div className="container">
       <div className="flex gap-2 max-sm:flex-col max-lg:flex-col max-sm:justify-center">

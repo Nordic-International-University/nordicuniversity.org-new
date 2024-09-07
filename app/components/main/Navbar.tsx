@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import logo from "@/public/logo-colorful 1.svg";
 import search from "@/public/Vector.svg";
 import Image from "next/image";
@@ -10,12 +10,15 @@ import { RootState } from "@/lib/store/Store";
 import { closeMenu, openMenu } from "@/lib/slice/navbar.slice";
 import { AiOutlineClose } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 const Navbar = () => {
   const isOpen = useSelector((state: RootState) => state.navbar.isOpen);
   const menuItems = useSelector((state: RootState) => state.navbar.menuItems);
+  // @ts-ignore
+  const token = Cookies.get("access_token");
   const pathname = usePathname();
-
+  console.log(token)
   const dispatch = useDispatch();
 
   if (pathname === "/login" || pathname === "/register") return null;
@@ -55,9 +58,9 @@ const Navbar = () => {
                 <Link href={"/search"}>
                   <Image src={search} alt="search" />
                 </Link>
-                <Link href={'/register'}>
+                <Link href={token ? "/profile" : "/register"}>
                   <button className="bg-blue-600 px-4 text-white py-2 rounded text-[20px] font-bold max-sm:text-[12px] max-sm:px-2 max-sm:py-1">
-                    Submit Article
+                    Maqola Yuklash
                   </button>
                 </Link>
 

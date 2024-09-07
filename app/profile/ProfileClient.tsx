@@ -123,7 +123,7 @@ export default function TableComponent({ data }: ProfileClientProps) {
   ];
 
   return (
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto mt-3">
         <Tabs defaultActiveKey="1" type="card" items={tabsItem}/>
       </div>
   );
