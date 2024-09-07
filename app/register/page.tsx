@@ -216,7 +216,7 @@ const Page: React.FC = () => {
                 Ro‘yxatdan o‘tish
               </button>
             </div>
-            <Image src={login} className="image" alt="" />
+            <Image src={login} className="image" alt="login" />
           </div>
           <div className="auth-panel auth-right-panel">
             <div className="content">

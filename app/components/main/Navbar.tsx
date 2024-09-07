@@ -9,7 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
 import { closeMenu, openMenu } from "@/lib/slice/navbar.slice";
 import { AiOutlineClose } from "react-icons/ai";
-import { usePathname } from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
+import { RiLogoutCircleFill } from "react-icons/ri";
 import Cookies from "js-cookie";
 
 const Navbar = () => {
@@ -18,9 +19,13 @@ const Navbar = () => {
   // @ts-ignore
   const token = Cookies.get("access_token");
   const pathname = usePathname();
+  const router=useRouter()
   console.log(token)
   const dispatch = useDispatch();
-
+const handleLogout = () => {
+  Cookies.remove("access_token");
+  router.push("/")
+}
   if (pathname === "/login" || pathname === "/register") return null;
 
   return (
@@ -58,6 +63,9 @@ const Navbar = () => {
                 <Link href={"/search"}>
                   <Image src={search} alt="search" />
                 </Link>
+
+                  <RiLogoutCircleFill className={`w-[30px] h-[30px] text-blue-600 ${token?" ":"hidden"}`} onClick={handleLogout} />
+
                 <Link href={token ? "/profile" : "/register"}>
                   <button className="bg-blue-600 px-4 text-white py-2 rounded text-[20px] font-bold max-sm:text-[12px] max-sm:px-2 max-sm:py-1">
                     Maqola Yuklash
