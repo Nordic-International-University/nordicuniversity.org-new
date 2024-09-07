@@ -7,7 +7,8 @@ import Image from "next/image";
 import {useLoginUserMutation, useRegisterUserMutation} from "@/lib/query/register.query";
 import Cookies from "js-cookie";
 import {useRouter} from "next/navigation";
-import {BsTelegram} from "react-icons/bs";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const Page: React.FC = () => {
   const [isSignUpMode, setSignUpMode] = useState(false);
@@ -98,14 +99,15 @@ const Page: React.FC = () => {
               <h2 className="title">Kirish</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input
-                    type="text"
-                    name="phone_number"
-                    placeholder="Telefon Raqam"
+                <PhoneInput
                     value={formData.phone_number}
-                    onChange={handleInputChange}
+                    onChange={(value) => setFormData({ ...formData, phone_number: value || '' })}
+                    placeholder="Telefon Raqam"
+                    defaultCountry="UZ"
+                    international
                     required
                 />
+
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
@@ -137,12 +139,12 @@ const Page: React.FC = () => {
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input
-                    type="text"
-                    name="phone_number"
-                    placeholder="Telefon Raqam"
+                <PhoneInput
                     value={formData.phone_number}
-                    onChange={handleInputChange}
+                    onChange={(value) => setFormData({ ...formData, phone_number: value || '' })}
+                    placeholder="Telefon Raqam"
+                    defaultCountry="UZ"
+                    international
                     required
                 />
               </div>
