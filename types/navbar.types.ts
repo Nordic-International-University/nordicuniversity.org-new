@@ -7,4 +7,5 @@ interface NavItem {
 export interface navbarInitialState {
   isOpen: boolean;
   menuItems: Array<NavItem>;
+  reFetch: boolean;
 }

@@ -5,14 +5,7 @@ import Cookies from 'js-cookie';
 export const mySlice = createApi({
     reducerPath: 'myArticle',
     baseQuery: fetchBaseQuery({
-        baseUrl: process.env.NEXT_PUBLIC_API_URL2,
-        prepareHeaders: (headers) => {
-            const token = Cookies.get('accessToken'); // Get token from cookies
-            if (token) {
-                headers.set('Authorization', token);
-            }
-            return headers;
-        },
+        baseUrl: "https://journal2.nordicun.uz",
     }),
     endpoints: (builder) => ({
         getArticleBySlug: builder.query({
@@ -23,11 +16,15 @@ export const mySlice = createApi({
                 url: '/author/profile',
                 method: 'GET',
                 headers: {
-                    Authorization: `${token}`,
-                },
+                    Authorization:token
+                }
+
             }),
+            transformResponse: (baseQueryReturnValue:any) => {
+                return baseQueryReturnValue.data
+            }
         }),
     }),
 });
 
-export const { useGetArticleBySlugQuery,useGetAuthorProfileQuery} = mySlice;
+export const { useGetArticleBySlugQuery, useGetAuthorProfileQuery } = mySlice;

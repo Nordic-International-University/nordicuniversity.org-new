@@ -201,7 +201,7 @@ const Articles = ({ data }: { data: any }) => {
             <div className="w-full mt-4">
               <Collapse className="bg-white" items={[items[0]]} />
             </div>
-            {data?.certificates.length > 0 && (
+            {data?.certificates?.length > 0 && (
               <div className="w-full mt-4 ">
                 <Collapse className="bg-white" items={certificates} />
               </div>

@@ -161,18 +161,18 @@
   margin-bottom: 10px;
 }
 
-.input-field {
-  max-width: 380px;
-  width: 100%;
-  background-color: #f0f0f0;
-  margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
-  position: relative;
-}
+/*.input-field {*/
+/*  max-width: 380px;*/
+/*  width: 100%;*/
+/*  background-color: #f0f0f0;*/
+/*  margin: 10px 0;*/
+/*  height: 55px;*/
+/*  border-radius: 55px;*/
+/*  display: grid;*/
+/*  grid-template-columns: 15% 85%;*/
+/*  padding: 0 0.4rem;*/
+/*  position: relative;*/
+/*}*/
 
 .input-field i {
   text-align: center;
@@ -493,7 +493,7 @@
   }
 
   .auth-container.sign-up-mode:before {
-    bottom: 28%;
+    bottom: 27%;
     left: 50%;
   }
 }
@@ -519,9 +519,9 @@ body > #wrap {
   position: relative;
 }
 
-#main {
-  padding-bottom:80px; /* Footer balandligi bilan bir xil */
-}
+/*#main {*/
+/*  padding-bottom:80px;*/
+/*}*/
 
 #footer {
   position: absolute;
@@ -530,3 +530,4 @@ body > #wrap {
   width: 100%;
   height: 40px;
 }
+

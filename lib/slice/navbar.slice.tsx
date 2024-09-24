@@ -11,6 +11,7 @@ const initialState: navbarInitialState = {
     { path: "/volumes", name: "Asosiy yo’nalishlar", active: false },
     { path: "/contact", name: "Bog’lanish", active: false },
   ],
+  reFetch: false,
 };
 
 const navbarSLice = createSlice({
@@ -19,6 +20,6 @@ const navbarSLice = createSlice({
   reducers: navbarReducer,
 });
 
-export const { openMenu, closeMenu } = navbarSLice.actions;
+export const { openMenu, closeMenu,changeReFetch } = navbarSLice.actions;
 
 export default navbarSLice.reducer;

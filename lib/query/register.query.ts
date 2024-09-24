@@ -14,7 +14,7 @@ export const registerApi = createApi({
                     "Content-Type": "application/json", // Устанавливаем тип контента
                 },
                 body: {
-                    phone_number: `+${userData.phone_number}`,
+                    phone_number: `${userData.phone_number}`,
                     password: userData.password,
                     full_name: userData.full_name,
                     science_degree: userData.science_degree,

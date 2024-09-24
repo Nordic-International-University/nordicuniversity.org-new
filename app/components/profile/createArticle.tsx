@@ -69,13 +69,15 @@ const CreateArticle = ({ authorId }: props) => {
   };
 
   const handleInputConfirm = (setField: any) => {
-    if (inputValue && !keywords.includes(inputValue)) {
-      setKeywords([...keywords, inputValue]);
-      setField("keyword", `${keywords.join(",")},${inputValue}`);
+    if (inputValue && !keywords.includes(inputValue.trim())) {
+      const updatedKeywords = [...keywords, inputValue.trim()].filter(Boolean);
+      setKeywords(updatedKeywords);
+      setField("keyword", updatedKeywords.join(","));
     }
     setInputVisible(false);
     setInputValue("");
   };
+
 
 
   const UploadPropsPdf: (
@@ -152,7 +154,7 @@ const CreateArticle = ({ authorId }: props) => {
           onSubmit={async (values, { setSubmitting, resetForm }) => {
             setSubmitting(true);
             try {
-              await axios.post(
+            const data = await axios.post(
                   `https://journal2.nordicun.uz/article/user/create`,
                   {
                     ...values,
@@ -166,7 +168,9 @@ const CreateArticle = ({ authorId }: props) => {
               message.success("Maqola muvaffaqiyatli yaratildi!");
               router.push('/profile');
               resetForm();
+              console.log(data)
             } catch (e:any) {
+              console.log(e)
               if (e.response?.status === 409) {
                 message.error("Bunday maqola allaqachon mavjud!");
               }

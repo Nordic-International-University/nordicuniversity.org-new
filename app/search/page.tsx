@@ -354,7 +354,7 @@ const Page = () => {
                                            description={item.description}
                                            slug={item.slug}
                                            author={item.author.full_name}
-                                           imageUrl={item.image.file_path}
+                                           imageUrl={item?.image?.file_path ? item.image.file_path : ""}
                           />
                       </Col>
                     ))}

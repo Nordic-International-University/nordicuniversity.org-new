@@ -1,18 +1,18 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import 'react-phone-number-input/style.css';
+import React, { useState } from "react";
+import { Button, Input, message } from "antd";
+import { useLoginUserMutation, useRegisterUserMutation } from "@/lib/query/register.query";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import login from '@/public/log.svg';
 import register from '@/public/register.svg';
-import Image from "next/image";
-import {useLoginUserMutation, useRegisterUserMutation} from "@/lib/query/register.query";
-import Cookies from "js-cookie";
-import {useRouter} from "next/navigation";
-import {BsTelegram} from "react-icons/bs";
+import {validationSchema} from "@/app/validation/auth.validation";
 
 const Page: React.FC = () => {
   const [isSignUpMode, setSignUpMode] = useState(false);
-  const [registerUser, { isLoading: isRegistering, isSuccess: isRegisterSuccess, error: registerError }] = useRegisterUserMutation();
-  const [loginUser, { isLoading: isLoggingIn, isSuccess: isLoginSuccess, error: loginError }] = useLoginUserMutation();
+  const [registerUser, { isLoading: isRegistering }] = useRegisterUserMutation();
+  const [loginUser, { isLoading: isLoggingIn }] = useLoginUserMutation();
   const router = useRouter();
 
   const [formData, setFormData] = useState({
@@ -20,7 +20,6 @@ const Page: React.FC = () => {
     phone_number: "",
     password: "",
     science_degree: "",
-    birthday: "",
     job: "",
     place_position: "",
   });
@@ -42,18 +41,21 @@ const Page: React.FC = () => {
 
   const handleSignUpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
+      await validationSchema.validate(formData, { abortEarly: false });
+
       const data = await registerUser(formData).unwrap();
-      console.log(data)
       Cookies.set('access_token', data?.data?.token);
-      console.log('User registered successfully:', data);
       router.push('/profile');
     } catch (err: any) {
-      if (err?.data?.status === 409) {
-        console.error('Failed to register user: User already exists.');
+      console.log(err)
+      if (err.name === 'ValidationError') {
+        message.warning(err.errors[0]);
+      } else if (err?.status === 409) {
+        message.warning('Bunday foydalanuvchi allaqachon mavjud!');
       } else {
-        console.error('Failed to register user:', err);
-        // Handle other errors here
+        message.error('Ro‘yxatdan o‘tishda xatolik yuz berdi');
       }
     }
   };
@@ -64,41 +66,32 @@ const Page: React.FC = () => {
       phone_number: formData.phone_number,
       password: formData.password,
     };
-    console.log(loginData)
+
     try {
       const data = await loginUser(loginData).unwrap();
-
       if (data.message === 'USER_LOGGED_IN') {
         Cookies.set('access_token', data.login_data.token);
         router.push('/profile');
-        console.log('User logged in successfully:', data);
-      } else {
-        console.error('Login failed:', data.message);
+        message.success('Muvaffaqiyatli kirildi!');
       }
-    } catch (err) {
-      console.error('Failed to login:', err);
-      // Handle login error here
+    } catch (err: any) {
+      if (err?.status === 422) {
+        message.error('Noto‘g‘ri telefon raqami yoki parol');
+      } else if (err?.status === 500) {
+        message.error('Kutilmagan xatolik iltimos birozdan so‘ng urinib ko‘ring');
+      }
     }
   };
 
-
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, []);
-
   return (
-      <div className={`auth-container ${isSignUpMode ? 'sign-up-mode' : ''}`}>
-        <div className="forms-container">
+      <div className={`auth-container overflow-hidden ${isSignUpMode ? 'sign-up-mode' : ''}`}>
+        <div className="forms-container overflow-hidden">
           <div className="signin-signup-container">
             <form onSubmit={handleSignInSubmit} className={`sign-in-form ${isSignUpMode ? 'inactive' : 'active'}`}>
               <h2 className="title">Kirish</h2>
-              <div className="input-field">
-                <i className="fas fa-user"></i>
-                <input
+              <div className="w-[300px]">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
                     type="text"
                     name="phone_number"
                     placeholder="Telefon Raqam"
@@ -107,9 +100,9 @@ const Page: React.FC = () => {
                     required
                 />
               </div>
-              <div className="input-field">
-                <i className="fas fa-lock"></i>
-                <input
+              <div className="w-[300px] mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
                     type="password"
                     name="password"
                     placeholder="Parol"
@@ -118,78 +111,46 @@ const Page: React.FC = () => {
                     required
                 />
               </div>
-              <input type="submit" value="Kirish" className="btn solid" disabled={isLoggingIn} />
-              {loginError && <p className="error-text">Error: {(loginError as any).message}</p>}
-
+              <div className="w-[300px]">
+                <Button htmlType="submit" type="primary" size="large" className="w-full mt-5 py-[25px] rounded-3xl" disabled={isLoggingIn}>Kirish</Button>
+              </div>
             </form>
+
             <form onSubmit={handleSignUpSubmit} className={`sign-up-form ${isSignUpMode ? 'active' : 'inactive'}`}>
               <h2 className="title">Ro‘yxatdan o‘tish</h2>
-              <div className="input-field">
-                <i className="fas fa-user"></i>
-                <input
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
                     type="text"
+                    className="w-full py-3 rounded-3xl pl-3"
                     name="full_name"
                     placeholder="Ism, Familiya"
                     value={formData.full_name}
                     onChange={handleInputChange}
-                    required
                 />
               </div>
-              <div className="input-field">
-                <i className="fas fa-envelope"></i>
-                <input
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
                     type="text"
                     name="phone_number"
                     placeholder="Telefon Raqam"
                     value={formData.phone_number}
                     onChange={handleInputChange}
-                    required
                 />
               </div>
-              <div className="input-field">
-                <i className="fas fa-lock"></i>
-                <input
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
                     type="password"
                     name="password"
                     placeholder="Parol"
                     value={formData.password}
                     onChange={handleInputChange}
-                    required
                 />
               </div>
-              <div className="input-field">
-                <i className="fas fa-graduation-cap"></i>
-                <input
-                    type="text"
-                    name="science_degree"
-                    placeholder="Ilmiy Daraja"
-                    value={formData.science_degree}
-                    onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-birthday-cake"></i>
-                <input
-                    type="text"
-                    name="birthday"
-                    placeholder="Birthday (DDMMYYYY)"
-                    value={formData.birthday}
-                    onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-briefcase"></i>
-                <input
-                    type="text"
-                    name="job"
-                    placeholder="Kasbingiz"
-                    value={formData.job}
-                    onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-building"></i>
-                <input
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
                     type="text"
                     name="place_position"
                     placeholder="Ish Joyingiz"
@@ -197,36 +158,47 @@ const Page: React.FC = () => {
                     onChange={handleInputChange}
                 />
               </div>
-              <input type="submit" className="btn" value="Ro‘yxatdna o‘tish" disabled={isRegistering} />
-              {registerError && <p className="error-text">Error: {(registerError as any).message}</p>}
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
+                    type="text"
+                    name="job"
+                    placeholder="Kasbingiz"
+                    value={formData.job}
+                    onChange={handleInputChange}
+                />
+              </div>
+              <div className="max-w-[380px] w-full mt-5">
+                <Input
+                    className="w-full py-3 rounded-3xl pl-3"
+                    type="text"
+                    name="science_degree"
+                    placeholder="Ilmiy Daraja"
+                    value={formData.science_degree}
+                    onChange={handleInputChange}
+                />
+              </div>
+              <Button htmlType="submit" type="primary" className="rounded-3xl mt-4 py-[22px] max-w-[380px] w-full" loading={isRegistering} disabled={isRegistering}>Ro‘yxatdan o‘tish</Button>
             </form>
           </div>
         </div>
 
         <div className="panels-container">
-          <div className="auth-panel auth-left-panel">
+          <div className="auth-panel max-sm:pt-2 max-sm:px-0 auth-left-panel">
             <div className="content">
-              <h3>Nordik elektron jurnali</h3>
-              <p className="text-[20px]">
-                Agar ro'yxatdan o'tmagaan bo'lsangiz ro'yxatdan o'tish tugmasini bosing!
-              </p>
-              <button className="btn transparent" id="sign-up-btn" onClick={handleSignUpClick}>
-                Ro‘yxatdan o‘tish
-              </button>
+              <h3 className="text-2xl">Nordik elektron jurnali</h3>
+              <p className="max-sm:text-sm text-[20px]">Agar ro'yxatdan o'tmagan bo'lsangiz ro'yxatdan o'tish tugmasini bosing!</p>
+              <Button className="rounded-3xl px-4 mt-4 bg-transparent text-white font-semibold text-lg py-[20px] border-white border-2" id="sign-up-btn" onClick={handleSignUpClick}>Ro‘yxatdan o‘tish</Button>
             </div>
             <Image src={login} className="image" alt="" />
           </div>
-          <div className="auth-panel auth-right-panel">
+          <div className="auth-panel max-sm:pt-2 max-sm:px-0 auth-right-panel">
             <div className="content">
-              <h3>Nordik elektron jurnali</h3>
-              <p className="text-[20px]">
-                Agar ro'yxatdan o'tgan bo'lsangiz profilingiz mavjud bo'lsa kirish tugmasini bosing!
-              </p>
-              <button className="btn transparent" id="sign-up-btn" onClick={handleSignInClick}>
-                Kirish
-              </button>
+              <h3 className="text-2xl max-sm:text-xl">Nordik elektron jurnali</h3>
+              <p className="max-sm:text-[15px] text-[20px]">Agar ro'yxatdan o'tgan bo'lsangiz profilingiz mavjud bo'lsa kirish tugmasini bosing!</p>
+              <Button className="rounded-3xl max-sm:text-md px-16 mt-4 bg-transparent text-white font-semibold text-lg py-[20px] border-white border-2" id="sign-up-btn" onClick={handleSignInClick}>Kirish</Button>
             </div>
-            <Image src={register} className="image" alt="register-image"/>
+            <Image src={register} className="image" alt="register-image" />
           </div>
         </div>
       </div>

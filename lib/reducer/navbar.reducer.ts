@@ -7,4 +7,8 @@ export const navbarReducer = {
   closeMenu: (state: navbarInitialState) => {
     state.isOpen = false;
   },
+
+  changeReFetch: (state: navbarInitialState) => {
+    state.reFetch = !state.reFetch;
+  }
 };

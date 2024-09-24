@@ -21,10 +21,10 @@ const HomeSlider = () => {
         modules={[Autoplay]}
       >
         <SwiperSlide>
-          <Image src={swiper_1} alt="swiper 1" />
+          <Image className="" src={swiper_1} alt="swiper 1" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={swiper_2} alt="swiper 2" />
+          <Image className=" " src={swiper_2} alt="swiper 2" />
         </SwiperSlide>
       </Swiper>
     </div>
