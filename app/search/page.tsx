@@ -300,10 +300,10 @@ const Page = () => {
             </Button>
           </div>
           <div className="w-[72%] max-md:w-full">
-            <div className="flex pt-10 justify-between max-md:static sticky-top z-10 w-full">
+            <div className="flex pt-10 justify-between items-center max-md:static sticky-top z-10 w-full">
               <div className="flex flex-col">
                 <span>
-                  Topilgan maqolalar soni: <strong>{data?.filterItems}</strong>{" "}
+                  <span className="block max-sm:hidden">Topilgan</span> maqolalar soni: <strong>{data?.filterItems}</strong>{" "}
                   ta
                 </span>
               </div>
@@ -321,7 +321,7 @@ const Page = () => {
                 </Select>
               </div>
             </div>
-            <div className="mt-[18px] px-3">
+            <div className="mt-[18px]">
               <Row gutter={[16, 16]}>
                 {isLoading
                   ? Array.from({

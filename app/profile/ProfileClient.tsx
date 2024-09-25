@@ -107,7 +107,7 @@ export default function TableComponent({ data }: ProfileClientProps) {
       label: "Maqolalar",
       children: (
           <div className="overflow-x-auto">
-              <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+              <table className="min-w-full text-nowrap bg-white shadow-md rounded-lg overflow-hidden">
                   <thead className="bg-blue-500 text-white">
                   <tr>
                       <th className="py-3 px-6 text-left">Sarlavha</th>

@@ -20,7 +20,7 @@ const Page = () => {
   return (
     <div className="container mt-5">
       <div className="flex gap-3 max-sm:flex-col max-sm:justify-center">
-        <div className="flex flex-col items-center justify-center rounded-lg p-4 px-8 shadow-md w-[300px] h-[300px]">
+        <div className="flex flex-col items-center justify-center rounded-lg p-4 px-8 shadow-md border max-sm:w-full w-[300px] h-[300px]">
           <div className="w-32 h-32 rounded-full flex items-center justify-center bg-gray-200">
             <Image src={noImag} alt="img" className="w-24 h-24" />
           </div>

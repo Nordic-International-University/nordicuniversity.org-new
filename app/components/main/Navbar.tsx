@@ -101,18 +101,20 @@ const Navbar = () => {
                     menu={{ items: dropDownItems, onClick: handleChildClick }}
                   >
                     <a onClick={(e) => e.preventDefault()}>
-                      <Space>
+                      <div className="items-center flex justify-between">
                         <MdAccountCircle className="text-4xl text-blue-600" />
-                        {phoneNumber}
-                        <IoMdArrowDropdown className="text-xl text-blue-600" />
-                      </Space>
+                        <div className="flex items-center gap-2 block max-sm:hidden">
+                          {phoneNumber}
+                          <IoMdArrowDropdown className="text-xl text-blue-600" />
+                        </div>
+                      </div>
                     </a>
                   </Dropdown>
                 </div>
               ) : (
-                <Link href={"/register"}>
-                  <button className="bg-blue-600 px-4 text-white py-1 rounded text-[20px] font-bold max-sm:text-[12px] max-sm:px-2 max-sm:py-1">
-                    Submit Article
+                <Link href={"/register"} className="max-sm:fixed z-50 w-full left-0 bottom-0">
+                  <button className="bg-blue-600 px-4 text-white max-sm:w-full py-1 rounded text-[20px] max-sm:rounded-none font-bold max-sm:text-[17px] max-sm:px-2 max-sm:py-4">
+                    Maqola yuborish
                   </button>
                 </Link>
               )}

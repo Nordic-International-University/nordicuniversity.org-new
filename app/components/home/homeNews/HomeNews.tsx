@@ -12,9 +12,7 @@ const HomeNews = async () => {
   // @ts-ignore
 
   return (
-    <div>
       <HomeNewsClient news={data?.data} />
-    </div>
   );
 };
 

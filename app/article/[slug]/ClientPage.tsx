@@ -146,6 +146,39 @@ const Articles = ({ data }: { data: any }) => {
       <Container className="mt-10 max-sm:mb-20">
         <div className="flex items-start gap-4 max-xl:flex-col justify-between">
           <div className="w-3/4 max-xl:w-full">
+            {data?.image && (
+                <div
+                    className="bg-white
+                    hidden max-sm:block
+               relative w-full h-60 rounded-md overflow-hidden"
+                >
+                  <div
+                      className="absolute z-10 bg-gradient_2 -bottom-12 left-0
+                 w-full
+                  h-full"
+                  ></div>
+                  <div
+                      className="absolute text-white text-lg font-semibold -tracking-tighter  z-20 bottom-5 left-5
+                 w-full
+                  "
+                  >
+                    Maqola muqovasi
+                  </div>
+
+                  <div className="flex justify-center max-ms:hidden items-center w-full h-full">
+                    <Image
+                        width={800}
+                        height={600}
+                        className="h-full w-full object-cover"
+                        alt="Maqola muqovasi"
+                        layout="responsive"
+                        priority={true}
+                        src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
+                        placeholder="empty"
+                    />
+                  </div>
+                </div>
+            )}
             <div className="bg-white w-full max-sm:mt-4 py-4 px-3 rounded-md">
               <h2 className="inline text-sm font-bold pb-7">
                 Maqola sarlavhasi:
@@ -167,16 +200,16 @@ const Articles = ({ data }: { data: any }) => {
                 </h1>
                 <div className="flex items-center max-sm:justify-center  gap-3 flex-wrap">
                   {data?.keyword
-                    ?.split(",")
-                    ?.map((item: any, index: number) => (
-                      <Button
-                        className="px-3  text-sm text-white h-7"
-                        type="primary"
-                        key={index}
-                      >
-                        {item}
-                      </Button>
-                    ))}
+                      ?.split(",")
+                      ?.map((item: any, index: number) => (
+                          <Button
+                              className="px-3  text-sm text-white h-7"
+                              type="primary"
+                              key={index}
+                          >
+                            {item}
+                          </Button>
+                      ))}
                 </div>
               </div>
             </div>
@@ -191,7 +224,7 @@ const Articles = ({ data }: { data: any }) => {
                 Yo‘nalish sohasi:
               </h2>
               <p
-                className="inline text-sm uppercase
+                  className="inline text-sm uppercase
                pl-2"
               >
                 {" "}
@@ -199,21 +232,21 @@ const Articles = ({ data }: { data: any }) => {
               </p>
             </div>
             <div className="w-full mt-4">
-              <Collapse className="bg-white" items={[items[0]]} />
+              <Collapse className="bg-white" items={[items[0]]}/>
             </div>
             {data?.certificates?.length > 0 && (
-              <div className="w-full mt-4 ">
-                <Collapse className="bg-white" items={certificates} />
-              </div>
+                <div className="w-full mt-4 ">
+                  <Collapse className="bg-white" items={certificates}/>
+                </div>
             )}
 
             {data?.coAuthors?.length !== 0 && (
-              <div className="mt-4 w-full bg-white pt-4 px-4">
-                <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
-                <Table striped bordered hover responsive>
-                  <thead>
+                <div className="mt-4 w-full bg-white pt-4 px-4">
+                  <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
+                  <Table striped bordered hover responsive>
+                    <thead>
                     <tr
-                      className="text-nowrap
+                        className="text-nowrap
                     "
                     >
                       <th>Muallif</th>
@@ -222,42 +255,44 @@ const Articles = ({ data }: { data: any }) => {
                       <th>Ish joyi</th>
                       <th>Lavozim</th>
                     </tr>
-                  </thead>
-                  <tbody>
+                    </thead>
+                    <tbody>
                     {data?.coAuthors?.map((author: any) => (
-                      <tr key={author.id}>
-                        <td>{author.full_name}</td>
-                        <td>{author.science_degree}</td>
-                        <td>{author.phone_number}</td>
-                        <td>{author.place_position}</td>
-                        <td>{author.job}</td>
-                      </tr>
+                        <tr key={author.id}>
+                          <td>{author.full_name}</td>
+                          <td>{author.science_degree}</td>
+                          <td>{author.phone_number}</td>
+                          <td>{author.place_position}</td>
+                          <td>{author.job}</td>
+                        </tr>
                     ))}
-                  </tbody>
-                </Table>
-              </div>
+                    </tbody>
+                  </Table>
+                </div>
             )}
           </div>
           <div className="w-3/12 max-xl:w-full">
             {data?.image && (
-              <div
-                className="bg-white
-               relative w-full h-60 rounded-md overflow-hidden"
-              >
                 <div
-                  className="absolute z-10 bg-gradient_2 -bottom-12 left-0
+                    className="bg-white
+
+                    block max-sm:hidden
+               relative w-full h-60 rounded-md overflow-hidden"
+                >
+                  <div
+                      className="absolute z-10 bg-gradient_2 -bottom-12 left-0
                  w-full
                   h-full"
-                ></div>
-                <div
-                  className="absolute text-white text-lg font-semibold -tracking-tighter  z-20 bottom-5 left-5
+                  ></div>
+                  <div
+                      className="absolute text-white text-lg font-semibold -tracking-tighter  z-20 bottom-5 left-5
                  w-full
                   "
                 >
                   Maqola muqovasi
                 </div>
 
-                <div className="flex justify-center items-center w-full h-full">
+                <div className="flex justify-center max-ms:hidden items-center w-full h-full">
                   <Image
                       width={800}
                       height={600}
