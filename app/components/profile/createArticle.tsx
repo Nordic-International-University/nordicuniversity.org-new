@@ -30,14 +30,10 @@ import Cookies from "js-cookie";
 import * as Yup from "yup";
 import axios from "axios";
 import {useRouter} from "next/navigation";
-
+import {useGetAuthorProfileQuery} from "@/lib/query/myarticle.query";
 const { Option } = Select;
 
-interface props {
-  authorId: string;
-}
-
-const CreateArticle = ({ authorId }: props) => {
+const CreateArticle = () => {
   const [keywords, setKeywords] = useState<string[]>([]);
   const router = useRouter();
   const [inputVisible, setInputVisible] = useState(false);
@@ -48,9 +44,8 @@ const CreateArticle = ({ authorId }: props) => {
   // @ts-ignore
   const { data: authors = [] } = useGetAllAuthorQuery();
   const { data: categories = [] } = useGetAllCategoryQuery();
-  const [selectedCategory, setSelectedCategory] = useState<
-      string | number | null
-  >(null);
+  const {data:authorProfile} = useGetAuthorProfileQuery(Cookies.get('access_token'))
+  const [selectedCategory, setSelectedCategory] = useState<string | number | null>(null);
   const { data: subcategories = [] } = useGetSubcategoriesByCategoryQuery(
       selectedCategory!,
       {
@@ -123,26 +118,30 @@ const CreateArticle = ({ authorId }: props) => {
     return props;
   };
 
+
   const initialValues = {
     title: "",
     description: "",
     abstract: "",
     keyword: "",
-    author_id: authorId,
+    author_id: `${authorProfile?.data?.id}`,
     categoryId: "",
     SubCategoryId: "",
     source_id: "",
     coAuthorIds: [],
   };
 
+  console.log(initialValues)
+
   const validationSchema = Yup.object({
     title: Yup.string().required("Sarlavha majburiy."),
     description: Yup.string().required("Tavsif majburiy."),
     abstract: Yup.string().required("Qisqa maqola majburiy."),
     keyword: Yup.string().required("Kalit so‘zlar majburiy."),
-    categoryId: Yup.string().required("Kategoriya tanlash majburiy."),
-    SubCategoryId: Yup.string().required("Sub-kategoriya tanlash majburiy."),
+    categoryId: Yup.number().required("Kategoriya tanlash majburiy."),
+    SubCategoryId: Yup.number().required("Sub-kategoriya tanlash majburiy."),
     source_id: Yup.string().required("Fayl yuklanishi majburiy."),
+    author_id:Yup.string()
   });
 
   return (
@@ -150,6 +149,7 @@ const CreateArticle = ({ authorId }: props) => {
           validationSchema={validationSchema}
           initialValues={initialValues}
           validateOnBlur={false}
+          enableReinitialize
           validateOnChange={false}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
             setSubmitting(true);
@@ -170,6 +170,7 @@ const CreateArticle = ({ authorId }: props) => {
               resetForm();
               console.log(data)
             } catch (e:any) {
+              console.log(values)
               console.log(e)
               if (e.response?.status === 409) {
                 message.error("Bunday maqola allaqachon mavjud!");
@@ -216,7 +217,7 @@ const CreateArticle = ({ authorId }: props) => {
                   <Field
                       name="abstract"
                       as={TextArea}
-                      placeholder="abstract"
+                      placeholder="Abstrakt"
                       size="large"
                       required
                   />
@@ -269,7 +270,7 @@ const CreateArticle = ({ authorId }: props) => {
                 <Col span={24} className="flex items-center gap-3">
                   <Select
                       className="w-1/2"
-                      placeholder="Kategoriya tanlang"
+                      placeholder="Yo‘nalishni tanlang"
                       size="large"
                       onChange={(value) => {
                         setSelectedCategory(value);
@@ -295,7 +296,7 @@ const CreateArticle = ({ authorId }: props) => {
                           option?.label.toLowerCase().includes(input.toLowerCase())
                       }
                       disabled={selectedCategory === null ? true : false}
-                      placeholder="Sub-kategoriya tanlang"
+                      placeholder="Yo‘nalish sohasini tanlang"
                       size="large"
                   ></Select>
                 </Col>
@@ -333,7 +334,7 @@ const CreateArticle = ({ authorId }: props) => {
                     <p className="ant-upload-drag-icon">
                       <InboxOutlined />
                     </p>
-                    <p className="ant-upload-text">Maqola faylini yuklang.</p>
+                    <p className="ant-upload-text">Maqola manbaasini yuklang.</p>
                     <p className="ant-upload-hint">
                       Faqat PDF, DOC, yoki DOCX formatidagi fayllarni yuklash
                       mumkin.

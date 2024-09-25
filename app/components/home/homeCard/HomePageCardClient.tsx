@@ -33,6 +33,7 @@ const HomePageCardClient = ({
             {topArticles?.map((article: any, index: number) => (
               <div key={index} className={"w-full"}>
                 <BigArticlesCard
+                  key={index}
                   title={article.title}
                   date={article.createdAt}
                   slug={article.slug}
@@ -53,6 +54,7 @@ const HomePageCardClient = ({
               <div key={index}>
                 <ArticleCard
                   title={article.title}
+                  key={index}
                   width=""
                   slug={article.slug}
                   date={article.createdAt}
@@ -67,11 +69,15 @@ const HomePageCardClient = ({
           <Link href={"/articles"}>
             <div className=" w-full flex group justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
               <h1 className="ml-3">Ko'proq Maqolalar</h1>
-              <Image src={arrowImage} alt="arrow" className="group-hover:mr-4 transition-all mr-7" />
+              <Image
+                src={arrowImage}
+                alt="arrow"
+                className="group-hover:mr-4 transition-all mr-7"
+              />
             </div>
           </Link>
           <div className="mb-3 mt-3">
-            <RoundedSvg title="Yangiliklar"/>
+            <RoundedSvg title="Yangiliklar" />
           </div>
           <HomeNews />
         </div>
@@ -81,7 +87,7 @@ const HomePageCardClient = ({
             {lastArticles?.map((article: any, index: number) => (
               <div key={index}>
                 <NewsCard
-
+                  key={index}
                   title={article.title}
                   date={article.createdAt}
                   category={article.category.name}
@@ -95,7 +101,11 @@ const HomePageCardClient = ({
             <Link href={"/"}>
               <div className="group w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
                 <h1 className="ml-3">Ko'proq eng so‘ng‘i maqolalar</h1>
-                <Image src={arrowImage} alt="arrow" className="group-hover:mr-4 transition-all mr-7" />
+                <Image
+                  src={arrowImage}
+                  alt="arrow"
+                  className="group-hover:mr-4 transition-all mr-7"
+                />
               </div>
             </Link>
           </div>

@@ -32,7 +32,7 @@ export const registerApi = createApi({
                     "Content-Type": "application/json",
                 },
                 body: {
-                    phone_number: `${loginData.phone_number}`,
+                    phone_number: loginData.phone_number.replace(/\s+/g, ''),
                     password: loginData.password,
                 },
             }),
@@ -41,7 +41,7 @@ export const registerApi = createApi({
 });
 
 // Экспортируем хуки для использования мутации в компонентах
-export const { useRegisterUserMutation,useLoginUserMutation } = registerApi;
+export const { useRegisterUserMutation,useLoginUserMutation, } = registerApi;
 
 
 

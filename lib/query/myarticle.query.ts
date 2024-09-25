@@ -12,17 +12,14 @@ export const mySlice = createApi({
             query: (slug) => `/article/user/slug/${slug}`,
         }),
         getAuthorProfile: builder.query({
-            query: ({ token }) => ({
+            query: (token) => ({
                 url: '/author/profile',
                 method: 'GET',
                 headers: {
                     Authorization:token
                 }
 
-            }),
-            transformResponse: (baseQueryReturnValue:any) => {
-                return baseQueryReturnValue.data
-            }
+            })
         }),
     }),
 });

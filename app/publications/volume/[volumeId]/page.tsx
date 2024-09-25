@@ -1,11 +1,11 @@
-// app/publications/[volumeId]/page.tsx
-
 import React from "react";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import { redirect } from "next/navigation";
 
 export async function generateStaticParams() {
-  const res = await fetch("https://journal2.nordicun.uz/category");
+  const res = await fetch("https://journal2.nordicun.uz/category",{
+    cache:'no-store'
+  });
 
   if (!res.ok) {
     throw new Error(`Failed to fetch categories: ${res.status}`);

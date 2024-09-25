@@ -42,7 +42,7 @@ const BigArticlesCard = ({
                 }`}
                 width={330}
                 height={200}
-                onLoadingComplete={() => setIsLoaded(true)}
+                onLoad={() => setIsLoaded(true)}
             />
           </div>
           <div className="ml-2 py-2 px-2">

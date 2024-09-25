@@ -4,6 +4,7 @@ export const articleApi = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://journal2.nordicun.uz",
+    cache:'no-store'
   }),
   endpoints: (builder) => ({
     getPosts: builder.query({

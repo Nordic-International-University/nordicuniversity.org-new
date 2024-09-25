@@ -24,6 +24,11 @@ const Page: React.FC = () => {
     place_position: "",
   });
 
+  const [loginData, setLoginData] = useState({
+    phone_number: "",
+    password: "",
+  });
+
   const handleSignUpClick = () => {
     setSignUpMode(true);
   };
@@ -39,6 +44,13 @@ const Page: React.FC = () => {
     });
   };
 
+  const handleInputChangeLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLoginData({
+      ...loginData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSignUpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -47,6 +59,7 @@ const Page: React.FC = () => {
 
       const data = await registerUser(formData).unwrap();
       Cookies.set('access_token', data?.data?.token);
+      Cookies.set('phone', formData.phone_number);
       router.push('/profile');
     } catch (err: any) {
       console.log(err)
@@ -62,15 +75,16 @@ const Page: React.FC = () => {
 
   const handleSignInSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const loginData = {
-      phone_number: formData.phone_number,
-      password: formData.password,
+    const loginDataRequest = {
+      phone_number: loginData.phone_number,
+      password: loginData.password,
     };
 
     try {
-      const data = await loginUser(loginData).unwrap();
+      const data = await loginUser(loginDataRequest).unwrap();
       if (data.message === 'USER_LOGGED_IN') {
         Cookies.set('access_token', data.login_data.token);
+        Cookies.set('phone', loginData.phone_number);
         router.push('/profile');
         message.success('Muvaffaqiyatli kirildi!');
       }
@@ -95,8 +109,8 @@ const Page: React.FC = () => {
                     type="text"
                     name="phone_number"
                     placeholder="Telefon Raqam"
-                    value={formData.phone_number}
-                    onChange={handleInputChange}
+                    value={loginData.phone_number}
+                    onChange={handleInputChangeLogin}
                     required
                 />
               </div>
@@ -106,13 +120,13 @@ const Page: React.FC = () => {
                     type="password"
                     name="password"
                     placeholder="Parol"
-                    value={formData.password}
-                    onChange={handleInputChange}
+                    value={loginData.password}
+                    onChange={handleInputChangeLogin}
                     required
                 />
               </div>
               <div className="w-[300px]">
-                <Button htmlType="submit" type="primary" size="large" className="w-full mt-5 py-[25px] rounded-3xl" disabled={isLoggingIn}>Kirish</Button>
+                <Button htmlType="submit" type="primary" loading={isLoggingIn} size="large" className="w-full mt-5 py-[25px] rounded-3xl" disabled={isLoggingIn}>Kirish</Button>
               </div>
             </form>
 

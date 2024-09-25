@@ -13,7 +13,7 @@ const HomeNews = async () => {
 
   return (
     <div>
-      <HomeNewsClient news={data.data} />
+      <HomeNewsClient news={data?.data} />
     </div>
   );
 };

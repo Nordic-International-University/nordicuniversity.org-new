@@ -167,7 +167,7 @@ const Page = () => {
                    <SwiperSlide className="  text-center w-[205px] max-sm:w-full ">
                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
                        <Image
-                           src={image_aziz}
+                           src={image_aziz} 
                            alt="Tahririyat hayati rasm"
                            className="w-full h-full object-cover"
                        />
