@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { Breadcrumb,Table, Button, Collapse, Spin, Steps } from "antd";
-import { HomeOutlined, UserOutlined } from "@ant-design/icons";
+import {Table, Button, Collapse, Spin, Steps } from "antd";
 import { FcDocument } from "react-icons/fc";
 import dayjs from "dayjs";
 import { BiDownload } from "react-icons/bi";
@@ -11,13 +10,13 @@ import { Viewer, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import { useRouter} from "next/navigation";
 import Link from "next/link";
 
 export const ArticleStatusEnum = {
   NEW: "NEW",
   PLAGIARISM: "PLAGIARISM",
   REVIEW: "REVIEW",
+  PAYMENT: "PAYMENT",
   ACCEPT: "ACCEPT",
   REJECTED: "REJECTED",
 };
@@ -26,72 +25,85 @@ const MyArticle = ({data}:any) => {
   const [stepsItems, setStepsItems] = useState([]);
   const [reject, setReject] = useState(0);
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const [loading, setLoading] = useState(true);
-  const navigate = useRouter()
+  const [loading, setLoading] = useState(true)
 
-  console.log(data)
+
   useEffect(() => {
     const initialSteps:any = [
       {
         title: "Yangi maqola",
+        uniqueKey: "Yangi maqola",
         description: "Tekshirilmoqda",
         key: ArticleStatusEnum.NEW,
       },
       {
         title: "Antiplagiat",
+        uniqueKey: "Antiplagiat",
         description: "O‘xshashlik darajasini aniqlash",
         key: ArticleStatusEnum.PLAGIARISM,
       },
       {
         title: "Taqriz",
+        uniqueKey: "Taqriz",
         description: "Baholash va tahlil qilish jarayoni",
         key: ArticleStatusEnum.REVIEW,
       },
       {
-        title: "Qabul qilindi!",
-        description: "Nashrga tayyorlanmoqda",
-        key: ArticleStatusEnum.ACCEPT,
+        uniqueKey: "to'lov",
+        title:
+            currentStep === 3 ? (
+                <Link
+                    className="text-blue-500"
+                    href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.uz${location.pathname}`}
+                >
+                  <img
+                      className="w-20"
+                      src="https://itmir.uz/image/catalog/MUSR/article-original.png"
+                      alt=""
+                  />
+                </Link>
+            ) : currentStep > 3 && data?.status === "ACCEPT" ? (
+                "To‘lov qabul qilindi"
+            ) : (
+                "To'lov tasdiqlanishini kuting"
+            ),
+        description:
+            currentStep === 3 ? (
+                <Link
+                    className="text-blue-500"
+                    href={`${data?.transactions_link}&return_url=https://journal.nordicuniversity.org${location.pathname}`}
+                >
+                  To'lov qilish uchun bosing
+                </Link>
+            ) : currentStep > 3 && data?.status === "ACCEPT" ? (
+                ""
+            ) : (
+                ""
+            ),
+        key: ArticleStatusEnum.PAYMENT,
+        icon:
+            data?.status === "ACCEPT" ? null : (
+                <div className="rounded-full flex justify-center items-start">
+                  <FcDocument className="text-3xl" />
+                </div>
+            ),
+        status:
+            currentStep === 3
+                ? "process"
+                : currentStep > 3 && data?.status === "ACCEPT"
+                    ? "finish"
+                    : "",
       },
       {
-        title: "Nashr qilindi",
-        description: (
-            <div>
-              {data?.status === ArticleStatusEnum.ACCEPT ? (
-                  <Link className="text-blue-500" href={`/articles/${data?.slug}`}>
-                    Maqolani ko‘rish
-                  </Link>
-              ) : (
-                  <div>Maqolani ko‘rish</div>
-              )}
-            </div>
-        ),
+        title: "Holatni kuting",
         key: ArticleStatusEnum.ACCEPT,
-        icon: (
-            <div className="rounded-full flex justify-center items-start">
-              <FcDocument className="text-3xl" />
-            </div>
-        ),
-        status: data?.status === ArticleStatusEnum.ACCEPT ? "success" : "",
       },
     ];
 
-    if (data?.status === ArticleStatusEnum.REJECTED) {
-      const rejectIndex = initialSteps.findIndex(
-          (item:any) => item.key === data?.last_status,
-      );
-
-      if (rejectIndex !== -1) {
-        initialSteps[rejectIndex] = {
-          ...initialSteps[rejectIndex],
-          description: (
-              <>
-                <span>Rad etilish sababi:</span> {data?.reason_for_rejection}
-              </>
-          ),
-          status: "error",
-        };
-        setReject(rejectIndex);
-      }
+    if (data?.status === ArticleStatusEnum.ACCEPT) {
+      const step = initialSteps[initialSteps.length - 1];
+      step.title = "Qabul qilindi";
+      step.description = "Maqolangiz nashr qilindi!";
     }
 
     setStepsItems(initialSteps);
@@ -104,13 +116,15 @@ const MyArticle = ({data}:any) => {
               ? 1
               : data?.status === ArticleStatusEnum.REVIEW
                   ? 2
-                  : data?.status === ArticleStatusEnum.ACCEPT
-                      ? 5
-                      : data?.status === ArticleStatusEnum.REJECTED
-                          ? reject
-                          : 0;
+                  : data?.status === ArticleStatusEnum.PAYMENT
+                      ? 3
+                      : data?.status === ArticleStatusEnum.ACCEPT
+                          ? 5
+                          : data?.status === ArticleStatusEnum.REJECTED
+                              ? reject
+                              : 0;
 
-  const downloadFile = async (filePath:string, isFullLink:boolean) => {
+  const downloadFile = async (filePath:string, isFullLink:Boolean) => {
     try {
       const response = await fetch(
           isFullLink ? filePath : `${process.env.REACT_APP_API_URL2}${filePath}`,
@@ -121,7 +135,7 @@ const MyArticle = ({data}:any) => {
       const a:any = document.createElement("a");
       a.href = url;
 
-      const fileName = filePath.split("/").pop();
+      const fileName:any = filePath.split("/").pop();
       a.download = fileName;
 
       document.body.appendChild(a);
@@ -134,7 +148,7 @@ const MyArticle = ({data}:any) => {
     }
   };
 
-  const genExtra = (text:string, link:string,isFullLink:boolean) => (
+  const genExtra = (text:string, link:string, isFullLink:Boolean) => (
       <Button
           onClick={(event) => {
             event.stopPropagation();
@@ -159,7 +173,7 @@ const MyArticle = ({data}:any) => {
               >
                 <div style={{ height: "750px" }}>
                   <Viewer
-                      fileUrl={`https://journal2.nordicun.uz${data?.file?.file_path}`}
+                      fileUrl={`${process.env.REACT_APP_API_URL2}${data?.file?.file_path}`}
                       plugins={[defaultLayoutPluginInstance]}
                   />
                 </div>
@@ -172,7 +186,7 @@ const MyArticle = ({data}:any) => {
                     </div>
                 )}
                 <iframe
-                    src={`https://view.officeapps.live.com/op/embed.aspx?src=https://journal2.nordicun.uz${data?.file?.file_path}`}
+                    src={`https://view.officeapps.live.com/op/embed.aspx?src=${process.env.REACT_APP_API_URL2}${data?.file?.file_path}`}
                     width="100%"
                     className="h-full"
                     frameBorder="0"
@@ -191,7 +205,7 @@ const MyArticle = ({data}:any) => {
           >
             <div style={{ height: "750px" }}>
               <Viewer
-                  fileUrl={`https://journal2.nordicun.uz${data?.plagiarist_file?.file_path}`}
+                  fileUrl={`${process.env.REACT_APP_API_URL2}${data?.plagiarist_file?.file_path}`}
                   plugins={[defaultLayoutPluginInstance]}
               />
             </div>
@@ -300,6 +314,7 @@ const MyArticle = ({data}:any) => {
                   <div className="mt-4 w-full bg-white pt-4 px-4">
                     <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
                     <Table
+                        className="text-nowrap overflow-auto"
                         columns={[
                           {
                             title: 'Muallif',

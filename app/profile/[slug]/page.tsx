@@ -1,6 +1,5 @@
 import React from 'react';
 import ClientPage from '@/app/profile/[slug]/ClientPage';
-import Cookies from "js-cookie";
 import {cookies} from "next/headers";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {

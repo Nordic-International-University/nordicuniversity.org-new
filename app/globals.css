@@ -524,7 +524,29 @@ body > #wrap {
 
 #footer {
   width: 100%;
-  margin-top: 30px;
-  height: 40px;
+  margin-top: 0px;
+}
+
+/* Scrollbar umumiy kengligi */
+::-webkit-scrollbar {
+  width: 12px; /* Kenglik */
+}
+
+/* Scrollbar track (orqa fon) */
+::-webkit-scrollbar-track {
+  background: white; /* Orqa fon rangi */
+  border-radius: 1px; /* Burchaklarni yumshatish */
+}
+
+/* Scrollbar thumb (harakatlanadigan qisqich) */
+::-webkit-scrollbar-thumb {
+  background-color: gray; /* Qisqichning rangi */
+  border-radius: 5px; /* Burchaklarni yumshatish */
+  border: 3px solid #f1f1f1; /* Qisqichning atrofiga chegara */
+}
+
+/* Scrollbar thumb hover effekti */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Hover paytida rang o'zgaradi */
 }
 
