@@ -1,6 +1,5 @@
 "use client";
-//something
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/Store";
@@ -16,7 +15,6 @@ import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
-import { useGetPostsQuery } from "@/lib/query/article.query";
 
 const Page = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -24,17 +22,11 @@ const Page = () => {
     (state: RootState) => state.about.accordionItems,
   );
   const aboutItem = useSelector((state: RootState) => state.about.aboutItems);
-  // @ts-ignore
-  const data = useGetPostsQuery();
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
 
   return (
     <>
 
-      <section className="mt-[80px]">
+      <section className="mt-[50px] max-sm:mt-[30px]">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-10 justify-between">
             <div className="w-full lg:w-auto">
@@ -110,7 +102,7 @@ const Page = () => {
                      modules={[Autoplay, Navigation]}
                      className=" max-sm:block  "
                  >
-                   <SwiperSlide className="text-center justify-center items-center w-[185px] max-sm:w-full  ">
+                   <SwiperSlide className="text-center justify-center items-center w-[215px]">
                      <div className=" relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
                        <Image
                            src={image_sherzod}
@@ -129,7 +121,7 @@ const Page = () => {
                        </div>
                      </div>
                    </SwiperSlide>
-                   <SwiperSlide className="relative  text-center w-[205px] max-sm:w-full  ">
+                   <SwiperSlide className="relative  text-center w-[215px] max-sm:w-full">
                      <div className="relative text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
 
                        <Image
@@ -147,7 +139,7 @@ const Page = () => {
                        </div>
                      </div>
                    </SwiperSlide>
-                   <SwiperSlide className="relative  text-center w-[205px] max-sm:w-full  ">
+                   <SwiperSlide className="relative  text-center w-[215px] max-sm:w-full  ">
                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
                        <Image
                            src={image_odil}
@@ -164,7 +156,7 @@ const Page = () => {
                        </div>
                      </div>
                    </SwiperSlide>
-                   <SwiperSlide className="  text-center w-[205px] max-sm:w-full ">
+                   <SwiperSlide className="  text-center w-[215px] max-sm:w-full ">
                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
                        <Image
                            src={image_aziz} 
@@ -183,34 +175,36 @@ const Page = () => {
                </div>
 
 
-                <div className="mt-3">
-                  <RoundedSvg title="Tahririyat a'zolari:"/>
-                  <table className="min-w-full mt-5 border-collapse border border-gray-200 shadow-md">
-                    <thead>
-                    <tr className="bg-blue-600 text-white">
-                      <th className="px-4 py-2 text-left font-medium">F.I.O</th>
-                      <th className="px-4 py-2 text-left font-medium">Yo'nalish</th>
-                      <th className="px-4 py-2 text-left font-medium">Davlat</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {aboutItem?.map((item, index) => (
-                        <tr
-                            key={index}
-                            className={`${
-                                index % 2 === 0 ? "bg-white" : "bg-gray-100"
-                            } hover:bg-orange-100 transition-colors duration-200`}
-                        >
-                          <td className="px-4 py-2 border border-gray-200 font-semibold">
-                            {item.name}
-                          </td>
-                          <td className="px-4 py-2 border border-gray-200">{item.title}</td>
-                          <td className="px-4 py-2 border border-gray-200">{item.country}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                  </table>
+                <div className="mt-3 ">
+                  <RoundedSvg title="Tahririyat a'zolari"/>
+                  <div className="overflow-auto">
+                    <table className="min-w-full  mt-5 text-nowrap border-collapse border border-gray-200 shadow-md">
+                      <thead>
+                      <tr className="bg-blue-600 text-white">
+                        <th className="px-4 py-2 text-left font-medium">F.I.O</th>
+                        <th className="px-4 py-2 text-left font-medium">Yo'nalish</th>
+                        <th className="px-4 py-2 text-left font-medium">Davlat</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      {aboutItem?.map((item, index) => (
+                          <tr
+                              key={index}
+                              className={`${
+                                  index % 2 === 0 ? "bg-white" : "bg-gray-100"
+                              } hover:bg-orange-100 transition-colors duration-200`}
+                          >
+                            <td className="px-4 py-2 border border-gray-200 font-semibold">
+                              {item.name}
+                            </td>
+                            <td className="px-4 py-2 border border-gray-200">{item.title}</td>
+                            <td className="px-4 py-2 border border-gray-200">{item.country}</td>
+                          </tr>
+                      ))}
+                      </tbody>
+                    </table>
 
+                  </div>
                 </div>
               </div>
             </div>
@@ -227,10 +221,10 @@ const Page = () => {
                       className="w-full"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.992487234806!2d69.2162893762974!3d41.28726797131279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723365720858!5m2!1sru!2s"
                       height="450"
-                      style={{border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                      style={{border: 0}}
+                      allowFullScreen={false}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
               </div>

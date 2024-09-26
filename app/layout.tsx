@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bellota_Text } from "next/font/google";
+import {Roboto} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/main/Navbar";
 import React from "react";
@@ -8,7 +8,7 @@ import Footer from "@/app/components/main/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Bellota_Text({ subsets: ["latin"], weight: "400" });
+const inter = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
     title: "Nordic University Journal",
@@ -26,7 +26,7 @@ export default function RootLayout({
         <StoreProvider>
             <div id="wrap">
                 <Navbar />
-                <main id="main" className="overflow-hidden">
+                <main id="main" className="overflow-x-hidden">
                     {children}
                 </main>
                 <Footer />

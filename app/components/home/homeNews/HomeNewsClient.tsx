@@ -8,7 +8,7 @@ const HomeNewsClient = ({ news }: homeNewsInterface) => {
   return (
     <div className="flex">
       <Swiper slidesPerView={1}>
-        {news.map((newsItem) => (
+        {news?.map((newsItem) => (
           <SwiperSlide key={newsItem.id}>
             <div className="flex max-sm:flex-col w-full max-sm:mt-3">
               <Image

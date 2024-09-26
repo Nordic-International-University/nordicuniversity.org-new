@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, {useEffect} from "react";
 import errorPage from "@/public/404.jpg";
 import leyer1 from "@/public/Ellipse.svg";
 import ellipseRight from "@/public/ellipseRight.svg";
@@ -8,6 +10,18 @@ import Image from "next/image";
 
 const Page404 = () => {
 
+  useEffect(() => {
+    const mainElement = document.getElementById("main");
+    if (mainElement) {
+      mainElement.style.paddingBottom = "0";
+    }
+
+    return () => {
+      if (mainElement) {
+        mainElement.style.paddingBottom = "150px";
+      }
+    };
+  }, []);
 
   return (
     <div id="page404 " className="relative overflow-hidden">
@@ -29,7 +43,7 @@ const Page404 = () => {
           <Image
             src={errorPage}
             alt="404"
-            className=" w-[500px] h-[500px] mt-3"
+            className="max-sm:w-full max-sm:h-auto w-[500px] h-[500px] mt-3"
           />
         </div>
         <div className=" text-center z-10 absolute bottom-[10%] left-[50%] -translate-x-1/2 ">

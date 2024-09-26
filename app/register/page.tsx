@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Button, Input, message } from "antd";
 import { useLoginUserMutation, useRegisterUserMutation } from "@/lib/query/register.query";
 import Cookies from "js-cookie";
@@ -23,6 +23,19 @@ const Page: React.FC = () => {
     job: "",
     place_position: "",
   });
+
+  useEffect(() => {
+    const mainElement = document.getElementById("main");
+    if (mainElement) {
+      mainElement.style.paddingBottom = "0";
+    }
+
+    return () => {
+      if (mainElement) {
+        mainElement.style.paddingBottom = "150px";
+      }
+    };
+  }, []);
 
   const [loginData, setLoginData] = useState({
     phone_number: "",

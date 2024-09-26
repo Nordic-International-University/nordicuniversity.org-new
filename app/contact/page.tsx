@@ -7,18 +7,18 @@ import { FaUser } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import image from "@/public/Ellipse 793.png";
-import image2 from "@/public/Ellipse 793.png";
+import image2 from "@/public/Ellipse 794.png";
 import Image from "next/image";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
 const Contact = () => {
     return (
-        <section id="contact" className="mt-10">
+        <section id="contact" className="">
             <article className="container">
                 <h2 className="text-[32px] max-sm:text-[24px] font-bold leading-[53px] tracking-[-1px] text-[#042552]">
                    <RoundedSvg title="Biz bilan bog'lanish"/>
                 </h2>
-                <div className="mt-10">
+                <div className="mt-3">
                     <div className="flex max-xl:flex-col w-full gap-3  rounded-md p-[10px] items-start justify-center">
                         <div className="bg-[#46658B] w-full relative rounded-xl max-sm:pl-[20px] pl-[40px] py-12">
                             <h2 className="text-white max-sm:hidden block text-[28px] pb-[80px] font-semibold">

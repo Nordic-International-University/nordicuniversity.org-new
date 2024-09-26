@@ -138,8 +138,8 @@ const CreateArticle = () => {
     description: Yup.string().required("Tavsif majburiy."),
     abstract: Yup.string().required("Qisqa maqola majburiy."),
     keyword: Yup.string().required("Kalit so‘zlar majburiy."),
-    categoryId: Yup.number().required("Kategoriya tanlash majburiy."),
-    SubCategoryId: Yup.number().required("Sub-kategoriya tanlash majburiy."),
+    categoryId: Yup.number().required("Yo‘nalish tanlash majburiy."),
+    SubCategoryId: Yup.number().required("Yo‘nalish sohasini tanlash majburiy."),
     source_id: Yup.string().required("Fayl yuklanishi majburiy."),
     author_id:Yup.string()
   });
@@ -148,9 +148,9 @@ const CreateArticle = () => {
       <Formik
           validationSchema={validationSchema}
           initialValues={initialValues}
-          validateOnBlur={false}
+          validateOnBlur
+          validateOnChange
           enableReinitialize
-          validateOnChange={false}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
             setSubmitting(true);
             try {
@@ -191,7 +191,6 @@ const CreateArticle = () => {
                       as={Input}
                       placeholder="Sarlavha"
                       size="large"
-                      required
                   />
                   <ErrorMessage
                       name="title"
@@ -205,7 +204,6 @@ const CreateArticle = () => {
                       as={Input}
                       placeholder="Tavsif"
                       size="large"
-                      required
                   />
                   <ErrorMessage
                       name="description"
@@ -219,7 +217,6 @@ const CreateArticle = () => {
                       as={TextArea}
                       placeholder="Abstrakt"
                       size="large"
-                      required
                   />
                   <ErrorMessage
                       name="abstract"
@@ -268,43 +265,52 @@ const CreateArticle = () => {
                   />
                 </Col>
                 <Col span={24} className="flex items-center gap-3">
-                  <Select
-                      className="w-1/2"
-                      placeholder="Yo‘nalishni tanlang"
-                      size="large"
-                      onChange={(value) => {
-                        setSelectedCategory(value);
-                        setFieldValue("categoryId", value);
-                      }}
-                  >
-                    {categories.map((category) => (
-                        <Option key={category.id} value={category.id}>
-                          {category.name}
-                        </Option>
-                    ))}
-                  </Select>
-                  <Select
-                      onChange={(e) => {
-                        setFieldValue("SubCategoryId", e);
-                      }}
-                      className="w-1/2"
-                      options={subcategories?.map((a: any) => ({
-                        label: a.name,
-                        value: a.id,
-                      }))}
-                      filterOption={(input: any, option: any) =>
-                          option?.label.toLowerCase().includes(input.toLowerCase())
-                      }
-                      disabled={selectedCategory === null ? true : false}
-                      placeholder="Yo‘nalish sohasini tanlang"
-                      size="large"
-                  ></Select>
+                 <div className="w-1/2">
+                   <Select
+                       className="w-full"
+                       placeholder="Yo‘nalishni tanlang"
+                       size="large"
+                       onChange={(value) => {
+                         setSelectedCategory(value);
+                         setFieldValue("categoryId", value);
+                       }}
+                   >
+                     {categories.map((category) => (
+                         <Option key={category.id} value={category.id}>
+                           {category.name}
+                         </Option>
+                     ))}
+                   </Select>
+                   <ErrorMessage
+                       name="categoryId"
+                       component="div"
+                       className="text-red-700 text-[13px]"
+                   />
+                 </div>
+                  <div className="w-1/2">
+                    <Select
+                        onChange={(e) => {
+                          setFieldValue("SubCategoryId", e);
+                        }}
+                        className="w-full"
+                        options={subcategories?.map((a: any) => ({
+                          label: a.name,
+                          value: a.id,
+                        }))}
+                        filterOption={(input: any, option: any) =>
+                            option?.label.toLowerCase().includes(input.toLowerCase())
+                        }
+                        disabled={selectedCategory === null ? true : false}
+                        placeholder="Yo‘nalish sohasini tanlang"
+                        size="large"
+                    ></Select>
+                    <ErrorMessage
+                        name="SubCategoryId"
+                        component="div"
+                        className="text-red-700 text-[13px]"
+                    />
+                  </div>
                 </Col>
-                <ErrorMessage
-                    name="categoryId"
-                    component="div"
-                    className="text-red-700 text-[13px]"
-                />
                 <Col span={24}>
                   <Select
                       size="large"

@@ -1,16 +1,17 @@
+"use server"
+
 import React from "react";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
-export default function Page() {
+export default async function Page() {
   return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4">
         <div className="mb-0 text-center">
           <RoundedSvg title="Ilmiy maqolaga qo‘yilgan talablar" />
         </div>
-
-        <div className="flex items-center justify-center w-full gap-4 pt-12 pb-12">
-          <div className="flex w-full max-w-full shadow-2xl shadow-blue-200 hover:shadow-xl transition-shadow duration-300 ease-in-out px-6 py-6 rounded-[30px] bg-gradient-to-r from-blue-50 to-white">
-            <div className="w- px-4 py-4 relative group">
+        <div className="flex items-center  justify-center w-full gap-4 pt-6 pb-12">
+          <div className="flex max-lg:flex-col w-full max-w-full max-sm:rounded-md shadow-2xl shadow-blue-200 hover:shadow-xl transition-shadow duration-300 ease-in-out px-6 max-sm:px-0 py-6 rounded-[30px] bg-gradient-to-r from-blue-50 to-white">
+            <div className="px-4 py-4 relative group">
               <h1 className="text-[#36187d] font-bold text-[15px] mb-4">
                 <strong>1. ABSTRAKT (ANNOTATSIYA)</strong>
               </h1>
@@ -52,9 +53,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="w-1/2 px-4 py-4 relative group">
-
-
+            <div className="w-1/2 px-4 py-4 relative group max-lg:w-full">
               <h1 className="text-[#36187d] font-bold text-[15px]  mb-4">5. DISKUSSIYA</h1>
               <ul className="list-disc list-inside text-gray-700">
                 <li>Kirish (ilmiy topilmalarni muhokama qilish...)</li>

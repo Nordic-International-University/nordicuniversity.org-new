@@ -66,6 +66,52 @@ export default function TableComponent({ data }: ProfileClientProps) {
         },
     ];
 
+    // <th className="py-3 px-6 text-left">Sarlavha</th>
+    // <th className="py-3 px-6 text-left">Holati</th>
+    // <th className="py-3 px-6 text-left">Kategoriyasi</th>
+    // <th className="py-3 px-6 text-left">Yaratilgan vaqt</th>
+    // <th className="py-3 px-6 text-left">O'qishlar soni</th>
+
+    const articleColumn = [
+        {
+            title: 'Sarlavha',
+            dataIndex: 'title',
+            key: 'title',
+        },
+        {
+            title: 'Holati',
+            dataIndex: 'status',
+            key: 'status',
+        },
+        {
+            title: 'Yo‘nalish',
+            dataIndex: 'category',
+            key: 'category',
+        },
+        {
+            title: 'Yaratilgan vaqt',
+            dataIndex: 'createdAt',
+            key: 'category',
+        },
+        {
+            title: 'O‘qishlar soni',
+            dataIndex: 'viewsCount',
+            key: 'viewsCount',
+        },
+    ];
+
+    const articleDataSource = data?.Articles?.map((item,index) => {
+        return  {
+            key: '1',
+            title: item?.title,
+            status: getStatusText(item?.status),
+            slug: item?.slug,
+            category: item?.category?.name,
+            createdAt: dayjs(item?.createdAt).format("YYYY-MM-DD"),
+            viewsCount: item?.viewsCount + " ta",
+        }
+    })
+
     const dataSource = [
         {
             key: '1',
@@ -97,64 +143,49 @@ export default function TableComponent({ data }: ProfileClientProps) {
         },
     ];
 
+
+
     const handleRowClick = (slug: string) => {
         router.push(`/profile/${slug}`);
     };
 
-  const tabsItem: TabsProps["items"] = [
-    {
-      key: "1",
-      label: "Maqolalar",
-      children: (
-          <div className="overflow-x-auto">
-              <table className="min-w-full text-nowrap bg-white shadow-md rounded-lg overflow-hidden">
-                  <thead className="bg-blue-500 text-white">
-                  <tr>
-                      <th className="py-3 px-6 text-left">Sarlavha</th>
-                      <th className="py-3 px-6 text-left">Holati</th>
-                      <th className="py-3 px-6 text-left">Kategoriyasi</th>
-                      <th className="py-3 px-6 text-left">Yaratilgan vaqt</th>
-                      <th className="py-3 px-6 text-left">O'qishlar soni</th>
-                  </tr>
-                  </thead>
-                  <tbody className="cursor-pointer">
-                  {data?.Articles?.map((article: Article, index: number) => (
-                      <tr
-                          className="border-b hover:bg-gray-100 w-full"
-                          key={index}
-                          onClick={() => handleRowClick(article.slug)}
-                      >
-                          <td className="py-4 px-6 overflow-hidden line-clamp-1">
-                              {article.title}
-                          </td>
-                          <td className="py-4 px-6">{getStatusText(article.status)}</td>
-                          <td className="py-4 px-6">{article.category?.name}</td>
-                          <td className="py-4 px-6 text-nowrap">
-                              {dayjs(article.createdAt).format("YYYY-MM-DD")}
-                          </td>
-                          <td className="py-4 px-6">{article.viewsCount}</td>
-                      </tr>
-                  ))}
-                  </tbody>
-              </table>
-          </div>
-      ),
-    },
-      {
-          key: "2",
-          label: "Ko'rsatkichlar",
-          children: (
-              <Table
-                  dataSource={dataSource}
-                  columns={columns}
-                  bordered
-                  pagination={false}
-                  rowKey="key"
-                  className="bg-white shadow-md rounded-lg"
-              />
-          ),
-      }
-  ];
+    const tabsItem: TabsProps["items"] = [
+        {
+            key: "1",
+            label: "Maqolalar",
+            children: (
+                <div className="overflow-x-auto">
+                    <Table
+                        dataSource={articleDataSource}
+                        columns={articleColumn}
+                        bordered
+                        pagination={false}
+                        onRow={(record) => {
+                            return {
+                                onClick:() => handleRowClick(record.slug)
+                            }
+                        }}
+                        rowKey="key"
+                        className="bg-white shadow-md text-nowrap rounded-lg"
+                    />
+                </div>
+            ),
+        },
+        {
+            key: "2",
+            label: "Ko'rsatkichlar",
+            children: (
+                <Table
+                    dataSource={dataSource}
+                    columns={columns}
+                    bordered
+                    pagination={false}
+                    rowKey="key"
+                    className="bg-white shadow-md rounded-lg"
+                />
+            ),
+        }
+    ];
 
     return (
         <div className="overflow-x-auto mt-5">

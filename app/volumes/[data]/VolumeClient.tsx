@@ -9,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import Link from "next/link";
 
-// GSAP ScrollTrigger plaginini ro'yxatdan o'tkazish
 gsap.registerPlugin(ScrollTrigger);
 
 const oswald400 = Oswald({
@@ -42,13 +41,13 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                     {
                         x: 0,
                         opacity: 1,
-                        duration: 0.8, // Davomiylikni qisqartirdik
-                        ease: "power1.out", // Tezroq easing funktsiyasi
-                        delay: index * 0.05, // Delayni kamaytirdik
+                        duration: 0.8,
+                        ease: "power1.out",
+                        delay: index * 0.05,
                         scrollTrigger: {
                             trigger: el,
-                            start: "top 90%", // Skroll trigerini biroz oldinga olib keldik
-                            toggleActions: "play none none none", // Animatsiyani faqat bir marta ijro etish
+                            start: "top 90%",
+                            toggleActions: "play none none none",
                         },
                     }
                 );
@@ -61,13 +60,13 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                     {
                         x: 0,
                         opacity: 1,
-                        duration: 0.8, // Davomiylikni qisqartirdik
-                        ease: "power1.out", // Tezroq easing funktsiyasi
-                        delay: index * 0.05, // Delayni kamaytirdik
+                        duration: 0.8,
+                        ease: "power1.out",
+                        delay: index * 0.05,
                         scrollTrigger: {
                             trigger: el,
-                            start: "top 90%", // Skroll trigerini biroz oldinga olib keldik
-                            toggleActions: "play none none none", // Animatsiyani faqat bir marta ijro etish
+                            start: "top 90%",
+                            toggleActions: "play none none none",
                         },
                     }
                 );
@@ -85,15 +84,16 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                 </div>
 
                 {data.map((item, index) => (
-                    <div
-                        className={`flex justify-between max-sm:flex-col-reverse ${index % 2 === 0 ? "" : "flex-row-reverse "}`}
+                    <Link
+                        href={`/publications/category/${item?.id}`}
+                        className={`flex justify-between w-full max-sm:flex-col-reverse ${index % 2 === 0 ? "" : "flex-row-reverse "}`}
                         key={index}
                     >
                         <div
                             ref={(el) => {
                                 if (el && !titleRefs.current.includes(el)) titleRefs.current[index] = el;
                             }}
-                            className="flex flex-col items-center justify-center lg:w-1/2 max-lg:w-full group overflow-hidden relative"
+                            className="flex flex-col w-full items-center justify-center lg:w-1/2 max-lg:w-full group sm:overflow-hidden relative"
                         >
 
                                 <p
@@ -104,7 +104,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
 
 
 
-                            <div className=" max-lg:h-[393px] max-lg:overflow-scroll">
+                            <div className="max-lg:h-[393px] max-sm:w-full">
                                 {item?.subCategories?.map(
                                     (
                                         sub: {
@@ -126,14 +126,12 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                                         subIndex: React.Key | null | undefined,
                                     ) => (
                                         <div key={subIndex}>
-                                            <Link href={`/publications/category/${item?.id}`}>
                                                 <p
-                                                    className={`leading-7 ${oswald200.className} hover-line cursor-pointer text-[15px] font-light opacity-0 transform group-hover:my-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out after:duration-700 after:ease-out `}
+                                                    className={`leading-7 ${oswald200.className} hover-line text-[15px] font-light opacity-0 transform group-hover:my-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out after:duration-700 after:ease-out `}
                                                 >
                                                     {sub.name}
                                                     <span className="line"></span>
                                                 </p>
-                                            </Link>
                                         </div>
                                     ),
                                 )}
@@ -147,7 +145,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                         >
 
                                 <Image
-                                    src={`${"https://journal2.nordicun.uz"}${item?.file?.file_path}`}
+                                    src={`https://journal2.nordicun.uz${item?.file?.file_path}`}
                                     alt="img"
                                     width={650}
                                     height={500}
@@ -156,7 +154,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
 
 
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

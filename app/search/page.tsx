@@ -302,7 +302,7 @@ const Page = () => {
           <div className="w-[72%] max-md:w-full">
             <div className="flex pt-10 justify-between items-center max-md:static sticky-top z-10 w-full">
               <div className="flex flex-col">
-                <span>
+                <span className="flex items-center gap-2">
                   <span className="block max-sm:hidden">Topilgan</span> maqolalar soni: <strong>{data?.filterItems}</strong>{" "}
                   ta
                 </span>

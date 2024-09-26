@@ -98,16 +98,6 @@ const HomePageCardClient = ({
                 />
               </div>
             ))}
-            <Link href={"/"}>
-              <div className="group w-full flex justify-between bg-[#BEC2CF40] rounded-r-3xl rounded-s-lg-3xl h-[50px] items-center mt-3">
-                <h1 className="ml-3">Ko'proq eng so‘ng‘i maqolalar</h1>
-                <Image
-                  src={arrowImage}
-                  alt="arrow"
-                  className="group-hover:mr-4 transition-all mr-7"
-                />
-              </div>
-            </Link>
           </div>
         </div>
       </div>

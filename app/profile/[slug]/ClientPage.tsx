@@ -52,16 +52,28 @@ const MyArticle = ({data}:any) => {
         uniqueKey: "to'lov",
         title:
             currentStep === 3 ? (
-                <Link
-                    className="text-blue-500"
-                    href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.uz${location.pathname}`}
-                >
-                  <img
-                      className="w-20"
-                      src="https://itmir.uz/image/catalog/MUSR/article-original.png"
-                      alt=""
-                  />
-                </Link>
+                <div className="flex items-center gap-5">
+                  <Link
+                      className="text-blue-500"
+                      href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.uz${location.pathname}`}
+                  >
+                    <img
+                        className="w-20"
+                        src="https://itmir.uz/image/catalog/MUSR/article-original.png"
+                        alt=""
+                    />
+                  </Link>
+                  <Link
+                      className="text-blue-500"
+                      href={`${data?.transaction.transactions_link.payme_link}`}
+                  >
+                    <img
+                        className="w-20"
+                        src="https://cdn.payme.uz/logo/payme_color.svg?target=_blank"
+                        alt=""
+                    />
+                  </Link>
+                </div>
             ) : currentStep > 3 && data?.status === "ACCEPT" ? (
                 "To‘lov qabul qilindi"
             ) : (
@@ -69,12 +81,9 @@ const MyArticle = ({data}:any) => {
             ),
         description:
             currentStep === 3 ? (
-                <Link
-                    className="text-blue-500"
-                    href={`${data?.transactions_link}&return_url=https://journal.nordicuniversity.org${location.pathname}`}
-                >
-                  To'lov qilish uchun bosing
-                </Link>
+               <p>
+                 To'lov qilish usulini tanlang
+               </p>
             ) : currentStep > 3 && data?.status === "ACCEPT" ? (
                 ""
             ) : (
@@ -173,7 +182,7 @@ const MyArticle = ({data}:any) => {
               >
                 <div style={{ height: "750px" }}>
                   <Viewer
-                      fileUrl={`${process.env.REACT_APP_API_URL2}${data?.file?.file_path}`}
+                      fileUrl={`https://journal2.nordicun.uz${data?.file?.file_path}`}
                       plugins={[defaultLayoutPluginInstance]}
                   />
                 </div>
@@ -311,10 +320,10 @@ const MyArticle = ({data}:any) => {
                   </div>
               )}
               {data?.coAuthors?.length !== 0 && (
-                  <div className="mt-4 w-full bg-white pt-4 px-4">
+                  <div className="mt-4 w-full bg-white rounded-md pt-4 px-4">
                     <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
                     <Table
-                        className="text-nowrap overflow-auto"
+                        className="text-nowrap pb-4 overflow-auto"
                         columns={[
                           {
                             title: 'Muallif',

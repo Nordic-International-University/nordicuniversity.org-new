@@ -8,7 +8,7 @@ export const articleApi = createApi({
   }),
   endpoints: (builder) => ({
     getPosts: builder.query({
-      query: () => "/article/necessary?articles=6&topArticles=2&lastArticles=7",
+      query: () => "/article/necessary?articles=6&topArticles=2&lastArticles=8",
     }),
     getBySlug: builder.query({
       query: (slug) => `/article/user/slug/${slug}`,
