@@ -26,7 +26,7 @@ const makeStore = () => {
   return configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(
+      getDefaultMiddleware({ serializableCheck: false,}).concat(
         articleApi.middleware,
         registerApi.middleware,
         volumeApi.middleware,

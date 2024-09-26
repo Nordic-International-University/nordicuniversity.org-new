@@ -5,6 +5,7 @@ import HomeVolumes from "@/app/components/home/homeVolume/homeVolumes";
 
 
 export const metadata = {
+  metadataBase: new URL('https://newjournal.nordicuniversity.org'),
   title: 'Nordik jurnal  - Bosh Sahifa',
   description: 'Xalqaro Nordik Universiteti haqida yangiliklar va ilmiy jurnallar.',
   keywords: ['Nordik universiteti', 'ilmiy jurnal', 'universitet yangiliklari'],
