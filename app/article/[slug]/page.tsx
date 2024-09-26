@@ -13,9 +13,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
 
     const data = await response.json();
+    const fileUrl = data.file?.file_path ? `https://journal2.nordicun.uz${data.file.file_path}` : '';
+    const imageUrl = data.image?.file_path ? `https://journal2.nordicun.uz${data.image.file_path}` : 'https://default-image-path.png';
+
     return {
         title: data.title || "Default Title",
         description: data.abstract || data.description || "Default Description",
+        keywords: data.keyword || "article, research, journal",
         openGraph: {
             title: data.title || "Default Title",
             description: data.description || "Default Description",
@@ -23,7 +27,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             type: 'article',
             images: [
                 {
-                    url: `https://journal2.nordicun.uz${data.image?.file_path}`,
+                    url: imageUrl,
                     width: 800,
                     height: 600,
                     alt: data.title || "Article Image",
@@ -34,7 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             card: 'summary_large_image',
             title: data.title || "Default Title",
             description: data.description || "Default Description",
-            images: [`https://journal2.nordicun.uz${data.image?.file_path}`],
+            images: [imageUrl],
         },
         alternates: {
             canonical: `https://journal2.nordicun.uz/article/user/slug/${params.slug}`,
@@ -44,7 +48,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             'citation_author': data.author?.full_name || "Unknown Author",
             'citation_publication_date': data.publish_date?.split("T")[0] || "Unknown Date",
             'citation_journal_title': "Nordic Journal",
-            'citation_pdf_url': `https://journal2.nordicun.uz${data.file?.file_path}` || '',
+            'citation_pdf_url': fileUrl,
+            'DC.title': data.title || "Default Title",
+            'DC.creator': data.author?.full_name || "Unknown Author",
+            'DC.subject': data.keyword || "Research, Article",
+            'DC.description': data.abstract || data.description || "No description",
+            'DC.publisher': "Nordic University",
+            'DC.contributor': data.coAuthors?.map((author:any) => author.full_name).join(", ") || "No coAuthors",
+            'DC.date': data.publish_date?.split("T")[0] || "Unknown Date",
+            'DC.type': "Text",
+            'DC.format': "text/html",
+            'DC.identifier': `https://journal2.nordicun.uz/article/user/slug/${params.slug}`,
+            'DC.language': "uz",
+            'DC.coverage': "Global",
+            'DC.rights': "Public Domain",
         },
     };
 }
@@ -52,7 +69,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
-    const data = await response.json();
+    const data = await response.json(); 
 
     return <ClientPage data={data} />;
 };

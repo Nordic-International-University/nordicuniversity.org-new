@@ -52,9 +52,9 @@ const MyArticle = ({data}:any) => {
         uniqueKey: "to'lov",
         title:
             currentStep === 3 ? (
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-3">
                   <Link
-                      className="text-blue-500"
+                      className="border py-1 px-3 rounded border-blue-300  text-blue-500"
                       href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.org${location.pathname}`}
                   >
                     <img
@@ -64,7 +64,7 @@ const MyArticle = ({data}:any) => {
                     />
                   </Link>
                   <Link
-                      className="text-blue-500"
+                      className="text-green-700 border py-1.5 px-4 rounded border-blue-300"
                       href={`${data?.transaction.transactions_link.payme_link}`}
                   >
                     <img

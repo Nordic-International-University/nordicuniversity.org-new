@@ -1,17 +1,15 @@
 import React from "react";
-import Store, { AppDispatch } from "@/lib/store/Store";
-import { articleApi } from "@/lib/query/article.query";
 import HomePageCardClient from "@/app/components/home/homeCard/HomePageCardClient";
-import HomeNews from "@/app/components/home/homeNews/HomeNews";
 
-export const dynamic="force-dynamic"
+const getArticles = async () => {
+    const res = await fetch("https://journal2.nordicun.uz/article/necessary?articles=6&topArticles=2&lastArticles=8");
+    const data = await res.json();
+    return data;
+};
+
 const HomePageCard = async () => {
-  const store = Store;
-  const dispatch = store.dispatch as AppDispatch;
-  // @ts-ignore
-  const result = await dispatch(articleApi.endpoints.getPosts.initiate());
-  const data = result.data;
-  return (
+  const data = await getArticles();
+    return (
     <div>
       <HomePageCardClient
         articles={data?.articles || []}
