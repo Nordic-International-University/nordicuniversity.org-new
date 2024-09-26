@@ -55,7 +55,7 @@ const MyArticle = ({data}:any) => {
                 <div className="flex items-center gap-5">
                   <Link
                       className="text-blue-500"
-                      href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.uz${location.pathname}`}
+                      href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.org${location.pathname}`}
                   >
                     <img
                         className="w-20"
