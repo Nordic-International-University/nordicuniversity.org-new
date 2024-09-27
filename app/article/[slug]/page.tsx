@@ -2,7 +2,7 @@ import React from 'react';
 import ClientPage from '@/app/article/[slug]/ClientPage';
 
 export async function generateMetadata({params}: { params: { slug: string } }) {
-    const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`);
 
     if (!response.ok) {
         return {
@@ -13,8 +13,8 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
     }
 
     const data = await response.json();
-    const fileUrl = data.file?.file_path ? `https://journal2.nordicun.uz${data?.file?.file_path}` : '';
-    const imageUrl = data.image?.file_path ? `https://journal2.nordicun.uz${data?.image?.file_path}` : 'https://default-image-path.png';
+    const fileUrl = data.file?.file_path ? `${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}` : '';
+    const imageUrl = data.image?.file_path ? `${process.env.NEXT_PUBLIC_API_URL}${data?.image?.file_path}` : 'https://default-image-path.png';
 
     return {
         title: data.title || "Default Title",
@@ -23,7 +23,7 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
         openGraph: {
             title: data.title || "Default Title",
             description: data.description || "Default Description",
-            url: `https://journal2.nordicun.uz/article/user/slug/${params.slug}`,
+            url: `${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`,
             type: 'article',
             images: [
                 {
@@ -41,7 +41,7 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
             images: [imageUrl],
         },
         alternates: {
-            canonical: `https://journal2.nordicun.uz/article/user/slug/${params.slug}`,
+            canonical: `${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`,
         },
         other: {
             'citation_title': data.title || "Default Title",
@@ -58,7 +58,7 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
             'DC.date': data.publish_date?.split("T")[0] || "Unknown Date",
             'DC.type': "Text",
             'DC.format': "text/html",
-            'DC.identifier': `https://journal2.nordicun.uz/article/user/slug/${params.slug}`,
+            'DC.identifier': `${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`,
             'DC.language': "uz",
             'DC.coverage': "Global",
             'DC.rights': "Public Domain",
@@ -68,7 +68,7 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
 
 
 const ArticleDetail = async ({params}: { params: { slug: string } }) => {
-    const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`);
     const data = await response.json();
 
     return <ClientPage data={data}/>;

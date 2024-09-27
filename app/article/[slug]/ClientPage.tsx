@@ -25,7 +25,7 @@ const Articles = ({data}: { data: any }) => {
     const downloadFile = async (filePath: any, isFullLink: any) => {
         try {
             const response = await fetch(
-                isFullLink ? filePath : `https://journal2.nordicun.uz${filePath}`,
+                isFullLink ? filePath : `${process.env.NEXT_PUBLIC_API_URL}${filePath}`,
             );
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
@@ -81,7 +81,7 @@ const Articles = ({data}: { data: any }) => {
                 >
                     <div style={{height: "750px"}}>
                         <Viewer
-                            fileUrl={`https://journal2.nordicun.uz${data?.file?.file_path}`}
+                            fileUrl={`${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}`}
                             plugins={[defaultLayoutPluginInstance]}
                         />
                     </div>
@@ -98,7 +98,7 @@ const Articles = ({data}: { data: any }) => {
                 >
                     <div style={{height: "750px"}}>
                         <Viewer
-                            fileUrl={`https://journal2.nordicun.uz${data?.plagiarist_file?.file_path}`}
+                            fileUrl={`${process.env.NEXT_PUBLIC_API_URL}${data?.plagiarist_file?.file_path}`}
                             plugins={[defaultLayoutPluginInstance]}
                         />
                     </div>
@@ -173,7 +173,7 @@ const Articles = ({data}: { data: any }) => {
                                         alt="Maqola muqovasi"
                                         layout="responsive"
                                         priority={true}
-                                        src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${data?.image?.file_path}`}
                                         placeholder="empty"
                                     />
                                 </div>
@@ -300,7 +300,7 @@ const Articles = ({data}: { data: any }) => {
                                         alt="Maqola muqovasi"
                                         layout="responsive"
                                         priority={true}
-                                        src={`https://journal2.nordicun.uz${data?.image?.file_path}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${data?.image?.file_path}`}
                                         placeholder="empty"
                                     />
                                 </div>
@@ -366,13 +366,13 @@ const Articles = ({data}: { data: any }) => {
                                                 height={300}
                                                 alt="nashr"
                                                 className="py-2"
-                                                src={`https://journal2.nordicun.uz${data?.volume?.image?.file_path}`}
+                                                src={`${process.env.NEXT_PUBLIC_API_URL}${data?.volume?.image?.file_path}`}
                                             />
                                         </div>
                                     </div>
                                     <Link
                                         target="_blank"
-                                        href={`https://journal2.nordicun.uz${data?.volume?.source?.file_path}`}
+                                        href={`${process.env.NEXT_PUBLIC_API_URL}${data?.volume?.source?.file_path}`}
                                     >
                                         <Button
                                             className="w-full rounded-none py-5 font-bold uppercase rounded-bl-md rounded-br-md"

@@ -2,13 +2,13 @@ import React from "react";
 import PublicationsClient from "./PublicationsClient";
 
 async function getVolume() {
-  const res = await fetch("https://journal2.nordicun.uz/volume");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/volume`);
   const data = await res.json();
   return data;
 }
 
 async function fetchCategoriesWithArticles() {
-  const resCategories = await fetch("https://journal2.nordicun.uz/category");
+  const resCategories = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category`);
   if (!resCategories.ok) {
     throw new Error("Failed to fetch categories");
   }
@@ -17,7 +17,7 @@ async function fetchCategoriesWithArticles() {
   const categoriesWithArticles = await Promise.all(
       categories?.map(async (category: any) => {
         const resArticles = await fetch(
-            `https://journal2.nordicun.uz/article/user/category/${category.id}`
+            `${process.env.NEXT_PUBLIC_API_URL}/article/user/category/${category.id}`
         );
         const articles = await resArticles.json();
         return {

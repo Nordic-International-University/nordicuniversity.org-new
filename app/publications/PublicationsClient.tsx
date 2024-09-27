@@ -26,7 +26,7 @@ const PublicationsClient = ({ data, volume }: { data: any; volume: any }) => {
                                     className="w-[900px] max-lg:w-full max-sm:justify-center flex max-sm:flex-col items-center  shadow-[0.6em_0.6em_1.2em_#d2dce9,-0.5em_-0.5em_1em_#fff] mb-9 mt-6 rounded-3xl "
                                 >
                                     <Image
-                                        src={`https://journal2.nordicun.uz${item?.image?.file_path}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${item?.image?.file_path}`}
                                         width={540}
                                         height={540}
                                         alt="volume"
@@ -44,7 +44,7 @@ const PublicationsClient = ({ data, volume }: { data: any; volume: any }) => {
                                             {moment(item.createdAt).utc().format("YYYY-MM-DD")}
                                         </li>
                                         <Link
-                                            href={`https://journal2.nordicun.uz${item?.source?.file_path}`}
+                                            href={`${process.env.NEXT_PUBLIC_API_URL}${item?.source?.file_path}`}
                                             target="_blank"
                                         >
                                             <button className="bg-[#0d6efd] px-4 rounded-3xl text-white">
@@ -65,7 +65,7 @@ const PublicationsClient = ({ data, volume }: { data: any; volume: any }) => {
                                     className="flex gap-3 mb-1 border-b border-b-1 border-solid border-gray-400 pb-2 mt-6"
                                 >
                                     <Image
-                                        src={`https://journal2.nordicun.uz${category?.file?.file_path}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${category?.file?.file_path}`}
                                         alt="img"
                                         width={70}
                                         height={70}

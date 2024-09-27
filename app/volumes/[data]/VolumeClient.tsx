@@ -143,7 +143,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({data}) => {
                         >
 
                             <Image
-                                src={`https://journal2.nordicun.uz${item?.file?.file_path}`}
+                                src={`${process.env.NEXT_PUBLIC_API_URL}${item?.file?.file_path}`}
                                 alt="img"
                                 width={650}
                                 height={500}

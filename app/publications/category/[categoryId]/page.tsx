@@ -8,7 +8,7 @@ const PublicationPage = async ({
     params: { categoryId: string };
 }) => {
     const res = await fetch(
-        `https://journal2.nordicun.uz/article/user/category/${params.categoryId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/article/user/category/${params.categoryId}`,
         {
             cache: "no-cache",
         }

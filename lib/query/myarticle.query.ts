@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 export const mySlice = createApi({
     reducerPath: 'myArticle',
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://journal2.nordicun.uz",
+        baseUrl: process.env.NEXT_PUBLIC_API_URL,
     }),
     endpoints: (builder) => ({
         getArticleBySlug: builder.query({

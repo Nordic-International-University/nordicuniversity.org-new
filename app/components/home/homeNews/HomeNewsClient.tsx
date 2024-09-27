@@ -12,7 +12,7 @@ const HomeNewsClient = ({news}: homeNewsInterface) => {
                     <SwiperSlide key={newsItem.id}>
                         <div className="flex max-sm:flex-col w-full max-sm:mt-3">
                             <Image
-                                src={`https://journal2.nordicun.uz${newsItem?.source?.file_path}`}
+                                src={`${process.env.NEXT_PUBLIC_API_URL}${newsItem?.source?.file_path}`}
                                 alt="img"
                                 width={256}
                                 height={200}

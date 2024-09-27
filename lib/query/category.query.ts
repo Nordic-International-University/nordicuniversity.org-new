@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const categoryApi = createApi({
     reducerPath: "categoryApi",
-    baseQuery: fetchBaseQuery({baseUrl: "https://journal2.nordicun.uz"}), // Ensure this environment variable is set
+    baseQuery: fetchBaseQuery({baseUrl: process.env.NEXT_PUBLIC_API_URL}),
     endpoints: (build) => ({
         getAllCategory: build.query<categoryType[], void>({
             query: () => "/category",

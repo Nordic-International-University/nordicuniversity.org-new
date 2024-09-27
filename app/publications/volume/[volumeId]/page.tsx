@@ -3,7 +3,7 @@ import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import {redirect} from "next/navigation";
 
 export async function generateStaticParams() {
-    const res = await fetch("https://journal2.nordicun.uz/category", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category`, {
         cache: "no-store",
     });
 
@@ -24,7 +24,7 @@ const PublicationPage = async ({
     params: { volumeId: string };
 }) => {
     const res = await fetch(
-        `https://journal2.nordicun.uz/article/user/volume/${params.volumeId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
         {
             next: {revalidate: 1000},
         },

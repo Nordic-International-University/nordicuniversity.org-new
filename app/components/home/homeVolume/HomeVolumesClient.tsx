@@ -53,7 +53,7 @@ const HomeVolumesClient = ({volume}: any) => {
                                     href={`/publications/volume/${item.id}`}
                                 >
                                     <Image
-                                        src={`${"https://journal2.nordicun.uz"}${item?.image?.file_path}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${item?.image?.file_path}`}
                                         width={1000}
                                         height={300}
                                         alt="volume"

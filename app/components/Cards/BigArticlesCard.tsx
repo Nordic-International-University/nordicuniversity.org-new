@@ -36,7 +36,7 @@ const BigArticlesCard = ({
             >
                 <div className="relative w-full h-[220px]">
                     <Image
-                        src={`https://journal2.nordicun.uz${imageUrl}`}
+                        src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
                         alt={title}
                         className={`w-full object-cover rounded-md  h-full transition-all duration-1000 ${
                             isLoaded ? 'blur-0' : 'blur-md'

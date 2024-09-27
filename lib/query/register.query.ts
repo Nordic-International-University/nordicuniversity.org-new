@@ -3,15 +3,15 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const registerApi = createApi({
     reducerPath: "registerApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://journal2.nordicun.uz", // Базовый URL вашего API
+        baseUrl: process.env.NEXT_PUBLIC_API_URL,
     }),
     endpoints: (builder) => ({
         registerUser: builder.mutation({
             query: (userData) => ({
-                url: "/author/create", // URL для регистрации пользователя
+                url: "/author/create",
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json", // Устанавливаем тип контента
+                    "Content-Type": "application/json",
                 },
                 body: {
                     phone_number: `${userData.phone_number}`,

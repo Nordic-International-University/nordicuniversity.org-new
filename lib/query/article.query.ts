@@ -3,7 +3,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const articleApi = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://journal2.nordicun.uz",
+        baseUrl: process.env.NEXT_PUBLIC_API_URL,
         cache: 'no-store'
     }),
     endpoints: (builder) => ({

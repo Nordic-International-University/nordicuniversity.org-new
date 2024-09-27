@@ -7,7 +7,7 @@ module.exports = {
     priority: 0.7,
     sitemapSize: 7000,
     additionalPaths: async (config) => {
-        const response = await fetch('https://journal2.nordicun.uz/article');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article`);
         const articles = await response.json();
 
         return articles?.map((article) => ({

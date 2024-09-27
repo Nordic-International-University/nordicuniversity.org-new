@@ -87,7 +87,7 @@ const CreateArticle = () => {
         const props: UploadProps = {
             name: "file",
             multiple: false,
-            action: "https://journal2.nordicun.uz/file/uploadFile",
+            action: `${process.env.NEXT_PUBLIC_API_URL}/file/uploadFile`,
             headers: {
                 Authorization: Cookies.get("access_token") as string,
             },
@@ -155,7 +155,7 @@ const CreateArticle = () => {
                 setSubmitting(true);
                 try {
                     const data = await axios.post(
-                        `https://journal2.nordicun.uz/article/user/create`,
+                        `${process.env.NEXT_PUBLIC_API_URL}/article/user/create`,
                         {
                             ...values,
                         },

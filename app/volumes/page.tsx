@@ -2,7 +2,7 @@ import React from 'react';
 import VolumeClient from "@/app/volumes/[data]/VolumeClient";
 
 async function getVolume() {
-    const res = await fetch("https://journal2.nordicun.uz/category");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category`);
     const data = await res.json();
 
     return data;

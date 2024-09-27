@@ -67,12 +67,6 @@ export default function TableComponent({data}: ProfileClientProps) {
         },
     ];
 
-    // <th className="py-3 px-6 text-left">Sarlavha</th>
-    // <th className="py-3 px-6 text-left">Holati</th>
-    // <th className="py-3 px-6 text-left">Kategoriyasi</th>
-    // <th className="py-3 px-6 text-left">Yaratilgan vaqt</th>
-    // <th className="py-3 px-6 text-left">O'qishlar soni</th>
-
     const articleColumn = [
         {
             title: 'Sarlavha',
@@ -162,6 +156,7 @@ export default function TableComponent({data}: ProfileClientProps) {
                         pagination={false}
                         onRow={(record) => {
                             return {
+                                className:"cursor-pointer",
                                 onClick: () => handleRowClick(record.slug)
                             }
                         }}

@@ -4,7 +4,7 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
 const getAllArticles = async () => {
     try {
-        const response = await fetch(`https://journal2.nordicun.uz/article`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article`, {
             cache: "force-cache",
         });
         if (!response.ok) {
