@@ -1,11 +1,11 @@
 "use client";
 
-import { Oswald } from "next/font/google";
-import { Inter } from "next/font/google";
-import React, { useEffect, useRef } from "react";
+import {Oswald} from "next/font/google";
+import {Inter} from "next/font/google";
+import React, {useEffect, useRef} from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 import Link from "next/link";
 
@@ -26,7 +26,7 @@ interface VolumeClientProps {
     data: any[];
 }
 
-const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
+const VolumeClient: React.FC<VolumeClientProps> = ({data}) => {
     const titleRefs = useRef<HTMLParagraphElement[]>([]);
     const imageRefs = useRef<HTMLDivElement[]>([]);
 
@@ -37,7 +37,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
             titleRefs.current.forEach((el, index) => {
                 gsap.fromTo(
                     el,
-                    { x: index % 2 === 0 ? -200 : 200, opacity: 0 },
+                    {x: index % 2 === 0 ? -200 : 200, opacity: 0},
                     {
                         x: 0,
                         opacity: 1,
@@ -56,7 +56,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
             imageRefs.current.forEach((el, index) => {
                 gsap.fromTo(
                     el,
-                    { x: index % 2 === 0 ? 200 : -200, opacity: 0 },
+                    {x: index % 2 === 0 ? 200 : -200, opacity: 0},
                     {
                         x: 0,
                         opacity: 1,
@@ -75,7 +75,6 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
     }, [data]);
 
 
-
     return (
         <div className="container">
             <div className="grid max-sm:grid-rows-1 max-sm:mb-5 mt-10">
@@ -83,7 +82,7 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                     <RoundedSvg title="Asosiy Yo'nalishlar"/>
                 </div>
 
-                {data.map((item, index) => (
+                {data?.map((item, index) => (
                     <Link
                         href={`/publications/category/${item?.id}`}
                         className={`flex justify-between w-full max-sm:flex-col-reverse ${index % 2 === 0 ? "" : "flex-row-reverse "}`}
@@ -96,12 +95,11 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                             className="flex flex-col w-full items-center justify-center lg:w-1/2 max-lg:w-full group sm:overflow-hidden relative"
                         >
 
-                                <p
-                                    className={`absolute group-hover:opacity-0 group-hover:-translate-y-[600px] max-sm:hover:translate-y-0 transition-all duration-500 ease-out text-[44px] max-lg:text-[22px] tracking-[-0.04em]; ${oswald400.className}`}
-                                >
-                                    {item.name}
-                                </p>
-
+                            <p
+                                className={`absolute group-hover:opacity-0 group-hover:-translate-y-[600px] max-sm:hover:translate-y-0 transition-all duration-500 ease-out text-[44px] max-lg:text-[22px] tracking-[-0.04em]; ${oswald400.className}`}
+                            >
+                                {item.name}
+                            </p>
 
 
                             <div className="max-lg:h-[393px] max-sm:w-full">
@@ -126,12 +124,12 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                                         subIndex: React.Key | null | undefined,
                                     ) => (
                                         <div key={subIndex}>
-                                                <p
-                                                    className={`leading-7 ${oswald200.className} hover-line text-[15px] font-light opacity-0 transform group-hover:my-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out after:duration-700 after:ease-out `}
-                                                >
-                                                    {sub.name}
-                                                    <span className="line"></span>
-                                                </p>
+                                            <p
+                                                className={`leading-7 ${oswald200.className} hover-line text-[15px] font-light opacity-0 transform group-hover:my-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out after:duration-700 after:ease-out `}
+                                            >
+                                                {sub.name}
+                                                <span className="line"></span>
+                                            </p>
                                         </div>
                                     ),
                                 )}
@@ -144,13 +142,13 @@ const VolumeClient: React.FC<VolumeClientProps> = ({ data }) => {
                             className="lg:w-1/2 max-lg:w-full"
                         >
 
-                                <Image
-                                    src={`https://journal2.nordicun.uz${item?.file?.file_path}`}
-                                    alt="img"
-                                    width={650}
-                                    height={500}
-                                    className="h-auto w-full"
-                                />
+                            <Image
+                                src={`https://journal2.nordicun.uz${item?.file?.file_path}`}
+                                alt="img"
+                                width={650}
+                                height={500}
+                                className="h-auto w-full"
+                            />
 
 
                         </div>

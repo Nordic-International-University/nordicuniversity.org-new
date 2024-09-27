@@ -1,3 +1,3 @@
 export interface socialMedia {
-  ilovalar: string;
+    ilovalar: string;
 }

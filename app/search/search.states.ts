@@ -1,23 +1,23 @@
 export const initialState = {
-  mainFilter: {
-    title: "",
-    volume: [],
-    subCategory: [],
-    Category: [],
-    author: [],
-  },
+    mainFilter: {
+        title: "",
+        volume: [],
+        subCategory: [],
+        Category: [],
+        author: [],
+    },
 
-  extraFilter: {
-    existDoi: false,
-  },
+    extraFilter: {
+        existDoi: false,
+    },
 
-  dateFilter: {
-    start: "",
-    end: "",
-  },
+    dateFilter: {
+        start: "",
+        end: "",
+    },
 
-  sort: {
-    createdAt: "ASC",
-    viewsCount: "ASC",
-  },
+    sort: {
+        createdAt: "ASC",
+        viewsCount: "ASC",
+    },
 };

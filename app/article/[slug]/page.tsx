@@ -1,7 +1,7 @@
 import React from 'react';
 import ClientPage from '@/app/article/[slug]/ClientPage';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({params}: { params: { slug: string } }) {
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
 
     if (!response.ok) {
@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
 
     const data = await response.json();
-    const fileUrl = data.file?.file_path ? `https://journal2.nordicun.uz${data.file.file_path}` : '';
-    const imageUrl = data.image?.file_path ? `https://journal2.nordicun.uz${data.image.file_path}` : 'https://default-image-path.png';
+    const fileUrl = data.file?.file_path ? `https://journal2.nordicun.uz${data?.file?.file_path}` : '';
+    const imageUrl = data.image?.file_path ? `https://journal2.nordicun.uz${data?.image?.file_path}` : 'https://default-image-path.png';
 
     return {
         title: data.title || "Default Title",
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             'DC.subject': data.keyword || "Research, Article",
             'DC.description': data.abstract || data.description || "No description",
             'DC.publisher': "Nordic University",
-            'DC.contributor': data.coAuthors?.map((author:any) => author.full_name).join(", ") || "No coAuthors",
+            'DC.contributor': data.coAuthors?.map((author: any) => author.full_name).join(", ") || "No coAuthors",
             'DC.date': data.publish_date?.split("T")[0] || "Unknown Date",
             'DC.type': "Text",
             'DC.format': "text/html",
@@ -67,11 +67,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 
-const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
+const ArticleDetail = async ({params}: { params: { slug: string } }) => {
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`);
-    const data = await response.json(); 
+    const data = await response.json();
 
-    return <ClientPage data={data} />;
+    return <ClientPage data={data}/>;
 };
 
 export default ArticleDetail;

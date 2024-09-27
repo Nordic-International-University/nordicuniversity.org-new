@@ -1,26 +1,26 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const articleApi = createApi({
-  reducerPath: "api",
-  baseQuery: fetchBaseQuery({
-    baseUrl: "https://journal2.nordicun.uz",
-    cache:'no-store'
-  }),
-  endpoints: (builder) => ({
-    getPosts: builder.query({
-      query: () => "/article/necessary?articles=6&topArticles=2&lastArticles=8",
+    reducerPath: "api",
+    baseQuery: fetchBaseQuery({
+        baseUrl: "https://journal2.nordicun.uz",
+        cache: 'no-store'
     }),
-    getBySlug: builder.query({
-      query: (slug) => `/article/user/slug/${slug}`,
+    endpoints: (builder) => ({
+        getPosts: builder.query({
+            query: () => "/article/necessary?articles=6&topArticles=2&lastArticles=8",
+        }),
+        getBySlug: builder.query({
+            query: (slug) => `/article/user/slug/${slug}`,
+        }),
+        getByCategory: builder.query({
+            query: (id) => `/article/user/category/${id}`,
+        }),
+        getSubcategoriesByCategory: builder.query({
+            query: (categoryId) => `/subcategory/sub/${categoryId}`,
+        }),
     }),
-    getByCategory: builder.query({
-      query: (id) => `/article/user/category/${id}`,
-    }),
-    getSubcategoriesByCategory: builder.query({
-      query: (categoryId) => `/subcategory/sub/${categoryId}`,
-    }),
-  }),
 });
 
-export const { useGetPostsQuery, useGetBySlugQuery, useGetByCategoryQuery ,useGetSubcategoriesByCategoryQuery} =
-  articleApi;
+export const {useGetPostsQuery, useGetBySlugQuery, useGetByCategoryQuery, useGetSubcategoriesByCategoryQuery} =
+    articleApi;

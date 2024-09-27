@@ -1,5 +1,5 @@
 // src/app/store/apiSlice.js
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import Cookies from 'js-cookie';
 
 export const mySlice = createApi({
@@ -16,7 +16,7 @@ export const mySlice = createApi({
                 url: '/author/profile',
                 method: 'GET',
                 headers: {
-                    Authorization:token
+                    Authorization: token
                 }
 
             })
@@ -24,4 +24,4 @@ export const mySlice = createApi({
     }),
 });
 
-export const { useGetArticleBySlugQuery, useGetAuthorProfileQuery } = mySlice;
+export const {useGetArticleBySlugQuery, useGetAuthorProfileQuery} = mySlice;

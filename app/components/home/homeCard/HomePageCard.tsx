@@ -8,16 +8,16 @@ const getArticles = async () => {
 };
 
 const HomePageCard = async () => {
-  const data = await getArticles();
+    const data = await getArticles();
     return (
-    <div>
-      <HomePageCardClient
-        articles={data?.articles || []}
-        topArticles={data?.topArticles || []}
-        lastArticles={data?.lastArticles || []}
-      />
-    </div>
-  );
+        <div>
+            <HomePageCardClient
+                articles={data?.articles || []}
+                topArticles={data?.topArticles || []}
+                lastArticles={data?.lastArticles || []}
+            />
+        </div>
+    );
 };
 
 export default HomePageCard;

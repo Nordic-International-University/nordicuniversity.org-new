@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const registerApi = createApi({
     reducerPath: "registerApi",
@@ -41,7 +41,7 @@ export const registerApi = createApi({
 });
 
 // Экспортируем хуки для использования мутации в компонентах
-export const { useRegisterUserMutation,useLoginUserMutation, } = registerApi;
+export const {useRegisterUserMutation, useLoginUserMutation,} = registerApi;
 
 
 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://journal.nordicuniversity.org
+Host: https://newjournal-next-js.vercel.app
 
 # Sitemaps
-Sitemap: https://journal.nordicuniversity.org/sitemap.xml
+Sitemap: https://newjournal-next-js.vercel.app/sitemap.xml

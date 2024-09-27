@@ -4,7 +4,7 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
 const getAllArticles = async () => {
     try {
-        const response = await fetch(`${process.env.BASE_URL}/article`, {
+        const response = await fetch(`https://journal2.nordicun.uz/article`, {
             cache: "force-cache",
         });
         if (!response.ok) {
@@ -26,7 +26,7 @@ const Page = async () => {
         return (
             <section className="container">
                 <div className="mt-4 mb-4">
-                    <RoundedSvg title="Maqolalar" />
+                    <RoundedSvg title="Maqolalar"/>
                 </div>
                 <p>Maqolalar topilmadi.</p>
             </section>
@@ -36,19 +36,19 @@ const Page = async () => {
     return (
         <section className="container">
             <div className="mt-4 mb-4">
-                <RoundedSvg title="Maqolalar" />
+                <RoundedSvg title="Maqolalar"/>
             </div>
             <div className="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4">
-                {articles.map((article: any, index: number) => (
+                {articles?.map((article: any, index: number) => (
                     <BigArticlesCard
                         key={index}
-                        title={article.title}
-                        date={article.publishedDate}
-                        category={article.category.name}
-                        description={article.description}
-                        slug={article.slug}
-                        author={article.author.full_name}
-                        imageUrl={article.image?.file_path}
+                        title={article?.title}
+                        date={article?.publishedDate}
+                        category={article?.category.name}
+                        description={article?.description}
+                        slug={article?.slug}
+                        author={article?.author?.full_name}
+                        imageUrl={article?.image?.file_path || ""}
                     />
                 ))}
             </div>

@@ -1,5 +1,5 @@
 export interface errorInterface {
-    data:{
+    data: {
         message: string;
     },
     status: number;

@@ -1,12 +1,12 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import "swiper/css";
 
-const HomeVolumesClient = ({ volume }: any) => {
+const HomeVolumesClient = ({volume}: any) => {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -53,11 +53,11 @@ const HomeVolumesClient = ({ volume }: any) => {
                                     href={`/publications/volume/${item.id}`}
                                 >
                                     <Image
-                                        src={`${"https://journal2.nordicun.uz"}${item.image.file_path}`}
+                                        src={`${"https://journal2.nordicun.uz"}${item?.image?.file_path}`}
                                         width={1000}
                                         height={300}
                                         alt="volume"
-                                        loading="lazy" 
+                                        loading="lazy"
                                     />
                                 </Link>
                             </SwiperSlide>

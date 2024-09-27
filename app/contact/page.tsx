@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
+import {FaPhone} from "react-icons/fa6";
+import {MdEmail} from "react-icons/md";
+import {FaUser} from "react-icons/fa";
+import {FaLocationDot} from "react-icons/fa6";
+import {FaFacebook, FaInstagram, FaTelegram} from "react-icons/fa";
 import image from "@/public/Ellipse 793.png";
 import image2 from "@/public/Ellipse 794.png";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const Contact = () => {
         <section id="contact" className="">
             <article className="container">
                 <h2 className="text-[32px] max-sm:text-[24px] font-bold leading-[53px] tracking-[-1px] text-[#042552]">
-                   <RoundedSvg title="Biz bilan bog'lanish"/>
+                    <RoundedSvg title="Biz bilan bog'lanish"/>
                 </h2>
                 <div className="mt-3">
                     <div className="flex max-xl:flex-col w-full gap-3  rounded-md p-[10px] items-start justify-center">
@@ -71,24 +71,26 @@ const Contact = () => {
                                         href="https://www.youtube.com/@nordic_university"
                                         target="_blank"
                                     >
-                                        <FaInstagram className="text-white text-xl group-hover:text-black" />
+                                        <FaInstagram className="text-white text-xl group-hover:text-black"/>
                                     </a>
                                 </div>
-                                <div className="bg-primary flex items-center hover:bg-white transition-all group justify-center w-[35px] h-[35px] rounded-full">
+                                <div
+                                    className="bg-primary flex items-center hover:bg-white transition-all group justify-center w-[35px] h-[35px] rounded-full">
                                     <a href="https://t.me/nordic_edu" target="_blank">
-                                        <FaTelegram className="text-white text-xl group-hover:text-black" />
+                                        <FaTelegram className="text-white text-xl group-hover:text-black"/>
                                     </a>
                                 </div>
-                                <div className="bg-primary flex items-center hover:bg-white transition-all group justify-center w-[35px] h-[35px] rounded-full">
+                                <div
+                                    className="bg-primary flex items-center hover:bg-white transition-all group justify-center w-[35px] h-[35px] rounded-full">
                                     <a
                                         href="https://www.facebook.com/nordicuniversity.edu/?ref=pages_you_manage"
                                         target="_blank"
                                     >
-                                        <FaFacebook className="text-white text-xl group-hover:text-black" />
+                                        <FaFacebook className="text-white text-xl group-hover:text-black"/>
                                     </a>
                                 </div>
                             </div>
-                            <Image src={image} className="absolute bottom-0 right-0" alt="" />
+                            <Image src={image} className="absolute bottom-0 right-0" alt=""/>
                             <Image
                                 src={image2}
                                 className="absolute bottom-20 right-16"
@@ -100,13 +102,14 @@ const Contact = () => {
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23977.31661227081!2d69.21817961753031!3d41.305283213841385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723535500885!5m2!1sru!2s"
                                     width="600"
-                                    style={{ border: "none" }}
+                                    style={{border: "none"}}
                                     allowFullScreen={false}
                                     loading="lazy"
                                     className="w-full h-full"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
-                                <div className="absolute max-sm:hidden inset-0 group-hover:left-[100%] bg-black bg-opacity-40 flex items-center justify-center text-white opacity-100 transition-all duration-300">
+                                <div
+                                    className="absolute max-sm:hidden inset-0 group-hover:left-[100%] bg-black bg-opacity-40 flex items-center justify-center text-white opacity-100 transition-all duration-300">
                                     <h2 className="text-xl -tracking-tighter group-hover:hidden">
                                         {" "}
                                         Chilonzor filiali{" "}

@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import { Tabs, TabsProps,Table } from "antd";
+import {Tabs, TabsProps, Table} from "antd";
 import dayjs from "dayjs";
 import {useRouter} from "next/navigation";
+
 interface Article {
-  title: string;
-  slug:string;
-  status: string;
-  category: {
-    name: string;
-  };
-  createdAt: string;
-  viewsCount: number;
+    title: string;
+    slug: string;
+    status: string;
+    category: {
+        name: string;
+    };
+    createdAt: string;
+    viewsCount: number;
 }
 
 
@@ -26,9 +27,9 @@ export enum ArticleStatusEnum {
 }
 
 interface ProfileClientProps {
-  data?: {
-      Articles: Array<any>;
-  };
+    data?: {
+        Articles: Array<any>;
+    };
 }
 
 const getStatusText = (status: string) => {
@@ -50,7 +51,7 @@ const getStatusText = (status: string) => {
     }
 };
 
-export default function TableComponent({ data }: ProfileClientProps) {
+export default function TableComponent({data}: ProfileClientProps) {
     const router = useRouter();
 
     const columns = [
@@ -100,8 +101,8 @@ export default function TableComponent({ data }: ProfileClientProps) {
         },
     ];
 
-    const articleDataSource = data?.Articles?.map((item,index) => {
-        return  {
+    const articleDataSource = data?.Articles?.map((item, index) => {
+        return {
             key: '1',
             title: item?.title,
             status: getStatusText(item?.status),
@@ -144,7 +145,6 @@ export default function TableComponent({ data }: ProfileClientProps) {
     ];
 
 
-
     const handleRowClick = (slug: string) => {
         router.push(`/profile/${slug}`);
     };
@@ -162,7 +162,7 @@ export default function TableComponent({ data }: ProfileClientProps) {
                         pagination={false}
                         onRow={(record) => {
                             return {
-                                onClick:() => handleRowClick(record.slug)
+                                onClick: () => handleRowClick(record.slug)
                             }
                         }}
                         rowKey="key"

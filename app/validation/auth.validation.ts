@@ -23,4 +23,4 @@ const validationSchema = Yup.object().shape({
         .required('Ilmiy daraja majburiy'),
 });
 
-export { validationSchema };
+export {validationSchema};

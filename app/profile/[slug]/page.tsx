@@ -2,10 +2,10 @@ import React from 'react';
 import ClientPage from '@/app/profile/[slug]/ClientPage';
 import {cookies} from "next/headers";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({params}: { params: { slug: string } }) {
     const token = cookies().get('access_token')?.value;
 
-    const headers: HeadersInit = token ? { "Authorization": `${token}` } : {};
+    const headers: HeadersInit = token ? {"Authorization": `${token}`} : {};
 
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`, {
         headers
@@ -56,9 +56,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 
-const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
+const ArticleDetail = async ({params}: { params: { slug: string } }) => {
     const token = cookies().get('access_token')?.value;
-    const headers: HeadersInit = token ? { "Authorization": `${token}` } : {};
+    const headers: HeadersInit = token ? {"Authorization": `${token}`} : {};
 
     const response = await fetch(`https://journal2.nordicun.uz/article/user/slug/${params.slug}`, {
         headers
@@ -66,6 +66,6 @@ const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
 
     const data = await response.json();
 
-    return <ClientPage data={data} />;
+    return <ClientPage data={data}/>;
 };
 export default ArticleDetail;

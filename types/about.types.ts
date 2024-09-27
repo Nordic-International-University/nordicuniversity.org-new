@@ -1,17 +1,17 @@
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 
 export interface accordionItemType {
-  key: string;
-  label: string;
-  children: ReactNode;
+    key: string;
+    label: string;
+    children: ReactNode;
 }
 
 export interface accordionProps {
-  item: Array<accordionItemType>;
+    item: Array<accordionItemType>;
 }
 
 export interface aboutSliderProps {
-  image: any;
-  name: string;
-  description: string;
+    image: any;
+    name: string;
+    description: string;
 }

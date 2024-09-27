@@ -2,7 +2,7 @@
 
 import React from "react";
 import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
 
 const LogoutButton = () => {
     const router = useRouter();
