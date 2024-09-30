@@ -103,6 +103,7 @@ const Page: React.FC = () => {
 
         try {
             const data = await loginUser(loginDataRequest).unwrap();
+            console.log(data)
             if (data.message === 'USER_LOGGED_IN') {
                 Cookies.set('access_token', data.login_data.token);
                 Cookies.set('phone', loginData.phone_number);

@@ -52,7 +52,6 @@ const Page = () => {
   const [getAllFilteredArticles, { data, isLoading }] =
     useGetAllFilteredArticlesMutation();
 
-  console.log(data);
   const handleSortChange = (value: string) => {
     setFilterState((prevState: any) => {
       const newSort = {
