@@ -1,5 +1,9 @@
 # Nordic Universiteti Journal Sayti
 
+## Sayt havolasi
+
+[Saytga kirish](https://journal.nordicuniversity.org/)
+
 Bu Nordic Universiteti rasmiy journal sayti loyihasidir.
 
 ## Loyihaning Umumiy Tavsifi
