@@ -66,3 +66,23 @@ Loyihada quyidagi asosiy texnologiyalar va kutubxonalar ishlatilgan:
 
 Loyiha quyidagi Next.js tuzilmasiga ega bo'lib, maqolalar dinamik route orqali ko'rsatiladi:
 
+## Loyihani ishga tushirish
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+## Loyihani serverda ishga tushirish
+
+```bash
+#1
+npm run build
+#2
+npm run start
+```
