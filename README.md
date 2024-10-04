@@ -9,7 +9,7 @@ Nordic Universiteti Journal sayti jurnal maqolalari va ilmiy ishlarni taqdim etu
 ## Jamoa A’zolari
 
 - **Frontend dasturchilar**: `Sherzod Uralov va Abdulaziz Abdullayev`
-<hr/>
+
 - **Backend dasturchilar**: `Abdurauf To‘qliyev va Akbar Mansurov`
 
 ## Xususiyatlar
