@@ -38,7 +38,7 @@ Nordic Universiteti Journal sayti jurnal maqolalari va ilmiy ishlarni taqdim etu
 
 - **PDF Ko'rish**: Foydalanuvchilar PDF formatidagi hujjatlarni ko'rish va yuklab olishlari mumkin.
 - **Responsiv Dizayn**: Mobil va desktop foydalanuvchilar uchun moslashtirilgan dizayn.
-- **Shrift Optimallashtirish**: [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) orqali shriftnarni optimallashtirish.
+- **Shrift Optimallashtirish**: [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) orqali shriftlarni optimallashtirish.
 
 ## Texnologiyalar
 
