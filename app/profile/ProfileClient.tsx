@@ -4,6 +4,8 @@ import React from "react";
 import {Tabs, TabsProps, Table} from "antd";
 import dayjs from "dayjs";
 import {useRouter} from "next/navigation";
+import {AiOutlineLoading3Quarters} from "react-icons/ai";
+import {FcCancel, FcCheckmark, FcClock, FcDocument, FcMoneyTransfer} from "react-icons/fc";
 
 interface Article {
     title: string;
@@ -14,6 +16,19 @@ interface Article {
     };
     createdAt: string;
     viewsCount: number;
+}
+
+function getStatusText(status: ArticleStatusEnum): string {
+    const statusTexts: { [key in ArticleStatusEnum]: string } = {
+        [ArticleStatusEnum.NEW]: "Yangi maqola",
+        [ArticleStatusEnum.PLAGIARISM]: "Antiplagiat tekshirmoqda",
+        [ArticleStatusEnum.REVIEW]: "Ko'rib chiqilmoqda",
+        [ArticleStatusEnum.ACCEPT]: "Qabul qilindi",
+        [ArticleStatusEnum.REJECTED]: "Rad etildi",
+        [ArticleStatusEnum.PAYMENT]: "To'lov jarayoni",
+    };
+
+    return statusTexts[status] || "Noma'lum maqola holati";
 }
 
 
@@ -32,22 +47,43 @@ interface ProfileClientProps {
     };
 }
 
-const getStatusText = (status: string) => {
+const getStatusTextAndIcon = (status: string) => {
     switch (status) {
         case ArticleStatusEnum.NEW:
-            return "Yangi";
+            return {
+                text: "Yangi",
+                icon: <AiOutlineLoading3Quarters className="text-blue-500" />, // Loading spinner
+            };
         case ArticleStatusEnum.PLAGIARISM:
-            return "Plagiatga berilgan";
+            return {
+                text: "Antiplagiat tekshirmoqda",
+                icon: <FcDocument className="text-yellow-500" />, // Document with a yellow tint
+            };
         case ArticleStatusEnum.REVIEW:
-            return "Ko'rib chiqilmoqda";
+            return {
+                text: "Ko'rib chiqilmoqda",
+                icon: <FcClock className="text-orange-500" />, // Clock icon for review
+            };
         case ArticleStatusEnum.ACCEPT:
-            return "Qabul qilindi";
+            return {
+                text: "Qabul qilindi",
+                icon: <FcCheckmark className="text-green-500" />, // Checkmark icon for acceptance
+            };
         case ArticleStatusEnum.REJECTED:
-            return "Rad etildi";
+            return {
+                text: "Rad etildi",
+                icon: <FcCancel className="text-red-500" />, // Cancel icon for rejection
+            };
         case ArticleStatusEnum.PAYMENT:
-            return "To‘lov kutilmoqda";
+            return {
+                text: "To‘lov kutilmoqda",
+                icon: <FcMoneyTransfer className="text-purple-500" />, // Money transfer icon for payment
+            };
         default:
-            return status;
+            return {
+                text: status,
+                icon: null,
+            };
     }
 };
 

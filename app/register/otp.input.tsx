@@ -95,7 +95,7 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
   const [registerUser] = useRegisterUserMutation();
   const router = useRouter();
 
-  console.log(otp);
+  (otp);
 
   const handleVerifyOtp = async () => {
     if (otp.length !== 4) {
@@ -111,12 +111,12 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
           { id: id, code: Number(otp) }
       );
 
-      console.log(response)
+      (response)
 
       if (response?.data?.matched === true) {
         try {
           const registerResponse = await registerUser(formData).unwrap();
-          console.log(registerResponse);
+          (registerResponse);
           Cookies.set("access_token", registerResponse?.data?.token);
           Cookies.set("phone", formData.phone_number);
           router.push("/profile");
@@ -128,7 +128,7 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
         message.error("Tadiqlash kodi noto‘g‘ri!");
       }
     } catch (error) {
-      console.log(error);
+      (error);
       message.error("Server bilan muammo yuz berdi.");
     } finally {
       setIsVerifying(false);

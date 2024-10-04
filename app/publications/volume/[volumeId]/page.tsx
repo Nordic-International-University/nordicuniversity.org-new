@@ -53,7 +53,7 @@ const PublicationPage = async ({
                         category={article.category.name}
                         description={article.description}
                         author={article.author.full_name}
-                        imageUrl={article.image?.file_path}
+                        imageUrl={article.image?.file_path || ""}
                     />
                 ))}
             </div>

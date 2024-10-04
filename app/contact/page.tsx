@@ -13,13 +13,13 @@ import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
 const Contact = () => {
     return (
-        <section id="contact" className="">
+        <section id="contact">
             <article className="container">
                 <h2 className="text-[32px] max-sm:text-[24px] font-bold leading-[53px] tracking-[-1px] text-[#042552]">
                     <RoundedSvg title="Biz bilan bog'lanish"/>
                 </h2>
                 <div className="mt-3">
-                    <div className="flex max-xl:flex-col w-full gap-3  rounded-md p-[10px] items-start justify-center">
+                    <div className="flex max-xl:flex-col w-full gap-3 rounded-md p-[10px] items-start justify-center">
                         <div className="bg-[#46658B] w-full relative rounded-xl max-sm:pl-[20px] pl-[40px] py-12">
                             <h2 className="text-white max-sm:hidden block text-[28px] pb-[80px] font-semibold">
                                 Bog'lanish tafsilotlari
@@ -97,7 +97,7 @@ const Contact = () => {
                                 alt=""
                             />
                         </div>
-                        <div className="w-[1250px] h-screen max-xl:w-full max-xl:gap-4 max-md:flex-col max-xl:flex">
+                        <div className="w-[1250px] max-xl:w-full max-xl:gap-4 max-md:flex-col max-xl:flex">
                             <div className="relative h-[580px] group rounded-md w-full overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23977.31661227081!2d69.21817961753031!3d41.305283213841385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1723535500885!5m2!1sru!2s"

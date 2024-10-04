@@ -4,7 +4,7 @@ export const articleApi = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
         baseUrl: process.env.NEXT_PUBLIC_API_URL,
-        cache: 'no-store'
+        cache: 'no-cache'
     }),
     endpoints: (builder) => ({
         getPosts: builder.query({

@@ -55,12 +55,12 @@ const MyArticle = ({data}: any) => {
                         <div className="flex items-center gap-3">
                             <Link
                                 className="border py-1 px-3 rounded border-blue-300  text-blue-500"
-                                href={`${data?.transaction.transactions_link.click_link}&return_url=https://journal.nordicuniversity.org${location.pathname}`}
+                                href={`${data?.transaction.transactions_link.click_link}`}
                             >
                                 <img
                                     className="w-20"
                                     src="https://itmir.uz/image/catalog/MUSR/article-original.png"
-                                    alt=""
+                                    alt="To'lov linki"
                                 />
                             </Link>
                             <Link
@@ -70,7 +70,7 @@ const MyArticle = ({data}: any) => {
                                 <img
                                     className="w-20"
                                     src="https://cdn.payme.uz/logo/payme_color.svg?target=_blank"
-                                    alt=""
+                                    alt="To'lov linki"
                                 />
                             </Link>
                         </div>
@@ -109,28 +109,42 @@ const MyArticle = ({data}: any) => {
             },
         ];
 
-        if (data?.status === ArticleStatusEnum.ACCEPT) {
-            const step = initialSteps[initialSteps.length - 1];
-            step.title = "Qabul qilindi";
-            step.description = "Maqolangiz nashr qilindi!";
+        if (data?.status === ArticleStatusEnum.REJECTED) {
+            const rejectIndex = initialSteps.findIndex(
+                (item:any) => item.key === data?.last_status,
+            );
+
+            if (rejectIndex !== -1) {
+                initialSteps[rejectIndex] = {
+                    ...initialSteps[rejectIndex],
+                    description: (
+                        <>
+                            <span>Rad etilish sababi:</span> {data?.reason_for_rejection}
+                        </>
+                    ),
+                    title: initialSteps[rejectIndex].uniqueKey + " rad etildi",
+                    status: "error",
+                };
+                setReject(rejectIndex);
+            }
         }
 
         setStepsItems(initialSteps);
     }, [data]);
 
     const currentStep =
-        data?.status === ArticleStatusEnum.NEW
-            ? 0
-            : data?.status === ArticleStatusEnum.PLAGIARISM
-                ? 1
-                : data?.status === ArticleStatusEnum.REVIEW
-                    ? 2
-                    : data?.status === ArticleStatusEnum.PAYMENT
-                        ? 3
-                        : data?.status === ArticleStatusEnum.ACCEPT
-                            ? 5
-                            : data?.status === ArticleStatusEnum.REJECTED
-                                ? reject
+        data?.status === ArticleStatusEnum.REJECTED
+            ? reject
+            : data?.status === ArticleStatusEnum.NEW
+                ? 0
+                : data?.status === ArticleStatusEnum.PLAGIARISM
+                    ? 1
+                    : data?.status === ArticleStatusEnum.REVIEW
+                        ? 2
+                        : data?.status === ArticleStatusEnum.PAYMENT
+                            ? 3
+                            : data?.status === ArticleStatusEnum.ACCEPT
+                                ? 5
                                 : 0;
 
     const downloadFile = async (filePath: string, isFullLink: Boolean) => {
@@ -228,7 +242,7 @@ const MyArticle = ({data}: any) => {
         },
     ];
 
-    const certificates = data?.certificates?.map((item: any, index: number) => {
+  const certificates = data?.certificates?.map((item: any, index: number) => {
         return {
             key: index,
             label: `${item?.author?.full_name} muallifning sertifikati`,

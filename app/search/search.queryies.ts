@@ -35,7 +35,7 @@ const getSubCategoriesByCategoryId = async (id_list: any) => {
 };
 
 const getAllFilteredArticles = async ({data, page, limit}: any) => {
-    console.log(data)
+    (data)
     const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/article/multi-search?page=${page}&limit=${limit}`,
         data,

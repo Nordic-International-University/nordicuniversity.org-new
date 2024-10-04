@@ -131,7 +131,7 @@ const CreateArticle = () => {
         coAuthorIds: [],
     };
 
-    console.log(initialValues)
+    (initialValues)
 
     const validationSchema = Yup.object({
         title: Yup.string().required("Sarlavha majburiy."),
@@ -168,10 +168,10 @@ const CreateArticle = () => {
                     message.success("Maqola muvaffaqiyatli yaratildi!");
                     router.push('/profile');
                     resetForm();
-                    console.log(data)
+                    (data)
                 } catch (e: any) {
-                    console.log(values)
-                    console.log(e)
+                    (values)
+                    (e)
                     if (e.response?.status === 409) {
                         message.error("Bunday maqola allaqachon mavjud!");
                     }

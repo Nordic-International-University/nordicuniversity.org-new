@@ -27,7 +27,7 @@ const About = () => {
     // @ts-ignore
     const data = useGetPostsQuery();
     useEffect(() => {
-        console.log(data);
+        (data);
     }, []);
     const beadCampItem = [
         {
