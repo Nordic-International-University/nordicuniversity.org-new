@@ -3,7 +3,10 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://newjournal-next-js.vercel.app
+Host: https://journal2.nordicun.uz
 
 # Sitemaps
-Sitemap: https://newjournal-next-js.vercel.app/sitemap.xml
+Sitemap: https://journal2.nordicun.uz/sitemap.xml
+Sitemap: https://journal2.nordicun.uz/sitemap-article.xml
+Sitemap: https://journal2.nordicun.uz/sitemap-news.xml
+Sitemap: https://journal2.nordicun.uz/sitemap-static.xml

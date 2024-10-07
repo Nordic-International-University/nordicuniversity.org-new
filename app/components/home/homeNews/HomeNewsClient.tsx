@@ -3,6 +3,7 @@ import React from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {homeNewsInterface} from "@/types/homeNews.types";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomeNewsClient = ({news}: homeNewsInterface) => {
     return (
@@ -10,7 +11,7 @@ const HomeNewsClient = ({news}: homeNewsInterface) => {
             <Swiper slidesPerView={1}>
                 {news?.map((newsItem) => (
                     <SwiperSlide key={newsItem.id}>
-                        <div className="flex max-sm:flex-col w-full max-sm:mt-3">
+                        <Link href={`/news/${newsItem.slug}`} className="flex max-sm:flex-col w-full max-sm:mt-3">
                             <Image
                                 src={`${process.env.NEXT_PUBLIC_API_URL}${newsItem?.source?.file_path}`}
                                 alt="img"
@@ -30,7 +31,7 @@ const HomeNewsClient = ({news}: homeNewsInterface) => {
                                     {newsItem.body}
                                 </h3>
                             </div>
-                        </div>
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

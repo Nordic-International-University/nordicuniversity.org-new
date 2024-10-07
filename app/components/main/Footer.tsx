@@ -9,7 +9,7 @@ const Footer = () => {
     if (pathname === "/login" || pathname === "/register") return null;
 
     return (
-        <footer id="footer" className="bg-gray-400 mt-7 text-white py-5">
+        <footer id="footer" className="block max-xl:hidden bg-gray-400 mt-7 text-white py-5">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between max-md:flex-col">
                     <div className="flex items-center space-x-4">
@@ -19,21 +19,21 @@ const Footer = () => {
                     </div>
                     <div className="flex justify-center space-x-6 max-md:mt-6">
                         <a
-                            href="#"
+                            href="https://www.facebook.com/nordicuniversity.edu/?ref=pages_you_manage"
                             className="text-white hover:text-orange-400 transition-colors duration-200 flex items-center space-x-2"
                         >
                             <FaFacebook/>
                             <span className="font-semibold">Facebook</span>
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/nordic_edu/"
                             className="text-white hover:text-orange-400 transition-colors duration-200 flex items-center space-x-2"
                         >
                             <FaInstagram/>
                             <span className="font-semibold">Instagram</span>
                         </a>
                         <a
-                            href="#"
+                            href="https://t.me/journal_NIU"
                             className="text-white hover:text-orange-400 transition-colors duration-200 flex items-center space-x-2"
                         >
                             <FaTelegram/>

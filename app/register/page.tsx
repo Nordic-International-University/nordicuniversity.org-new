@@ -53,12 +53,13 @@ const Page: React.FC = () => {
 
   const handlePhoneNumberChange = (
       value: string | undefined,
-      setState: React.Dispatch<React.SetStateAction<FormData | LoginData>>
+      setState: React.Dispatch<React.SetStateAction<FormData | LoginData | any>>
   ) => {
     if (value) {
-          setState((prevState) => ({
+      console.log(value)
+          setState((prevState:any) => ({
             ...prevState,
-            phone_number: value,
+            phone_number: `+${value}`,
           }));
 
     }
@@ -118,6 +119,9 @@ const Page: React.FC = () => {
 
       message.success("Telefon raqamingizga sms yuborildi!");
     } catch (error: any) {
+      if (error.status == 429){
+        message.error(error.response.data.message);
+      }
       if (error.name === "ValidationError") {
         message.warning(error.errors[0]);
       }
@@ -127,6 +131,7 @@ const Page: React.FC = () => {
       if (error?.status === 409) {
         message.error(error.response.data.message);
       }
+      // if(error.)
     }
   };
 
@@ -137,13 +142,13 @@ const Page: React.FC = () => {
   const handleSignInSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const loginDataRequest = {
-      phone_number: "+" + loginData.phone_number,
+      phone_number: loginData.phone_number,
       password: loginData.password,
     };
 
     try {
       const data = await loginUser(loginDataRequest).unwrap();
-      data;
+
       if (data.message === "USER_LOGGED_IN") {
         Cookies.set("access_token", data.login_data.token);
         Cookies.set("phone", loginData.phone_number);
@@ -151,6 +156,7 @@ const Page: React.FC = () => {
         message.success("Muvaffaqiyatli kirildi!");
       }
     } catch (err: any) {
+      console.log(err);
       if (err?.status === 422) {
         message.error("Noto‘g‘ri telefon raqami yoki parol");
       } else if (err?.status === 500) {
@@ -245,13 +251,22 @@ const Page: React.FC = () => {
                 />
               </div>
               <div className="max-w-[380px] w-full mt-5">
-                <Input
-                  className="w-full py-3 rounded-3xl pl-3"
-                  type="text"
-                  name="phone_number"
-                  placeholder="Telefon Raqam"
-                  value={formData.phone_number}
-                  onChange={handleInputChange}
+                <PhoneInput
+                    containerClass="relative"
+                    buttonClass="border-none absolute top-[13px] left-1 bg-transparent h-5"
+                    inputClass="w-full custom-phone-input py-[22px] border-1 focus:outline-none rounded-3xl pl-10"
+                    placeholder="Telefon Raqam"
+                    value={loginData.phone_number}
+                    enableSearch={false}
+                    inputProps={{
+                      name: "text",
+                      required: true,
+                      autoFocus: true,
+                    }}
+                    disableDropdown={false}
+                    disableCountryCode={false}
+                    onChange={(value) => handlePhoneNumberChange(value.replace(/\s+/g, ''), setFormData)}
+                    country={"uz"}
                 />
               </div>
               <div className="max-w-[380px] w-full mt-5">

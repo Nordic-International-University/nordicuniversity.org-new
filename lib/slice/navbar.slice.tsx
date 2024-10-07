@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {navbarInitialState} from "@/types/navbar.types";
 import {navbarReducer} from "@/lib/reducer/navbar.reducer";
-import {ProfileFilled, SettingOutlined} from "@ant-design/icons";
+import {ProfileFilled} from "@ant-design/icons";
 import {GrArticle} from "react-icons/gr";
 import {BiLogOut} from "react-icons/bi";
 
@@ -21,15 +21,15 @@ const initialState: navbarInitialState = {
             icon: <ProfileFilled className="text-lg"/>,
         },
         {
-            key: '2',
-            label: 'chiqish',
-            icon: <BiLogOut className="text-lg"/>,
-        },
-        {
             key: '3',
             label: 'Maqola yuborish',
             icon: <GrArticle className="text-lg"/>,
         },
+        {
+            key: '2',
+            label: 'chiqish',
+            icon: <BiLogOut className="text-lg"/>,
+        }
     ],
     reFetch: false,
 };

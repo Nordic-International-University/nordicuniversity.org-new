@@ -30,6 +30,40 @@ async function fetchCategoriesWithArticles() {
   return categoriesWithArticles;
 }
 
+export const metadata = {
+    title: "Nashrlar | Ilmiy Maqolalar",
+    description: "Nashrlar sahifasida ilmiy maqolalarning barcha nashrlarini topishingiz mumkin. Har bir nashr o'z vaqtida chop etilgan va yuklab olish uchun taqdim etilgan.",
+    keywords: "ilmiy maqolalar, nashrlar, yuklab olish, ilm-fan, tahlil, tadqiqot",
+    openGraph: {
+        title: "Nashrlar | Ilmiy Maqolalar",
+        description: "Ilmiy maqolalarning nashrlari va yuklab olish imkoniyati. Eng so'nggi ilmiy tadqiqotlarni kashf qiling.",
+        type: "website",
+        url: "https://sizning-saytingiz.com/publications",
+        images: [
+            {
+                url: "/public/journal2.webp",
+                width: 800,
+                height: 600,
+                alt: "Nordic Jurnali",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Nashrlar | Ilmiy Maqolalar",
+        description: "Nashrlar sahifasida ilmiy maqolalarning barcha nashrlarini yuklab olish imkoniyati mavjud.",
+        images: [
+            {
+                url: "/public/journal2.webp",
+                width: 800,
+                height: 600,
+                alt: "Nordic Jurnali",
+            },
+        ],
+    }
+};
+
+
 const PublicationsServer = async () => {
   const data = await fetchCategoriesWithArticles();
   const volume = await getVolume();

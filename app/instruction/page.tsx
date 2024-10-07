@@ -1,7 +1,45 @@
-"use server"
-
 import React from "react";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
+
+export const metadata = {
+    title: "Ilmiy Maqolaga Qo‘yilgan Talablar | Nordic Jurnali",
+    description: "Nordic Jurnali ilmiy maqolalar sahifasi, ilmiy maqolalarning tuzilishi va yozilish talablarini o‘rganing. Ushbu sahifa ilmiy maqolalarni tayyorlashda muhim bosqichlar haqida ma’lumot beradi.",
+    keywords: [
+        "ilmiy maqola talablari",
+        "ilmiy maqola tuzilishi",
+        "maqola yozish",
+        "ilmiy maqola qismlari",
+        "Nordic Jurnali"
+    ],
+    openGraph: {
+        title: "Ilmiy Maqolaga Qo‘yilgan Talablar | Nordic Jurnali",
+        description: "Nordic Jurnali maqolalar sahifasida ilmiy maqolalarni tayyorlash uchun zarur bo‘lgan barcha ma’lumotlarni oling.",
+        url: `${process.env["NEXT_PUBLIC_API_URL"]}/instruction`,
+        type: "website",
+        images: [
+            {
+                url: "/public/abstrakt.d8a2d89523158d92ef74.jpg",
+                width: 800,
+                height: 600,
+                alt: "Nordic Jurnali",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Ilmiy Maqolaga Qo‘yilgan Talablar | Nordic Jurnali",
+        description: "Ilmiy maqolalarni tayyorlash uchun kerakli barcha ma’lumotlar Nordic Jurnali sahifasida.",
+        images: [
+            {
+                url: "/public/abstrakt.d8a2d89523158d92ef74.jpg",
+                width: 800,
+                height: 600,
+                alt: "Nordic Jurnali",
+            },
+        ],
+    }
+};
+
 
 export default async function Page() {
     return (

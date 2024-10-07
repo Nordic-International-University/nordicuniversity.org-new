@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import {FaPhone} from "react-icons/fa6";
@@ -10,6 +9,23 @@ import image from "@/public/Ellipse 793.png";
 import image2 from "@/public/Ellipse 794.png";
 import Image from "next/image";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
+
+export const metadata = {
+    title: "Biz bilan bog'lanish | Nordic International University",
+    description: "Nordic International University bilan bog'lanish uchun tafsilotlar: telefon raqami, email, manzil va ijtimoiy tarmoqlar. Toshkent, Chilonzor tumani, Bunyodkor ko‘chasi, 8/2.",
+    openGraph: {
+        title: "Biz bilan bog'lanish | Nordic International University",
+        description: "Nordic International University bilan bog'lanish uchun tafsilotlar: telefon raqami, email, manzil va ijtimoiy tarmoqlar. Toshkent, Chilonzor tumani, Bunyodkor ko‘chasi, 8/2.",
+        images: [
+            {
+                url: "/Ellipse 793.png",
+                width: 800,
+                height: 600,
+                alt: "Nordic International University binosi rasmi",
+            },
+        ],
+    },
+};
 
 const Contact = () => {
     return (

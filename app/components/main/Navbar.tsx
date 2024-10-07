@@ -33,10 +33,10 @@ const Navbar = () => {
         setToken(accessToken || null);
     }, [pathname]);
 
-    // Menu ochilganda scrollni bloklash va blur qo'shish
+
     useEffect(() => {
         const body = document.body;
-        const content = document.getElementById("content"); // Sahifaning content qismini blur qilish
+        const content = document.getElementById("content");
 
         if (isOpen) {
             body.classList.add("no-scroll");

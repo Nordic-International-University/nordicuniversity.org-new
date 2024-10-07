@@ -4,7 +4,7 @@ import HomeVolumes from "@/app/components/home/homeVolume/homeVolumes";
 
 
 export const metadata = {
-    metadataBase: new URL('https://newjournal.nordicuniversity.org'),
+    metadataBase: new URL('https://journal.nordicuniversity.org'),
     title: 'Nordik jurnal  - Bosh Sahifa',
     description: 'Xalqaro Nordik Universiteti haqida yangiliklar va ilmiy jurnallar.',
     keywords: ['Nordik universiteti', 'ilmiy jurnal', 'universitet yangiliklari'],
@@ -27,7 +27,14 @@ export const metadata = {
         site: '@NordikUniversitet',
         title: 'Nordik jurnal',
         description: 'Nordik jurnal yangiliklari va ilmiy jurnallari bilan tanishing.',
-        images: 'https://www.nordikuniversity.uz/images/og-image.jpg',
+        images: [
+            {
+                url: '/public/mobile_image.webp',
+                width: 800,
+                height: 600,
+                alt: 'Nordik jurnal rasmiy veb sahifasi',
+            },
+        ],
     },
 };
 

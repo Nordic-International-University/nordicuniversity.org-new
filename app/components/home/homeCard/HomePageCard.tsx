@@ -2,7 +2,9 @@ import React from "react";
 import HomePageCardClient from "@/app/components/home/homeCard/HomePageCardClient";
 
 const getArticles = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article/necessary?articles=6&topArticles=2&lastArticles=8`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/article/necessary?articles=6&topArticles=2&lastArticles=8`,{
+        cache:"no-cache"
+    });
     const data = await res.json();
     return data;
 };

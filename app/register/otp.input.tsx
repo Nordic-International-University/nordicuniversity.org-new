@@ -1,14 +1,17 @@
-import React, { useState, useRef } from "react";
-import { Button, message } from "antd";
+import React, { useState, useRef, useEffect } from "react";
+import { Button, message, Progress, Typography } from "antd";
+import axios from "axios";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { useRegisterUserMutation } from "@/lib/query/register.query";
-import axios from "axios";
+import { IoReload } from "react-icons/io5";
 
 interface OTPInputProps {
   id: string;
   formData: any;
 }
+
+const { Text } = Typography;
 
 const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => void }> = ({ length, onChange }) => {
   const [values, setValues] = useState<string[]>(Array(length).fill(""));
@@ -69,7 +72,7 @@ const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => vo
         {values.map((value, index) => (
             <input
                 key={index}
-                ref={(el:any) => (inputsRef.current[index] = el)}
+                ref={(el: any) => (inputsRef.current[index] = el)}
                 type="text"
                 value={value}
                 onKeyDown={(e) => handleKeyDown(e, index)}
@@ -92,10 +95,51 @@ const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => vo
 const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
   const [otp, setOtp] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
+  const [timer, setTimer] = useState(60);
+  const [verifyId, setVerifyId] = useState<string>("");
+  const [canResend, setCanResend] = useState(false);
   const [registerUser] = useRegisterUserMutation();
   const router = useRouter();
 
-  (otp);
+  useEffect(() => {
+    if (timer > 0) {
+      const countdown = setInterval(() => {
+        setTimer((prev) => prev - 1);
+      }, 1000);
+      return () => clearInterval(countdown);
+    } else {
+      setCanResend(true);
+    }
+  }, [timer]);
+
+  useEffect(() => {
+    setVerifyId(id);
+  }, []);
+
+  useEffect(() => {
+    setTimer(60);
+  }, []);
+
+  const handleResendOtp = async () => {
+    try {
+      const response = await axios.post(
+          `${process.env.NEXT_PUBLIC_API_URL}/sms/check-number`,
+          {
+            phone_number: formData.phone_number,
+          }
+      );
+      setVerifyId(response.data.verifyID);
+      message.success("SMS kod qayta yuborildi!");
+      setTimer(60);
+      setCanResend(false);
+    } catch (error: any) {
+      if (error.status === 429) {
+        message.error(error.response.data.message);
+        return;
+      }
+      message.error("SMS kodni qayta yuborishda xatolik yuz berdi.");
+    }
+  };
 
   const handleVerifyOtp = async () => {
     if (otp.length !== 4) {
@@ -108,27 +152,23 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
     try {
       const response = await axios.post(
           `${process.env.NEXT_PUBLIC_API_URL}/sms/verify-number`,
-          { id: id, code: Number(otp) }
+          { id: verifyId, code: Number(otp) }
       );
-
-      (response)
 
       if (response?.data?.matched === true) {
         try {
           const registerResponse = await registerUser(formData).unwrap();
-          (registerResponse);
           Cookies.set("access_token", registerResponse?.data?.token);
           Cookies.set("phone", formData.phone_number);
           router.push("/profile");
-          message.success("muvaffaqiyatli ro'yxatdan o'tildi!");
+          message.success("Muvaffaqiyatli ro'yxatdan o'tildi!");
         } catch (err: any) {
           message.error("Ro'yxatdan o'tishda xatolik yuz berdi");
         }
       } else {
-        message.error("Tadiqlash kodi noto‘g‘ri!");
+        message.error("Tasdiqlash kodi noto‘g‘ri!");
       }
     } catch (error) {
-      (error);
       message.error("Server bilan muammo yuz berdi.");
     } finally {
       setIsVerifying(false);
@@ -136,18 +176,42 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
   };
 
   return (
-      <div className="h-20">
-        <div className="mt-5 justify-center flex flex-col">
-          <CustomOTPInput length={4} onChange={setOtp} />
+      <div className="h-40 flex flex-col justify-between">
+        <div className="flex flex-col items-center">
+          <CustomOTPInput length={4} onChange={setOtp}/>
         </div>
-        <Button
-            onClick={handleVerifyOtp}
-            type="primary"
-            loading={isVerifying}
-            className="mt-3 absolute rounded-b-md rounded-t-none py-5 right-0 w-full bottom-0 flex items-center justify-center"
-        >
-          Kodni tasdiqlash
-        </Button>
+
+        <div>
+          <div className="flex flex-col items-center">
+            {timer > 0 ? (
+                <div className="flex gap-2  flex-row-reverse items-center">
+                  <Progress type="circle" percent={(timer / 60) * 100} showInfo={false} size={20}/>
+                  <Text style={{fontSize: "14px"}}>
+                    Qayta yuborish mumkin {timer} soniyadan so'ng
+                  </Text>
+                </div>
+            ) : (
+                <Button
+                    onClick={handleResendOtp}
+                    type="default"
+                    icon={<IoReload/>}
+                    disabled={!canResend}
+                    className="w-full"
+                >
+                  Qayta yuborish
+                </Button>
+            )}
+          </div>
+
+          <Button
+              onClick={handleVerifyOtp}
+              type="primary"
+              loading={isVerifying}
+              className="mt-3 w-full"
+          >
+            Kodni tasdiqlash
+          </Button>
+        </div>
       </div>
   );
 };

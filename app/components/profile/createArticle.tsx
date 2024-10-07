@@ -70,7 +70,6 @@ const CreateArticle = () => {
             setKeywords(updatedKeywords);
             setField("keyword", updatedKeywords.join(","));
         }
-        setInputVisible(false);
         setInputValue("");
     };
 
@@ -154,7 +153,7 @@ const CreateArticle = () => {
             onSubmit={async (values, {setSubmitting, resetForm}) => {
                 setSubmitting(true);
                 try {
-                    const data = await axios.post(
+                    await axios.post(
                         `${process.env.NEXT_PUBLIC_API_URL}/article/user/create`,
                         {
                             ...values,
@@ -168,12 +167,12 @@ const CreateArticle = () => {
                     message.success("Maqola muvaffaqiyatli yaratildi!");
                     router.push('/profile');
                     resetForm();
-                    (data)
                 } catch (e: any) {
-                    (values)
-                    (e)
                     if (e.response?.status === 409) {
                         message.error("Bunday maqola allaqachon mavjud!");
+                    }
+                    if (e.response?.status === 500) {
+                        message.error("server bilan muommo yuzaga keldi!");
                     }
                     setSubmitting(false);
                 }
@@ -247,65 +246,85 @@ const CreateArticle = () => {
                                     onChange={(e) => {
                                         setInputValue(e.target.value);
                                     }}
-                                    onBlur={() => handleInputConfirm(setFieldValue)}
-                                    onPressEnter={() => handleInputConfirm(setFieldValue)}
-                                />
-                            ) : (
-                                <Tag
-                                    onClick={() => setInputVisible(true)}
-                                    className="site-tag-plus w-full py-2"
-                                >
-                                    + Kalit so'z qo'shish
-                                </Tag>
-                            )}
-                            <ErrorMessage
-                                name="keyword"
-                                component="div"
-                                className="text-red-700 mt-2 text-[13px]"
-                            />
-                        </Col>
-                        <Col span={24} className="flex items-center gap-3">
-                            <div className="w-1/2">
-                                <Select
-                                    className="w-full"
-                                    placeholder="Yo‘nalishni tanlang"
-                                    size="large"
-                                    onChange={(value) => {
-                                        setSelectedCategory(value);
-                                        setFieldValue("categoryId", value);
+                                    onBlur={() => setInputVisible(false)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter") {
+                                            e.preventDefault();
+                                            handleInputConfirm(setFieldValue);
+                                        }
                                     }}
-                                >
-                                    {categories?.map((category) => (
-                                        <Option key={category.id} value={category.id}>
-                                            {category.name}
-                                        </Option>
-                                    ))}
-                                </Select>
+                                    onPaste={(e) => {
+                                        e.preventDefault();
+                                        const pastedText = e.clipboardData.getData("Text");
+                                        const newKeywords = pastedText
+                                            .split(",")
+                                            .map((keyword) => keyword.trim())
+                                            .filter((keyword) => keyword && !keywords.includes(keyword));
+
+                                        if (newKeywords.length) {
+                                            const updatedKeywords = [...keywords, ...newKeywords];
+                                            setKeywords(updatedKeywords);
+                                            setFieldValue("keyword", updatedKeywords.join(","));
+                                            }
+                                        }}
+                                        onPressEnter={() => handleInputConfirm(setFieldValue)}
+                                    />
+                                ) : (
+                                    <Tag
+                                        onClick={() => setInputVisible(true)}
+                                        className="site-tag-plus w-full py-2"
+                                    >
+                                        + Kalit so'z qo'shish
+                                    </Tag>
+                                )}
                                 <ErrorMessage
-                                    name="categoryId"
+                                    name="keyword"
                                     component="div"
-                                    className="text-red-700 text-[13px]"
+                                    className="text-red-700 mt-2 text-[13px]"
                                 />
-                            </div>
-                            <div className="w-1/2">
-                                <Select
-                                    onChange={(e) => {
-                                        setFieldValue("SubCategoryId", e);
-                                    }}
-                                    className="w-full"
-                                    options={subcategories?.map((a: any) => ({
-                                        label: a.name,
-                                        value: a.id,
-                                    }))}
-                                    filterOption={(input: any, option: any) =>
-                                        option?.label.toLowerCase().includes(input.toLowerCase())
-                                    }
-                                    disabled={selectedCategory === null ? true : false}
-                                    placeholder="Yo‘nalish sohasini tanlang"
-                                    size="large"
-                                ></Select>
-                                <ErrorMessage
-                                    name="SubCategoryId"
+                            </Col>
+                            <Col span={24} className="flex items-center gap-3">
+                                <div className="w-1/2">
+                                    <Select
+                                        className="w-full"
+                                        placeholder="Yo‘nalishni tanlang"
+                                        size="large"
+                                        onChange={(value) => {
+                                            setSelectedCategory(value);
+                                            setFieldValue("categoryId", value);
+                                        }}
+                                    >
+                                        {categories?.map((category) => (
+                                            <Option key={category.id} value={category.id}>
+                                                {category.name}
+                                            </Option>
+                                        ))}
+                                    </Select>
+                                    <ErrorMessage
+                                        name="categoryId"
+                                        component="div"
+                                        className="text-red-700 text-[13px]"
+                                    />
+                                </div>
+                                <div className="w-1/2">
+                                    <Select
+                                        onChange={(e) => {
+                                            setFieldValue("SubCategoryId", e);
+                                        }}
+                                        className="w-full"
+                                        options={subcategories?.map((a: any) => ({
+                                            label: a.name,
+                                            value: a.id,
+                                        }))}
+                                        filterOption={(input: any, option: any) =>
+                                            option?.label.toLowerCase().includes(input.toLowerCase())
+                                        }
+                                        disabled={selectedCategory === null ? true : false}
+                                        placeholder="Yo‘nalish sohasini tanlang"
+                                        size="large"
+                                    ></Select>
+                                    <ErrorMessage
+                                        name="SubCategoryId"
                                     component="div"
                                     className="text-red-700 text-[13px]"
                                 />
