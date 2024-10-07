@@ -60,15 +60,11 @@ const PublicationPage = async ({
   params: { volumeId: string };
 }) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
-    {
-      next: { revalidate: 1000 },
-    },
+      `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
+      {
+        next: {revalidate: 1000},
+      },
   );
-
-  if (!res.ok) {
-    return <div>Error loading data</div>;
-  }
 
   const categoryData = await res.json();
 
