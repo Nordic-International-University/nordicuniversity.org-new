@@ -74,7 +74,6 @@ const Navbar = () => {
     };
 
     const handleOutsideClick = (e: MouseEvent) => {
-        // Agar click menudan tashqariga bosilsa, menyuni yopish
         const menuElement = document.getElementById("menu");
         if (menuElement && !menuElement.contains(e.target as Node)) {
             dispatch(closeMenu());

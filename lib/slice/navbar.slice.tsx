@@ -27,7 +27,7 @@ const initialState: navbarInitialState = {
         },
         {
             key: '2',
-            label: 'chiqish',
+            label: 'Chiqish',
             icon: <BiLogOut className="text-lg"/>,
         }
     ],
