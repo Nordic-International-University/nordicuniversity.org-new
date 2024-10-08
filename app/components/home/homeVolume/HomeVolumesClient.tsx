@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import "swiper/css";
+import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
 const HomeVolumesClient = ({volume}: any) => {
     const [isMounted, setIsMounted] = useState(false);
@@ -19,6 +20,9 @@ const HomeVolumesClient = ({volume}: any) => {
 
     return (
         <section className="mt-8">
+            <div className="container">
+                <RoundedSvg title="Nashrlar"/>
+            </div>
             <div className="swiperContainer">
                 <Swiper
                     watchSlidesProgress

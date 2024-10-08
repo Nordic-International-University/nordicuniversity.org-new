@@ -3,12 +3,16 @@ import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import { redirect } from "next/navigation";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
-export async function generateMetadata({ params }: { params: { volumeId: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { volumeId: string };
+}) {
   const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/volume/${params.volumeId}`,
-      {
-        cache: "no-store",
-      }
+    `${process.env.NEXT_PUBLIC_API_URL}/volume/${params.volumeId}`,
+    {
+      cache: "no-store",
+    },
   );
 
   if (!res.ok) {
@@ -25,18 +29,19 @@ export async function generateMetadata({ params }: { params: { volumeId: string 
     openGraph: {
       title: `Nashr - ${volumeData[0]?.title}`,
       description: volumeData[0]?.description,
-      url: `${process.env.NEXT_PUBLIC_API_URL}/publications/volume/${params.volumeId}`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/publications/volume/${params.volumeId}`,
       type: "article",
-      images: [`${process.env.NEXT_PUBLIC_API_URL}${volumeData[0]?.image?.file_path}`],
+      images: [
+        `${process.env.NEXT_PUBLIC_API_URL}${volumeData[0]?.image?.file_path}`,
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `Nashr - ${volumeData[0]?.title}`,
-      description: volumeData[0]?.description
+      description: volumeData[0]?.description,
     },
   };
 }
-
 
 export async function generateStaticParams() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category`, {
@@ -60,10 +65,10 @@ const PublicationPage = async ({
   params: { volumeId: string };
 }) => {
   const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
-      {
-        next: {revalidate: 1000},
-      },
+    `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
+    {
+      next: { revalidate: 1000 },
+    },
   );
 
   const categoryData = await res.json();
@@ -74,10 +79,10 @@ const PublicationPage = async ({
   }
 
   const volume = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/volume/${params.volumeId}`,
-      {
-        cache: "no-store",
-      }
+    `${process.env.NEXT_PUBLIC_API_URL}/volume/${params.volumeId}`,
+    {
+      cache: "no-store",
+    },
   );
 
   if (!res.ok) {
@@ -86,13 +91,13 @@ const PublicationPage = async ({
 
   const volumeData = await volume.json();
 
-
   return (
     <div className="container">
       <RoundedSvg title={volumeData?.title} />
       <div className="grid grid-cols-4 gap-4 mt-3 max-sm:grid-cols-1 max-lg:grid-cols-2">
         {categoryData?.map((article: any, index: number) => (
           <BigArticlesCard
+            views={article.viewsCount}
             key={index}
             title={article.title}
             date={article.createdAt}

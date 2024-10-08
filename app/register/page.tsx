@@ -1,19 +1,18 @@
 "use client";
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Input, message, Modal } from "antd";
 import { useLoginUserMutation } from "@/lib/query/register.query";
 import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import login from "@/public/log.svg";
 import register from "@/public/register.svg";
 import OtpInput from "@/app/register/otp.input";
 import axios from "axios";
 import { validationSchema } from "@/app/validation/auth.validation";
-import PhoneInput from "react-phone-input-2";;
+import PhoneInput from "react-phone-input-2";
 import "react-phone-number-input/style.css";
 import "react-phone-input-2/lib/style.css";
-
 
 interface FormData {
   full_name: string;
@@ -34,8 +33,8 @@ const Page: React.FC = () => {
   const [loginUser, { isLoading: isLoggingIn }] = useLoginUserMutation();
   const [isModalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState<string | null>(null);
+  const searchParams = useSearchParams();
   const router = useRouter();
-
   const [formData, setFormData] = useState<FormData>({
     full_name: "",
     phone_number: "",
@@ -50,21 +49,23 @@ const Page: React.FC = () => {
     password: "",
   });
 
-
-  const handlePhoneNumberChange = (
-      value: string | undefined,
-      setState: React.Dispatch<React.SetStateAction<FormData | LoginData | any>>
-  ) => {
-    if (value) {
-      console.log(value)
-          setState((prevState:any) => ({
-            ...prevState,
-            phone_number: `+${value}`,
-          }));
-
-    }
+  const urlSearchHome = () => {
+    const fromHome = searchParams.get("fromhome");
+    return fromHome === "true" ? "/createarticle" : "/profile";
   };
 
+  const handlePhoneNumberChange = (
+    value: string | undefined,
+    setState: React.Dispatch<React.SetStateAction<FormData | LoginData | any>>,
+  ) => {
+    if (value) {
+      console.log(value);
+      setState((prevState: any) => ({
+        ...prevState,
+        phone_number: `+${value}`,
+      }));
+    }
+  };
 
   useEffect(() => {
     const mainElement = document.getElementById("main");
@@ -79,7 +80,7 @@ const Page: React.FC = () => {
     };
   }, []);
 
-  console.log(loginData)
+  console.log(loginData);
 
   const handleSignUpClick = () => {
     setSignUpMode(true);
@@ -119,7 +120,7 @@ const Page: React.FC = () => {
 
       message.success("Telefon raqamingizga sms yuborildi!");
     } catch (error: any) {
-      if (error.status == 429){
+      if (error.status == 429) {
         message.error(error.response.data.message);
       }
       if (error.name === "ValidationError") {
@@ -152,7 +153,7 @@ const Page: React.FC = () => {
       if (data.message === "USER_LOGGED_IN") {
         Cookies.set("access_token", data.login_data.token);
         Cookies.set("phone", loginData.phone_number);
-        router.push("/profile");
+        router.push(urlSearchHome());
         message.success("Muvaffaqiyatli kirildi!");
       }
     } catch (err: any) {
@@ -178,7 +179,9 @@ const Page: React.FC = () => {
           footer={null}
           centered={true}
         >
-          {id && <OtpInput id={id} formData={formData} />}
+          {id && (
+            <OtpInput path={urlSearchHome()} id={id} formData={formData} />
+          )}
         </Modal>
       </div>
       <div
@@ -193,8 +196,8 @@ const Page: React.FC = () => {
               <h2 className="title">Kirish</h2>
               <div className="w-[300px]">
                 <PhoneInput
-                    containerClass="relative"
-                    buttonClass="border-none absolute top-[13px] left-1 bg-transparent h-5"
+                  containerClass="relative"
+                  buttonClass="border-none absolute top-[13px] left-1 bg-transparent h-5"
                   inputClass="w-full custom-phone-input py-[22px] border-1 focus:outline-none rounded-3xl pl-10"
                   placeholder="Telefon Raqam"
                   value={loginData.phone_number}
@@ -206,7 +209,9 @@ const Page: React.FC = () => {
                   }}
                   disableDropdown={false}
                   disableCountryCode={false}
-                  onChange={(value) => handlePhoneNumberChange(value, setLoginData)}
+                  onChange={(value) =>
+                    handlePhoneNumberChange(value, setLoginData)
+                  }
                   country={"uz"}
                 />
               </div>
@@ -252,21 +257,26 @@ const Page: React.FC = () => {
               </div>
               <div className="max-w-[380px] w-full mt-5">
                 <PhoneInput
-                    containerClass="relative"
-                    buttonClass="border-none absolute top-[13px] left-1 bg-transparent h-5"
-                    inputClass="w-full custom-phone-input py-[22px] border-1 focus:outline-none rounded-3xl pl-10"
-                    placeholder="Telefon Raqam"
-                    value={loginData.phone_number}
-                    enableSearch={false}
-                    inputProps={{
-                      name: "text",
-                      required: true,
-                      autoFocus: true,
-                    }}
-                    disableDropdown={false}
-                    disableCountryCode={false}
-                    onChange={(value) => handlePhoneNumberChange(value.replace(/\s+/g, ''), setFormData)}
-                    country={"uz"}
+                  containerClass="relative"
+                  buttonClass="border-none absolute top-[13px] left-1 bg-transparent h-5"
+                  inputClass="w-full custom-phone-input py-[22px] border-1 focus:outline-none rounded-3xl pl-10"
+                  placeholder="Telefon Raqam"
+                  value={loginData.phone_number}
+                  enableSearch={false}
+                  inputProps={{
+                    name: "text",
+                    required: true,
+                    autoFocus: true,
+                  }}
+                  disableDropdown={false}
+                  disableCountryCode={false}
+                  onChange={(value) =>
+                    handlePhoneNumberChange(
+                      value.replace(/\s+/g, ""),
+                      setFormData,
+                    )
+                  }
+                  country={"uz"}
                 />
               </div>
               <div className="max-w-[380px] w-full mt-5">

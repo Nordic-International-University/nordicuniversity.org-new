@@ -9,40 +9,47 @@ import { IoReload } from "react-icons/io5";
 interface OTPInputProps {
   id: string;
   formData: any;
+  path: string;
 }
 
 const { Text } = Typography;
 
-const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => void }> = ({ length, onChange }) => {
+const CustomOTPInput: React.FC<{
+  length: number;
+  onChange: (value: string) => void;
+}> = ({ length, onChange }) => {
   const [values, setValues] = useState<string[]>(Array(length).fill(""));
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
+  const handleKeyDown = (
+    e: React.KeyboardEvent<HTMLInputElement>,
+    index: number,
+  ) => {
     const key = e.key;
 
-    if (key === 'Backspace') {
+    if (key === "Backspace") {
       e.preventDefault();
       const newValues = [...values];
       if (values[index]) {
-        newValues[index] = '';
+        newValues[index] = "";
         setValues(newValues);
-        onChange(newValues.join(''));
+        onChange(newValues.join(""));
       } else if (index > 0) {
         inputsRef.current[index - 1]?.focus();
-        newValues[index - 1] = '';
+        newValues[index - 1] = "";
         setValues(newValues);
-        onChange(newValues.join(''));
+        onChange(newValues.join(""));
       }
       return;
     }
 
-    if (key === 'ArrowLeft' && index > 0) {
+    if (key === "ArrowLeft" && index > 0) {
       e.preventDefault();
       inputsRef.current[index - 1]?.focus();
       return;
     }
 
-    if (key === 'ArrowRight' && index < length - 1) {
+    if (key === "ArrowRight" && index < length - 1) {
       e.preventDefault();
       inputsRef.current[index + 1]?.focus();
       return;
@@ -60,7 +67,7 @@ const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => vo
     const newValues = [...values];
     newValues[index] = key;
     setValues(newValues);
-    onChange(newValues.join(''));
+    onChange(newValues.join(""));
 
     if (index < length - 1) {
       inputsRef.current[index + 1]?.focus();
@@ -68,31 +75,34 @@ const CustomOTPInput: React.FC<{ length: number; onChange: (value: string) => vo
   };
 
   return (
-      <div className="w-full justify-center" style={{ display: 'flex', gap: '8px' }}>
-        {values.map((value, index) => (
-            <input
-                key={index}
-                ref={(el: any) => (inputsRef.current[index] = el)}
-                type="text"
-                value={value}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-                maxLength={1}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  textAlign: 'center',
-                  fontSize: '24px',
-                  border: '1px solid #d9d9d9',
-                  borderRadius: '4px',
-                }}
-                inputMode="numeric"
-            />
-        ))}
-      </div>
+    <div
+      className="w-full justify-center"
+      style={{ display: "flex", gap: "8px" }}
+    >
+      {values.map((value, index) => (
+        <input
+          key={index}
+          ref={(el: any) => (inputsRef.current[index] = el)}
+          type="text"
+          value={value}
+          onKeyDown={(e) => handleKeyDown(e, index)}
+          maxLength={1}
+          style={{
+            width: "100%",
+            height: "auto",
+            textAlign: "center",
+            fontSize: "24px",
+            border: "1px solid #d9d9d9",
+            borderRadius: "4px",
+          }}
+          inputMode="numeric"
+        />
+      ))}
+    </div>
   );
 };
 
-const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
+const OTPInput: React.FC<OTPInputProps> = ({ id, formData, path }) => {
   const [otp, setOtp] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
   const [timer, setTimer] = useState(60);
@@ -123,10 +133,10 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
   const handleResendOtp = async () => {
     try {
       const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/sms/check-number`,
-          {
-            phone_number: formData.phone_number,
-          }
+        `${process.env.NEXT_PUBLIC_API_URL}/sms/check-number`,
+        {
+          phone_number: formData.phone_number,
+        },
       );
       setVerifyId(response.data.verifyID);
       message.success("SMS kod qayta yuborildi!");
@@ -151,8 +161,8 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
 
     try {
       const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/sms/verify-number`,
-          { id: verifyId, code: Number(otp) }
+        `${process.env.NEXT_PUBLIC_API_URL}/sms/verify-number`,
+        { id: verifyId, code: Number(otp) },
       );
 
       if (response?.data?.matched === true) {
@@ -160,7 +170,8 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
           const registerResponse = await registerUser(formData).unwrap();
           Cookies.set("access_token", registerResponse?.data?.token);
           Cookies.set("phone", formData.phone_number);
-          router.push("/profile");
+          console.log(path);
+          router.push(path);
           message.success("Muvaffaqiyatli ro'yxatdan o'tildi!");
         } catch (err: any) {
           message.error("Ro'yxatdan o'tishda xatolik yuz berdi");
@@ -176,43 +187,48 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData }) => {
   };
 
   return (
-      <div className="h-40 flex flex-col justify-between">
-        <div className="flex flex-col items-center">
-          <CustomOTPInput length={4} onChange={setOtp}/>
-        </div>
-
-        <div>
-          <div className="flex flex-col items-center">
-            {timer > 0 ? (
-                <div className="flex gap-2  flex-row-reverse items-center">
-                  <Progress type="circle" percent={(timer / 60) * 100} showInfo={false} size={20}/>
-                  <Text style={{fontSize: "14px"}}>
-                    Qayta yuborish mumkin {timer} soniyadan so'ng
-                  </Text>
-                </div>
-            ) : (
-                <Button
-                    onClick={handleResendOtp}
-                    type="default"
-                    icon={<IoReload/>}
-                    disabled={!canResend}
-                    className="w-full"
-                >
-                  Qayta yuborish
-                </Button>
-            )}
-          </div>
-
-          <Button
-              onClick={handleVerifyOtp}
-              type="primary"
-              loading={isVerifying}
-              className="mt-3 w-full"
-          >
-            Kodni tasdiqlash
-          </Button>
-        </div>
+    <div className="h-40 flex flex-col justify-between">
+      <div className="flex flex-col items-center">
+        <CustomOTPInput length={4} onChange={setOtp} />
       </div>
+
+      <div>
+        <div className="flex flex-col items-center">
+          {timer > 0 ? (
+            <div className="flex gap-2  flex-row-reverse items-center">
+              <Progress
+                type="circle"
+                percent={(timer / 60) * 100}
+                showInfo={false}
+                size={20}
+              />
+              <Text style={{ fontSize: "14px" }}>
+                {timer} soniyadan so'ng qayta yuborish mumkun
+              </Text>
+            </div>
+          ) : (
+            <Button
+              onClick={handleResendOtp}
+              type="default"
+              icon={<IoReload />}
+              disabled={!canResend}
+              className="w-full"
+            >
+              Qayta yuborish
+            </Button>
+          )}
+        </div>
+
+        <Button
+          onClick={handleVerifyOtp}
+          type="primary"
+          loading={isVerifying}
+          className="mt-3 w-full"
+        >
+          Kodni tasdiqlash
+        </Button>
+      </div>
+    </div>
   );
 };
 
