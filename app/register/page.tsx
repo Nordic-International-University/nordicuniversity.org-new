@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Button, Input, message, Modal } from "antd";
 import { useLoginUserMutation } from "@/lib/query/register.query";
 import Cookies from "js-cookie";
@@ -169,7 +169,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className={isModalVisible ? "blur" : "content"}>
         <Modal
           width={400}
@@ -369,7 +369,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 
