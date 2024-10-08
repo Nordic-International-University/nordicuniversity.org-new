@@ -33,7 +33,6 @@ const Page: React.FC = () => {
   const [loginUser, { isLoading: isLoggingIn }] = useLoginUserMutation();
   const [isModalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState<string | null>(null);
-  const searchParams = useSearchParams();
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     full_name: "",
@@ -50,8 +49,8 @@ const Page: React.FC = () => {
   });
 
   const urlSearchHome = () => {
-    const fromHome = searchParams.get("fromhome");
-    return fromHome === "true" ? "/createarticle" : "/profile";
+    // const fromHome = searchParams?.get("fromhome");
+    return "/profile";
   };
 
   const handlePhoneNumberChange = (
@@ -169,7 +168,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <div className={isModalVisible ? "blur" : "content"}>
         <Modal
           width={400}
@@ -369,7 +368,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </Suspense>
+    </>
   );
 };
 
