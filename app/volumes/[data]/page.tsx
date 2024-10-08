@@ -38,6 +38,7 @@ const PublicationPage = async ({
       <div className="grid grid-cols-4 gap-4">
         {categoryData.map((article: any, index: number) => (
           <BigArticlesCard
+            views={article.viewsCount}
             key={index}
             title={article.title}
             date={article.createdAt}
