@@ -95,6 +95,7 @@ export async function generateMetadata({
       images: [imageUrl],
     },
     other: {
+      author: data.author?.full_name || "Unknown Author",
       citation_title: data.title || "Default Title",
       citation_author: data.author?.full_name || "Unknown Author",
       citation_publication_date:
@@ -133,22 +134,6 @@ const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <Script
-        id="dynamic-citation-authors"
-        dangerouslySetInnerHTML={{
-          __html: `
-            document.addEventListener("DOMContentLoaded", function() {
-              const authors = ${JSON.stringify(data.coAuthors.map((author: any) => author.full_name))};
-              authors.forEach((name) => {
-                const metaTag = document.createElement("meta");
-                metaTag.name = "citation_author";
-                metaTag.content = name;
-                document.head.appendChild(metaTag);
-              });
-            });
-          `,
-        }}
-      />
       <ClientPage data={data} />
     </>
   );

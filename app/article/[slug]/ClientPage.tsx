@@ -141,17 +141,6 @@ const Articles = ({ data }: { data: any }) => {
 
   return (
     <>
-      <Head>
-        {data.coAuthors?.map((author: any, index: number) => (
-          <meta key={index} name="citation_author" content={author.full_name} />
-        ))}
-        <meta
-          name="citation_journal_title"
-          content="Nordik ilmiy-amaliy elektron jurnali"
-        />
-        <meta name="citation_issn" content="3030-3400" />
-      </Head>
-
       <div className="w-full bg-white py-6"></div>
       <Container className="mt-10 max-sm:mb-20">
         <div className="flex items-start gap-4 max-xl:flex-col justify-between">
