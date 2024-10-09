@@ -49,7 +49,7 @@ const BigArticlesCard = ({
             onLoad={() => setIsLoaded(true)}
           />
         </div>
-        <div className="ml-2 py-2 px-2">
+        <div className="py-2 px-2">
           <div className="flex justify-between items-center">
             <p className="border-[2px] rounded p-0.5 text-[9px] text-[#478CCF] font-bold">
               {category}

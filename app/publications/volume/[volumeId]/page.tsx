@@ -43,20 +43,41 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category`, {
-    cache: "no-store",
-  });
+async function fetchVolumeAndArticles(volumeId: string) {
+  try {
+    const articleRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${volumeId}`,
+      { next: { revalidate: 1000 } },
+    );
 
-  if (!res.ok) {
-    throw new Error(`Failed to fetch categories: ${res.status}`);
+    if (!articleRes.ok) {
+      console.error(`Failed to fetch articles: ${articleRes.status}`);
+      return { articles: null, volume: null };
+    }
+
+    const articles = await articleRes.json();
+
+    if (!articles || articles.length === 0) {
+      return { articles: null, volume: null };
+    }
+
+    const volumeRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/volume/${volumeId}`,
+      { cache: "no-store" },
+    );
+
+    if (!volumeRes.ok) {
+      console.error(`Failed to fetch volume data: ${volumeRes.status}`);
+      return { articles: null, volume: null };
+    }
+
+    const volume = await volumeRes.json();
+
+    return { articles, volume };
+  } catch (error) {
+    console.error("Error fetching volume and articles:", error);
+    return { articles: null, volume: null };
   }
-
-  const categories = await res.json();
-
-  return categories?.map((category: any) => ({
-    categoryId: category.id.toString(),
-  }));
 }
 
 const PublicationPage = async ({
@@ -64,32 +85,13 @@ const PublicationPage = async ({
 }: {
   params: { volumeId: string };
 }) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${params.volumeId}`,
-    {
-      next: { revalidate: 1000 },
-    },
-  );
-
-  const categoryData = await res.json();
+  const { articles: categoryData, volume: volumeData } =
+    await fetchVolumeAndArticles(params.volumeId);
 
   if (!categoryData || categoryData.length === 0) {
     redirect("/publications/empty");
     return null;
   }
-
-  const volume = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/volume/${params.volumeId}`,
-    {
-      cache: "no-store",
-    },
-  );
-
-  if (!res.ok) {
-    throw new Error(`Failed to fetch volume data: ${res.status}`);
-  }
-
-  const volumeData = await volume.json();
 
   return (
     <div className="container">

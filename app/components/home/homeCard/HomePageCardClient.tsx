@@ -7,6 +7,8 @@ import Image from "next/image";
 import arrowImage from "@/public/Arrow 1.svg";
 import Link from "next/link";
 import HomeNews from "@/app/components/home/homeNews/HomeNews";
+import { Button } from "antd";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 const HomePageCardClient = ({
   articles,
@@ -78,8 +80,18 @@ const HomePageCardClient = ({
               />
             </div>
           </Link>
-          <div className="mb-3">
+          <div className="mb-3 mt-5 flex items-center justify-between">
             <RoundedSvg title="Yangiliklar" />
+            <div className="flex items-center gap-3">
+              <Button
+                icon={<LeftOutlined className="text-blue-600" />}
+                className="swiper-button-prev-news bg-gray-200 p-4 rounded-xl hover:bg-gray-100 transition"
+              ></Button>
+              <Button
+                icon={<RightOutlined className="text-blue-600" />}
+                className="swiper-button-next-news bg-gray-200 p-4 rounded-xl hover:bg-gray-100 transition"
+              ></Button>
+            </div>
           </div>
           <HomeNews />
         </div>

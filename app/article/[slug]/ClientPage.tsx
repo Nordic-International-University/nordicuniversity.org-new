@@ -9,7 +9,6 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 
 const Worker = lazy(() =>
   import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })),
@@ -62,7 +61,7 @@ const Articles = ({ data }: { data: any }) => {
         event.stopPropagation();
         downloadFile(link, isFullLink);
       }}
-      className="w-48 max-sm:w-auto"
+      className="w-48 max-sm:w-2 max-sm:h-5 max-sm:w-auto"
       icon={<BiDownload />}
       type="primary"
     >
@@ -73,7 +72,7 @@ const Articles = ({ data }: { data: any }) => {
   const items = [
     {
       key: "1",
-      label: "Maqolani o‘qish",
+      label: "Maqolaning birlamchi manbasi o‘qish",
       children: (
         <Worker
           workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
@@ -90,7 +89,7 @@ const Articles = ({ data }: { data: any }) => {
     },
     {
       key: "2",
-      label: "Antiplagiatni ko‘rish",
+      label: "Antiplagiat natijasini ko'rish",
       children: (
         <Worker
           workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
@@ -141,8 +140,11 @@ const Articles = ({ data }: { data: any }) => {
 
   return (
     <>
-      <div className="w-full bg-white py-6"></div>
-      <Container className="mt-10 max-sm:mb-20">
+      <div className="bg-white max-sm:block hidden max-sm:mt-4 px-3 py-4 mx-4 rounded-md">
+        <h2 className="inline text-sm font-bold pb-7">Maqola sarlavhasi:</h2>
+        <p className="inline text-sm pl-2">{data?.title}</p>
+      </div>
+      <Container className="mt-5 max-sm:mb-20">
         <div className="flex items-start gap-4 max-xl:flex-col justify-between">
           <div className="w-3/4 max-xl:w-full">
             {data?.image && (
@@ -178,7 +180,7 @@ const Articles = ({ data }: { data: any }) => {
                 </div>
               </div>
             )}
-            <div className="bg-white w-full max-sm:mt-4 py-4 px-3 rounded-md">
+            <div className="bg-white max-sm:hidden block w-full max-sm:mt-4 py-4 px-3 rounded-md">
               <h2 className="inline text-sm font-bold pb-7">
                 Maqola sarlavhasi:
               </h2>
@@ -231,11 +233,17 @@ const Articles = ({ data }: { data: any }) => {
               </p>
             </div>
             <div className="w-full mt-4">
-              <Collapse className="bg-white" items={[items[0]]} />
+              <Collapse
+                className="bg-white max-sm:text-[12px]"
+                items={[items[0]]}
+              />
             </div>
             {data?.certificates?.length > 0 && (
-              <div className="w-full mt-4 ">
-                <Collapse className="bg-white" items={certificates} />
+              <div className="w-full mt-4">
+                <Collapse
+                  className="bg-white max-sm:text-[12px]"
+                  items={certificates}
+                />
               </div>
             )}
 

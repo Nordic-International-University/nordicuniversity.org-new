@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "@/public/logo-colorful 1.svg";
 import search from "@/public/Vector.svg";
 import Image from "next/image";
@@ -11,9 +11,10 @@ import { closeMenu, openMenu } from "@/lib/slice/navbar.slice";
 import { AiOutlineClose } from "react-icons/ai";
 import { usePathname, useRouter } from "next/navigation";
 import Cookies from "js-cookie";
-import { Dropdown, MenuProps, Space } from "antd";
+import { Dropdown, MenuProps } from "antd";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdAccountCircle } from "react-icons/md";
+import gsap from "gsap";
 
 const Navbar = () => {
   const isOpen = useSelector((state: RootState) => state.navbar.isOpen);
@@ -25,9 +26,28 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const phoneNumber = Cookies.get("phone");
   const router = useRouter();
-
   const [token, setToken] = useState<string | null>(null);
+  const menuRef = useRef<HTMLUListElement>(null);
 
+  useEffect(() => {
+    if (isOpen && menuRef.current) {
+      const items = menuRef.current.querySelectorAll("li");
+      // Clear previous animations if any
+      gsap.killTweensOf(items);
+
+      // Set initial state
+      gsap.set(items, { y: -20, opacity: 0 });
+
+      // Animate each <li> item separately with a stagger effect
+      gsap.to(items, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.15, // Stagger each item by 0.15 seconds
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }
+  }, [isOpen]);
   useEffect(() => {
     const accessToken = Cookies.get("access_token");
     setToken(accessToken || null);
@@ -117,39 +137,46 @@ const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <Link href={"/"}>
-            <Image src={logo} alt="nav logo" />
+            <Image src={logo} className="max-sm:w-32" alt="nav logo" />
           </Link>
           <div className="flex items-center gap-14">
             <ul
+              ref={menuRef}
               id="menu"
-              className={`max-lg:fixed justify-center ${
+              className={`max-lg:fixed justify-center max-sm:shadow-2xl px-3 max-sm:rounded-l-xl ${
                 !isOpen ? "max-lg:-right-[100%]" : "max-lg:right-0"
-              } max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-50 flex items-center gap-12`}
+              } max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-[700] flex items-center max-sm:pb-96 max-sm:gap-2 gap-12`}
             >
               <AiOutlineClose
                 onClick={() => dispatch(closeMenu())}
-                className="z-10 absolute max-lg:block hidden top-4 right-4"
+                className="z-10 absolute text-[#0196e3] text-xl max-lg:block hidden top-4 right-4"
               />
               {menuItems.map((item, index) => (
                 <li
+                  onClick={() => dispatch(closeMenu())}
                   key={index}
-                  className={`relative group text-[#6C758F] text-[18px] font-[700] ${
+                  className={`relative group ${pathname === item.path ? "max-sm:border-b-sky-800" : "max-sm:border-b-[#0196e3]"}  max-sm:border-b-[2px] max-sm:w-full px-4 text-[#0196e3] text-[18px] font-[700] pb-2 ${
                     pathname === item.path ? "text-sky-700" : ""
                   }`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <Link href={item.path} className="relative">
-                    {item.name}
-                    <span
-                      className={`absolute -bottom-1 h-0.5 bg-sky-700 transition-transform duration-300 ${
-                        hoverDirection === "from-left"
-                          ? "left-0 group-hover:right-0 group-hover:left-auto"
-                          : "right-0 group-hover:left-0 group-hover:right-auto"
-                      } w-full transform scale-x-0 group-hover:scale-x-100 origin-${
-                        hoverDirection === "from-left" ? "left" : "right"
-                      } ${pathname === item.path ? "scale-x-100" : ""}`}
-                    />
+                    <div className="flex text-md items-center pt-2 gap-2">
+                      <div className="max-sm:block hidden">{item.icon}</div>
+                      <div>
+                        {item.name}
+                        <span
+                          className={`absolute max-sm:hidden block -bottom-1 h-0.5 bg-sky-700 transition-transform duration-300 ${
+                            hoverDirection === "from-left"
+                              ? "left-0 group-hover:right-0 group-hover:left-auto"
+                              : "right-0 group-hover:left-0 group-hover:right-auto"
+                          } w-full transform scale-x-0 group-hover:scale-x-100 origin-${
+                            hoverDirection === "from-left" ? "left" : "right"
+                          } ${pathname === item.path ? "scale-x-100" : ""}`}
+                        />
+                      </div>
+                    </div>
                   </Link>
                 </li>
               ))}
@@ -158,7 +185,7 @@ const Navbar = () => {
               <Link href={"/search"}>
                 <Image src={search} alt="search" />
               </Link>
-              {token ? (
+              {token && (
                 <div className="flex items-center gap-2">
                   <Dropdown
                     className="font-semibold text-blue-500 cursor-pointer"
@@ -176,13 +203,14 @@ const Navbar = () => {
                     </a>
                   </Dropdown>
                 </div>
-              ) : (
+              )}
+              {pathname !== "/createarticle" && (
                 <Link
-                  href={"/register"}
-                  className="max-sm:fixed z-[300] w-full left-0 bottom-0"
+                  href={token ? "/createarticle" : "/register"}
+                  className={`max-sm:fixed z-[300] w-full left-0 bottom-0 ${token ? "hidden max-sm:block" : "block"}`}
                 >
                   <button className="bg-blue-600 px-4 text-white max-sm:w-full py-1 rounded text-[20px] max-sm:rounded-none font-bold max-sm:text-[17px] max-sm:px-2 max-sm:py-4">
-                    Hisobga kirish
+                    {token ? "Maqola yuborish" : "Hisobga kirish"}
                   </button>
                 </Link>
               )}
@@ -195,6 +223,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div
+          id="content"
+          className="w-screen h-screen fixed z-[699] top-0 bg-white bg-opacity-50 backdrop-blur-sm"
+        >
+          {/* Asosiy sahifa kontenti */}
+        </div>
+      )}
     </nav>
   );
 };

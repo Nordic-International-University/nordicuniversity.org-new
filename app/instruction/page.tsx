@@ -23,7 +23,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/public/abstrakt.d8a2d89523158d92ef74.jpg",
+        url: "/abstrakt.d8a2d89523158d92ef74.jpg",
         width: 800,
         height: 600,
         alt: "Nordic Jurnali",

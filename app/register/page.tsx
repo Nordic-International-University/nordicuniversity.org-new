@@ -3,7 +3,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Button, Input, message, Modal } from "antd";
 import { useLoginUserMutation } from "@/lib/query/register.query";
 import Cookies from "js-cookie";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import login from "@/public/log.svg";
 import register from "@/public/register.svg";
@@ -33,6 +33,7 @@ const Page: React.FC = () => {
   const [loginUser, { isLoading: isLoggingIn }] = useLoginUserMutation();
   const [isModalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState<string | null>(null);
+  const path = usePathname();
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     full_name: "",
@@ -49,8 +50,9 @@ const Page: React.FC = () => {
   });
 
   const urlSearchHome = () => {
-    // const fromHome = searchParams?.get("fromhome");
-    return "/profile";
+    const searchedPath = window.location.href;
+    console.log(searchedPath);
+    return searchedPath === "/register" ? "/register" : "/createarticle";
   };
 
   const handlePhoneNumberChange = (

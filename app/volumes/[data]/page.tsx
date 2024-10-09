@@ -1,4 +1,4 @@
-// app/publications/[volumeId]/page.tsx
+// app/publications/[volumeId]/newsClientPage.tsx
 
 import React from "react";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
