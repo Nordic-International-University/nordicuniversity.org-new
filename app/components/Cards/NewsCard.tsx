@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import moment from "moment";
 import Link from "next/link";
@@ -26,6 +28,8 @@ const NewsCard = ({
   author,
   imageUrl,
 }: SmallCardProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <div>
       <Link href={`/article/${slug}`} prefetch={false}>
@@ -33,16 +37,19 @@ const NewsCard = ({
           <Image
             src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
             alt={title}
-            className="object-cover rounded-tl-md rounded-bl-md"
             width={150}
             height={100}
+            onLoad={() => setIsLoaded(true)}
+            className={`object-cover rounded-tl-md rounded-bl-md h-full transition-all duration-1000 ${
+              isLoaded ? "blur-0" : "blur-md"
+            }`}
           />
           <div className="ml-2 py-2 px-2 w-full flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-center">
                 <p className="text-[11px] text-[#478CCF] font-bold">
                   {" "}
-                  {moment(date).utc().format("YYYY-MM-DD")}
+                  {moment(date).utc().format("DD.MM.YYYY")}
                 </p>
               </div>
               <p className="text-ellipsis font-semibold line-clamp-3  text-[13px] mt-2 mb-2 text-green-950 tracking-wider max-[400px]:h-[100px] ">

@@ -80,7 +80,7 @@ const HomePageCardClient = ({
               />
             </div>
           </Link>
-          <div className="mb-3 mt-5 flex items-center justify-between">
+          <div className="mb-3 flex items-center justify-between">
             <RoundedSvg title="Yangiliklar" />
             <div className="flex items-center gap-3">
               <Button

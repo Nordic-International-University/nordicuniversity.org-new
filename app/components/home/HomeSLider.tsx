@@ -14,8 +14,8 @@ const HomeSlider = () => {
 
   return (
     <>
-      <header className="container">
-        <div className="flex items-center max-lg:items-start max-lg:flex-col-reverse justify-between max-lg:mt-1 mt-10 max-lg:mb-5 mb-12">
+      <header className="container mt-[25px] max-sm:mt-[20px]">
+        <div className="flex items-center max-lg:items-start max-lg:flex-col-reverse justify-between max-lg:mt-1 max-lg:mb-5 mb-12">
           <div className="max-md:mt-5 max-lg:hidden block">
             <div className="max-w-[700px] max-lg:w-full">
               <h1 className="text-7xl max-md:text-4xl text-blue-600">

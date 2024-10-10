@@ -41,7 +41,7 @@ const PublicationsClient = ({ data, volume }: { data: any; volume: any }) => {
                     </li>
                     <li className="flex items-center justify-center  mb-2">
                       <FaCalendarAlt className="text-[#0d6efd]" />
-                      {moment(item.createdAt).utc().format("YYYY-MM-DD")}
+                      {moment(item.createdAt).utc().format("DD.MM.YYYY")}
                     </li>
                     <Link
                       href={`${process.env.NEXT_PUBLIC_API_URL}${item?.source?.file_path}`}

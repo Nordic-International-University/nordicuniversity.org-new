@@ -51,17 +51,20 @@ const Page = () => {
     useGetAllFilteredArticlesMutation();
 
   const handleSortChange = (value: string) => {
-    setFilterState((prevState: any) => {
-      const newSort = {
-        createdAt: value === "createdAt" ? "DESC" : null,
-        viewsCount: value === "viewsCount" ? "DESC" : null,
-      };
-      return {
-        ...prevState,
-        sort: newSort,
-      };
+    const [sortField, sortOrder] = value.split("_");
+
+    setFilterState((prevState: any) => ({
+      ...prevState,
+      sort: {
+        [sortField]: sortOrder,
+      },
+    }));
+
+    getAllFilteredArticles({
+      data: { ...filterState, sort: { [sortField]: sortOrder } },
+      page: 1,
+      limit: 40,
     });
-    getAllFilteredArticles({ data: filterState, page: 1, limit: 40 });
   };
 
   const handleSearch = () => {
@@ -287,14 +290,18 @@ const Page = () => {
                 </span>
               </div>
               <Select
-                defaultValue="createdAt"
+                defaultValue="createdAt_DESC"
                 onChange={handleSortChange}
-                className="w-40"
+                className="w-64 max-sm:w-32"
                 placeholder="Saralash"
               >
-                <Select.Option value="createdAt">Sana</Select.Option>
-                <Select.Option value="viewsCount">
-                  Ko'rishlar soni
+                <Select.Option value="createdAt_ASC">Eski-yangi</Select.Option>
+                <Select.Option value="createdAt_DESC">Yangi-eski</Select.Option>
+                <Select.Option value="viewsCount_ASC">
+                  Ko'rishlar soni (kamdan-ko'pga)
+                </Select.Option>
+                <Select.Option value="viewsCount_DESC">
+                  Ko'rishlar soni (ko‘pdan-kamga)
                 </Select.Option>
               </Select>
             </div>
@@ -324,7 +331,7 @@ const Page = () => {
                       <BigArticlesCard
                         views={item.viewsCount}
                         title={item.title}
-                        date={item.publishedDate}
+                        date={item.publish_date}
                         category={item.category.name}
                         description={item.description}
                         slug={item.slug}

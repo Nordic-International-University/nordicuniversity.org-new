@@ -33,7 +33,7 @@ const BigArticlesCard = ({
   return (
     <Link href={`/article/${slug}`} prefetch={false}>
       <div
-        className="w-full flex-col bg-[#f2f3f7] rounded-md p-1 min-h-[150px]
+        className="w-full flex-col bg-[#f2f3f7] rounded-md p-1 h-[350px]
         overflow-hidden shadow-[5px_5px_10px_0px_#D2DCE9CC] hover:shadow-[1px_3px_10px_0px_#5B99C2]
         transition-shadow"
       >
@@ -49,23 +49,25 @@ const BigArticlesCard = ({
             onLoad={() => setIsLoaded(true)}
           />
         </div>
-        <div className="py-2 px-2">
-          <div className="flex justify-between items-center">
-            <p className="border-[2px] rounded p-0.5 text-[9px] text-[#478CCF] font-bold">
-              {category}
-            </p>
-            <div className="flex items-center gap-2">
-              <BsEye className="text-sm" />
-              <p className="font-normal text-[12px]">{views}</p>
+        <div className="py-2 px-2 flex flex-col justify-between h-[125px]">
+          <div>
+            <div className="flex justify-between items-center">
+              <p className="border-[2px] rounded p-0.5 text-[9px] text-[#478CCF] font-bold">
+                {category}
+              </p>
+              <div className="flex items-center gap-2">
+                <BsEye className="text-sm" />
+                <p className="font-normal text-[12px]">{views}</p>
+              </div>
             </div>
+            <p className="font-semibold line-clamp-2 text-[13px] mt-2 text-green-950">
+              {title}
+            </p>
           </div>
-          <p className="font-semibold text-[13px] mt-2 text-green-950 h-[70px]">
-            {title}
-          </p>
           <div className="flex justify-between items-center">
             <p className="text-[11px] text-[#478CCF] font-bold">{author}</p>
             <p className="text-[11px] text-[#478CCF] font-bold">
-              {moment(date).utc().format("YYYY-MM-DD")}
+              {moment(date).utc().format("DD.MM.YYYY")}
             </p>
           </div>
         </div>

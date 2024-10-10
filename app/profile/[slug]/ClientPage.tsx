@@ -11,6 +11,7 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import Link from "next/link";
+import ReferencesTable from "@/app/components/helpers/parseAuthorName";
 
 export const ArticleStatusEnum = {
   NEW: "NEW",
@@ -32,23 +33,23 @@ const MyArticle = ({ data }: any) => {
       {
         title: "Yangi maqola",
         uniqueKey: "Yangi maqola",
-        description: "Tekshirilmoqda",
+        description: currentStep === 0 && "Tekshirilmoqda",
         key: ArticleStatusEnum.NEW,
       },
       {
-        title: "Antiplagiat",
+        title: "Antiplagiat tekshiruvi",
         uniqueKey: "Antiplagiat",
-        description: "O‘xshashlik darajasini aniqlash",
+        description: currentStep === 1 && "O‘xshashlik darajasini aniqlash",
         key: ArticleStatusEnum.PLAGIARISM,
       },
       {
-        title: "Taqriz",
+        title: "Taqrizga yuborildi",
         uniqueKey: "Taqriz",
-        description: "Baholash va tahlil qilish jarayoni",
+        description: currentStep === 2 && "Baholash va tahlil qilish jarayoni",
         key: ArticleStatusEnum.REVIEW,
       },
       {
-        uniqueKey: "to'lov",
+        uniqueKey: "To'lov",
         title:
           currentStep === 3 ? (
             <div className="flex items-center gap-3">
@@ -73,26 +74,19 @@ const MyArticle = ({ data }: any) => {
                 />
               </Link>
             </div>
-          ) : currentStep > 3 && data?.status === "ACCEPT" ? (
-            "To‘lov qabul qilindi"
+          ) : (currentStep > 3 && data?.status === "ACCEPT") || data?.isPaid ? (
+            "To‘lov amalga oshirilgan"
           ) : (
-            "To'lov tasdiqlanishini kuting"
+            "To'lovingiz kutilmoqda"
           ),
-        description:
-          currentStep === 3 ? (
-            <p>To'lov qilish usulini tanlang</p>
-          ) : currentStep > 3 && data?.status === "ACCEPT" ? (
-            ""
-          ) : (
-            ""
-          ),
+        description: currentStep === 3 && <p>To'lov qilish usulini tanlang</p>,
         key: ArticleStatusEnum.PAYMENT,
-        icon:
-          data?.status === "ACCEPT" ? null : (
-            <div className="rounded-full flex justify-center items-start">
-              <FcDocument className="text-3xl" />
-            </div>
-          ),
+        // icon:
+        //   data?.status === "ACCEPT" ? null : (
+        //     <div className="rounded-full flex justify-center items-start">
+        //       <FcDocument className="text-3xl" />
+        //     </div>
+        //   ),
         status:
           currentStep === 3
             ? "process"
@@ -101,7 +95,13 @@ const MyArticle = ({ data }: any) => {
               : "",
       },
       {
-        title: "Holatni kuting",
+        title: "Nashr qilindi!",
+        uniqueKey: "Rad etildi",
+        description: (currentStep === 4 && data?.status === "ACCEPT") || (
+          <Link className="underline" href={`/article/${data?.slug}`}>
+            Maqolani elektron jurnalda ko‘rish
+          </Link>
+        ),
         key: ArticleStatusEnum.ACCEPT,
       },
     ];
@@ -116,10 +116,13 @@ const MyArticle = ({ data }: any) => {
           ...initialSteps[rejectIndex],
           description: (
             <>
-              <span>Rad etilish sababi:</span> {data?.reason_for_rejection}
+              <span>Sababi:</span> {data?.reason_for_rejection}
             </>
           ),
-          title: initialSteps[rejectIndex].uniqueKey + " rad etildi",
+          title:
+            initialSteps[rejectIndex].uniqueKey === "Rad etildi"
+              ? "Rad etildi"
+              : initialSteps[rejectIndex].uniqueKey + " holatida rad etildi",
           status: "error",
         };
         setReject(rejectIndex);
@@ -182,38 +185,29 @@ const MyArticle = ({ data }: any) => {
     </Button>
   );
 
+  const isPdf = data?.file?.file_path?.endsWith(".pdf");
   const items = [
     {
       key: "1",
       label: "Maqolaning birlamchi manbasi o‘qish",
-      children:
-        data?.file?.file_path.split(".").pop().toLowerCase() === "pdf" ? (
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
-          >
-            <div style={{ height: "750px" }}>
-              <Viewer
-                fileUrl={`${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}`}
-                plugins={[defaultLayoutPluginInstance]}
-              />
-            </div>
-          </Worker>
-        ) : (
-          <div className="relative h-[600px]">
-            {loading && (
-              <div className="absolute flex items-center justify-center w-full h-full">
-                <Spin />
-              </div>
-            )}
-            <iframe
-              src={`https://view.officeapps.live.com/op/embed.aspx?src=${process.env.REACT_APP_API_URL2}${data?.file?.file_path}`}
-              width="100%"
-              className="h-full"
-              frameBorder="0"
-              onLoad={() => setLoading(false)}
-            ></iframe>
+      children: isPdf ? (
+        <Worker
+          workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
+        >
+          <div style={{ height: "750px" }}>
+            <Viewer
+              fileUrl={`${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}`}
+              plugins={[defaultLayoutPluginInstance]}
+            />
           </div>
-        ),
+        </Worker>
+      ) : (
+        <iframe
+          src={`https://docs.google.com/viewer?url=${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}&embedded=true`}
+          style={{ width: "100%", height: "750px" }}
+          frameBorder="0"
+        />
+      ),
       extra: genExtra("Manbaani yuklash", data?.file?.file_path, false),
     },
     {
@@ -258,6 +252,8 @@ const MyArticle = ({ data }: any) => {
       extra: genExtra("Sertifikatni yuklash", item?.certificate_link, true),
     };
   });
+
+  console.log(data);
 
   return (
     <>
@@ -374,9 +370,17 @@ const MyArticle = ({ data }: any) => {
                 />
               </div>
             )}
+            {data?.references?.length && (
+              <div className="mt-4 w-full bg-white rounded-md pt-4 px-4">
+                <h1 className="font-bold text-lg pb-4">
+                  Foydalanilgan adabiyotlar
+                </h1>
+                <ReferencesTable references={data.references} />
+              </div>
+            )}
           </div>
           <div className="w-3/12 max-xl:w-full">
-            <div className="bg-white block max-md:hidden w-full pr-24 pl-4 py-6 rounded-md">
+            <div className="bg-white block max-md:hidden w-full px-4 py-6 rounded-md">
               <h2 className="text-xl pb-7">Maqola holati</h2>
               <Steps
                 direction="vertical"

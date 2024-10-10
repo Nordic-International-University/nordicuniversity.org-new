@@ -25,7 +25,7 @@ const Page = () => {
 
   return (
     <>
-      <section className="mt-[50px] max-sm:mt-[30px]">
+      <section className="mt-[25px] max-sm:mt-[20px]">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-10 justify-between">
             <div className="w-full lg:w-auto">
@@ -220,9 +220,14 @@ const Page = () => {
             <div className="w-full lg:min-w-[400px]">
               <div className="font-semibold mb-7">
                 <RoundedSvg title="Litsenziya" />
-                <Image className="mt-4" src={certificate} alt="Litsenziya" />
+                <Image
+                  className="mt-4 rounded-t-xl"
+                  src={certificate}
+                  alt="Litsenziya"
+                />
                 <Button
-                  className="mt-3 w-full"
+                  className="rounded-t-none
+                   w-full"
                   size="large"
                   type="primary"
                   download

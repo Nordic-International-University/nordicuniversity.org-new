@@ -28,6 +28,27 @@ const Navbar = () => {
   const router = useRouter();
   const [token, setToken] = useState<string | null>(null);
   const menuRef = useRef<HTMLUListElement>(null);
+  const [showHeader, setShowHeader] = useState(true);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setAtTop(currentScrollY === 0);
+
+      if (currentScrollY > lastScrollY) {
+        setShowHeader(false); // Pastga scroll qilganda headerni yashirish
+      } else {
+        setShowHeader(true); // Yuqoriga scroll qilganda headerni ko'rsatish
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isOpen && menuRef.current) {
@@ -133,7 +154,11 @@ const Navbar = () => {
   if (pathname === "/login" || pathname === "/register") return null;
 
   return (
-    <nav className="py-2">
+    <nav
+      className={`lg:sticky lg:top-0 lg:left-0 w-full py-2 lg:transition-transform lg:duration-300 z-50 ${
+        atTop ? "" : "bg-white shadow-md"
+      } ${showHeader ? "lg:transform lg:translate-y-0" : "lg:transform lg:-translate-y-full"}`}
+    >
       <div className="container">
         <div className="flex items-center justify-between">
           <Link href={"/"}>
@@ -145,7 +170,7 @@ const Navbar = () => {
               id="menu"
               className={`max-lg:fixed justify-center max-sm:shadow-2xl px-3 max-sm:rounded-l-xl ${
                 !isOpen ? "max-lg:-right-[100%]" : "max-lg:right-0"
-              } max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-[700] flex items-center max-sm:pb-96 max-sm:gap-2 gap-12`}
+              } max-lg:bg-white max-lg:h-screen max-lg:w-2/3 max-lg:flex-col max-lg:top-0 transition-all ease-in-out z-[700] flex items-center max-sm:pb-96 max-sm:gap-2 gap-2`}
             >
               <AiOutlineClose
                 onClick={() => dispatch(closeMenu())}
@@ -155,7 +180,7 @@ const Navbar = () => {
                 <li
                   onClick={() => dispatch(closeMenu())}
                   key={index}
-                  className={`relative group ${pathname === item.path ? "max-sm:border-b-sky-800" : "max-sm:border-b-[#0196e3]"}  max-sm:border-b-[2px] max-sm:w-full px-4 text-[#0196e3] text-[18px] font-[700] pb-2 ${
+                  className={`relative group ${pathname === item.path ? "max-sm:border-b-sky-800" : "max-sm:border-b-[#0196e3]"}  max-sm:border-b-[2px] max-sm:w-full px-4 text-[18px] font-[700] pb-2 ${
                     pathname === item.path ? "text-sky-700" : ""
                   }`}
                   onMouseEnter={handleMouseEnter}

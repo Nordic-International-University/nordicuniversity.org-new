@@ -1,7 +1,7 @@
 "use client";
 import React, { lazy } from "react";
-import { Container, Table } from "react-bootstrap";
-import { Button, Collapse } from "antd";
+import { Container } from "react-bootstrap";
+import { Button, Collapse, Table } from "antd";
 import dayjs from "dayjs";
 import { BiDownload } from "react-icons/bi";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -9,6 +9,7 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import Link from "next/link";
 import Image from "next/image";
+import ReferencesTable from "@/app/components/helpers/parseAuthorName";
 
 const Worker = lazy(() =>
   import("@react-pdf-viewer/core").then((mod) => ({ default: mod.Worker })),
@@ -69,11 +70,13 @@ const Articles = ({ data }: { data: any }) => {
     </Button>
   );
 
+  const isPdf = data?.file?.file_path?.endsWith(".pdf");
+
   const items = [
     {
       key: "1",
       label: "Maqolaning birlamchi manbasi o‘qish",
-      children: (
+      children: isPdf ? (
         <Worker
           workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
         >
@@ -84,6 +87,12 @@ const Articles = ({ data }: { data: any }) => {
             />
           </div>
         </Worker>
+      ) : (
+        <iframe
+          src={`https://docs.google.com/viewer?url=${process.env.NEXT_PUBLIC_API_URL}${data?.file?.file_path}&embedded=true`}
+          style={{ width: "100%", height: "750px" }}
+          frameBorder="0"
+        />
       ),
       extra: genExtra("Maqolani yuklash", data?.file?.file_path, false),
     },
@@ -250,31 +259,48 @@ const Articles = ({ data }: { data: any }) => {
             {data?.coAuthors?.length !== 0 && (
               <div className="mt-4 w-full bg-white pt-4 px-4">
                 <h1 className="font-bold text-lg pb-4">Hammualliflar</h1>
-                <Table striped bordered hover responsive>
-                  <thead>
-                    <tr
-                      className="text-nowrap
-                    "
-                    >
-                      <th>Muallif</th>
-                      <th>Ilmiy daraja</th>
-                      <th>Telefon raqami</th>
-                      <th>Ish joyi</th>
-                      <th>Lavozim</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data?.coAuthors?.map((author: any) => (
-                      <tr key={author.id}>
-                        <td>{author.full_name}</td>
-                        <td>{author.science_degree}</td>
-                        <td>{author.phone_number}</td>
-                        <td>{author.place_position}</td>
-                        <td>{author.job}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
+                <Table
+                  className="text-nowrap pb-4 overflow-auto"
+                  columns={[
+                    {
+                      title: "Muallif",
+                      dataIndex: "full_name",
+                      key: "full_name",
+                    },
+                    {
+                      title: "Ilmiy daraja",
+                      dataIndex: "science_degree",
+                      key: "science_degree",
+                    },
+                    {
+                      title: "Telefon raqami",
+                      dataIndex: "phone_number",
+                      key: "phone_number",
+                    },
+                    {
+                      title: "Ish joyi",
+                      dataIndex: "place_position",
+                      key: "place_position",
+                    },
+                    {
+                      title: "Lavozim",
+                      dataIndex: "job",
+                      key: "job",
+                    },
+                  ]}
+                  dataSource={data?.coAuthors || []}
+                  rowKey="id"
+                  bordered
+                  pagination={false}
+                />
+              </div>
+            )}
+            {data?.references?.length && (
+              <div className="mt-4 w-full bg-white rounded-md pt-4 px-4">
+                <h1 className="font-bold text-lg pb-4">
+                  Foydalanilgan adabiyotlar
+                </h1>
+                <ReferencesTable references={data.references} />
               </div>
             )}
           </div>
@@ -328,7 +354,7 @@ const Articles = ({ data }: { data: any }) => {
               </Link>
             )}
             {data?.publish_date && (
-              <div className="w-full mt-4">
+              <div className="w-full my-4">
                 <div className="flex text-white items-center">
                   <span className="bg-blue-500 text-nowrap rounded-bl-md text-sm rounded-tl-md py-2 px-2">
                     Nashr etilgan sana:
@@ -339,7 +365,7 @@ const Articles = ({ data }: { data: any }) => {
                 </div>
               </div>
             )}
-            <div className="w-full bg-white mt-4 px-3 py-4 rounded-md">
+            <div className="w-full bg-white px-3 py-4 rounded-md">
               <h2 className="text-xl pb-6">Maqolaning muallifi</h2>
               <div className="flex flex-col gap-3">
                 <p>

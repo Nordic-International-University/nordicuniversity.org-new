@@ -48,7 +48,7 @@ export const metadata = {
 
 export default async function Page() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mt-[25px] max-sm:mt-[20px]">
       <div className="mb-0 text-center">
         <RoundedSvg title="Ilmiy maqolaga qo‘yilgan talablar" />
       </div>
@@ -149,7 +149,7 @@ export default async function Page() {
               Foydalanilgan adabiyotlar ro‘yxati
             </div>
           </div>
-          <div className="max-w-[550px] max-lg:w-full">
+          <div className="max-w-[550px] max-sm:px-4 max-lg:w-full">
             <Image className="w-full" src={emirate} alt="Imrad talablari" />
             <Button
               download

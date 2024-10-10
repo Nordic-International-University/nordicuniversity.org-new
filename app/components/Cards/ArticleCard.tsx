@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
@@ -26,6 +28,8 @@ const ArticleCard = ({
   slug,
   width,
 }: SmallCardProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <Link href={`/article/${slug}`} prefetch={true}>
       <div className="cursor-pointer">
@@ -36,8 +40,11 @@ const ArticleCard = ({
             <Image
               src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
               alt={title}
-              className="object-cover w-full h-full rounded-tl-md rounded-bl-md"
+              className={`object-cover rounded-tl-md rounded-bl-md  h-full transition-all duration-1000 ${
+                isLoaded ? "blur-0" : "blur-md"
+              }`}
               width={150}
+              onLoad={() => setIsLoaded(true)}
               height={150}
             />
           </div>
@@ -45,7 +52,7 @@ const ArticleCard = ({
             <div>
               <div className="flex justify-between items-center">
                 <p className="text-[11px] text-[#478CCF] font-bold">
-                  {moment(date).utc().format("YYYY-MM-DD")}
+                  {moment(date).utc().format("DD.MM.YYYY")}
                 </p>
                 <p className="border-[2px] max-sm:hidden block rounded p-0.5 text-[9px] text-[#478CCF] font-bold">
                   {category}

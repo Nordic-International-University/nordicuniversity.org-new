@@ -32,8 +32,8 @@ const Page: React.FC = () => {
   const [isSignUpMode, setSignUpMode] = useState(false);
   const [loginUser, { isLoading: isLoggingIn }] = useLoginUserMutation();
   const [isModalVisible, setModalVisible] = useState(false);
+  const [redirectPath, setRedirectPath] = useState("");
   const [id, setId] = useState<string | null>(null);
-  const path = usePathname();
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     full_name: "",
@@ -48,12 +48,6 @@ const Page: React.FC = () => {
     phone_number: "",
     password: "",
   });
-
-  const urlSearchHome = () => {
-    const searchedPath = window.location.href;
-    console.log(searchedPath);
-    return searchedPath === "/register" ? "/register" : "/createarticle";
-  };
 
   const handlePhoneNumberChange = (
     value: string | undefined,
@@ -150,13 +144,10 @@ const Page: React.FC = () => {
 
     try {
       const data = await loginUser(loginDataRequest).unwrap();
-
-      if (data.message === "USER_LOGGED_IN") {
-        Cookies.set("access_token", data.login_data.token);
-        Cookies.set("phone", loginData.phone_number);
-        router.push(urlSearchHome());
-        message.success("Muvaffaqiyatli kirildi!");
-      }
+      Cookies.set("access_token", data.login_data.token);
+      Cookies.set("phone", loginData.phone_number);
+      router.push("/profile");
+      message.success("Muvaffaqiyatli kirildi!");
     } catch (err: any) {
       console.log(err);
       if (err?.status === 422) {
@@ -180,9 +171,7 @@ const Page: React.FC = () => {
           footer={null}
           centered={true}
         >
-          {id && (
-            <OtpInput path={urlSearchHome()} id={id} formData={formData} />
-          )}
+          {id && <OtpInput path={"/profile"} id={id} formData={formData} />}
         </Modal>
       </div>
       <div

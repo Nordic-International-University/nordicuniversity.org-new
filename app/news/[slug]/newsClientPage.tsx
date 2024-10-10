@@ -21,6 +21,9 @@ const Page2 = ({ singleNews }: any) => {
           transition={{ duration: 0.5 }}
           className="flex flex-col lg:flex-row items-start gap-6 mb-8"
         >
+          <h1 className="text-3xl max-sm:block hidden max-sm:text-xl font-bold text-blue-900">
+            {singleNews.title}
+          </h1>
           <Image
             width={600}
             height={400}
@@ -38,7 +41,7 @@ const Page2 = ({ singleNews }: any) => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-3xl max-sm:text-xl font-bold mb-4 text-blue-900">
+            <h1 className="text-3xl max-sm:hidden block max-sm:text-xl font-bold mb-4 text-blue-900">
               {singleNews.title}
             </h1>
             <p className="text-gray-600 max-sm:text-justify">

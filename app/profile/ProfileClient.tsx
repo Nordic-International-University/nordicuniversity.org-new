@@ -12,6 +12,7 @@ import {
   FcDocument,
   FcMoneyTransfer,
 } from "react-icons/fc";
+import { MdOutlineFiberNew } from "react-icons/md";
 
 interface Article {
   title: string;
@@ -57,32 +58,32 @@ const getStatusTextAndIcon = (status: string) => {
     case ArticleStatusEnum.NEW:
       return {
         text: "Yangi",
-        icon: <AiOutlineLoading3Quarters className="text-blue-500" />, // Loading spinner
+        icon: <MdOutlineFiberNew className="text-blue-500 text-2xl" />,
       };
     case ArticleStatusEnum.PLAGIARISM:
       return {
-        text: "Antiplagiat tekshirmoqda",
-        icon: <FcDocument className="text-yellow-500" />, // Document with a yellow tint
+        text: "Antiplagiatga tekshirilmoqda",
+        icon: <FcDocument className="text-yellow-500 text-2xl" />,
       };
     case ArticleStatusEnum.REVIEW:
       return {
-        text: "Ko'rib chiqilmoqda",
-        icon: <FcClock className="text-orange-500" />, // Clock icon for review
+        text: "Taqrizga tekshirilmoqda",
+        icon: <FcClock className="text-orange-500 text-xl" />,
       };
     case ArticleStatusEnum.ACCEPT:
       return {
         text: "Qabul qilindi",
-        icon: <FcCheckmark className="text-green-500" />, // Checkmark icon for acceptance
+        icon: <FcCheckmark className="text-green-500 text-xl" />,
       };
     case ArticleStatusEnum.REJECTED:
       return {
         text: "Rad etildi",
-        icon: <FcCancel className="text-red-500" />, // Cancel icon for rejection
+        icon: <FcCancel className="text-red-500 text-xl" />,
       };
     case ArticleStatusEnum.PAYMENT:
       return {
         text: "To‘lov kutilmoqda",
-        icon: <FcMoneyTransfer className="text-purple-500" />, // Money transfer icon for payment
+        icon: <FcMoneyTransfer className="text-purple-500 text-xl" />,
       };
     default:
       return {
@@ -137,13 +138,19 @@ export default function TableComponent({ data }: ProfileClientProps) {
   ];
 
   const articleDataSource = data?.Articles?.map((item, index) => {
+    const { text, icon } = getStatusTextAndIcon(item?.status);
     return {
       key: "1",
       title: item?.title,
-      status: getStatusText(item?.status),
+      status: (
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {icon}
+          <span style={{ marginLeft: "8px" }}>{text}</span>
+        </div>
+      ),
       slug: item?.slug,
       category: item?.category?.name,
-      createdAt: dayjs(item?.createdAt).format("YYYY-MM-DD"),
+      createdAt: dayjs(item?.createdAt).format("DD.MM.YYYY"),
       viewsCount: item?.viewsCount + " ta",
     };
   });
