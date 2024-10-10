@@ -22,6 +22,33 @@ const Page = () => {
     (state: RootState) => state.about.accordionItems,
   );
   const aboutItem = useSelector((state: RootState) => state.about.aboutItems);
+  const sliderData = [
+    {
+      id: 1,
+      image: image_sherzod,
+      name: "Sherzod Mustafakulov",
+      title:
+        "Tahririyat kengashi raisi: iqtisodiyot fanlari doktori, professor",
+    },
+    {
+      id: 2,
+      image: image_oybek,
+      name: "Oybek Raximberdiyev",
+      title: "Tahririyat kengashi mas’ul kotibir",
+    },
+    {
+      id: 3,
+      image: image_odil,
+      name: "Odil Qo’ysinov",
+      title: "Bosh muharrir: pedagogika fanlari doktori, professor",
+    },
+    {
+      id: 4,
+      image: image_aziz,
+      name: "Azizbek Abdullayev",
+      title: "Dizayner",
+    },
+  ];
 
   return (
     <>
@@ -83,9 +110,9 @@ const Page = () => {
                     slidesPerView={1}
                     spaceBetween={5}
                     loop={true}
-                    speed={1500}
+                    speed={1700}
                     autoplay={{
-                      delay: 500,
+                      delay: 1000,
                       disableOnInteraction: false,
                     }}
                     pagination={{
@@ -94,84 +121,37 @@ const Page = () => {
                     breakpoints={{
                       640: {},
                       768: {
-                        slidesPerView: 4,
+                        slidesPerView: 2,
                       },
                       1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 3,
+                      },
+                      1280: {
+                        slidesPerView: 4,
                       },
                     }}
                     navigation={true}
                     modules={[Autoplay, Navigation]}
-                    className=" max-sm:block"
+                    className="max-sm:block"
                   >
-                    <SwiperSlide className="text-center justify-center items-center w-[215px]">
-                      <div className=" relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
-                        <Image
-                          src={image_sherzod}
-                          alt="Tahririyat hayati rasm"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute px-1 bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
-                          <p className="text-xs font-semibold ">
-                            Sherzod Mustafakulov
-                          </p>
-                          <p className="text-white text-[10px]">
-                            {" "}
-                            Tahririyat kengashi raisi: iqtisodiyot fanlari
-                            doktori, professor
-                          </p>
+                    {sliderData.map((item) => (
+                      <SwiperSlide
+                        key={item.id}
+                        className="text-center w-[215px] max-sm:w-full"
+                      >
+                        <div className="relative w-full h-[205px] max-sm:h-[400px]">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center">
+                            <p className="text-xs font-semibold">{item.name}</p>
+                            <p className="text-xs">{item.title}</p>
+                          </div>
                         </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="relative  text-center w-[215px] max-sm:w-full">
-                      <div className="relative text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
-                        <Image
-                          src={image_oybek}
-                          alt="Tahririyat hayati rasm"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
-                          <p className="text-xs font-semibold">
-                            Oybek Raximberdiyev
-                          </p>
-                          <p className="text-xs">
-                            Tahririyat kengashi mas’ul kotibir
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="relative  text-center w-[215px] max-sm:w-full  ">
-                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px]">
-                        <Image
-                          src={image_odil}
-                          alt="Tahririyat hayati rasm"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center ">
-                          <p className="text-xs font-semibold">
-                            Odil Qo’ysinov
-                          </p>
-                          <p className="text-xs text-white">
-                            Bosh muharrir: pedagogika fanlari doktori, professor
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="  text-center w-[215px] max-sm:w-full ">
-                      <div className="relative  text-center w-full h-[205px] max-sm:w-full max-sm:h-[400px] ">
-                        <Image
-                          src={image_aziz}
-                          alt="Tahririyat hayati rasm"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-[rgba(1,150,227,0.6)] bg-opacity-50 text-white w-full h-[55px] flex flex-col justify-center items-center">
-                          <p className="text-xs font-semibold">
-                            Azizbek Abdullayev
-                          </p>
-                          <p className="text-xs">Dizayner</p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
 

@@ -10,7 +10,7 @@ const initialState = {
     {
       key: "2",
       label: "Maqola topshirish pullikmi?",
-      children: "MAqolani chop etish narxi 400 000 so'm",
+      children: "Maqolani chop etish narxi 400 000 so'm",
     },
     {
       key: "3",

@@ -97,7 +97,7 @@ const MyArticle = ({ data }: any) => {
       {
         title: "Nashr qilindi!",
         uniqueKey: "Rad etildi",
-        description: (currentStep === 4 && data?.status === "ACCEPT") || (
+        description: currentStep === 4 && data?.status === "ACCEPT" && (
           <Link className="underline" href={`/article/${data?.slug}`}>
             Maqolani elektron jurnalda ko‘rish
           </Link>
@@ -252,8 +252,6 @@ const MyArticle = ({ data }: any) => {
       extra: genExtra("Sertifikatni yuklash", item?.certificate_link, true),
     };
   });
-
-  console.log(data);
 
   return (
     <>
