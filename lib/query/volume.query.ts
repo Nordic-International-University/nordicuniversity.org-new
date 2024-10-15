@@ -1,13 +1,16 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const volumeApi = createApi({
-    reducerPath: "volumeApi",
-    baseQuery: fetchBaseQuery({cache: "no-cache", baseUrl: process.env.NEXT_PUBLIC_API_URL}),
-    endpoints: (build) => ({
-        getVolumes: build.query<Array<any>, void>({
-            query: () => "/volume",
-        }),
+  reducerPath: "volumeApi",
+  baseQuery: fetchBaseQuery({
+    cache: "no-store",
+    baseUrl: process.env.NEXT_PUBLIC_API_URL,
+  }),
+  endpoints: (build) => ({
+    getVolumes: build.query<Array<any>, void>({
+      query: () => "/volume",
     }),
+  }),
 });
 
-export const {useGetVolumesQuery} = volumeApi;
+export const { useGetVolumesQuery } = volumeApi;
