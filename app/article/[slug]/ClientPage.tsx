@@ -96,27 +96,6 @@ const Articles = ({ data }: { data: any }) => {
       ),
       extra: genExtra("Maqolani yuklash", data?.file?.file_path, false),
     },
-    {
-      key: "2",
-      label: "Antiplagiat natijasini ko'rish",
-      children: (
-        <Worker
-          workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
-        >
-          <div style={{ height: "750px" }}>
-            <Viewer
-              fileUrl={`${process.env.NEXT_PUBLIC_API_URL}${data?.plagiarist_file?.file_path}`}
-              plugins={[defaultLayoutPluginInstance]}
-            />
-          </div>
-        </Worker>
-      ),
-      extra: genExtra(
-        "Antiplagiatni yuklash",
-        data?.plagiarist_file?.file_path,
-        false,
-      ),
-    },
   ];
 
   const certificates = data?.certificates?.map(
@@ -273,11 +252,6 @@ const Articles = ({ data }: { data: any }) => {
                       key: "science_degree",
                     },
                     {
-                      title: "Telefon raqami",
-                      dataIndex: "phone_number",
-                      key: "phone_number",
-                    },
-                    {
                       title: "Ish joyi",
                       dataIndex: "place_position",
                       key: "place_position",
@@ -380,10 +354,6 @@ const Articles = ({ data }: { data: any }) => {
                 <p>
                   <strong>Ilmiy daraja:</strong> {""}{" "}
                   {data?.author?.science_degree}
-                </p>
-                <p>
-                  <strong>Telefon raqami:</strong> {""}{" "}
-                  {data?.author?.phone_number}
                 </p>
               </div>
             </div>
