@@ -2,21 +2,6 @@ import React from "react";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
 
-export async function generateStaticParams() {
-  const backend_url = process.env.NEXT_PUBLIC_API_URL;
-
-  const res = await fetch(`${backend_url}/category`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch category IDs");
-  }
-
-  const categories = await res.json();
-
-  return categories.map((category: { id: number }) => ({
-    categoryId: String(category.id),
-  }));
-}
-
 export const generateMetadata = async ({
   params,
 }: {
