@@ -1,8 +1,8 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://journal.nordicuniversity.org/sitemap-0.xml</loc></sitemap>
-<sitemap><loc>https://journal.nordicuniversity.org/sitemap-category.xml</loc></sitemap>
-<sitemap><loc>https://journal.nordicuniversity.org/sitemap-volume.xml</loc></sitemap>
-<sitemap><loc>https://journal.nordicuniversity.org/sitemap-article.xml</loc></sitemap>
-<sitemap><loc>https://journal.nordicuniversity.org/sitemap-news.xml</loc></sitemap>
+    <sitemap><loc>https://journal.nordicuniversity.org/sitemap-0.xml</loc></sitemap>
+    <sitemap><loc>https://journal.nordicuniversity.org/sitemap-category.xml</loc></sitemap>
+    <sitemap><loc>https://journal.nordicuniversity.org/sitemap-volume.xml</loc></sitemap>
+    <sitemap><loc>https://journal.nordicuniversity.org/sitemap-article.xml</loc></sitemap>
+    <sitemap><loc>https://journal.nordicuniversity.org/sitemap-news.xml</loc></sitemap>
 </sitemapindex>

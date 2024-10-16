@@ -11,7 +11,7 @@ export async function GET(request: any) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  const siteUrl = process.env["X_API_KEY"] || "";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
   const backendUrl = process.env.NEXT_PUBLIC_API_URL;
   const volumeRes = await fetch(`${backendUrl}/volume`);
   const volumes = await volumeRes.json();
