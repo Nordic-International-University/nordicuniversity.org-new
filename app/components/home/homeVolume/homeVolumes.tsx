@@ -1,14 +1,25 @@
 import React from "react";
-import Store, {AppDispatch} from "@/lib/store/Store";
 import HomeVolumesClient from "@/app/components/home/homeVolume/HomeVolumesClient";
-import {volumeApi} from "@/lib/query/volume.query";
+
+const fetchVolumes = async () => {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/volume`, {
+      cache: "no-cache",
+    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch articles");
+    }
+    return response.json();
+  } catch (error) {
+    console.error("Error fetching articles:", error);
+    return [];
+  }
+};
 
 const HomeVolumes = async () => {
-    const dispatch = Store.dispatch as AppDispatch;
-    const result = await dispatch(volumeApi.endpoints.getVolumes.initiate());
-    const data = result.data;
+  const data: any = await fetchVolumes();
 
-    return <HomeVolumesClient volume={data}/>;
+  return <HomeVolumesClient volume={data} />;
 };
 
 export default HomeVolumes;
