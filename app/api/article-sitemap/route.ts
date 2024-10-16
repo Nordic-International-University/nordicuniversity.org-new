@@ -3,11 +3,11 @@ import path from "path";
 import { NextResponse } from "next/server";
 
 export async function GET(request: any) {
-  const allowedIps = [process.env["SERVER_IP"]];
+  // const allowedIps = [process.env["SERVER_IP"]];
   const apiKey = request.headers.get("x-api-key");
-  const requestIp = request.headers.get("x-forwarded-for") || request.ip;
+  // const requestIp = request.headers.get("x-forwarded-for") || request.ip;
 
-  if (!allowedIps.includes(requestIp) || apiKey !== process.env["X_API_KEY"]) {
+  if (apiKey !== process.env["X_API_KEY"]) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
