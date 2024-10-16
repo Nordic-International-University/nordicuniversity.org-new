@@ -4,7 +4,6 @@ import React from "react";
 import { Tabs, TabsProps, Table } from "antd";
 import dayjs from "dayjs";
 import { useRouter } from "next/navigation";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import {
   FcCancel,
   FcCheckmark,
@@ -23,19 +22,6 @@ interface Article {
   };
   createdAt: string;
   viewsCount: number;
-}
-
-function getStatusText(status: ArticleStatusEnum): string {
-  const statusTexts: { [key in ArticleStatusEnum]: string } = {
-    [ArticleStatusEnum.NEW]: "Yangi maqola",
-    [ArticleStatusEnum.PLAGIARISM]: "Antiplagiat tekshirmoqda",
-    [ArticleStatusEnum.REVIEW]: "Ko'rib chiqilmoqda",
-    [ArticleStatusEnum.ACCEPT]: "Qabul qilindi",
-    [ArticleStatusEnum.REJECTED]: "Rad etildi",
-    [ArticleStatusEnum.PAYMENT]: "To'lov jarayoni",
-  };
-
-  return statusTexts[status] || "Noma'lum maqola holati";
 }
 
 export enum ArticleStatusEnum {
@@ -137,23 +123,25 @@ export default function TableComponent({ data }: ProfileClientProps) {
     },
   ];
 
-  const articleDataSource = data?.Articles?.map((item, index) => {
-    const { text, icon } = getStatusTextAndIcon(item?.status);
-    return {
-      key: "1",
-      title: item?.title,
-      status: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          {icon}
-          <span style={{ marginLeft: "8px" }}>{text}</span>
-        </div>
-      ),
-      slug: item?.slug,
-      category: item?.category?.name,
-      createdAt: dayjs(item?.createdAt).format("DD.MM.YYYY"),
-      viewsCount: item?.viewsCount + " ta",
-    };
-  });
+  const articleDataSource = data?.Articles?.slice()
+    .sort((a, b) => (dayjs(b.createdAt).isAfter(dayjs(a.createdAt)) ? 1 : -1))
+    ?.map((item, _) => {
+      const { text, icon } = getStatusTextAndIcon(item?.status);
+      return {
+        key: "1",
+        title: item?.title,
+        status: (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {icon}
+            <span style={{ marginLeft: "8px" }}>{text}</span>
+          </div>
+        ),
+        slug: item?.slug,
+        category: item?.category?.name,
+        createdAt: dayjs(item?.createdAt).format("DD.MM.YYYY"),
+        viewsCount: item?.viewsCount + " ta",
+      };
+    });
 
   const dataSource = [
     {
