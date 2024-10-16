@@ -10,6 +10,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap-:slug.xml",
+        destination: "/public/sitemap-:slug.xml",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
