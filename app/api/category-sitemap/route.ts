@@ -12,7 +12,7 @@ export async function GET(request: any) {
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
-  const backendUrl = process.env["X_API_KEY"];
+  const backendUrl = process.env["NEXT_PUBLIC_API_URL"];
   const categoryRes = await fetch(`${backendUrl}/category`);
   const categories = await categoryRes.json();
 
