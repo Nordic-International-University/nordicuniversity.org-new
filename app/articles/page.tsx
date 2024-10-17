@@ -39,7 +39,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "",
+        url: "/public/journal2.webp",
         width: 800,
         height: 600,
         alt: "Nordic Jurnali logosi",

@@ -54,7 +54,6 @@ const Page: React.FC = () => {
     setState: React.Dispatch<React.SetStateAction<FormData | LoginData | any>>,
   ) => {
     if (value) {
-      console.log(value);
       setState((prevState: any) => ({
         ...prevState,
         phone_number: `+${value}`,
@@ -74,8 +73,6 @@ const Page: React.FC = () => {
       }
     };
   }, []);
-
-  console.log(loginData);
 
   const handleSignUpClick = () => {
     setSignUpMode(true);
@@ -149,7 +146,6 @@ const Page: React.FC = () => {
       router.push("/profile");
       message.success("Muvaffaqiyatli kirildi!");
     } catch (err: any) {
-      console.log(err);
       if (err?.status === 422) {
         message.error("Noto‘g‘ri telefon raqami yoki parol");
       } else if (err?.status === 500) {

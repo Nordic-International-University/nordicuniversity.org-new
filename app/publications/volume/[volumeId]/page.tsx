@@ -24,21 +24,26 @@ export async function generateMetadata({
 
   return {
     title: `Nashr - ${volumeData?.title}`,
-    description: `Nashrning tafsilotlari: ${volumeData[0]?.description}`,
-    keywords: `${volumeData[0]?.title}, nashr, maqola, ${volumeData[0]?.category.name}, ${articleCount} ta maqola`,
+    description: `Nashrning tafsilotlari: ${volumeData?.description}`,
+    keywords: `${volumeData?.title}, nashr, ${articleCount} ta maqola`,
     openGraph: {
-      title: `Nashr - ${volumeData[0]?.title}`,
-      description: volumeData[0]?.description,
+      title: `Nashr - ${volumeData?.title}`,
+      description: volumeData?.description,
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/publications/volume/${params.volumeId}`,
       type: "article",
       images: [
-        `${process.env.NEXT_PUBLIC_API_URL}${volumeData[0]?.image?.file_path}`,
+        {
+          url: `${process.env.NEXT_PUBLIC_API_URL}${volumeData?.image?.file_path}`,
+          width: 1200,
+          height: 630,
+          alt: volumeData?.title || "Nashr rasm",
+        },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `Nashr - ${volumeData[0]?.title}`,
-      description: volumeData[0]?.description,
+      title: `Nashr - ${volumeData?.title}`,
+      description: volumeData?.description,
     },
   };
 }

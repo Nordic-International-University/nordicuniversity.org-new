@@ -170,7 +170,6 @@ const OTPInput: React.FC<OTPInputProps> = ({ id, formData, path }) => {
           const registerResponse = await registerUser(formData).unwrap();
           Cookies.set("access_token", registerResponse?.data?.token);
           Cookies.set("phone", formData.phone_number);
-          console.log(path);
           router.push(path);
           message.success("Muvaffaqiyatli ro'yxatdan o'tildi!");
         } catch (err: any) {

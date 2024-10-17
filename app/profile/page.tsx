@@ -38,25 +38,19 @@ const Page = () => {
           <div className="w-full bg-white p-4 grid grid-cols-4 gap-6 rounded-lg shadow-md max-sm:grid-cols-1">
             <div className="w-full">
               <h1 className="mr-2">Telefon Raqam:</h1>
-              <span className="font-bold">
-                {posts?.data?.phone_number}
-              </span>
+              <span className="font-bold">{posts?.data?.phone_number}</span>
             </div>
             <div className="w-full">
-              <h1 className="mr-2">Kasbi:</h1>
+              <h2 className="mr-2">Kasbi:</h2>
               <span className="font-bold">{posts?.data?.job}</span>
             </div>
             <div className="w-full">
-              <h1 className="mr-2">Ish Joyi:</h1>
-              <span className="font-bold">
-                {posts?.data?.place_position}
-              </span>
+              <h2 className="mr-2">Ish Joyi:</h2>
+              <span className="font-bold">{posts?.data?.place_position}</span>
             </div>
             <div className="w-full">
-              <h1 className="mr-2">Ilmiy Daraja:</h1>
-              <span className="font-bold">
-                {posts?.data?.science_degree}
-              </span>
+              <h2 className="mr-2">Ilmiy Daraja:</h2>
+              <span className="font-bold">{posts?.data?.science_degree}</span>
             </div>
           </div>
           <ProfileClient data={posts?.data} />

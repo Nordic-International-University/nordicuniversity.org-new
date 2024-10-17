@@ -1,6 +1,7 @@
 import HomePageCard from "@/app/components/home/homeCard/HomePageCard";
 import HomeSlider from "@/app/components/home/HomeSLider";
 import HomeVolumes from "@/app/components/home/homeVolume/homeVolumes";
+import Cookies from "js-cookie";
 
 export const metadata = {
   title: "Nordik jurnal  - Bosh Sahifa",
@@ -39,10 +40,12 @@ export const metadata = {
 };
 
 export default function Home() {
+  const isAuth = Cookies.get("access_token") || null;
+
   return (
     <>
       <main>
-        <HomeSlider />
+        <HomeSlider isAuth={isAuth} />
         <HomePageCard />
         <HomeVolumes />
       </main>

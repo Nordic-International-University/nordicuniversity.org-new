@@ -71,9 +71,9 @@ export default async function Page() {
             </div>
 
             {/* More Sections */}
-            <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
               2. KIRISH
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Tadqiqot ob'yektini belgilab olish...</li>
               <li>Tadqiqotning borish jarayoni...</li>
@@ -84,9 +84,9 @@ export default async function Page() {
               qo‘yilishi, tadqiqotning borish jarayoni
             </div>
 
-            <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
               3. METODOLOGIYA
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Ishonchli ma’lumotlarni yig‘ish...</li>
             </ul>
@@ -105,9 +105,9 @@ export default async function Page() {
           </div>
 
           <div className="w-1/2 px-4 py-4 relative group max-lg:w-full">
-            <h1 className="text-[#36187d] font-bold text-[15px]  mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px]  mb-4">
               5. DISKUSSIYA
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Kirish (ilmiy topilmalarni muhokama qilish...)</li>
               <li>Baholash (tahlil qilish...)</li>
@@ -118,9 +118,9 @@ export default async function Page() {
               isbotlash, baholash, xulosa
             </div>
 
-            <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
               6. XULOSA
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Xulosa aniq va qisqa, muammoning yechimiga qaratilgan...</li>
             </ul>
@@ -129,9 +129,9 @@ export default async function Page() {
               takliflarga ega bo‘lishi lozim
             </div>
 
-            <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
               7. TASHAKKURNOMA
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Tadqiqot davomida muallifga yordam berganlar...</li>
             </ul>
@@ -139,9 +139,9 @@ export default async function Page() {
               Tadqiqot davomida muallifga yordam berganlar uchun tashakkurnoma
             </div>
 
-            <h1 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
+            <h2 className="text-[#36187d] font-bold text-[15px] mt-6 mb-4">
               8. ADABIYOTLAR RO‘YXATI
-            </h1>
+            </h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Foydalanilgan adabiyotlar ro‘yxati...</li>
             </ul>

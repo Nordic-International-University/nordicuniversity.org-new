@@ -3,9 +3,7 @@ import path from "path";
 import { NextResponse } from "next/server";
 
 export async function GET(request: any) {
-  // const allowedIps = [process.env["SERVER_IP"]];
   const apiKey = request.headers.get("x-api-key");
-  // const requestIp = request.headers.get("x-forwarded-for") || request.ip;
 
   if (apiKey !== process.env["X_API_KEY"]) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -13,29 +11,77 @@ export async function GET(request: any) {
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
   const backendUrl = process.env.NEXT_PUBLIC_API_URL;
-  const articleResponse = await fetch(`${backendUrl}/article`);
-  const articles = await articleResponse.json();
+  const volumeResponse = await fetch(`${backendUrl}/volume`);
+  const volumeData = await volumeResponse.json();
 
-  const articlePaths = articles
-    .map(
-      (article: any) => `
-    <url>
-      <loc>${siteUrl}/article/${article.slug}</loc>
-      <lastmod>${article.updatedAt}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.8</priority>
-    </url>
-  `,
-    )
-    .join("");
+  if (!volumeResponse.ok) {
+    return NextResponse.json(
+      { error: "Failed to fetch volume data" },
+      { status: 500 },
+    );
+  }
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${articlePaths}
-  </urlset>`;
+  console.log(volumeData);
 
-  const filePath = path.join(process.cwd(), "public", "article-sitemap.xml");
-  await fs.writeFile(filePath, sitemap, "utf8");
+  // Loop through each volume to generate a separate sitemap
+  for (const volume of volumeData) {
+    console.log(volume);
+    const volumeTitle = volume.title.replace(/[^a-z0-9]/gi, "_").toLowerCase(); // Convert title to file-friendly format
+    const articles = volume.Articles || [];
 
-  return NextResponse.json({ message: "Article sitemap created successfully" });
+    const articlePaths = articles
+      .map(
+        (article: any) => `
+      <url>
+        <loc>${siteUrl}/article/${article.slug}</loc>
+        <lastmod>${article.updatedAt}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+      </url>
+    `,
+      )
+      .join("");
+
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${articlePaths}
+    </urlset>`;
+
+    const filePath = path.join(
+      process.cwd(),
+      "public",
+      `sitemap-${volumeTitle}.xml`,
+    );
+    await fs.writeFile(filePath, sitemapContent, "utf8");
+  }
+
+  // Generate the main sitemap index file
+  const sitemapFiles = [
+    "sitemap-0.xml",
+    "sitemap-category.xml",
+    "sitemap-volume.xml",
+    "sitemap-news.xml",
+    ...volumeData.map(
+      (volume: any) =>
+        `sitemap-${volume.title.replace(/[^a-z0-9]/gi, "_").toLowerCase()}.xml`,
+    ),
+  ];
+
+  const sitemapIndexContent = `<?xml version="1.0" encoding="UTF-8"?>
+  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${sitemapFiles
+      .map(
+        (file) => `
+      <sitemap><loc>${siteUrl}/${file}</loc></sitemap>
+    `,
+      )
+      .join("\n")}
+  </sitemapindex>`;
+
+  const indexPath = path.join(process.cwd(), "public", "sitemap.xml");
+  await fs.writeFile(indexPath, sitemapIndexContent, "utf8");
+
+  return NextResponse.json({
+    message: "Sitemap and index created successfully",
+  });
 }
