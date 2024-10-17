@@ -13,8 +13,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/sitemap-:slug.xml",
-        destination: "/public/sitemap-:slug.xml",
+        source: "/sitemap-:slug*.xml", // * belgisini qo'shib, barcha sitemaplarni qamrab olamiz
+        destination: "/sitemap-:slug*.xml",
       },
     ];
   },
