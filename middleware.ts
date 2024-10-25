@@ -19,6 +19,10 @@ export default function middleware(req: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  if (pathname[1] !== lang) {
+    req.cookies.set("lang", pathname[1]);
+  }
+
   req.headers.set("Accept-Language", lang as string);
   return intlMiddleware(req);
 }

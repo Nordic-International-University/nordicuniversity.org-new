@@ -15,9 +15,9 @@ const MegaMenu = ({ subItems, itemName }: megaMenuProps) => {
   return (
     <>
       {subItems.length > 0 && (
-        <div className="absolute left-1/2 pb-[44px] pt-[30px] transform -translate-x-1/2 mt-2 bg-white shadow-2xl p-4 rounded opacity-0 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-[30px] translate-y-14">
+        <div className="absolute left-1/2 pb-[44px] pt-[30px] transform -translate-x-1/2 mt-2 bg-white shadow-xl p-4 rounded opacity-0 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-[62px] translate-y-36">
           <div
-            className={`flex min-w-[1000px] items-center w-full justify-between px-4`}
+            className={`flex min-w-[1320px] items-center w-full justify-between px-4`}
           >
             <div className={`${mirza.className} flex flex-col`}>
               <div className="flex items-center gap-4">

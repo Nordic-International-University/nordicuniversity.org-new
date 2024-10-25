@@ -49,20 +49,19 @@ const resources = [
 
 const TopNav = () => {
   const items: any = resources
-    .slice(5, resources.length - 1)
+    .slice(4, resources.length - 1)
     .map((item, index) => {
       return { label: item.name, key: index.toString() };
     });
 
   return (
-    <div className="py-4 bg-secondary">
+    <div className="py-4 border-b-[0.1px] border-white border-opacity-30 sticky z-20 nav-bg-opacity bg-opacity-50">
       <div className="container">
         <div className="flex items-center justify-between">
-          <LanguageSelect />
           <div className="flex items-center gap-8">
             <div className="flex items-center max-lg:hidden gap-5">
               <ul className="flex items-center text-white gap-5">
-                {resources.slice(0, 5).map((resource, index) => (
+                {resources.slice(0, 4).map((resource, index) => (
                   <Link href={resource.url} key={index}>
                     <li>{resource.name}</li>
                   </Link>
@@ -80,7 +79,9 @@ const TopNav = () => {
                 </a>
               </Dropdown>
             </div>
-            <div className="flex text-white text-xl items-center gap-3 max-sm:gap-1.5">
+          </div>
+          <div className="flex max-lg:w-full flex-row-reverse items-center justify-between gap-6">
+            <div className="flex text-white items-center gap-3 max-sm:gap-1.5">
               <FaInstagram />
               <span className="block bg-white h-[20px] w-[0.5px]"></span>
               <FaTelegram />
@@ -89,6 +90,7 @@ const TopNav = () => {
               <span className="block bg-white h-[20px] w-[0.5px]"></span>
               <FaYoutube />
             </div>
+            <LanguageSelect />
           </div>
         </div>
         <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">

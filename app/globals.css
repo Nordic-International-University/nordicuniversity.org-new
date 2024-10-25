@@ -11,5 +11,38 @@
 }
 
 .calc-hero-bg{
-    height: calc(100vh - 162px);
+    height: calc(100vh - 160px);
+}
+
+.nav-bg-opacity{
+    background: rgba(39, 41, 69, 0.5);
+}
+
+.top-calc{
+    padding-bottom: calc(100vh - 100px);
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.slider-column {
+    position: relative;
+    overflow: hidden;
+    height: 100px; /* Adjust based on your image size */
+    width: 150px;  /* Adjust based on your image size */
+}
+
+.slide {
+    position: absolute;
+    top: 100%;  /* Start below the visible area */
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.slide.active {
+    top: 0;
+    opacity: 1;
 }
