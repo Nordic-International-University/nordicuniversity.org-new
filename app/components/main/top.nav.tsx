@@ -7,6 +7,7 @@ import { Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const resources = [
   {
@@ -48,14 +49,20 @@ const resources = [
 ];
 
 const TopNav = () => {
+  const pathname = usePathname();
   const items: any = resources
     .slice(4, resources.length - 1)
     .map((item, index) => {
       return { label: item.name, key: index.toString() };
     });
 
+  const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
+  const navClass = isHomePage ? "nav-bg-opacity" : "bg-dark_blue_color";
+
   return (
-    <div className="py-4 border-b-[0.1px] border-white border-opacity-30 sticky z-20 nav-bg-opacity bg-opacity-50">
+    <div
+      className={`py-4 ${navClass} border-b-[0.1px] border-white border-opacity-30 sticky z-20 bg-opacity-50`}
+    >
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">

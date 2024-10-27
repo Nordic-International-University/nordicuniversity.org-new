@@ -7,18 +7,19 @@ import logo3 from "@/public/images/home-images/slider6.svg";
 import logo4 from "@/public/images/home-images/slider4.svg";
 import logo5 from "@/public/images/home-images/slider3.svg";
 import litsenziya from "@/public/images/home-images/litsenziya.png";
-import NewsSlider from "@/app/components/templates/NewsSlider";
+import NewsSlider from "@/app/components/templates/home/NewsSlider";
 import { newsSliderProps } from "@/types/templates/newsSlider.type";
-import DoubleSLider from "@/app/components/templates/doubleSLider";
+import DoubleSLider from "@/app/components/templates/home/doubleSLider";
 import {
   Direction,
   DoubleSliderTypes,
 } from "@/types/templates/doubleSlider.types";
-import Litsenziya from "@/app/components/templates/Litsenziya";
-import PhotoGallery from "@/app/components/templates/photoGallery";
-import PartnersSlider from "@/app/components/templates/partners";
-import Events from "@/app/components/templates/Events";
+import Litsenziya from "@/app/components/templates/home/Litsenziya";
+import PhotoGallery from "@/app/components/templates/home/photoGallery";
+import PartnersSlider from "@/app/components/templates/home/partners";
+import Events from "@/app/components/templates/home/Events";
 import { EventsTypes } from "@/types/templates/events.types";
+import Hero from "@/app/components/main/Hero";
 
 const newsSliderFakeData: Array<newsSliderProps> = [
   {
@@ -136,6 +137,7 @@ const eventFakeData: Array<EventsTypes> = [
 export default function Home() {
   return (
     <>
+      <Hero />
       <NewsSlider sectionTitle="YANGILIKLAR" props={newsSliderFakeData} />
       <section className="bg-secondary-gradient block max-lg:hidden">
         <DoubleSLider
@@ -151,7 +153,9 @@ export default function Home() {
           props={doubleSlider1}
         />
       </section>
-      <Litsenziya props={litsenziyarray} sectionTitle="Me’yoriy hujjatlar" />
+      <section className="container">
+        <Litsenziya props={litsenziyarray} sectionTitle="Me’yoriy hujjatlar" />
+      </section>
       <PhotoGallery />
       <PartnersSlider sectionTitle="Hamkorlarimiz" partners={partnersFake} />
       <Events

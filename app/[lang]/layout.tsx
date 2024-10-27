@@ -30,7 +30,6 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <TopNav />
           <Nav />
-          <Hero />
           <main className="flex-grow">{children}</main>
           <MainFooter />
         </NextIntlClientProvider>

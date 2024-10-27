@@ -17,6 +17,7 @@ import {
 import { FaTelegram } from "react-icons/fa6";
 import caricature from "@/public/images/home-images/mobile_image.png";
 import MegaMenu from "@/app/components/UI/MegaMenu";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
   {
@@ -86,6 +87,7 @@ const menuItems = [
 ];
 
 const Nav: FC = () => {
+  const pathname = usePathname();
   const [activeSubItems, setActiveSubItems] = useState<string | null>(null);
   const [menuHeight, setMenuHeight] = useState(0);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -117,9 +119,13 @@ const Nav: FC = () => {
     const menuItem = menuItems.find((item) => item.name === menuItemName);
     return menuItem ? menuItem.subItems : [];
   };
+
+  const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
+  const navClass = isHomePage ? "nav-bg-opacity" : "bg-primary-gradient";
+
   return (
     <>
-      <nav className="nav-bg-opacity bg-opacity-95 sticky z-[12]">
+      <nav className={`bg-opacity-95 ${navClass} sticky z-[12]`}>
         <div className="container">
           <div className="flex items-center max-xl:py-6 justify-between">
             <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-start">

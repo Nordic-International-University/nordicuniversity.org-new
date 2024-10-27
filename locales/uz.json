@@ -1,0 +1,24 @@
+{
+  "university": {
+    "document": {
+      "section_title": "Meyoriy hujjatlar",
+      "main_menu": "Asosiy sahifa",
+      "university": "Universitet",
+      "subItems": [
+        "Universitet ustunliklari",
+        "Meyoriy hujjatlar",
+        "Tashkiliy tuzilma",
+        "Rekvizitlar",
+        "Biz bilan bog’lanish"
+      ]
+    },
+    "advantages": {
+      "section_title": "Universitet ustunliklari",
+      "cardTitle": [
+        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi.",
+        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi.",
+        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi."
+      ]
+    }
+  }
+}

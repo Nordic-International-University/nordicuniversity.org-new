@@ -17,6 +17,7 @@ const config: Config = {
         tertiary: "#364E6B",
         box_color: "#DBF2FF",
         dark_blue_color: "rgba(3, 46, 99, 1)",
+        brodCrumbColor: "rgba(122, 152, 193, 1)",
       },
       backgroundImage: {
         "primary-gradient":
