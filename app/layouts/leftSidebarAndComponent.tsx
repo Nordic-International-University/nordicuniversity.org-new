@@ -5,14 +5,18 @@ import { LayoutSidebarProps } from "@/types/templates/layout.types";
 import Link from "next/link";
 import BroadCamp from "@/app/components/UI/broadCump";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const LeftSidebarAndComponent = ({
   children,
   sidebarItems,
   sidebarTitle,
   broadCampItems,
+  translationKey,
 }: LayoutSidebarProps) => {
   const router = usePathname();
+  const t = useTranslations(translationKey);
+
   return (
     <>
       <div className="flex mt-12 gap-6 items-start container justify-between">
@@ -30,7 +34,7 @@ const LeftSidebarAndComponent = ({
                 }`}
               >
                 {item.url ? (
-                  <Link href={item.url}>{item.name}</Link>
+                  <Link href={item.url}>{t(item.name)}</Link>
                 ) : (
                   <span>{item.name}</span>
                 )}

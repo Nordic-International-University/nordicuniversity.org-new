@@ -8,6 +8,7 @@ import MainFooter from "@/app/components/main/MainFooter";
 import Hero from "@/app/components/main/Hero";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { StoreProvider } from "@/app/utils/provider/storeProvider";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -28,10 +29,12 @@ export default async function RootLayout({
     <html lang={params.locale}>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
-          <TopNav />
-          <Nav />
-          <main className="flex-grow">{children}</main>
-          <MainFooter />
+          <StoreProvider>
+            <TopNav />
+            <Nav />
+            <main className="flex-grow">{children}</main>
+            <MainFooter />
+          </StoreProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -5,6 +5,8 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import Litsenziya from "@/app/components/templates/home/Litsenziya";
 import litsenziya from "@/public/images/home-images/litsenziya.png";
 import { useTranslations } from "next-intl";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/utils/store/Store";
 
 const litsenziyarray: any = [
   {
@@ -26,40 +28,19 @@ const litsenziyarray: any = [
 ];
 
 const ClientPage = () => {
-  const t = useTranslations("university.document");
-
-  const subItems = [
-    {
-      name: t("subItems.0"),
-      url: "/university/advantages",
-    },
-    {
-      name: t("subItems.1"),
-      url: "/university/documents",
-    },
-    {
-      name: t("subItems.2"),
-      url: "/university/advantages",
-    },
-    {
-      name: t("subItems.3"),
-      url: "/university/advantages",
-    },
-
-    {
-      name: t("subItems.4"),
-      url: "/university/advantages",
-    },
-  ];
+  const t = useTranslations("university");
+  const subItemDocument = useSelector(
+    (state: RootState) => state.sideBar.university.documentsSidebarItem,
+  );
 
   const brodCmbItems = [
     {
       url: "",
-      name: t("university"),
+      name: t("document.university"),
     },
     {
       url: "/university/documents",
-      name: t("section_title"),
+      name: t("document.section_title"),
     },
   ];
 
@@ -67,7 +48,8 @@ const ClientPage = () => {
     <LeftSidebarAndComponent
       broadCampItems={brodCmbItems}
       children={<Litsenziya props={litsenziyarray} sectionTitle="" />}
-      sidebarItems={subItems}
+      sidebarItems={subItemDocument}
+      translationKey="university"
       sidebarTitle="Meyoriy hujjatlar"
     ></LeftSidebarAndComponent>
   );

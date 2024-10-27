@@ -10,4 +10,5 @@ export interface LayoutSidebarProps {
   sidebarItems: sideBarItemTypes[];
   sidebarTitle: string;
   broadCampItems: sideBarItemTypes[];
+  translationKey: string;
 }
