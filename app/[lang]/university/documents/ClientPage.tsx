@@ -33,6 +33,7 @@ const ClientPage = () => {
     (state: RootState) => state.sideBar.university.documentsSidebarItem,
   );
 
+  console.log("fuck");
   const brodCmbItems = [
     {
       url: "",
