@@ -45,7 +45,7 @@ const menuItems = [
     name: "TA'LIM",
     url: "/education",
     subItems: [
-      { name: "Kafedralar", url: "/education/departments" },
+      { name: "Kafedralar", url: "/education/educationDegree" },
       { name: "Ta'lim dasturlari", url: "/education/programs" },
     ],
   },
@@ -143,7 +143,7 @@ const Nav: FC = () => {
                         subItems={menuItem.subItems}
                         itemName={menuItem.name}
                       />
-                      <Link href={menuItem.url}>{menuItem.name}</Link>
+                      <p>{menuItem.name}</p>
                     </li>
                   ))}
               </ul>
@@ -179,7 +179,7 @@ const Nav: FC = () => {
                         subItems={menuItem.subItems}
                         itemName={menuItem.name}
                       />
-                      <Link href={menuItem.url}>{menuItem.name}</Link>
+                      <p>{menuItem.name}</p>
                     </li>
                   ))}
               </ul>

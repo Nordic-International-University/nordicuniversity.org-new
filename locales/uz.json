@@ -20,5 +20,18 @@
         "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi."
       ]
     }
+  },
+  "education": {
+    "educationDegree": {
+      "sectionTitle": "Ta’lim darajalari"
+    },
+    "subItems": [
+        "Ta’lim darajalari",
+      "Ta’lim resurslari",
+      "Xorijiy tillarni bilish sertifikati",
+      "Ta’lim yo‘nalishlari"
+    ],
+    "talim": "Ta'lim"
   }
+
 }
