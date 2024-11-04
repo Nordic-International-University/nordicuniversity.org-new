@@ -4,37 +4,18 @@ import React from "react";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import Structure from "@/app/components/templates/University/structure";
+import { RootState } from "@/app/utils/store/Store";
+import { useSelector } from "react-redux";
 
 const ClientPage = () => {
   const t = useTranslations("university.document");
+  const subItemsDocument = useSelector(
+    (state: RootState) => state.sideBar.university.documentsSidebarItem,
+  );
 
-  const subItems = [
+  const breadcrumbItems = [
     {
-      name: t("subItems.0"),
-      url: "/university/advantages",
-    },
-    {
-      name: t("subItems.1"),
-      url: "/university/documents",
-    },
-    {
-      name: t("subItems.2"),
-      url: "/university/advantages",
-    },
-    {
-      name: t("subItems.3"),
-      url: "/university/advantages",
-    },
-
-    {
-      name: t("subItems.4"),
-      url: "/university/advantages",
-    },
-  ];
-
-  const brodCmbItems = [
-    {
-      url: "",
+      url: "/university",
       name: t("university"),
     },
     {
@@ -45,11 +26,13 @@ const ClientPage = () => {
 
   return (
     <LeftSidebarAndComponent
-      broadCampItems={brodCmbItems}
-      children={<Structure />}
-      sidebarItems={subItems}
+      translationKey="university"
+      broadCampItems={breadcrumbItems}
+      sidebarItems={subItemsDocument}
       sidebarTitle="Meyoriy hujjatlar"
-    ></LeftSidebarAndComponent>
+    >
+      <Structure />
+    </LeftSidebarAndComponent>
   );
 };
 

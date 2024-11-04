@@ -10,6 +10,18 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "journal2.nordicun.uz",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "source.nordicuniversity.org",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

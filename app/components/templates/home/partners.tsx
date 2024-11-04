@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Image } from "antd";
+import Image from "next/image";
 
 interface ImageType {
   src: string;
@@ -67,6 +67,8 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                 <Image
                   src={partner.image.src}
                   alt={partner.alt}
+                  width={400}
+                  height={400}
                   className="object-contain w-full h-auto"
                 />
               </div>

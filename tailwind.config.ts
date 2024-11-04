@@ -18,6 +18,7 @@ const config: Config = {
         box_color: "#DBF2FF",
         dark_blue_color: "rgba(3, 46, 99, 1)",
         brodCrumbColor: "rgba(122, 152, 193, 1)",
+        anyColor: "#0C3169",
       },
       backgroundImage: {
         "primary-gradient":

@@ -4,33 +4,14 @@ import React from "react";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import Advantages from "@/app/components/templates/University/advantages";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/utils/store/Store";
 
 const ClientPage = () => {
   const t = useTranslations("university");
-
-  const subItems = [
-    {
-      name: t("document.subItems.0"),
-      url: "/university/advantages",
-    },
-    {
-      name: t("document.subItems.1"),
-      url: "/university/documents",
-    },
-    {
-      name: t("document.subItems.2"),
-      url: "/university/tuzilma",
-    },
-    {
-      name: t("document.subItems.3"),
-      url: "/university/tuzilma",
-    },
-
-    {
-      name: t("document.subItems.4"),
-      url: "/university/tuzilma",
-    },
-  ];
+  const subItemDocument = useSelector(
+    (state: RootState) => state.sideBar.university.documentsSidebarItem,
+  );
 
   const brodCmbItems = [
     {
@@ -45,9 +26,10 @@ const ClientPage = () => {
 
   return (
     <LeftSidebarAndComponent
+      translationKey="university"
       broadCampItems={brodCmbItems}
       children={<Advantages />}
-      sidebarItems={subItems}
+      sidebarItems={subItemDocument}
       sidebarTitle={t("advantages.section_title")}
     ></LeftSidebarAndComponent>
   );

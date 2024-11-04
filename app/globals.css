@@ -46,3 +46,8 @@
     top: 0;
     opacity: 1;
 }
+
+table th,
+table td {
+    border: solid 2px #6085B3;
+}

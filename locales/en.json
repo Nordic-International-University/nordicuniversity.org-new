@@ -1,3 +1,60 @@
 {
-  "text": "hello"
+  "university": {
+    "document": {
+      "section_title": "Regulatory Documents",
+      "main_menu": "Home",
+      "university": "University",
+      "subItems": [
+        " Advantages",
+        "Regulatory Documents",
+        "Organizational Structure",
+        "Requisites",
+        "Contact Us"
+      ]
+    },
+    "advantages": {
+      "section_title": "University Advantages",
+      "cardTitle": [
+        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively.",
+        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively.",
+        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively."
+      ]
+    },
+    "structure": {
+
+    },
+    "requisites": {
+      "sectionName": "Requisites",
+      "table": {
+        "columns": {
+          "number": "#",
+          "name": "Name",
+          "info": "Information"
+        },
+        "data": {
+          "0": "<<INTERNATIONAL NORDIC UNIVERSITY>> LLC",
+          "1": "Tashkent city, Olmazor district, Farobi street, building 290",
+          "2": "Tashkent city, Chilonzor district, <E> block, Bunyodkor street, building 8/2",
+          "3": "(55) 508-44-00",
+          "4": "2020 8000 9055 2506 1001",
+          "5": "<Ipak yo'li> Bank, Sag'bon branch",
+          "6": "01036",
+          "7": "309533058",
+          "8": "85420",
+          "9": "info@nordicuniversity.org"
+        },
+        "fieldNames": {
+          "officialAddress": "Our Official Address",
+          "address": "Address",
+          "phoneNumber": "Phone Number",
+          "accountNumber": "Account Number",
+          "bank": "Bank",
+          "mfo": "MFO",
+          "tin": "TIN",
+          "ifut": "IFUT",
+          "email": "EMAIL"
+        }
+      }
+    }
+  }
 }

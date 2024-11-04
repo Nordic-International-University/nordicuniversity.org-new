@@ -8,6 +8,7 @@ import { DownOutlined } from "@ant-design/icons";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import ScreenReader from "@/app/helpers/textToSpeach";
 
 const resources = [
   {
@@ -96,6 +97,7 @@ const TopNav = () => {
               <FaFacebook />
               <span className="block bg-white h-[20px] w-[0.5px]"></span>
               <FaYoutube />
+              {/*<ScreenReader />*/}
             </div>
             <LanguageSelect />
           </div>

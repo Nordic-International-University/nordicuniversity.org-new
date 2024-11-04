@@ -1,25 +1,20 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const UniversityInfoTable = () => {
+  const t = useTranslations("university.requisites.table").raw;
+
   const data = [
-    { id: 1, name: "Nomi", info: "<<XALQARO NORDIK UNIVERSITETI >> MCHJ" },
-    {
-      id: 2,
-      name: "Rasmiy manzilimiz",
-      info: "Toshkent shahri, Olmazor tumani, Farobiy ko'chasi, 290-uy",
-    },
-    {
-      id: 3,
-      name: "Manzil",
-      info: "Toshkent sh, Chilonzor tum, <E> kv, Bunyodkor ko'ch, 8/2-uy",
-    },
-    { id: 4, name: "Telefon raqami", info: "(55) 508-44-00" },
-    { id: 5, name: "Akkount raqami", info: "2020 8000 9055 2506 1001" },
-    { id: 6, name: "Bank", info: "<Ipak yo'li> Bank, Sag'bon filiali" },
-    { id: 7, name: "MFO", info: "01036" },
-    { id: 8, name: "STIR", info: "309533058" },
-    { id: 9, name: "IFUT", info: "85420" },
-    { id: 10, name: "EMAIL", info: "info@nordicuniversity.org" },
+    { id: 1, name: t("fieldNames.officialAddress"), info: t("data.0") },
+    { id: 2, name: t("fieldNames.address"), info: t("data.1") },
+    { id: 3, name: t("fieldNames.address"), info: t("data.2") },
+    { id: 4, name: t("fieldNames.phoneNumber"), info: t("data.3") },
+    { id: 5, name: t("fieldNames.accountNumber"), info: t("data.4") },
+    { id: 6, name: t("fieldNames.bank"), info: t("data.5") },
+    { id: 7, name: t("fieldNames.mfo"), info: t("data.6") },
+    { id: 8, name: t("fieldNames.tin"), info: t("data.7") },
+    { id: 9, name: t("fieldNames.ifut"), info: t("data.8") },
+    { id: 10, name: t("fieldNames.email"), info: t("data.9") },
   ];
 
   return (
@@ -27,9 +22,15 @@ const UniversityInfoTable = () => {
       <table className="min-w-full max-sm:text-nowrap border border-gray-300">
         <thead>
           <tr className="bg-white">
-            <th className="px-4 py-2 border border-gray-300">#</th>
-            <th className="px-4 py-2 border border-gray-300">Nomi</th>
-            <th className="px-4 py-2 border border-gray-300">Ma'lumotlar</th>
+            <th className="px-4 py-2 border border-gray-300">
+              {t("columns.number")}
+            </th>
+            <th className="px-4 py-2 border border-gray-300">
+              {t("columns.name")}
+            </th>
+            <th className="px-4 py-2 border border-gray-300">
+              {t("columns.info")}
+            </th>
           </tr>
         </thead>
         <tbody>

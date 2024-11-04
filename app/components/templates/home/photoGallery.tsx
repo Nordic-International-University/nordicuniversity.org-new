@@ -15,7 +15,7 @@ const photos = [
 
 const PhotoGallery = () => {
   return (
-    <section className="bg-diamond-gradient mt-14 pb-14">
+    <section className="bg-anyColor mt-14 pb-14">
       <article className="container">
         <h2 className="text-center text-white font-semibold text-2xl pt-12 pb-7">
           Foto Jamlanma

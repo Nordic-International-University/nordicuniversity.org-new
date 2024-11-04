@@ -1,8 +1,8 @@
 import Cookies from "js-cookie";
 
-const getCurrentLang = () => {
+const getCurrentLangClient = () => {
   const lang = Cookies.get("lang");
   return lang ? lang : "uz";
 };
 
-export default getCurrentLang;
+export default getCurrentLangClient;

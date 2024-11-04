@@ -19,6 +19,186 @@
         "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi.",
         "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi."
       ]
+    },
+    "structure": {},
+    "requisites": {
+      "sectionName": "Rekvizitlar",
+      "table": {
+        "columns": {
+          "number": "#",
+          "name": "Nomi",
+          "info": "Ma'lumotlar"
+        },
+        "data": {
+          "0": "<<XALQARO NORDIK UNIVERSITETI >> MCHJ",
+          "1": "Toshkent shahri, Olmazor tumani, Farobiy ko'chasi, 290-uy",
+          "2": "Toshkent sh, Chilonzor tum, <E> kv, Bunyodkor ko'ch, 8/2-uy",
+          "3": "(55) 508-44-00",
+          "4": "2020 8000 9055 2506 1001",
+          "5": "<Ipak yo'li> Bank, Sag'bon filiali",
+          "6": "01036",
+          "7": "309533058",
+          "8": "85420",
+          "9": "info@nordicuniversity.org"
+        },
+        "fieldNames": {
+          "officialAddress": "Rasmiy manzilimiz",
+          "address": "Manzil",
+          "phoneNumber": "Telefon raqami",
+          "accountNumber": "Akkount raqami",
+          "bank": "Bank",
+          "mfo": "MFO",
+          "tin": "STIR",
+          "ifut": "IFUT",
+          "email": "EMAIL"
+        }
+      }
+    },
+    "contacts": {
+      "sectionTitle": "Biz bilan bog’lanish",
+      "labels": {
+        "surname": "Familiya",
+        "contactUs": "Kontaktlarimiz",
+        "name": "Ism",
+        "yourPhone": "Telefon raqamingiz",
+        "yourEmail": "Pochta manzilingiz",
+        "yourMessage": "Xabaringiz",
+        "workingHours": "Qabul vaqtlari",
+        "send": "Yuborish"
+      },
+      "phoneNumbers": {
+        "main": "+998 55 508 44 00",
+        "secondary": "+998 95 505 33 00"
+      },
+      "map": "Xaritadan izlash",
+      "email": "info@nordicuniversity.org",
+      "hours": "Dushanba - Juma | 09:00 - 19:00"
+    }
+  },
+  "research": {
+    "title": "Ilm fan",
+    "subItems": [
+      "Ilmiy elektron jurnal",
+      "Ilmiy tadbirlar",
+      "Ilmiy konferensiyalar",
+      "Tasimo olimpiadasi"
+    ],
+    "eJournal": {
+      "sectionTitle": "Ilmiy elektron journal",
+      "description": "“<strong>Nordic</strong>” ilmiy-amaliy elektron jurnali\nXalqaro Nordik universiteti Oʻzbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligining №057211 raqamli Guvohnomasiasosida “Nordic” ilmiy-amaliy elektron jurnalini nashr etish imkoniyatiga ega bo‘ldi. Jurnalda maqolalar o‘zbek, rus, ingliz va fin tillarida nashr etiladi. <br/> <br/> Nordik ilmiy-amaliy elektron jurnali davriy nashrlarini ISSN (Seriyali nashrlarning xalqaro standart raqamlanishi) tartib raqami orqali davlatlataro standart talablari asosida bo‘lishini to‘liq ta’minlash maqsadida ISSN-3030-3400 raqami bilan faoliyat olib boradi.",
+      "davr": "Jurnalning davriyligi: bir yilda 5 ta son <br/><br/> Muassis: Xalqaro Nordik universiteti <br/><br/> Jurnalning nashr etilish sanasi: har ikkinchi oyning 15-sanasi.",
+      "body": "Jurnal faoliyatining asosiy maqsadi: professor-о‘qituvchilar va ilmiy izlanuvchilar, magistrlar va talabalar tomonidan olib borilayotgan ilmiy izlanishlar, ilmiy-tadqiqot natijalarini elektron tarzda chop etish va ommaviy e’lon qilib borishdan iborat. Shuningdek, zamonaviy ilg‘or qarashlar bilan tanishtirish, ilmiy faoliyatlarini jonlantirish, universitet ilmiy nufuzi va salohiyatini o‘stirish, turli innovatsion tadqiqotlarda ishtirok etishini kuchaytirish, tadqiqotlarning ilmiy-amaliy ahamiyatini yanada oshirish asosiy maqsadimizdir."
+    },
+    "scinceEvent": {
+      "breadcrumb": {
+        "scientific_events": "Ilmiy tadbirlar"
+      },
+      "events": {
+        "upcoming": "Kelgusi tadbirlar",
+        "past": "O‘tgan tadbirlar"
+      }
+    },
+    "scienceConferences": {
+      "breadcrumb": {
+        "scientific_conferences": "Ilmiy konferensiyalar"
+      },
+      "conferences": {
+        "upcoming": "Kelgusi konferensiyalar",
+        "past": "O‘tgan konferensiyalar"
+      }
+    },
+    "tasimoOlympiad": {
+      "breadcrumb": {
+        "tasimo_olympiad": "Tasimo olimpiadasi"
+      },
+      "tasimo_olympiad": {
+        "description": "Mazkur Olimpiada umumiy o'rta ta'lim tashkilotlari, akademik litsey va kasb-hunar maktablari o'quvchilari o'rtasida Matematika fanidan hududiy-saralash, respublika va xalqaro bosqichi (uch bosqichli) o'tkaziladi."
+      }
+    }
+  },
+  "admission": {
+    "subItems": [
+      "Qabul jarayonlari",
+      "Ko’p beriladigan savollar",
+      "Ta'lim yo'nalishining kontrakt narxlari"
+    ],
+    "title": "Qabul",
+    "admission_process": {
+      "sectionTitle": "Qabul jarayonlari",
+      "description": "Cheksiz qiziqish va o’rganishga bo’lgan ishtiyoq bilan yo'g'rilgan, Xalgaro Nordik universiteti jamoasi chuqur <strong>tahliliy fikrlash, ixtirochilik, amaliy muammolarni hal\nqilish</strong> va <strong>yangiliklarga ochiqlikni</strong> qadrlaydi.",
+      "body": "Rag’batlantiruvchi, qo’llab-quvvatlovchi va shodlikka to’la,\nXalqaro Nordik universiteti ko'plab talabalar uchun ikkinchi uyga aylanadi.",
+      "button": "Ro’yxatdan o’tish"
+    },
+    "degree_price": {
+      "sectionTitle": "Ta’lim yo’nalishining kontrakt narxlari",
+      "degrees": {
+        "FULL_TIME": "KUNDUZGI",
+        "PART_TIME": "SIRTQI",
+        "SPECIAL_PART_TIME": "MAXSUS SIRTQI"
+      },
+      "degreeDirection": {
+        "BACHELOR": "Bakalavr",
+        "MASTER": "Magistratura",
+        "DOCTORATE": "Doktorantura"
+      }
+    }
+  },
+  "education": {
+    "subItems": [
+      "Ta'lim darajalari",
+      "Ta'lim resurslari",
+      "Xorijiy tillarni bilish sertifikati",
+      "Ta'lim yo'nalishlari"
+    ],
+    "educationLevels": {
+      "sectionTitle": "Ta’lim darajalari",
+      "breadcrumb": "Ta’lim",
+      "overview": {
+        "title": "Fakultetlar, Kafedralar va Departamentlar",
+        "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
+        "bachelor": "Bakalavr bosqichi <strong>12ta</strong> yo’nalish.",
+        "master": "Masgistratura bosqichi <strong>6ta</strong> yo’nalish.",
+        "doctorate": "Doktorantura bosqichi <strong>3ta</strong> yo’nalish.",
+        "demand": "Barcha ta'lim yo'nalishlarimiz bugungi kunda barcha sohalarda yuqori talabga ega."
+      },
+      "levels": [
+        {
+          "name": "Bakalavr",
+          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+        },
+        {
+          "name": "Magistratura",
+          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+        },
+        {
+          "name": "Doktorantura",
+          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+        }
+      ]
+    },
+    "certificate": {
+      "sectionTitle": "Xorijiy tillarni bilish sertifikati",
+      "description": "<strong>MAGISTRATURA</strong> mutaxassisliklariga hamda <strong>OLIY TA'LIMDAN KEYINGI TA'LIM</strong> ixtisosliklariga talab etiladigan <strong>XORIJIY TILLARNI BILISH DARAJASI</strong>ni baholovchi milliy\nva xalqaro tan olingan <strong>SERTIFIKATLAR RO'YXATI</strong>"
+    },
+    "recourse": {
+      "sectionTitle": "Ta’lim resurslari"
+    }
+  },
+  "partners": {
+    "title": "Hamkorlar",
+    "subItems": [
+      "Xalqaro hamkorlik aloqalari",
+      "Xalqaro stipendiyalar va amaliyotlar",
+      "Xalqaro forum va loyihalar",
+      "Xalqaro uchrashuvlardan fotolavhalar"
+    ],
+    "connections": {
+      "sectionTitle": "Xalqaro hamkorlik aloqalari",
+      "past": "O’tgan tadbirlar",
+      "future": "Kelgusi tadbirlar"
+    },
+    "scholarships-and-internships": {
+      "sectionTitle": "Xalqaro stipendiyalar va amaliyotlar"
     }
   }
 }

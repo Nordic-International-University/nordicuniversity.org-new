@@ -139,7 +139,7 @@ export default function Home() {
     <>
       <Hero />
       <NewsSlider sectionTitle="YANGILIKLAR" props={newsSliderFakeData} />
-      <section className="bg-secondary-gradient block max-lg:hidden">
+      <section className="bg-anyColor block max-lg:hidden">
         <DoubleSLider
           reverseDirection={true}
           delay={2300}

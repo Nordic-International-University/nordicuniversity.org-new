@@ -27,7 +27,7 @@ const menuItems = [
       { name: "Universitet ustunliklari", url: "/university/advantages" },
       { name: "Me’moriy hujjatlar", url: "/university/documents" },
       { name: "Tashkiliy tuzilma", url: "/university/structure" },
-      { name: "Rekvizitlar", url: "/university/activities" },
+      { name: "Rekvizitlar", url: "/university/requisites" },
       { name: "Biz bilan bog’lanish", url: "/university/activities" },
       { name: "Universitet ta’limi", url: "/university/activities" },
     ],
@@ -36,34 +36,52 @@ const menuItems = [
     name: "QABUL",
     url: "/admissions",
     subItems: [
-      { name: "Bakalavr", url: "/admissions/bachelor" },
-      { name: "Magistratura", url: "/admissions/master" },
-      { name: "Sirtqi ta'lim", url: "/admissions/extramural" },
+      { name: "Qabul jarayonlari", url: "/admission/admission-process" },
+      { name: "Ko’p beriladigan savollar", url: "/admissions/faq" },
+      {
+        name: "Ta'lim yo'nalishining kontrakt narxlari",
+        url: "/admissions/tuition-fees",
+      },
     ],
   },
   {
     name: "TA'LIM",
     url: "/education",
     subItems: [
-      { name: "Kafedralar", url: "/education/departments" },
-      { name: "Ta'lim dasturlari", url: "/education/programs" },
+      { name: "Ta’lim darajalari", url: "/education/level" },
+      { name: "Ta’lim resurslari", url: "/education/resource" },
+      {
+        name: "Xorijiy tillarni bilish sertifikati",
+        url: "/education/certificate",
+      },
+      { name: "Ta’lim yo‘nlasihlari", url: "/education/contract-prices" },
     ],
   },
   {
     name: "ILM FAN",
     url: "/research",
     subItems: [
-      { name: "Loyihalar", url: "/research/projects" },
-      { name: "Nashrlar", url: "/research/publications" },
-      { name: "Grantlar", url: "/research/grants" },
+      { name: "Ilmiy elektron jurnal", url: "/research/scientific-ejournal" },
+      { name: "Ilmiy tadbirlar", url: "/research/scientific-events" },
+      {
+        name: "Ilmiy konferensiyalar",
+        url: "/research/scientific-conferences",
+      },
+      { name: "Tasimo olimpiadasi", url: "/research/tasimo-olympiad" },
     ],
   },
   {
     name: "HAMKORLIK",
     url: "/collaboration",
     subItems: [
-      { name: "Xalqaro", url: "/collaboration/international" },
-      { name: "Milliy", url: "/collaboration/national" },
+      {
+        name: "Xalqaro stipendiyalar va amaliyotlar",
+        url: "/partners/scholarships-and-internships",
+      },
+      {
+        name: "Xalqaro hamkorlik aloqalari",
+        url: "/collaboration/connections",
+      },
     ],
   },
   {
