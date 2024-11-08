@@ -4,6 +4,11 @@
       "section_title": "Meyoriy hujjatlar",
       "main_menu": "Asosiy sahifa",
       "university": "Universitet",
+      "buttons": {
+        "CHARTER":"Nizom",
+        "LICENSE": "Litsenziya",
+        "CERTIFICATE": "Sertifikat"
+      },
       "subItems": [
         "Universitet ustunliklari",
         "Meyoriy hujjatlar",
@@ -197,8 +202,29 @@
       "past": "O’tgan tadbirlar",
       "future": "Kelgusi tadbirlar"
     },
-    "scholarships-and-internships": {
+    "scholarships_and_internships": {
       "sectionTitle": "Xalqaro stipendiyalar va amaliyotlar"
+    },
+    "forums":{
+      "sectionTitle": "Xalqaro forum va loyihalar"
+    }
+  },
+  "student": {
+    "title": "Talabalarga",
+    "subItems": [
+      "Work and Travel jarayonlari",
+      "Imtihon jarayonlari",
+      "Nordik life jurnal",
+      "Talabalar kodeks va qo’llanmalar",
+      "Fotojamlanma"
+    ],
+    "Work_and_travel": {
+      "sectionTitle": "Work and travel jarayoni",
+      "description": "   Xalgaro Nordik Universitetining <strong>\"Work and Travel\"</strong> dasturi sizga ta'lim va mehnatni uyg'unlashtirish imkoniyatini beradi.<br><br>\n    <strong>Finlandiya</strong> kabi ilg'or mamlakatlarda <strong>o'qish va ishlash</strong> orqali talabalarimiz amaliy tajriba to'plashlari va kasbiy ko'nikmalarini oshirishlari mumkin.<br><br>\n    Shu bilan birga, <strong>bu dastur Yevropaning</strong> turli burchaklarini kashf etish imkonini ham taqdim etadi.<br><br>\n    <strong>\"Work and Travel\"</strong> dasturimiz talabalarimizga nafaqat kasb-hunar, balki <strong>dunyogarashlarini</strong> ham boyitish imkonini beradi.",
+      "body": "Biz sizga o'quv va ish tajribalarini boyitishda yordam\nberishga tayyormiz."
+    },
+    "exam": {
+      "sectionTitle": "Imtihon jarayonlari"
     }
   }
-}
+  }

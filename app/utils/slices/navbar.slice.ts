@@ -93,11 +93,31 @@ const initialState = {
       },
       {
         name: "subItems.2",
-        url: "/education/certificate",
+        url: "/partners/forum-and-projects",
       },
       {
         name: "subItems.3",
-        url: "/education/contract-prices",
+        url: "/partners/contract-prices",
+      },
+    ],
+  },
+  students: {
+    studentsSidebarItems: [
+      {
+        name: "subItems.1",
+        url: "/students/examination-procedures",
+      },
+      {
+        name: "subItems.0",
+        url: "/students/work-and-travel",
+      },
+      {
+        name: "subItems.2",
+        url: "/partners/forum-and-projects",
+      },
+      {
+        name: "subItems.3",
+        url: "/partners/contract-prices",
       },
     ],
   },

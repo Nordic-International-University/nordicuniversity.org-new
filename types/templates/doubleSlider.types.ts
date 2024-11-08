@@ -1,5 +1,6 @@
 export interface DoubleSliderTypes {
   title: string;
+  name: string;
   description: string;
   slug?: string;
   date: string;
@@ -15,5 +16,6 @@ export interface doubleSliderProps {
   props: DoubleSliderTypes[];
   direction: Direction;
   reverseDirection: boolean;
+  sectionTitle: string;
   delay: number;
 }

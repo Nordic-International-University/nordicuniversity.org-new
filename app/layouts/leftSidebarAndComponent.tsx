@@ -42,7 +42,7 @@ const LeftSidebarAndComponent = ({
     <div
       className={`flex mt-12 gap-14 items-start container justify-between ${Montserrat_font.className}`}
     >
-      <ul className="min-w-[24%] max-lg:hidden flex flex-col gap-2.5 relative">
+      <ul className="min-w-[19%] max-lg:hidden flex flex-col gap-2.5 relative">
         <span
           className="absolute left-0 w-full bg-text_tertiary rounded-lg transition-all duration-300 ease-in-out"
           style={{

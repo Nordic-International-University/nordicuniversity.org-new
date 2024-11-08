@@ -33,3 +33,11 @@ export interface getAllMeetingType {
   type: meetingType;
   lang: string;
 }
+
+export interface ContactMessage {
+  first_name: string;
+  last_name: string;
+  phone_number: string;
+  email: string;
+  message: string;
+}

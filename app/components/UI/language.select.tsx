@@ -1,21 +1,24 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactElement } from "react";
 import Cookies from "js-cookie";
-import ReactCountryFlag from "react-country-flag";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { FaEarthAmericas } from "react-icons/fa6";
+import UZ from "@/public/svg/UZ.svg";
+import RU from "@/public/svg/RU.svg";
+import US from "@/public/svg/US.svg";
+import Image from "next/image";
 
 interface LanguageOption {
   value: string;
   label: string;
-  countryCode: string;
+  flagImage: any;
 }
 
 const languages: LanguageOption[] = [
-  { value: "en", label: "Ingilizcha", countryCode: "US" },
-  { value: "ru", label: "Ruscha", countryCode: "RU" },
-  { value: "uz", label: "O’zbekcha", countryCode: "UZ" },
+  { value: "en", label: "EN", flagImage: US },
+  { value: "ru", label: "РУ", flagImage: RU },
+  { value: "uz", label: "O‘Z", flagImage: UZ },
 ];
 
 const LanguageSelect: React.FC = () => {
@@ -42,60 +45,42 @@ const LanguageSelect: React.FC = () => {
     router.push(newPath);
   };
 
-  const selectedLanguage = languages.find((lang) => lang.value === language);
-
   return (
-    <div className="relative inline-block text-left">
-      <div>
-        <button
-          type="button"
-          className="flex justify-between items-center gap-2 w-full rounded-md border border-gray-300 shadow-sm px-4 py-1  text-sm font-medium text-gray-700 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {selectedLanguage && (
-            <div className="flex items-center">
-              <ReactCountryFlag
-                className="rounded-md"
-                countryCode={selectedLanguage.countryCode}
-                svg
-                style={{
-                  width: "1.5em",
-                  height: "1.5em",
-                  marginRight: "0.5em",
-                }}
-                title={selectedLanguage.label}
-              />
-            </div>
-          )}
-          <MdOutlineKeyboardArrowDown className="text-white text-xl" />
-        </button>
-      </div>
-
-      {isOpen && (
-        <div className="origin-top-right z-10 backdrop-blur-sm absolute right-0 mt-2 w-full rounded-md shadow-lg  ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-            {languages.map((lang, index) => (
-              <button
-                key={index}
-                onClick={() => handleLanguageChange(lang)}
-                className="flex mt-2 items-center w-full px-4 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <ReactCountryFlag
-                  className="rounded-md"
-                  countryCode={lang.countryCode}
-                  svg
-                  style={{
-                    width: "1.5em",
-                    height: "1.5em",
-                    marginRight: "0.5em",
-                  }}
-                  title={lang.label}
-                />
-              </button>
+    <div className="relative overflow-hidden hover:w-36 hover-lang ease-in-out transition-all group w-16">
+      <div
+        className="flex justify-between items-center gap-2 w-full rounded-md border border-gray-300 shadow-sm px-4 py-1 text-sm font-medium text-gray-700 focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <FaEarthAmericas className="absolute text-white left-2 text-[16px]" />
+        <div className="ml-5">
+          <div className="flex ease-in-out transition-transform -translate-x-1 group-hover:-translate-x-2 group-hover:opacity-100 items-center gap-2.5">
+            {languages.map((lang) => (
+              <>
+                <button
+                  key={lang.value}
+                  onClick={() => handleLanguageChange(lang)}
+                  className={`flex items-center group/scoped transition-transform group-hover:static group-hover:translate-x-4 ${
+                    lang.value !== language ? "translate-x-32" : "absolute"
+                  } ${
+                    lang.value === language ? "text-white" : "text-gray-400"
+                  }  w-full text-md font-semibold`}
+                >
+                  <span className="group-hover/scoped:hidden block">
+                    {lang.label}
+                  </span>
+                  <Image
+                    className="group-hover/scoped:scale-100 scale-0"
+                    width={20}
+                    height={20}
+                    src={lang.flagImage}
+                    alt={lang.value}
+                  />
+                </button>
+              </>
             ))}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

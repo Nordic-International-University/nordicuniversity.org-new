@@ -3,23 +3,46 @@ import createMiddleware from "next-intl/middleware";
 import { locales } from "./i18n.config";
 
 const intlMiddleware = createMiddleware({
-  defaultLocale: "uz",
+  defaultLocale: "en",
   locales,
   localeDetection: false,
 });
 
-export default function middleware(req: NextRequest) {
-  const lang = req.cookies.get("lang")?.value || "uz";
-  const url = req.nextUrl.clone();
-  const pathname = url.pathname.split("/");
+async function fetchDefaultLanguage() {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/language`,
+    );
+    const data = await res.json();
+    return data.language || "uz";
+  } catch (error) {
+    console.error("Failed to fetch default language:", error);
+    return "uz";
+  }
+}
 
-  if (!locales.includes(pathname[1])) {
-    pathname.unshift(lang as string);
-    url.pathname = pathname.join("/");
+export default async function middleware(req: NextRequest) {
+  const cookieLang = req.cookies.get("lang")?.value;
+  const defaultLang = await fetchDefaultLanguage();
+  const lang = cookieLang || defaultLang;
+
+  const url = req.nextUrl.clone();
+  const pathnameParts = url.pathname.split("/");
+  if (locales.includes(pathnameParts[1])) {
+    const currentLocale = pathnameParts[1];
+
+    if (currentLocale !== lang && !cookieLang) {
+      pathnameParts[1] = lang;
+      url.pathname = pathnameParts.join("/");
+      return NextResponse.redirect(url);
+    }
+  } else {
+    pathnameParts.unshift(lang);
+    url.pathname = pathnameParts.join("/");
     return NextResponse.redirect(url);
   }
 
-  req.headers.set("Accept-Language", lang as string);
+  req.headers.set("Accept-Language", lang);
   return intlMiddleware(req);
 }
 

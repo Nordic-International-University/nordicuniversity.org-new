@@ -20,39 +20,11 @@ import PartnersSlider from "@/app/components/templates/home/partners";
 import Events from "@/app/components/templates/home/Events";
 import { EventsTypes } from "@/types/templates/events.types";
 import Hero from "@/app/components/main/Hero";
+import getCurrentLang from "@/app/helpers/getCurrentLang";
+import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
+import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 
-const newsSliderFakeData: Array<newsSliderProps> = [
-  {
-    image: news_image,
-    description:
-      "Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi.",
-    date: "Mart 26, 2024",
-    subTitle: "Italiyaning Trento universitetida bir yil bepul ta’lim oling",
-  },
-  {
-    image: news_image,
-    description:
-      "Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi.",
-    date: "Mart 26, 2024",
-    subTitle: "Italiyaning Trento universitetida bir yil bepul ta’lim oling",
-  },
-  {
-    image: news_image,
-    description:
-      "Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi.",
-    date: "Mart 26, 2024",
-    subTitle: "Italiyaning Trento universitetida bir yil bepul ta’lim oling",
-  },
-  {
-    image: news_image,
-    description:
-      "Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi. Ushbu nufuzli universitet XNUning bakalavriat va magistratura bosqichlarida bittadan bir yillik grand ajratiladi.",
-    date: "Mart 26, 2024",
-    subTitle: "Italiyaning Trento universitetida bir yil bepul ta’lim oling",
-  },
-];
-
-const doubleSlider1: Array<DoubleSliderTypes> = [
+const doubleSlider1: Array<any> = [
   {
     image: doubleImage1,
     description:
@@ -134,27 +106,45 @@ const eventFakeData: Array<EventsTypes> = [
   },
 ];
 
-export default function Home() {
+const getHome = async (lang: string) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/home-page?language=${lang}`,
+  );
+  return await response.json();
+};
+
+export default async function Home() {
+  const { sections } = await getHome(getCurrentLangServer());
   return (
     <>
       <Hero />
-      <NewsSlider sectionTitle="YANGILIKLAR" props={newsSliderFakeData} />
-      <section className="bg-anyColor block max-lg:hidden">
+      <NewsSlider
+        sectionTitle={sections[SectionTypeEnum.NEWS].title}
+        props={sections[SectionTypeEnum.NEWS].data}
+      />
+      <section className="bg-secondary-gradient py-14 shadow-inner  block max-lg:hidden">
         <DoubleSLider
+          sectionTitle={sections[SectionTypeEnum.SCIENCE_EVENTS].title}
           reverseDirection={true}
           delay={2300}
           direction={Direction.horizontal}
-          props={doubleSlider1}
+          props={sections[SectionTypeEnum.SCIENCE_EVENTS].data}
         />
         <DoubleSLider
+          sectionTitle={
+            sections[SectionTypeEnum.COOPERATION_FORUM_PROJECTS].title
+          }
           reverseDirection={false}
           delay={1300}
           direction={Direction.vertical}
-          props={doubleSlider1}
+          props={sections[SectionTypeEnum.COOPERATION_FORUM_PROJECTS].data}
         />
       </section>
       <section className="container">
-        <Litsenziya props={litsenziyarray} sectionTitle="Me’yoriy hujjatlar" />
+        <Litsenziya
+          props={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data}
+          sectionTitle={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
+        />
       </section>
       <PhotoGallery />
       <PartnersSlider sectionTitle="Hamkorlarimiz" partners={partnersFake} />

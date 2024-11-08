@@ -1,27 +1,76 @@
 import { useTranslations } from "next-intl";
-import { Button, Col, Form, Input, Row } from "antd";
+import { Button, Col, Form, Input, message, Row } from "antd";
 import { BiPhone } from "react-icons/bi";
 import Link from "next/link";
 import { MdEmail } from "react-icons/md";
+import { useState } from "react";
+import { ContactMessage } from "@/types/api/apiTypes";
+import { sendMessageEmail } from "@/app/[lang]/university/contacts/sendMessage";
 
 const Contacts = () => {
   const t = useTranslations("university.contacts");
 
+  // State lar
+  const [formData, setFormData] = useState<ContactMessage>({
+    first_name: "",
+    last_name: "",
+    phone_number: "",
+    email: "",
+    message: "",
+  });
+
+  const sendMessageFormSubmit = async () => {
+    try {
+      const response = await sendMessageEmail(formData);
+      if (response.ok) {
+        message?.success("Xabar muvaffaqiyarli yuborildi!");
+        setFormData({
+          first_name: "",
+          last_name: "",
+          phone_number: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        console.error("Xabar yuborishda xatolik yuz berdi");
+      }
+    } catch (error) {
+      console.error("Serverga ulanishda xatolik:", error);
+    }
+  };
+
+  // Input o'zgarishini kuzatish
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
   return (
     <article className="mt-12 mb-4">
       <div className="flex items-start max-lg:flex-col justify-between gap-10">
-        <Form className="w-2/3 max-lg:w-full">
+        <Form
+          className="w-2/3 max-lg:w-full"
+          onFinish={sendMessageFormSubmit} // Form submit
+        >
           <Row gutter={[12, 12]}>
             <Col span={12} className="max-sm:w-full">
               <Input
+                name="first_name"
                 size="large"
+                required
+                value={formData.first_name}
+                onChange={handleInputChange}
                 className="rounded placeholder:text-brodCrumbColor bg-text-brodCrumbColor w-full"
                 placeholder={t("labels.name")}
               />
             </Col>
             <Col span={12} className="max-sm:w-full">
               <Input
+                required
+                name="last_name"
                 size="large"
+                value={formData.last_name}
+                onChange={handleInputChange}
                 className="rounded placeholder:text-brodCrumbColor bg-text-brodCrumbColor w-full"
                 placeholder={t("labels.surname")}
               />
@@ -30,14 +79,23 @@ const Contacts = () => {
           <Row gutter={[12, 12]} className="mt-4">
             <Col span={12} className="max-sm:w-full">
               <Input
+                name="phone_number"
+                required
                 size="large"
+                value={formData.phone_number}
+                onChange={handleInputChange}
                 className="rounded placeholder:text-brodCrumbColor bg-text-brodCrumbColor w-full"
                 placeholder={t("labels.yourPhone")}
               />
             </Col>
             <Col span={12} className="max-sm:w-full">
               <Input
+                name="email"
+                type="email"
                 size="large"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
                 className="rounded placeholder:text-brodCrumbColor bg-text-brodCrumbColor w-full"
                 placeholder={t("labels.yourEmail")}
               />
@@ -46,14 +104,21 @@ const Contacts = () => {
           <Row className="mt-4">
             <Col span={24} className="max-sm:w-full">
               <Input.TextArea
+                name="message"
+                required
                 size="large"
                 rows={4}
+                value={formData.message}
+                onChange={handleInputChange}
                 className="rounded placeholder:text-brodCrumbColor bg-text-brodCrumbColor w-full"
                 placeholder={t("labels.yourMessage")}
               />
             </Col>
           </Row>
-          <Button className="mt-5 px-10 text-md bg-text_secondary text-white font-semibold">
+          <Button
+            htmlType="submit"
+            className="mt-5 px-10 text-md bg-text_secondary text-white font-semibold"
+          >
             {t("labels.send")}
           </Button>
         </Form>

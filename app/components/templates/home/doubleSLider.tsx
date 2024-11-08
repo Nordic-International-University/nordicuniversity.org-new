@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import { doubleSliderProps } from "@/types/templates/doubleSlider.types";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const DoubleSlider = ({
   props,
   direction,
   reverseDirection,
   delay,
+  sectionTitle,
 }: doubleSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleSlideChange = (swiper: any) => {
@@ -51,7 +53,7 @@ const DoubleSlider = ({
             reverseDirection,
             delay,
           }}
-          modules={[Navigation, Autoplay]}
+          modules={[Navigation]}
           className="w-full h-[404px] max-lg:h-auto"
         >
           {props?.map((item, index) => (
@@ -60,19 +62,21 @@ const DoubleSlider = ({
                 className={`flex max-lg:flex-col ${direction === "vertical" ? "flex-row-reverse" : "flex-row"} items-start max-lg:gap-3 gap-5 justify-between`}
               >
                 <Image
-                  className={`h-[430px] w-1/2 object-cover`}
-                  src={item.image}
-                  alt={item.title}
+                  height={430}
+                  width={400}
+                  className={`h-[430px] w-[51.5%]`}
+                  src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+                  alt={item.name}
                 />
-                <div className="mt-6 flex w-1/2 pb-5 justify-between h-[379px] flex-col">
+                <div className="mt-6 flex w-[46%] pb-5 justify-between h-[379px] flex-col">
                   <div>
                     <div className="max-lg:bg-transparent rounded mb-4 w-full">
                       <h2 className="text-white max-sm:text-lg max-sm:pt-2 max-lg:text-center text-2xl font-semibold max-sm:p-0">
-                        {item.title}
+                        {sectionTitle}
                       </h2>
                     </div>
                     <div className="max-lg:bg-transparent flex flex-col rounded justify-between gap-7 w-full">
-                      <p className="text-text_tertiary max-lg:text-center">
+                      <p className="text-text_tertiary w-5/6 max-lg:text-center">
                         {item.description}
                       </p>
                       <div className="flex flex-col">
@@ -97,26 +101,26 @@ const DoubleSlider = ({
             </SwiperSlide>
           ))}
         </Swiper>
-        {/*<div className="flex items-center mb-10 block max-lg:hidden flex-col gap-6">*/}
-        {/*  <div className="cursor-pointer swiper-up-tadbir">*/}
-        {/*    <FaChevronUp className="text-lg text-text_tertiary" />*/}
-        {/*  </div>*/}
-        {/*  <div className="flex flex-col items-center space-y-4">*/}
-        {/*    {props.map((_, index) => (*/}
-        {/*      <div*/}
-        {/*        key={index}*/}
-        {/*        className={`h-2 w-2 rounded-full ${*/}
-        {/*          activeIndex === index*/}
-        {/*            ? "bg-text_tertiary"*/}
-        {/*            : "bg-text_tertiary opacity-45"*/}
-        {/*        }`}*/}
-        {/*      />*/}
-        {/*    ))}*/}
-        {/*  </div>*/}
-        {/*  <div className="cursor-pointer swiper-down-tadbir">*/}
-        {/*    <FaChevronDown className="text-lg text-text_tertiary" />*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className="flex items-center mb-10 block max-lg:hidden flex-col gap-6">
+          <div className="cursor-pointer swiper-up-tadbir">
+            <FaChevronUp className="text-lg text-text_tertiary" />
+          </div>
+          <div className="flex flex-col items-center space-y-4">
+            {props.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 w-2 rounded-full ${
+                  activeIndex === index
+                    ? "bg-text_tertiary"
+                    : "bg-text_tertiary opacity-45"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="cursor-pointer swiper-down-tadbir">
+            <FaChevronDown className="text-lg text-text_tertiary" />
+          </div>
+        </div>
       </div>
     </article>
   );

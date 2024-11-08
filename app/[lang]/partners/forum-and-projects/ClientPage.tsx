@@ -8,6 +8,7 @@ import { RootState } from "@/app/utils/store/Store";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import ScholarshipsAndInternships from "@/app/components/templates/partners/scholarships-and-internships";
 import { ArrowLeftIcon, ArrowRightIcon } from "@nextui-org/shared-icons";
+import { Button } from "antd";
 import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
@@ -26,7 +27,7 @@ const ClientPage = ({ initialData }: any) => {
     const fetchData = async () => {
       const result = await getAllMeeting({
         time: time,
-        type: meetingType.SCHOLARSHIPS_AND_INTERNSHIPS,
+        type: meetingType.FORUM_AND_PROJECTS,
         page: currentPage,
         limit: 2,
         lang: getCurrentLangClient(),
@@ -61,7 +62,7 @@ const ClientPage = ({ initialData }: any) => {
     },
     {
       url: "/university/documents",
-      name: t("scholarships_and_internships.sectionTitle"),
+      name: t("forums.sectionTitle"),
     },
   ];
 
@@ -70,8 +71,22 @@ const ClientPage = ({ initialData }: any) => {
       translationKey="partners"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("scholarships_and_internships.sectionTitle")}
+      sidebarTitle={t("forums.sectionTitle")}
     >
+      <div className="flex items-center gap-4 justify-center mt-10">
+        <Button
+          className="bg-text_secondary max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold text-white py-6 px-12 rounded text-xl"
+          onClick={() => setTime(timeFilter.future)}
+        >
+          {t("connections.future")}
+        </Button>
+        <Button
+          className="bg-text_tertiary max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold text-text_secondary rounded py-6 px-12 text-xl"
+          onClick={() => setTime(timeFilter.past)}
+        >
+          {t("connections.past")}
+        </Button>
+      </div>
       <ScholarshipsAndInternships props={data} />
       <div className="flex justify-center mt-4 items-center gap-2 text-tertiary">
         <ArrowLeftIcon

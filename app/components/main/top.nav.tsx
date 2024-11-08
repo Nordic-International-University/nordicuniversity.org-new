@@ -8,7 +8,8 @@ import { DownOutlined } from "@ant-design/icons";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
-import ScreenReader from "@/app/helpers/textToSpeach";
+import { Timetable } from "@/types/templates/partners.types";
+import Image from "next/image";
 
 const resources = [
   {
@@ -49,35 +50,34 @@ const resources = [
   },
 ];
 
-const TopNav = () => {
+const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
-  const items: any = resources
-    .slice(4, resources.length - 1)
-    .map((item, index) => {
-      return { label: item.name, key: index.toString() };
-    });
+
+  const items: any = props.slice(4, resources.length - 1).map((item, index) => {
+    return { label: item.name, key: index.toString() };
+  });
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
   const navClass = isHomePage ? "nav-bg-opacity" : "bg-dark_blue_color";
 
   return (
     <div
-      className={`py-4 ${navClass} border-b-[0.1px] border-white border-opacity-30 sticky z-20 bg-opacity-50`}
+      className={`py-4 ${navClass} border-b-[0.1px] resources-translate border-white border-opacity-30 sticky z-20 bg-opacity-50`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
             <div className="flex items-center max-lg:hidden gap-5">
               <ul className="flex items-center text-white gap-5">
-                {resources.slice(0, 4).map((resource, index) => (
-                  <Link href={resource.url} key={index}>
+                {props.slice(0, 4).map((resource, index) => (
+                  <Link className="lowercase" href={resource.link} key={index}>
                     <li>{resource.name}</li>
                   </Link>
                 ))}
               </ul>
               <Dropdown menu={{ items }} trigger={["click"]}>
                 <a
-                  className="cursor-pointer text-white"
+                  className="cursor-pointer lowercase text-white"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
@@ -90,14 +90,26 @@ const TopNav = () => {
           </div>
           <div className="flex max-lg:w-full flex-row-reverse items-center justify-between gap-6">
             <div className="flex text-white items-center gap-3 max-sm:gap-1.5">
-              <FaInstagram />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaTelegram />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaFacebook />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaYoutube />
-              {/*<ScreenReader />*/}
+              {networks.map((item: any, index: number) => (
+                <React.Fragment key={index}>
+                  <Link href={item.link}>
+                    <Image
+                      className="fill-white"
+                      style={{
+                        filter:
+                          "invert(1) sepia(1) saturate(5) hue-rotate(180deg)",
+                      }}
+                      width={18}
+                      height={18}
+                      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.icon.file_path}`}
+                      alt={item.name}
+                    />
+                  </Link>
+                  {index < networks.length - 1 && (
+                    <span className="block bg-white h-[20px] w-[0.5px]"></span>
+                  )}
+                </React.Fragment>
+              ))}
             </div>
             <LanguageSelect />
           </div>

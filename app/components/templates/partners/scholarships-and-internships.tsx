@@ -10,8 +10,8 @@ const ScholarshipsAndInternships = ({ props }: any) => {
         {props?.data.map((item: any, index: number) => (
           <div className="p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4">
             <Image
-              width={600}
-              height={600}
+              width={300}
+              height={300}
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
               alt={item.name}
               className="max-lg:w-full h-full object-cover"

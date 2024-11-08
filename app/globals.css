@@ -19,7 +19,7 @@
 }
 
 .top-calc{
-    padding-bottom: calc(100vh - 100px);
+    padding-bottom: calc(100vh - 240px);
 }
 
 .slider-container {
@@ -37,7 +37,7 @@
 
 .slide {
     position: absolute;
-    top: 100%;  /* Start below the visible area */
+    top: 100%;
     opacity: 0;
     transition: top 0.5s ease, opacity 0.5s ease;
 }
@@ -50,4 +50,61 @@
 table th,
 table td {
     border: solid 2px #6085B3;
+}
+
+.hover-lang:hover .resources-translate{
+    transform: translateX(300px);
+}
+
+.scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #9d5454;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: blue;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.4s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from the left */
+.slide-in-left {
+    animation: slideInLeft 0.4s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

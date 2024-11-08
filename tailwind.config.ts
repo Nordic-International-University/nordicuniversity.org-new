@@ -24,7 +24,7 @@ const config: Config = {
         "primary-gradient":
           "linear-gradient(90.71deg, #46658B -22.74%, #0B3C79 118.95%)",
         "secondary-gradient":
-          "linear-gradient(115.34deg, #46658B -1.3%, #7A98C1 111.45%);\n",
+          "linear-gradient(115.34deg, #46658B -1.3%, #7A98C1 111.45%)",
         "diamond-gradient":
           "radial-gradient(98.59% 204.87% at 0% 3%, #5A708E 0%, #5A708E 25%, #5A708E 51.4%, rgba(90, 112, 142, 0.7) 78%, rgba(90, 112, 142, 0.8) 100%)",
         footer_gradient:

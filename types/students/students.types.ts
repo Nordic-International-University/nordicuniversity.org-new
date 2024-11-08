@@ -1,19 +1,12 @@
-export interface partnersTypes {
-  image: string;
-  alt: string;
-}
-
-export interface Timetable {
+export interface ItemImage {
   id: string;
-  name: string;
-  description: string;
-  link: string;
-  icon: Icon;
+  photo_id: string;
   createdAt: string;
   updatedAt: string;
+  photo: Photo;
 }
 
-interface Icon {
+interface Photo {
   id: string;
   file_name: string;
   file_path: string;
