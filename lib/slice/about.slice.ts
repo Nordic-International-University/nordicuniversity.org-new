@@ -176,6 +176,11 @@ const initialState = {
       title: "Filologiya fanlari bo‘yicha falsafa doktori (PhD)",
       country: "O‘zbekiston",
     },
+    {
+      name: "Elbek Qosimov",
+      title: " Texnika fanlari boʻyicha falsafa doktori (PhD",
+      country: "O‘zbekiston",
+    },
   ],
 };
 

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import moment from "moment";
 import Link from "next/link";
-import arrowImage from "@/public/Arrow 1.svg";
 import { BsEye } from "react-icons/bs";
 
 interface SmallCardProps {

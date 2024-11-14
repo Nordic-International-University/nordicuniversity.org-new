@@ -1,5 +1,7 @@
 # *
 User-agent: *
+Disallow: /profile
+Disallow: /createarticle
 Allow: /
 
 # Host

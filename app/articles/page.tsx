@@ -17,8 +17,6 @@ const getAllArticles = async () => {
   }
 };
 
-export const revalidate = 60;
-
 export const metadata = {
   title: "Maqolalar | Nordic Jurnali",
   description:

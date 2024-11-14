@@ -100,11 +100,15 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              <Image src={image} className="absolute bottom-0 right-0" alt="" />
+              <Image
+                src={image}
+                className="absolute bottom-0 right-0"
+                alt="bg_image"
+              />
               <Image
                 src={image2}
                 className="absolute bottom-20 right-16"
-                alt=""
+                alt="bg_image_to_left"
               />
             </div>
             <div className="w-[1250px] max-xl:w-full max-xl:gap-4 max-md:flex-col max-xl:flex">

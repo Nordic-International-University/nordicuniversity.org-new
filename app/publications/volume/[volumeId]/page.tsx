@@ -2,6 +2,7 @@ import React from "react";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import { redirect } from "next/navigation";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
+import { cache } from "sharp";
 
 export async function generateMetadata({
   params,
@@ -52,7 +53,6 @@ async function fetchVolumeAndArticles(volumeId: string) {
   try {
     const articleRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${volumeId}`,
-      { next: { revalidate: 1000 } },
     );
 
     if (!articleRes.ok) {
