@@ -6,14 +6,29 @@ import Fuse from "fuse.js";
 const LOCALES_PATH = path.join(process.cwd(), "locales");
 const APP_PATH = path.join(process.cwd(), "app");
 
+// Flatten locale data and detect section titles dynamically
 const flattenLocaleData = (
   obj: any,
   prefix = "",
-): { path: string; text: string }[] => {
+): { path: string; text: string; sectionTitle?: string }[] => {
   return Object.entries(obj).flatMap(([key, value]) => {
     const newKey = prefix ? `${prefix}.${key}` : key;
+
+    // Detect section titles dynamically
+    const isSectionTitle = [
+      "section_title",
+      "sectionName",
+      "sectionTitle",
+    ].includes(key);
+
     if (typeof value === "string") {
-      return [{ path: newKey, text: value }];
+      return [
+        {
+          path: newKey,
+          text: value,
+          sectionTitle: isSectionTitle ? value : undefined,
+        },
+      ];
     } else if (typeof value === "object" && value !== null) {
       return flattenLocaleData(value, newKey);
     }
@@ -21,6 +36,7 @@ const flattenLocaleData = (
   });
 };
 
+// Read the locale file for the specified language
 const readLocaleFile = (lang: string) => {
   const localePath = path.join(LOCALES_PATH, `${lang}.json`);
   if (fs.existsSync(localePath)) {
@@ -29,6 +45,7 @@ const readLocaleFile = (lang: string) => {
   return null;
 };
 
+// Extract translation keys from component files
 const extractTranslationKeys = (filePath: string) => {
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const useTranslationsMatch = fileContent.match(
@@ -47,6 +64,7 @@ const extractTranslationKeys = (filePath: string) => {
   return keys.map((key) => `${namespace}.${key}`);
 };
 
+// API handler
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const query = searchParams.get("query");
@@ -59,7 +77,10 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const resultsMap = new Map<string, { route: string; includedText: any[] }>();
+  const resultsMap = new Map<
+    string,
+    { route: string; includedText: any[]; sectionTitle?: string }
+  >();
   const localeData = readLocaleFile(lang);
   if (!localeData) {
     return NextResponse.json(
@@ -70,13 +91,13 @@ export async function GET(req: NextRequest) {
 
   const flattenedLocaleData = flattenLocaleData(localeData);
 
-  // Initialize Fuse with more lenient settings for typos and fuzzy matching
+  // Initialize Fuse for general text search
   const fuse = new Fuse(flattenedLocaleData, {
     keys: ["text"],
-    threshold: 0.4, // Slightly lenient threshold for fuzzy matching
-    distance: 100, // Distance in characters to allow between matches
-    ignoreLocation: true, // Allows matching anywhere in the string
-    minMatchCharLength: 2, // Minimum length of the match to avoid too-short matches
+    threshold: 0.4,
+    distance: 100,
+    ignoreLocation: true,
+    minMatchCharLength: 2,
   });
 
   const checkFilesInDir = (dirPath: string) => {
@@ -111,8 +132,20 @@ export async function GET(req: NextRequest) {
                   .replace(`/${lang}`, "");
               }
 
+              // Get the section title specific to this route
+              const matchingSectionTitle = flattenedLocaleData.find(
+                (item) =>
+                  item.path.startsWith(key.split(".")[0]) && item.sectionTitle,
+              );
+
               if (!resultsMap.has(route)) {
-                resultsMap.set(route, { route, includedText: [] });
+                resultsMap.set(route, {
+                  route,
+                  includedText: [],
+                  sectionTitle: matchingSectionTitle
+                    ? matchingSectionTitle.sectionTitle
+                    : undefined,
+                });
               }
 
               const existingRoute = resultsMap.get(route);
@@ -136,9 +169,13 @@ export async function GET(req: NextRequest) {
 
   checkFilesInDir(APP_PATH);
 
-  const results = Array.from(resultsMap.values());
-
-  console.log("Search Results:", results);
+  const results = Array.from(resultsMap.values()).map((result) => ({
+    ...result,
+    includedText: result.includedText.map((textObj) => ({
+      path: textObj.path,
+      text: textObj.text,
+    })),
+  }));
 
   return NextResponse.json(results);
 }
