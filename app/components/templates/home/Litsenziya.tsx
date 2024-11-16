@@ -39,7 +39,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const totalPages = Math.ceil(props[selectedTab].length / 3);
 
   return (
-    <article className="mt-16">
+    <article className="mt-12">
       <h2 className="text-center text-tertiary text-2xl font-semibold pb-7">
         {sectionTitle}
       </h2>
@@ -82,7 +82,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
             },
           }}
           modules={[Navigation]}
-          className="w-full h-[600px]"
+          className="w-full h-[500px]"
         >
           {props[selectedTab].map((item, index) => (
             <SwiperSlide key={index}>

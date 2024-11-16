@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "antd";
 import { PiFilePdfDuotone } from "react-icons/pi";
+import { gsap } from "gsap";
 
 const ScholarshipsAndInternships = ({ props }: any) => {
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (listRef.current) {
+      // Clear previous animations and reapply on new data
+      gsap.context(() => {
+        gsap.fromTo(
+          listRef.current?.children,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 },
+        );
+      }, listRef.current);
+    }
+  }, [props.data]); // Trigger animation when data changes
+
   return (
     <article className="mt-10">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" ref={listRef}>
         {props?.data.map((item: any, index: number) => (
-          <div className="p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4">
+          <div
+            key={item.id || index} // Use unique key for stable rendering
+            className="p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4"
+          >
             <Image
               width={300}
               height={300}
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
               alt={item.name}
-              className="max-lg:w-full h-[400px] w-[400px]"
+              className="max-lg:w-full object-cover h-[230px] min-w-[300px]"
             />
             <div>
               <h2 className="text-xl max-sm:text-[16px] text-text_secondary font-semibold">

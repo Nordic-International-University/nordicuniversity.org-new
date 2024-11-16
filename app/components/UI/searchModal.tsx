@@ -35,7 +35,6 @@ const SearchModal = ({ searchModal }: { searchModal: string }) => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Qidiruv natijalari:</h2>
       {data.length > 0 ? (
         <div className="flex flex-col gap-4">
           {data.map((item, index) => (

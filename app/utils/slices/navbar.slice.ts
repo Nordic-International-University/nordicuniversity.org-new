@@ -187,7 +187,7 @@ initialState.menuItems = [
   {
     name: "MATBUOT XIZMATI",
     url: "/press-service",
-    transKey: "student",
+    transKey: "press-service",
     subItems: initialState.press_service.pressServiceSidebarItems,
   },
 ];

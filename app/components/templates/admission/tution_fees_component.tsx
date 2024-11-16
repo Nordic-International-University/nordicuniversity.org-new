@@ -70,6 +70,7 @@ const TutionFeesComponent = ({
                   <Image
                     width={300}
                     height={300}
+                    className="w-[300px] h-[200px] object-cover"
                     src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${program.image.file_path}`}
                     alt=""
                   />

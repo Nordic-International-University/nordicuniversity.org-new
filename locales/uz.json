@@ -143,7 +143,7 @@
       "degrees": {
         "FULL_TIME": "KUNDUZGI",
         "PART_TIME": "SIRTQI",
-        "SPECIAL_PART_TIME": "MAXSUS SIRTQI",
+        "DISTANCE": "MAXSUS SIRTQI",
         "DOCTORATE": "Doktarantura"
       },
       "degreeDirection": {

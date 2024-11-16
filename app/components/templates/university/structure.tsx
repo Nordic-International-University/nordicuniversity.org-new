@@ -12,8 +12,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import "react-quill/dist/quill.snow.css";
-// import "react-quill/dist/quill.bubble.css";
-// import "react-quill/dist/quill.core.css";
 import StaffUserCard from "@/app/components/UI/staffUserCard";
 
 const UniversityInfoTable = ({
