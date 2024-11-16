@@ -14,7 +14,7 @@ const ScholarshipsAndInternships = ({ props }: any) => {
               height={300}
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
               alt={item.name}
-              className="max-lg:w-full h-full object-cover"
+              className="max-lg:w-full h-[400px] w-[400px]"
             />
             <div>
               <h2 className="text-xl max-sm:text-[16px] text-text_secondary font-semibold">

@@ -5,6 +5,7 @@ interface megaMenu {
 
 export interface megaMenuProps {
   subItems: Array<megaMenu>;
+  transKey: string;
   itemName: string;
 }
 

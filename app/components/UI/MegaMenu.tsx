@@ -5,13 +5,16 @@ import memory from "@/public/svg/106794-200 1.svg";
 import Image from "next/image";
 import { Mirza } from "next/font/google";
 import checkUniversity from "@/public/svg/1705517743911 4.svg";
+import { useTranslations } from "next-intl";
 
 const mirza = Mirza({
   weight: "400",
   subsets: ["latin"],
 });
 
-const MegaMenu = ({ subItems, itemName }: megaMenuProps) => {
+const MegaMenu = ({ subItems, itemName, transKey }: megaMenuProps) => {
+  const t = useTranslations(transKey);
+
   return (
     <>
       {subItems.length > 0 && (
@@ -48,7 +51,7 @@ const MegaMenu = ({ subItems, itemName }: megaMenuProps) => {
                     className="border-b-[2px] w-[268px] text-md border-gray-300 py-1"
                   >
                     <Link className="text-[#001E42B2]" href={subItem.url}>
-                      {subItem.name}
+                      {t(subItem.name)}
                     </Link>
                   </li>
                 ))}

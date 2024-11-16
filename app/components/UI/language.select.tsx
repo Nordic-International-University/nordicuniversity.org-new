@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, ReactElement } from "react";
+import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaEarthAmericas } from "react-icons/fa6";
 import UZ from "@/public/svg/UZ.svg";
 import RU from "@/public/svg/RU.svg";
@@ -16,31 +16,69 @@ interface LanguageOption {
 }
 
 const languages: LanguageOption[] = [
+  { value: "uz", label: "O‘Z", flagImage: UZ },
   { value: "en", label: "EN", flagImage: US },
   { value: "ru", label: "РУ", flagImage: RU },
-  { value: "uz", label: "O‘Z", flagImage: UZ },
 ];
+
+const fetchDefaultLanguage = async () => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/language`,
+    );
+    const data = await res.json();
+    return data.language || "uz";
+  } catch (error) {
+    console.error("Failed to fetch default language:", error);
+    return "uz";
+  }
+};
 
 const LanguageSelect: React.FC = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [language, setLanguage] = useState<string>("uz");
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const cookieLang = Cookies.get("lang");
-    if (cookieLang && languages.some((lang) => lang.value === cookieLang)) {
-      setLanguage(cookieLang);
+    const setInitialLanguage = async () => {
+      const pathLang = pathname.split("/")[1];
+      const cookieLang = Cookies.get("lang");
+
+      if (languages.some((lang) => lang.value === pathLang)) {
+        setLanguage(pathLang);
+        Cookies.set("lang", pathLang, { path: "/" });
+      } else if (
+        cookieLang &&
+        languages.some((lang) => lang.value === cookieLang)
+      ) {
+        setLanguage(cookieLang);
+      } else {
+        const defaultLang = await fetchDefaultLanguage();
+        setLanguage(defaultLang);
+        Cookies.set("lang", defaultLang, { path: "/" });
+      }
+    };
+    setInitialLanguage();
+  }, [pathname]);
+
+  useEffect(() => {
+    const pathLang = pathname.split("/")[1];
+    if (
+      pathLang &&
+      pathLang !== language &&
+      languages.some((lang) => lang.value === pathLang)
+    ) {
+      setLanguage(pathLang);
     }
-  }, []);
+  }, [pathname, language]);
 
   const handleLanguageChange = (lang: LanguageOption) => {
     setLanguage(lang.value);
     setIsOpen(false);
-
     Cookies.set("lang", lang.value, { path: "/" });
 
-    const currentPath = window.location.pathname;
-    const newPath = `/${lang.value}${currentPath.replace(/^\/[a-z]{2}/, "")}`;
+    const newPath = `/${lang.value}${pathname.replace(/^\/[a-z]{2}/, "")}`;
     window.scrollTo(0, 0);
     router.push(newPath);
   };
@@ -55,28 +93,25 @@ const LanguageSelect: React.FC = () => {
         <div className="ml-5">
           <div className="flex ease-in-out transition-transform -translate-x-1 group-hover:-translate-x-2 group-hover:opacity-100 items-center gap-2.5">
             {languages.map((lang) => (
-              <>
-                <button
-                  key={lang.value}
-                  onClick={() => handleLanguageChange(lang)}
-                  className={`flex items-center group/scoped transition-transform group-hover:static group-hover:translate-x-4 ${
-                    lang.value !== language ? "translate-x-32" : "absolute"
-                  } ${
-                    lang.value === language ? "text-white" : "text-gray-400"
-                  }  w-full text-md font-semibold`}
-                >
-                  <span className="group-hover/scoped:hidden block">
-                    {lang.label}
-                  </span>
-                  <Image
-                    className="group-hover/scoped:scale-100 scale-0"
-                    width={20}
-                    height={20}
-                    src={lang.flagImage}
-                    alt={lang.value}
-                  />
-                </button>
-              </>
+              <button
+                key={lang.value}
+                onClick={() => handleLanguageChange(lang)}
+                className={`flex items-center group/scoped transition-transform group-hover:static group-hover:translate-x-4 ${
+                  lang.value !== language ? "translate-x-32" : "absolute"
+                } ${lang.value === language ? "text-white" : "text-gray-400"} w-full text-md font-semibold`}
+              >
+                <span className="group-hover/scoped:text-white transition-all">
+                  {lang.label}
+                </span>
+                {/* Uncomment to use flag images */}
+                {/* <Image
+                  className="group-hover/scoped:scale-100 scale-0"
+                  width={20}
+                  height={20}
+                  src={lang.flagImage}
+                  alt={lang.value}
+                /> */}
+              </button>
             ))}
           </div>
         </div>

@@ -5,7 +5,7 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import Scientific_events from "@/app/components/templates/research/scientific_events";
+import Scientific_events from "@/app/components/templates/research/scientific-events";
 import { buttonsType, ResearchEvents } from "@/types/research/scince_events";
 
 const ClientPage = ({ data }: { data: any[] }) => {

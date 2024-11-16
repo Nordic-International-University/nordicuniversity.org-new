@@ -5,7 +5,7 @@ import statistics from "@/public/images/research-images/homeStat2-ORYp843p 1.png
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Tasimo = () => {
+const TasimoOlympiad = () => {
   const t = useTranslations("research.tasimoOlympiad");
 
   return (
@@ -28,4 +28,4 @@ const Tasimo = () => {
   );
 };
 
-export default Tasimo;
+export default TasimoOlympiad;

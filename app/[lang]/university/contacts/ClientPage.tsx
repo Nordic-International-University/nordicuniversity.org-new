@@ -5,11 +5,12 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { RootState } from "@/app/utils/store/Store";
 import { useSelector } from "react-redux";
-import Contacts from "@/app/components/templates/University/contacts";
+import Contacts from "@/app/components/templates/university/contacts";
+import { ContactInfo } from "@/types/templates/contacts.types";
 
-const ClientPage = () => {
+const ClientPage = ({ props }: { props: ContactInfo | any }) => {
   const tDoc = useTranslations("university.document");
-  const t = useTranslations("university.requisites");
+  const t = useTranslations("university.contacts");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.documentsSidebarItem,
   );
@@ -21,17 +22,17 @@ const ClientPage = () => {
     },
     {
       url: "/university/requisites",
-      name: t("sectionName"),
+      name: t("sectionTitle"),
     },
   ];
 
   return (
     <LeftSidebarAndComponent
-      translationKey="university"
+      translationKey="university.document"
       broadCampItems={brodCmbItems}
-      children={<Contacts />}
+      children={<Contacts props={props} />}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("sectionName")}
+      sidebarTitle={t("sectionTitle")}
     ></LeftSidebarAndComponent>
   );
 };

@@ -5,7 +5,7 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import Ejournal from "@/app/components/templates/research/ejournal";
+import ScientificEjournal from "@/app/components/templates/research/scientific-ejournal";
 
 const ClientPage = ({ data }: { data: any[] }) => {
   const t = useTranslations("research");
@@ -28,7 +28,7 @@ const ClientPage = ({ data }: { data: any[] }) => {
     <LeftSidebarAndComponent
       translationKey="research"
       broadCampItems={brodCmbItems}
-      children={<Ejournal volumes={data} />}
+      children={<ScientificEjournal volumes={data} />}
       sidebarItems={subItemDocument}
       sidebarTitle={t("eJournal.sectionTitle")}
     ></LeftSidebarAndComponent>

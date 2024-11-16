@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Ejournal = ({ volumes }: { volumes: any[] }) => {
+const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
   const t = useTranslations("research.eJournal").raw;
 
   return (
@@ -87,4 +87,4 @@ const Ejournal = ({ volumes }: { volumes: any[] }) => {
   );
 };
 
-export default Ejournal;
+export default ScientificEjournal;

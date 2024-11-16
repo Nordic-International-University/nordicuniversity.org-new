@@ -15,9 +15,12 @@ const TutionFeesComponent = ({
 }) => {
   const t = useTranslations("admission.degree_price");
 
+  console.log(props);
   const [selectedDegree, setSelectedDegree] = useState<string>("FULL_TIME");
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
-  console.log(props);
+
+  console.log(selectedEduType);
+
   return (
     <article className="mt-16">
       <div className="flex items-start gap-5">
@@ -30,7 +33,14 @@ const TutionFeesComponent = ({
               onClick={() => {
                 setState(item);
                 setSelectedEduType(item);
-                setSelectedDegree("FULL_TIME");
+
+                // Check if "DOCTORATE" is in props when "DOCTORATE" is selected
+                if (item === "DOCTORATE") {
+                  setSelectedDegree("DOCTORATE");
+                  console.log(";asdasdasdsad");
+                } else {
+                  setSelectedDegree("FULL_TIME");
+                }
               }}
             >
               {t(`degreeDirection.${item}`)}

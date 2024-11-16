@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
@@ -10,11 +10,15 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 const DoubleSlider = ({
   props,
   direction,
+  sliderName,
   reverseDirection,
   delay,
   sectionTitle,
 }: doubleSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
@@ -32,8 +36,8 @@ const DoubleSlider = ({
           centeredSlides={true}
           onSlideChange={handleSlideChange}
           navigation={{
-            prevEl: ".swiper-up-tadbir",
-            nextEl: ".swiper-down-tadbir",
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
           }}
           breakpoints={{
             1024: {
@@ -55,6 +59,12 @@ const DoubleSlider = ({
           }}
           modules={[Navigation]}
           className="w-full h-[404px] max-lg:h-auto"
+          onInit={(swiper: any) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
         >
           {props?.map((item, index) => (
             <SwiperSlide key={index}>
@@ -64,7 +74,7 @@ const DoubleSlider = ({
                 <Image
                   height={430}
                   width={400}
-                  className={`h-[430px] w-[51.5%]`}
+                  className="h-[430px] w-[51.5%]"
                   src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
                   alt={item.name}
                 />
@@ -102,7 +112,7 @@ const DoubleSlider = ({
           ))}
         </Swiper>
         <div className="flex items-center mb-10 block max-lg:hidden flex-col gap-6">
-          <div className="cursor-pointer swiper-up-tadbir">
+          <div ref={prevRef} className="cursor-pointer">
             <FaChevronUp className="text-lg text-text_tertiary" />
           </div>
           <div className="flex flex-col items-center space-y-4">
@@ -117,7 +127,7 @@ const DoubleSlider = ({
               />
             ))}
           </div>
-          <div className="cursor-pointer swiper-down-tadbir">
+          <div ref={nextRef} className="cursor-pointer">
             <FaChevronDown className="text-lg text-text_tertiary" />
           </div>
         </div>

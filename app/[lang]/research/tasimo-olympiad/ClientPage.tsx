@@ -5,8 +5,8 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import Ejournal from "@/app/components/templates/research/ejournal";
-import Tasimo from "@/app/components/templates/research/tasimo";
+import ScientificEjournal from "@/app/components/templates/research/scientific-ejournal";
+import TasimoOlympiad from "@/app/components/templates/research/tasimo-olympiad";
 
 const ClientPage = ({ data }: { data: any[] }) => {
   const t = useTranslations("research");
@@ -29,7 +29,7 @@ const ClientPage = ({ data }: { data: any[] }) => {
     <LeftSidebarAndComponent
       translationKey="research"
       broadCampItems={brodCmbItems}
-      children={<Tasimo />}
+      children={<TasimoOlympiad />}
       sidebarItems={subItemDocument}
       sidebarTitle={t("tasimoOlympiad.breadcrumb.tasimo_olympiad")}
     ></LeftSidebarAndComponent>

@@ -1,64 +1,48 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
-import { Dropdown, Space } from "antd";
+import { Dropdown, Input, Modal, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
 import Image from "next/image";
-
-const resources = [
-  {
-    name: "Hemis",
-    url: "https://hemis.uz",
-  },
-  {
-    name: "Nordik Foundation",
-    url: "https://nordikfoundation.com",
-  },
-  {
-    name: "Nordik e-library",
-    url: "https://nordikelibrary.com",
-  },
-  {
-    name: "Milliy Kutubxona",
-    url: "https://nla.uz",
-  },
-  {
-    name: "Nordik Trading",
-    url: "https://nordiktrading.com",
-  },
-  {
-    name: "Nordik Life",
-    url: "https://nordiklife.com",
-  },
-  {
-    name: "Nordik e-library",
-    url: "https://nordikelibrary.com",
-  },
-  {
-    name: "Dars Jadvali",
-    url: "https://example.com/dars-jadvali",
-  },
-  {
-    name: "Nordik e-jurnal",
-    url: "https://nordikejournal.com",
-  },
-];
+import { SearchIcon } from "@nextui-org/shared-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/app/utils/store/Store";
+import {
+  handleCloseSearchModal,
+  handleOpenSearchModal,
+} from "@/app/utils/slices/search.slice";
+import SearchModal from "@/app/components/UI/searchModal";
+import { BiCommand } from "react-icons/bi";
 
 const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
-
-  const items: any = props.slice(4, resources.length - 1).map((item, index) => {
+  const [searchText, setSearchText] = useState("");
+  const { isOpenSearch } = useSelector((state: RootState) => state.search);
+  const dispatch = useDispatch();
+  const items: any = props.slice(4, props.length - 1).map((item, index) => {
     return { label: item.name, key: index.toString() };
   });
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
   const navClass = isHomePage ? "nav-bg-opacity" : "bg-dark_blue_color";
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.key === "k") {
+        e.preventDefault();
+        dispatch(handleOpenSearchModal());
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [dispatch]);
 
   return (
     <div
@@ -68,9 +52,36 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
             <div className="flex items-center max-lg:hidden gap-5">
+              <div
+                onClick={() => dispatch(handleOpenSearchModal())}
+                className="px-4 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#1E4A7D] transition-opacity duration-200 rounded-full cursor-pointer"
+              >
+                <SearchIcon className="text-white" />
+                <div className="flex text-white font-semibold items-center gap-1">
+                  <BiCommand className="text-white text-lg" />
+                  <span>+</span>
+                  <span>K</span>
+                </div>
+              </div>
+
+              <Modal
+                onCancel={() => dispatch(handleCloseSearchModal())}
+                open={isOpenSearch}
+                width={800}
+                title="Qidiruv"
+                footer={null}
+              >
+                <Input
+                  onChange={(e) => setSearchText(e.target.value)}
+                  placeholder={"search"}
+                  className="w-full"
+                />
+
+                <SearchModal searchModal={searchText} />
+              </Modal>
               <ul className="flex items-center text-white gap-5">
                 {props.slice(0, 4).map((resource, index) => (
-                  <Link className="lowercase" href={resource.link} key={index}>
+                  <Link className="uppercase" href={resource.link} key={index}>
                     <li>{resource.name}</li>
                   </Link>
                 ))}
@@ -119,8 +130,8 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
             className="flex flex-wrap items-center justify-center
            text-white gap-5"
           >
-            {resources.map((resource, index) => (
-              <Link href={resource.url} key={index}>
+            {props.map((resource, index) => (
+              <Link href={resource.link} key={index}>
                 <li>{resource.name}</li>
               </Link>
             ))}

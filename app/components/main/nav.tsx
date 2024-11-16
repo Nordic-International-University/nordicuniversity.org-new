@@ -18,97 +18,15 @@ import { FaTelegram } from "react-icons/fa6";
 import caricature from "@/public/images/home-images/mobile_image.png";
 import MegaMenu from "@/app/components/UI/MegaMenu";
 import { usePathname } from "next/navigation";
-
-const menuItems = [
-  {
-    name: "UNIVERSITET",
-    url: "/university",
-    subItems: [
-      { name: "Universitet ustunliklari", url: "/university/advantages" },
-      { name: "Me’moriy hujjatlar", url: "/university/documents" },
-      { name: "Tashkiliy tuzilma", url: "/university/structure" },
-      { name: "Rekvizitlar", url: "/university/requisites" },
-      { name: "Biz bilan bog’lanish", url: "/university/activities" },
-      { name: "Universitet ta’limi", url: "/university/activities" },
-    ],
-  },
-  {
-    name: "QABUL",
-    url: "/admissions",
-    subItems: [
-      { name: "Qabul jarayonlari", url: "/admission/admission-process" },
-      { name: "Ko’p beriladigan savollar", url: "/admissions/faq" },
-      {
-        name: "Ta'lim yo'nalishining kontrakt narxlari",
-        url: "/admissions/tuition-fees",
-      },
-    ],
-  },
-  {
-    name: "TA'LIM",
-    url: "/education",
-    subItems: [
-      { name: "Ta’lim darajalari", url: "/education/level" },
-      { name: "Ta’lim resurslari", url: "/education/resource" },
-      {
-        name: "Xorijiy tillarni bilish sertifikati",
-        url: "/education/certificate",
-      },
-      { name: "Ta’lim yo‘nlasihlari", url: "/education/contract-prices" },
-    ],
-  },
-  {
-    name: "ILM FAN",
-    url: "/research",
-    subItems: [
-      { name: "Ilmiy elektron jurnal", url: "/research/scientific-ejournal" },
-      { name: "Ilmiy tadbirlar", url: "/research/scientific-events" },
-      {
-        name: "Ilmiy konferensiyalar",
-        url: "/research/scientific-conferences",
-      },
-      { name: "Tasimo olimpiadasi", url: "/research/tasimo-olympiad" },
-    ],
-  },
-  {
-    name: "HAMKORLIK",
-    url: "/collaboration",
-    subItems: [
-      {
-        name: "Xalqaro stipendiyalar va amaliyotlar",
-        url: "/partners/scholarships-and-internships",
-      },
-      {
-        name: "Xalqaro hamkorlik aloqalari",
-        url: "/collaboration/connections",
-      },
-    ],
-  },
-  {
-    name: "TALABALARGA",
-    url: "/students",
-    subItems: [
-      { name: "Yotoqxona", url: "/students/dormitory" },
-      { name: "Kutubxona", url: "/students/library" },
-      { name: "Badiiy to'garaklar", url: "/students/clubs" },
-    ],
-  },
-  {
-    name: "MATBUOT XIZMATI",
-    url: "/press-service",
-    subItems: [
-      { name: "Yangiliklar", url: "/press-service/news" },
-      { name: "E'lonlar", url: "/press-service/announcements" },
-      { name: "OAV bilan hamkorlik", url: "/press-service/media-relations" },
-    ],
-  },
-];
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/utils/store/Store";
 
 const Nav: FC = () => {
   const pathname = usePathname();
   const [activeSubItems, setActiveSubItems] = useState<string | null>(null);
-  const [menuHeight, setMenuHeight] = useState(0);
+  const [_, setMenuHeight] = useState(0);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const menuItems = useSelector((state: RootState) => state.sideBar.menuItems);
 
   const handleAccordionToggle = (menuItemName: string) => {
     setActiveSubItems((prev) => (prev === menuItemName ? null : menuItemName));
@@ -134,7 +52,7 @@ const Nav: FC = () => {
   };
 
   const getSubItems = (menuItemName: string) => {
-    const menuItem = menuItems.find((item) => item.name === menuItemName);
+    const menuItem = menuItems.find((item: any) => item.name === menuItemName);
     return menuItem ? menuItem.subItems : [];
   };
 
@@ -150,7 +68,7 @@ const Nav: FC = () => {
               <ul className="flex items-center group-hover:group">
                 {menuItems
                   .slice(0, Math.ceil(menuItems.length / 2))
-                  .map((menuItem, index) => (
+                  .map((menuItem: any, index: number) => (
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem.name)}
                       onMouseLeave={handleMouseLeave}
@@ -159,6 +77,7 @@ const Nav: FC = () => {
                     >
                       <MegaMenu
                         subItems={menuItem.subItems}
+                        transKey={menuItem.transKey}
                         itemName={menuItem.name}
                       />
                       <Link href={menuItem.url}>{menuItem.name}</Link>
@@ -186,7 +105,7 @@ const Nav: FC = () => {
               <ul className="flex items-center group-hover:group gap-6">
                 {menuItems
                   .slice(Math.ceil(menuItems.length / 2))
-                  .map((menuItem, index) => (
+                  .map((menuItem: any, index: any) => (
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem.name)}
                       onMouseLeave={handleMouseLeave}
@@ -195,6 +114,7 @@ const Nav: FC = () => {
                     >
                       <MegaMenu
                         subItems={menuItem.subItems}
+                        transKey={menuItem.transKey}
                         itemName={menuItem.name}
                       />
                       <Link href={menuItem.url}>{menuItem.name}</Link>
@@ -258,7 +178,7 @@ const Nav: FC = () => {
                 onClick={closeHamburgerMenu}
               />
               <ul className="mt-[30px] sticky z-50">
-                {menuItems.map((menuItem, index) => (
+                {menuItems.map((menuItem: any, index: number) => (
                   <li key={index} className="mb-4">
                     <div
                       className="flex items-center justify-between cursor-pointer"
@@ -284,20 +204,22 @@ const Nav: FC = () => {
                       }`}
                     >
                       <ul className="mt-2">
-                        {menuItem.subItems.map((subItem, subIndex) => (
-                          <li
-                            key={subIndex}
-                            className="py-1 flex items-center gap-2.5"
-                          >
-                            <span className="bg-text_secondary h-1.5 w-1.5 rounded-full"></span>
-                            <Link
-                              href={subItem.url}
-                              className="text-text_secondary"
+                        {menuItem.subItems.map(
+                          (subItem: any, subIndex: number) => (
+                            <li
+                              key={subIndex}
+                              className="py-1 flex items-center gap-2.5"
                             >
-                              {subItem.name}
-                            </Link>
-                          </li>
-                        ))}
+                              <span className="bg-text_secondary h-1.5 w-1.5 rounded-full"></span>
+                              <Link
+                                href={subItem.url}
+                                className="text-text_secondary"
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ),
+                        )}
                       </ul>
                     </div>
                   </li>

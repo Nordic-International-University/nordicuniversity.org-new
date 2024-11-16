@@ -5,7 +5,7 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import WorkAndTravel from "@/app/components/templates/students/workAndTravel";
+import WorkAndTravel from "@/app/components/templates/students/work-and-travel";
 
 const ClientPage = () => {
   const t = useTranslations("student");

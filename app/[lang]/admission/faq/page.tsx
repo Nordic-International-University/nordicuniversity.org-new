@@ -18,7 +18,7 @@ const Page = async () => {
   const faqs = await getAllFaqs({
     limit: "1000",
     page: "1",
-    lang: getCurrentLangServer(),
+    lang: await getCurrentLangServer(),
   });
 
   console.log(faqs);

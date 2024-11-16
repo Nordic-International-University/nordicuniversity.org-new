@@ -14,8 +14,8 @@ import gsap from "gsap";
 const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("LICENSE");
-  const [prevTab, setPrevTab] = useState("LICENSE"); // Track previous tab
-  const contentRef = useRef(null); // Ref for Swiper container
+  const [prevTab, setPrevTab] = useState("LICENSE");
+  const contentRef = useRef(null);
   const t = useTranslations("university");
 
   const handleSlideChange = (swiper: any) => {
@@ -23,12 +23,12 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   };
 
   const handleTabChange = (item: any) => {
-    setPrevTab(selectedTab); // Store the current tab as previous before changing
+    setPrevTab(selectedTab);
     setSelectedTab(item);
   };
 
   useEffect(() => {
-    const direction = selectedTab > prevTab ? 100 : -100; // Determine animation direction
+    const direction = selectedTab > prevTab ? 100 : -100;
     gsap.fromTo(
       contentRef.current,
       { x: direction, opacity: 0 },
@@ -63,7 +63,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
       </div>
       <div ref={contentRef}>
         <Swiper
-          key={selectedTab} // Force re-render on tab change to apply animation
+          key={selectedTab}
           direction="horizontal"
           spaceBetween={30}
           slidesPerView={1}

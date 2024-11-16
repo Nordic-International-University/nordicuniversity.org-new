@@ -4,20 +4,16 @@ import React, { useEffect, useRef } from "react";
 import { EventsTypeProps } from "@/types/templates/events.types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import dayjs from "dayjs";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Events = ({
-  props,
-  sectionTitle,
-  sectionDescription,
-}: EventsTypeProps) => {
-  const dateRefs = useRef([]); // Array of refs for each date circle
-  const titleRefs = useRef([]); // Array of refs for each title
-  const descriptionRefs = useRef([]); // Array of refs for each description
+const Events = ({ props, sectionTitle }: EventsTypeProps) => {
+  const dateRefs = useRef([]);
+  const titleRefs = useRef([]);
+  const descriptionRefs = useRef([]);
 
   useEffect(() => {
-    // Animation for date circles
     dateRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
@@ -29,14 +25,13 @@ const Events = ({
           ease: "elastic.out(1, 0.5)",
           scrollTrigger: {
             trigger: el,
-            start: "top 90%", // Start animation when top of element is 90% in view
+            start: "top 90%",
             toggleActions: "play none none none",
           },
         },
       );
     });
 
-    // Animation for titles
     titleRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
@@ -48,14 +43,13 @@ const Events = ({
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 90%", // Start animation when top of element is 90% in view
+            start: "top 90%",
             toggleActions: "play none none none",
           },
         },
       );
     });
 
-    // Animation for descriptions
     descriptionRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
@@ -67,7 +61,7 @@ const Events = ({
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 90%", // Start animation when top of element is 90% in view
+            start: "top 90%",
             toggleActions: "play none none none",
           },
         },
@@ -80,32 +74,33 @@ const Events = ({
       <h2 className="text-center text-tertiary font-semibold text-2xl pt-12 pb-7">
         {sectionTitle}
       </h2>
-      <p className="text-text_secondary text-center text-opacity-80 text-lg font-medium">
-        {sectionDescription}
-      </p>
       <div className="grid mt-9 grid-cols-2 max-lg:grid-cols-1 justify-between place-items-center gap-10">
         {props.map((item, index) => (
           <div className="flex items-center max-w-[530px] gap-6" key={index}>
             <div
               ref={(el: any) => ((dateRefs as any).current[index] = el)}
-              className="bg-text_secondary rounded-full w-16 h-16 flex items-center p-10 justify-center"
+              className="bg-text_secondary rounded-full max-w-[90px] p-12 max-h-[90px] flex flex-col items-center justify-center"
             >
-              <h2 className="uppercase w-[50px] font-semibold text-center text-text_tertiary">
-                {item.date}
+              <h2 className="uppercase font-bold text-center text-sm text-text_tertiary leading-relaxed tracking-wider">
+                {dayjs(item.time).format("D")}
+              </h2>
+              <h2 className="uppercase font-semibold text-center text-sm text-text_tertiary">
+                {dayjs(item.time).format("MMMM")}
               </h2>
             </div>
+
             <div>
               <h2
                 ref={(el: any) => ((titleRefs as any).current[index] = el)}
-                className="font-semibold text-tertiary"
+                className="font-semibold line-clamp-1 text-tertiary"
               >
-                {item.title}
+                {item.name}
               </h2>
               <p
                 ref={(el: any) =>
                   ((descriptionRefs as any).current[index] = el)
-                } // Reference for description
-                className="text-text_secondary"
+                }
+                className="text-text_secondary line-clamp-2"
               >
                 {item.description}
               </p>

@@ -3,31 +3,12 @@
 import React from "react";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import Litsenziya from "@/app/components/templates/home/Litsenziya";
-import litsenziya from "@/public/images/home-images/litsenziya.png";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
+import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
 
-const litsenziyarray: any = [
-  {
-    image: litsenziya,
-    alt: "litsenziya",
-  },
-  {
-    image: litsenziya,
-    alt: "litsenziya",
-  },
-  {
-    image: litsenziya,
-    alt: "litsenziya",
-  },
-  {
-    image: litsenziya,
-    alt: "litsenziya",
-  },
-];
-
-const ClientPage = () => {
+const ClientPage = ({ props }: any) => {
   const t = useTranslations("university");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.documentsSidebarItem,
@@ -47,9 +28,14 @@ const ClientPage = () => {
   return (
     <LeftSidebarAndComponent
       broadCampItems={brodCmbItems}
-      children={<Litsenziya props={litsenziyarray} sectionTitle="" />}
+      children={
+        <Litsenziya
+          props={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data}
+          sectionTitle={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
+        />
+      }
       sidebarItems={subItemDocument}
-      translationKey="university"
+      translationKey="university.document"
       sidebarTitle="Meyoriy hujjatlar"
     ></LeftSidebarAndComponent>
   );

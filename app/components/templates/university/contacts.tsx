@@ -6,11 +6,11 @@ import { MdEmail } from "react-icons/md";
 import { useState } from "react";
 import { ContactMessage } from "@/types/api/apiTypes";
 import { sendMessageEmail } from "@/app/[lang]/university/contacts/sendMessage";
+import { ContactInfo } from "@/types/templates/contacts.types";
 
-const Contacts = () => {
+const Contacts = ({ props }: { props: ContactInfo | any }) => {
   const t = useTranslations("university.contacts");
 
-  // State lar
   const [formData, setFormData] = useState<ContactMessage>({
     first_name: "",
     last_name: "",
@@ -18,6 +18,15 @@ const Contacts = () => {
     email: "",
     message: "",
   });
+
+  const phones = Array.from(
+    { length: 5 },
+    (_, i) => props[`phone_${i + 1}`],
+  ).filter(Boolean);
+  const emails = Array.from(
+    { length: 5 },
+    (_, i) => props[`email_${i + 1}`],
+  ).filter(Boolean);
 
   const sendMessageFormSubmit = async () => {
     try {
@@ -39,19 +48,16 @@ const Contacts = () => {
     }
   };
 
-  // Input o'zgarishini kuzatish
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  console.log(props);
   return (
     <article className="mt-12 mb-4">
       <div className="flex items-start max-lg:flex-col justify-between gap-10">
-        <Form
-          className="w-2/3 max-lg:w-full"
-          onFinish={sendMessageFormSubmit} // Form submit
-        >
+        <Form className="w-2/3 max-lg:w-full" onFinish={sendMessageFormSubmit}>
           <Row gutter={[12, 12]}>
             <Col span={12} className="max-sm:w-full">
               <Input
@@ -123,38 +129,34 @@ const Contacts = () => {
           </Button>
         </Form>
 
-        {/* Contact Info */}
         <div className="w-1/4 max-lg:w-full">
           <h2 className="text-lg font-medium mb-2 text-tertiary">
             {t("labels.contactUs")}
           </h2>
           <div className="mb-3">
-            <div className="flex items-center text-secondary gap-2">
-              <BiPhone className="text-lg" />
-              <Link href="tel:+998555084400" className="text-secondary">
-                +998 55 508 44 00
-              </Link>
-            </div>
-            <div className="flex items-center text-secondary gap-2">
-              <BiPhone className="text-lg" />
-              <Link href="tel:+998955053300" className="text-secondary">
-                +998 95 505 33 00
-              </Link>
-            </div>
-            <div className="flex items-center mt-3 text-secondary gap-2">
-              <MdEmail className="text-lg" />
-              <Link
-                href="mailto:info@nordicuniversity.org"
-                className="text-primary"
-              >
-                info@nordicuniversity.org
-              </Link>
-            </div>
+            {phones.map((item, index) => (
+              <div className="flex items-center text-secondary gap-2">
+                <BiPhone className="text-lg" />
+                <Link
+                  href="tel:+998555084400"
+                  className="text-secondary"
+                ></Link>
+                {item}
+              </div>
+            ))}
+            {emails.map((item, index) => (
+              <div className="flex items-center mt-3 text-secondary gap-2">
+                <MdEmail className="text-lg" />
+                <Link href={`mailto:${item}`} className="text-primary">
+                  {item}
+                </Link>
+              </div>
+            ))}
           </div>
           <h2 className="text-md font-medium mb-2 text-tertiary">
             {t("labels.workingHours")}
           </h2>
-          <p className="text-sm text-secondary">{t("hours")}</p>
+          <p className="text-sm text-secondary">{props.reception_time}</p>
         </div>
       </div>
       <div className="relative mt-10 h-[400px]">

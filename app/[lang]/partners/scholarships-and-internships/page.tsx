@@ -10,7 +10,7 @@ const Page = async () => {
     type: meetingType.SCHOLARSHIPS_AND_INTERNSHIPS,
     page: 1,
     limit: 2,
-    lang: getCurrentLangServer(),
+    lang: await getCurrentLangServer(),
   });
 
   return <ClientPage initialData={initialData} />;

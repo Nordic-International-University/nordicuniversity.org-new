@@ -10,7 +10,7 @@ import { TbHome } from "react-icons/tb";
 import Image from "next/image";
 import { gsap } from "gsap";
 
-const BroadCamp = ({ items }: { items: any[] }) => {
+const BroadCamp = ({ items }: { items: { name: string; url: string }[][] }) => {
   const t = useTranslations("university");
 
   useEffect(() => {
@@ -28,26 +28,34 @@ const BroadCamp = ({ items }: { items: any[] }) => {
   }, []);
 
   return (
-    <div className="text-brodCrumbColor relative max-sm:justify-center flex gap-2 items-center">
+    <div className="relative flex items-center gap-2 text-brodCrumbColor max-sm:justify-center ">
       <Image
-        className="absolute w-52 -top-48 max-sm:block hidden left-[-20px] bg-blur-left"
+        className="absolute left-[-20px] -top-48 w-52 bg-blur-left hidden max-sm:block"
         src={bg_blur_left}
         alt="bg_blur_left"
       />
-      <Link className="max-sm:hidden block" href={`/${getCurrentLang()}`}>
+
+      <Link className="hidden max-sm:block" href={`/${getCurrentLang()}`}>
+        <TbHome className="text-lg" />
+      </Link>
+
+      <Link className="block max-sm:hidden" href={`/${getCurrentLang()}`}>
         {t("document.main_menu")}
       </Link>
 
-      <TbHome className="max-sm:block hidden" />
       <span>/</span>
-      {items[0].map((item: any, index: number) => (
+
+      {items[0].map((item, index) => (
         <React.Fragment key={index}>
-          <Link href={item.url}>{item.name}</Link>
+          <Link href={item.url} className="hover:underline">
+            {item.name}
+          </Link>
           {index < items[0].length - 1 && <span>/</span>}
         </React.Fragment>
       ))}
+
       <Image
-        className="absolute w-56 max-sm:block hidden -top-40 right-[-20px] bg-blur-right"
+        className="absolute right-[-20px] -top-40 w-56 bg-blur-right hidden max-sm:block"
         src={bg_blur_right}
         alt="bg_blur_right"
       />

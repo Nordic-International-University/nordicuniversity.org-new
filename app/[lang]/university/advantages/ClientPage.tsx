@@ -3,7 +3,7 @@
 import React from "react";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
-import Advantages from "@/app/components/templates/University/advantages";
+import Advantages from "@/app/components/templates/university/advantages";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 
@@ -26,7 +26,7 @@ const ClientPage = () => {
 
   return (
     <LeftSidebarAndComponent
-      translationKey="university"
+      translationKey="university.document"
       broadCampItems={brodCmbItems}
       children={<Advantages />}
       sidebarItems={subItemDocument}

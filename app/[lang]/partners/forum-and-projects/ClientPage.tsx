@@ -11,6 +11,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@nextui-org/shared-icons";
 import { Button } from "antd";
 import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
+import CustomPagination from "@/app/components/UI/custom.pagination";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("partners");
@@ -38,22 +39,6 @@ const ClientPage = ({ initialData }: any) => {
 
     fetchData();
   }, [currentPage, time]);
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const handlePreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handlePageClick = (page: number) => {
-    setCurrentPage(page);
-  };
 
   const brodCmbItems = [
     {
@@ -88,33 +73,11 @@ const ClientPage = ({ initialData }: any) => {
         </Button>
       </div>
       <ScholarshipsAndInternships props={data} />
-      <div className="flex justify-center mt-4 items-center gap-2 text-tertiary">
-        <ArrowLeftIcon
-          onClick={handlePreviousPage}
-          className={`text-2xl ${currentPage === 1 ? "text-gray-400" : ""}`}
-        />
-        <span className="flex items-center gap-3">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <div
-              key={i}
-              onClick={() => handlePageClick(i + 1)}
-              className={`py-1 px-3 cursor-pointer rounded ${
-                currentPage === i + 1
-                  ? "bg-text_secondary text-white"
-                  : "bg-text_tertiary text-text_secondary"
-              }`}
-            >
-              {i + 1}
-            </div>
-          ))}
-        </span>
-        <ArrowRightIcon
-          onClick={handleNextPage}
-          className={`text-2xl ${
-            currentPage === totalPages ? "text-gray-400" : ""
-          }`}
-        />
-      </div>
+      <CustomPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </LeftSidebarAndComponent>
   );
 };

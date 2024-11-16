@@ -5,7 +5,7 @@
       "main_menu": "Asosiy sahifa",
       "university": "Universitet",
       "buttons": {
-        "CHARTER":"Nizom",
+        "CHARTER": "Nizom",
         "LICENSE": "Litsenziya",
         "CERTIFICATE": "Sertifikat"
       },
@@ -25,7 +25,11 @@
         "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi."
       ]
     },
-    "structure": {},
+    "structure": {
+      "sectionName": "Tashkiliy tuzilma",
+      "task": "Vazifalari",
+      "employees":"Xodimlar"
+    },
     "requisites": {
       "sectionName": "Rekvizitlar",
       "table": {
@@ -139,7 +143,8 @@
       "degrees": {
         "FULL_TIME": "KUNDUZGI",
         "PART_TIME": "SIRTQI",
-        "SPECIAL_PART_TIME": "MAXSUS SIRTQI"
+        "SPECIAL_PART_TIME": "MAXSUS SIRTQI",
+        "DOCTORATE": "Doktarantura"
       },
       "degreeDirection": {
         "BACHELOR": "Bakalavr",
@@ -205,7 +210,7 @@
     "scholarships_and_internships": {
       "sectionTitle": "Xalqaro stipendiyalar va amaliyotlar"
     },
-    "forums":{
+    "forums": {
       "sectionTitle": "Xalqaro forum va loyihalar"
     }
   },
@@ -224,7 +229,41 @@
       "body": "Biz sizga o'quv va ish tajribalarini boyitishda yordam\nberishga tayyormiz."
     },
     "exam": {
-      "sectionTitle": "Imtihon jarayonlari"
+      "sectionTitle": "Imtihon jarayonlari",
+      "exam_room_equipment": "Bizning imtihonlarimiz eng so'nggi <strong>texnologiyalar</strong> bilan jihozlangan <strong>kompyuter xonalarida</strong> o'tkaziladi.",
+      "student_computer_rooms": "Har bir talaba uchun mo'ljallangan <strong>400</strong> ga yaqin zamonaviy <strong>kompyuterlar</strong> bilan jihozlangan xonalarimizda imtihonlar uzluksiz va <strong>qulay muhitda</strong> bo'lib o'tadi.",
+      "fair_exam_process": "<strong>Adolatli</strong> va <strong>shaffof</strong> imtihon jarayonini ta'minlash maqsadida, <strong>malakali nazoratchilarimiz</strong> va <strong>maxsus ishchi guruhlari</strong> tuzilgan.",
+      "hemis_platform": "Imtihonlarning barchasi <strong>HEMIS platformasi</strong> orqali qabul qilinadi, bu esa talabalarimizga natijalarni tez va aniq olish imkonini beradi.",
+      "university_commitment": "Xalqaro Nordik Universiteti imtihonlarining <strong>samaradorligi</strong> va <strong>adolati</strong>ni ta'minlash orqali talabalarimizning <strong>bilimini</strong> va <strong>ko'nikmalarini</strong> to'g'ri baholashga intiladi.",
+      "future_success_focus": "Bizning imtihon jarayonimiz talabalarning kelajakdagi muvaffaqiyatlariga poydevor qo'yishga qaratilgan.",
+      "exam_process_organization": "Xalgaro Nordik-Universitet imtihon jarayonlarini yuqori darajada tashkil etishga alohida e'tibor beradi."
+    },
+    "nordik_life":{
+      "sectionTitle": "Nordik life jurnal"
+    },
+    "CodesAndManuals": {
+      "sectionTitle": "Talabalar uchun kodeks va qo’llanmalar",
+      "CODES": "Kodeks",
+      "MANUALS": "Qo’llanma"
+    },
+    "albums": {
+      "sectionTitle": "Fotojamlanma"
+    }
+  },
+  "press-service": {
+    "subItems": [
+      "Yangiliklar",
+      "Press relizlar",
+      "Nordikda podcast",
+      "Nordik Trend next intl"
+    ],
+    "title": "Matbuot xizmati",
+    "news": {
+      "sectionTitle": "Yangiliklar",
+      "button": "Batafsil..."
+    },
+    "Press_releases": {
+      "sectionTitle": "Press relizlar"
     }
   }
-  }
+}

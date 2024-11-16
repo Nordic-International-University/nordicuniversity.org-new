@@ -2,20 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
-interface ImageType {
-  src: string;
-  height: number;
-  width: number;
-}
-
-interface partnersTypes {
-  image: ImageType;
-  alt: string;
-}
+import { PartnersType } from "@/types/templates/partners.types";
 
 interface PartnersSliderProps {
-  partners: partnersTypes[];
+  partners: PartnersType[];
   sectionTitle: string;
 }
 
@@ -65,8 +55,11 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                 className={`slide ${index === activeIndex[colIndex] ? "active" : ""}`}
               >
                 <Image
-                  src={partner.image.src}
-                  alt={partner.alt}
+                  src={
+                    process.env.NEXT_PUBLIC_URL_BACKEND +
+                    partner.image.file_path
+                  }
+                  alt={partner.name}
                   width={400}
                   height={400}
                   className="object-contain w-full h-auto"

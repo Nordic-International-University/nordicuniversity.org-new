@@ -5,7 +5,7 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import Certificate from "@/app/components/templates/education/certifiacteTable";
+import Certificate from "@/app/components/templates/education/certificate";
 
 const ClientPage = () => {
   const t = useTranslations("education");

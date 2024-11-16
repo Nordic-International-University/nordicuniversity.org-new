@@ -4,9 +4,9 @@ export interface getAllFaqsParameterTypes {
   lang: string;
 }
 
-export interface educationDirection {
+export interface getAllAlbumsByTypeProps {
   lang: string;
-  direction: EnumEduDegree;
+  type: string;
 }
 
 export enum EnumEduDegree {
