@@ -13,6 +13,7 @@ interface PageProps {
 const SearchResults = async (slug: string, lang: string) => {
   const result = await fetch(
     `http://localhost:3000/api/search?query=${slug}&lang=${lang}`,
+    { cache: "no-store" },
   );
   return await result.json();
 };
@@ -21,42 +22,51 @@ const Page = async ({ params }: PageProps) => {
   const { slug } = params;
   const data = await SearchResults(slug, await getCurrentLangServer());
   console.log(data);
-
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <SearchInput />
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-          Qidiruv natijalari:
-        </h2>
-        {data.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.map(
-              (
-                item: { route: string | UrlObject; includedText: any[] },
-                index: React.Key | null | undefined,
-              ) => (
-                <Link href={item.route} key={index} legacyBehavior>
-                  <a className="block p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 hover:border-gray-300">
-                    {item.includedText.map(
-                      (textItem: any, textIndex: number) => (
-                        <p
-                          key={textIndex}
-                          className="text-gray-700 line-clamp-1 text-sm"
-                          dangerouslySetInnerHTML={{ __html: textItem.text }}
-                        ></p>
-                      ),
-                    )}
-                  </a>
-                </Link>
-              ),
-            )}
-          </div>
-        ) : (
-          <p className="text-center text-gray-600 text-lg mt-4">
-            Natijalar topilmadi
-          </p>
-        )}
+    <div className="min-h-screen bg-gray-200">
+      {/* Header */}
+      <div className="bg-gray-100 py-10 text-center">
+        <h1 className="text-4xl font-bold text-gray-800">Qidiruv</h1>
+        <div className="mt-4 mx-auto max-w-xl">
+          <SearchInput />
+        </div>
+      </div>
+
+      {/* Results Section */}
+      <div className="bg-white py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Filters */}
+
+          {/* Search Results */}
+          {data.length > 0 ? (
+            <div className="space-y-6">
+              {data.map(
+                (
+                  item: { route: string | UrlObject; includedText: any[] },
+                  index: React.Key | null | undefined,
+                ) => (
+                  <Link href={item.route} key={index} legacyBehavior>
+                    <a className="block p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-gray-300">
+                      <h3 className="font-semibold text-gray-800 text-lg mb-2">
+                        {item.sectionTitle || "Nordic University"}
+                      </h3>
+                      <p
+                        className="text-gray-600 text-sm line-clamp-2"
+                        dangerouslySetInnerHTML={{
+                          __html: item.includedText[0]?.text || "",
+                        }}
+                      ></p>
+                    </a>
+                  </Link>
+                ),
+              )}
+            </div>
+          ) : (
+            <p className="text-center text-gray-600 text-lg">
+              Malumotlar Topilmadi
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

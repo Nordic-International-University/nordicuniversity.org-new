@@ -37,11 +37,11 @@ const SearchInput = () => {
       <form onSubmit={(e) => navigate(e, searchText)}>
         <Input
           onChange={(e) => setSearchText(e.target.value)}
-          placeholder="Search"
+          placeholder="Qidirish"
           className="w-full"
           ref={nameInput}
           value={searchText}
-          prefix={<SearchOutlined />}
+          prefix={<SearchOutlined size={100} />}
           suffix={
             searchText && (
               <Button
