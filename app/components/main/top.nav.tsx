@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useRef, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
 import { Dropdown, Input, Modal, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
 import Image from "next/image";
 import { SearchIcon } from "@nextui-org/shared-icons";
@@ -17,6 +17,8 @@ import {
 } from "@/app/utils/slices/search.slice";
 import SearchModal from "@/app/components/UI/searchModal";
 import { BiCommand } from "react-icons/bi";
+import { router } from "next/client";
+import SearchInput from "@/app/components/main/searchInput";
 
 const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
@@ -29,6 +31,7 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
   const navClass = isHomePage ? "nav-bg-opacity" : "bg-dark_blue_color";
+  const router = useRouter();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -71,11 +74,7 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
                 title="Qidiruv"
                 footer={null}
               >
-                <Input
-                  onChange={(e) => setSearchText(e.target.value)}
-                  placeholder={"search"}
-                  className="w-full"
-                />
+                <SearchInput />
 
                 <SearchModal searchModal={searchText} />
               </Modal>
