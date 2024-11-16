@@ -138,7 +138,7 @@ export async function GET(req: NextRequest) {
 
   const results = Array.from(resultsMap.values());
 
-  console.log("Search Resulsssssts:", results);
+  console.log("Search Resulsssssdddddts:", results);
 
   return NextResponse.json(results);
 }
