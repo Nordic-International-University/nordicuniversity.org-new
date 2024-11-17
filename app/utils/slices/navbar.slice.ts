@@ -95,10 +95,10 @@ const initialState: any = {
         name: "subItems.2",
         url: "/partners/forum-and-projects",
       },
-      {
-        name: "subItems.3",
-        url: "/partners/contract-prices",
-      },
+      // {
+      //   name: "subItems.3",
+      //   url: "/partners/contract-prices",
+      // },
     ],
   },
   students: {
@@ -139,10 +139,10 @@ const initialState: any = {
         name: "subItems.2",
         url: "/press-service/podcast",
       },
-      {
-        name: "subItems.3",
-        url: "/press-service/nordic-trend",
-      },
+      // {
+      //   name: "subItems.3",
+      //   url: "/press-service/nordic-trend",
+      // },
     ],
   },
 };
@@ -174,19 +174,19 @@ initialState.menuItems = [
   },
   {
     name: "HAMKORLIK",
-    url: "/partners/scholarships-and-internships",
+    url: "/partners/connections",
     transKey: "partners",
     subItems: initialState.partners.educationSidebarItems,
   },
   {
     name: "TALABALARGA",
-    url: "/student",
+    url: "/students/examination-procedures",
     transKey: "student",
     subItems: initialState.students.studentsSidebarItems,
   },
   {
     name: "MATBUOT XIZMATI",
-    url: "/press-service",
+    url: "/press-service/news",
     transKey: "press-service",
     subItems: initialState.press_service.pressServiceSidebarItems,
   },

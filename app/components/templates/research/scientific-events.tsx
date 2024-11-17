@@ -69,7 +69,7 @@ const ScientificEvents = ({ props, buttons }: researchEventProps) => {
                 <Image
                   width={405}
                   height={243}
-                  className="max-lg:w-full h-full"
+                  className="max-lg:w-full h-full min-w-[213px] min-h-[213px]"
                   src={items.image_url}
                   alt={items.title}
                 />

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FaClock } from "react-icons/fa";
@@ -7,7 +8,7 @@ import { podcastType } from "@/types/press-service/press-releases.types";
 
 const Podcast = ({ props }: { props: podcastType[] | any }) => {
   const t = useTranslations("press-service");
-
+  console.log(props);
   return (
     <article className="mt-10 mb-10">
       <div className="flex flex-col max-sm:gap-8 gap-6 max-md:place-items-center">

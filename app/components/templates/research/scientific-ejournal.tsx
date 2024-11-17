@@ -72,7 +72,7 @@ const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
                 key={item.id}
               >
                 <Image
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover min-w-[100px]"
                   src={`${process.env.NEXT_PUBLIC_URL_JOURNAL}${item?.image?.file_path}`}
                   width={700}
                   height={600}

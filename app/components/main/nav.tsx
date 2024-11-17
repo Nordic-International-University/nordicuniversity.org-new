@@ -65,14 +65,14 @@ const Nav: FC = () => {
         <div className="container">
           <div className="flex items-center max-xl:py-6 justify-between">
             <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-start">
-              <ul className="flex items-center group-hover:group">
+              <ul className="flex items-center ">
                 {menuItems
                   .slice(0, Math.ceil(menuItems.length / 2))
                   .map((menuItem: any, index: number) => (
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem.name)}
                       onMouseLeave={handleMouseLeave}
-                      className="text-white py-10 pr-4 text-lg group"
+                      className="text-white py-10 pr-4 text-lg "
                       key={index}
                     >
                       <MegaMenu
@@ -102,14 +102,14 @@ const Nav: FC = () => {
               alt="menu"
             />
             <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-end">
-              <ul className="flex items-center group-hover:group gap-6">
+              <ul className="flex items-center  gap-6">
                 {menuItems
                   .slice(Math.ceil(menuItems.length / 2))
                   .map((menuItem: any, index: any) => (
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem.name)}
                       onMouseLeave={handleMouseLeave}
-                      className="text-white text-lg group"
+                      className="text-white text-lg "
                       key={index}
                     >
                       <MegaMenu
