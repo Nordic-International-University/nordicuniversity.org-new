@@ -26,7 +26,14 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const { isOpenSearch } = useSelector((state: RootState) => state.search);
   const dispatch = useDispatch();
   const items: any = props.slice(4, props.length - 1).map((item, index) => {
-    return { label: item.name, key: index.toString() };
+    return {
+      label: (
+        <Link target="_blank" href={item.link}>
+          {item.name}
+        </Link>
+      ),
+      key: index.toString(),
+    };
   });
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
@@ -80,21 +87,26 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
               </Modal>
               <ul className="flex items-center text-white gap-5">
                 {props.slice(0, 4).map((resource, index) => (
-                  <Link className="uppercase" href={resource.link} key={index}>
+                  <Link
+                    className="uppercase "
+                    href={resource.link}
+                    key={index}
+                    target="_blank"
+                  >
                     <li>{resource.name}</li>
                   </Link>
                 ))}
               </ul>
               <Dropdown menu={{ items }} trigger={["click"]}>
-                <a
-                  className="cursor-pointer lowercase text-white"
+                <div
+                  className="cursor-pointer  text-white"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    Yana
+                    YANA
                     <DownOutlined />
                   </Space>
-                </a>
+                </div>
               </Dropdown>
             </div>
           </div>
@@ -130,7 +142,7 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
            text-white gap-5"
           >
             {props.map((resource, index) => (
-              <Link href={resource.link} key={index}>
+              <Link href={resource.link} key={index} target="_blank">
                 <li>{resource.name}</li>
               </Link>
             ))}

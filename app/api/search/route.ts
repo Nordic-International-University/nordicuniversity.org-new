@@ -6,7 +6,6 @@ import Fuse from "fuse.js";
 const LOCALES_PATH = path.join(process.cwd(), "locales");
 const APP_PATH = path.join(process.cwd(), "app");
 
-// Flatten locale data and detect section titles dynamically
 const flattenLocaleData = (
   obj: any,
   prefix = "",
