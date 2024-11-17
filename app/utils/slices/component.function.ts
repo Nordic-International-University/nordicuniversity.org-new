@@ -6,7 +6,7 @@ import {
 
 const initialState: componentState = {
   album: {
-    albumVisible: false,
+    albumVisible: "",
   },
 };
 
