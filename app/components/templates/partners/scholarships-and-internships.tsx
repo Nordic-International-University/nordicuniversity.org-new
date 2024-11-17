@@ -9,23 +9,20 @@ const ScholarshipsAndInternships = ({ props }: any) => {
 
   useEffect(() => {
     if (listRef.current) {
-      // Clear previous animations and reapply on new data
-      gsap.context(() => {
-        gsap.fromTo(
-          listRef.current?.children,
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 },
-        );
-      }, listRef.current);
+      gsap.fromTo(
+        listRef.current.children as HTMLCollectionOf<HTMLElement>,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 },
+      );
     }
-  }, [props.data]); // Trigger animation when data changes
+  }, [props.data]);
 
   return (
     <article className="mt-10">
       <div className="flex flex-col gap-4" ref={listRef}>
         {props?.data.map((item: any, index: number) => (
           <div
-            key={item.id || index} // Use unique key for stable rendering
+            key={item.id || index}
             className="p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4"
           >
             <Image

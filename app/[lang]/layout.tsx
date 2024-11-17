@@ -9,6 +9,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { StoreProvider } from "@/app/utils/provider/storeProvider";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const getAllResources = async () => {
   const response = await fetch(
@@ -65,6 +66,7 @@ export default async function RootLayout({
             <TopNav props={resources} networks={networks.data} />
             <Nav />
             <main className="flex-grow">{children}</main>
+            <SpeedInsights />
             <MainFooter />
           </StoreProvider>
         </NextIntlClientProvider>

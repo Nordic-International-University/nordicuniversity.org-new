@@ -4,14 +4,15 @@ import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { handleCloseSearchModal } from "@/app/utils/slices/search.slice";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { Input, Button } from "antd";
+import { Input, Button, InputRef } from "antd";
+
 import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
 
 const SearchInput = () => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
-  const nameInput = useRef(null);
+  const nameInput = useRef<InputRef>(null);
 
   const navigate = (e: FormEvent, text: string) => {
     e.preventDefault();
@@ -27,9 +28,7 @@ const SearchInput = () => {
   };
 
   useEffect(() => {
-    if (nameInput.current) {
-      nameInput.current.focus();
-    }
+    nameInput.current?.focus();
   }, []);
 
   return (
