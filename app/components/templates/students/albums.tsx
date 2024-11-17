@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { Dispatch, useState } from "react";
 import { albumsType } from "@/types/templates/albums.types";
-import { Button, Image } from "antd";
+import { Button } from "antd";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 import { useDispatch } from "react-redux";
-import { Dispatch } from "redux";
 import { changeAlbum } from "@/app/utils/slices/component.function";
 
 const Albums = ({
@@ -13,7 +14,16 @@ const Albums = ({
   selectedTypeData: any;
 }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-  const dispatch: Dispatch = useDispatch();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const dispatch: Dispatch<any> = useDispatch();
+  const imageURl = process.env.NEXT_PUBLIC_URL_BACKEND;
+
+  const images = selectedTypeData.slice(-9).map((item: any) => ({
+    src: imageURl + item?.photo?.file_path || "default-image.jpg",
+    caption: item?.photo?.description || `Rasm tavsifi yo'q`,
+  }));
+
+  const closeLightbox = () => setLightboxIndex(null);
 
   return (
     <article className="mt-7">
@@ -35,34 +45,44 @@ const Albums = ({
           </Button>
         ))}
       </div>
-
-      <div className="overflow-x-auto pb-4">
-        <div
-          className="grid gap-4"
-          style={{
-            gridTemplateColumns: "repeat(auto-fill, 200px)", // Fixed width for each item
-            gridTemplateRows: "repeat(2, 300px)", // Fixed 2 rows with 300px height each
-            gridAutoFlow: "column", // Forces items to flow horizontally into columns
-            width: "max-content", // Ensures the grid expands horizontally to fit content
-          }}
-        >
-          {selectedTypeData &&
-            selectedTypeData.map((item: any, index: number) => (
-              <div
-                key={index}
-                className={`${index % 3 === 0 ? "col-span-2 row-span-2" : "col-span-2 row-span-1"} bg-gray-200 p-4`}
-              >
-                <Image
-                  width="100%"
-                  height="100%"
-                  src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.photo.file_path}`}
-                  alt={item.id.toString()}
-                  className="object-cover w-full h-full rounded-lg"
-                />
-              </div>
-            ))}
-        </div>
+      <div className="wrapper">
+        {images.map((image: any, index: number) => (
+          <div
+            key={index}
+            onClick={() => {
+              setLightboxIndex(index);
+            }}
+            className="cursor-pointer"
+          >
+            <img
+              src={image.src}
+              alt={`Image ${index}`}
+              onError={(e: React.SyntheticEvent<HTMLImageElement>) =>
+                (e.currentTarget.src = "default-image.jpg")
+              }
+            />
+          </div>
+        ))}
       </div>
+      {lightboxIndex !== null && images[lightboxIndex] && (
+        <Lightbox
+          mainSrc={images[lightboxIndex].src}
+          nextSrc={images[(lightboxIndex + 1) % images.length]?.src}
+          prevSrc={
+            images[(lightboxIndex - 1 + images.length) % images.length]?.src
+          }
+          onCloseRequest={closeLightbox}
+          onMovePrevRequest={() =>
+            setLightboxIndex(
+              (lightboxIndex - 1 + images.length) % images.length,
+            )
+          }
+          onMoveNextRequest={() =>
+            setLightboxIndex((lightboxIndex + 1) % images.length)
+          }
+          imageCaption={images[lightboxIndex]?.caption}
+        />
+      )}
     </article>
   );
 };
