@@ -48,7 +48,7 @@ const ClientPage = ({
     },
     {
       url: "/university/documents",
-      name: t("news.sectionTitle"),
+      name: t("subItems.2"),
     },
   ];
 
@@ -57,7 +57,7 @@ const ClientPage = ({
       translationKey="press-service"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("news.sectionTitle")}
+      sidebarTitle={t("subItems.2")}
     >
       <Podcast props={data.data} />
       <CustomPagination

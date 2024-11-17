@@ -1,40 +1,85 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { FaClock } from "react-icons/fa";
+import {
+  FaClock,
+  FaInstagram,
+  FaTelegram,
+  FaYoutube,
+  FaTwitter,
+} from "react-icons/fa";
 import React from "react";
 import Link from "next/link";
 import { podcastType } from "@/types/press-service/press-releases.types";
+import dayjs from "dayjs";
 
 const Podcast = ({ props }: { props: podcastType[] | any }) => {
   const t = useTranslations("press-service");
-  console.log(props);
+
+  const renderSocialLinks = (links: any) => {
+    const icons = {
+      instagram: <FaInstagram />,
+      telegram: <FaTelegram />,
+      youtube: <FaYoutube />,
+      twitter: <FaTwitter />,
+    };
+
+    return Object.entries(links).map(([key, value]) => {
+      if (!value) return null; // Agar havola yo'q bo'lsa, ko'rsatma
+      return (
+        <div
+          key={key}
+          rel="noopener noreferrer"
+          className="text-xl text-[#7A98C1] hover:text-blue-600"
+        >
+          {icons[key as keyof typeof icons]}
+        </div>
+      );
+    });
+  };
+
   return (
     <article className="mt-10 mb-10">
       <div className="flex flex-col max-sm:gap-8 gap-6 max-md:place-items-center">
-        {props.map((item: any, index: number) => (
-          <Link key={index} href={`/press-service/news/${item.slug}`}>
-            <div className="w-full p-4 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[1px] flex gap-6 items-stretch">
+        {props.map((item: podcastType, index: number) => (
+          <div
+            key={index}
+            className="w-full p-4 border-[1px] border-gray-300 rounded-lg flex gap-6 items-stretch max-sm:flex-col max-sm:border-none max-sm:p-0"
+          >
+            {/* Rasm qismi */}
+            <div className="w-[249px] max-sm:w-full h-[240px] flex-shrink-0 overflow-hidden rounded-md">
               <Image
-                width={260}
-                className="h-[230px] w-[400px]"
-                height={200}
-                src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
+                width={249}
+                height={240}
+                className="w-full h-full object-cover"
+                src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
                 alt={item.title}
               />
+            </div>
 
-              <div className="w-full flex flex-col">
-                <div className="flex-grow">
-                  <h2 className="max-sm:text-sm pb-4 text-xl text-text_secondary">
-                    {item.title}
-                  </h2>
-                  <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
-                    <FaClock />
-                  </div>
+            {/* Matn qismi */}
+            <div className="flex flex-col justify-between w-full">
+              <div>
+                <h2 className="text-xl text-text_secondary max-sm:text-sm pb-4 font-semibold">
+                  {item.title}
+                </h2>
+                <p className="text-gray-600 max-sm:text-sm">{item.hashtags}</p>
+              </div>
+              <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
+                <FaClock />
+                <span className="text-sm">
+                  {dayjs(item.createdAt).format("DD-MM-YYYY")}
+                </span>
+              </div>
+              <div className="justify-center flex items-center gap-4">
+                <span className="h-[0.5px] w-full bg-tertiary"></span>
+                <div className="flex gap-4">
+                  {renderSocialLinks(item.social_network_links)}
                 </div>
+                <span className="h-[0.5px] w-full bg-tertiary"></span>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </article>
