@@ -17,7 +17,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [prevTab, setPrevTab] = useState("LICENSE");
   const contentRef = useRef(null);
   const t = useTranslations("university");
-
+  //ss
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
