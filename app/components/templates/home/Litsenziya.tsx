@@ -17,7 +17,6 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [prevTab, setPrevTab] = useState("LICENSE");
   const contentRef = useRef(null);
   const t = useTranslations("university");
-  //ss
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
@@ -82,7 +81,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
             },
           }}
           modules={[Navigation]}
-          className="w-full h-[500px]"
+          className="w-full h-[550px]"
         >
           {props[selectedTab].map((item, index) => (
             <SwiperSlide key={index}>
