@@ -4,14 +4,15 @@ import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { handleCloseSearchModal } from "@/app/utils/slices/search.slice";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { Input, Button } from "antd";
+import { Input, InputRef, Button } from "antd";
+
 import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
 
 const SearchInput = () => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
-  const nameInput = useRef(null);
+  const nameInput = useRef<InputRef>(null);
 
   const navigate = (e: FormEvent, text: string) => {
     e.preventDefault();
@@ -23,13 +24,13 @@ const SearchInput = () => {
 
   const clearInput = () => {
     setSearchText("");
+    // Проверяем, что current не равен null, и вызываем focus
     nameInput.current && nameInput.current.focus();
   };
 
   useEffect(() => {
-    if (nameInput.current) {
-      nameInput.current.focus();
-    }
+    // Установим фокус на элемент при загрузке
+    nameInput.current?.focus();
   }, []);
 
   return (
