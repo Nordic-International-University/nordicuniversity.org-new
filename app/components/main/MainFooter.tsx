@@ -51,13 +51,13 @@ const MainFooter = () => {
         <div className="flex items-center gap-16 justify-center mt-12">
           <span className="block bg-white h-0.5 w-[250px]"></span>
           <div className="flex text-lg items-center text-white gap-3 max-sm:gap-1.5">
-            <FaInstagram />
+            <FaInstagram className="w-[30px] h-[30px]" />
             <span className="block bg-white h-[20px] w-[0.5px]"></span>
-            <FaTelegram />
+            <FaTelegram className="w-[30px] h-[30px]" />
             <span className="block bg-white h-[20px] w-[0.5px]"></span>
-            <FaFacebook />
+            <FaFacebook className="w-[30px] h-[30px]" />
             <span className="block bg-white h-[20px] w-[0.5px]"></span>
-            <FaYoutube />
+            <FaYoutube className="w-[30px] h-[30px]" />
           </div>
           <span className="block bg-white h-0.5 w-[250px]"></span>
         </div>
@@ -79,7 +79,8 @@ const MainFooter = () => {
               </h2>
             </div>
             <h2 className="text-white block max-lg:hidden">
-              Sayt ishlab chiquvchilari: IT departamenti
+              Sayt ishlab chiquvchilari:Xalqaro Nordic Universiteti IT
+              departamenti
             </h2>
           </div>
         </div>

@@ -11,13 +11,13 @@ const config: Config = {
     extend: {
       colors: {
         secondary: "#032E63",
-        text_secondary: "#46658B",
+        text_secondary: "#0b4075",
         text_primary: "#fff",
         text_tertiary: "rgba(219, 242, 255, 1)",
         tertiary: "#364E6B",
         box_color: "#DBF2FF",
         dark_blue_color: "rgba(3, 46, 99, 1)",
-        brodCrumbColor: "rgba(122, 152, 193, 1)",
+        brodCrumbColor: "#003161",
         anyColor: "#0C3169",
       },
       backgroundImage: {

@@ -14,7 +14,7 @@ const News = ({ props }: { props: NewsItem[] | any }) => {
       <div className="flex flex-col max-sm:gap-8 gap-6 max-md:place-items-center">
         {props.map((item: NewsItem, index: number) => (
           <Link key={index} href={`/press-service/news/${item.slug}`}>
-            <div className="w-full p-3 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[1px] flex gap-3 items-stretch">
+            <div className="w-full p-3 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[2px]  border-text_secondary flex gap-3 items-stretch">
               <Image
                 width={260}
                 className="max-sm:w-full"
@@ -25,10 +25,10 @@ const News = ({ props }: { props: NewsItem[] | any }) => {
 
               <div className="w-full flex flex-col">
                 <div className="flex-grow">
-                  <h2 className="max-sm:text-sm pb-4 text-xl text-text_secondary">
+                  <h2 className="max-sm:text-sm pb-4 text-xl text-text_secondary font-medium">
                     {item.title}
                   </h2>
-                  <p> {item.description}</p>
+                  <p className=""> {item.description}</p>
                   <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
                     <FaClock />
                     <h2>{item.time}</h2>
