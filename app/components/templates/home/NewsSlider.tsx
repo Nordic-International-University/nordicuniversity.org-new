@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { NewsItem, newsSliderProps } from "@/types/templates/newsSlider.type";
+import { NewsItem } from "@/types/templates/newsSlider.type";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -10,6 +10,7 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import dayjs from "dayjs";
+import Link from "next/link";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
@@ -91,9 +92,12 @@ const NewsSlider = ({
                         <span className="text-tertiary text-opacity-15 max-sm:hidden block">
                           {dayjs(item.createdAt).format("MMMM Do YYYY")}
                         </span>
-                        <button className="text-white max-sm:w-full bg-text_secondary px-11 py-1">
+                        <Link
+                          href={`/press-service/news/${item.slug}`}
+                          className="text-white max-sm:w-full bg-text_secondary px-11 py-1"
+                        >
                           Batafsil...
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
