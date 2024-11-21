@@ -19,6 +19,7 @@ const config: Config = {
         dark_blue_color: "rgba(3, 46, 99, 1)",
         brodCrumbColor: "rgba(122, 152, 193, 1)",
         anyColor: "#0C3169",
+        nav_opacity: "rgba(39, 41, 69, 0.5)",
       },
       backgroundImage: {
         "primary-gradient":

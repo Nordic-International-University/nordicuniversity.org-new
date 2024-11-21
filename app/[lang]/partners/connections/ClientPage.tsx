@@ -76,7 +76,11 @@ const ClientPage = ({ initialData }: any) => {
     >
       <div className="flex items-center gap-4 justify-center mt-10">
         <Button
-          className="bg-text_secondary max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold text-white py-6 px-12 rounded text-xl"
+          className={`${
+            time === timeFilter.future
+              ? "bg-text_secondary text-white"
+              : "bg-text_tertiary text-text_secondary"
+          } max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold py-6 px-12 rounded text-xl`}
           onClick={() => {
             setTime(timeFilter.future);
             setCurrentPage(1);
@@ -85,7 +89,11 @@ const ClientPage = ({ initialData }: any) => {
           {t("connections.future")}
         </Button>
         <Button
-          className="bg-text_tertiary max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold text-text_secondary rounded py-6 px-12 text-xl"
+          className={`${
+            time === timeFilter.past
+              ? "bg-text_secondary text-white"
+              : "bg-text_tertiary text-text_secondary"
+          } max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold rounded py-6 px-12 text-xl`}
           onClick={() => {
             setTime(timeFilter.past);
             setCurrentPage(1);

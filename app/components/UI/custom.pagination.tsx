@@ -28,11 +28,17 @@ const CustomPagination: React.FC<PaginationProps> = ({
     onPageChange(page);
   };
 
+  if (totalPages === 0) {
+    return null;
+  }
+
   return (
     <div className="flex justify-center mt-4 items-center gap-2 text-tertiary">
       <ArrowLeftIcon
         onClick={handlePreviousPage}
-        className={`text-2xl max-sm:text-xl ${currentPage === 1 ? "text-gray-400" : "cursor-pointer"}`}
+        className={`text-2xl max-sm:text-xl ${
+          currentPage === 1 ? "text-gray-400" : "cursor-pointer"
+        }`}
       />
       <span className="flex items-center gap-3">
         {Array.from({ length: totalPages }, (_, i) => (
@@ -51,7 +57,9 @@ const CustomPagination: React.FC<PaginationProps> = ({
       </span>
       <ArrowRightIcon
         onClick={handleNextPage}
-        className={`text-2xl max-sm:text-xl ${currentPage === totalPages ? "text-gray-400" : "cursor-pointer"}`}
+        className={`text-2xl max-sm:text-xl ${
+          currentPage === totalPages ? "text-gray-400" : "cursor-pointer"
+        }`}
       />
     </div>
   );

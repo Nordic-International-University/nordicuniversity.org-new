@@ -22,7 +22,10 @@ import SearchInput from "@/app/components/main/searchInput";
 
 const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
-  const [searchText, setSearchText] = useState("");
+  const [searchText, _] = useState("");
+  const menuItems = useSelector(
+    (state: RootState) => state.menuSlice.activeMenu,
+  );
   const { isOpenSearch } = useSelector((state: RootState) => state.search);
   const dispatch = useDispatch();
   const items: any = props.slice(4, props.length - 1).map((item, index) => {
@@ -37,8 +40,8 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   });
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
-  const navClass = isHomePage ? "nav-bg-opacity" : "bg-dark_blue_color";
-  const router = useRouter();
+  const navClass =
+    isHomePage || menuItems ? "nav-bg-opacity" : "bg-dark_blue_color";
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -56,7 +59,7 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
 
   return (
     <div
-      className={`py-4 ${navClass} border-b-[0.1px] resources-translate border-white border-opacity-30 sticky z-20 bg-opacity-50`}
+      className={`py-4 ${navClass} border-b-[0.1px] resources-translate border-white border-opacity-30 z-20 transition-colors bg-opacity-50`}
     >
       <div className="container">
         <div className="flex items-center justify-between">

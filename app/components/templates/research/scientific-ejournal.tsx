@@ -68,7 +68,7 @@ const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
             )
             ?.map((item: any) => (
               <SwiperSlide
-                className="relative w-auto h-[383px] group flex justify-center items-center"
+                className="relative group flex justify-center items-center"
                 key={item.id}
               >
                 <Image

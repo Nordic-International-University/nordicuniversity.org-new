@@ -95,10 +95,10 @@ const initialState: any = {
         name: "subItems.2",
         url: "/partners/forum-and-projects",
       },
-      // {
-      //   name: "subItems.3",
-      //   url: "/partners/contract-prices",
-      // },
+      {
+        name: "subItems.3",
+        url: "/partners/international-meetings-photos",
+      },
     ],
   },
   students: {
@@ -139,10 +139,10 @@ const initialState: any = {
         name: "subItems.2",
         url: "/press-service/podcast",
       },
-      // {
-      //   name: "subItems.3",
-      //   url: "/press-service/nordic-trend",
-      // },
+      {
+        name: "subItems.3",
+        url: "/press-service/nordic-trend",
+      },
     ],
   },
 };

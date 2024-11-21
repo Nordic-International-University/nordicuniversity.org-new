@@ -1,18 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import Scientific_events from "@/app/components/templates/research/scientific-events";
-import { buttonsType, ResearchEvents } from "@/types/research/scince_events";
+import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
+import CustomPagination from "@/app/components/UI/custom.pagination";
+import { buttonsType } from "@/types/research/scince_events";
 
-const ClientPage = ({ data }: { data: any[] }) => {
+const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("research");
+  const language = useTranslations("partners.connections");
+  const [data, setData] = useState(initialData.data);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
+  const [time, setTime] = useState("future");
+
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getAllEvents(
+        getCurrentLangClient(),
+        "CONFERENCES",
+        currentPage,
+        100,
+        time,
+      );
+      console.log(result);
+      setData(result.data);
+      setTotalPages(result.totalPages || 1);
+    };
+
+    fetchData();
+  }, [currentPage, time]);
 
   const brodCmbItems = [
     {
@@ -21,83 +46,26 @@ const ClientPage = ({ data }: { data: any[] }) => {
     },
     {
       url: "/university/documents",
-      name: t("scienceConferences.breadcrumb.scientific_conferences"),
-    },
-  ];
-
-  const fakeProps: ResearchEvents[] = [
-    {
-      title:
-        "Professor - o’qituvchilar va tadqiqotchilarni onlayn ilmiy seminar - treningga taklif etamiz",
-      date: "Dushanba - Juma | 09:00 - 19:00",
-      full_name: "Spiker - ODILBEK KATTAYEV",
-      description:
-        "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
-      image_url: "https://picsum.photos/433",
-      social_links: [
-        {
-          url: "http://localhost:8080",
-          social_name: "instagram",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "facebook",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "telegram",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "twitter",
-          alt: "instagram link",
-        },
-      ],
-    },
-    {
-      title:
-        "Professor - o’qituvchilar va tadqiqotchilarni onlayn ilmiy seminar - treningga taklif etamiz",
-      date: "Dushanba - Juma | 09:00 - 19:00",
-      full_name: "Spiker - ODILBEK KATTAYEV",
-      description:
-        "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
-      image_url: "https://picsum.photos/430",
-      social_links: [
-        {
-          url: "http://localhost:8080",
-          social_name: "instagram",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "facebook",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "telegram",
-          alt: "instagram link",
-        },
-        {
-          url: "http://localhost:8080",
-          social_name: "twitter",
-          alt: "instagram link",
-        },
-      ],
+      name: t("scinceEvent.breadcrumb.scientific_events"),
     },
   ];
 
   const buttons: buttonsType[] = [
     {
-      label: "Kelgusi koferensiyalar",
-      className: "bg-[#46658B] text-white",
+      label: language("future"),
+      className: time === "future" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
+      onClick: () => {
+        setTime("future");
+        setCurrentPage(1);
+      },
     },
     {
-      label: "O’tgan konferensiyalar",
-      className: "bg-[#DBF2FF]",
+      label: language("past"),
+      className: time === "past" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
+      onClick: () => {
+        setTime("past");
+        setCurrentPage(1);
+      },
     },
   ];
 
@@ -105,10 +73,27 @@ const ClientPage = ({ data }: { data: any[] }) => {
     <LeftSidebarAndComponent
       translationKey="research"
       broadCampItems={brodCmbItems}
-      children={<Scientific_events buttons={buttons} props={fakeProps} />}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("scienceConferences.breadcrumb.scientific_conferences")}
-    ></LeftSidebarAndComponent>
+      sidebarTitle={t("scinceEvent.breadcrumb.scientific_events")}
+    >
+      <div className="flex items-center gap-4 justify-center mt-10">
+        {buttons.map((button, index) => (
+          <button
+            key={index}
+            className={`${button.className} rounded py-3 px-9 text-xl font-semibold`}
+            onClick={button.onClick}
+          >
+            {button.label}
+          </button>
+        ))}
+      </div>
+      <Scientific_events props={data} />
+      <CustomPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
+    </LeftSidebarAndComponent>
   );
 };
 

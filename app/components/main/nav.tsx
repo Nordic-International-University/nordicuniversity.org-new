@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import university_logo from "@/public/university_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,31 +16,36 @@ import {
 } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import caricature from "@/public/images/home-images/mobile_image.png";
-import MegaMenu from "@/app/components/UI/MegaMenu";
 import { usePathname } from "next/navigation";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
+import { useTranslations } from "next-intl";
+import gsap from "gsap";
+import { setActiveMenu } from "@/app/utils/slices/menuItem.slice";
 
 const Nav: FC = () => {
   const pathname = usePathname();
   const [activeSubItems, setActiveSubItems] = useState<string | null>(null);
-  const [_, setMenuHeight] = useState(0);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const menuItems = useSelector((state: RootState) => state.sideBar.menuItems);
+  const [transKey, setTransKey] = useState<string | null>(null);
+  const t = useTranslations(transKey);
+  const subItemsRef = useRef<HTMLDivElement | null>(null);
+  const dispatch = useDispatch();
 
   const handleAccordionToggle = (menuItemName: string) => {
     setActiveSubItems((prev) => (prev === menuItemName ? null : menuItemName));
   };
 
-  const handleMouseEnter = (menuItemName: string) => {
-    setActiveSubItems(menuItemName);
-    const subItemCount = getSubItems(menuItemName).length;
-    setMenuHeight(subItemCount * 50 + 200);
+  const handleMouseEnter = (menuItemName: any) => {
+    setActiveSubItems(menuItemName.name);
+    setTransKey(menuItemName.transKey);
+    dispatch(setActiveMenu(true));
   };
 
   const handleMouseLeave = () => {
     setActiveSubItems(null);
-    setMenuHeight(0);
+    dispatch(setActiveMenu(false));
   };
 
   const openHamburgerMenu = () => {
@@ -56,12 +61,28 @@ const Nav: FC = () => {
     return menuItem ? menuItem.subItems : [];
   };
 
+  useEffect(() => {
+    if (activeSubItems && subItemsRef.current) {
+      gsap.fromTo(
+        subItemsRef.current.children,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.1,
+          duration: 0.5,
+        },
+      );
+    }
+  }, [activeSubItems]);
+
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
-  const navClass = isHomePage ? "nav-bg-opacity" : "bg-primary-gradient";
+  const navClass =
+    isHomePage || activeSubItems ? "bg-nav_opacity" : "bg-primary-gradient";
 
   return (
     <>
-      <nav className={`bg-opacity-95 ${navClass} sticky z-[12]`}>
+      <nav className={`bg-opacity-95 ${navClass} z-[18]`}>
         <div className="container">
           <div className="flex items-center max-xl:py-6 justify-between">
             <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-start">
@@ -70,17 +91,21 @@ const Nav: FC = () => {
                   .slice(0, Math.ceil(menuItems.length / 2))
                   .map((menuItem: any, index: number) => (
                     <li
-                      onMouseEnter={() => handleMouseEnter(menuItem.name)}
+                      onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="text-white py-10 pr-4 text-lg "
+                      className="relative text-white py-10 pr-4 text-lg "
                       key={index}
                     >
-                      <MegaMenu
-                        subItems={menuItem.subItems}
-                        transKey={menuItem.transKey}
-                        itemName={menuItem.name}
-                      />
-                      <Link href={menuItem.url}>{menuItem.name}</Link>
+                      <Link
+                        className={`relative ${
+                          pathname.split("/")[2] === menuItem.url.split("/")[1]
+                            ? "after:w-full"
+                            : "after:w-0"
+                        } after:content-[''] after:absolute after:left-0 after:-bottom-[43px] after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        href={menuItem.url}
+                      >
+                        {menuItem.name}
+                      </Link>
                     </li>
                   ))}
               </ul>
@@ -101,23 +126,27 @@ const Nav: FC = () => {
               onClick={openHamburgerMenu}
               alt="menu"
             />
-            <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-end">
-              <ul className="flex items-center  gap-6">
+            <div className="flex max-xl:hidden z-10 sticky items-center gap-4 flex-1 justify-end">
+              <ul className="flex items-center">
                 {menuItems
                   .slice(Math.ceil(menuItems.length / 2))
                   .map((menuItem: any, index: any) => (
                     <li
-                      onMouseEnter={() => handleMouseEnter(menuItem.name)}
+                      onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="text-white text-lg "
+                      className="relative text-white py-10 pr-4 text-lg "
                       key={index}
                     >
-                      <MegaMenu
-                        subItems={menuItem.subItems}
-                        transKey={menuItem.transKey}
-                        itemName={menuItem.name}
-                      />
-                      <Link href={menuItem.url}>{menuItem.name}</Link>
+                      <Link
+                        className={`relative ${
+                          pathname.split("/")[2] === menuItem.url.split("/")[1]
+                            ? "after:w-full"
+                            : "after:w-0"
+                        } after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        href={menuItem.url}
+                      >
+                        {menuItem.name}
+                      </Link>
                     </li>
                   ))}
               </ul>
@@ -233,6 +262,37 @@ const Nav: FC = () => {
           alt="caricature"
           className="w-full absolute bottom-0"
         />
+      </div>
+      <div
+        className={`bg-[#272945] max-lg:hidden block absolute w-full min-h-[328px] z-[13] transition-all duration-500 ${
+          activeSubItems ? "top-0 opacity-100" : "top-[-100%] opacity-0"
+        }`}
+        onMouseEnter={() => {
+          setActiveSubItems(activeSubItems);
+          dispatch(setActiveMenu(true));
+        }}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="container pt-48 bottom-0 ease-linear mx-auto py-8 text-white">
+          <hr className="bg-white opacity-30 w-full mb-4" />
+          <div ref={subItemsRef} className="flex items-center gap-12">
+            {activeSubItems &&
+              getSubItems(activeSubItems).map((subItem: any, index: number) => {
+                return (
+                  <div key={index} className="py-2 flex">
+                    <Link
+                      onClick={handleMouseLeave}
+                      href={subItem.url}
+                      className="hover:underline"
+                    >
+                      {t(subItem.name)}
+                    </Link>
+                  </div>
+                );
+              })}
+          </div>
+          <hr className="bg-white opacity-30 mt-4 w-full" />
+        </div>
       </div>
     </>
   );

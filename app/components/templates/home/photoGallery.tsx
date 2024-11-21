@@ -17,9 +17,10 @@ const photos = [
   { src: "https://picsum.photos/300/280", alt: "Photo 7", size: "small" },
 ];
 
-const PhotoGallery = () => {
-  const photoRefs = useRef([]); // Array of refs for each photo
+const PhotoGallery = ({ gallery }: any) => {
+  const photoRefs = useRef([]);
 
+  console.log(gallery);
   useEffect(() => {
     photoRefs.current.forEach((photo) => {
       gsap.fromTo(

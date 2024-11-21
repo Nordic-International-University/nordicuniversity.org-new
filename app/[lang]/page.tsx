@@ -21,6 +21,7 @@ const getHome = async (lang: string) => {
 
 export default async function Home() {
   const { sections } = await getHome(await getCurrentLangServer());
+  console.log(sections);
   return (
     <>
       <Hero />
@@ -52,7 +53,7 @@ export default async function Home() {
           sectionTitle={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
         />
       </section>
-      <PhotoGallery />
+      <PhotoGallery gallery={sections[SectionTypeEnum.PHOTO_ALBUM].data} />
       <PartnersSlider
         sectionTitle={sections[SectionTypeEnum.PARTNERS].title}
         partners={sections[SectionTypeEnum.PARTNERS].data}

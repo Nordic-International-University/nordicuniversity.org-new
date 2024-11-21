@@ -16,7 +16,7 @@ const Hero = () => {
         loop={true}
         muted={true}
       >
-        <source src="/video/intro.mp4" type="video/mp4" />
+        <source src="/video/video2.mp4" type="video/mp4" />
         Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
       </video>
     </header>

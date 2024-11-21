@@ -33,8 +33,6 @@ const TutionFeesComponent = ({
               onClick={() => {
                 setState(item);
                 setSelectedEduType(item);
-
-                // Check if "DOCTORATE" is in props when "DOCTORATE" is selected
                 if (item === "DOCTORATE") {
                   setSelectedDegree("DOCTORATE");
                   console.log(";asdasdasdsad");
@@ -63,24 +61,46 @@ const TutionFeesComponent = ({
               </Button>
             ))}
           </div>
-          <div className="w-full">
+          <div className="flex-1">
             {(props as any)[selectedDegree]?.map(
               (program: any, index: number) => (
-                <div className="flex items-center p-4 border border-gray-200 rounded mb-4 gap-5">
+                <div className="flex p-4 border border-gray-200 rounded mb-4 gap-5">
                   <Image
                     width={300}
                     height={300}
-                    className="w-[300px] h-[200px] object-cover"
+                    className="w-[250px] h-[250px] object-cover"
                     src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${program.image.file_path}`}
                     alt=""
                   />
-                  <div key={index}>
-                    <h3>{program.name}</h3>
-                    <p>Kontrakt: {program.price.toLocaleString()} so'm</p>
-                    <p>Davomiyligi: {program.duration} yil</p>
-                    <p>Ta'lim tili: {program.field_lang}</p>
-                    <p>{program.id}</p>
-                    <Button type="link">O'quv reja</Button>
+                  <div className="w-full" key={index}>
+                    <h3 className="text-[#364E6B] text-[18px] mb-5 font-semibold">
+                      {program.name}
+                    </h3>
+                    <p className="list-disc pb-3 text-[#364E6B] font-normal">
+                      <strong>Kontrakt:</strong>{" "}
+                      <span className="underline">
+                        {program.price.toLocaleString()} so'm
+                      </span>
+                    </p>
+                    <p className="list-disc pb-3 text-[#364E6B] font-normal">
+                      <strong>Davomiyligi:</strong>
+                      <span className="underline"> {program.duration} yil</span>
+                    </p>
+                    <p className="list-disc pb-3 text-[#364E6B] font-normal">
+                      <strong>Ta'lim tili:</strong>
+                      <span className="underline">{program.field_lang}</span>
+                    </p>
+                    <Button
+                      className="bg-[#DBF2FF] text-secondary px-5 font-semibold rounded"
+                      type="primary"
+                    >
+                      O'quv reja
+                    </Button>
+                    <div className="flex text-[#46658B] mt-10 items-center gap-3 w-full">
+                      <div className="flex-1 h-[1px] bg-[#46658B]"></div>
+                      <span>{program.field_code}</span>
+                      <div className="flex-1 h-[1px] bg-[#46658B]"></div>
+                    </div>
                   </div>
                 </div>
               ),

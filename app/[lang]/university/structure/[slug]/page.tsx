@@ -16,6 +16,7 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import StaffUserCardReverse from "@/app/components/UI/staffUserCardReverse";
 import Link from "next/link";
+import StaffUserCard from "@/app/components/UI/staffUserCardReverse";
 
 const montserrat_font = Montserrat({
   subsets: ["latin"],
@@ -54,7 +55,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
     <article className={`mt-12 max-lg:16 ${montserrat_font.className}`}>
       <div className="container">
         <div className="flex justify-between gap-4">
-          <ul className="flex flex-col w-1/4 max-lg:hidden block gap-2">
+          <ul className="flex flex-col w-1/4 max-lg:hidden gap-2">
             {allStructuresByType.map((item, index) => (
               <Link key={index} href={`/university/structure/${item.slug}`}>
                 <li className="bg-[#DBF2FF] text-[#364E6B] rounded-md font-normal text-md py-1 pl-2">
@@ -67,7 +68,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
             {staffData && (
               <>
                 <div>
-                  <h1 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-3">
+                  <h1 className="text-tertiary max-sm:text-center max-lg:hidden max-sm:text-lg text-2xl font-semibold pb-3">
                     {staffData.name}
                   </h1>
                   <BroadCamp items={[breadcrumbItems]} />
@@ -104,7 +105,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
               <div className="flex flex-col gap-6">
                 {staffData.staffs &&
                   staffData.staffs.map((item: any, index: number) => (
-                    <StaffUserCardReverse
+                    <StaffUserCard
                       key={index}
                       staff={item}
                       imagePosition={index % 2 ? "left" : "right"}

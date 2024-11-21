@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "antd";
 import { PiFilePdfDuotone } from "react-icons/pi";
 import { gsap } from "gsap";
+import NoDataComponent from "@/app/components/UI/no-data";
 
 const ScholarshipsAndInternships = ({ props }: any) => {
   const listRef = useRef<HTMLDivElement>(null);
@@ -16,6 +17,10 @@ const ScholarshipsAndInternships = ({ props }: any) => {
       );
     }
   }, [props.data]);
+
+  if (props.data.length === 0) {
+    return <NoDataComponent />;
+  }
 
   return (
     <article className="mt-10">
@@ -33,7 +38,7 @@ const ScholarshipsAndInternships = ({ props }: any) => {
               className="max-lg:w-full object-cover h-[230px] min-w-[300px]"
             />
             <div>
-              <h2 className="text-xl max-sm:text-[16px] text-text_secondary font-semibold">
+              <h2 className="text-md max-sm:text-[16px] text-text_secondary font-semibold">
                 {item.name}
               </h2>
               <p className="mt-3 text-brodCrumbColor max-sm:text-sm opacity-75 font-semibold">

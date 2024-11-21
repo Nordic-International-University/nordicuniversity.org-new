@@ -17,7 +17,7 @@ const News = ({ props }: { props: NewsItem[] | any }) => {
             <div className="w-full p-3 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[1px] flex gap-3 items-stretch">
               <Image
                 width={260}
-                className="max-sm:w-full"
+                className="max-sm:w-full min-h-[250px] object-cover min-w-[250px]"
                 height={300}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
                 alt={item.title}
@@ -28,7 +28,7 @@ const News = ({ props }: { props: NewsItem[] | any }) => {
                   <h2 className="max-sm:text-sm pb-4 text-xl text-text_secondary">
                     {item.title}
                   </h2>
-                  <p> {item.description}</p>
+                  <p className="line-clamp-2"> {item.description}</p>
                   <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
                     <FaClock />
                     <h2>{item.time}</h2>

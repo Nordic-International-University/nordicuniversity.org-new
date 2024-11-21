@@ -46,7 +46,6 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
             key={index}
             className="w-full p-4 border-[1px] border-gray-300 rounded-lg flex gap-6 items-stretch max-sm:flex-col max-sm:border-none max-sm:p-0"
           >
-            {/* Rasm qismi */}
             <div className="w-[249px] max-sm:w-full h-[240px] flex-shrink-0 overflow-hidden rounded-md">
               <Image
                 width={249}
@@ -56,8 +55,6 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
                 alt={item.title}
               />
             </div>
-
-            {/* Matn qismi */}
             <div className="flex flex-col justify-between w-full">
               <div>
                 <h2 className="text-xl text-text_secondary max-sm:text-sm pb-4 font-semibold">

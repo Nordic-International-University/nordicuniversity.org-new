@@ -1,4 +1,4 @@
-import { researchEventProps } from "@/types/research/scince_events";
+import { ScientificEvent } from "@/types/research/scince_events";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import {
@@ -7,37 +7,28 @@ import {
   FaTwitter,
   FaInstagram,
   FaYoutube,
-  FaChevronUp,
-  FaChevronDown,
+  FaTelegram,
 } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
 import React, { useState } from "react";
 import { Navigation } from "swiper/modules";
-import { Button } from "antd";
+import Link from "next/link";
+import NoDataComponent from "@/app/components/UI/no-data";
 
-const ScientificEvents = ({ props, buttons }: researchEventProps) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
+  const [_, setActiveIndex] = useState(0);
 
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
 
+  if (props.length === 0) {
+    return <NoDataComponent />;
+  }
+
   return (
     <article className="mt-12">
-      <div className="flex items-center justify-center mb-6 gap-5">
-        {buttons?.map((button, index) => (
-          <Button
-            key={index}
-            size="large"
-            className={`px-8 rounded text-md font-semibold ${button.className}`}
-            onClick={button.onClick}
-          >
-            {button.label}
-          </Button>
-        ))}
-      </div>
       <div className="border-2 border-[#7A98C1] max-lg:border-transparent rounded max-lg:p-0 p-4">
         <Swiper
           direction="horizontal"
@@ -51,7 +42,6 @@ const ScientificEvents = ({ props, buttons }: researchEventProps) => {
           }}
           breakpoints={{
             1024: {
-              direction: "horizontal",
               slidesPerView: 1,
               spaceBetween: 30,
             },
@@ -68,80 +58,64 @@ const ScientificEvents = ({ props, buttons }: researchEventProps) => {
               <div className="flex items-start max-lg:flex-col gap-5">
                 <Image
                   width={405}
-                  height={243}
-                  className="max-lg:w-full h-full min-w-[213px] min-h-[213px]"
-                  src={items.image_url}
-                  alt={items.title}
+                  height={343}
+                  className="max-lg:w-full object-cover h-full min-w-[213px] min-h-[313px]"
+                  src={
+                    process.env.NEXT_PUBLIC_URL_BACKEND + items.image.file_path
+                  }
+                  alt={items.name}
                 />
                 <div>
-                  <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 font-semibold">
-                    {items.title}
+                  <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 font-semibold line-clamp-2">
+                    {items.name}
                   </h2>
-                  <p className="text-[#7A98C1]  max-lg:text-left text-md pb-2">
+                  <p className="text-[#7A98C1] max-lg:text-left text-md pb-2 line-clamp-3">
                     {items.description}
                   </p>
                   <div className="flex text-[#7A98C1] pb-4 items-center gap-2">
                     <FaClock />
-                    <h2>{items.date}</h2>
+                    <h2>{items.time}</h2>
                   </div>
                   <h3 className="text-tertiary text-[17px] font-semibold">
-                    {items.full_name}
+                    SPIKER-{items.speaker_name}
                   </h3>
                   <div className="flex items-center mt-6 gap-2">
-                    {items.social_links.map((link, idx) => (
-                      <a
-                        key={idx}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#7A98C1] hover:text-secondary"
-                        aria-label={link.alt}
-                      >
-                        {link.social_name === "facebook" && (
-                          <FaFacebook className="text-2xl" />
-                        )}
-                        {link.social_name === "telegram" && (
-                          <FaTelegram className="text-2xl" />
-                        )}
-                        {link.social_name === "youtube" && (
-                          <FaYoutube className="text-2xl" />
-                        )}
-                        {link.social_name === "instagram" && (
-                          <FaInstagram className="text-2xl" />
-                        )}
-                        {link.social_name === "twitter" && (
-                          <FaTwitter className="text-2xl" />
-                        )}
-                      </a>
-                    ))}
+                    {Object.entries(items.social_network_links).map(
+                      ([key, value]: any, idx) => {
+                        return (
+                          <Link
+                            key={idx}
+                            href={value}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#7A98C1] hover:text-secondary"
+                            aria-label={key}
+                          >
+                            {key === "facebook" && (
+                              <FaFacebook className="text-2xl" />
+                            )}
+                            {key === "telegram" && (
+                              <FaTelegram className="text-2xl" />
+                            )}
+                            {key === "youtube" && (
+                              <FaYoutube className="text-2xl" />
+                            )}
+                            {key === "instagram" && (
+                              <FaInstagram className="text-2xl" />
+                            )}
+                            {key === "twitter" && (
+                              <FaTwitter className="text-2xl" />
+                            )}
+                          </Link>
+                        );
+                      },
+                    )}
                   </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div className="flex items-center mb-10 justify-center mt-6 gap-6">
-        <div className="cursor-pointer">
-          <FaChevronUp className="text-lg -rotate-90 text-text_secondary swiperNumericDown" />
-        </div>
-        <div className="flex items-center gap-3">
-          {props.map((_, index) => (
-            <div
-              key={index}
-              className={`h-5 p-2.5 flex flex-col border-[1px] border-[#7A98C1] items-center justify-center  w-5 rounded ${
-                activeIndex === index
-                  ? "bg-text_secondary text-white"
-                  : "text-text_secondary"
-              }`}
-            >
-              {index + 1}
-            </div>
-          ))}
-        </div>
-        <div className="cursor-pointer">
-          <FaChevronDown className="text-lg -rotate-90 text-text_secondary swiperNumericUp" />
-        </div>
       </div>
     </article>
   );

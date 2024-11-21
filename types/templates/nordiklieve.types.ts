@@ -35,3 +35,13 @@ export interface nordicLife<T> {
   totalPages: number;
   currentPage: number;
 }
+
+export interface ForumPhoto {
+  id: string;
+  hero_image_id: string;
+  hero_image: ImageFile;
+  name: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+}

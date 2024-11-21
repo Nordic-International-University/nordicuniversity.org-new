@@ -43,27 +43,46 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
     <article className="mt-10 mb-10" ref={containerRef}>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7">
         {props.map((item, index) => (
-          <div
-            key={index}
-            className="w-full h-[160px] p-3 flex rounded-md flex-col bg-[#789FCE21] justify-between x-flip-hover"
-          >
-            <div className="flex-grow inner-content">
-              <h2 className="max-sm:text-sm mb-2 line-clamp-1 font-semibold text-xl text-text_secondary">
-                {item.title}
-              </h2>
-              <p className="text-[#7A98C1]">{item.body}</p>
-            </div>
-            <div className="flex items-center justify-between inner-content">
-              <div className="flex text-[#7A98C1] items-center gap-2">
-                <FaClock />
-                <h2>{item.time}</h2>
+          <div key={index} className="flip-card w-full h-[200px]">
+            <div className="flip-card-inner relative w-full h-full">
+              {/* Old tomoni */}
+              <div className="flip-card-front absolute w-full h-full bg-[#789FCE21] rounded-md flex flex-col justify-between p-4 shadow-lg">
+                <div>
+                  <h2 className="max-sm:text-sm  line-clamp-1 font-semibold text-xl text-text_secondary">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm mt-3 text-brodCrumbColor">
+                    {item.body}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex text-[#7A98C1] items-center gap-2">
+                    <FaClock />
+                    <h2>{item.time}</h2>
+                  </div>
+                  <Button
+                    className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-white bg-[#5B7FAB]"
+                    type="primary"
+                  >
+                    {t("news.button")}
+                  </Button>
+                </div>
               </div>
-              <Button
-                className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-[#5B7FAB]"
-                type="primary"
-              >
-                {t("news.button")}
-              </Button>
+              {/* Orqa tomoni */}
+              <div className="flip-card-back absolute w-full h-full bg-[#5B7FAB] rounded-md flex flex-col justify-between p-4 text-white shadow-lg">
+                <div>
+                  <h2 className="font-semibold text-lg">{item.title}</h2>
+                  <p className="text-sm mt-2">{item.body}</p>
+                </div>
+                <div className="flex justify-end">
+                  <Button
+                    className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-white bg-[#7A98C1]"
+                    type="primary"
+                  >
+                    {t("news.button")}
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         ))}

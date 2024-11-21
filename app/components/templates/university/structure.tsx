@@ -109,7 +109,7 @@ const UniversityInfoTable = ({
                 </Swiper>
               )
             ) : (
-              <div className="flex  flex-col">
+              <div className="flex flex-col">
                 {structureTypeData.map((item) => (
                   <Link
                     href={`/university/structure/${item.slug}`}
