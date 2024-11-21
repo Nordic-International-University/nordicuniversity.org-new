@@ -28,14 +28,14 @@ const ScholarshipsAndInternships = ({ props }: any) => {
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4"
+            className={`p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4 ${index % 2 === 0 ? "" : "flex-row-reverse "} `}
           >
             <Image
-              width={300}
-              height={300}
+              width={1000}
+              height={1000}
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
               alt={item.name}
-              className="max-lg:w-full object-cover h-[230px] min-w-[300px]"
+              className="max-lg:w-full object-cover  w-1/2"
             />
             <div>
               <h2 className="text-md max-sm:text-[16px] text-text_secondary font-semibold">

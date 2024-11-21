@@ -88,7 +88,7 @@ const LeftSidebarAndComponent = ({
                 <li
                   ref={(el: any) => (linkRefs.current[index] = el)}
                   onClick={() => setActiveIndex(index)}
-                  className={`py-1 w-full text-md relative top-1 rounded-lg pl-2 relative z-10 ${
+                  className={`py-1 w-full text-md text-text_secondary font-medium top-1 rounded-lg pl-2 relative z-10 ${
                     isActive ? "text-tertiary" : "text-tertiary underline"
                   }`}
                 >
