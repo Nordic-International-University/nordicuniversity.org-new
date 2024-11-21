@@ -36,7 +36,7 @@ const PhotoGallery = ({ gallery }: any) => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: photo,
-            start: "top 90%", // Trigger animation when photo is 90% in view
+            start: "top 90%", // Trigger animation when photo is 90% in viewddd
             toggleActions: "play none none none",
           },
           stagger: 0.2,
