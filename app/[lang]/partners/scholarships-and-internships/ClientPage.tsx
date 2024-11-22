@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import ScholarshipsAndInternships from "@/app/components/templates/partners/scholarships-and-internships";
-import { ArrowLeftIcon, ArrowRightIcon } from "@nextui-org/shared-icons";
 import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
@@ -17,7 +16,7 @@ const ClientPage = ({ initialData }: any) => {
   const [data, setData] = useState(initialData);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
-  const [time, setTime] = useState(timeFilter.future);
+  const [time, _] = useState(timeFilter.future);
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.partners.educationSidebarItems,

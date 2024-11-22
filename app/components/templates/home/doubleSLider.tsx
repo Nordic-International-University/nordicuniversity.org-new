@@ -6,12 +6,13 @@ import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import { doubleSliderProps } from "@/types/templates/doubleSlider.types";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { Button } from "antd";
 
 const DoubleSlider = ({
   props,
   direction,
-  sliderName,
   reverseDirection,
+  url,
   delay,
   sectionTitle,
 }: doubleSliderProps) => {
@@ -23,6 +24,7 @@ const DoubleSlider = ({
     setActiveIndex(swiper.activeIndex);
   };
 
+  // @ts-ignore
   return (
     <article className="container">
       <div
@@ -71,18 +73,32 @@ const DoubleSlider = ({
               <div
                 className={`flex max-lg:flex-col ${direction === "vertical" ? "flex-row-reverse" : "flex-row"} items-start max-lg:gap-3 gap-5 justify-between`}
               >
-                <Image
-                  height={430}
-                  width={400}
-                  className="h-[430px] w-[51.5%]"
-                  src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
-                  alt={item.name}
-                />
+                <div className="relative w-[51.5%] group overflow-hidden transition-all shadow-lg">
+                  {/* Image */}
+                  <Image
+                    height={430}
+                    width={400}
+                    className="h-[430px] w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+                    alt={item.name}
+                  />
+
+                  {/* Text Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300"></div>
+                  <h2
+                    className={`absolute bottom-0 h-[100px] left-0 w-full text-white text-2xl font-semibold max-sm:text-lg text-center z-10 group-hover:backdrop-blur-lg bg-black/30 py-5 px-4 transition-all duration-500 group-hover:bottom-0 group-hover:h-full`}
+                  >
+                    {sectionTitle}
+                  </h2>
+                </div>
+
                 <div className="mt-6 flex w-[46%] pb-5 justify-between h-[379px] flex-col">
                   <div>
                     <div className="max-lg:bg-transparent rounded mb-4 w-full">
-                      <h2 className="text-white max-sm:text-lg max-sm:pt-2 max-lg:text-center text-2xl font-semibold max-sm:p-0">
-                        {sectionTitle}
+                      <h2
+                        className={` text-white max-sm:text-lg max-sm:pt-2  max-lg:text-center text-2xl font-semibold max-sm:p-0`}
+                      >
+                        {item.name}
                       </h2>
                     </div>
                     <div className="max-lg:bg-transparent flex flex-col rounded justify-between gap-7 w-full">
@@ -94,17 +110,23 @@ const DoubleSlider = ({
                           {item.date}
                         </span>
                         <div>
-                          <button className="text-tertiary  mt-3 font-semibold bg-text_tertiary px-11 py-1">
+                          <Button
+                            href={url.single + `/${item.slug}`}
+                            className="text-tertiary  mt-3 font-semibold bg-text_tertiary px-11 py-1"
+                          >
                             Batafsil...
-                          </button>
+                          </Button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <button className="text-tertiary inline-block float-right w-1/2 mt-3 font-semibold bg-text_tertiary px-11 py-1">
-                      Barcha yangiliklar
-                    </button>
+                    <Button
+                      href={url.all}
+                      className="text-tertiary inline-block float-right w-1/2 mt-3 font-semibold bg-text_tertiary px-11 py-1"
+                    >
+                      Barchasini ko‘rish
+                    </Button>
                   </div>
                 </div>
               </div>

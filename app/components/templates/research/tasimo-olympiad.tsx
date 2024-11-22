@@ -1,7 +1,7 @@
 "use client";
 
 import tasimo_home from "@/public/images/research-images/IMAGE 2024-08-20 12_11_26 1.png";
-import statistics from "@/public/images/research-images/homeStat2-ORYp843p 1.png";
+import statistics from "@/public/images/research-images/tasimo.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -20,6 +20,8 @@ const TasimoOlympiad = () => {
         </div>
       </div>
       <Image
+        width={1000}
+        height={1000}
         className="w-full max-md:mt-10 mt-28"
         src={statistics}
         alt="statistics"

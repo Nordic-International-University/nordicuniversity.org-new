@@ -14,6 +14,10 @@ export enum Direction {
 
 export interface doubleSliderProps {
   props: DoubleSliderTypes[];
+  url: {
+    single: string;
+    all: string;
+  };
   direction: Direction;
   sliderName: string;
   reverseDirection: boolean;

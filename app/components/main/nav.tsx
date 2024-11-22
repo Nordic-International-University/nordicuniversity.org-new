@@ -134,7 +134,7 @@ const Nav: FC = () => {
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="relative text-white py-10 pr-4 text-lg "
+                      className="relative text-white py-10 pr-0 pl-10 text-lg"
                       key={index}
                     >
                       <Link

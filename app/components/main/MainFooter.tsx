@@ -41,7 +41,7 @@ const MainFooter = () => {
               <h2
                 className={`text-white text-4xl ${jacquesFrancoisShadow.className}`}
               >
-                Learning today - leading tomorrow
+                Nordic Excellence in teaching
               </h2>
               <div className="flex items-center gap-2 mt-7">
                 <Input

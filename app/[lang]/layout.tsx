@@ -10,6 +10,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { StoreProvider } from "@/app/utils/provider/storeProvider";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ConfigProvider } from "antd";
+import uzLatn from "antd/locale/uz_UZ";
+import ruLatn from "antd/locale/ru_RU";
+import enLatn from "antd/locale/en_US";
 
 const getAllResources = async () => {
   const response = await fetch(
@@ -45,7 +49,7 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { lang: string };
 }
 
 export default async function RootLayout({
@@ -56,19 +60,30 @@ export default async function RootLayout({
   const networks = await getAllNetworks();
   const resources = await getAllResources();
 
+  console.log(params);
   return (
-    <html lang={params.locale}>
+    <html lang={params.lang}>
       <body
         className={`${inter.className} flex flex-col overflow-x-hidden min-h-screen`}
       >
-        <NextIntlClientProvider locale={params.locale} messages={messages}>
-          <StoreProvider>
-            <TopNav props={resources} networks={networks.data} />
-            <Nav />
-            <main className="flex-grow">{children}</main>
-            <SpeedInsights />
-            <MainFooter />
-          </StoreProvider>
+        <NextIntlClientProvider locale={params.lang} messages={messages}>
+          <ConfigProvider
+            locale={
+              params.lang === "uz"
+                ? uzLatn
+                : params.lang === "en"
+                  ? enLatn
+                  : ruLatn
+            }
+          >
+            <StoreProvider>
+              <TopNav props={resources} networks={networks.data} />
+              <Nav />
+              <main className="flex-grow">{children}</main>
+              <SpeedInsights />
+              <MainFooter />
+            </StoreProvider>
+          </ConfigProvider>
         </NextIntlClientProvider>
       </body>
     </html>

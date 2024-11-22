@@ -79,13 +79,19 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
           <div className="flex items-center max-w-[530px] gap-6" key={index}>
             <div
               ref={(el: any) => ((dateRefs as any).current[index] = el)}
-              className="bg-text_secondary rounded-full max-w-[90px] p-12 max-h-[90px] flex flex-col items-center justify-center"
+              className="bg-text_secondary rounded-full w-[105px] h-[105px] flex flex-col items-center justify-center shrink-0 max-sm:w-[100px] max-sm:h-[100px]"
             >
               <h2 className="uppercase font-bold text-center text-sm text-text_tertiary leading-relaxed tracking-wider">
-                {dayjs(item.time).format("D")}
+                {dayjs(item.time).isValid()
+                  ? dayjs(item.time).format("D") // Valid bo‘lsa original sana
+                  : dayjs().format("D")}{" "}
+                {/* Invalid bo‘lsa bugungi sana */}
               </h2>
               <h2 className="uppercase font-semibold text-center text-sm text-text_tertiary">
-                {dayjs(item.time).format("MMMM")}
+                {dayjs(item.time).isValid()
+                  ? dayjs(item.time).format("MMMM") // Valid bo‘lsa original oy
+                  : dayjs().format("MMMM")}{" "}
+                {/* Invalid bo‘lsa bugungi oy */}
               </h2>
             </div>
 

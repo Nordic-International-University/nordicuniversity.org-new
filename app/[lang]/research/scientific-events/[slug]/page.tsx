@@ -8,9 +8,9 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-import { getEventBySlug } from "@/app/[lang]/partners/international-meetings-photos/[slug]/getNewsBySlug";
+
 import { Event } from "@/types/templates/international-meeating";
-import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
+import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const news: Event = await getEventBySlug(
@@ -20,14 +20,14 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   console.log(news);
   // @ts-ignore
-  const allNews: any = await getAllEvents({
-    page: 1,
-    limit: 4,
-    lang: await getCurrentLangServer(),
-    time: "past",
-    type: "EVENT",
-  });
-  console.log(allNews);
+  // const allNews: any = await getAllEvents({
+  //   page: 1,
+  //   limit: 4,
+  //   lang: await getCurrentLangServer(),
+  //   time: "past",
+  //   type: "EVENT",
+  // });
+  // console.log(allNews);
 
   const t = await getTranslations("press-service");
 

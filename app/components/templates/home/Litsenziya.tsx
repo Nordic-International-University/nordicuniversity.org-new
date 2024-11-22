@@ -17,6 +17,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [prevTab, setPrevTab] = useState("LICENSE");
   const contentRef = useRef(null);
   const t = useTranslations("university");
+
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
@@ -38,11 +39,11 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const totalPages = Math.ceil(props[selectedTab].length / 3);
 
   return (
-    <article className="mt-12">
-      <h2 className="text-center text-tertiary text-2xl font-semibold pb-7">
+    <article className="mt-12 px-4 md:px-8">
+      <h2 className="text-center text-tertiary text-2xl md:text-3xl font-semibold pb-7">
         {sectionTitle}
       </h2>
-      <div className="flex items-center justify-center mb-6 gap-5">
+      <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">
         {Object.keys(props)
           .filter((item) => props[item].length !== 0)
           .map((item, index) => (
@@ -50,7 +51,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
               onClick={() => handleTabChange(item)}
               key={index}
               size="large"
-              className={`px-8 rounded text-md font-semibold ${
+              className={`px-4 md:px-8 rounded text-sm md:text-md font-semibold ${
                 selectedTab === item
                   ? "bg-text_secondary text-white"
                   : "bg-text_tertiary text-text_secondary"
@@ -64,7 +65,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
         <Swiper
           key={selectedTab}
           direction="horizontal"
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           initialSlide={0}
           onSlideChange={handleSlideChange}
@@ -76,17 +77,20 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
             640: {
               slidesPerView: 1,
             },
+            768: {
+              slidesPerView: 2,
+            },
             1024: {
               slidesPerView: 3,
             },
           }}
           modules={[Navigation]}
-          className="w-full h-[550px]"
+          className="w-full h-[350px] max-md:h-full md:h-[450px] lg:h-[550px]"
         >
           {props[selectedTab].map((item, index) => (
             <SwiperSlide key={index}>
               <Image
-                className="mx-auto h-auto w-[390px] block"
+                className="mx-auto h-auto w-[90%] md:w-[390px] block"
                 height={500}
                 width={500}
                 src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}

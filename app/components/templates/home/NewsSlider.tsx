@@ -89,8 +89,8 @@ const NewsSlider = ({
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-tertiary text-opacity-15 max-sm:hidden block">
-                          {dayjs(item.createdAt).format("MMMM Do YYYY")}
+                        <span className="text-tertiary text-opacity-100 font-semibold max-sm:hidden block">
+                          {dayjs(item.time).format("MMMM DD YYYY")}
                         </span>
                         <Link
                           href={`/press-service/news/${item.slug}`}

@@ -28,7 +28,7 @@ const Partners = ({ props }: { props: ForumPhoto[] }) => {
         {props.map((item, index) => (
           <div
             ref={(el: any) => (cardsRef.current[index] = el!)}
-            className="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="w-full p-4 bg-white h-[480px] flex flex-col justify-between border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             key={index}
           >
             <Image
@@ -38,16 +38,19 @@ const Partners = ({ props }: { props: ForumPhoto[] }) => {
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.hero_image.file_path}`}
               alt={item.name}
             />
-            <h2 className="mt-4 text-lg font-semibold text-center text-gray-800 line-clamp-2">
-              {item.name}
-            </h2>
-            <div className="flex justify-center mt-6">
-              <Button
-                className="px-6 w-full py-2 text-white bg-text_secondary hover:bg-tertiary rounded-lg transition duration-300"
-                type="primary"
-              >
-                Ko‘rish
-              </Button>
+            <div>
+              <h2 className="mt-4 text-lg font-semibold text-center text-gray-800 line-clamp-2">
+                {item.name}
+              </h2>
+              <div className="flex justify-center mt-6">
+                <Button
+                  href={`/partners/international-meetings-photos/${item.slug}`}
+                  className="px-6 w-full py-2 text-white bg-text_secondary hover:bg-tertiary rounded-lg transition duration-300"
+                  type="primary"
+                >
+                  Ko‘rish
+                </Button>
+              </div>
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { ReactElement, useEffect } from "react";
 import Link from "next/link";
 import getCurrentLang from "@/app/helpers/getCurrentLang";
 import { useTranslations } from "next-intl";
@@ -10,7 +10,11 @@ import { TbHome } from "react-icons/tb";
 import Image from "next/image";
 import { gsap } from "gsap";
 
-const BroadCamp = ({ items }: { items: { name: string; url: string }[][] }) => {
+const BroadCamp = ({
+  items,
+}: {
+  items: { name: string; url: string | any }[][];
+}) => {
   const t = useTranslations("university");
 
   useEffect(() => {

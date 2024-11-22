@@ -21,7 +21,6 @@ const getHome = async (lang: string) => {
 
 export default async function Home() {
   const { sections } = await getHome(await getCurrentLangServer());
-  console.log(sections);
   return (
     <>
       <Hero />
@@ -31,6 +30,10 @@ export default async function Home() {
       />
       <section className="bg-secondary-gradient py-14 shadow-inner  block max-lg:hidden">
         <DoubleSLider
+          url={{
+            all: "/research/scientific-events",
+            single: "/research/scientific-events",
+          }}
           sectionTitle={sections[SectionTypeEnum.SCIENCE_EVENTS].title}
           reverseDirection={true}
           delay={2300}
@@ -39,6 +42,10 @@ export default async function Home() {
           props={sections[SectionTypeEnum.SCIENCE_EVENTS].data}
         />
         <DoubleSLider
+          url={{
+            all: "/research/scientific-events",
+            single: "/research/scientific-events",
+          }}
           sliderName={"connection-slider"}
           sectionTitle={sections[SectionTypeEnum.COOPERATION_CONNECTIONS].title}
           reverseDirection={false}
