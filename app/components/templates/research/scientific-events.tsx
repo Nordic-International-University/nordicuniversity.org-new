@@ -66,9 +66,12 @@ const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
                   alt={items.name}
                 />
                 <div>
-                  <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 font-semibold line-clamp-2">
-                    {items.name}
-                  </h2>
+                  <div className="max-md:mb-5">
+                    <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 max-md:pb-0 font-semibold line-clamp-2">
+                      {items.name}
+                    </h2>
+                  </div>
+
                   <p className="text-[#7A98C1] max-lg:text-left text-md pb-2 line-clamp-3">
                     {items.description}
                   </p>

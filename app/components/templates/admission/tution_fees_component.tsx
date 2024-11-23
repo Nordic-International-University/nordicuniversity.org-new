@@ -98,12 +98,15 @@ const TutionFeesComponent = ({
                       <strong>Ta'lim tili:</strong>
                       <span className="underline">{program.field_lang}</span>
                     </p>
-                    <Button
-                      className="bg-[#DBF2FF] text-secondary px-4 py-2 md:px-5 font-semibold rounded"
-                      type="primary"
-                    >
-                      O'quv reja
-                    </Button>
+                    <div className="flex justify-center lg:block">
+                      <Button
+                        className="bg-text_secondary text-white px-4 py-2 md:px-5 font-semibold rounded  "
+                        type="primary"
+                      >
+                        O'quv reja
+                      </Button>
+                    </div>
+
                     <div className="flex text-[#46658B] mt-6 md:mt-10 items-center gap-3 w-full">
                       <div className="flex-1 h-[1px] bg-[#46658B]"></div>
                       <span className="text-xs md:text-base">

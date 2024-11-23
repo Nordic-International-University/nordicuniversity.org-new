@@ -296,7 +296,7 @@ table td {
     --_offset-8: calc(var(--_offset) * 8);
     --_offset-9: calc(var(--_offset) * 9);
 
-    width: calc(100% - 4rem);
+    width: calc(100%);
     max-width: 100%;
     margin-top: 30px;
     color: white;

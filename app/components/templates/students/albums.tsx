@@ -27,7 +27,7 @@ const Albums = ({
 
   return (
     <article className="mt-7">
-      <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center justify-center gap-3 mb-5">
         {props.map((item, index) => (
           <Button
             key={index}
@@ -45,7 +45,7 @@ const Albums = ({
           </Button>
         ))}
       </div>
-      <div className="wrapper">
+      <div className="wrapper text-center">
         {images.map((image: any, index: number) => (
           <div
             key={index}
