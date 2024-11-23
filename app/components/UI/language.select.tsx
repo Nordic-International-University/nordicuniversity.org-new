@@ -89,7 +89,7 @@ const LanguageSelect: React.FC = () => {
         className="flex justify-between items-center gap-2 w-full rounded-md border border-gray-300 shadow-sm px-4 py-1 text-sm font-medium text-gray-700 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <FaEarthAmericas className="absolute text-white left-2 text-[16px]" />
+        <FaEarthAmericas className="absolute text-white left-2 text-[16px] max-md:text-blue-600" />
         <div className="ml-5">
           <div className="flex ease-in-out transition-transform -translate-x-1 group-hover:-translate-x-2 group-hover:opacity-100 items-center gap-2.5">
             {languages.map((lang) => (
@@ -98,19 +98,11 @@ const LanguageSelect: React.FC = () => {
                 onClick={() => handleLanguageChange(lang)}
                 className={`flex items-center group/scoped transition-transform group-hover:static group-hover:translate-x-4 ${
                   lang.value !== language ? "translate-x-32" : "absolute"
-                } ${lang.value === language ? "text-white" : "text-gray-400"} w-full text-md font-semibold`}
+                } ${lang.value === language ? "text-white max-md:text-blue-600" : "text-gray-400"} w-full text-md font-semibold`}
               >
                 <span className="group-hover/scoped:text-white transition-all">
                   {lang.label}
                 </span>
-                {/* Uncomment to use flag images */}
-                {/* <Image
-                  className="group-hover/scoped:scale-100 scale-0"
-                  width={20}
-                  height={20}
-                  src={lang.flagImage}
-                  alt={lang.value}
-                /> */}
               </button>
             ))}
           </div>

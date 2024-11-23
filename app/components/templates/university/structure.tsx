@@ -56,6 +56,7 @@ const UniversityInfoTable = ({
 
   return (
     <article className="mt-12 mb-14">
+      z
       <div className="flex flex-col w-full md:flex-row gap-7 items-start">
         {/* Dropdown for mobile */}
         <div className="md:hidden w-1/2">
@@ -71,7 +72,7 @@ const UniversityInfoTable = ({
         </div>
 
         {/* Sidebar buttons for larger screens */}
-        <div className="hidden md:flex flex-col gap-4 translate-y-20">
+        <div className="hidden md:flex flex-col gap-4 translate-y-20 ">
           {data.map((item, index) => (
             <Button
               onClick={() => handleChangeStructureType(item.type)}
