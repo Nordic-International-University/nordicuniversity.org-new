@@ -1,13 +1,12 @@
 "use client";
 
-import React, { FormEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
-import { Dropdown, Input, Modal, Space } from "antd";
+import { Dropdown, Modal, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
-import Image from "next/image";
 import { SearchIcon } from "@nextui-org/shared-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
@@ -17,11 +16,10 @@ import {
 } from "@/app/utils/slices/search.slice";
 import SearchModal from "@/app/components/UI/searchModal";
 import { BiCommand } from "react-icons/bi";
-import { router } from "next/client";
 import SearchInput from "@/app/components/main/searchInput";
 import SocialMedia from "@/app/components/UI/socialMedia";
 
-const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
+const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
   const [searchText, _] = useState("");
   const menuItems = useSelector(
@@ -114,14 +112,14 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
               </Dropdown>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center max-lg:justify-between max-lg:w-full gap-6">
             <LanguageSelect />
             <SocialMedia />
           </div>
         </div>
         <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">
           <ul
-            className="flex flex-wrap items-center justify-center
+            className="flex flex-wrap text-sm items-center justify-center
            text-white gap-5"
           >
             {props.map((resource, index) => (

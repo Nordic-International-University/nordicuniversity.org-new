@@ -58,7 +58,7 @@ const MainFooter = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-16 justify-center mt-12">
+          <div className="flex items-center max-sm:gap-3 max-sm:justify-between gap-16 justify-center mt-12">
             <span className="block bg-white h-0.5 w-[250px]"></span>
             <SocialMedia />
             <span className="block bg-white h-0.5 w-[250px]"></span>

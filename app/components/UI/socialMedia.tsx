@@ -41,7 +41,7 @@ const SocialMedia = () => {
             <React.Fragment key={item.id || index}>
               <Link href={item.link}>
                 <Image
-                  className="fill-white"
+                  className="fill-white min-h-5 min-w-5"
                   style={{
                     filter: "invert(1) sepia(1) saturate(5) hue-rotate(180deg)",
                   }}

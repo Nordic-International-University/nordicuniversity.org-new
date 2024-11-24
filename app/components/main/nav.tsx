@@ -22,6 +22,7 @@ import { RootState } from "@/app/utils/store/Store";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { setActiveMenu } from "@/app/utils/slices/menuItem.slice";
+import SocialMedia from "@/app/components/UI/socialMedia";
 
 const Nav: FC = () => {
   const pathname = usePathname();
@@ -186,15 +187,7 @@ const Nav: FC = () => {
             <div className="static z-50">
               <LanguageSelect />
             </div>
-            <div className="flex items-center text-secondary gap-3 max-sm:gap-1.5">
-              <FaInstagram />
-              <span className="block bg-secondary h-[20px] w-[0.5px]"></span>
-              <FaTelegram />
-              <span className="block bg-secondary h-[20px] w-[0.5px]"></span>
-              <FaFacebook />
-              <span className="block bg-secondary h-[20px] w-[0.5px]"></span>
-              <FaYoutube />
-            </div>
+            <SocialMedia />
           </div>
           <div className="px-12">
             <h2 className="text-center pt-[45px] font-[600] text-text_secondary">
@@ -211,7 +204,10 @@ const Nav: FC = () => {
                   <li key={index} className="mb-4">
                     <div
                       className="flex items-center justify-between cursor-pointer"
-                      onClick={() => handleAccordionToggle(menuItem.name)}
+                      onClick={() => {
+                        handleAccordionToggle(menuItem.name);
+                        setTransKey(menuItem.transKey);
+                      }}
                     >
                       <div className="flex items-center gap-2">
                         <h2 className="text-lg text-text_secondary font-semibold">
@@ -244,7 +240,7 @@ const Nav: FC = () => {
                                 href={subItem.url}
                                 className="text-text_secondary"
                               >
-                                {subItem.name}
+                                {t(subItem.name)}
                               </Link>
                             </li>
                           ),

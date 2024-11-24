@@ -31,7 +31,7 @@ const NewsSlider = ({
   };
 
   return (
-    <section className="mb-14 max-lg:mt-0 max-sm:-mt-5 mt-28">
+    <section className="mb-14 max-lg:mt-0 max-sm:-mt-5 mt-28 pt-10">
       <article
         className={`${monserrat.className} container max-lg:w-full max-lg:px-0`}
       >

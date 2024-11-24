@@ -56,7 +56,6 @@ const UniversityInfoTable = ({
 
   return (
     <article className="mt-12 mb-14">
-      z
       <div className="flex flex-col w-full md:flex-row gap-7 items-start">
         {/* Dropdown for mobile */}
         <div className="md:hidden w-1/2">

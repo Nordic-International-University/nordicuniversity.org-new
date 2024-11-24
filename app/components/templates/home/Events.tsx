@@ -76,10 +76,13 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
       </h2>
       <div className="grid mt-9 grid-cols-2 max-lg:grid-cols-1 justify-between place-items-center gap-10">
         {props.map((item, index) => (
-          <div className="flex items-center max-w-[530px] gap-6" key={index}>
+          <div
+            className="flex items-center max-sm:shadow-md max-sm:bg-box_color max-sm:p-5 max-sm:rounded-md max-sm:bg-opacity-40 sm:bg max-w-[530px] gap-6"
+            key={index}
+          >
             <div
               ref={(el: any) => ((dateRefs as any).current[index] = el)}
-              className="bg-text_secondary rounded-full w-[105px] h-[105px] flex flex-col items-center justify-center shrink-0 max-sm:w-[100px] max-sm:h-[100px]"
+              className="bg-text_secondary max-sm:hidden rounded-full w-[105px] h-[105px] flex flex-col items-center justify-center shrink-0 max-sm:w-[100px] max-sm:h-[100px]"
             >
               <h2 className="uppercase font-bold text-center text-sm text-text_tertiary leading-relaxed tracking-wider">
                 {dayjs(item.time).isValid()
@@ -106,10 +109,15 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
                 ref={(el: any) =>
                   ((descriptionRefs as any).current[index] = el)
                 }
-                className="text-text_secondary line-clamp-2"
+                className="text-text_secondary line-clamp-2 max-sm:line-clamp-3 max-sm:pt-3"
               >
                 {item.description}
               </p>
+              <time className="text-[#46658B99] max-sm:mt-3 max-sm:block hidden">
+                {dayjs(item.time).isValid()
+                  ? dayjs(item.time).format("MMMM DD, YYYY")
+                  : dayjs().format("MMMM DD, YYYY")}
+              </time>
             </div>
           </div>
         ))}
