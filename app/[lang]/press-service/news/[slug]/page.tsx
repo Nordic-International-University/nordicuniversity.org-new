@@ -8,24 +8,22 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-import { getEventBySlug } from "@/app/[lang]/partners/international-meetings-photos/[slug]/getNewsBySlug";
 import { Event } from "@/types/templates/international-meeating";
-import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
+import { getNewsBySlug } from "@/app/[lang]/press-service/news/[slug]/getNewsBySlug";
+import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
+import MinimalCard from "@/app/components/UI/smallNewsCard";
+import { NewsItem } from "@/types/templates/newsSlider.type";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  const news: Event = await getEventBySlug(
+  const news: Event = await getNewsBySlug(
     params.slug,
     await getCurrentLangServer(),
   );
 
-  console.log(news);
-  // @ts-ignore
-  const allNews: any = await getAllEvents({
-    page: 1,
-    limit: 4,
+  const allNews: any = await getAllNews({
     lang: await getCurrentLangServer(),
-    time: "past",
-    type: "EVENT",
+    page: "1",
+    limit: "4",
   });
   console.log(allNews);
 
@@ -108,15 +106,15 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <h2 className="text-xl">So'ngi yangiliklar</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
-              {/*{allNews.data.map((item, index) => (*/}
-              {/*  <MinimalCard*/}
-              {/*    subTitle={item.body}*/}
-              {/*    key={index}*/}
-              {/*    image={item.image}*/}
-              {/*    title={item.name}*/}
-              {/*    slug={item.slug}*/}
-              {/*  />*/}
-              {/*))}*/}
+              {allNews.data.map((item: NewsItem, index: number) => (
+                <MinimalCard
+                  subTitle={item.body}
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  slug={item.slug}
+                />
+              ))}
             </div>
           </div>
           <SocialMediaCard />

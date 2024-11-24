@@ -19,6 +19,7 @@ import SearchModal from "@/app/components/UI/searchModal";
 import { BiCommand } from "react-icons/bi";
 import { router } from "next/client";
 import SearchInput from "@/app/components/main/searchInput";
+import SocialMedia from "@/app/components/UI/socialMedia";
 
 const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
@@ -113,30 +114,9 @@ const TopNav = ({ props, networks }: { props: Timetable[]; networks: any }) => {
               </Dropdown>
             </div>
           </div>
-          <div className="flex max-lg:w-full flex-row-reverse items-center justify-between gap-6">
-            <div className="flex text-white items-center gap-3 max-sm:gap-1.5">
-              {networks.map((item: any, index: number) => (
-                <React.Fragment key={index}>
-                  <Link href={item.link}>
-                    <Image
-                      className="fill-white"
-                      style={{
-                        filter:
-                          "invert(1) sepia(1) saturate(5) hue-rotate(180deg)",
-                      }}
-                      width={18}
-                      height={18}
-                      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.icon.file_path}`}
-                      alt={item.name}
-                    />
-                  </Link>
-                  {index < networks.length - 1 && (
-                    <span className="block bg-white h-[20px] w-[0.5px]"></span>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
+          <div className="flex items-center gap-6">
             <LanguageSelect />
+            <SocialMedia />
           </div>
         </div>
         <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">

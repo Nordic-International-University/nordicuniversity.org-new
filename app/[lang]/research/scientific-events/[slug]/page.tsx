@@ -18,7 +18,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     await getCurrentLangServer(),
   );
 
-  console.log(news);
   // @ts-ignore
   // const allNews: any = await getAllEvents({
   //   page: 1,

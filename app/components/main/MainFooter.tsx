@@ -7,6 +7,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import React from "react";
 import Image from "next/image";
+import SocialMedia from "@/app/components/UI/socialMedia";
 
 const jacquesFrancoisShadow = JacquesFrancoisShadow({
   subsets: ["latin"],
@@ -59,15 +60,7 @@ const MainFooter = () => {
           </div>
           <div className="flex items-center gap-16 justify-center mt-12">
             <span className="block bg-white h-0.5 w-[250px]"></span>
-            <div className="flex text-lg items-center text-white gap-3 max-sm:gap-1.5">
-              <FaInstagram />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaTelegram />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaFacebook />
-              <span className="block bg-white h-[20px] w-[0.5px]"></span>
-              <FaYoutube />
-            </div>
+            <SocialMedia />
             <span className="block bg-white h-0.5 w-[250px]"></span>
           </div>
         </div>

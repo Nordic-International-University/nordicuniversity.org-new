@@ -29,11 +29,16 @@ const MinimalCard: React.FC<MinimalCardProps> = ({
         height={1000}
         className="object-cover w-20 h-20 rounded-xl"
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-2">
         <p className="text-sm font-semibold text-gray-800 hover:text-blue-500 transition">
           {title}
         </p>
-        <p className="text-xs text-gray-500">{subTitle}</p>
+        <p
+          dangerouslySetInnerHTML={{ __html: subTitle }}
+          className="line-clamp-2 text-xs text-gray-500"
+        >
+          {}
+        </p>
       </div>
     </Link>
   );
