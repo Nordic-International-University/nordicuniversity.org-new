@@ -114,7 +114,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
           </div>
           <div className="flex items-center max-lg:justify-between max-lg:w-full gap-6">
             <LanguageSelect />
-            <SocialMedia />
+            <SocialMedia color="white" />
           </div>
         </div>
         <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">
