@@ -5,16 +5,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { IoMdArrowBack } from "react-icons/io";
-import { Button } from "antd";
+import { Button, Modal } from "antd";
 import Image from "next/image";
 import { LitsenziyaPropsTypes } from "@/types/templates/litsenziya.types";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
+import Link from "next/link";
+import { CloseIcon } from "@nextui-org/shared-icons";
 
 const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("LICENSE");
   const [prevTab, setPrevTab] = useState("LICENSE");
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modalni boshqarish
+  const [iframeSrc, setIframeSrc] = useState(""); // Modalda ko‘rsatiladigan PDF yo‘li
   const contentRef = useRef(null);
   const t = useTranslations("university");
 
@@ -25,6 +29,16 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const handleTabChange = (item: any) => {
     setPrevTab(selectedTab);
     setSelectedTab(item);
+  };
+
+  const handleImageClick = (pdfPath: string) => {
+    setIframeSrc(pdfPath);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setIframeSrc("");
   };
 
   useEffect(() => {
@@ -90,7 +104,12 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
           {props[selectedTab].map((item, index) => (
             <SwiperSlide key={index}>
               <Image
-                className="mx-auto h-auto w-[90%] md:w-[390px] block"
+                onClick={() =>
+                  handleImageClick(
+                    `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`,
+                  )
+                }
+                className="cursor-pointer mx-auto h-auto w-[90%] md:w-[390px] block"
                 height={500}
                 width={500}
                 src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
@@ -122,6 +141,30 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
           </div>
         </div>
       )}
+
+      {/* Modal */}
+      <Modal
+        open={isModalOpen}
+        onCancel={closeModal}
+        footer={null}
+        closeIcon={
+          <CloseIcon className="text-secondary text-xl absolute -top-2 -right-2" />
+        }
+        centered
+        maskStyle={{
+          backgroundColor: "rgba(93,88,88,0.5)",
+          backdropFilter: "blur(5px)",
+        }}
+        width="70%"
+        bodyStyle={{ padding: 0, height: "70vh" }}
+      >
+        <iframe
+          src={iframeSrc}
+          width="100%"
+          height="100%"
+          style={{ border: "none" }}
+        />
+      </Modal>
     </article>
   );
 };

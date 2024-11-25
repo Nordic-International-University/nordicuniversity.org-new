@@ -62,7 +62,7 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                   alt={partner.name}
                   width={400}
                   height={400}
-                  className="object-contain w-full h-auto"
+                  className="object-contain w-[150px] h-[100px]"
                 />
               </div>
             ))}

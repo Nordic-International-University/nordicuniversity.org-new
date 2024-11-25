@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  SectionType,
   singleStructurePageParams,
   structureBySLug,
 } from "@/types/templates/structure.types";
@@ -16,7 +15,6 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import StaffUserCardReverse from "@/app/components/UI/staffUserCardReverse";
 import Link from "next/link";
-import StaffUserCard from "@/app/components/UI/staffUserCardReverse";
 
 const montserrat_font = Montserrat({
   subsets: ["latin"],
@@ -98,14 +96,14 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
                 </div>
               </>
             )}
-            <div className="mt-24">
+            <div className="mt-24 max-sm:mt-10">
               <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-4">
                 {t("structure.employees")}
               </h2>
               <div className="flex flex-col gap-6">
                 {staffData.staffs &&
                   staffData.staffs.map((item: any, index: number) => (
-                    <StaffUserCard
+                    <StaffUserCardReverse
                       key={index}
                       staff={item}
                       imagePosition={index % 2 ? "left" : "right"}

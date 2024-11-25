@@ -73,7 +73,7 @@ const DoubleSlider = ({
               <div
                 className={`flex max-lg:flex-col ${direction === "vertical" ? "flex-row-reverse" : "flex-row"} items-start max-lg:gap-3 gap-5 justify-between`}
               >
-                <div className="relative w-[51.5%] group overflow-hidden transition-all shadow-lg">
+                <div className="relative w-[51.6%] group overflow-hidden transition-all shadow-lg">
                   {/* Image */}
                   <Image
                     height={430}
@@ -92,7 +92,7 @@ const DoubleSlider = ({
                   </h2>
                 </div>
 
-                <div className="mt-6 flex w-[46%] pb-5 justify-between h-[379px] flex-col">
+                <div className="mt-6 flex w-[45%] pb-5 justify-between h-[379px] flex-col">
                   <div>
                     <div className="max-lg:bg-transparent rounded mb-4 w-full">
                       <h2
@@ -102,7 +102,7 @@ const DoubleSlider = ({
                       </h2>
                     </div>
                     <div className="max-lg:bg-transparent flex flex-col rounded justify-between gap-7 w-full">
-                      <p className="text-text_tertiary w-5/6 max-lg:text-center">
+                      <p className="text-text_tertiary line-clamp-4 w-5/6 max-lg:text-center">
                         {item.description}
                       </p>
                       <div className="flex flex-col">

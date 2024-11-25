@@ -1,15 +1,12 @@
 const getEventBySlug = async (slug: string, lang: string) => {
   try {
+    console.log(slug, lang);
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/science/meeting/${slug}?language=${lang}`,
       {
         cache: "no-cache",
       },
     );
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
 
     return await response.json();
   } catch (error) {

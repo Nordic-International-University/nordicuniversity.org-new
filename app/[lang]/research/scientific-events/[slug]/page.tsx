@@ -11,32 +11,31 @@ import SocialMediaCard from "@/app/components/UI/socialCard";
 
 import { Event } from "@/types/templates/international-meeating";
 import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
+import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
+import MinimalCard from "@/app/components/UI/smallNewsCard";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  const news: Event = await getEventBySlug(
-    params.slug,
-    await getCurrentLangServer(),
+  const lang = await getCurrentLangServer();
+
+  const news: Event = await getEventBySlug(params.slug, lang);
+
+  const allEvents: { data: Event[] } = await getAllEvents(
+    lang,
+    "EVENTS",
+    1,
+    100,
+    "past",
   );
 
-  // @ts-ignore
-  // const allNews: any = await getAllEvents({
-  //   page: 1,
-  //   limit: 4,
-  //   lang: await getCurrentLangServer(),
-  //   time: "past",
-  //   type: "EVENT",
-  // });
-  // console.log(allNews);
-
-  const t = await getTranslations("press-service");
+  const t = await getTranslations("research");
 
   const brodCmbItems = [
     {
-      url: "/press-service/news",
-      name: t("title"),
+      url: "/scientific-events",
+      name: t("scinceEvent.breadcrumb.scientific_events"),
     },
     {
-      url: `/press-service/news/${params.slug}`,
+      url: `/scientific-events/news/${params.slug}`,
       name: news.name,
     },
   ];
@@ -44,8 +43,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
       <div className="mt-8">
-        <h2 className="text-tertiary max-sm:text-lg text-2xl font-bold pb-3">
-          {t("news.sectionTitle")}
+        <h2 className="text-tertiary capitalize max-sm:text-lg text-2xl font-bold pb-3">
+          {t("scinceEvent.breadcrumb.event")}
         </h2>
         <BroadCamp items={[brodCmbItems]} />
       </div>
@@ -60,7 +59,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
               <Image
                 width={890}
-                className="mx-auto absolute block object-cover h-[830px] rounded-xl shadow-lg"
+                className="mx-auto absolute block object-cover min-h-[800px] rounded-xl shadow-lg"
                 height={369}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path}
                 alt={news.name}
@@ -96,7 +95,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           <ShareModal
             shareUrl={
               "https://nordicuniversity.org/" +
-              (await getCurrentLangServer()) +
+              lang +
               "/press-service/news/" +
               params.slug
             }
@@ -104,18 +103,19 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           <div className="bg-gray-50 mt-3 rounded-md">
             <div className="flex items-center gap-1.5 pl-4 pt-3">
               <span className="w-2 h-3 bg-text_secondary rounded-3xl block"></span>
-              <h2 className="text-xl">So'ngi yangiliklar</h2>
+              <h2 className="text-xl">{t("scinceEvent.breadcrumb.last")}</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
-              {/*{allNews.data.map((item, index) => (*/}
-              {/*  <MinimalCard*/}
-              {/*    subTitle={item.body}*/}
-              {/*    key={index}*/}
-              {/*    image={item.image}*/}
-              {/*    title={item.name}*/}
-              {/*    slug={item.slug}*/}
-              {/*  />*/}
-              {/*))}*/}
+              {allEvents.data.map((item, index) => (
+                <MinimalCard
+                  url="/research/scientific-events"
+                  subTitle={item.body}
+                  key={index}
+                  image={item.image}
+                  title={item.name}
+                  slug={item.slug}
+                />
+              ))}
             </div>
           </div>
           <SocialMediaCard />

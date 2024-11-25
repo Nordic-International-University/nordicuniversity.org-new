@@ -26,11 +26,11 @@ const StaffUserCard = ({
   imagePosition: string;
 }) => {
   return (
-    <div className="border border-opacity-40 border-[#7A98C1] max-lg:border-none p-4 sm:p-6 rounded-sm">
+    <div className="border shadow-md border-opacity-40 border-gray-300 p-4 sm:p-6 rounded-sm">
       <div
         className={`${
           imagePosition === "right" ? "flex-row" : "flex-row-reverse"
-        } flex lg:flex-row max-lg:flex-col-reverse justify-between items-center gap-6`}
+        } flex max-lg:flex-row max-lg:flex-col-reverse justify-between items-center gap-6`}
       >
         {/* Text Section */}
         <div className="lg:w-3/5 max-lg:w-full text-center lg:text-left">
@@ -50,7 +50,7 @@ const StaffUserCard = ({
           height={250}
           src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
           alt={staff.full_name}
-          className="rounded-full mx-auto max-sm:w-28 max-sm:h-28 sm:w-36 sm:h-36 lg:w-48 lg:h-48"
+          className="rounded-full max-lg:rounded-none mx-auto max-sm:w-28 max-sm:h-28 sm:w-36 sm:h-36 lg:w-48 lg:h-48"
         />
       </div>
       <div
@@ -58,11 +58,11 @@ const StaffUserCard = ({
           imagePosition === "left" ? "flex-row" : "flex-row-reverse"
         } mt-4 flex flex-col lg:flex-row items-center justify-between`}
       >
-        <p className="text-xs sm:text-sm hidden max-lg:block uppercase font-semibold text-[#364E6B]">
+        <p className="text-xs sm:text-sm uppercase font-semibold text-[#364E6B]">
           {staff.position}
         </p>
-        <div className="flex items-center justify-center gap-4">
-          <span className="hidden lg:block w-24 sm:w-[200px] bg-[#46658B] h-0.5"></span>
+        <div className="flex items-center max-lg:mt-6 justify-center gap-4">
+          <span className=" w-24 sm:w-[200px] bg-[#46658B] h-0.5"></span>
           <div className="flex justify-center gap-3 lg:gap-4">
             {Object.entries(staff.social_network_links || {}).map(
               ([platform, url]) =>
@@ -79,7 +79,7 @@ const StaffUserCard = ({
                 ),
             )}
           </div>
-          <span className="hidden lg:block w-24 sm:w-[200px] bg-[#46658B] h-0.5"></span>
+          <span className="w-24 sm:w-[200px] bg-[#46658B] h-0.5"></span>
         </div>
       </div>
     </div>

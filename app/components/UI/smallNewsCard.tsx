@@ -1,25 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import DOMPurify from "dompurify";
 
 interface MinimalCardProps {
   image: {
     file_path: string;
   };
   title: string;
+  url: string;
   subTitle: string;
   slug: string;
 }
 
 const MinimalCard: React.FC<MinimalCardProps> = ({
   image,
+  url,
   title,
   subTitle,
   slug,
 }) => {
   return (
     <Link
-      href={`/press-service/news/${slug}`}
+      href={`${url}/${slug}`}
       className="flex items-start gap-4 p-4 rounded-lg bg-transparent hover:shadow-lg transition-shadow duration-300"
     >
       <Image
@@ -27,14 +32,15 @@ const MinimalCard: React.FC<MinimalCardProps> = ({
         alt={title}
         width={1000}
         height={1000}
+        unoptimized
         className="object-cover w-20 h-20 rounded-xl"
       />
       <div className="flex flex-col gap-2">
-        <p className="text-sm font-semibold text-gray-800 hover:text-blue-500 transition">
+        <p className="text-sm font-semibold line-clamp-2 text-gray-800 hover:text-blue-500 transition">
           {title}
         </p>
         <p
-          dangerouslySetInnerHTML={{ __html: subTitle }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(subTitle) }}
           className="line-clamp-2 text-xs text-gray-500"
         >
           {}

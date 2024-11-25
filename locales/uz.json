@@ -8,7 +8,7 @@
     "students": "Talabalarga",
     "press": "Matbuot xizmati"
   },
-"university": {
+  "university": {
     "document": {
       "section_title": "Meyoriy hujjatlar",
       "main_menu": "Asosiy sahifa",
@@ -37,7 +37,7 @@
     "structure": {
       "sectionName": "Tashkiliy tuzilma",
       "task": "Vazifalari",
-      "employees":"Xodimlar"
+      "employees": "Xodimlar"
     },
     "requisites": {
       "sectionName": "Rekvizitlar",
@@ -109,7 +109,9 @@
     },
     "scinceEvent": {
       "breadcrumb": {
-        "scientific_events": "Ilmiy tadbirlar"
+        "event": "tadbir",
+        "scientific_events": "Ilmiy tadbirlar",
+        "last":"So'ngi tadbirlar"
       },
       "events": {
         "upcoming": "Kelgusi tadbirlar",
@@ -251,7 +253,7 @@
       "future_success_focus": "Bizning imtihon jarayonimiz talabalarning kelajakdagi muvaffaqiyatlariga poydevor qo'yishga qaratilgan.",
       "exam_process_organization": "Xalgaro Nordik-Universitet imtihon jarayonlarini yuqori darajada tashkil etishga alohida e'tibor beradi."
     },
-    "nordik_life":{
+    "nordik_life": {
       "sectionTitle": "Nordik life jurnal"
     },
     "CodesAndManuals": {

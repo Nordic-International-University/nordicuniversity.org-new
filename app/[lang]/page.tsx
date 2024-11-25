@@ -43,7 +43,7 @@ export default async function Home() {
         />
         <DoubleSLider
           url={{
-            all: "/research/scientific-events",
+            all: "/partners/scholarships-and-internships",
             single: "/research/scientific-events",
           }}
           sliderName={"connection-slider"}

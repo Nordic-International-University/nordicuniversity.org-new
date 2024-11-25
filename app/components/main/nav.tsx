@@ -149,29 +149,6 @@ const Nav: FC = () => {
           </div>
         </div>
       </nav>
-      {/*<div*/}
-      {/*  className="absolute left-0 w-full bg-black transition-all duration-300 ease-in-out z-10"*/}
-      {/*  style={{*/}
-      {/*    height: `${menuHeight}px`,*/}
-      {/*  }}*/}
-      {/*  onMouseEnter={() => setMenuHeight(400)}*/}
-      {/*  onMouseLeave={handleMouseLeave}*/}
-      {/*>*/}
-      {/*  {activeSubItems && (*/}
-      {/*    <div className="container text-white sticky">*/}
-      {/*      <ul className="flex flex-col">*/}
-      {/*        {getSubItems(activeSubItems).map((subItem, index) => (*/}
-      {/*          <li key={index} className="py-2">*/}
-      {/*            <Link href={subItem.url} className="hover:underline">*/}
-      {/*              {subItem.name}*/}
-      {/*            </Link>*/}
-      {/*          </li>*/}
-      {/*        ))}*/}
-      {/*      </ul>*/}
-      {/*    </div>*/}
-      {/*  )}*/}
-      {/*</div>*/}
-
       {/*mobile menu*/}
       <div
         className={`${openMenu ? "top-0" : "-top-[300%]"} transition-all ease-in-out z-40 bg-white w-full h-screen fixed`}

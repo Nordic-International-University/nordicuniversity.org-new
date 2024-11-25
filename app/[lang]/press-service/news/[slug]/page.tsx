@@ -8,24 +8,21 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-import { Event } from "@/types/templates/international-meeating";
 import { getNewsBySlug } from "@/app/[lang]/press-service/news/[slug]/getNewsBySlug";
 import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  const news: Event = await getNewsBySlug(
-    params.slug,
-    await getCurrentLangServer(),
-  );
+  const lang = await getCurrentLangServer();
 
-  const allNews: any = await getAllNews({
-    lang: await getCurrentLangServer(),
+  const news: NewsItem = await getNewsBySlug(params.slug, lang);
+
+  const allNews: { data: NewsItem[] } = await getAllNews({
+    lang,
     page: "1",
     limit: "4",
   });
-  console.log(allNews);
 
   const t = await getTranslations("press-service");
 
@@ -36,7 +33,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     },
     {
       url: `/press-service/news/${params.slug}`,
-      name: news.name,
+      name: news.title,
     },
   ];
 
@@ -54,7 +51,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           <div className="relative h-[474px] rounded-md bg-gray-50">
             <div className="px-6 pt-5">
               <h1 className="text-xl pb-5 max-sm:text-xl font-semibold tracking-wide text-primary">
-                {news.name}
+                {news.title}
               </h1>
 
               <Image
@@ -62,7 +59,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 className="mx-auto absolute block object-cover h-[830px] rounded-xl shadow-lg"
                 height={369}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path}
-                alt={news.name}
+                alt={news.title}
               />
             </div>
           </div>
@@ -108,6 +105,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-col gap-1 mt-3">
               {allNews.data.map((item: NewsItem, index: number) => (
                 <MinimalCard
+                  url="/press-service/news"
                   subTitle={item.body}
                   key={index}
                   image={item.image}

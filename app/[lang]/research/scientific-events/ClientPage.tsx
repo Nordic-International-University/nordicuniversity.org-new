@@ -23,20 +23,18 @@ const ClientPage = ({ initialData }: any) => {
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
 
-  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       const result = await getAllEvents(
         getCurrentLangClient(),
         "EVENTS",
         currentPage,
-        100,
+        3,
         time,
       );
       setData(result.data);
       setTotalPages(result.totalPages || 1);
     };
-
     fetchData();
   }, [currentPage, time]);
 
@@ -89,11 +87,13 @@ const ClientPage = ({ initialData }: any) => {
         ))}
       </div>
       <Scientific_events props={data} />
-      <CustomPagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
+      {totalPages > 3 && (
+        <CustomPagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
+      )}
     </LeftSidebarAndComponent>
   );
 };

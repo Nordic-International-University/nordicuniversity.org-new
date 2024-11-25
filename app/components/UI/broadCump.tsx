@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement, useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import getCurrentLang from "@/app/helpers/getCurrentLang";
 import { useTranslations } from "next-intl";

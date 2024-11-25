@@ -88,11 +88,13 @@ const ClientPage = ({ initialData }: any) => {
         ))}
       </div>
       <Scientific_events props={data} />
-      <CustomPagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
+      {totalPages > 3 && (
+        <CustomPagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
+      )}
     </LeftSidebarAndComponent>
   );
 };
