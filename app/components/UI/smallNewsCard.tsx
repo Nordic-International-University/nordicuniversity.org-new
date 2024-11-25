@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import DOMPurify from "dompurify";
 
 interface MinimalCardProps {
   image: {
@@ -40,11 +37,9 @@ const MinimalCard: React.FC<MinimalCardProps> = ({
           {title}
         </p>
         <p
-          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(subTitle) }}
+          dangerouslySetInnerHTML={{ __html: subTitle }}
           className="line-clamp-2 text-xs text-gray-500"
-        >
-          {}
-        </p>
+        ></p>
       </div>
     </Link>
   );
