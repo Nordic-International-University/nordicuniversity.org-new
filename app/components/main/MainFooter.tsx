@@ -1,13 +1,14 @@
+"use client";
+
 import Logo from "@/public/university_logo.svg";
 import footer_bg from "@/public/images/home-images/footer_bg.png";
 import { Button, Input } from "antd";
 import Link from "next/link";
 import { Jacques_Francois_Shadow as JacquesFrancoisShadow } from "next/font/google";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import SocialMedia from "@/app/components/UI/socialMedia";
+import { useRouter } from "next/navigation";
 
 const jacquesFrancoisShadow = JacquesFrancoisShadow({
   subsets: ["latin"],
@@ -15,6 +16,9 @@ const jacquesFrancoisShadow = JacquesFrancoisShadow({
 });
 
 const MainFooter = () => {
+  const [inputText, setInputText] = useState("");
+  const router = useRouter();
+
   return (
     <footer className="bg-footer_gradient relative pt-14 pb-24 mt-16">
       <img
@@ -29,8 +33,8 @@ const MainFooter = () => {
             <div>
               <Image width={233} height={100} src={Logo.src} alt="Logo" />
               <div className="flex flex-col gap-1 mt-11">
-                <Link className="text-white" href="tel:+998902909212">
-                  Telefon: +99890 290 92 12
+                <Link className="text-white" href="tel:+998555084400">
+                  Telefon: +998555084400
                 </Link>
                 <Link className="text-white" href="tel:+998902909212">
                   Email: info@nordicununiversity.org
@@ -44,23 +48,33 @@ const MainFooter = () => {
               >
                 Nordic Excellence in teaching
               </h2>
-              <div className="flex items-center gap-2 mt-7">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (inputText.trim()) {
+                    router.push(`/university/contacts?email=${inputText}`);
+                  }
+                }}
+                className="flex items-center gap-2 mt-7"
+              >
                 <Input
+                  onChange={(e) => setInputText(e.target.value)}
                   className="rounded-sm py-2"
                   placeholder="Mail@example.com"
                 />
                 <Button
+                  htmlType="submit"
                   className="bg-text_tertiary rounded py-4 px-8 text-text_secondary font-semibold"
                   size="large"
                 >
                   Yuborish
                 </Button>
-              </div>
+              </form>
             </div>
           </div>
           <div className="flex items-center max-sm:gap-3 max-sm:justify-between gap-16 justify-center mt-12">
             <span className="block bg-white h-0.5 w-[250px]"></span>
-            <SocialMedia />
+            <SocialMedia color="white" />
             <span className="block bg-white h-0.5 w-[250px]"></span>
           </div>
         </div>

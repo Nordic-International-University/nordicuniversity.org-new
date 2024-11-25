@@ -7,15 +7,17 @@ import { useState } from "react";
 import { ContactMessage } from "@/types/api/apiTypes";
 import { sendMessageEmail } from "@/app/[lang]/university/contacts/sendMessage";
 import { ContactInfo } from "@/types/templates/contacts.types";
+import { useSearchParams } from "next/navigation";
 
 const Contacts = ({ props }: { props: ContactInfo | any }) => {
   const t = useTranslations("university.contacts");
+  const email = useSearchParams().get("email");
 
   const [formData, setFormData] = useState<ContactMessage>({
     first_name: "",
     last_name: "",
     phone_number: "",
-    email: "",
+    email: email ? email.toString() : "",
     message: "",
   });
 

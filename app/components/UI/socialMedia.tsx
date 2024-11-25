@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,11 +15,11 @@ const fetchNetworks = async () => {
     return json;
   } catch (error) {
     console.error("Failed to fetch social networks:", error);
-    return { data: [] }; // Fallback to an empty array
+    return { data: [] };
   }
 };
 
-const SocialMedia = () => {
+const SocialMedia = ({ color = "white" }: { color: string }) => {
   const [networks, setNetworks] = useState<any[]>([]);
 
   useEffect(() => {
@@ -33,6 +31,22 @@ const SocialMedia = () => {
     loadNetworks();
   }, []);
 
+  // Convert color to filter dynamically
+  const getColorFilter = (color: string) => {
+    switch (color) {
+      case "white":
+        return "invert(1)";
+      case "black":
+        return "invert(0)";
+      case "red":
+        return "invert(25%) sepia(95%) saturate(7400%) hue-rotate(360deg)";
+      case "blue":
+        return "invert(25%) sepia(95%) saturate(7400%) hue-rotate(220deg)";
+      default:
+        return "invert(1)";
+    }
+  };
+
   return (
     <div>
       <div className="flex max-lg:w-full flex-row-reverse items-center justify-between gap-6">
@@ -41,9 +55,9 @@ const SocialMedia = () => {
             <React.Fragment key={item.id || index}>
               <Link href={item.link}>
                 <Image
-                  className="fill-white min-h-5 min-w-5"
+                  className="min-h-5 min-w-5"
                   style={{
-                    filter: "invert(1) sepia(1) saturate(5) hue-rotate(180deg)",
+                    filter: getColorFilter(color), // Apply dynamic filter based on color prop
                   }}
                   width={18}
                   height={18}
@@ -52,7 +66,7 @@ const SocialMedia = () => {
                 />
               </Link>
               {index < networks.length - 1 && (
-                <span className="block bg-white h-[20px] w-[0.5px]"></span>
+                <span className={`block bg-${color} h-[20px] w-[0.5px]`}></span>
               )}
             </React.Fragment>
           ))}

@@ -7,14 +7,7 @@ import Link from "next/link";
 import menu from "@/public/images/home-images/hamburger_menu.png";
 import { CloseIcon } from "@nextui-org/shared-icons";
 import LanguageSelect from "@/app/components/UI/language.select";
-import {
-  FaChevronDown,
-  FaChevronUp,
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import caricature from "@/public/images/home-images/mobile_image.png";
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,6 +24,7 @@ const Nav: FC = () => {
   const menuItems = useSelector((state: RootState) => state.sideBar.menuItems);
   const [transKey, setTransKey] = useState<string | null>(null);
   const t = useTranslations(transKey);
+  const tMenu = useTranslations("menu");
   const subItemsRef = useRef<HTMLDivElement | null>(null);
   const dispatch = useDispatch();
 
@@ -102,10 +96,10 @@ const Nav: FC = () => {
                           pathname.split("/")[2] === menuItem.url.split("/")[1]
                             ? "after:w-full"
                             : "after:w-0"
-                        } after:content-[''] after:absolute after:left-0 after:-bottom-[43px] after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        } after:content-[''] uppercase after:absolute after:left-0 after:-bottom-[43px] after:h-[2px] after:bg-white after:transition-all after:duration-300`}
                         href={menuItem.url}
                       >
-                        {menuItem.name}
+                        {tMenu(`${menuItem.menuTransKey}`)}
                       </Link>
                     </li>
                   ))}
@@ -143,10 +137,10 @@ const Nav: FC = () => {
                           pathname.split("/")[2] === menuItem.url.split("/")[1]
                             ? "after:w-full"
                             : "after:w-0"
-                        } after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        } after:content-[''] uppercase after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:bg-white after:transition-all after:duration-300`}
                         href={menuItem.url}
                       >
-                        {menuItem.name}
+                        {tMenu(`${menuItem.menuTransKey}`)}
                       </Link>
                     </li>
                   ))}
@@ -187,7 +181,7 @@ const Nav: FC = () => {
             <div className="static z-50">
               <LanguageSelect />
             </div>
-            <SocialMedia />
+            <SocialMedia color="black" />
           </div>
           <div className="px-12">
             <h2 className="text-center pt-[45px] font-[600] text-text_secondary">
@@ -211,7 +205,7 @@ const Nav: FC = () => {
                     >
                       <div className="flex items-center gap-2">
                         <h2 className="text-lg text-text_secondary font-semibold">
-                          {menuItem.name}
+                          {tMenu(`${menuItem.menuTransKey}`)}
                         </h2>
                       </div>
                       {activeSubItems === menuItem.name ? (

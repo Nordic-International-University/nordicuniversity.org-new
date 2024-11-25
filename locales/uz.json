@@ -1,5 +1,14 @@
 {
-  "university": {
+  "menu": {
+    "university": "Universitet",
+    "admission": "Qabul",
+    "education": "Ta'lim",
+    "science": "Ilm fan",
+    "partnership": "Hamkorlik",
+    "students": "Talabalarga",
+    "press": "Matbuot xizmati"
+  },
+"university": {
     "document": {
       "section_title": "Meyoriy hujjatlar",
       "main_menu": "Asosiy sahifa",
