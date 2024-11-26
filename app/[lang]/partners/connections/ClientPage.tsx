@@ -74,13 +74,13 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("connections.sectionTitle")}
     >
-      <div className="flex items-center gap-4 justify-center mt-10">
+      <div className="flex items-center max-md:gap-2 gap-4 justify-center mt-10">
         <Button
           className={`${
             time === timeFilter.future
               ? "bg-text_secondary text-white"
               : "bg-text_tertiary text-text_secondary"
-          } max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold py-6 px-12 rounded text-xl`}
+          }  max-sm:text-sm max-md:py-5 font-semibold py-6  rounded text-xl`}
           onClick={() => {
             setTime(timeFilter.future);
             setCurrentPage(1);
@@ -93,7 +93,7 @@ const ClientPage = ({ initialData }: any) => {
             time === timeFilter.past
               ? "bg-text_secondary text-white"
               : "bg-text_tertiary text-text_secondary"
-          } max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold rounded py-6 px-12 text-xl`}
+          } max-sm:py-5 max-sm:text-sm font-semibold rounded py-6 text-xl`}
           onClick={() => {
             setTime(timeFilter.past);
             setCurrentPage(1);

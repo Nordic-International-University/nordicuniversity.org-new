@@ -22,15 +22,15 @@ const ScholarshipsAndInternships = ({ props }: any) => {
   }
 
   return (
-    <article className="mt-10 px-4 lg:px-8">
+    <article className="mt-10  lg:px-8">
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className=" max-sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         ref={listRef}
       >
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-4 sm:p-5 rounded-lg flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4"
+            className="p-4 sm:p-5 rounded-lg flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
           >
             {/* Image Section */}
             <div className="w-full sm:w-1/3">
