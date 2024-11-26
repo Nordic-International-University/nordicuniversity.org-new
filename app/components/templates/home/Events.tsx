@@ -71,10 +71,10 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
 
   return (
     <section className="container">
-      <h2 className="text-center text-tertiary font-semibold text-2xl pt-12 pb-7">
+      <h2 className="text-center text-tertiary max-sm:text-lg max-sm:text-left font-semibold text-2xl pt-12 pb-7">
         {sectionTitle}
       </h2>
-      <div className="grid mt-9 grid-cols-2 max-lg:grid-cols-1 justify-between place-items-center gap-10">
+      <div className="grid mt-9 max-md:mt-5 grid-cols-2 max-lg:grid-cols-1 justify-between place-items-center gap-10">
         {props.map((item, index) => (
           <div
             className="flex items-center max-sm:shadow-md max-sm:bg-box_color max-sm:p-5 max-sm:rounded-md max-sm:bg-opacity-40 sm:bg max-w-[530px] gap-6"

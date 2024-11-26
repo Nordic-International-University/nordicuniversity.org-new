@@ -39,8 +39,8 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
   }, [partners]);
 
   return (
-    <section className="mt-16 block">
-      <h2 className="text-center text-tertiary text-2xl font-semibold mb-16">
+    <section className="mt-16 block container">
+      <h2 className="text-center text-tertiary max-sm:text-lg max-sm:text-left text-2xl font-semibold mb-16 max-md:mb-5">
         {sectionTitle}
       </h2>
       <div className="slider-container place-items-center grid grid-cols-5  gap-4 max-lg:grid-cols-2 justify-center">

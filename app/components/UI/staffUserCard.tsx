@@ -27,7 +27,7 @@ const StaffUserCard = ({
   return (
     <div className="border max-sm:border-none p-6 max-sm:p-0 rounded-lg">
       <div
-        className={`${imagePosition === "right" ? "flex-row" : "flex-row-reverse"} max-sm:flex-col-reverse flex items-start gap-3`}
+        className={`${imagePosition === "right" ? "flex-row" : "flex-row-reverse"} max-lg:flex-col-reverse flex items-start gap-3`}
       >
         <div>
           <h3 className="text-lg font-bold max-sm:text-md">

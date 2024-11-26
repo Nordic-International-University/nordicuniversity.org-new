@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import "react-quill/dist/quill.snow.css";
 import StaffUserCard from "@/app/components/UI/staffUserCard";
-import { DownOutlined } from "@ant-design/icons";
+import { DownCircleFilled, DownOutlined } from "@ant-design/icons";
 
 const UniversityInfoTable = ({
   data,
@@ -44,6 +44,16 @@ const UniversityInfoTable = ({
     handleChangeStructureType(key);
   };
 
+  const menu = (
+    <Menu
+      onClick={({ key }) => setStructureButtonData(key)}
+      items={structureTypeData.map((item: any) => ({
+        key: item.slug,
+        label: item.name,
+      }))}
+    />
+  );
+
   const dropdownMenu = (
     <Menu
       onClick={handleMenuClick}
@@ -58,16 +68,45 @@ const UniversityInfoTable = ({
     <article className="mt-12 mb-14">
       <div className="flex flex-col w-full md:flex-row gap-7 items-start">
         {/* Dropdown for mobile */}
-        <div className="md:hidden w-1/2">
-          <Dropdown overlay={dropdownMenu} trigger={["click"]}>
-            <div>
-              <Button className="w-full bg-[#46658B] text-white">
-                {data.find((item) => item.type === selectedStructureType)
-                  ?.label || "Select"}
-                <DownOutlined />
+        <div className="hidden items-center max-sm:flex gap-4 w-full justify-between">
+          <div className="md:hidden max-sm:w-1/2">
+            <Dropdown overlay={dropdownMenu} trigger={["click"]}>
+              <div>
+                <Button className="w-full py-5 text-lg rounded px-6 md:py-[24.4px] bg-[#46658B] text-white flex items-center justify-between">
+                  {data.find((item) => item.type === selectedStructureType)
+                    ?.label || "Select"}
+                  <DownCircleFilled />
+                </Button>
+              </div>
+            </Dropdown>
+          </div>
+          <div className="hidden max-sm:w-1/2 flex-wrap max-md:flex justify-center gap-4 md:gap-7">
+            {selectedStructureType === SectionType.RECTORATE ? (
+              structureTypeData.map((item, index) => (
+                <Dropdown overlay={menu} className="w-full" trigger={["click"]}>
+                  <div>
+                    <Button className="w-full text-lg rounded px-6 py-5 md:py-[24.4px] bg-[#DBF2FF] text-[#46658B] flex items-center justify-between">
+                      {structureTypeData.find(
+                        (item: any) => item.slug === structureButtonData,
+                      )?.name || "Select Option"}
+                      <DownCircleFilled />
+                    </Button>
+                  </div>
+                </Dropdown>
+              ))
+            ) : (
+              <Button
+                className={`rounded px-6 md:px-12 py-3 w-full md:py-[24.4px] bg-[#DBF2FF] text-[#46658B]`}
+                size="large"
+              >
+                {
+                  (data as any).find(
+                    (item: any) => item.type === selectedStructureType,
+                  ).label
+                }
               </Button>
-            </div>
-          </Dropdown>
+            )}
+          </div>
         </div>
 
         {/* Sidebar buttons for larger screens */}
@@ -90,7 +129,7 @@ const UniversityInfoTable = ({
 
         {/* Main content section */}
         <div className="w-full md:w-4/5">
-          <div className="flex flex-wrap justify-center gap-4 md:gap-7">
+          <div className="flex flex-wrap max-md:hidden justify-center gap-4 md:gap-7">
             {selectedStructureType === SectionType.RECTORATE ? (
               structureTypeData.map((item, index) => (
                 <Button
@@ -108,7 +147,7 @@ const UniversityInfoTable = ({
               ))
             ) : (
               <Button
-                className={`rounded px-6 md:px-12 py-3 md:py-[24.4px] bg-[#DBF2FF] text-[#46658B]`}
+                className={`rounded px-6 md:px-12 py-3 md:py-[24.4px] bg-[#46658B] text-white`}
                 size="large"
               >
                 {
@@ -120,17 +159,18 @@ const UniversityInfoTable = ({
             )}
           </div>
           {/* Content */}
-          <div className="mt-8">
+          <div className="mt-8 max-md:mt-2">
             {selectedStructureType === SectionType.RECTORATE ? (
               isMounted && (
                 <Swiper
-                  navigation
-                  pagination={{ clickable: true }}
+                  pagination={{
+                    clickable: true,
+                  }}
                   modules={[Navigation, Pagination]}
                   className="w-full"
                 >
-                  {structureTypeData.map((item) =>
-                    item.staffs.map((staff, index) => (
+                  {structureTypeData.map((item: any) =>
+                    item.staffs.map((staff: any, index: number) => (
                       <SwiperSlide key={index}>
                         <StaffUserCard imagePosition="right" staff={staff} />
                       </SwiperSlide>
@@ -139,16 +179,18 @@ const UniversityInfoTable = ({
                 </Swiper>
               )
             ) : (
-              <div className="flex flex-col">
+              <ul className="flex max-md:ml-4 flex-col">
                 {structureTypeData.map((item) => (
-                  <Link
-                    href={`/university/structure/${item.slug}`}
-                    className="ql-editor bubble text-blue-600 hover:underline text-sm md:text-md"
-                    key={item.slug}
-                    dangerouslySetInnerHTML={{ __html: item.name }}
-                  ></Link>
+                  <li className="list-disc text-[#46658B]">
+                    <Link
+                      href={`/university/structure/${item.slug}`}
+                      className="list-decimal underline max-md:text-sm text-lg"
+                      key={item.slug}
+                      dangerouslySetInnerHTML={{ __html: item.name }}
+                    ></Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </div>
         </div>

@@ -16,11 +16,11 @@ const EventCards = ({ items }: { items: any }) => {
       <Image
         width={405}
         height={303}
-        className="max-lg:w-full object-cover h-full min-w-[255px] h-[273px]"
+        className="max-lg:w-full object-cover min-w-[255px] h-[253px]"
         src={process.env.NEXT_PUBLIC_URL_BACKEND + items.image.file_path}
         alt={items.name}
       />
-      <div>
+      <div className="max-sm:p-3">
         <div className="max-md:mb-5">
           <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 max-md:pb-0 font-semibold line-clamp-2">
             {items.name}

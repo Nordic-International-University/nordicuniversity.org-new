@@ -53,8 +53,8 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const totalPages = Math.ceil(props[selectedTab].length / 3);
 
   return (
-    <article className="mt-12 px-4 md:px-8">
-      <h2 className="text-center text-tertiary text-2xl md:text-3xl font-semibold pb-7">
+    <article className="mt-12 px-4 md:px-8 max-sm:px-0">
+      <h2 className="text-center max-sm:text-lg max-sm:text-left text-tertiary text-2xl md:text-3xl font-semibold pb-7">
         {sectionTitle}
       </h2>
       <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">
@@ -65,7 +65,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
               onClick={() => handleTabChange(item)}
               key={index}
               size="large"
-              className={`px-4 md:px-8 rounded text-sm md:text-md font-semibold ${
+              className={`px-10 md:px-8 rounded text-sm md:text-md font-semibold ${
                 selectedTab === item
                   ? "bg-text_secondary text-white"
                   : "bg-text_tertiary text-text_secondary"

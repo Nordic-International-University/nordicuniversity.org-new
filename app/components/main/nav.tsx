@@ -73,11 +73,13 @@ const Nav: FC = () => {
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
   const navClass =
-    isHomePage || activeSubItems ? "bg-nav_opacity" : "bg-primary-gradient";
+    isHomePage || activeSubItems ? "sm:bg-nav_opacity" : "bg-primary-gradient";
 
   return (
     <>
-      <nav className={`bg-opacity-95 ${navClass} z-[18]`}>
+      <nav
+        className={`bg-opacity-95 ${isHomePage ? "bg-nav_opacity" : "max-sm:bg-primary-gradient"} ${navClass} z-[18]`}
+      >
         <div className="container">
           <div className="flex items-center max-xl:py-6 justify-between">
             <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-start">
@@ -162,7 +164,7 @@ const Nav: FC = () => {
           </div>
           <div className="px-12">
             <h2 className="text-center pt-[45px] font-[600] text-text_secondary">
-              Xalqaro Nordik <br /> Universiteti
+              Xalqaro Nordik <br className="max-sm:hidden block" /> Universiteti
             </h2>
             <hr className="bg-text_secondary h-0.5 mt-[28px]" />
             <div className="mt-[35px]">
@@ -193,7 +195,7 @@ const Nav: FC = () => {
                     </div>
 
                     <div
-                      className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
+                      className={`overflow-hidden ${
                         activeSubItems === menuItem.name
                           ? "max-h-[1000px]"
                           : "max-h-0"
@@ -203,6 +205,7 @@ const Nav: FC = () => {
                         {menuItem.subItems.map(
                           (subItem: any, subIndex: number) => (
                             <li
+                              onClick={() => closeHamburgerMenu()}
                               key={subIndex}
                               className="py-1 flex items-center gap-2.5"
                             >

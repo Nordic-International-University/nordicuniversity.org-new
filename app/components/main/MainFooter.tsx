@@ -5,10 +5,12 @@ import footer_bg from "@/public/images/home-images/footer_bg.png";
 import { Button, Input } from "antd";
 import Link from "next/link";
 import { Jacques_Francois_Shadow as JacquesFrancoisShadow } from "next/font/google";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { useRouter } from "next/navigation";
+import { getAllContacts } from "@/app/[lang]/university/contacts/sendMessage";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
 const jacquesFrancoisShadow = JacquesFrancoisShadow({
   subsets: ["latin"],
@@ -18,6 +20,18 @@ const jacquesFrancoisShadow = JacquesFrancoisShadow({
 const MainFooter = () => {
   const [inputText, setInputText] = useState("");
   const router = useRouter();
+  const [data, setData] = useState<any>({
+    phone_1: "",
+    email_1: "",
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getAllContacts(getCurrentLangClient());
+      setData(result);
+    };
+    fetchData();
+  }, []);
 
   return (
     <footer className="bg-footer_gradient relative pt-14 pb-24 mt-16">
@@ -33,11 +47,11 @@ const MainFooter = () => {
             <div>
               <Image width={233} height={100} src={Logo.src} alt="Logo" />
               <div className="flex flex-col gap-1 mt-11">
-                <Link className="text-white" href="tel:+998555084400">
-                  Telefon: +998555084400
+                <Link className="text-white" href={`tel:${data.phone_1}`}>
+                  Telefon: {data.phone_1}
                 </Link>
-                <Link className="text-white" href="tel:+998902909212">
-                  Email: info@nordicununiversity.org
+                <Link className="text-white" href={`mailto:${data.email_1}`}>
+                  Email: {data.email_1}
                 </Link>
               </div>
             </div>

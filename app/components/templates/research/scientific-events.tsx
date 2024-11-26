@@ -58,7 +58,7 @@ const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
       return (
         <div className="gap-3 flex flex-col">
           {props.map((event, index) => (
-            <div className="border-2 border-[#7A98C1] max-lg:border-transparent rounded max-lg:p-0 p-4">
+            <div className="border-2 border-[#7A98C1] rounded max-lg:p-0 p-4">
               <EventCards items={event} key={event.id || index} />
             </div>
           ))}

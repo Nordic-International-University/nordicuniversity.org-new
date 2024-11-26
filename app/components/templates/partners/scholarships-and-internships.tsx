@@ -24,31 +24,33 @@ const ScholarshipsAndInternships = ({ props }: any) => {
 
   return (
     <article className="mt-10">
-      <div className="flex flex-col gap-4" ref={listRef}>
+      <div className="flex flex-col gap-6" ref={listRef}>
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className={`p-3 rounded max-md:flex-col flex border-[1px] border-tertiary border-opacity-40 items-start gap-4`}
+            className="p-5 rounded-lg max-md:flex-col flex border border-gray-200 shadow-lg hover:shadow-2xl h-[270px] transition-shadow duration-300 bg-white items-start gap-6"
           >
+            {/* Image Section */}
             <Image
               width={1000}
               height={1000}
               src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
               alt={item.name}
-              className="max-lg:w-full object-cover w-[250px] h-[250px]"
+              className="max-lg:w-full object-cover w-[300px] h-full rounded-md"
             />
-            <div>
-              <h2 className="text-md max-sm:text-[16px] text-text_secondary font-semibold">
-                {item.name}
-              </h2>
-              <p className="mt-3 text-brodCrumbColor max-sm:text-sm opacity-75 font-semibold">
-                {item.description}
-              </p>
-              <Button
-                className="text-white font-semibold text-lg max-sm:text-sm mt-14 py-5 bg-text_secondary rounded px-10"
-                icon={<PiFilePdfDuotone className="text-xl" />}
-              >
-                PDF
+
+            {/* Content Section */}
+            <div className="flex flex-col justify-between h-full gap-4 w-full">
+              <div>
+                <h2 className="text-lg md:text-xl text-text_secondary line-clamp-2 font-bold">
+                  {item.name}
+                </h2>
+                <p className="mt-2 text-gray-600 text-sm md:text-base line-clamp-4 opacity-90 font-medium">
+                  {item.description}
+                </p>
+              </div>
+              <Button className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 rounded-md flex items-center gap-2">
+                Ko‘rish
               </Button>
             </div>
           </div>

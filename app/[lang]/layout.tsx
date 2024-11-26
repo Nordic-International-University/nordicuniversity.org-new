@@ -60,12 +60,9 @@ export default async function RootLayout({
   const networks = await getAllNetworks();
   const resources = await getAllResources();
 
-  console.log(params);
   return (
     <html lang={params.lang}>
-      <body
-        className={`${inter.className} flex flex-col overflow-x-hidden min-h-screen`}
-      >
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider locale={params.lang} messages={messages}>
           <ConfigProvider
             locale={

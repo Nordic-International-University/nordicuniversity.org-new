@@ -6,7 +6,7 @@ import { getAllAlbums } from "@/app/[lang]/students/albums/getAllAlbums";
 const Page = async () => {
   const data = await getAllAlbums({
     page: "1",
-    limit: "1000",
+    limit: "9",
     lang: await getCurrentLangServer(),
   });
 

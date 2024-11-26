@@ -6,6 +6,14 @@ import "react-image-lightbox/style.css";
 import { useDispatch } from "react-redux";
 import { changeAlbum } from "@/app/utils/slices/component.function";
 
+const chunkArray = (array: any[], size: number) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+};
+
 const Albums = ({
   props,
   selectedTypeData,
@@ -17,13 +25,20 @@ const Albums = ({
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const dispatch: Dispatch<any> = useDispatch();
   const imageURl = process.env.NEXT_PUBLIC_URL_BACKEND;
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
 
-  const images = selectedTypeData.slice(-9).map((item: any) => ({
+  const images = selectedTypeData.map((item: any) => ({
     src: imageURl + item?.photo?.file_path || "default-image.jpg",
     caption: item?.photo?.description || `Rasm tavsifi yo'q`,
   }));
 
+  const chunkedImages = chunkArray(images, 9);
+
   const closeLightbox = () => setLightboxIndex(null);
+
+  const handleImageLoad = (index: number) => {
+    setLoadedImages((prev) => ({ ...prev, [index]: true }));
+  };
 
   return (
     <article className="mt-7">
@@ -45,25 +60,34 @@ const Albums = ({
           </Button>
         ))}
       </div>
-      <div className="wrapper text-center">
-        {images.map((image: any, index: number) => (
-          <div
-            key={index}
-            onClick={() => {
-              setLightboxIndex(index);
-            }}
-            className="cursor-pointer"
-          >
-            <img
-              src={image.src}
-              alt={`Image ${index}`}
-              onError={(e: React.SyntheticEvent<HTMLImageElement>) =>
-                (e.currentTarget.src = "default-image.jpg")
-              }
-            />
-          </div>
-        ))}
-      </div>
+
+      {/* Chunklangan rasmlarni ko'rsatish */}
+      {chunkedImages.map((chunk, chunkIndex) => (
+        <div key={chunkIndex} className="wrapper text-center">
+          {chunk.map((image: any, index: number) => (
+            <div
+              key={index}
+              onClick={() => {
+                setLightboxIndex(chunkIndex * 9 + index);
+              }}
+              className="cursor-pointer"
+            >
+              <img
+                src={image.src}
+                alt={`Image ${index}`}
+                className={`w-full h-full object-cover transition duration-500 ${
+                  loadedImages[chunkIndex * 9 + index] ? "blur-0" : "blur-lg"
+                }`}
+                onLoad={() => handleImageLoad(chunkIndex * 9 + index)}
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) =>
+                  (e.currentTarget.src = "default-image.jpg")
+                }
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+
       {lightboxIndex !== null && images[lightboxIndex] && (
         <Lightbox
           mainSrc={images[lightboxIndex].src}

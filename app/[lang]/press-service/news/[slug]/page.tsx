@@ -40,30 +40,30 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
       <div className="mt-8">
-        <h2 className="text-tertiary max-sm:text-lg text-2xl font-bold pb-3">
+        <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-bold pb-3">
           {t("news.sectionTitle")}
         </h2>
         <BroadCamp items={[brodCmbItems]} />
       </div>
 
-      <div className="flex items-start mt-6 gap-6">
-        <div className="w-[70%]">
-          <div className="relative h-[474px] rounded-md bg-gray-50">
-            <div className="px-6 pt-5">
-              <h1 className="text-xl pb-5 max-sm:text-xl font-semibold tracking-wide text-primary">
+      <div className="flex items-start max-lg:flex-col mt-6 gap-6">
+        <div className="w-[70%] max-lg:w-full">
+          <div className=" h-[474px] max-lg:h-auto rounded-md bg-gray-50">
+            <div className="px-6 max-sm:px-0 pt-5">
+              <h1 className="text-xl max-lg:text-sm pb-5 font-semibold tracking-wide text-primary">
                 {news.title}
               </h1>
 
               <Image
                 width={890}
-                className="mx-auto absolute block object-cover h-[830px] rounded-xl shadow-lg"
+                className="mx-auto  block object-cover max-lg:h-auto h-[830px] rounded-xl shadow-lg"
                 height={369}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path}
                 alt={news.title}
               />
             </div>
           </div>
-          <div className="mt-[450px]">
+          <div className="mt-[450px] max-lg:mt-5">
             <div className="flex items-center gap-7 justify-center">
               <div className="flex items-center gap-1">
                 <BiCalendar className="text-gray-400" />
@@ -88,7 +88,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
         </div>
-        <div className="w-[27%] sticky top-4">
+        <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal
             shareUrl={
               "https://nordicuniversity.org/" +

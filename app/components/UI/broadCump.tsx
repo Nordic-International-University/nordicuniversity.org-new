@@ -31,14 +31,14 @@ const BroadCamp = ({
     );
   }, []);
 
+  // @ts-ignore
   return (
-    <div className="relative flex items-center gap-2 text-brodCrumbColor max-sm:justify-center ">
+    <div className="relative flex items-center gap-2 text-brodCrumbColor max-sm:justify-center">
       <Image
         className="absolute left-[-20px] -top-48 w-52 bg-blur-left hidden max-sm:block"
         src={bg_blur_left}
         alt="bg_blur_left"
       />
-
       <Link className="hidden max-sm:block" href={`/${getCurrentLang()}`}>
         <TbHome className="text-lg" />
       </Link>
@@ -51,13 +51,25 @@ const BroadCamp = ({
 
       {items[0].map((item, index) => (
         <React.Fragment key={index}>
-          <Link href={item.url} className="hover:underline">
+          <Link
+            href={item.url}
+            className={`text-sm hover:underline ${
+              index === items[0].length - 1 ? "max-sm:hidden" : ""
+            }`}
+          >
             {item.name}
           </Link>
-          {index < items[0].length - 1 && <span>/</span>}
+          {index < items[0].length - 1 && (
+            <span
+              className={`${
+                index === items[0].length - 2 ? "max-sm:hidden" : ""
+              }`}
+            >
+              /
+            </span>
+          )}
         </React.Fragment>
       ))}
-
       <Image
         className="absolute right-[-20px] -top-40 w-56 bg-blur-right hidden max-sm:block"
         src={bg_blur_right}

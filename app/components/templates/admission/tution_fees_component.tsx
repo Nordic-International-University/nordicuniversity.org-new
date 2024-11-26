@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
-import { Button } from "antd";
+import { Button, Dropdown, Menu } from "antd";
 import { useState } from "react";
 import { EnumEduDegree } from "@/types/api/apiTypes";
 import Image from "next/image";
+import { DownOutlined } from "@ant-design/icons";
 
 const TutionFeesComponent = ({
   props,
@@ -15,14 +16,24 @@ const TutionFeesComponent = ({
 }) => {
   const t = useTranslations("admission.degree_price");
 
-  console.log(props);
   const [selectedDegree, setSelectedDegree] = useState<string>("FULL_TIME");
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
 
-  console.log(selectedEduType);
+  const menu = (
+    <Menu
+      onClick={(item: any) => {
+        setSelectedDegree(item);
+        refetched(false);
+      }}
+    >
+      {Object.keys(props).map((degreeKey) => (
+        <Menu.Item key={degreeKey}>{t(`degrees.${degreeKey}`)}</Menu.Item>
+      ))}
+    </Menu>
+  );
 
   return (
-    <article className="mt-16">
+    <article className="mt-16 max-sm:mt-0">
       <div className="flex gap-5 max-sm:flex-col ">
         <div className="flex flex-col mt-[73px] w-full md:w-1/4 gap-3 md:gap-5">
           {Object.keys(EnumEduDegree).map((item, index) => (
@@ -39,7 +50,6 @@ const TutionFeesComponent = ({
                 setSelectedEduType(item);
                 if (item === "DOCTORATE") {
                   setSelectedDegree("DOCTORATE");
-                  console.log(";asdasdasdsad");
                 } else {
                   setSelectedDegree("FULL_TIME");
                 }
@@ -51,21 +61,58 @@ const TutionFeesComponent = ({
         </div>
 
         <div className="w-full">
-          <div className="flex justify-center gap-5 mb-8">
-            {Object.keys(props).map((degreeKey) => (
-              <Button
-                className={`${selectedDegree === degreeKey ? "bg-text_secondary text-white" : "bg-text_tertiary text-text_secondary"} px-12 uppercase border-none rounded-sm font-semibold`}
-                size="large"
-                key={degreeKey}
-                onClick={() => {
-                  setSelectedDegree(degreeKey);
-                  refetched(false);
-                }}
+          <div>
+            {/* Katta ekranlarda ko'rsatiladigan tugmalar */}
+            <div className="flex justify-center gap-5 mb-8 max-sm:hidden">
+              {Object.keys(props).map((degreeKey) => (
+                <Button
+                  className={`${
+                    selectedDegree === degreeKey
+                      ? "bg-text_secondary text-white"
+                      : "bg-text_tertiary text-text_secondary"
+                  } px-12 uppercase border-none rounded-sm font-semibold`}
+                  size="large"
+                  key={degreeKey}
+                  onClick={() => {
+                    setSelectedDegree(degreeKey);
+                    refetched(false);
+                  }}
+                >
+                  {t(`degrees.${degreeKey}`)}
+                </Button>
+              ))}
+            </div>
+
+            {/* Kichik ekranlar uchun ko'rsatiladigan dropdown */}
+            <div className="sm:hidden w-full flex mb-5 justify-center">
+              <Dropdown
+                overlay={
+                  <Menu
+                    onClick={({ key }) => {
+                      setSelectedDegree(key); // `key`ni oladi
+                      refetched(false);
+                    }}
+                  >
+                    {Object.keys(props).map((degreeKey) => (
+                      <Menu.Item key={degreeKey}>
+                        {t(`degrees.${degreeKey}`)}
+                      </Menu.Item>
+                    ))}
+                  </Menu>
+                }
+                className="w-full bg-tertiary text-white"
+                trigger={["click"]}
               >
-                {t(`degrees.${degreeKey}`)}
-              </Button>
-            ))}
+                <Button>
+                  {selectedDegree
+                    ? t(`degrees.${selectedDegree}`)
+                    : "Select Degree"}{" "}
+                  <DownOutlined />
+                </Button>
+              </Dropdown>
+            </div>
           </div>
+
           <div className="flex-1 flex flex-wrap md:flex-col gap-4">
             {(props as any)[selectedDegree]?.map(
               (program: any, index: number) => (

@@ -15,4 +15,11 @@ const sendMessageEmail = async (data: ContactMessage) => {
   return response;
 };
 
-export { sendMessageEmail };
+const getAllContacts = async (lang: string): Promise<any> => {
+  const response: Response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/contacts/user?language=${lang}`,
+  );
+  return await response.json();
+};
+
+export { sendMessageEmail, getAllContacts };

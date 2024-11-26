@@ -11,6 +11,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { Button } from "antd";
+import { ArrowRightIcon } from "@nextui-org/shared-icons";
+import { ArrowRight } from "lucide-react";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
@@ -35,9 +38,15 @@ const NewsSlider = ({
       <article
         className={`${monserrat.className} container max-lg:w-full max-lg:px-0`}
       >
-        <h2 className="text-tertiary font-semibold text-2xl text-center mb-10">
-          {sectionTitle}
-        </h2>
+        <div className="flex items-center text-[#364E6B] justify-between container mb-10">
+          <h2 className="text-tertiary max-sm:text-lg font-semibold text-2xl text-center">
+            {sectionTitle}
+          </h2>
+          <div className=" max-sm:flex hidden items-center gap-2 text-sm">
+            <h2 className="font-normal">Barcha yangiliklar</h2>
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </div>
         <div className="flex items-center gap-12">
           <Swiper
             direction="horizontal"
@@ -69,7 +78,7 @@ const NewsSlider = ({
               <SwiperSlide key={index}>
                 <div className="flex max-lg:flex-col items-center max-lg:gap-3 gap-12 justify-between">
                   <Image
-                    className={`max-sm:h-auto max-lg:rounded-md max-lg:h-[300px] transition-transform ${index === activeIndex ? "max-lg:translate-y-0" : "max-lg:translate-y-12"}`}
+                    className={`max-sm:h-auto max-lg:rounded-md max-lg:min-h-[270px] max-sm:object-cover transition-transform ${index === activeIndex ? "max-lg:translate-y-0" : "max-lg:translate-y-7"}`}
                     height={400}
                     width={400}
                     src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
@@ -79,12 +88,12 @@ const NewsSlider = ({
                     className={`w-full transition-all max-lg:${index === activeIndex ? "block" : "hidden"}`}
                   >
                     <div className="bg-box_color max-lg:bg-transparent rounded mb-4 w-full">
-                      <h2 className="text-tertiary max-sm:text-lg max-sm:pt-2 max-lg:text-center text-xl font-semibold pt-3 pl-3 pr-5 pb-4 max-sm:p-0">
+                      <h2 className="text-tertiary max-sm:text-sm max-sm:pt-2 max-lg:text-center text-xl font-semibold pt-3 pl-3 pr-5 pb-4 max-sm:p-0">
                         {item.title}
                       </h2>
                     </div>
-                    <div className="bg-box_color max-lg:bg-transparent flex flex-col pt-4 px-3 pb-5 rounded justify-between gap-7 w-full">
-                      <p className="text-tertiary text-center px-5 max-lg:px-0 max-lg:-mx-8 max-lg:w-[calc(100%+4rem)] max-md:-mx-20  max-md:w-[calc(100%+10rem)]">
+                    <div className="bg-box_color max-lg:bg-transparent flex flex-col pt-4 max-sm:pt-0 px-3 pb-5 rounded justify-between gap-7 w-full">
+                      <p className="text-tertiary text-center px-5 max-sm:text-md max-lg:px-0 max-lg:-mx-8 max-lg:w-[calc(100%+2rem)] max-md:-mx-12  max-md:w-[calc(100%+6rem)]">
                         {item.description}
                       </p>
 
@@ -92,12 +101,12 @@ const NewsSlider = ({
                         <span className="text-tertiary text-opacity-100 font-semibold max-sm:hidden block">
                           {dayjs(item.time).format("MMMM DD YYYY")}
                         </span>
-                        <Link
+                        <Button
                           href={`/press-service/news/${item.slug}`}
-                          className="text-white max-sm:w-full bg-text_secondary px-11 py-1"
+                          className="font-semibold max-sm:py-4 text-white max-sm:w-full bg-text_secondary px-11 py-1"
                         >
                           Batafsil...
-                        </Link>
+                        </Button>
                       </div>
                     </div>
                   </div>
