@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "antd";
-import { PiFilePdfDuotone } from "react-icons/pi";
 import { gsap } from "gsap";
 import NoDataComponent from "@/app/components/UI/no-data";
 
@@ -23,33 +22,38 @@ const ScholarshipsAndInternships = ({ props }: any) => {
   }
 
   return (
-    <article className="mt-10">
-      <div className="flex flex-col gap-6" ref={listRef}>
+    <article className="mt-10 px-4 lg:px-8">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ref={listRef}
+      >
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-5 rounded-lg max-md:flex-col flex border border-gray-200 shadow-lg hover:shadow-2xl h-[270px] transition-shadow duration-300 bg-white items-start gap-6"
+            className="p-4 sm:p-5 rounded-lg flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4"
           >
             {/* Image Section */}
-            <Image
-              width={1000}
-              height={1000}
-              src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
-              alt={item.name}
-              className="max-lg:w-full object-cover w-[300px] h-full rounded-md"
-            />
+            <div className="w-full sm:w-1/3">
+              <Image
+                width={1000}
+                height={1000}
+                src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+                alt={item.name}
+                className="w-full h-[200px] sm:h-full object-cover rounded-md"
+              />
+            </div>
 
             {/* Content Section */}
             <div className="flex flex-col justify-between h-full gap-4 w-full">
               <div>
-                <h2 className="text-lg md:text-xl text-text_secondary line-clamp-2 font-bold">
+                <h2 className="text-base sm:text-lg md:text-xl text-text_secondary font-bold line-clamp-2">
                   {item.name}
                 </h2>
-                <p className="mt-2 text-gray-600 text-sm md:text-base line-clamp-4 opacity-90 font-medium">
+                <p className="mt-2 text-gray-600 text-sm sm:text-base line-clamp-4 opacity-90 font-medium">
                   {item.description}
                 </p>
               </div>
-              <Button className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 rounded-md flex items-center gap-2">
+              <Button className="text-white font-medium text-sm sm:text-base py-2 px-6 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 rounded-md flex items-center gap-2 self-start sm:self-end">
                 Ko‘rish
               </Button>
             </div>
