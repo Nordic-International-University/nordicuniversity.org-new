@@ -102,7 +102,7 @@ const ClientPage = ({ initialData }: any) => {
           {t("connections.past")}
         </Button>
       </div>
-      <ScholarshipsAndInternships path="partners/connections/" props={data} />
+      <ScholarshipsAndInternships path="/partners/connections/" props={data} />
       <div className="flex justify-center mt-4 items-center gap-2 text-tertiary">
         <ArrowLeftIcon
           onClick={handlePreviousPage}
