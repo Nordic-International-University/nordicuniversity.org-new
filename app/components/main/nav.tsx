@@ -90,7 +90,7 @@ const Nav: FC = () => {
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="relative text-white py-10 pr-4 text-lg "
+                      className="relative text-white text-nowrap py-10 pr-4 text-lg "
                       key={index}
                     >
                       <Link
@@ -131,7 +131,7 @@ const Nav: FC = () => {
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="relative text-white py-10 pr-0 pl-10 text-lg"
+                      className="relative text-white text-nowrap py-10 pr-0 pl-10 text-lg"
                       key={index}
                     >
                       <Link
@@ -207,7 +207,7 @@ const Nav: FC = () => {
                             <li
                               onClick={() => closeHamburgerMenu()}
                               key={subIndex}
-                              className="py-1 flex items-center gap-2.5"
+                              className="py-1 flex  items-center gap-2.5"
                             >
                               <span className="bg-text_secondary h-1.5 w-1.5 rounded-full"></span>
                               <Link

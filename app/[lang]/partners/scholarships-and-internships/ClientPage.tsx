@@ -56,7 +56,10 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("scholarships_and_internships.sectionTitle")}
     >
-      <ScholarshipsAndInternships props={data} />
+      <ScholarshipsAndInternships
+        path="/partners/scholarships-and-internships/"
+        props={data}
+      />
       <CustomPagination
         currentPage={currentPage}
         totalPages={totalPages}

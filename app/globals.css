@@ -348,8 +348,8 @@ table td {
 }
 
 .wrapper:has(:hover) > div:not(:hover){
-    filter: grayscale(1) blur(3px);
-    opacity: .5;
+    filter: blur(5px);
+    opacity: 1;
 }
 
 

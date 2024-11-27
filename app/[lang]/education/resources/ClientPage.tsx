@@ -30,7 +30,7 @@ const ClientPage = ({ data }: any) => {
       translationKey="education"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("educationLevels.sectionTitle")}
+      sidebarTitle={t("recourse.sectionTitle")}
     >
       <Recourse props={data} />
     </LeftSidebarAndComponent>

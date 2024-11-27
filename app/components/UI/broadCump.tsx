@@ -43,7 +43,10 @@ const BroadCamp = ({
         <TbHome className="text-lg" />
       </Link>
 
-      <Link className="block max-sm:hidden" href={`/${getCurrentLang()}`}>
+      <Link
+        className="block max-sm:hidden max-sm:text-sm text-md"
+        href={`/${getCurrentLang()}`}
+      >
         {t("document.main_menu")}
       </Link>
 
@@ -53,7 +56,7 @@ const BroadCamp = ({
         <React.Fragment key={index}>
           <Link
             href={item.url}
-            className={`text-sm hover:underline ${
+            className={` max-sm:text-sm text-md hover:underline ${
               index === items[0].length - 1 ? "max-sm:hidden" : ""
             }`}
           >

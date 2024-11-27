@@ -5,6 +5,7 @@ import { EventsTypeProps } from "@/types/templates/events.types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dayjs from "dayjs";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +15,7 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
   const descriptionRefs = useRef([]);
 
   useEffect(() => {
-    dateRefs.current.forEach((el, index) => {
+    dateRefs.current.forEach((el) => {
       gsap.fromTo(
         el,
         { opacity: 0, scale: 0 },
@@ -76,7 +77,8 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
       </h2>
       <div className="grid mt-9 max-md:mt-5 grid-cols-2 max-lg:grid-cols-1 justify-between place-items-center gap-10">
         {props.map((item, index) => (
-          <div
+          <Link
+            href={`/partners/forum-and-projects/${item.slug}`}
             className="flex items-center max-sm:shadow-md max-sm:bg-box_color max-sm:p-5 max-sm:rounded-md max-sm:bg-opacity-40 sm:bg max-w-[530px] gap-6"
             key={index}
           >
@@ -86,15 +88,13 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
             >
               <h2 className="uppercase font-bold text-center text-sm text-text_tertiary leading-relaxed tracking-wider">
                 {dayjs(item.time).isValid()
-                  ? dayjs(item.time).format("D") // Valid bo‘lsa original sana
+                  ? dayjs(item.time).format("D")
                   : dayjs().format("D")}{" "}
-                {/* Invalid bo‘lsa bugungi sana */}
               </h2>
               <h2 className="uppercase font-semibold text-center text-sm text-text_tertiary">
                 {dayjs(item.time).isValid()
-                  ? dayjs(item.time).format("MMMM") // Valid bo‘lsa original oy
-                  : dayjs().format("MMMM")}{" "}
-                {/* Invalid bo‘lsa bugungi oy */}
+                  ? dayjs(item.time).format("MMMM")
+                  : dayjs().format("MMMM")}
               </h2>
             </div>
 
@@ -119,7 +119,7 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
                   : dayjs().format("MMMM DD, YYYY")}
               </time>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

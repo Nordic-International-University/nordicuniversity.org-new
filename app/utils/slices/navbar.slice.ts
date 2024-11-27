@@ -84,11 +84,11 @@ const initialState: any = {
   partners: {
     educationSidebarItems: [
       {
-        name: "subItems.1",
+        name: "subItems.0",
         url: "/partners/connections",
       },
       {
-        name: "subItems.0",
+        name: "subItems.1",
         url: "/partners/scholarships-and-internships",
       },
       {

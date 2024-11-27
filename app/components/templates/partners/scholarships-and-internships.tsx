@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "antd";
-import { PiFilePdfDuotone } from "react-icons/pi";
 import { gsap } from "gsap";
 import NoDataComponent from "@/app/components/UI/no-data";
 
-const ScholarshipsAndInternships = ({ props }: any) => {
+const ScholarshipsAndInternships = ({
+  props,
+  path,
+}: {
+  props: any;
+  path: string;
+}) => {
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,9 +33,8 @@ const ScholarshipsAndInternships = ({ props }: any) => {
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-5 rounded-lg max-md:flex-col flex border border-gray-200 shadow-lg hover:shadow-2xl h-[270px] transition-shadow duration-300 bg-white items-start gap-6"
+            className="p-5 rounded-lg max-md:flex-col flex border border-gray-200 shadow-lg hover:shadow-2xl h-[270px] max-md:h-auto transition-shadow duration-300 bg-white items-start gap-6"
           >
-            {/* Image Section */}
             <Image
               width={1000}
               height={1000}
@@ -38,8 +42,6 @@ const ScholarshipsAndInternships = ({ props }: any) => {
               alt={item.name}
               className="max-lg:w-full object-cover w-[300px] h-full rounded-md"
             />
-
-            {/* Content Section */}
             <div className="flex flex-col justify-between h-full gap-4 w-full">
               <div>
                 <h2 className="text-lg md:text-xl text-text_secondary line-clamp-2 font-bold">
@@ -49,7 +51,10 @@ const ScholarshipsAndInternships = ({ props }: any) => {
                   {item.description}
                 </p>
               </div>
-              <Button className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 rounded-md flex items-center gap-2">
+              <Button
+                href={`${path + item.slug}`}
+                className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-[#284B82] to-[#032E63] hover:from-[#3C5C94] hover:to-[#284B82] rounded-md flex items-center gap-2"
+              >
                 Ko‘rish
               </Button>
             </div>

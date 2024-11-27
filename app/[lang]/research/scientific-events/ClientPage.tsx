@@ -9,9 +9,14 @@ import Scientific_events from "@/app/components/templates/research/scientific-ev
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
-import { buttonsType } from "@/types/research/scince_events";
+import { buttonsType, ScientificEvent } from "@/types/research/scince_events";
+import { nordicLife } from "@/types/templates/nordiklieve.types";
 
-const ClientPage = ({ initialData }: any) => {
+const ClientPage = ({
+  initialData,
+}: {
+  initialData: nordicLife<ScientificEvent>;
+}) => {
   const t = useTranslations("research");
   const language = useTranslations("partners.connections");
   const [data, setData] = useState(initialData.data);
@@ -79,7 +84,7 @@ const ClientPage = ({ initialData }: any) => {
         {buttons.map((button, index) => (
           <button
             key={index}
-            className={`${button.className} rounded py-3 max-sm:px-5 px-9 max-sm:text-sm text-xl font-semibold`}
+            className={`${button.className} rounded py-3 max-sm:px-5 px-9 text-md max-sm:text-sm font-semibold`}
             onClick={button.onClick}
           >
             {button.label}

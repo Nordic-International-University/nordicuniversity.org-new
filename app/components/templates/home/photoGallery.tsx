@@ -3,8 +3,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Row, Col, Image } from "antd";
 import { gsap } from "gsap";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
-const PhotoGallery = ({ gallery }: { gallery: any[] }) => {
+const PhotoGallery = ({
+  gallery,
+  sectionTitle,
+}: {
+  gallery: any[];
+  sectionTitle: string;
+}) => {
+  const t = useTranslations("other");
   const [currentPhotos, setCurrentPhotos] = useState<any[]>([]);
   const [startIndex, setStartIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,9 +53,20 @@ const PhotoGallery = ({ gallery }: { gallery: any[] }) => {
   return (
     <section className="bg-anyColor mt-14 pb-14">
       <article className="container mx-auto">
-        <h2 className="text-center max-sm:text-lg max-sm:text-left text-white font-semibold text-2xl pt-12 pb-7">
-          Foto Jamlanma
-        </h2>
+        <div className="w-full justify-end flex">
+          <div className="w-3/5 flex items-center gap-4 justify-between pt-12 pb-7">
+            <h2 className="text-center max-sm:text-lg max-sm:text-left text-white font-semibold text-2xl">
+              {sectionTitle}
+            </h2>
+            <Link
+              href={"/students/albums"}
+              className="text-blue-200 cursor-pointer font-semibold group-hover:text-blue-400 transition-colors duration-300"
+            >
+              {t("all")}
+            </Link>
+          </div>
+        </div>
+
         <Image.PreviewGroup>
           <Row gutter={[16, 16]} className="photo-gallery" ref={containerRef}>
             {currentPhotos.map((photo, index) => (

@@ -1,22 +1,32 @@
 "use client";
 
-import statistics from "@/public/images/university-images/statistics.png";
-import hand from "@/public/images/university-images/hand.png";
-import search from "@/public/images/university-images/search.png";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  FaGraduationCap,
+  FaChalkboardTeacher,
+  FaMoneyCheckAlt,
+  FaCheckDouble,
+} from "react-icons/fa";
+import { BsGlobe } from "react-icons/bs";
+import { MdWork } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Advantages: React.FC = () => {
+const Advantages: FC = () => {
   const t = useTranslations("university.advantages").raw;
 
-  const images: any[] = [hand, statistics, search];
+  const icons: JSX.Element[] = [
+    <FaGraduationCap size={50} className="text-white" />,
+    <FaChalkboardTeacher size={50} className="text-white" />,
+    <FaMoneyCheckAlt size={50} className="text-white" />,
+    <BsGlobe size={50} className="text-white" />,
+    <FaCheckDouble size={50} className="text-white" />,
+    <MdWork size={50} className="text-white" />,
+  ];
 
-  // Ref for the container
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -25,10 +35,10 @@ const Advantages: React.FC = () => {
         const cards = gsap.utils.toArray<HTMLElement>(".advantage-card");
 
         cards.forEach((card, index) => {
-          const image = card.querySelector<HTMLElement>(".advantage-image");
+          const icon = card.querySelector<HTMLElement>(".advantage-icon");
           const text = card.querySelector<HTMLElement>(".advantage-text");
 
-          if (image && text) {
+          if (icon && text) {
             const tl = gsap.timeline({
               scrollTrigger: {
                 trigger: card,
@@ -37,20 +47,16 @@ const Advantages: React.FC = () => {
                 scrub: false,
               },
             });
-
-            // Image animation
             tl.fromTo(
-              image,
-              { opacity: 0, y: -100 },
-              { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-            )
-              // Text animation
-              .fromTo(
-                text,
-                { opacity: 0, x: 100 },
-                { opacity: 1, x: 0, duration: 1, ease: "power3.out" },
-                "-=0.5",
-              );
+              icon,
+              { opacity: 0, scale: 0.5 },
+              { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
+            ).fromTo(
+              text,
+              { opacity: 0, x: 100 },
+              { opacity: 1, x: 0, duration: 1, ease: "power3.out" },
+              "-=0.5",
+            );
           }
         });
       }, containerRef);
@@ -61,17 +67,18 @@ const Advantages: React.FC = () => {
 
   return (
     <article className="mt-12">
-      <div ref={containerRef} className="flex flex-col gap-12">
-        {images.map((image, index) => (
+      <div
+        ref={containerRef}
+        className="grid max-lg:grid-cols-1 grid-cols-2 gap-5"
+      >
+        {icons.map((icon, index) => (
           <div
             key={index}
             className="advantage-card flex items-center max-sm:flex-col max-sm:items-center max-sm:justify-center gap-4"
           >
-            {/* Image */}
-            <div className="advantage-image bg-text_secondary flex items-center justify-center min-h-24 min-w-24 rounded-full shadow-lg">
-              <Image className="m-auto block" src={image} alt="qo‘l" />
+            <div className="advantage-icon bg-text_secondary flex items-center justify-center min-h-24 min-w-24 rounded-full shadow-lg">
+              {icon}
             </div>
-            {/* Text */}
             <div
               className="advantage-text text-md max-sm:text-center text-gray-800"
               dangerouslySetInnerHTML={{

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PartnersType } from "@/types/templates/partners.types";
+import Link from "next/link";
 
 interface PartnersSliderProps {
   partners: PartnersType[];
@@ -50,7 +51,9 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
             key={colIndex}
           >
             {partners.map((partner, index) => (
-              <div
+              <Link
+                target="_blank"
+                href={partner.link}
                 key={index}
                 className={`slide ${index === activeIndex[colIndex] ? "active" : ""}`}
               >
@@ -64,7 +67,7 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                   height={400}
                   className="object-contain w-[150px] h-[100px]"
                 />
-              </div>
+              </Link>
             ))}
           </div>
         ))}

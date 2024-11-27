@@ -11,6 +11,7 @@ import SocialMedia from "@/app/components/UI/socialMedia";
 import { useRouter } from "next/navigation";
 import { getAllContacts } from "@/app/[lang]/university/contacts/sendMessage";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
+import { useTranslations } from "next-intl";
 
 const jacquesFrancoisShadow = JacquesFrancoisShadow({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ const MainFooter = () => {
     phone_1: "",
     email_1: "",
   });
+  const t = useTranslations("footer");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,10 +50,10 @@ const MainFooter = () => {
               <Image width={233} height={100} src={Logo.src} alt="Logo" />
               <div className="flex flex-col gap-1 mt-11">
                 <Link className="text-white" href={`tel:${data.phone_1}`}>
-                  Telefon: {data.phone_1}
+                  {t("phone")}: {data.phone_1}
                 </Link>
                 <Link className="text-white" href={`mailto:${data.email_1}`}>
-                  Email: {data.email_1}
+                  {t("email")}: {data.email_1}
                 </Link>
               </div>
             </div>
@@ -60,7 +62,7 @@ const MainFooter = () => {
               <h2
                 className={`text-white text-4xl ${jacquesFrancoisShadow.className}`}
               >
-                Nordic Excellence in teaching
+                {t("excellence_in_teaching")}
               </h2>
               <form
                 onSubmit={(e) => {
@@ -81,7 +83,7 @@ const MainFooter = () => {
                   className="bg-text_tertiary rounded py-4 px-8 text-text_secondary font-semibold"
                   size="large"
                 >
-                  Yuborish
+                  {t("send")}
                 </Button>
               </form>
             </div>
@@ -97,15 +99,13 @@ const MainFooter = () => {
         <div className="container">
           <div className="flex items-center max-lg:justify-center justify-between py-3">
             <div className="flex items-center gap-9">
-              <h2 className="text-white text-center">
-                Xalqaro nordik universiteti 2024
-              </h2>
+              <h2 className="text-white text-center">{t("university_name")}</h2>
               <h2 className="text-white block max-lg:hidden">
-                Barcha huquqlar himoyalangan
+                {t("rights_reserved")}
               </h2>
             </div>
             <h2 className="text-white block max-lg:hidden">
-              Sayt ishlab chiquvchilari: IT departamenti
+              {t("site_developers")}
             </h2>
           </div>
         </div>

@@ -80,7 +80,7 @@ const ClientPage = ({ initialData }: any) => {
             time === timeFilter.future
               ? "bg-text_secondary text-white"
               : "bg-text_tertiary text-text_secondary"
-          } max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold py-6 px-12 rounded text-xl`}
+          } max-md:px-7 max-sm:text-sm max-md:py-5 font-semibold py-5 px-12 rounded text-md`}
           onClick={() => {
             setTime(timeFilter.future);
             setCurrentPage(1);
@@ -93,7 +93,7 @@ const ClientPage = ({ initialData }: any) => {
             time === timeFilter.past
               ? "bg-text_secondary text-white"
               : "bg-text_tertiary text-text_secondary"
-          } max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold rounded py-6 px-12 text-xl`}
+          } max-sm:px-7 max-sm:py-5 max-sm:text-sm font-semibold rounded py-5 px-12 text-md`}
           onClick={() => {
             setTime(timeFilter.past);
             setCurrentPage(1);
@@ -102,7 +102,7 @@ const ClientPage = ({ initialData }: any) => {
           {t("connections.past")}
         </Button>
       </div>
-      <ScholarshipsAndInternships props={data} />
+      <ScholarshipsAndInternships path="partners/connections/" props={data} />
       <div className="flex justify-center mt-4 items-center gap-2 text-tertiary">
         <ArrowLeftIcon
           onClick={handlePreviousPage}

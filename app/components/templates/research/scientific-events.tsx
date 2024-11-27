@@ -49,7 +49,10 @@ const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
               className="h-[243px] max-lg:h-auto"
               key={event.id || index}
             >
-              <EventCards items={event} />
+              <EventCards
+                path="/research/scientific-conferences/"
+                items={event}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -59,7 +62,11 @@ const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
         <div className="gap-3 flex flex-col">
           {props.map((event, index) => (
             <div className="border-2 border-[#7A98C1] rounded max-lg:p-0 p-4">
-              <EventCards items={event} key={event.id || index} />
+              <EventCards
+                path="/research/scientific-conferences/"
+                items={event}
+                key={event.id || index}
+              />
             </div>
           ))}
         </div>

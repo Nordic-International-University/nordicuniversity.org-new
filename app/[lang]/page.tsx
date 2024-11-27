@@ -43,8 +43,8 @@ export default async function Home() {
         />
         <DoubleSLider
           url={{
-            all: "/partners/scholarships-and-internships",
-            single: "/research/scientific-events",
+            all: "/partners/connections",
+            single: "/partners/connections",
           }}
           sliderName={"connection-slider"}
           sectionTitle={sections[SectionTypeEnum.COOPERATION_CONNECTIONS].title}
@@ -60,7 +60,10 @@ export default async function Home() {
           sectionTitle={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
         />
       </section>
-      <PhotoGallery gallery={sections[SectionTypeEnum.PHOTO_ALBUM].data} />
+      <PhotoGallery
+        sectionTitle={sections[SectionTypeEnum.PHOTO_ALBUM].title}
+        gallery={sections[SectionTypeEnum.PHOTO_ALBUM].data}
+      />
       <PartnersSlider
         sectionTitle={sections[SectionTypeEnum.PARTNERS].title}
         partners={sections[SectionTypeEnum.PARTNERS].data}

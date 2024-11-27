@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   FaClock,
   FaFacebook,
@@ -7,43 +9,64 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
+import { ScientificEvent } from "@/types/research/scince_events";
 
-const EventCards = ({ items }: { items: any }) => {
+const EventCards = ({
+  items,
+  path,
+}: {
+  items: ScientificEvent;
+  path: string;
+}) => {
+  const [event, setEvent] = useState<any>(null);
+
+  useEffect(() => {
+    if (items) {
+      setEvent(items);
+    }
+  }, [items]);
+
+  if (!event) return null;
+
   return (
-    <div className="flex items-start max-lg:flex-col gap-5">
+    <Link
+      href={event?.slug ? `${path + event.slug}` : "#"}
+      className="flex items-start max-lg:flex-col gap-5"
+    >
       <Image
         width={405}
         height={303}
         className="max-lg:w-full object-cover min-w-[255px] h-[253px]"
-        src={process.env.NEXT_PUBLIC_URL_BACKEND + items.image.file_path}
-        alt={items.name}
+        src={
+          event?.image?.file_path
+            ? process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path
+            : "/default-image.jpg"
+        }
+        alt={event?.name || "Default Name"}
       />
       <div className="max-sm:p-3">
         <div className="max-md:mb-5">
           <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 max-md:pb-0 font-semibold line-clamp-2">
-            {items.name}
+            {event?.name}
           </h2>
         </div>
-
         <p className="text-[#7A98C1] max-lg:text-left text-md mb-2 line-clamp-2">
-          {items.description}
+          {event?.description}
         </p>
         <div className="flex text-[#7A98C1] pb-4 items-center gap-2">
           <FaClock />
-          <h2>{items.time}</h2>
+          <h2>{event?.time}</h2>
         </div>
         <h3 className="text-tertiary text-[17px] font-semibold">
-          SPIKER-{items.speaker_name}
+          SPIKER-{event?.speaker_name}
         </h3>
         <div className="flex items-center mt-6 gap-2">
-          {Object.entries(items.social_network_links).map(
-            ([key, value]: any, idx) => {
-              return (
+          {event.social_network_links &&
+            Object.entries(event.social_network_links).map(
+              ([key, value]: any, idx) => (
                 <Link
                   key={idx}
-                  href={value}
+                  href={value || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7A98C1] hover:text-secondary"
@@ -55,12 +78,11 @@ const EventCards = ({ items }: { items: any }) => {
                   {key === "instagram" && <FaInstagram className="text-2xl" />}
                   {key === "twitter" && <FaTwitter className="text-2xl" />}
                 </Link>
-              );
-            },
-          )}
+              ),
+            )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

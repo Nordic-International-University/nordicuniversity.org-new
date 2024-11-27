@@ -19,7 +19,7 @@ const ClientPage = () => {
       name: t("document.university"),
     },
     {
-      url: "/university/documents",
+      url: "/university/advantages",
       name: t("advantages.section_title"),
     },
   ];

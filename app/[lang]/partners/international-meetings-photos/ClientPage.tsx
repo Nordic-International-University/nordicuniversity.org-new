@@ -47,7 +47,7 @@ const ClientPage = ({ props }: { props: nordicLife<ForumPhoto> }) => {
 
   return (
     <LeftSidebarAndComponent
-      translationKey="student"
+      translationKey="partners"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
       sidebarTitle={t("formAlbums.sectionTitle")}

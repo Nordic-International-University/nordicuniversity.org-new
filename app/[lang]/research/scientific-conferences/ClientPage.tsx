@@ -80,7 +80,7 @@ const ClientPage = ({ initialData }: any) => {
         {buttons.map((button, index) => (
           <button
             key={index}
-            className={`${button.className} rounded py-3 px-9 text-xl font-semibold`}
+            className={`${button.className} rounded py-3 px-9 text-md font-semibold`}
             onClick={button.onClick}
           >
             {button.label}

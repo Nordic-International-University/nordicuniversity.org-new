@@ -28,6 +28,10 @@ const Page: props = async ({ params }) => {
       name: t("title"),
     },
     {
+      url: "/partners/international-meetings-photos",
+      name: t("formAlbums.sectionTitle"),
+    },
+    {
       url: <p>{`/press-service/news/${params.slug}`}</p>,
       name: data.name,
     },
@@ -40,7 +44,7 @@ const Page: props = async ({ params }) => {
           {t("formAlbums.album")}
         </h2>
         <BroadCamp items={[brodCmbItems]} />
-        <div className="flex flex-wrap  mt-4 justify-between gap-y-4">
+        <div className="flex flex-wrap gap-5 mt-4 gap-y-4">
           {data.CooperationPhotosModel.map((item, index) => (
             <Image
               className="object-cover mx-auto block"

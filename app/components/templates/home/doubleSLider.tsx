@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useId } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
@@ -19,10 +19,23 @@ const DoubleSlider = ({
   const [activeIndex, setActiveIndex] = useState(1);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const raw = useId();
+  const sliderId = raw.replace(/[^a-zA-Z0-9-_]/g, "");
 
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
+
+  useEffect(() => {
+    if (prevRef.current && nextRef.current) {
+      // @ts-ignore
+      const swiper = document.querySelector(`.swiper-${sliderId}`).swiper;
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [prevRef.current, nextRef.current]);
 
   // @ts-ignore
   return (
@@ -54,19 +67,13 @@ const DoubleSlider = ({
           }}
           effect="slide"
           speed={2500}
-          loop={true}
+          loop={props.length > 2}
           autoplay={{
             reverseDirection,
             delay,
           }}
           modules={[Navigation]}
-          className="w-full h-[404px] max-lg:h-auto"
-          onInit={(swiper: any) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
+          className={`w-full h-[404px] swiper-${sliderId} max-lg:h-auto`}
         >
           {props?.map((item, index) => (
             <SwiperSlide key={index}>
@@ -133,7 +140,7 @@ const DoubleSlider = ({
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex items-center mb-10 block max-lg:hidden flex-col gap-6">
+        <div className="flex items-center mb-10 max-lg:hidden flex-col gap-6">
           <div ref={prevRef} className="cursor-pointer">
             <FaChevronUp className="text-lg text-text_tertiary" />
           </div>

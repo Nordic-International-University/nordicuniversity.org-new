@@ -1,4 +1,7 @@
 {
+  "other": {
+    "all": "Barchasini ko‘rish"
+  },
   "menu": {
     "university": "Universitet",
     "admission": "Qabul",
@@ -29,9 +32,12 @@
     "advantages": {
       "section_title": "Universitet ustunliklari",
       "cardTitle": [
-        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi.",
-        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi.",
-        "<strong>Zamonaviy ta'lim dasturlari</strong>: Universitetimiz so'nggi ilmiy tadqiqotlar va sanoat ehtiyojlariga asoslanib, <strong>zamonaviy ta'lim dasturlarini taklif etadi.</strong> Bizning dasturlarimiz <strong>nazariy bilimlarni amaliy ko'nikmalar bilan birlashtiradi,</strong> bu esa bitiruvchilarni ish bozoriga tez va samarali kirishga tayyorlaydi."
+        "<strong>Xalqaro darajali diplom</strong>: Bitiruvchilarimiz O‘zbekiston va Yevropada tan olinadigan diplomga ega bo‘lishadi.",
+        "<strong>Malakali ustozlar</strong>: Talabalarimiz uchun mahalliy va Yevropadan saralangan professor o‘qituvchilar dars o‘tishadi.",
+        "<strong>Grantlar</strong>: Universitet 100 va 50 foizlik grantlar taqdim etadi.",
+        "<strong>Chet elda o‘quv dasturlari</strong>: Universitet talabalarga Finlandiyada tashkil etilgan o‘quv dasturlarida ishtirok etish imkoniyatlarini taqdim qiladi.",
+        "<strong>Double degree</strong>: Nordik universitetida Finlandiyaning Kareliya amaliy fanlar universiteti bilan double va joint degree dasturlari bo‘yicha o‘qish imkoniyati bor.",
+        "<strong>Work & Travel</strong>: Nordik universiteti talabalarga yoz oylarida Yevropada ishlab, kontrakt uchun pul topish imkoniyatini ham yaratib beradi."
       ]
     },
     "structure": {
@@ -109,7 +115,7 @@
     },
     "scinceEvent": {
       "breadcrumb": {
-        "event": "tadbir",
+        "event": "Ilmiy tadbir",
         "scientific_events": "Ilmiy tadbirlar",
         "last":"So'ngi tadbirlar"
       },
@@ -120,7 +126,8 @@
     },
     "scienceConferences": {
       "breadcrumb": {
-        "scientific_conferences": "Ilmiy konferensiyalar"
+        "scientific_conferences": "Ilmiy konferensiyalar",
+        "last": "So‘ngi konferensiyalar"
       },
       "conferences": {
         "upcoming": "Kelgusi konferensiyalar",
@@ -177,9 +184,9 @@
       "overview": {
         "title": "Fakultetlar, Kafedralar va Departamentlar",
         "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
-        "bachelor": "Bakalavr bosqichi <strong>12ta</strong> yo’nalish.",
-        "master": "Masgistratura bosqichi <strong>6ta</strong> yo’nalish.",
-        "doctorate": "Doktorantura bosqichi <strong>3ta</strong> yo’nalish.",
+        "bachelor": "Bakalavr bosqichi <strong>19ta</strong> yo’nalish.",
+        "master": "Masgistratura bosqichi <strong>13ta</strong> yo’nalish.",
+        "doctorate": "Doktorantura bosqichi <strong>6ta</strong> yo’nalish.",
         "demand": "Barcha ta'lim yo'nalishlarimiz bugungi kunda barcha sohalarda yuqori talabga ega."
       },
       "levels": [
@@ -280,5 +287,14 @@
     "Press_releases": {
       "sectionTitle": "Press relizlar"
     }
+  },
+  "footer": {
+    "phone": "Telefon",
+    "email": "Email",
+    "excellence_in_teaching": "ta'limda mukammallik sari",
+    "send": "Yuborish",
+    "university_name": "Xalqaro nordik universiteti 2024",
+    "rights_reserved": "Barcha huquqlar himoyalangan",
+    "site_developers": "Sayt ishlab chiquvchilari: IT departamenti"
   }
 }
