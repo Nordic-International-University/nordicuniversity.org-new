@@ -33,21 +33,26 @@ const ScholarshipsAndInternships = ({
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-5 rounded-lg max-md:flex-col flex border border-gray-200 shadow-lg hover:shadow-2xl h-[270px] max-md:h-auto transition-shadow duration-300 bg-white items-start gap-6"
+            className="p-4 sm:p-5 rounded-lg flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
           >
-            <Image
-              width={1000}
-              height={1000}
-              src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
-              alt={item.name}
-              className="max-lg:w-full object-cover w-[300px] h-full rounded-md"
-            />
+            {/* Image Section */}
+            <div className="w-full sm:w-1/3">
+              <Image
+                width={1000}
+                height={1000}
+                src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+                alt={item.name}
+                className="w-full h-[200px] sm:h-full object-cover rounded-md"
+              />
+            </div>
+
+            {/* Content Section */}
             <div className="flex flex-col justify-between h-full gap-4 w-full">
               <div>
-                <h2 className="text-lg md:text-xl text-text_secondary line-clamp-2 font-bold">
+                <h2 className="text-base sm:text-lg md:text-xl text-text_secondary font-bold line-clamp-2">
                   {item.name}
                 </h2>
-                <p className="mt-2 text-gray-600 text-sm md:text-base line-clamp-4 opacity-90 font-medium">
+                <p className="mt-2 text-gray-600 text-sm sm:text-base line-clamp-4 opacity-90 font-medium">
                   {item.description}
                 </p>
               </div>

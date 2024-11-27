@@ -74,7 +74,7 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("connections.sectionTitle")}
     >
-      <div className="flex items-center gap-4 justify-center mt-10">
+      <div className="flex items-center max-md:gap-2 gap-4 justify-center mt-10">
         <Button
           className={`${
             time === timeFilter.future

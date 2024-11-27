@@ -131,19 +131,24 @@ const TutionFeesComponent = ({
                     <h3 className="text-[#364E6B] text-lg md:text-[18px] mb-3 md:mb-5 font-semibold">
                       {program.name}
                     </h3>
-                    <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
+                    <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal ">
                       <strong>Kontrakt:</strong>{" "}
-                      <span className="underline">
+                      <span className="underline ml-2 ">
                         {program.price.toLocaleString()} so'm
                       </span>
                     </p>
                     <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
                       <strong>Davomiyligi:</strong>
-                      <span className="underline"> {program.duration} yil</span>
+                      <span className="underline ml-2">
+                        {" "}
+                        {program.duration} yil
+                      </span>
                     </p>
                     <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
                       <strong>Ta'lim tili:</strong>
-                      <span className="underline">{program.field_lang}</span>
+                      <span className="underline ml-2">
+                        {program.field_lang}
+                      </span>
                     </p>
                     <div className="flex justify-center lg:block">
                       <Button

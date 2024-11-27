@@ -166,11 +166,12 @@ const Contacts = ({ props }: { props: ContactInfo | any }) => {
           {t("map")}
         </h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.834410582869!2d69.20874141542286!3d41.299495879271095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef3dfc39e4b1b%3A0xd4ed1f4ea1bb6c5!2sNordic%20International%20University!5e0!3m2!1sen!2sus!4v1641248920373!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.992487234805!2d69.21628937673012!3d41.28726797131281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b359ab47501%3A0x618cedae4747d331!2sNordic%20International%20University!5e0!3m2!1sru!2s!4v1732694331956!5m2!1sru!2s"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </article>

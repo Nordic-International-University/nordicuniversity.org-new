@@ -171,7 +171,7 @@ const UniversityInfoTable = ({
                 >
                   {structureTypeData.map((item: any) =>
                     item.staffs.map((staff: any, index: number) => (
-                      <SwiperSlide key={index}>
+                      <SwiperSlide key={index} className="max-md:py-9">
                         <StaffUserCard imagePosition="right" staff={staff} />
                       </SwiperSlide>
                     )),

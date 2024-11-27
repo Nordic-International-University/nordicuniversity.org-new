@@ -54,7 +54,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
 
   return (
     <article className="mt-12 px-4 md:px-8 max-sm:px-0">
-      <h2 className="text-center max-sm:text-lg max-sm:text-left text-tertiary text-2xl md:text-3xl font-semibold pb-7">
+      <h2 className="text-center max-sm:text-lg max-sm:text-left text-tertiary text-2xl md:text-3xl font-semibold pb-7 max-lg:hidden">
         {sectionTitle}
       </h2>
       <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">

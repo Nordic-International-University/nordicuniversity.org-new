@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import { Button, message } from "antd";
+import { CopyOutlined } from "@ant-design/icons";
 
 const UniversityInfoTable = () => {
   const t = useTranslations("university.requisites.table").raw;
@@ -17,38 +19,100 @@ const UniversityInfoTable = () => {
     { id: 10, name: t("fieldNames.email"), info: t("data.9") },
   ];
 
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      message.success({
+        content: "Текст успешно скопирован!",
+        duration: 2,
+        style: {
+          marginTop: "20vh",
+        },
+      });
+    });
+  };
   return (
-    <div className="overflow-x-auto mt-14">
-      <table className="min-w-full max-sm:text-nowrap border border-gray-300">
-        <thead>
-          <tr className="bg-white">
-            <th className="px-4 py-2 border border-gray-300">
-              {t("columns.number")}
-            </th>
-            <th className="px-4 py-2 border border-gray-300">
-              {t("columns.name")}
-            </th>
-            <th className="px-4 py-2 border border-gray-300">
-              {t("columns.info")}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.id}>
-              <td className="px-4 py-2 border border-gray-300 bg-white text-center">
-                {item.id}
-              </td>
-              <td className="px-4 py-2 border border-gray-300 bg-text_tertiary">
-                {item.name}
-              </td>
-              <td className="px-4 py-2 bg-text_tertiary border border-gray-300">
-                {item.info}
-              </td>
+    <div className="mt-14">
+      {/* Для десктопа */}
+      <div className="hidden sm:block">
+        <table className="min-w-full border border-gray-300 text-sm bg-gray-50 shadow-lg rounded-lg overflow-hidden">
+          <thead>
+            <tr className="bg-primary-gradient text-white">
+              <th className="px-4 py-3 border border-blue-700 text-left">
+                {t("columns.number")}
+              </th>
+              <th className="px-4 py-3 border border-blue-700 text-left">
+                {t("columns.name")}
+              </th>
+              <th className="px-4 py-3 border border-blue-700 text-left">
+                {t("columns.info")}
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr
+                key={item.id}
+                className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+              >
+                <td className="px-4 py-3 border border-gray-300 text-center text-gray-800">
+                  {item.id}
+                </td>
+                <td className="px-4 py-3 border border-gray-300 text-gray-800">
+                  {item.name}
+                </td>
+                <td className="px-4 py-3 border border-gray-300 text-gray-800 flex justify-between items-center">
+                  <span>{item.info}</span>
+                  <Button
+                    icon={<CopyOutlined />}
+                    type="link"
+                    onClick={() => copyToClipboard(item.info)}
+                  ></Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Для мобильных устройств */}
+      <div className="block sm:hidden">
+        {data.map((item) => (
+          <div
+            key={item.id}
+            className="border border-gray-300 mb-4 p-4 rounded-lg bg-gradient-to-br from-blue-50 to-white shadow-lg"
+          >
+            <div className="mb-2 text-gray-800 flex justify-between items-center">
+              <span>
+                <span className="font-semibold text-blue-600">
+                  {t("columns.number")}:
+                </span>{" "}
+                {item.id}
+              </span>
+            </div>
+            <div className="mb-2 text-gray-800 flex justify-between items-center">
+              <span>
+                <span className="font-semibold text-blue-600">
+                  {t("columns.name")}:
+                </span>{" "}
+                {item.name}
+              </span>
+            </div>
+            <div className="text-gray-800 flex justify-between items-center">
+              <span>
+                <span className="font-semibold text-blue-600">
+                  {t("columns.info")}:
+                </span>{" "}
+                {item.info}
+              </span>
+              <Button
+                icon={<CopyOutlined />}
+                type="link"
+                onClick={() => copyToClipboard(item.info)}
+              ></Button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

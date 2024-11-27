@@ -53,7 +53,7 @@ const StaffUserCard = ({
           />
         </div>
       </div>
-      <div className="flex items-center justify-start max-sm:mt-4 gap-6">
+      <div className="flex items-center justify-start  gap-6">
         <span className="w-[200px] bg-[#46658B] h-0.5"></span>
         <div className="flex justify-center gap-4">
           {(Object as any).entries(staff.social_network_links).map(
