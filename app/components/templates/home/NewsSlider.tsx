@@ -43,9 +43,9 @@ const NewsSlider = ({
             {sectionTitle}
           </h2>
           <div className=" max-sm:flex hidden items-center gap-2 text-sm">
-            <Button>
-              <h2 className="font-normal">Barcha yangiliklar</h2>
-              <ArrowRight className="w-4 h-4" />
+            <Button className="bg-secondary">
+              <h2 className="font-normal text-white">Barcha yangiliklar</h2>
+              <ArrowRight className="w-4 h-4 text-white" />
             </Button>
           </div>
         </div>

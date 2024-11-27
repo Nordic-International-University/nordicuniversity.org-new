@@ -61,10 +61,12 @@ export default async function Home() {
         />
       </section>
       <PhotoGallery gallery={sections[SectionTypeEnum.PHOTO_ALBUM].data} />
+
       <PartnersSlider
         sectionTitle={sections[SectionTypeEnum.PARTNERS].title}
         partners={sections[SectionTypeEnum.PARTNERS].data}
       />
+
       <Events
         props={sections[SectionTypeEnum.COOPERATION_FORUM_PROJECTS].data}
         sectionTitle={
