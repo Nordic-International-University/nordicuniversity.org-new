@@ -25,7 +25,7 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
     };
 
     return Object.entries(links).map(([key, value]) => {
-      if (!value) return null; // Agar havola yo'q bo'lsa, ko'rsatma
+      if (!value) return null;
       return (
         <div
           key={key}
@@ -42,7 +42,9 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
     <article className="mt-10 mb-10">
       <div className="flex flex-col max-sm:gap-8 gap-6 max-md:place-items-center">
         {props.map((item: podcastType, index: number) => (
-          <div
+          <Link
+            target="_blank"
+            href={item.video_link}
             key={index}
             className="w-full p-4 border-[1px] border-gray-300 rounded-lg flex gap-6 items-stretch max-sm:flex-col max-sm:border-none max-sm:p-0"
           >
@@ -60,6 +62,9 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
                 <h2 className="text-xl text-text_secondary max-sm:text-sm pb-4 font-semibold">
                   {item.title}
                 </h2>
+                <p className="text-gray-600 line-clamp-4 max-sm:text-sm">
+                  {item.description}
+                </p>
                 <p className="text-gray-600 max-sm:text-sm">{item.hashtags}</p>
               </div>
               <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
@@ -76,7 +81,7 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
                 <span className="h-[0.5px] w-full bg-tertiary"></span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </article>

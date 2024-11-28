@@ -14,7 +14,7 @@ const TutionFeesComponent = ({
   refetched: any;
   setState: any;
 }) => {
-  const t = useTranslations("admission.degree_price");
+  const t = useTranslations("admission.degree_price"); // 'degree_price' namespace'dan foydalanamiz
 
   const [selectedDegree, setSelectedDegree] = useState<string>("FULL_TIME");
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
@@ -55,14 +55,14 @@ const TutionFeesComponent = ({
                 }
               }}
             >
-              {t(`degreeDirection.${item}`)}
+              {t(`degreeDirection.${item}`)}{" "}
+              {/* Tarjimasi uchun degreeDirection */}
             </Button>
           ))}
         </div>
 
         <div className="w-full">
           <div>
-            {/* Katta ekranlarda ko'rsatiladigan tugmalar */}
             <div className="flex justify-center gap-5 mb-8 max-sm:hidden">
               {Object.keys(props).map((degreeKey) => (
                 <Button
@@ -78,35 +78,21 @@ const TutionFeesComponent = ({
                     refetched(false);
                   }}
                 >
-                  {t(`degrees.${degreeKey}`)}
+                  {t(`degrees.${degreeKey}`)} {/* Tarjimasi uchun degrees */}
                 </Button>
               ))}
             </div>
-
-            {/* Kichik ekranlar uchun ko'rsatiladigan dropdown */}
             <div className="sm:hidden w-full flex mb-5 justify-center">
               <Dropdown
-                overlay={
-                  <Menu
-                    onClick={({ key }) => {
-                      setSelectedDegree(key); // `key`ni oladi
-                      refetched(false);
-                    }}
-                  >
-                    {Object.keys(props).map((degreeKey) => (
-                      <Menu.Item key={degreeKey}>
-                        {t(`degrees.${degreeKey}`)}
-                      </Menu.Item>
-                    ))}
-                  </Menu>
-                }
+                overlay={menu}
                 className="w-full bg-tertiary text-white"
                 trigger={["click"]}
               >
                 <Button>
                   {selectedDegree
                     ? t(`degrees.${selectedDegree}`)
-                    : "Select Degree"}{" "}
+                    : t("select_degree")}{" "}
+                  {/* 'Dastur tanlang' deb tarjima qilish */}
                   <DownOutlined />
                 </Button>
               </Dropdown>
@@ -132,20 +118,20 @@ const TutionFeesComponent = ({
                       {program.name}
                     </h3>
                     <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal ">
-                      <strong>Kontrakt:</strong>{" "}
+                      <strong>{t("program_info.contract")}:</strong>{" "}
                       <span className="underline ml-2 ">
                         {program.price.toLocaleString()} so'm
                       </span>
                     </p>
                     <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
-                      <strong>Davomiyligi:</strong>
+                      <strong>{t("program_info.duration")}:</strong>
                       <span className="underline ml-2">
                         {" "}
                         {program.duration} yil
                       </span>
                     </p>
                     <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
-                      <strong>Ta'lim tili:</strong>
+                      <strong>{t("program_info.language")}:</strong>
                       <span className="underline ml-2">
                         {program.field_lang}
                       </span>
@@ -155,7 +141,7 @@ const TutionFeesComponent = ({
                         className="bg-text_secondary text-white px-4 py-2 md:px-5 font-semibold rounded  "
                         type="primary"
                       >
-                        O'quv reja
+                        {t("program_info.program_plan")}
                       </Button>
                     </div>
 

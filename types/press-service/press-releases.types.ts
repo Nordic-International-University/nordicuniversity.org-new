@@ -21,6 +21,7 @@ interface SocialNetworkLinks {
 export interface podcastType {
   id: string;
   image_id: string;
+  description: string;
   image: ImageFile;
   video_link: string;
   title: string;

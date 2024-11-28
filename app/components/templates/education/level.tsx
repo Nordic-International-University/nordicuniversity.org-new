@@ -12,18 +12,24 @@ const Level = () => {
   const containerRef = useRef(null);
   const textRef = useRef(null);
   const imageRef = useRef(null);
+  const lineRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate text
+      // Typewriter Effect for Text (overview.title)
       gsap.fromTo(
         textRef.current,
-        { opacity: 0, y: 50 },
+        {
+          opacity: 0,
+          y: 50,
+          text: "", // Clear initial text
+        },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 2,
           ease: "power3.out",
+          text: t("overview.title"), // Add the full text here for the typewriter effect
           scrollTrigger: {
             trigger: textRef.current,
             start: "top 80%",
@@ -33,13 +39,13 @@ const Level = () => {
         },
       );
 
-      // Animate image
+      // Slide-down effect for Image
       gsap.fromTo(
         imageRef.current,
-        { opacity: 0, x: 100 },
+        { opacity: 0, y: -100 },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
@@ -50,10 +56,27 @@ const Level = () => {
           },
         },
       );
+
+      // Line animation from 0 to full width
+      gsap.fromTo(
+        lineRef.current,
+        { width: "0%" },
+        {
+          width: "100%",
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: lineRef.current,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+        },
+      );
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [t]);
 
   return (
     <article className="mt-12" ref={containerRef}>
@@ -92,6 +115,7 @@ const Level = () => {
             {t("overview.demand")}
           </p>
         </div>
+
         <Image
           className="h-72 w-auto max-md:w-full max-md:h-auto"
           src={image}
@@ -99,7 +123,9 @@ const Level = () => {
           ref={imageRef}
         />
       </div>
-      <hr className="bg-[#7A98C1] h-[2px] mt-10 w-full" />
+
+      {/* Line animation */}
+      <hr ref={lineRef} className="bg-[#7A98C1] h-[2px] mt-10 w-full" />
     </article>
   );
 };

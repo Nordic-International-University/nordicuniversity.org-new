@@ -7,6 +7,7 @@ import Image from "next/image";
 import { doubleSliderProps } from "@/types/templates/doubleSlider.types";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Button } from "antd";
+import { useTranslations } from "next-intl";
 
 const DoubleSlider = ({
   props,
@@ -21,6 +22,7 @@ const DoubleSlider = ({
   const nextRef = useRef(null);
   const raw = useId();
   const sliderId = raw.replace(/[^a-zA-Z0-9-_]/g, "");
+  const t = useTranslations("buttons");
 
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
@@ -121,7 +123,7 @@ const DoubleSlider = ({
                             href={url.single + `/${item.slug}`}
                             className="text-tertiary  mt-3 font-semibold bg-text_tertiary px-11 py-1"
                           >
-                            Batafsil...
+                            {t("detail")}
                           </Button>
                         </div>
                       </div>
@@ -132,7 +134,7 @@ const DoubleSlider = ({
                       href={url.all}
                       className="text-tertiary inline-block float-right w-1/2 mt-3 font-semibold bg-text_tertiary px-11 py-1"
                     >
-                      Barchasini ko‘rish
+                      {t("see_all")}
                     </Button>
                   </div>
                 </div>

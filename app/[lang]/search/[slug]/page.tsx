@@ -2,6 +2,7 @@ import React from "react";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import Link from "next/link";
 import SearchInput from "@/app/components/main/searchInput";
+import { getTranslations } from "next-intl/server";
 
 interface PageProps {
   params: {
@@ -33,23 +34,21 @@ const Page = async ({ params }: PageProps) => {
     slug,
     await getCurrentLangServer(),
   );
+  const translations = await getTranslations("search");
 
   return (
     <div className="min-h-screen bg-gray-200">
       {/* Header */}
       <div className="bg-gray-100 py-10 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Qidiruv</h1>
+        <h1 className="text-4xl font-bold text-gray-800">
+          {translations("searchText")}
+        </h1>
         <div className="mt-4 mx-auto max-w-xl">
           <SearchInput />
         </div>
       </div>
-
-      {/* Results Section */}
       <div className="bg-white py-10">
         <div className="max-w-6xl mx-auto px-6">
-          {/* Filters */}
-
-          {/* Search Results */}
           {data.length > 0 ? (
             <div className="space-y-6">
               {data.map((item, index: React.Key | number) => (
@@ -70,7 +69,7 @@ const Page = async ({ params }: PageProps) => {
             </div>
           ) : (
             <p className="text-center text-gray-600 text-lg">
-              Malumotlar Topilmadi
+              {translations("data")}
             </p>
           )}
         </div>

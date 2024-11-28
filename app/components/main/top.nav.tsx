@@ -90,7 +90,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
               <ul className="flex items-center text-white gap-5">
                 {props.slice(0, 4).map((resource, index) => (
                   <Link
-                    className="uppercase "
+                    className="uppercase"
                     href={resource.link}
                     key={index}
                     target="_blank"
@@ -113,17 +113,22 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
             </div>
           </div>
           <div className="flex items-center max-lg:justify-between max-lg:w-full gap-6">
-            <LanguageSelect />
+            <LanguageSelect color={"white"} />
             <SocialMedia color="white" />
           </div>
         </div>
         <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">
           <ul
-            className="flex flex-wrap text-sm items-center justify-center
+            className="flex flex-wrap text-[11px] items-center justify-center
            text-white gap-5"
           >
             {props.map((resource, index) => (
-              <Link href={resource.link} key={index} target="_blank">
+              <Link
+                href={resource.link}
+                key={index}
+                className="uppercase"
+                target="_blank"
+              >
                 <li>{resource.name}</li>
               </Link>
             ))}

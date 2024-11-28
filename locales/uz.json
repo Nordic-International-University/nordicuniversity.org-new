@@ -168,6 +168,13 @@
         "BACHELOR": "Bakalavr",
         "MASTER": "Magistratura",
         "DOCTORATE": "Doktorantura"
+      },
+      "select_degree": "Dastur tanlang",
+      "program_info": {
+        "contract": "Kontrakt",
+        "duration": "Davomiylik",
+        "language": "Ta'lim tili",
+        "program_plan": "O'quv reja"
       }
     }
   },
@@ -291,10 +298,18 @@
   "footer": {
     "phone": "Telefon",
     "email": "Email",
-    "excellence_in_teaching": "ta'limda mukammallik sari",
+    "excellence_in_teaching": "Ta'limda mukammallik sari",
     "send": "Yuborish",
     "university_name": "Xalqaro nordik universiteti 2024",
     "rights_reserved": "Barcha huquqlar himoyalangan",
     "site_developers": "Sayt ishlab chiquvchilari: IT departamenti"
+  },
+  "search": {
+    "searchText": "Qidirish",
+    "data": "Malumotlar Topilmadi"
+  },
+  "buttons": {
+    "detail": "Batafsil...",
+    "see_all": "Barchasini ko‘rish"
   }
 }

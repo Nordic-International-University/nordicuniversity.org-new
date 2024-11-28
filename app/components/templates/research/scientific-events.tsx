@@ -7,7 +7,13 @@ import { Navigation } from "swiper/modules";
 import NoDataComponent from "@/app/components/UI/no-data";
 import EventCards from "@/app/components/UI/eventCards";
 
-const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
+const ScientificEvents = ({
+  props,
+  url,
+}: {
+  props: ScientificEvent[];
+  url: string;
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleSlideChange = (swiper: any) => {
@@ -62,11 +68,7 @@ const ScientificEvents = ({ props }: { props: ScientificEvent[] }) => {
         <div className="gap-3 flex flex-col">
           {props.map((event, index) => (
             <div className="border-2 border-[#7A98C1] rounded max-lg:p-0 p-4">
-              <EventCards
-                path="/research/scientific-conferences/"
-                items={event}
-                key={event.id || index}
-              />
+              <EventCards path={url} items={event} key={event.id || index} />
             </div>
           ))}
         </div>

@@ -8,8 +8,6 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-
-import { Event } from "@/types/templates/international-meeating";
 import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
@@ -40,11 +38,11 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   const brodCmbItems = [
     {
-      url: "/scientific-events",
-      name: t("scinceEvent.breadcrumb.scientific_events"),
+      url: "/research/scientific-events",
+      name: t("scinceEvent.breadcrumb.event"),
     },
     {
-      url: `/scientific-events/${params.slug}`,
+      url: `/research/scientific-events/${params.slug}`,
       name: news.name,
     },
   ];
@@ -130,7 +128,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               lang +
-              "/press-service/news/" +
+              "/research/scientific-events/" +
               params.slug
             }
           />

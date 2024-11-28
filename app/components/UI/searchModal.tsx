@@ -55,7 +55,7 @@ const SearchModal = ({ searchModal }: { searchModal: string }) => {
           ))}
         </div>
       ) : (
-        <p>Natijalar topilmadi</p>
+        ""
       )}
     </div>
   );

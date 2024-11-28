@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { pressReleasesType } from "@/types/press-service/press-releases.types";
 import { Button } from "antd";
 import gsap from "gsap";
+import Link from "next/link";
 
 const Releases = ({ props }: { props: pressReleasesType[] }) => {
   const t = useTranslations("press-service");
@@ -11,7 +12,6 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
 
   useEffect(() => {
     if (containerRef.current) {
-      // Animate all items from scale 0 to 1 with staggered effect
       gsap.fromTo(
         containerRef.current.children,
         { scale: 0, opacity: 0 },
@@ -24,7 +24,6 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
         },
       );
 
-      // Animate text and inner elements
       gsap.fromTo(
         ".inner-content",
         { y: 20, opacity: 0 },
@@ -43,7 +42,11 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
     <article className="mt-10 mb-10" ref={containerRef}>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7">
         {props.map((item, index) => (
-          <div key={index} className="flip-card w-full h-[200px]">
+          <div
+            // href={"/press-service/releases/" + item.slug}
+            key={index}
+            className="flip-card w-full h-[200px]"
+          >
             <div className="flip-card-inner relative w-full h-full">
               {/* Old tomoni */}
               <div className="flip-card-front absolute w-full h-full bg-[#789FCE21] rounded-md flex flex-col justify-between p-4 shadow-lg">
@@ -68,7 +71,6 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
                   </Button>
                 </div>
               </div>
-              {/* Orqa tomoni */}
               <div className="flip-card-back absolute w-full h-full bg-[#5B7FAB] rounded-md flex flex-col justify-between p-4 text-white shadow-lg">
                 <div>
                   <h2 className="font-semibold text-lg">{item.title}</h2>

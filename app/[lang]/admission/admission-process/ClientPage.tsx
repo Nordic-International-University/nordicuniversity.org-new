@@ -6,9 +6,8 @@ import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import AdmissionProcess from "@/app/components/templates/admission/admission_process";
-import { Faq } from "@/types/admission/faq.types";
 
-const ClientPage = ({ data }: { data: Array<Faq> }) => {
+const ClientPage = () => {
   const t = useTranslations("admission");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.admission.admissionSidebarItems,
@@ -20,7 +19,7 @@ const ClientPage = ({ data }: { data: Array<Faq> }) => {
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/admission/admission-process",
       name: t("admission_process.sectionTitle"),
     },
   ];

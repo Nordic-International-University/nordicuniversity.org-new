@@ -54,13 +54,13 @@ const PhotoGallery = ({
     <section className="bg-anyColor mt-14 pb-14">
       <article className="container mx-auto">
         <div className="w-full justify-end flex">
-          <div className="w-3/5 flex items-center gap-4 justify-between pt-12 pb-7">
+          <div className="w-3/5 max-sm:w-full max-sm:justify-center flex items-center gap-4 justify-between pt-12 pb-7">
             <h2 className="text-center max-sm:text-lg max-sm:text-left text-white font-semibold text-2xl">
               {sectionTitle}
             </h2>
             <Link
               href={"/students/albums"}
-              className="text-blue-200 cursor-pointer font-semibold group-hover:text-blue-400 transition-colors duration-300"
+              className="max-sm:hidden block text-blue-200 cursor-pointer font-semibold group-hover:text-blue-400 transition-colors duration-300"
             >
               {t("all")}
             </Link>

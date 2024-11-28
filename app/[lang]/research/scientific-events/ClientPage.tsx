@@ -91,7 +91,7 @@ const ClientPage = ({
           </button>
         ))}
       </div>
-      <Scientific_events props={data} />
+      <Scientific_events url="/research/scientific-events/" props={data} />
       {totalPages > 3 && (
         <CustomPagination
           currentPage={currentPage}

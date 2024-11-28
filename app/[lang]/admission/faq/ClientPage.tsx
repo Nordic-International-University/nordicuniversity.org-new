@@ -15,11 +15,11 @@ const ClientPage = ({ data }: { data: any }) => {
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/admission/admission-process",
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/admission/faq",
       name: t("admission_process.sectionTitle"),
     },
   ];

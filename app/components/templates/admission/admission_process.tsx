@@ -12,12 +12,12 @@ const AdmissionProcess = () => {
       <div className="flex items-start max-md:flex-col-reverse gap-4 justify-between">
         <div>
           <p
-            className="text-secondary text-[18px]"
+            className="text-secondary text-justify text-[18px]"
             dangerouslySetInnerHTML={{
               __html: t("admission_process.description"),
             }}
           ></p>
-          <p className="text-secondary mt-4 text-[18px]">
+          <p className="text-secondary text-justify mt-4 text-[18px]">
             {t("admission_process.body")}
           </p>
           <Link

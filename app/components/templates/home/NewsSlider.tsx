@@ -10,10 +10,10 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import dayjs from "dayjs";
-import Link from "next/link";
 import { Button } from "antd";
-import { ArrowRightIcon } from "@nextui-org/shared-icons";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
@@ -32,6 +32,7 @@ const NewsSlider = ({
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
+  const t = useTranslations("buttons");
 
   return (
     <section className="mb-14 max-lg:mt-0 max-sm:-mt-5 mt-28 pt-10">
@@ -43,10 +44,12 @@ const NewsSlider = ({
             {sectionTitle}
           </h2>
           <div className=" max-sm:flex hidden items-center gap-2 text-sm">
-            <Button className="bg-secondary">
-              <h2 className="font-normal text-white">Barcha yangiliklar</h2>
-              <ArrowRight className="w-4 h-4 text-white" />
-            </Button>
+            <div className="text-secondary flex items-center gap-2">
+              <Link href="/press-service/news" className="font-normal">
+                {t("see_all")}
+              </Link>
+              <ArrowRight className="w-4 h-4" />
+            </div>
           </div>
         </div>
         <div className="flex items-center gap-12">
@@ -107,7 +110,7 @@ const NewsSlider = ({
                           href={`/press-service/news/${item.slug}`}
                           className="font-semibold max-sm:py-4 text-white max-sm:w-full bg-text_secondary px-11 py-1"
                         >
-                          Batafsil...
+                          {t("detail")}
                         </Button>
                       </div>
                     </div>
@@ -116,7 +119,7 @@ const NewsSlider = ({
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="flex items-center mb-10 block max-lg:hidden flex-col gap-6">
+          <div className="flex items-center mb-10 max-lg:hidden flex-col gap-6">
             <div className="cursor-pointer">
               <FaChevronUp
                 className="text-lg text-text_secondary"

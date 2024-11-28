@@ -17,7 +17,7 @@ const ClientPage = ({ initialData }: any) => {
   const [data, setData] = useState(initialData);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
-  const [time, setTime] = useState(timeFilter.future);
+  const [time, setTime] = useState(timeFilter.past);
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.partners.educationSidebarItems,

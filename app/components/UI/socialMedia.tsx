@@ -53,11 +53,11 @@ const SocialMedia = ({ color = "white" }: { color: string }) => {
         <div className="flex text-white items-center gap-3 max-sm:gap-1.5">
           {networks.map((item, index) => (
             <React.Fragment key={item.id || index}>
-              <Link href={item.link}>
+              <Link target="_blank" href={item.link}>
                 <Image
                   className="min-h-5 min-w-5"
                   style={{
-                    filter: getColorFilter(color), // Apply dynamic filter based on color prop
+                    filter: getColorFilter(color),
                   }}
                   width={18}
                   height={18}

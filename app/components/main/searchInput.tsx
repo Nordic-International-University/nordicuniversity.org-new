@@ -7,12 +7,14 @@ import { useRouter } from "next/navigation";
 import { Input, Button, InputRef } from "antd";
 
 import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
+import { useTranslations } from "next-intl";
 
 const SearchInput = () => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
   const nameInput = useRef<InputRef>(null);
+  const t = useTranslations("search");
 
   const navigate = (e: FormEvent, text: string) => {
     e.preventDefault();
@@ -33,10 +35,13 @@ const SearchInput = () => {
 
   return (
     <div>
-      <form onSubmit={(e) => navigate(e, searchText)}>
+      <form
+        className="flex items-center gap-1"
+        onSubmit={(e) => navigate(e, searchText)}
+      >
         <Input
           onChange={(e) => setSearchText(e.target.value)}
-          placeholder="Qidirish"
+          placeholder={t("searchText")}
           className="w-full"
           ref={nameInput}
           value={searchText}
@@ -52,6 +57,7 @@ const SearchInput = () => {
             )
           }
         />
+        <Button htmlType="submit">{t("searchText")}</Button>
       </form>
     </div>
   );

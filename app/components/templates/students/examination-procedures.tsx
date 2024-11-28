@@ -5,9 +5,12 @@ import gsap from "gsap";
 import { useTranslations } from "next-intl";
 
 const ExaminationProcedures = ({ data }: { data: Array<ItemImage> }) => {
+  // Default to the first image or fallback to a placeholder if data is empty
+  const initialImagePath =
+    data.length > 1 ? data[1].photo.file_path : data[0]?.photo.file_path;
   const [selectedImage, setSelectedImage] = useState<string>(
-    data[1].photo.file_path,
-  );
+    initialImagePath || "",
+  ); // fallback to empty string if no valid image
   const t = useTranslations("student").raw;
   const mainImageRef = useRef<HTMLDivElement>(null);
 
@@ -22,6 +25,7 @@ const ExaminationProcedures = ({ data }: { data: Array<ItemImage> }) => {
   }, [selectedImage]);
 
   const handleThumbnailClick = (imagePath: string) => {
+    if (!imagePath) return; // Skip if no valid image path
     gsap.to(mainImageRef.current, {
       y: -50,
       opacity: 0,
@@ -42,7 +46,7 @@ const ExaminationProcedures = ({ data }: { data: Array<ItemImage> }) => {
   return (
     <article className="mt-6">
       <p
-        className="text-text_secondary font-medium mb-5 max-w-[676px]"
+        className="text-text_secondary font-medium mb-3 max-w-[676px]"
         dangerouslySetInnerHTML={{
           __html: t("exam.exam_process_organization"),
         }}
@@ -50,13 +54,19 @@ const ExaminationProcedures = ({ data }: { data: Array<ItemImage> }) => {
       <div className="flex max-md:flex-col gap-5">
         <div className="min-w-[300px] max-md:w-full">
           <div ref={mainImageRef} className="overflow-hidden">
-            <Image
-              className="h-[260px] w-full"
-              width={300}
-              height={200}
-              src={process.env.NEXT_PUBLIC_URL_BACKEND + selectedImage}
-              alt={data[1].photo.file_name}
-            />
+            {selectedImage ? (
+              <Image
+                className="h-[260px] object-cover w-full"
+                width={300}
+                height={200}
+                src={process.env.NEXT_PUBLIC_URL_BACKEND + selectedImage}
+                alt={data[1]?.photo?.file_name || "No image"} // Fallback alt text
+              />
+            ) : (
+              <div className="h-[260px] w-full bg-gray-300 flex justify-center items-center">
+                <p>No image available</p>
+              </div>
+            )}
           </div>
           <div className="w-full mt-4 overflow-auto flex items-center gap-4 scroll-container">
             {data.slice(0, data.length - 1).map((item: ItemImage, index) => (
@@ -75,7 +85,7 @@ const ExaminationProcedures = ({ data }: { data: Array<ItemImage> }) => {
         <div>
           <p
             dangerouslySetInnerHTML={{ __html: t("exam.exam_room_equipment") }}
-            className="pt-3 text-text_secondary font-medium"
+            className="text-text_secondary font-medium"
           ></p>
           <p
             className="pt-3 text-text_secondary font-medium"

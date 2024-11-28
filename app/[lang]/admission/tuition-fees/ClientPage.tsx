@@ -47,11 +47,11 @@ const ClientPage = () => {
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/admission/admission-process",
       name: t("title"),
     },
     {
-      url: "/university/tuition-fees",
+      url: "/admission/tuition-fees",
       name: t("degree_price.sectionTitle"),
     },
   ];

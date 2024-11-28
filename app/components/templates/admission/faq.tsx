@@ -1,5 +1,5 @@
 import React from "react";
-import faqImage from "@/public/images/admisssion-images/faq.png";
+import faqImage from "@/public/images/admisssion-images/faq.jpg";
 // @ts-ignore
 import { Faq } from "@/types/admission/faq.types";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const Faq = ({ data }: { data: Faq[] }) => {
           ))}
         </ul>
         <Image
-          className="w-60 h-auto max-md:hidden block"
+          className="w-1/3 h-auto max-md:hidden block"
           src={faqImage}
           alt="faq"
         />

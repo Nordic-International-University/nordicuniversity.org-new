@@ -33,20 +33,17 @@ const ScholarshipsAndInternships = ({
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-4 sm:p-5 rounded-lg flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
+            className="p-4 sm:p-5 rounded-lg h-[260px] flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
           >
-            {/* Image Section */}
             <div className="w-full sm:w-1/3">
               <Image
                 width={1000}
                 height={1000}
                 src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
                 alt={item.name}
-                className="w-full h-[200px] sm:h-full object-cover rounded-md"
+                className="w-[230px] h-[230px] sm:h-full object-cover rounded-md"
               />
             </div>
-
-            {/* Content Section */}
             <div className="flex flex-col justify-between h-full gap-4 w-full">
               <div>
                 <h2 className="text-base sm:text-lg md:text-xl text-text_secondary font-bold line-clamp-2">

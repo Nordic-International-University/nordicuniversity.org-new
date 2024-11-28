@@ -28,7 +28,7 @@ export default async function Home() {
         sectionTitle={sections[SectionTypeEnum.NEWS].title}
         props={sections[SectionTypeEnum.NEWS].data}
       />
-      <section className="bg-secondary-gradient py-14 shadow-inner  block max-lg:hidden">
+      <section className="bg-secondary-gradient py-14 shadow-inner block max-lg:hidden">
         <DoubleSLider
           url={{
             all: "/research/scientific-events",

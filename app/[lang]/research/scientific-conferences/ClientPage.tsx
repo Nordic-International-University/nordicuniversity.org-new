@@ -31,7 +31,6 @@ const ClientPage = ({ initialData }: any) => {
         100,
         time,
       );
-      console.log(result);
       setData(result.data);
       setTotalPages(result.totalPages || 1);
     };
@@ -45,8 +44,8 @@ const ClientPage = ({ initialData }: any) => {
       name: t("title"),
     },
     {
-      url: "/university/documents",
-      name: t("scinceEvent.breadcrumb.scientific_events"),
+      url: "/research/scientific-conferences",
+      name: t("scienceConferences.breadcrumb.scientific_conferences"),
     },
   ];
 
@@ -74,7 +73,7 @@ const ClientPage = ({ initialData }: any) => {
       translationKey="research"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("scinceEvent.breadcrumb.scientific_events")}
+      sidebarTitle={t("scienceConferences.breadcrumb.scientific_conferences")}
     >
       <div className="flex items-center gap-4 justify-center mt-10">
         {buttons.map((button, index) => (
@@ -87,7 +86,7 @@ const ClientPage = ({ initialData }: any) => {
           </button>
         ))}
       </div>
-      <Scientific_events props={data} />
+      <Scientific_events url="/research/scientific-conferences/" props={data} />
       {totalPages > 3 && (
         <CustomPagination
           currentPage={currentPage}

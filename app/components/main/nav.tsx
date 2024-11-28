@@ -158,7 +158,7 @@ const Nav: FC = () => {
         <div className="p-4">
           <div className="flex item-center justify-between">
             <div className="static z-50">
-              <LanguageSelect />
+              <LanguageSelect color="black" />
             </div>
             <SocialMedia color="black" />
           </div>
