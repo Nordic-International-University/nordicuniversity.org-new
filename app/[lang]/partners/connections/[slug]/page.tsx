@@ -16,8 +16,8 @@ import { Event } from "@/types/templates/international-meeating";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
-
   const news: Event = await getMeetingBySlug(params.slug, lang);
+  const t = await getTranslations("partners");
 
   const allMeeting: { data: Event[] } = await getAllMeeting({
     page: 1,
@@ -26,8 +26,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     type: meetingType.CONNECTIONS,
     time: timeFilter.past,
   });
-
-  const t = await getTranslations("partners");
 
   const brodCmbItems = [
     {
@@ -96,19 +94,19 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               (await getCurrentLangServer()) +
-              "/partners/connections" +
+              "/partners/connections/" +
               params.slug
             }
           />
           <div className="bg-gray-50 mt-3 rounded-md">
             <div className="flex items-center gap-1.5 pl-4 pt-3">
               <span className="w-2 h-3 bg-text_secondary rounded-3xl block"></span>
-              <h2 className="text-xl">So'ngilari</h2>
+              <h2 className="text-xl">{t("connections.last")}</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
               {allMeeting.data.map((item, index) => (
                 <MinimalCard
-                  url="/partners/scholarships-and-internships"
+                  url="/partners/connections"
                   subTitle={item.body}
                   key={index}
                   image={item.image}

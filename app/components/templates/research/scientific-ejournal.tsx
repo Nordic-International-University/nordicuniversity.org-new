@@ -31,16 +31,14 @@ const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
           alt="journal"
         />
       </div>
-      <p className="text-tertiary w-full text-tertiary mt-5 text-[17px]">
-        {t("body")}
-      </p>
+      <p className="w-full text-tertiary mt-5 text-[17px]">{t("body")}</p>
       <Link
         href="https://journal.nordicuniversity.org/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Button className="bg-text_secondary text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:bg-secondary-dark focus:ring-4 focus:ring-secondary-light transition-all duration-300">
-          Maqolalar topshirish uchun ushbu saytga tashrif buyuring!
+          {t("button")}
         </Button>
       </Link>
 

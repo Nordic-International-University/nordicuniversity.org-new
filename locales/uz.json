@@ -1,6 +1,39 @@
 {
-  "other": {
+  "socialMediaCard": {
+    "telegram": {
+      "title": "Universitetning Telegram'dagi rasmiy kanalini kuzatib boring",
+      "button": "A'zo bo'lish"
+    },
+    "youtube": {
+      "title": "YouTube kanalimizga obuna bo'ling",
+      "button": "A'zo bo'lish"
+    },
+    "facebook": {
+      "title": "Facebook sahifamizni kuzatib boring",
+      "button": "A'zo bo'lish"
+    },
+    "linkedin": {
+      "title": "LinkedIn profilimizga ulanish",
+      "button": "A'zo bo'lish"
+    }
+  },
+  "shareModal": {
+    "buttonText": "Ulashish",
+    "modalTitle": "Kontentni ulashish",
+    "copyLink": "Havolani nusxalash",
+    "copied": "Havola nusxalandi!",
+    "close": "Yopish",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "print": "Chop etish"
+  },
+"other": {
     "all": "Barchasini ko‘rish"
+  },
+  "nav": {
+    "more":"YANA"
   },
   "menu": {
     "university": "Universitet",
@@ -108,6 +141,7 @@
       "Tasimo olimpiadasi"
     ],
     "eJournal": {
+      "button": "Maqolalar topshirish uchun ushbu saytga tashrif buyuring!",
       "sectionTitle": "Ilmiy elektron journal",
       "description": "“<strong>Nordic</strong>” ilmiy-amaliy elektron jurnali\nXalqaro Nordik universiteti Oʻzbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligining №057211 raqamli Guvohnomasiasosida “Nordic” ilmiy-amaliy elektron jurnalini nashr etish imkoniyatiga ega bo‘ldi. Jurnalda maqolalar o‘zbek, rus, ingliz va fin tillarida nashr etiladi. <br/> <br/> Nordik ilmiy-amaliy elektron jurnali davriy nashrlarini ISSN (Seriyali nashrlarning xalqaro standart raqamlanishi) tartib raqami orqali davlatlataro standart talablari asosida bo‘lishini to‘liq ta’minlash maqsadida ISSN-3030-3400 raqami bilan faoliyat olib boradi.",
       "davr": "Jurnalning davriyligi: bir yilda 5 ta son <br/><br/> Muassis: Xalqaro Nordik universiteti <br/><br/> Jurnalning nashr etilish sanasi: har ikkinchi oyning 15-sanasi.",
@@ -117,7 +151,7 @@
       "breadcrumb": {
         "event": "Ilmiy tadbir",
         "scientific_events": "Ilmiy tadbirlar",
-        "last":"So'ngi tadbirlar"
+        "last": "So'ngi tadbirlar"
       },
       "events": {
         "upcoming": "Kelgusi tadbirlar",
@@ -185,6 +219,38 @@
       "Xorijiy tillarni bilish sertifikati",
       "Ta'lim yo'nalishlari"
     ],
+    "title": "Sertifikat",
+    "description": "Sertifikat haqida ma'lumot",
+    "table": {
+      "header": {
+        "serial": "T/r",
+        "certificate_name": "Sertifikat nomi",
+        "conformity_level": "Muvofiqlik darajasi"
+      },
+      "degree": {
+        "B2": "B2",
+        "C1": "C1",
+        "C2": "C2"
+      },
+      "cefr": "<strong>CEFR</strong> (Common European Framework of Reference)",
+      "english_language": "INGLIZ TILI BO’YICHA",
+      "french_language": "FRANSUZ TILI BO’YICHA",
+      "german_language": "NEMIS TILI BO’YICHA",
+      "ielts": "IELTS",
+      "toefl_ibt": "TOEFL iBT",
+      "toefl_itp": "TOEFL ITP",
+      "cambridge_assessment": "Cambridge Assessment English Linguaskill",
+      "delf": "DELF",
+      "dalf": "DALF",
+      "tcf": "TCF",
+      "goethe_cert": "GOETHE-ZERTIFIKAT",
+      "german_diploma": "Deutsches Sprachdiplom (DSD II)",
+      "description_bold": "Cheksiz qiziqish va o’rganishga bo’lgan ishtiyoq bilan yo'g'rilgan, Xalgaro Nordik universiteti jamoasi chuqur <em>tahliliy fikrlash, ixtirochilik, amaliy muammolarni hal qilish</em> va <em>yangiliklarga ochiqlikni</em> qadrlaydi.",
+      "body": "Rag’batlantiruvchi, qo’llab-quvvatlovchi va shodlikka to’la, Xalqaro Nordik universiteti ko'plab talabalar uchun ikkinchi uyga aylanadi."
+    },
+    "buttons": {
+      "register": "Ro'yxatdan o’tish"
+    },
     "educationLevels": {
       "sectionTitle": "Ta’lim darajalari",
       "breadcrumb": "Ta’lim",
@@ -228,6 +294,7 @@
       "Xalqaro uchrashuvlardan fotolavhalar"
     ],
     "connections": {
+      "last": "So'ngilari",
       "sectionTitle": "Xalqaro hamkorlik aloqalari",
       "past": "O’tgan tadbirlar",
       "future": "Kelgusi tadbirlar"
@@ -254,7 +321,7 @@
     ],
     "Work_and_travel": {
       "sectionTitle": "Work and travel jarayoni",
-      "description": "   Xalgaro Nordik Universitetining <strong>\"Work and Travel\"</strong> dasturi sizga ta'lim va mehnatni uyg'unlashtirish imkoniyatini beradi.<br><br>\n    <strong>Finlandiya</strong> kabi ilg'or mamlakatlarda <strong>o'qish va ishlash</strong> orqali talabalarimiz amaliy tajriba to'plashlari va kasbiy ko'nikmalarini oshirishlari mumkin.<br><br>\n    Shu bilan birga, <strong>bu dastur Yevropaning</strong> turli burchaklarini kashf etish imkonini ham taqdim etadi.<br><br>\n    <strong>\"Work and Travel\"</strong> dasturimiz talabalarimizga nafaqat kasb-hunar, balki <strong>dunyogarashlarini</strong> ham boyitish imkonini beradi.",
+      "description": "Xalgaro Nordik Universitetining <strong>\"Work and Travel\"</strong> dasturi sizga ta'lim va mehnatni uyg'unlashtirish imkoniyatini beradi.<br><br>\n    <strong>Finlandiya</strong> kabi ilg'or mamlakatlarda <strong>o'qish va ishlash</strong> orqali talabalarimiz amaliy tajriba to'plashlari va kasbiy ko'nikmalarini oshirishlari mumkin.<br><br>\n    Shu bilan birga, <strong>bu dastur Yevropaning</strong> turli burchaklarini kashf etish imkonini ham taqdim etadi.<br><br>\n    <strong>\"Work and Travel\"</strong> dasturimiz talabalarimizga nafaqat kasb-hunar, balki <strong>dunyogarashlarini</strong> ham boyitish imkonini beradi.",
       "body": "Biz sizga o'quv va ish tajribalarini boyitishda yordam\nberishga tayyormiz."
     },
     "exam": {
@@ -284,7 +351,7 @@
       "Yangiliklar",
       "Press relizlar",
       "Nordikda podcast",
-      "Nordik Trend next intl"
+      "Nordik Trend"
     ],
     "title": "Matbuot xizmati",
     "news": {
@@ -310,6 +377,13 @@
   },
   "buttons": {
     "detail": "Batafsil...",
-    "see_all": "Barchasini ko‘rish"
+    "see_all": "Barchasini ko‘rish",
+    "see": "Ko‘rish",
+    "read": "O‘qish"
+  },
+  "noDataComponent": {
+    "title": "Ma'lumot mavjud emas",
+    "message": "Afsuski, so'ralgan ma'lumot topilmadi yoki mavjud emas.",
+    "retryMessage": "Iltimos, keyinroq qayta urinib ko'ring yoki boshqa so'rov bilan murojaat qiling."
   }
 }

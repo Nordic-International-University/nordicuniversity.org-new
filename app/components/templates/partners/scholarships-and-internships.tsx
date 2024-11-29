@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "antd";
 import { gsap } from "gsap";
 import NoDataComponent from "@/app/components/UI/no-data";
+import { useTranslations } from "next-intl";
 
 const ScholarshipsAndInternships = ({
   props,
@@ -12,6 +13,7 @@ const ScholarshipsAndInternships = ({
   path: string;
 }) => {
   const listRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("buttons");
 
   useEffect(() => {
     if (listRef.current) {
@@ -57,7 +59,7 @@ const ScholarshipsAndInternships = ({
                 href={`${path + item.slug}`}
                 className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-[#284B82] to-[#032E63] hover:from-[#3C5C94] hover:to-[#284B82] rounded-md flex items-center gap-2"
               >
-                Ko‘rish
+                {t("see")}
               </Button>
             </div>
           </div>

@@ -5,26 +5,25 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
 const Recourse = ({ props }: any) => {
-  const containerRef = useRef<HTMLDivElement>(null); // Container uchun ref
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // GSAP animatsiya
     gsap.fromTo(
       (containerRef as any).current?.children,
       {
         opacity: 0,
         y: 50,
         scale: 0.8,
-        rotation: -10, // Kirish animatsiyasi uchun burchakni o'zgartirish
+        rotation: -10,
       },
       {
         opacity: 1,
         y: 0,
         scale: 1,
         rotation: 0,
-        stagger: 0.2, // Elementlarni birin-ketin animatsiya qilish
+        stagger: 0.2,
         duration: 1,
-        ease: "elastic.out(1, 0.75)", // Elastik chiqish effekti
+        ease: "elastic.out(1, 0.75)",
       },
     );
   }, []);
@@ -54,7 +53,7 @@ const Recourse = ({ props }: any) => {
         ref={containerRef}
       >
         {props.map((item: any, index: number) => (
-          <Link href={item.link} key={index}>
+          <Link href={item.link} target="_blank" key={index}>
             <div
               className="group relative p-4 rounded-lg transition-all"
               onMouseEnter={(e) => handleHover(e.currentTarget)}

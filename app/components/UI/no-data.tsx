@@ -1,4 +1,9 @@
+import React from "react";
+import { useTranslations } from "next-intl";
+
 export default function NoDataComponent() {
+  const t = useTranslations("");
+
   return (
     <div className="w-full mt-5 bg-white shadow-lg rounded-lg overflow-hidden flex justify-center">
       <div className="p-8 text-center w-full">
@@ -19,11 +24,9 @@ export default function NoDataComponent() {
           </svg>
         </div>
         <h2 className="text-2xl font-bold text-gray-800 mb-3">
-          Ma'lumot mavjud emas
+          {t("noDataComponent.title")}
         </h2>
-        <p className="text-gray-600 mb-6">
-          Afsuski, so'ralgan ma'lumot topilmadi yoki mavjud emas.
-        </p>
+        <p className="text-gray-600 mb-6">{t("noDataComponent.message")}</p>
         <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center">
           <svg
             className="w-5 h-5 text-gray-500 mr-2"
@@ -40,8 +43,7 @@ export default function NoDataComponent() {
             ></path>
           </svg>
           <span className="text-sm text-gray-700">
-            Iltimos, keyinroq qayta urinib ko'ring yoki boshqa so'rov bilan
-            murojaat qiling.
+            {t("noDataComponent.retryMessage")}
           </span>
         </div>
       </div>

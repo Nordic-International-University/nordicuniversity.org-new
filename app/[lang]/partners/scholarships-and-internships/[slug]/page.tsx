@@ -44,6 +44,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     },
   ];
 
+  // @ts-ignore
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
       <div className="mt-8">
@@ -107,7 +108,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           <div className="bg-gray-50 mt-3 rounded-md">
             <div className="flex items-center gap-1.5 pl-4 pt-3">
               <span className="w-2 h-3 bg-text_secondary rounded-3xl block"></span>
-              <h2 className="text-xl">So'ngilari</h2>
+              <h2 className="text-xl">{t("connections.last")}</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
               {allMeeting.data.map((item, index) => (

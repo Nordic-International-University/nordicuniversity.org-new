@@ -43,7 +43,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     },
     {
       url: `/research/scientific-events/${params.slug}`,
-      name: news.name,
+      name: <p className="line-clamp-1">{news.name}</p>,
     },
   ];
 

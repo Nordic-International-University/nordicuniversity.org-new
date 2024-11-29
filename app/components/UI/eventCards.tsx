@@ -46,7 +46,7 @@ const EventCards = ({
       />
       <div className="max-sm:p-3">
         <div className="max-md:mb-5">
-          <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 pb-3 max-md:pb-0 font-semibold line-clamp-2">
+          <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 mb-2 max-md:pb-0 font-semibold line-clamp-2">
             {event?.name}
           </h2>
         </div>
@@ -69,7 +69,7 @@ const EventCards = ({
                   href={value || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#7A98C1] hover:text-secondary"
+                  className="text-[#7A98C1] z-10 hover:text-secondary"
                   aria-label={key}
                 >
                   {key === "facebook" && <FaFacebook className="text-2xl" />}

@@ -38,12 +38,16 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   const brodCmbItems = [
     {
-      url: "/scientific-events",
-      name: t("scienceConferences.breadcrumb.scientific_conferences"),
+      url: "/research/scientific-conferences",
+      name: (
+        <p className="text-nowrap">
+          {t("scienceConferences.breadcrumb.scientific_conferences")}
+        </p>
+      ),
     },
     {
-      url: `/scientific-events/${params.slug}`,
-      name: events.name,
+      url: `/research/scientific-conferences/${params.slug}`,
+      name: <p className="line-clamp-1">{events.name}</p>,
     },
   ];
 
@@ -136,12 +140,14 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           <div className="bg-gray-50 mt-3 rounded-md">
             <div className="flex items-center gap-1.5 pl-4 pt-3">
               <span className="w-2 h-3 bg-text_secondary rounded-3xl block"></span>
-              <h2 className="text-xl">{t("scinceEvent.breadcrumb.last")}</h2>
+              <h2 className="text-xl">
+                {t("scienceConferences.breadcrumb.last")}
+              </h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
               {allEvents.data.map((item, index) => (
                 <MinimalCard
-                  url="/research/scientific-events"
+                  url="/research/scientific-conferences"
                   subTitle={item.body}
                   key={index}
                   image={item.image}

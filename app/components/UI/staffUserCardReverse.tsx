@@ -75,7 +75,6 @@ const StaffUserCard = ({
             <span className="w-24 max-sm:w-full sm:w-[200px] bg-[#46658B] h-0.5"></span>
           </div>
         </div>
-        {/* Image Section */}
         <div className="max-lg:w-full">
           <Image
             width={250}
@@ -84,7 +83,7 @@ const StaffUserCard = ({
             alt={staff.full_name}
             className="rounded-full object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"
           />{" "}
-          <p className="text-xs sm:text-sm uppercase max-w-[299px] text-center block mx-auto font-semibold text-[#364E6B]">
+          <p className="text-xs mt-3 sm:text-md uppercase max-w-[299px] text-center block mx-auto font-semibold text-[#364E6B]">
             {staff.position}
           </p>
         </div>

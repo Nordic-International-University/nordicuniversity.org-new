@@ -71,16 +71,16 @@ const MainFooter = () => {
                     router.push(`/university/contacts?email=${inputText}`);
                   }
                 }}
-                className="flex items-center gap-2 mt-7"
+                className="flex max-sm:flex-col items-center gap-2 mt-7"
               >
                 <Input
                   onChange={(e) => setInputText(e.target.value)}
-                  className="rounded-sm py-2"
+                  className="rounded-sm py-2 max-sm:w-full"
                   placeholder="Mail@example.com"
                 />
                 <Button
                   htmlType="submit"
-                  className="bg-text_tertiary rounded py-4 px-8 text-text_secondary font-semibold"
+                  className="bg-text_tertiary max-sm:w-full rounded py-4 px-8 text-text_secondary font-semibold"
                   size="large"
                 >
                   {t("send")}

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Facebook, Linkedin, MessageCircle, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const bgClasses = {
   telegram: "bg-[#229ED9]",
@@ -26,6 +27,7 @@ type SocialCardProps = {
 
 const SocialCard = ({ icon: Icon, title, type }: SocialCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const t = useTranslations("socialMediaCard").raw;
 
   return (
     <div
@@ -38,7 +40,9 @@ const SocialCard = ({ icon: Icon, title, type }: SocialCardProps) => {
       <div className="p-4 h-full flex flex-col justify-between">
         <div className="flex items-center gap-3">
           <Icon className="h-8 w-8 text-white" />
-          <h2 className="text-sm font-semibold text-white truncate">{title}</h2>
+          <h2 className="text-sm font-semibold text-white truncate">
+            {t(`${type}.title`)}
+          </h2>
         </div>
         <div
           className={`transition-opacity duration-300 ease-in-out ${
@@ -48,7 +52,7 @@ const SocialCard = ({ icon: Icon, title, type }: SocialCardProps) => {
           <button
             className={`px-4 py-2 rounded-md text-xs font-medium transition-colors duration-200 ease-in-out bg-white ${textClasses[type]} hover:bg-opacity-90`}
           >
-            A'zo bo'lish
+            {t(`${type}.button`)}
           </button>
         </div>
       </div>
@@ -60,7 +64,7 @@ export default function SocialMediaCard({
   socialCards = [
     {
       icon: FaTelegram,
-      title: "Universitetning Telegram'dagi rasmiy kanalini kuzatib boring",
+      title: "Telegram kanalini kuzatib boring",
       type: "telegram",
     },
     {

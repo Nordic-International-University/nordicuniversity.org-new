@@ -20,12 +20,10 @@ const LeftSidebarAndComponent = ({
   const linkRefs = useRef<Array<HTMLLIElement | null>>([]);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  // Find active index
   const activeIndex = useMemo(() => {
     return sidebarItems.findIndex((item) => router.includes(item.url));
   }, [router, sidebarItems]);
 
-  // Use `useLayoutEffect` for animation
   useLayoutEffect(() => {
     if (contentRef.current) {
       gsap.fromTo(
@@ -38,8 +36,7 @@ const LeftSidebarAndComponent = ({
 
   return (
     <div className="flex mt-12 gap-6 items-start container justify-between">
-      {/* Sidebar */}
-      <ul className="min-w-[19%] max-lg:hidden flex flex-col gap-2.5 relative">
+      <ul className="w-[20%] max-lg:hidden flex flex-col gap-2.5 relative">
         {sidebarItems.map((item, index) => (
           <Link key={index} href={item.url} className="w-full">
             <div className="flex items-center">
@@ -57,8 +54,6 @@ const LeftSidebarAndComponent = ({
           </Link>
         ))}
       </ul>
-
-      {/* Main content */}
       <div className="w-4/5 max-lg:w-full">
         <div>
           <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-3">

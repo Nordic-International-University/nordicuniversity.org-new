@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { PiTelegramLogo } from "react-icons/pi";
 import { AiFillPrinter } from "react-icons/ai";
+import { useTranslations } from "next-intl";
 
 interface ShareModalProps {
   shareUrl: string;
@@ -21,12 +22,11 @@ interface ShareModalProps {
 
 export default function ShareModal({
   shareUrl,
-  buttonText = "Ulashish",
-  modalTitle = "Kontentni ulashing",
   platforms = ["facebook", "twitter", "telegram", "instagram"],
 }: ShareModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const t = useTranslations("shareModal");
 
   useEffect(() => {
     if (copied) {
@@ -82,22 +82,18 @@ export default function ShareModal({
         <button
           onClick={() => setIsOpen(true)}
           className="px-3 py-2 bg-gray-50 rounded-xl w-full hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center"
-          aria-label={buttonText}
+          aria-label={t("buttonText")}
         >
           <PiTelegramLogo className="mr-2 text-blue-600" />
-          {buttonText}
+          {t("buttonText")}
         </button>
         <div
           onClick={() => window.print()}
-          className="flex gap-2 w-full text-nowrap rounded-xl py-2 px-2 bg-gray-50 items-center"
+          className="px-3 py-2 bg-gray-50 rounded-xl cursor-pointer w-full hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center"
         >
-          <AiFillPrinter />
-          Chop etish
+          <AiFillPrinter className="mr-2" />
+          {t("print")}
         </div>
-        {/*<div className="flex gap-2 w-full rounded-xl py-2 px-2 bg-gray-50 items-center">*/}
-        {/*  <PiTelegramLogo />*/}
-        {/*  Uzatish*/}
-        {/*</div>*/}
       </div>
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -110,7 +106,7 @@ export default function ShareModal({
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  {modalTitle}
+                  {t("modalTitle")}
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -144,7 +140,7 @@ export default function ShareModal({
 
               {copied && (
                 <div className="text-green-500 text-sm mb-4 transition-opacity duration-300">
-                  Havola nusxalandi!
+                  {t("copied")}
                 </div>
               )}
 

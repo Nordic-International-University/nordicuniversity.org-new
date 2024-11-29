@@ -412,3 +412,7 @@ code{
     background-color: #5b7fab; /* Orqa tomoni */
     transform: rotateY(180deg); /* Orqa tomoni aylangan */
 }
+
+body{
+    overflow-y: hidden;
+}

@@ -18,9 +18,11 @@ import SearchModal from "@/app/components/UI/searchModal";
 import { BiCommand } from "react-icons/bi";
 import SearchInput from "@/app/components/main/searchInput";
 import SocialMedia from "@/app/components/UI/socialMedia";
+import { useTranslations } from "next-intl";
 
 const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
+  const t = useTranslations("nav");
   const [searchText, _] = useState("");
   const menuItems = useSelector(
     (state: RootState) => state.menuSlice.activeMenu,
@@ -105,7 +107,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
-                    YANA
+                    {t("more")}
                     <DownOutlined />
                   </Space>
                 </div>

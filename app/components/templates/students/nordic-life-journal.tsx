@@ -2,10 +2,12 @@ import { nordicLiveJournalProps } from "@/types/templates/nordiklieve.types";
 import Image from "next/image";
 import { Button, Modal } from "antd";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const NordicLifeJournal = ({ props }: { props: nordicLiveJournalProps[] }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pdfUrl, setPdfUrl] = useState<string>("");
+  const t = useTranslations("buttons");
 
   const handleOpenModal = (filePath: string) => {
     setPdfUrl(filePath);
@@ -19,12 +21,13 @@ const NordicLifeJournal = ({ props }: { props: nordicLiveJournalProps[] }) => {
 
   return (
     <article className="mt-10 mb-10">
-      <div className="grid grid-cols-3 max-md:grid-cols-2 gap-6 max-md:place-items-center">
+      <div className="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-6 max-md:place-items-center">
         {props.map((item, index) => (
           <div className="max-w-[300px]" key={index}>
             <Image
               width={300}
               height={500}
+              className="h-[420px] object-cover"
               src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
               alt={item.name}
             />
@@ -41,7 +44,7 @@ const NordicLifeJournal = ({ props }: { props: nordicLiveJournalProps[] }) => {
                   )
                 }
               >
-                O‘qish
+                {t("read")}
               </Button>
             </div>
           </div>

@@ -3,9 +3,11 @@ import { ForumPhoto } from "@/types/templates/nordiklieve.types";
 import Image from "next/image";
 import { Button } from "antd";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 const Partners = ({ props }: { props: ForumPhoto[] }) => {
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const t = useTranslations("buttons");
 
   useEffect(() => {
     gsap.fromTo(
@@ -48,7 +50,7 @@ const Partners = ({ props }: { props: ForumPhoto[] }) => {
                   className="px-6 w-full py-2 text-white bg-text_secondary hover:bg-tertiary rounded-lg transition duration-300"
                   type="primary"
                 >
-                  Ko‘rish
+                  {t("see")}
                 </Button>
               </div>
             </div>

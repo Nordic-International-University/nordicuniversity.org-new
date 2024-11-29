@@ -1,9 +1,12 @@
+"use client";
+
 import certificateImage from "@/public/images/education-image/certificate.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Certificate = () => {
   const t = useTranslations("education.certificate").raw;
+  const table = useTranslations("education.table").raw;
 
   return (
     <section>
@@ -30,32 +33,30 @@ const Certificate = () => {
                       align="center"
                       className="bg-[#5B9BD5] text-white px-2 text-lg font-semibold inter-regular -tracking-tighter"
                     >
-                      T/r
+                      {table("header.serial")}
                     </td>
                     <td
                       rowSpan={3}
                       align="center"
                       className="w-64 bg-[#5B9BD5] text-white text-lg font-semibold inter-regular -tracking-tighter"
                     >
-                      Sertifikat nomi
+                      {table("header.certificate_name")}
                     </td>
                     <td
                       colSpan={3}
                       align="center"
                       className="py-2 bg-[#5B9BD5] text-white text-lg font-semibold inter-regular -tracking-tighter"
                     >
-                      Muvofiqlik darajasi
+                      {table("header.conformity_level")}
                     </td>
                   </tr>
                   <tr>
                     <td
+                      dangerouslySetInnerHTML={{ __html: table("cefr") }}
                       colSpan={3}
                       className="py-2 text-black text-lg font-normal bg-[#D2DEEF] inter-regular -tracking-tighter"
                       align="center"
-                    >
-                      <strong>CEFR</strong> (Common European Framework of
-                      Reference)
-                    </td>
+                    ></td>
                   </tr>
                   <tr>
                     <td
@@ -113,7 +114,7 @@ const Certificate = () => {
                       align="center"
                       className="py-2.5 bg-[#EAEFF7] text-lg font-semibold inter-bold"
                     >
-                      INGLIZ TILI BO’YICHA
+                      {table("english_language")}
                     </td>
                   </tr>
                   <tr>
@@ -246,7 +247,7 @@ const Certificate = () => {
                       align="center"
                       className="py-2.5 bg-[#5B9BD5] text-lg text-white -tracking-tighter font-semibold inter-bold"
                     >
-                      FRANSUZ TILI BO’YICHA
+                      {table("french_language")}
                     </td>
                   </tr>
                   <tr>
@@ -343,7 +344,7 @@ const Certificate = () => {
                       align="center"
                       className="py-2.5 bg-[#EAEFF7] text-lg text-black -tracking-tighter font-semibold inter-bold"
                     >
-                      NEMIS TILI BO’YICHA
+                      {table("german_language")}
                     </td>
                   </tr>
                   <tr>

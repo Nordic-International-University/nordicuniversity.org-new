@@ -57,6 +57,14 @@ const Nav: FC = () => {
   };
 
   useEffect(() => {
+    if (openMenu) {
+      (document as any).querySelector("body").style.overflowY = "hidden";
+    } else {
+      (document as any).querySelector("body").style.overflowY = "auto";
+    }
+  });
+
+  useEffect(() => {
     if (activeSubItems && subItemsRef.current) {
       gsap.fromTo(
         subItemsRef.current.children,

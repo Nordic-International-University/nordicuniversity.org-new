@@ -56,7 +56,6 @@ const TutionFeesComponent = ({
               }}
             >
               {t(`degreeDirection.${item}`)}{" "}
-              {/* Tarjimasi uchun degreeDirection */}
             </Button>
           ))}
         </div>
@@ -78,7 +77,7 @@ const TutionFeesComponent = ({
                     refetched(false);
                   }}
                 >
-                  {t(`degrees.${degreeKey}`)} {/* Tarjimasi uchun degrees */}
+                  {t(`degrees.${degreeKey}`)}
                 </Button>
               ))}
             </div>
@@ -92,7 +91,6 @@ const TutionFeesComponent = ({
                   {selectedDegree
                     ? t(`degrees.${selectedDegree}`)
                     : t("select_degree")}{" "}
-                  {/* 'Dastur tanlang' deb tarjima qilish */}
                   <DownOutlined />
                 </Button>
               </Dropdown>
@@ -138,7 +136,12 @@ const TutionFeesComponent = ({
                     </p>
                     <div className="flex justify-center lg:block">
                       <Button
-                        className="bg-text_secondary text-white px-4 py-2 md:px-5 font-semibold rounded  "
+                        target="_blank"
+                        href={
+                          process.env.NEXT_PUBLIC_URL_BACKEND +
+                          program.curriculum.file_path
+                        }
+                        className="bg-text_secondary text-white px-4 py-2 md:px-5 font-semibold rounded"
                         type="primary"
                       >
                         {t("program_info.program_plan")}

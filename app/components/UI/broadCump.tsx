@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { ReactElement, useEffect } from "react";
 import Link from "next/link";
 import getCurrentLang from "@/app/helpers/getCurrentLang";
 import { useTranslations } from "next-intl";
@@ -13,7 +13,7 @@ import { gsap } from "gsap";
 const BroadCamp = ({
   items,
 }: {
-  items: { name: string; url: string | any }[][];
+  items: { name: string | ReactElement; url: string | any }[][];
 }) => {
   const t = useTranslations("university");
 
@@ -44,7 +44,7 @@ const BroadCamp = ({
       </Link>
 
       <Link
-        className="block max-sm:hidden max-sm:text-sm text-md"
+        className="block max-sm:hidden text-nowrap max-sm:text-sm text-md"
         href={`/${getCurrentLang()}`}
       >
         {t("document.main_menu")}
@@ -56,7 +56,7 @@ const BroadCamp = ({
         <React.Fragment key={index}>
           <Link
             href={item.url}
-            className={` max-sm:text-sm text-md hover:underline ${
+            className={` max-sm:text-sm  text-md hover:underline ${
               index === items[0].length - 1 ? "max-sm:hidden" : ""
             }`}
           >

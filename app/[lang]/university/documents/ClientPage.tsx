@@ -31,12 +31,12 @@ const ClientPage = ({ props }: any) => {
       children={
         <Litsenziya
           props={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data}
-          sectionTitle={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
+          sectionTitle={""}
         />
       }
       sidebarItems={subItemDocument}
       translationKey="university.document"
-      sidebarTitle="Meyoriy hujjatlar"
+      sidebarTitle={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
     ></LeftSidebarAndComponent>
   );
 };

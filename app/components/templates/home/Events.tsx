@@ -36,10 +36,10 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
     titleRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
-        { opacity: 0, x: -50 },
+        { opacity: 0, y: -50 },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
@@ -54,10 +54,10 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
     descriptionRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
-        { opacity: 0, x: 50 },
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {

@@ -39,8 +39,8 @@ const NewsSlider = ({
       <article
         className={`${monserrat.className} container max-lg:w-full max-lg:px-0`}
       >
-        <div className="flex items-center text-[#364E6B] justify-between container mb-10">
-          <h2 className="text-tertiary max-sm:text-lg font-semibold text-2xl text-center">
+        <div className="flex items-center text-[#364E6B] justify-center max-sm:justify-between container mb-10">
+          <h2 className="text-tertiary max-sm:text-lg font-semibold text-2xl  text-center">
             {sectionTitle}
           </h2>
           <div className=" max-sm:flex hidden items-center gap-2 text-sm">

@@ -8,6 +8,41 @@ import Events from "@/app/components/templates/home/Events";
 import Hero from "@/app/components/main/Hero";
 import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Xalqaro nordik Universiteti",
+  description:
+    "Nordik Universiteti rasmiy veb-sahifasi. Universitetimiz haqida barcha yangiliklar, tadqiqotlar, ilmiy ishlanmalar, va boshqa yangiliklar haqida ma'lumot oling.",
+  keywords: [
+    "Nordik universiteti",
+    "ta'lim",
+    "ilmiy tadqiqotlar",
+    "yangi texnologiyalar",
+    "talabalar",
+    "yurtimiz",
+    "o'qish",
+    "oliy ta'lim",
+    "onlayn ta'lim",
+    "ilmiy konferensiyalar",
+    "rivojlanish",
+  ],
+
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  openGraph: {
+    title: "Xalqaro nordik Universiteti",
+    description: "Nordik Universiteti bosh sahifasi",
+    url: "https://nordicuniversity.org/",
+    locale: "uz_UZ",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "https://nordicuniversity.org/",
+    title: "Nordik Universiteti – O'qish va Tadqiqotlar",
+    description: "Nordik Universiteti bosh sahifasi",
+  },
+};
 
 const getHome = async (lang: string) => {
   const response = await fetch(
