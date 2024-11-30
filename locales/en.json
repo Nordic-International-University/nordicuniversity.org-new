@@ -1,11 +1,61 @@
 {
+  "socialMediaCard": {
+    "telegram": {
+      "title": "Follow the official channel on Telegram",
+      "button": "Subscribe"
+    },
+    "youtube": {
+      "title": "Subscribe to our YouTube channel",
+      "button": "Subscribe"
+    },
+    "facebook": {
+      "title": "Follow our page on Facebook",
+      "button": "Subscribe"
+    },
+    "linkedin": {
+      "title": "Connect with our LinkedIn profile",
+      "button": "Subscribe"
+    }
+  },
+  "shareModal": {
+    "buttonText": "Share",
+    "modalTitle": "Share Content",
+    "copyLink": "Copy Link",
+    "copied": "Link copied!",
+    "close": "Close",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "print": "Print"
+  },
+  "other": {
+    "all": "View All"
+  },
+  "nav": {
+    "more": "MORE"
+  },
+  "menu": {
+    "university": "University",
+    "admission": "Admission",
+    "education": "Education",
+    "science": "Science",
+    "partnership": "Partnership",
+    "students": "For Students",
+    "press": "Press Service"
+  },
   "university": {
     "document": {
       "section_title": "Regulatory Documents",
       "main_menu": "Home",
       "university": "University",
+      "buttons": {
+        "CHARTER": "Charter",
+        "LICENSE": "License",
+        "CERTIFICATE": "Certificate"
+      },
       "subItems": [
-        " Advantages",
+        "University Advantages",
         "Regulatory Documents",
         "Organizational Structure",
         "Requisites",
@@ -15,13 +65,18 @@
     "advantages": {
       "section_title": "University Advantages",
       "cardTitle": [
-        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively.",
-        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively.",
-        "<strong>Modern Educational Programs</strong>: Our university offers <strong>modern educational programs based on the latest scientific research and industry needs.</strong> Our programs <strong>combine theoretical knowledge with practical skills,</strong> preparing graduates to enter the job market quickly and effectively."
+        "<strong>International Level Diploma</strong>: Our graduates receive diplomas recognized in Uzbekistan and Europe.",
+        "<strong>Qualified Professors</strong>: Selected professors from local and European universities teach our students.",
+        "<strong>Grants</strong>: The university offers 100% and 50% grants.",
+        "<strong>Overseas Study Programs</strong>: The university provides students with opportunities to participate in study programs organized in Finland.",
+        "<strong>Double Degree</strong>: Nordik University offers double and joint degree programs in collaboration with Karelia University of Applied Sciences, Finland.",
+        "<strong>Work & Travel</strong>: The university enables students to work in Europe during summer breaks to earn tuition fees."
       ]
     },
     "structure": {
-
+      "sectionName": "Organizational Structure",
+      "task": "Tasks",
+      "employees": "Employees"
     },
     "requisites": {
       "sectionName": "Requisites",
@@ -32,19 +87,19 @@
           "info": "Information"
         },
         "data": {
-          "0": "<<INTERNATIONAL NORDIC UNIVERSITY>> LLC",
-          "1": "Tashkent city, Olmazor district, Farobi street, building 290",
-          "2": "Tashkent city, Chilonzor district, <E> block, Bunyodkor street, building 8/2",
+          "0": "<<INTERNATIONAL NORDIK UNIVERSITY>> LLC",
+          "1": "Tashkent City, Olmazor District, Farobi Street, 290",
+          "2": "Tashkent City, Chilanzar District, <E> kv, Bunyodkor Street, 8/2",
           "3": "(55) 508-44-00",
           "4": "2020 8000 9055 2506 1001",
-          "5": "<Ipak yo'li> Bank, Sag'bon branch",
+          "5": "<Silk Road> Bank, Sagbon Branch",
           "6": "01036",
           "7": "309533058",
           "8": "85420",
           "9": "info@nordicuniversity.org"
         },
         "fieldNames": {
-          "officialAddress": "Our Official Address",
+          "officialAddress": "Official Address",
           "address": "Address",
           "phoneNumber": "Phone Number",
           "accountNumber": "Account Number",
@@ -52,9 +107,284 @@
           "mfo": "MFO",
           "tin": "TIN",
           "ifut": "IFUT",
-          "email": "EMAIL"
+          "email": "Email"
         }
       }
+    },
+    "contacts": {
+      "sectionTitle": "Contact Us",
+      "labels": {
+        "surname": "Last Name",
+        "contactUs": "Contacts",
+        "name": "First Name",
+        "yourPhone": "Your Phone Number",
+        "yourEmail": "Your Email Address",
+        "yourMessage": "Your Message",
+        "workingHours": "Reception Hours",
+        "send": "Send"
+      },
+      "phoneNumbers": {
+        "main": "+998 55 508 44 00",
+        "secondary": "+998 95 505 33 00"
+      },
+      "map": "Search on Map",
+      "email": "info@nordicuniversity.org",
+      "hours": "Monday - Friday | 09:00 - 19:00"
     }
+  },
+  "research": {
+    "title": "Science",
+    "subItems": [
+      "Scientific E-Journal",
+      "Scientific Events",
+      "Scientific Conferences",
+      "Tasimo Olympiad"
+    ],
+    "eJournal": {
+      "button": "Visit this site to submit articles!",
+      "sectionTitle": "Scientific E-Journal",
+      "description": "Scientific and practical e-journal \"<strong>Nordic</strong>\"\nThe International Nordik University has received the right to publish the scientific and practical e-journal \"Nordic\" based on Certificate No. 057211 of the Agency of Information and Mass Communications under the Presidential Administration of the Republic of Uzbekistan. Articles are published in Uzbek, Russian, English, and Finnish languages. <br/> <br/> The Nordic scientific and practical e-journal operates with the ISSN-3030-3400 international standard.",
+      "davr": "Journal frequency: 5 issues per year <br/><br/> Founder: International Nordik University <br/><br/> Publication date: 15th of every second month.",
+      "body": "The primary goal of the journal is to publish and disseminate scientific research and results conducted by professors, master's degree students, and undergraduates."
+    },
+    "scinceEvent": {
+      "breadcrumb": {
+        "event": "Scientific Event",
+        "scientific_events": "Scientific Events",
+        "last": "Latest Events"
+      },
+      "events": {
+        "upcoming": "Upcoming Events",
+        "past": "Past Events"
+      }
+    },
+    "scienceConferences": {
+      "breadcrumb": {
+        "scientific_conferences": "Scientific Conferences",
+        "last": "Latest Conferences"
+      },
+      "conferences": {
+        "upcoming": "Upcoming Conferences",
+        "past": "Past Conferences"
+      }
+    },
+    "tasimoOlympiad": {
+      "breadcrumb": {
+        "tasimo_olympiad": "Tasimo Olympiad"
+      },
+      "tasimo_olympiad": {
+        "description": "This Olympiad is conducted among students of general secondary schools, academic lyceums, and vocational schools in three stages: regional selection, republican, and international levels."
+      }
+    }
+  },
+  "admission": {
+    "subItems": [
+      "Admission Process",
+      "Frequently Asked Questions",
+      "Tuition Fees for Educational Programs"
+    ],
+    "title": "Admission",
+    "admission_process": {
+      "sectionTitle": "Admission Process",
+      "description": "The team of the International Nordik University, imbued with boundless curiosity and a passion for learning, values <strong>analytical thinking, innovation, problem-solving</strong>, and <strong>openness to new ideas</strong>.",
+      "body": "Encouraging, supportive, and joyful, the International Nordik University becomes a second home for many students.",
+      "button": "Register"
+    },
+    "degree_price": {
+      "sectionTitle": "Tuition Fees for Educational Programs",
+      "degrees": {
+        "FULL_TIME": "FULL-TIME",
+        "PART_TIME": "PART-TIME",
+        "DISTANCE": "SPECIAL PART-TIME",
+        "DOCTORATE": "Doctorate"
+      },
+      "degreeDirection": {
+        "BACHELOR": "Bachelor's",
+        "MASTER": "Master's",
+        "DOCTORATE": "Doctorate"
+      },
+      "select_degree": "Select Program",
+      "program_info": {
+        "contract": "Tuition Fee",
+        "duration": "Duration",
+        "language": "Language of Instruction",
+        "program_plan": "Study Plan"
+      }
+    }
+  },
+  "education": {
+    "subItems": [
+      "Education Levels",
+      "Educational Resources",
+      "Foreign Language Proficiency Certificate",
+      "Fields of Study"
+    ],
+    "title": "Education",
+    "description": "Information about the certificate",
+    "table": {
+      "header": {
+        "serial": "#",
+        "certificate_name": "Certificate Name",
+        "conformity_level": "Conformity Level"
+      },
+      "degree": {
+        "B2": "B2",
+        "C1": "C1",
+        "C2": "C2"
+      },
+      "cefr": "<strong>CEFR</strong> (Common European Framework of Reference for Languages)",
+      "english_language": "FOR ENGLISH",
+      "french_language": "FOR FRENCH",
+      "german_language": "FOR GERMAN",
+      "ielts": "IELTS",
+      "toefl_ibt": "TOEFL iBT",
+      "toefl_itp": "TOEFL ITP",
+      "cambridge_assessment": "Cambridge Assessment English Linguaskill",
+      "delf": "DELF",
+      "dalf": "DALF",
+      "tcf": "TCF",
+      "goethe_cert": "GOETHE-ZERTIFIKAT",
+      "german_diploma": "Deutsches Sprachdiplom (DSD II)",
+      "description_bold": "The team of the International Nordik University, imbued with boundless curiosity and a passion for learning, values <em>analytical thinking, innovation, problem-solving</em>, and <em>openness to new ideas</em>.",
+      "body": "The International Nordik University becomes a second home for many students, providing support, encouragement, and joy."
+    },
+    "buttons": {
+      "register": "Register"
+    },
+    "educationLevels": {
+      "sectionTitle": "Education Levels",
+      "breadcrumb": "Education",
+      "overview": {
+        "title": "Faculties, Departments, and Offices",
+        "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices.",
+        "bachelor": "Bachelor's: <strong>19</strong> fields.",
+        "master": "Master's: <strong>13</strong> fields.",
+        "doctorate": "Doctorate: <strong>6</strong> fields.",
+        "demand": "All our fields of study are in high demand in various sectors."
+      },
+      "levels": [
+        {
+          "name": "Bachelor's",
+          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+        },
+        {
+          "name": "Master's",
+          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+        },
+        {
+          "name": "Doctorate",
+          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+        }
+      ]
+    },
+    "certificate": {
+      "sectionTitle": "Foreign Language Proficiency Certificate",
+      "description": "<strong>MASTER'S</strong> and <strong>POSTGRADUATE EDUCATION</strong> require national or internationally recognized <strong>foreign language proficiency certificates</strong>."
+    },
+    "recourse": {
+      "sectionTitle": "Educational Resources"
+    }
+  },
+  "partners": {
+    "title": "Partners",
+    "subItems": [
+      "International Partnerships",
+      "International Scholarships and Internships",
+      "International Forums and Projects",
+      "Photo Albums of International Meetings"
+    ],
+    "connections": {
+      "last": "Latest",
+      "sectionTitle": "International Partnerships",
+      "past": "Past Events",
+      "future": "Upcoming Events"
+    },
+    "scholarships_and_internships": {
+      "sectionTitle": "International Scholarships and Internships"
+    },
+    "forums": {
+      "sectionTitle": "International Forums and Projects"
+    },
+    "formAlbums": {
+      "sectionTitle": "Photo Albums of International Meetings",
+      "album": "Photo Album"
+    }
+  },
+  "student": {
+    "title": "For Students",
+    "subItems": [
+      "Work and Travel Program",
+      "Exam Processes",
+      "Nordik Life Journal",
+      "Student Codes and Manuals",
+      "Photo Album"
+    ],
+    "Work_and_travel": {
+      "sectionTitle": "Work and Travel Process",
+      "description": "The <strong>\"Work and Travel\"</strong> program of the International Nordik University allows you to combine education and work.<br><br>\n    By studying and working in advanced countries like <strong>Finland</strong>, our students can gain practical experience and enhance their professional skills.<br><br>\n    Moreover, <strong>this program</strong> offers the opportunity to explore different parts of Europe.<br><br>\n    The <strong>\"Work and Travel\"</strong> program not only aids in career development but also broadens the <strong>worldview of our students</strong>.",
+      "body": "We are ready to assist you in enriching your educational and work experience."
+    },
+    "exam": {
+      "sectionTitle": "Exam Processes",
+      "exam_room_equipment": "Our exams are conducted in <strong>state-of-the-art computer rooms</strong> equipped with the <strong>latest technology</strong>.",
+      "student_computer_rooms": "With nearly <strong>400</strong> modern <strong>computers</strong>, our exam rooms provide a continuous and <strong>comfortable environment</strong>.",
+      "fair_exam_process": "To ensure a <strong>fair</strong> and <strong>transparent</strong> exam process, <strong>qualified proctors</strong> and <strong>special task groups</strong> have been formed.",
+      "hemis_platform": "All exams are conducted through the <strong>HEMIS platform</strong>, enabling our students to receive results quickly and accurately.",
+      "university_commitment": "The International Nordik University strives to ensure the <strong>efficiency</strong> and <strong>fairness</strong> of exams to accurately evaluate the <strong>knowledge</strong> and <strong>skills</strong> of students.",
+      "future_success_focus": "Our exam process is aimed at laying the foundation for the future success of students.",
+      "exam_process_organization": "The International Nordik University pays special attention to the high level of organization of the exam process."
+    },
+    "nordik_life": {
+      "sectionTitle": "Nordik Life Journal"
+    },
+    "CodesAndManuals": {
+      "sectionTitle": "Student Codes and Manuals",
+      "CODES": "Code",
+      "MANUALS": "Manual"
+    },
+    "albums": {
+      "sectionTitle": "Photo Album"
+    }
+  },
+  "press-service": {
+    "subItems": [
+      "News",
+      "Press Releases",
+      "Nordik Podcasts",
+      "Nordik Trends"
+    ],
+    "title": "Press Service",
+    "news": {
+      "sectionTitle": "News",
+      "button": "Learn More..."
+    },
+    "Press_releases": {
+      "sectionTitle": "Press Releases"
+    }
+  },
+  "footer": {
+    "phone": "Phone",
+    "email": "Email",
+    "excellence_in_teaching": "Striving for Excellence in Education",
+    "send": "Send",
+    "university_name": "International Nordik University 2024",
+    "rights_reserved": "All rights reserved",
+    "site_developers": "Site developers: IT Department"
+  },
+  "search": {
+    "searchText": "Search",
+    "data": "No Data Found"
+  },
+  "buttons": {
+    "detail": "Learn More...",
+    "see_all": "View All",
+    "see": "See",
+    "read": "Read"
+  },
+  "noDataComponent": {
+    "title": "No Data Available",
+    "message": "Unfortunately, the requested information was not found or is unavailable.",
+    "retryMessage": "Please try again later or submit a different request."
   }
 }
+
