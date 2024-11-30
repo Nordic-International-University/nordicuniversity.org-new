@@ -55,7 +55,6 @@ const Contacts = ({ props }: { props: ContactInfo | any }) => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  console.log(props);
   return (
     <article className="mt-12 mb-4">
       <div className="flex items-start max-lg:flex-col justify-between gap-10">
