@@ -22,7 +22,7 @@ const TutionFeesComponent = ({
   const menu = (
     <Menu
       onClick={(item: any) => {
-        setSelectedDegree(item);
+        setSelectedDegree(item.key);
         refetched(false);
       }}
     >
@@ -73,6 +73,7 @@ const TutionFeesComponent = ({
                   size="large"
                   key={degreeKey}
                   onClick={() => {
+                    console.log("bosildi");
                     setSelectedDegree(degreeKey);
                     refetched(false);
                   }}

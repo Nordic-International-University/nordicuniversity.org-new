@@ -30,7 +30,7 @@ const ClientPage = ({ data }: { data: any }) => {
       broadCampItems={brodCmbItems}
       children={<Faq data={data.data} />}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("admission_process.sectionTitle")}
+      sidebarTitle={t("subItems.1")}
     ></LeftSidebarAndComponent>
   );
 };

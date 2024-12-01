@@ -65,7 +65,9 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
                 <p className="text-gray-600 line-clamp-4 max-sm:text-sm">
                   {item.description}
                 </p>
-                <p className="text-gray-600 max-sm:text-sm">{item.hashtags}</p>
+                <p className="text-gray-600 max-sm:text-sm mt-3 font-semibold tracking-widest">
+                  {item.hashtags}
+                </p>
               </div>
               <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
                 <FaClock />

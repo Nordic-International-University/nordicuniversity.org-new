@@ -13,6 +13,89 @@ import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}) => {
+  const lang = await getCurrentLangServer();
+  const news = await getNewsBySlug(params.slug, lang);
+
+  if (!news) {
+    return {
+      title: "Yangiliklar - Xalqaro Nordik Universiteti",
+      description:
+        "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
+      openGraph: {
+        title: "Yangiliklar - Xalqaro Nordik Universiteti",
+        description:
+          "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
+        url: `https://nordicuniversity.org/${lang}/press-service/news`,
+        type: "website",
+        images: [
+          {
+            url: "https://nordicuniversity.org/images/default-news.jpg", // Default image
+            alt: "Yangiliklar sahifasi",
+          },
+        ],
+      },
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Yangiliklar - Xalqaro Nordik Universiteti",
+        description:
+          "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
+      },
+    };
+  }
+
+  return {
+    title: `${news.title} - Xalqaro Nordik Universiteti`,
+    description: news.description || "Yangilik haqida batafsil ma'lumot oling.",
+    keywords: [
+      "Yangiliklar",
+      "Xalqaro Nordik Universiteti",
+      news.title,
+      "Tadqiqotlar",
+      "Ilmiy yangiliklar",
+    ],
+    openGraph: {
+      title: `${news.title} - Xalqaro Nordik Universiteti`,
+      description:
+        news.description || "Yangilik haqida batafsil ma'lumot oling.",
+      url: `https://nordicuniversity.org/${lang}/press-service/news/${params.slug}`,
+      type: "article",
+      images: [
+        {
+          url: process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path,
+          alt: news.title,
+        },
+      ],
+    },
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: news.title,
+      description: news.description,
+      datePublished: news.createdAt,
+      dateModified: news.updatedAt,
+      author: {
+        "@type": "Organization",
+        name: "Xalqaro Nordik Universiteti",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Xalqaro Nordik Universiteti",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://nordicuniversity.org/logo.png",
+        },
+      },
+      image: process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path,
+    },
+  };
+};
+
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
 

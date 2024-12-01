@@ -32,7 +32,6 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
     await getCurrentLangServer(),
     staffData.type,
   );
-  console.log(staffData);
 
   const breadcrumbItems = [
     {

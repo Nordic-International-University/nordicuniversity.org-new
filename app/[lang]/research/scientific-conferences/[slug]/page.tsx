@@ -1,4 +1,3 @@
-import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import BroadCamp from "@/app/components/UI/broadCump";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
@@ -8,7 +7,6 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-import { getEventBySlug } from "@/app/[lang]/research/scientific-conferences/[slug]/getNewsBySlug";
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { ScientificEvent } from "@/types/research/scince_events";
@@ -20,6 +18,86 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+
+import { getEventBySlug } from "@/app/[lang]/research/scientific-conferences/[slug]/getNewsBySlug";
+import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}) => {
+  const lang = await getCurrentLangServer();
+  const event = await getEventBySlug(params.slug, lang);
+
+  if (!event) {
+    return {
+      title: "Ilmiy Konferensiyalar - Xalqaro Nordik Universiteti",
+      description:
+        "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida to‘liq ma’lumot. Ilmiy izlanishlar va tadqiqotlar natijalarini taqdim etish uchun eng yaxshi platforma.",
+      openGraph: {
+        title: "Ilmiy Konferensiyalar - Xalqaro Nordik Universiteti",
+        description:
+          "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida to‘liq ma’lumot. Ilmiy izlanishlar va tadqiqotlar natijalarini taqdim etish uchun eng yaxshi platforma.",
+        url: `https://nordicuniversity.org/${lang}/research/scientific-conferences`,
+        type: "website",
+        images: [
+          {
+            url: "https://nordicuniversity.org/images/scientific-conferences.jpg",
+            alt: "Ilmiy Konferensiyalar sahifasi",
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: `${event.name} - Ilmiy Konferensiya - Xalqaro Nordik Universiteti`,
+    description:
+      event.description ||
+      "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma’lumot oling.",
+    keywords: [
+      "Ilmiy konferensiyalar",
+      "Xalqaro Nordik Universiteti",
+      "Tadqiqot va izlanishlar",
+      "Innovatsion loyihalar",
+      event.name,
+      "Ilmiy seminarlar",
+      "Ilmiy yutuqlar",
+    ],
+    openGraph: {
+      title: `${event.name} - Ilmiy Konferensiya - Xalqaro Nordik Universiteti`,
+      description:
+        event.description ||
+        "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma’lumot oling.",
+      url: `https://nordicuniversity.org/${lang}/research/scientific-conferences/${params.slug}`,
+      type: "article",
+      images: [
+        {
+          url: process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path,
+          alt: event.name,
+        },
+      ],
+    },
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: event.name,
+      description: event.description,
+      startDate: event.time,
+      location: {
+        "@type": "Place",
+        name: "Xalqaro Nordik Universiteti",
+      },
+      image: process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path,
+      organizer: {
+        "@type": "Organization",
+        name: "Xalqaro Nordik Universiteti",
+        url: "https://nordicuniversity.org",
+      },
+    },
+  };
+};
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();

@@ -195,7 +195,7 @@
       "degrees": {
         "FULL_TIME": "KUNDUZGI",
         "PART_TIME": "SIRTQI",
-        "DISTANCE": "MAXSUS SIRTQI",
+        "SPECIAL_PART_TIME": "MAXSUS SIRTQI",
         "DOCTORATE": "Doktarantura"
       },
       "degreeDirection": {
@@ -279,7 +279,8 @@
     },
     "certificate": {
       "sectionTitle": "Xorijiy tillarni bilish sertifikati",
-      "description": "<strong>MAGISTRATURA</strong> mutaxassisliklariga hamda <strong>OLIY TA'LIMDAN KEYINGI TA'LIM</strong> ixtisosliklariga talab etiladigan <strong>XORIJIY TILLARNI BILISH DARAJASI</strong>ni baholovchi milliy\nva xalqaro tan olingan <strong>SERTIFIKATLAR RO'YXATI</strong>"
+      "description": "<strong>MAGISTRATURA</strong> mutaxassisliklariga hamda <strong>OLIY TA'LIMDAN KEYINGI TA'LIM</strong> ixtisosliklariga talab etiladigan <strong>XORIJIY TILLARNI BILISH DARAJASI</strong>ni baholovchi milliy\nva xalqaro tan olingan <strong>SERTIFIKATLAR RO'YXATI</strong>",
+      "certificate_type":"Milliy sertifikat"
     },
     "recourse": {
       "sectionTitle": "Ta’lim resurslari"

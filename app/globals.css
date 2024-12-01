@@ -11,18 +11,16 @@
 }
 
 @media print {
-    /* Hide everything by default */
+
     body * {
         visibility: hidden;
     }
 
-    /* Make the printable area visible */
     #printable,
     #printable * {
         visibility: visible;
     }
 
-    /* Ensure the printable content takes up the full width */
     #printable {
         position: absolute;
         top: 0;
@@ -32,7 +30,6 @@
         background-color: white;
     }
 
-    /* Remove unnecessary spacing */
     #printable h1,
     #printable h2,
     #printable h3,
@@ -41,7 +38,6 @@
         padding: 0;
     }
 
-    /* Adjust typography for readability */
     #printable h1 {
         font-size: 24px;
         font-weight: bold;
@@ -59,7 +55,6 @@
         line-height: 1.6;
     }
 
-    /* Ensure images are responsive */
     #printable img {
         max-width: 100%;
         height: auto;
@@ -67,7 +62,6 @@
         margin: 0 auto;
     }
 
-    /* Center text for metadata like date and views */
     #printable .metadata {
         text-align: center;
         font-size: 14px;
@@ -76,30 +70,25 @@
         margin-bottom: 16px;
     }
 
-    /* Remove interactive elements (e.g., buttons, links) */
     button,
     a {
         display: none !important;
     }
 
-    /* Hide sidebars or non-essential areas */
     .sidebar,
     .footer,
     .header {
         display: none !important;
     }
 
-    /* Remove box shadows for cleaner print */
     #printable * {
         box-shadow: none !important;
     }
 
-    /* Ensure content doesn't break awkwardly between pages */
     #printable {
         page-break-inside: avoid;
     }
 
-    /* Avoid breaking images and sections */
     img,
     h1,
     h2,
@@ -108,8 +97,6 @@
         page-break-inside: avoid;
         page-break-after: auto;
     }
-
-    /* Print header and footer for pages (optional) */
     @page {
         margin: 1cm;
     }
@@ -137,8 +124,8 @@
 .slider-column {
     position: relative;
     overflow: hidden;
-    height: 100px; /* Adjust based on your image size */
-    width: 150px;  /* Adjust based on your image size */
+    height: 100px;
+    width: 150px;
 }
 
 .slide {
@@ -199,7 +186,6 @@ table td {
     }
 }
 
-/* Slide in from the left */
 .slide-in-left {
     animation: slideInLeft 0.4s ease forwards;
 }
@@ -215,7 +201,6 @@ table td {
     }
 }
 
-/* X-Flip animatsiyasi uchun asosiy keyframes */
 @keyframes x-flip {
     0% {
         transform: rotateX(0);
@@ -225,12 +210,10 @@ table td {
     }
 }
 
-/* Perspektivani belgilash */
 .card-container {
     perspective: 1000px;
 }
 
-/* Karta uchun asosiy xossalar */
 .x-flip-card {
     position: relative;
     width: 100%;
@@ -239,18 +222,16 @@ table td {
     transition: transform 0.5s ease;
 }
 
-/* Hoverda aylanish */
 .x-flip-card:hover {
     transform: rotateX(180deg);
 }
 
-/* Old tomonning xossalari */
 .card-front,
 .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Qaltiramani oldini olish */
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -353,7 +334,6 @@ table td {
 }
 
 
-/* none of this CSS is relevant to the wave animation */
 :root{
     --clr-bg: #222;
     --clr-txt: #F5F5F5;
@@ -376,10 +356,8 @@ code{
     padding-inline: .25rem;
     border-radius: 5px;
 }
-
-/* Flip Card Asosiy Stili */
 .flip-card {
-    perspective: 1000px; /* Uch o'lchovli ko'rinish */
+    perspective: 1000px;
     position: relative;
 }
 
@@ -387,12 +365,12 @@ code{
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* Uch o'lchamni saqlash */
+    transform-style: preserve-3d;
     transition: transform 0.6s;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Hover qilinganda aylanish */
+    transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -400,19 +378,55 @@ code{
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Orqa qismini yashirish */
+    backface-visibility: hidden;
     border-radius: 8px;
 }
 
 .flip-card-front {
-    background-color: #789fce21; /* Old tomoni */
+    background-color: #789fce21;
 }
 
 .flip-card-back {
-    background-color: #5b7fab; /* Orqa tomoni */
-    transform: rotateY(180deg); /* Orqa tomoni aylangan */
+    background-color: #5b7fab;
+    transform: rotateY(180deg);
 }
 
 body{
     overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Scrollbarning uzini */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+* {
+    box-sizing: border-box; /* Elementlarning o'lchamlari 100% ichida bo'lishini ta'minlash */
+}
+
+html, body {
+    overflow-x: hidden; /* Gorizontal scrollni to'liq to'xtatish */
+    margin: 0;
+    padding: 0;
+}
+ section, aside {
+
+    overflow-x: hidden;
 }

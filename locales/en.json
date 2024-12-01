@@ -279,7 +279,8 @@
     },
     "certificate": {
       "sectionTitle": "Foreign Language Proficiency Certificate",
-      "description": "<strong>MASTER'S</strong> and <strong>POSTGRADUATE EDUCATION</strong> require national or internationally recognized <strong>foreign language proficiency certificates</strong>."
+      "description": "<strong>MASTER'S</strong> and <strong>POSTGRADUATE EDUCATION</strong> require national or internationally recognized <strong>foreign language proficiency certificates</strong>.",
+      "certificate_type":"National certificate"
     },
     "recourse": {
       "sectionTitle": "Educational Resources"

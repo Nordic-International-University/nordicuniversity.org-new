@@ -87,7 +87,7 @@ const Certificate = () => {
                       align="center"
                       className="text-lg font-normal bg-[#D2DEEF] inter-regular"
                     >
-                      Milliy sertifikat
+                      {t("certificate_type")}
                     </td>
                     <td
                       className="py-2 text-lg font-normal inter-regular bg-[#D2DEEF]"

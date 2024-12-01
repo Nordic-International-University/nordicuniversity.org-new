@@ -1,10 +1,3 @@
-export interface newsSliderProps {
-  image: any;
-  subTitle: string;
-  description: string;
-  date: string;
-}
-
 export interface NewsItem {
   id: string;
   image_id: string;

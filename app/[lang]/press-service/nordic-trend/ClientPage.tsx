@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
-import CustomPagination from "@/app/components/UI/custom.pagination";
 import {
   getALlTrends,
   VideoResponse,

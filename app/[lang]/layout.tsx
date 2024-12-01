@@ -9,11 +9,11 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { StoreProvider } from "@/app/utils/provider/storeProvider";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ConfigProvider } from "antd";
 import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
+import AccessibilityDrawer from "@/app/components/UI/acessibility";
 
 const getAllResources = async () => {
   const response = await fetch(
@@ -37,7 +37,10 @@ const getAllNetworks = async () => {
   return json;
 };
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Nordic - University",
@@ -77,7 +80,6 @@ export default async function RootLayout({
               <TopNav props={resources} networks={networks.data} />
               <Nav />
               <main className="flex-grow">{children}</main>
-              <SpeedInsights />
               <MainFooter />
             </StoreProvider>
           </ConfigProvider>

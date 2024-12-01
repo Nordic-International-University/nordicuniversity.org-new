@@ -21,6 +21,65 @@ import {
 } from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}) => {
+  const lang = await getCurrentLangServer();
+  const event = await getEventBySlug(params.slug, lang);
+
+  if (!event) {
+    return {
+      title: "Ilmiy tadbirlar - Xalqaro Nordik Universiteti",
+      description:
+        "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to‘liq ma’lumot. Ilmiy izlanishlar natijalarini baham ko‘rish uchun eng yaxshi maydon.",
+      openGraph: {
+        title: "Ilmiy tadbirlar - Xalqaro Nordik Universiteti",
+        description:
+          "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to‘liq ma’lumot. Ilmiy izlanishlar natijalarini baham ko‘rish uchun eng yaxshi maydon.",
+        url: `https://nordicuniversity.org/${lang}/research/scientific-events`,
+        type: "website",
+        images: [
+          {
+            url: "https://nordicuniversity.org/images/scientific-events.jpg",
+            alt: "Ilmiy tadbir sahifasi",
+          },
+        ],
+      },
+    };
+  }
+
+  return {
+    title: `${event.name} - Ilmiy tadbir - Xalqaro Nordik Universiteti`,
+    description:
+      event.description ||
+      "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
+    keywords: [
+      "Ilmiy tadbir",
+      "Xalqaro Nordik Universiteti",
+      "Ilmiy izlanishlar",
+      "Tadqiqot va rivojlanish",
+      "Innovatsion tadbirlar",
+      event.name,
+    ],
+    openGraph: {
+      title: `${event.name} - Ilmiy tadbir - Xalqaro Nordik Universiteti`,
+      description:
+        event.description ||
+        "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
+      url: `https://nordicuniversity.org/${lang}/research/scientific-events/${params.slug}`,
+      type: "article",
+      images: [
+        {
+          url: process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path,
+          alt: event.name,
+        },
+      ],
+    },
+  };
+};
+
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
 
