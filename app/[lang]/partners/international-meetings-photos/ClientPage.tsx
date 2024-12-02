@@ -36,11 +36,11 @@ const ClientPage = ({ props }: { props: nordicLife<ForumPhoto> }) => {
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/partners/connections",
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/partners/international-meetings-photos",
       name: t("formAlbums.sectionTitle"),
     },
   ];

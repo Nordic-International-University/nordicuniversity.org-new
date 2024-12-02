@@ -42,8 +42,8 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
     <article className="mt-10 mb-10" ref={containerRef}>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7">
         {props.map((item, index) => (
-          <div
-            // href={"/press-service/releases/" + item.slug}
+          <Link
+            href={`/press-service/releases/${item.slug}`}
             key={index}
             className="flip-card w-full h-[200px]"
           >
@@ -86,7 +86,7 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </article>

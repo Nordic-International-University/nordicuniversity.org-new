@@ -16,11 +16,11 @@ const ClientPage = ({ data }: any) => {
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/education/level",
       name: t("educationLevels.breadcrumb"),
     },
     {
-      url: "/university/documents",
+      url: "/education/resources",
       name: t("recourse.sectionTitle"),
     },
   ];

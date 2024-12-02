@@ -43,11 +43,11 @@ const ClientPage = ({
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/press-service/",
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/partners/connections",
       name: t("news.sectionTitle"),
     },
   ];

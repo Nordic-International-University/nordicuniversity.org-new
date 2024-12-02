@@ -40,11 +40,11 @@ const ClientPage = ({ initialData }: any) => {
 
   const brodCmbItems = [
     {
-      url: "",
+      url: "/partners/connections",
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/partners/scholarships-and-internships",
       name: t("scholarships_and_internships.sectionTitle"),
     },
   ];

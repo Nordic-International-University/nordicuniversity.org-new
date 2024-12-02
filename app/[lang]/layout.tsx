@@ -80,6 +80,7 @@ export default async function RootLayout({
               <TopNav props={resources} networks={networks.data} />
               <Nav />
               <main className="flex-grow">{children}</main>
+              {/*<AccessibilityDrawer />*/}
               <MainFooter />
             </StoreProvider>
           </ConfigProvider>
