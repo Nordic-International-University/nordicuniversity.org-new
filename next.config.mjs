@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/webmail/:path*",
-        destination: "https://webmail.nordicuniversity.org/:path*",
+        destination: "https://webmail.nordicuniversity.org/webmail",
       },
     ];
   },
