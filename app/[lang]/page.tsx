@@ -57,7 +57,7 @@ const getHome = async (lang: string) => {
 
 export default async function Home({ params: { lang } }: any) {
   if (!["en", "ru", "uz"].includes(lang)) {
-    return notFound(); // Noto'g'ri til bo'lsa, sahifa topilmadi
+    return notFound();
   }
 
   const { sections } = await getHome(await getCurrentLangServer());
