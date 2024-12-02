@@ -9,6 +9,7 @@ import Hero from "@/app/components/main/Hero";
 import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Xalqaro nordik Universiteti",
@@ -54,7 +55,11 @@ const getHome = async (lang: string) => {
   return await response.json();
 };
 
-export default async function Home() {
+export default async function Home({ params: { lang } }: any) {
+  if (!["en", "ru", "uz"].includes(lang)) {
+    return notFound(); // Noto'g'ri til bo'lsa, sahifa topilmadi
+  }
+
   const { sections } = await getHome(await getCurrentLangServer());
   return (
     <>
