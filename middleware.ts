@@ -81,12 +81,11 @@ export default async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
   const pathnameParts = url.pathname.split("/");
 
-  // Agar URL '/webmail' bo'lsa, tilni qo'shmasdan to'g'ridan-to'g'ri qaytaramiz
   if (pathnameParts[1] === "webmail") {
-    return NextResponse.next();
+    url.hostname = "web5.webspace.uz";
+    url.pathname = `/webmail${url.pathname.slice(7)}`;
+    return NextResponse.redirect(url);
   }
-
-  // Agar til mavjud bo'lsa, URLga qo'shish
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
 
