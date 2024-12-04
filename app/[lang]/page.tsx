@@ -12,7 +12,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Xalqaro nordik Universiteti",
+  title: "Xalqaro Nordik Universiteti",
   description:
     "Nordik Universiteti rasmiy veb-sahifasi. Universitetimiz haqida barcha yangiliklar, tadqiqotlar, ilmiy ishlanmalar, va boshqa yangiliklar haqida ma'lumot oling.",
   keywords: [

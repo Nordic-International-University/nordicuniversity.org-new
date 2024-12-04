@@ -27,7 +27,7 @@ const StaffUserCard = ({
   };
 
   return (
-    <div className="border shadow-md h-[300px] max-lg:h-auto border-opacity-40 border-gray-300 p-4 sm:p-6 rounded-sm">
+    <div className="border shadow-md max-sm:h-full h-[300px] max-lg:h-auto border-opacity-40 border-gray-300 p-4 sm:p-6 rounded-sm">
       <div
         className={`${
           imagePosition === "right" ? "flex-row" : "flex-row-reverse"
@@ -81,7 +81,7 @@ const StaffUserCard = ({
             height={250}
             src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
             alt={staff.full_name}
-            className="rounded-full object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"
+            className="rounded-full max-sm:object-contain max-sm:h-auto object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"
           />{" "}
           <p className="text-xs mt-3 sm:text-md uppercase max-w-[299px] text-center block mx-auto font-semibold text-[#364E6B]">
             {staff.position}

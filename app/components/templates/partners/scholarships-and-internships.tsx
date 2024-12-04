@@ -35,7 +35,7 @@ const ScholarshipsAndInternships = ({
         {props?.data.map((item: any, index: number) => (
           <div
             key={item.id || index}
-            className="p-4 sm:p-5 rounded-lg h-[260px] flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
+            className="p-4 sm:p-5 rounded-lg h-[260px] max-sm:h-auto flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
           >
             <div className="w-full sm:w-1/3">
               <Image
@@ -43,7 +43,7 @@ const ScholarshipsAndInternships = ({
                 height={1000}
                 src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
                 alt={item.name}
-                className="w-[230px] h-[230px] sm:h-full object-cover rounded-md"
+                className="w-[230px] h-[230px] max-sm:w-full sm:h-full object-cover rounded-md"
               />
             </div>
             <div className="flex flex-col justify-between h-full gap-4 w-full">
