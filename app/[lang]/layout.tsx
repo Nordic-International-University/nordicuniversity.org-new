@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
@@ -65,6 +66,12 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="8FJy9noEZAx-f0QKd8R0mFWvBPxym2l_FD-jw1WgSOk"
+        />
+      </Head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider locale={params.lang} messages={messages}>
           <ConfigProvider
