@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap><loc>https://nordicuniversity.org/sitemap-0.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-releases.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/news/sitemap-news.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/org-structures/sitemap-structure.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-conferences.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-events.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-scholarships_and_internships.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-connections.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-forum-and-projects.xml </loc></sitemap>
+</sitemapindex>
