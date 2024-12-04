@@ -1,19 +1,19 @@
 import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
+import { validateApiKey } from "@/app/api/middleware";
 
-// API URL va enumlar
 const backendUrl = process.env.NEXT_PUBLIC_URL_BACKEND;
-const EnumScienceMeetings = ["CONFERENCES", "EVENTS"]; // Ruxsat etilgan turlar
-const languages = ["uz", "ru", "en"]; // Tillar
+const EnumScienceMeetings = ["CONFERENCES", "EVENTS"];
+const languages = ["uz", "ru", "en"];
 
 export async function GET(request: Request) {
+  const authError = validateApiKey(request);
+  if (authError) return authError;
   try {
-    // URL query parametrlarini olish
     const { searchParams } = new URL(request.url);
     const type = searchParams.get("type");
 
-    // `type`ni tekshirish
     if (!type || !EnumScienceMeetings.includes(type)) {
       return NextResponse.json(
         { error: "Invalid or missing 'type' parameter" },
@@ -24,7 +24,6 @@ export async function GET(request: Request) {
     let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     sitemapXml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-    // Har bir til uchun ma'lumotlarni olish
     for (const lang of languages) {
       const apiUrl = `${backendUrl}/api/science/meeting/admin?type=${type}&page=1&limit=100&language=${lang}`;
       const response = await fetch(apiUrl, {
@@ -42,12 +41,9 @@ export async function GET(request: Request) {
       const data = await response.json();
       const releases = data.data;
 
-      // Har bir release uchun URL yaratish va sitemapga qo'shish
       releases.forEach((release: any) => {
-        // Har bir sayt tili va slug tili kombinatsiyasi uchun URL yaratish
         languages.forEach((slugLang) => {
           const slug = release[`slug_${slugLang}`];
-          // URL boshqacha bo'lishini aniqlash
           const scientificType =
             type === "CONFERENCES"
               ? "scientific-conferences"
@@ -64,7 +60,6 @@ export async function GET(request: Request) {
 
     sitemapXml += `</urlset>\n`;
 
-    // Sitemap faylni `public` papkaga yozish
     const sitemapFileName = `sitemap-${type.toLowerCase()}.xml`;
     const sitemapPath = path.join(process.cwd(), "public", sitemapFileName);
 

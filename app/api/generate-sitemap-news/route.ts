@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { NewsItem } from "@/types/templates/newsSlider.type";
+import { validateApiKey } from "@/app/api/middleware";
 
 const languages = ["uz", "ru", "en"];
 const backendUrl = process.env.NEXT_PUBLIC_URL_BACKEND;
@@ -73,7 +74,10 @@ const generateYearlySitemapXml = (year: string, allNews: NewsItem[][]) => {
   return yearlySitemapXml;
 };
 
-export async function GET() {
+export async function GET(request: Request) {
+  const authError = validateApiKey(request);
+  if (authError) return authError;
+
   try {
     const allNews = await Promise.all(
       languages.map(async (lang) => {

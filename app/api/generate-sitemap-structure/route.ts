@@ -1,11 +1,10 @@
 import fs from "fs";
 import path from "path";
+import { validateApiKey } from "@/app/api/middleware";
 
-// API URL
 const backendUrl = process.env.NEXT_PUBLIC_URL_BACKEND;
 const languages = ["uz", "ru", "en"];
 
-// Funksiya: Sana bo'yicha yil va oyni olish
 const getYearMonthFromDate = (dateString: string) => {
   const date = new Date(dateString);
   const year = date.getFullYear().toString();
@@ -13,7 +12,6 @@ const getYearMonthFromDate = (dateString: string) => {
   return { year, month };
 };
 
-// Sitemap XML yaratish
 const generateSitemapXml = (orgStructure: any[]) => {
   let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   sitemapXml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
@@ -34,7 +32,9 @@ const generateSitemapXml = (orgStructure: any[]) => {
   return sitemapXml;
 };
 
-export async function GET() {
+export async function GET(request: Request) {
+  const authError = validateApiKey(request);
+  if (authError) return authError;
   try {
     const orgStructures = await fetch(
       `${backendUrl}/api/university/org-structures/admin?page=1&limit=100`,
@@ -54,7 +54,6 @@ export async function GET() {
     }
     const sitemapXml = generateSitemapXml(orgStructures);
 
-    // Yig'ilgan sitemapni faylga yozish
     const sitemapPath = path.join(newsFolderPath, "sitemap-structure.xml");
     fs.writeFileSync(sitemapPath, sitemapXml);
 

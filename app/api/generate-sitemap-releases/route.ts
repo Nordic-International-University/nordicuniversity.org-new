@@ -1,11 +1,14 @@
 import fs from "fs";
 import path from "path";
+import { validateApiKey } from "@/app/api/middleware";
 
 // API URL
 const backendUrl = process.env.NEXT_PUBLIC_URL_BACKEND;
 const languages = ["uz", "ru", "en"];
 
-export async function GET() {
+export async function GET(request: Request, response: Response) {
+  const authError = validateApiKey(request);
+  if (authError) return authError;
   try {
     const newsFolderPath = path.join(process.cwd(), "public");
     if (!fs.existsSync(newsFolderPath)) {
@@ -15,10 +18,8 @@ export async function GET() {
     let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     sitemapXml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-    // Barcha press releasesni olish
     let allReleases: any[] = [];
     for (const lang of languages) {
-      // API dan press releases ma'lumotlarini olish
       const releases = await fetch(
         `${backendUrl}/api/press/releases?language=${lang}&page=1&limit=100`,
       )
@@ -28,7 +29,6 @@ export async function GET() {
       allReleases = [...allReleases, ...releases];
     }
 
-    // Har bir release uchun URL va sitemap yaratish
     allReleases.forEach((release: any) => {
       languages.forEach((lang) => {
         const slug = release.slug;
@@ -43,7 +43,6 @@ export async function GET() {
 
     sitemapXml += `</urlset>\n`;
 
-    // Faylga yozish
     const sitemapPath = path.join(newsFolderPath, "sitemap-releases.xml");
     fs.writeFileSync(sitemapPath, sitemapXml);
 
