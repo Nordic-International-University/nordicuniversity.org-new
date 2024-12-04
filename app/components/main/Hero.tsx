@@ -12,9 +12,10 @@ const Hero = () => {
       />
       <video
         className="w-full absolute top-0 h-screen object-cover"
-        autoPlay={true}
-        loop={true}
-        muted={true}
+        autoPlay
+        loop
+        muted
+        playsInline
       >
         <source src="/video/video2.mp4" type="video/mp4" />
         Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
