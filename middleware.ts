@@ -3,7 +3,7 @@ import createMiddleware from "next-intl/middleware";
 import { locales } from "./i18n.config";
 
 const intlMiddleware = createMiddleware({
-  defaultLocale: "en",
+  defaultLocale: "uz",
   locales,
   localeDetection: false,
 });
@@ -34,8 +34,6 @@ export default async function middleware(req: NextRequest) {
     url.port = "";
     url.protocol = "https";
     url.pathname = "/webmail";
-    console.log("Redirecting to:", url.toString()); // Debugging
-    return NextResponse.redirect(url);
   }
 
   if (locales.includes(pathnameParts[1])) {
