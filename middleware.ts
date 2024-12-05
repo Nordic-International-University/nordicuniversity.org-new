@@ -3,7 +3,7 @@ import createMiddleware from "next-intl/middleware";
 import { locales } from "./i18n.config";
 
 const intlMiddleware = createMiddleware({
-  defaultLocale: "uz",
+  defaultLocale: "en",
   locales,
   localeDetection: false,
 });
@@ -33,9 +33,9 @@ export default async function middleware(req: NextRequest) {
     url.hostname = "web5.webspace.uz";
     url.port = "";
     url.protocol = "https";
-    url.pathname = "/webmail";
+    url.pathname = `/webmail${url.pathname.slice(7)}`;
+    return NextResponse.redirect(url);
   }
-
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
 
@@ -55,5 +55,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*|public|webmail).*)"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*|public).*)"],
 };
