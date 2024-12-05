@@ -44,36 +44,34 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
         {sectionTitle}
       </h2>
       <div className="slider-container grid grid-cols-5 place-items-center gap-4 max-lg:grid-cols-4 max-md:grid-cols-2 max-md:grid-rows-2 max-sm:gap-3 justify-center">
-        {partners
-          .slice(0, window.innerWidth > 600 ? 5 : 4)
-          .map((_, colIndex) => (
-            <div
-              className="slider-column flex justify-center items-center"
-              key={colIndex}
-            >
-              {partners.map((partner, index) => (
-                <Link
-                  target="_blank"
-                  href={partner.link}
-                  key={index}
-                  className={`slide ${
-                    index === activeIndex[colIndex] ? "active" : ""
-                  }`}
-                >
-                  <Image
-                    src={
-                      process.env.NEXT_PUBLIC_URL_BACKEND +
-                      partner.image.file_path
-                    }
-                    alt={partner.name}
-                    width={400}
-                    height={400}
-                    className="object-contain w-[150px] h-[100px] max-sm:w-[100px] max-sm:h-[100px]"
-                  />
-                </Link>
-              ))}
-            </div>
-          ))}
+        {partners.slice(0, 5).map((_, colIndex) => (
+          <div
+            className="slider-column flex justify-center items-center"
+            key={colIndex}
+          >
+            {partners.map((partner, index) => (
+              <Link
+                target="_blank"
+                href={partner.link}
+                key={index}
+                className={`slide ${
+                  index === activeIndex[colIndex] ? "active" : ""
+                }`}
+              >
+                <Image
+                  src={
+                    process.env.NEXT_PUBLIC_URL_BACKEND +
+                    partner.image.file_path
+                  }
+                  alt={partner.name}
+                  width={400}
+                  height={400}
+                  className="object-contain w-[150px] h-[100px] max-sm:w-[100px] max-sm:h-[100px]"
+                />
+              </Link>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
