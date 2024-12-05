@@ -33,7 +33,7 @@ export default async function middleware(req: NextRequest) {
     url.hostname = "web5.webspace.uz";
     url.port = "";
     url.protocol = "https";
-    url.pathname = `/webmail${url.pathname.slice(7)}`;
+    url.pathname = `/webmail${url.pathname.slice(8)}`;
     return NextResponse.redirect(url);
   }
   if (locales.includes(pathnameParts[1])) {
