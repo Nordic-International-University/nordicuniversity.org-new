@@ -30,11 +30,16 @@ export default async function middleware(req: NextRequest) {
   const pathnameParts = url.pathname.split("/");
 
   if (pathnameParts[1] === "webmail") {
-    url.hostname = "web5.webspace.uz";
-    url.port = "";
-    url.protocol = "https";
-    url.pathname = `/webmail`;
-    return NextResponse.redirect(url);
+    try {
+      console.log("Redirecting to webmail...");
+      url.hostname = "web5.webspace.uz"; // Webmail domeni
+      url.protocol = "https"; // HTTPS protokoli
+      url.pathname = "/webmail"; // To'g'ri path
+      return NextResponse.redirect(url);
+    } catch (error) {
+      console.error("Error during webmail redirection:", error);
+      return NextResponse.next(); // Agar xato yuz bersa, keyinroq ishlash uchun qaytish
+    }
   }
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
