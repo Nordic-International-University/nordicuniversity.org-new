@@ -11,7 +11,7 @@ const Hero = () => {
         alt="logo"
       />
       <video
-        className="w-full absolute hidden top-0 h-screen object-cover"
+        className="w-full absolute  top-0 h-screen object-cover"
         autoPlay
         loop
         muted
