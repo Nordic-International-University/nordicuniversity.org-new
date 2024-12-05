@@ -29,37 +29,23 @@ export default async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
   const pathnameParts = url.pathname.split("/");
 
-  // Agar URL '.html' bilan tugasa, uni yangi saytga yo'naltiring
-  if (url.pathname.endsWith(".html")) {
-    console.log("Old URL detected, redirecting to:", url.toString());
-    url.hostname = "nordicuniversity.org";
-    url.protocol = "https";
-    url.pathname = url.pathname.replace(".html", ""); // .html ni olib tashlash
-    console.log("Redirecting to:", url.toString());
-    return NextResponse.redirect(url);
-  }
-
-  // `webmail` yo'nalishiga yo'naltirish
   if (pathnameParts[1] === "webmail") {
-    console.log("Before redirect:", url.toString());
     url.hostname = "web5.webspace.uz";
+    url.port = "";
     url.protocol = "https";
-    url.pathname = "/webmail"; // Correcting this part
-    console.log("Redirecting to:", url.toString());
+    url.pathname = `/webmail`;
     return NextResponse.redirect(url);
   }
-
-  // Lokalizatsiya yo'nalishlarini tekshirish
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
 
     if (currentLocale !== lang) {
-      pathnameParts[1] = lang; // Yangi tilni o'rnatish
+      pathnameParts[1] = lang;
       url.pathname = pathnameParts.join("/");
       return NextResponse.redirect(url);
     }
   } else {
-    pathnameParts.unshift(lang); // Tilda yo'nalish qo'shish
+    pathnameParts.unshift(lang);
     url.pathname = pathnameParts.join("/");
     return NextResponse.redirect(url);
   }
@@ -69,5 +55,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*|public|webmail).*)"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*|public).*)"],
 };
