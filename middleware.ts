@@ -30,9 +30,10 @@ export default async function middleware(req: NextRequest) {
   const pathnameParts = url.pathname.split("/");
 
   if (pathnameParts[1] === "webmail") {
+    console.log("Before redirect:", url.toString());
     url.hostname = "web5.webspace.uz";
     url.protocol = "https";
-    url.pathname = "/webmail";
+    url.pathname = "/webmail"; // Correcting this part
     console.log("Redirecting to:", url.toString());
     return NextResponse.redirect(url);
   }
