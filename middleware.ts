@@ -34,12 +34,8 @@ export default async function middleware(req: NextRequest) {
     url.port = "";
     url.protocol = "https";
     url.pathname = "/webmail";
-    console.log("Redirecting to:", url.toString());
+    console.log("Redirecting to:", url.toString()); // Debugging
     return NextResponse.redirect(url);
-  }
-
-  if (!pathnameParts[1].startsWith("webmail")) {
-    return intlMiddleware(req);
   }
 
   if (locales.includes(pathnameParts[1])) {
