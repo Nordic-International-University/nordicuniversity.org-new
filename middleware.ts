@@ -31,10 +31,12 @@ export default async function middleware(req: NextRequest) {
 
   if (pathnameParts[1] === "webmail") {
     url.hostname = "web5.webspace.uz";
-    url.port = "";
     url.protocol = "https";
+    url.pathname = "/webmail";
+    console.log("Redirecting to:", url.toString());
     return NextResponse.redirect(url);
   }
+
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
 
@@ -54,5 +56,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*|public).*)"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*|public|webmail).*)"],
 };
