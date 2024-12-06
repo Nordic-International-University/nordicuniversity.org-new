@@ -17,6 +17,12 @@ const Hero = () => {
         muted
         playsInline
       >
+        <track
+          label="Tavsiflar"
+          kind="descriptions"
+          src="/video/description.vtt"
+          default
+        />
         <source src="/video/video2.mp4" type="video/mp4" />
         Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
       </video>

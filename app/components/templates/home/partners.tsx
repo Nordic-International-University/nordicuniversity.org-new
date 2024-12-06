@@ -4,7 +4,21 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PartnersType } from "@/types/templates/partners.types";
 import Link from "next/link";
+export const distributeIntoColumns = (
+  partners: PartnersType[],
+  numberOfColumns: number,
+) => {
+  const columns: PartnersType[][] = Array.from(
+    { length: numberOfColumns },
+    () => [],
+  );
 
+  partners.forEach((partner, index) => {
+    columns[index % numberOfColumns].push(partner);
+  });
+
+  return columns;
+};
 interface PartnersSliderProps {
   partners: PartnersType[];
   sectionTitle: string;
@@ -14,48 +28,50 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
   partners,
   sectionTitle,
 }) => {
-  const [activeIndex, setActiveIndex] = useState<number[]>([]);
+  const numberOfColumns = 5; // Kolumnalar sonini belgilash
+  const columns = distributeIntoColumns(partners, numberOfColumns);
+
+  const [activeIndices, setActiveIndices] = useState<number[]>(
+    columns.map(() => 0),
+  );
 
   useEffect(() => {
-    setActiveIndex(
-      partners.map(() => Math.floor(Math.random() * partners.length)),
-    );
-    const intervalIds = partners.map((_, index) =>
-      setInterval(
-        () => {
-          setActiveIndex((prev) => {
-            const newIndices = [...prev];
-            newIndices[index] = (newIndices[index] + 1) % partners.length;
-            return newIndices;
-          });
-        },
-        Math.random() * 4000 + 4000,
-      ),
-    );
+    const intervalIds = columns.map((_, columnIndex) => {
+      const intervalTime = Math.random() * 4000 + 4000; // 4-8 soniya oralig'ida
+
+      return setInterval(() => {
+        setActiveIndices((prev) => {
+          const newIndices = [...prev];
+          newIndices[columnIndex] =
+            (newIndices[columnIndex] + 1) % columns[columnIndex].length;
+          return newIndices;
+        });
+      }, intervalTime);
+    });
 
     return () => {
       intervalIds.forEach(clearInterval);
     };
-  }, [partners]);
+  }, [columns]);
 
   return (
-    <section className="mt-16 block container  justify-center ">
+    <section className="mt-16 container mx-auto px-4 lg:px-8">
       <h2 className="text-center text-tertiary max-sm:text-lg max-sm:text-left text-2xl font-semibold mb-16 max-md:mb-5">
         {sectionTitle}
       </h2>
       <div className="slider-container grid grid-cols-5 place-items-center gap-4 max-lg:grid-cols-4 max-md:grid-cols-2 max-md:grid-rows-2 max-sm:gap-3 justify-center">
-        {partners.slice(0, 5).map((_, colIndex) => (
+        {columns.map((columnPartners, colIndex) => (
           <div
             className="slider-column flex justify-center items-center"
             key={colIndex}
           >
-            {partners.map((partner, index) => (
+            {columnPartners.map((partner, index) => (
               <Link
                 target="_blank"
                 href={partner.link}
                 key={index}
                 className={`slide ${
-                  index === activeIndex[colIndex] ? "active" : ""
+                  index === activeIndices[colIndex] ? "active" : ""
                 }`}
               >
                 <Image

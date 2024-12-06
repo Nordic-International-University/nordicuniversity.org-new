@@ -92,4 +92,5 @@ export interface Event {
   social_network_links: SocialNetworkLinks;
   createdAt: string;
   updatedAt: string;
+  latestItems: Event[];
 }

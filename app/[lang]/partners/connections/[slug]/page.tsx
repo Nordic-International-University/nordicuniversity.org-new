@@ -13,19 +13,52 @@ import { getMeetingBySlug } from "@/app/[lang]/partners/scholarships-and-interns
 import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { Event } from "@/types/templates/international-meeating";
+import { Metadata } from "next";
+
+interface PageProps {
+  params: { slug: string };
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const lang = await getCurrentLangServer();
+  const event: Event = await getMeetingBySlug(params.slug, lang);
+
+  return {
+    title: event.name,
+    description: event.description,
+    openGraph: {
+      title: event.name,
+      description: event.description,
+      url: `https://nordicuniversity.org/${lang}/partners/connections/${params.slug}`,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${event.image.file_path}`,
+          alt: event.name,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: event.name,
+      description: event.description,
+      images: [
+        `${process.env.NEXT_PUBLIC_URL_BACKEND}${event.image.file_path}`,
+      ],
+    },
+    alternates: {
+      canonical: `https://nordicuniversity.org/${lang}/partners/connections/${params.slug}`,
+    },
+    metadataBase: new URL("https://nordicuniversity.org"),
+  };
+}
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
   const news: Event = await getMeetingBySlug(params.slug, lang);
   const t = await getTranslations("partners");
-
-  const allMeeting: { data: Event[] } = await getAllMeeting({
-    page: 1,
-    limit: 4,
-    lang,
-    type: meetingType.CONNECTIONS,
-    time: timeFilter.past,
-  });
 
   const brodCmbItems = [
     {
@@ -104,7 +137,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <h2 className="text-xl">{t("connections.last")}</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
-              {allMeeting.data.map((item, index) => (
+              {news.latestItems.map((item, index) => (
                 <MinimalCard
                   url="/partners/connections"
                   subTitle={item.body}

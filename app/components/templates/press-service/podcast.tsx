@@ -44,7 +44,7 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
         {props.map((item: podcastType, index: number) => (
           <Link
             target="_blank"
-            href={item.video_link}
+            href={"/press-service/podcast"}
             key={index}
             className="w-full p-4 border-[1px] border-gray-300 rounded-lg flex gap-6 items-stretch max-sm:flex-col max-sm:border-none max-sm:p-0"
           >

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { Button } from "antd";
 
 const bgClasses = {
   telegram: "bg-[#229ED9]",
@@ -22,10 +23,11 @@ const textClasses = {
 type SocialCardProps = {
   icon: React.ElementType;
   title: string;
+  link: string;
   type: "telegram" | "youtube" | "facebook" | "linkedin";
 };
 
-const SocialCard = ({ icon: Icon, title, type }: SocialCardProps) => {
+const SocialCard = ({ icon: Icon, link, title, type }: SocialCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const t = useTranslations("socialMediaCard").raw;
 
@@ -49,11 +51,12 @@ const SocialCard = ({ icon: Icon, title, type }: SocialCardProps) => {
             isHovered ? "opacity-100" : "opacity-0"
           }`}
         >
-          <button
+          <Button
+            href={link}
             className={`px-4 py-2 rounded-md text-xs font-medium transition-colors duration-200 ease-in-out bg-white ${textClasses[type]} hover:bg-opacity-90`}
           >
             {t(`${type}.button`)}
-          </button>
+          </Button>
         </div>
       </div>
     </div>
@@ -66,21 +69,25 @@ export default function SocialMediaCard({
       icon: FaTelegram,
       title: "Telegram kanalini kuzatib boring",
       type: "telegram",
+      link: "https://t.me/nordic_edu",
     },
     {
       icon: Youtube,
       title: "YouTube kanalimizga obuna bo'ling",
       type: "youtube",
+      link: "https://www.youtube.com/@nordic_university",
     },
     {
       icon: Facebook,
       title: "Facebook sahifamizni kuzatib boring",
       type: "facebook",
+      link: "https://www.facebook.com/nordicuniversity.edu/?locale=ru_RU",
     },
     {
       icon: Linkedin,
       title: "LinkedIn profilimizga ulanish",
       type: "linkedin",
+      link: "https://www.linkedin.com/company/nordic-international-university/",
     },
   ],
 }: {

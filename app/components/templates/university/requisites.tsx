@@ -22,11 +22,8 @@ const UniversityInfoTable = () => {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       message.success({
-        content: "Текст успешно скопирован!",
+        content: t("copied"),
         duration: 2,
-        style: {
-          marginTop: "20vh",
-        },
       });
     });
   };

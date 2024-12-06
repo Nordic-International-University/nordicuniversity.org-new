@@ -13,7 +13,6 @@ const flattenLocaleData = (
   return Object.entries(obj).flatMap(([key, value]) => {
     const newKey = prefix ? `${prefix}.${key}` : key;
 
-    // Detect section titles dynamically
     const isSectionTitle = [
       "section_title",
       "sectionName",
@@ -35,7 +34,6 @@ const flattenLocaleData = (
   });
 };
 
-// Read the locale file for the specified language
 const readLocaleFile = (lang: string) => {
   const localePath = path.join(LOCALES_PATH, `${lang}.json`);
   if (fs.existsSync(localePath)) {
@@ -44,7 +42,6 @@ const readLocaleFile = (lang: string) => {
   return null;
 };
 
-// Extract translation keys from component files
 const extractTranslationKeys = (filePath: string) => {
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const useTranslationsMatch = fileContent.match(
@@ -63,7 +60,6 @@ const extractTranslationKeys = (filePath: string) => {
   return keys.map((key) => `${namespace}.${key}`);
 };
 
-// API handler
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const query = searchParams.get("query");
@@ -90,10 +86,9 @@ export async function GET(req: NextRequest) {
 
   const flattenedLocaleData = flattenLocaleData(localeData);
 
-  // Initialize Fuse for general text search
   const fuse = new Fuse(flattenedLocaleData, {
     keys: ["text"],
-    threshold: 0.4,
+    threshold: 0.6,
     distance: 100,
     ignoreLocation: true,
     minMatchCharLength: 2,
@@ -131,7 +126,6 @@ export async function GET(req: NextRequest) {
                   .replace(`/${lang}`, "");
               }
 
-              // Get the section title specific to this route
               const matchingSectionTitle = flattenedLocaleData.find(
                 (item) =>
                   item.path.startsWith(key.split(".")[0]) && item.sectionTitle,

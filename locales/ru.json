@@ -195,7 +195,7 @@
       "degrees": {
         "FULL_TIME": "ОЧНАЯ",
         "PART_TIME": "ЗАОЧНАЯ",
-        "DISTANCE": "СПЕЦИАЛЬНАЯ ЗАОЧНАЯ",
+        "SPECIAL_PART_TIME": "СПЕЦИАЛЬНАЯ ЗАОЧНАЯ",
         "DOCTORATE": "Докторантура"
       },
       "degreeDirection": {

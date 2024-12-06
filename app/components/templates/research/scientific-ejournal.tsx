@@ -7,7 +7,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Button } from "antd";
-import Link from "next/link";
 
 const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
   const t = useTranslations("research.eJournal").raw;
@@ -15,32 +14,37 @@ const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
   return (
     <article className="mt-8">
       <div className="flex max-md:flex-col-reverse items-start gap-6">
-        <div>
-          <p
-            className="text-tertiary mb-5 font-medium text-justify text-[17px]"
-            dangerouslySetInnerHTML={{ __html: t("description") }}
-          ></p>
-          <strong
-            className="font-semibold text-tertiary text-[17px]"
-            dangerouslySetInnerHTML={{ __html: t("davr") }}
-          ></strong>
+        <div className="flex max-md:flex-col-reverse max-md:flex-row items-start gap-6">
+          <div className="flex-1">
+            <p
+              className="text-tertiary mb-5 font-medium text-justify text-[17px]"
+              dangerouslySetInnerHTML={{ __html: t("description") }}
+            ></p>
+            <strong
+              className="font-semibold text-tertiary text-[17px]"
+              dangerouslySetInnerHTML={{ __html: t("davr") }}
+            ></strong>
+          </div>
+          <div className="w-full max-w-[500px]">
+            <Image
+              className="w-full h-auto object-cover rounded-lg"
+              src={journal}
+              alt="journal"
+              layout="responsive" // Agar Next.js Image komponentini ishlatayotgan bo‘lsangiz
+              // sizga kerakli bo‘lgan propslarni qo‘shing, masalan:
+              // width={500}
+              // height={366}
+            />
+            <Button
+              href="https://journal.nordicuniversity.org/"
+              className="bg-text_secondary w-full text-white font-semibold py-4 px-4 rounded-b-lg shadow-md hover:shadow-lg hover:bg-secondary-dark focus:ring-4 focus:ring-secondary-light transition-all duration-300"
+            >
+              {t("button")}
+            </Button>
+          </div>
         </div>
-        <Image
-          className="w-auto max-md:w-full max-md:h-auto h-[366px]"
-          src={journal}
-          alt="journal"
-        />
       </div>
       <p className="w-full text-tertiary mt-5 text-[17px]">{t("body")}</p>
-      <Link
-        href="https://journal.nordicuniversity.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button className="bg-text_secondary text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:bg-secondary-dark focus:ring-4 focus:ring-secondary-light transition-all duration-300">
-          {t("button")}
-        </Button>
-      </Link>
 
       <div className="mt-8">
         <Swiper

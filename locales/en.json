@@ -181,7 +181,7 @@
     "subItems": [
       "Admission Process",
       "Frequently Asked Questions",
-      "Tuition Fees for Educational Programs"
+      "Tuition fees for educational programs"
     ],
     "title": "Admission",
     "admission_process": {
@@ -195,7 +195,7 @@
       "degrees": {
         "FULL_TIME": "FULL-TIME",
         "PART_TIME": "PART-TIME",
-        "DISTANCE": "SPECIAL PART-TIME",
+        "SPECIAL_PART_TIME": "SPECIAL PART-TIME",
         "DOCTORATE": "Doctorate"
       },
       "degreeDirection": {
