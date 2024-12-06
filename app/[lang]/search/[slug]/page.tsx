@@ -79,6 +79,7 @@ const SearchResults = async (slug: string, lang: string) => {
     `http://localhost:3778/api/search?query=${slug}&lang=${lang}`,
     { cache: "no-store" },
   );
+  //ss
   return await result.json();
 };
 
