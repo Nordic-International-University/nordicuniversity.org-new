@@ -42,7 +42,7 @@ const ClientPage = ({ props }: { props: VideoResponse }) => {
     },
     {
       url: "/university/documents",
-      name: t("Press_releases.sectionTitle"),
+      name: t("nordic-trend.sectionTitle"),
     },
   ];
 
@@ -51,7 +51,7 @@ const ClientPage = ({ props }: { props: VideoResponse }) => {
       translationKey="press-service"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("Press_releases.sectionTitle")}
+      sidebarTitle={t("nordic-trend.sectionTitle")}
     >
       <Trends props={props.data} />
     </LeftSidebarAndComponent>

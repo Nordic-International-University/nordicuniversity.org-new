@@ -264,18 +264,19 @@
       },
       "levels": [
         {
-          "name": "Bachelor's",
-          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+          "name": "Bachelor",
+          "description": "You have the opportunity to study in one of 19 educational directions, participate in joint programs, and obtain a diploma from two countries. In the summer, you can participate in a contract-based \"work and travel\" program."
         },
         {
           "name": "Master's",
-          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+          "description": "Complete one of 13 educational programs and obtain a master's degree. International practical programs and qualified professors will help you become a specialist."
         },
         {
           "name": "Doctorate",
-          "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices."
+          "description": "After higher education, there is the opportunity to pursue a doctorate (PhD and DSc) in 6 directions and engage in independent research."
         }
       ]
+
     },
     "certificate": {
       "sectionTitle": "Foreign Language Proficiency Certificate",

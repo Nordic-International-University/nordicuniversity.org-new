@@ -76,10 +76,9 @@ const getTagColor = (type: string, lang: string): string => {
 
 const SearchResults = async (slug: string, lang: string) => {
   const result = await fetch(
-    `http://localhost:3778/api/search?query=${slug}&lang=${lang}`,
+    `http://localhost:3001/api/search?query=${slug}&lang=${lang}`,
     { cache: "no-store" },
   );
-  //ss
   return await result.json();
 };
 

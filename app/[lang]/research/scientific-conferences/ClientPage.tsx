@@ -10,6 +10,8 @@ import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEven
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
 import { buttonsType } from "@/types/research/scince_events";
+import TimeFilterButtons from "@/app/components/UI/changeFeature";
+import { timeFilter } from "@/types/api/apiTypes";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("research");
@@ -49,25 +51,6 @@ const ClientPage = ({ initialData }: any) => {
     },
   ];
 
-  const buttons: buttonsType[] = [
-    {
-      label: language("future"),
-      className: time === "future" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
-      onClick: () => {
-        setTime("future");
-        setCurrentPage(1);
-      },
-    },
-    {
-      label: language("past"),
-      className: time === "past" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
-      onClick: () => {
-        setTime("past");
-        setCurrentPage(1);
-      },
-    },
-  ];
-
   return (
     <LeftSidebarAndComponent
       translationKey="research"
@@ -75,17 +58,13 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("scienceConferences.breadcrumb.scientific_conferences")}
     >
-      <div className="flex items-center gap-4 justify-center mt-10">
-        {buttons.map((button, index) => (
-          <button
-            key={index}
-            className={`${button.className} rounded py-3 px-9 text-md font-semibold`}
-            onClick={button.onClick}
-          >
-            {button.label}
-          </button>
-        ))}
-      </div>
+      <TimeFilterButtons
+        time={time}
+        timeFilter={timeFilter}
+        t={language}
+        setTime={setTime}
+        setCurrentPage={setCurrentPage}
+      />
       <Scientific_events url="/research/scientific-conferences/" props={data} />
       {totalPages > 3 && (
         <CustomPagination

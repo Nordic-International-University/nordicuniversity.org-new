@@ -88,7 +88,7 @@ export async function GET(req: NextRequest) {
 
   const fuse = new Fuse(flattenedLocaleData, {
     keys: ["text"],
-    threshold: 0.6,
+    threshold: 0,
     distance: 100,
     ignoreLocation: true,
     minMatchCharLength: 2,

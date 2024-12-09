@@ -48,7 +48,7 @@ const ClientPage = () => {
           ref={animationContainerRef}
         >
           {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index}>
+            <div key={index} className="w-[430px] max-md:w-full">
               <div className="flex items-center gap-2">
                 <Image width={45} height={45} src={eduImage} alt="image" />
                 <h2 className="text-tertiary text-2xl font-semibold">

@@ -188,7 +188,7 @@
     "admission_process": {
       "sectionTitle": "Qabul jarayonlari",
       "description": "Cheksiz qiziqish va o’rganishga bo’lgan ishtiyoq bilan yo'g'rilgan, Xalgaro Nordik universiteti jamoasi chuqur <strong>tahliliy fikrlash, ixtirochilik, amaliy muammolarni hal\nqilish</strong> va <strong>yangiliklarga ochiqlikni</strong> qadrlaydi.",
-      "body": "Rag’batlantiruvchi, qo’llab-quvvatlovchi va shodlikka to’la,\nXalqaro Nordik universiteti ko'plab talabalar uchun ikkinchi uyga aylanadi.",
+      "body": "Rag’batlantiruvchi, qo’llab-quvvatlovchi va shodlikka to’lapres,\nXalqaro Nordik universiteti ko'plab talabalar uchun ikkinchi uyga aylanadi.",
       "button": "Ro’yxatdan o’tish"
     },
     "degree_price": {
@@ -266,15 +266,15 @@
       "levels": [
         {
           "name": "Bakalavr",
-          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+          "description": "19 ta ta'lim yo'nalishidan birida o'qish imkoniyati, qo'shma dasturlar va ikki mamlakat diplomini olish imkoniyati sizni kutmoqda. Yoz oylarida kontrakt uchun \"work and travel\" dasturida qatnashish imkoniyati beriladi."
         },
         {
           "name": "Magistratura",
-          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+          "description": "13 ta ta'lim yo'nalishidan birini yakunlab magistratura darajasini qo'lga kiriting. Xalqaro amaliyot dasturlari, malakali professor-o'qituvchilar sizga mutaxassis bo'lishda yordam berishadi."
         },
         {
           "name": "Doktorantura",
-          "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud."
+          "description": "Oliy ta'limdan keyingi ta'lim institutlarida 6 ta yo'nalish bo'yicha doktorantura hamda mustaqil izlanuvchilikda (Phd hamda DSc) tahsil olish imkoniyati mavjud."
         }
       ]
     },
@@ -305,7 +305,9 @@
       "sectionTitle": "Xalqaro stipendiyalar va amaliyotlar"
     },
     "forums": {
-      "sectionTitle": "Xalqaro forum va loyihalar"
+      "sectionTitle": "Xalqaro forum va loyihalar",
+      "past": "O'tgan",
+      "future": "Kelgusi"
     },
     "formAlbums": {
       "sectionTitle": "Xalqaro uchrashuvlardan fotolavhalar",
@@ -362,6 +364,9 @@
     },
     "Press_releases": {
       "sectionTitle": "Press relizlar"
+    },
+    "nordic-trend": {
+      "sectionTitle": "Nordik trend"
     }
   },
   "footer": {

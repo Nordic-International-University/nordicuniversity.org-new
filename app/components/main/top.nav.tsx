@@ -19,6 +19,7 @@ import { BiCommand } from "react-icons/bi";
 import SearchInput from "@/app/components/main/searchInput";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { useTranslations } from "next-intl";
+import { IoMdSearch } from "react-icons/io";
 
 const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
@@ -70,9 +71,10 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 onClick={() => dispatch(handleOpenSearchModal())}
                 className="px-4 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#1E4A7D] transition-opacity duration-200 rounded-full cursor-pointer"
               >
-                <SearchIcon className="text-white" />
+                <IoMdSearch className="text-white text-xl" />
                 <div className="flex text-white font-semibold items-center gap-1">
-                  <BiCommand className="text-white text-lg" />
+                  {/*<BiCommand className="text-white text-lg" />*/}
+                  <span>CTRL</span>
                   <span>+</span>
                   <span>K</span>
                 </div>
