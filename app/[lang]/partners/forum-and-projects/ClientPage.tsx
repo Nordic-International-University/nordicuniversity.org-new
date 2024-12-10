@@ -15,7 +15,7 @@ import TimeFilterButtons from "@/app/components/UI/changeFeature";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("partners");
-  const language = useTranslations("partners.forums");
+  const language = useTranslations("patents.forums");
   const [data, setData] = useState(initialData);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);

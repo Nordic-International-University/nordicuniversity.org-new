@@ -127,7 +127,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               (await getCurrentLangServer()) +
-              "/partners/connections/" +
+              "/patents/connections/" +
               params.slug
             }
           />

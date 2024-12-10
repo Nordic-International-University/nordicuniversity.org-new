@@ -81,6 +81,7 @@ const LanguageSelect = ({ color }: { color: string }) => {
     const newPath = `/${lang.value}${pathname.replace(/^\/[a-z]{2}/, "")}`;
     window.scrollTo(0, 0);
     router.push(newPath);
+    window.location.reload();
   };
 
   return (
@@ -90,7 +91,7 @@ const LanguageSelect = ({ color }: { color: string }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <FaEarthAmericas
-          style={{ color: color }} // Apply dynamic color using inline styles
+          style={{ color: color }}
           className="absolute left-2 text-[16px]"
         />
         <div className="ml-5">

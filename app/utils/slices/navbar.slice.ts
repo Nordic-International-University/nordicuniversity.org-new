@@ -16,14 +16,18 @@ const initialState: any = {
         name: "subItems.2",
         url: "/university/structure",
       },
-      {
-        name: "subItems.3",
-        url: "/university/requisites",
-      },
 
       {
         name: "subItems.4",
         url: "/university/contacts",
+      },
+      {
+        name: "subItems.5",
+        url: "/university/patents",
+      },
+      {
+        name: "subItems.3",
+        url: "/university/requisites",
       },
     ],
     researchSidebarItems: [

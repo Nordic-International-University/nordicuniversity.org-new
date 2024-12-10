@@ -83,8 +83,8 @@ export default async function Home({ params: { lang } }: any) {
         />
         <DoubleSLider
           url={{
-            all: "/partners/connections",
-            single: "/partners/connections",
+            all: "/patents/connections",
+            single: "/patents/connections",
           }}
           sliderName={"connection-slider"}
           sectionTitle={sections[SectionTypeEnum.COOPERATION_CONNECTIONS].title}

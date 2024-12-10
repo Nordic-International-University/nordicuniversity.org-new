@@ -205,6 +205,8 @@
       },
       "select_degree": "Выберите программу",
       "program_info": {
+        "currency": "сум",
+        "year": "год",
         "contract": "Контракт",
         "duration": "Длительность",
         "language": "Язык обучения",
@@ -348,6 +350,7 @@
     }
   },
   "press-service": {
+    "last_news": "Последние новости",
     "subItems": [
       "Новости",
       "Пресс-релизы",

@@ -157,14 +157,15 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
                   <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal ">
                     <strong>{t("program_info.contract")}:</strong>{" "}
                     <span className="underline ml-2 ">
-                      {program.price.toLocaleString()} so'm
+                      {program.price.toLocaleString()}{" "}
+                      {t("program_info.currency")}
                     </span>
                   </p>
                   <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
                     <strong>{t("program_info.duration")}:</strong>
                     <span className="underline ml-2">
                       {" "}
-                      {program.duration} yil
+                      {program.duration} {t("program_info.year")}
                     </span>
                   </p>
                   <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">

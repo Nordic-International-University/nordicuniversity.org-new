@@ -205,6 +205,8 @@
       },
       "select_degree": "Select Program",
       "program_info": {
+        "currency": "uzs",
+        "year": "year",
         "contract": "Tuition Fee",
         "duration": "Duration",
         "language": "Language of Instruction",
@@ -349,6 +351,7 @@
     }
   },
   "press-service": {
+    "last_news": "Latest news",
     "subItems": [
       "News",
       "Press Releases",

@@ -33,7 +33,7 @@ const StaffUserCard = ({
           imagePosition === "right" ? "flex-row" : "flex-row-reverse"
         } flex  max-lg:flex-col-reverse justify-between h-full items-center gap-6`}
       >
-        <div className="flex flex-col max-lg:w-full w-1/2 justify-between h-full">
+        <div className="flex flex-col max-lg:w-full w-3/4 justify-between h-full">
           <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[#364E6B]">
             {staff.full_name}
           </h3>

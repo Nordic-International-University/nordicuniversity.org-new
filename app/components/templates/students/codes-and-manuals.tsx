@@ -21,13 +21,11 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
     );
   }, [props.length]);
 
-  // Show modal and set the selected PDF
   const showModal = (pdfUrl: string) => {
     setSelectedPdf(pdfUrl);
     setIsModalVisible(true);
   };
 
-  // Close the modal
   const handleCancel = () => {
     setIsModalVisible(false);
     setSelectedPdf(null);
@@ -35,10 +33,10 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
 
   return (
     <article className="mt-10 mb-10">
-      <div className="gridd grid-cols-3 max-md:grid-cols-2 gap-6 grid max-md:place-items-center">
+      <div className="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-6 grid max-md:place-items-center">
         {props.map((item, index) => (
           <div
-            className="max-w-[300px]"
+            className="max-w-[300px] max-sm:w-full h-[450px]"
             key={index}
             ref={(el: any) => (itemRefs.current[index] = el)}
           >
@@ -47,6 +45,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
               height={500}
               src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
               alt={item.type}
+              className="h-[400px] max-sm:w-full"
             />
             <div className="flex mt-4 items-center justify-between">
               <h2 className="max-sm:text-sm text-xl text-text_secondary">

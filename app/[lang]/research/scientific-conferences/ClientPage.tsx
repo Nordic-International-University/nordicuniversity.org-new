@@ -15,7 +15,7 @@ import { timeFilter } from "@/types/api/apiTypes";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("research");
-  const language = useTranslations("partners.connections");
+  const language = useTranslations("patents.connections");
   const [data, setData] = useState(initialData.data);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
