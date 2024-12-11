@@ -1,21 +1,20 @@
 const getMeetingBySlug = async (
   slug: string,
   lang: string,
-  customHeaders: HeadersInit = {},
+  headers: HeadersInit = {},
 ) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/cooperation/meeting/${slug}?language=${lang}`,
     {
-      method: "GET",
       cache: "no-cache",
-      headers: customHeaders,
+      headers: {
+        ...headers,
+      },
     },
   );
-
   if (!response.ok) {
     throw new Error(`Failed to fetch data for slug: ${slug}`);
   }
-
   return await response.json();
 };
 
