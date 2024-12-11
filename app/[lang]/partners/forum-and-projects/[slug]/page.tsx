@@ -13,11 +13,18 @@ import { getMeetingBySlug } from "@/app/[lang]/partners/scholarships-and-interns
 import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { Event } from "@/types/templates/international-meeating";
+import { headers } from "next/headers";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
+  const requestHeaders = headers();
 
-  const news: Event = await getMeetingBySlug(params.slug, lang);
+  const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
+  const news: Event = await getMeetingBySlug(
+    params.slug,
+    lang,
+    clientIpAddress,
+  );
 
   const allMeeting: { data: Event[] } = await getAllMeeting({
     page: 1,

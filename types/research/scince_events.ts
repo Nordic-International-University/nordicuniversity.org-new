@@ -46,6 +46,8 @@ export interface ScientificEvent {
   image_id: string;
   image: Image;
   name: string;
+  file: Image;
+  viewsCount: number;
   description: string;
   body: string;
   slug: string;

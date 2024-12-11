@@ -15,11 +15,11 @@ import { timeFilter } from "@/types/api/apiTypes";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("research");
-  const language = useTranslations("patents.connections");
+  const language = useTranslations("partners.connections");
   const [data, setData] = useState(initialData.data);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
-  const [time, setTime] = useState("future");
+  const [time, setTime] = useState("past");
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,

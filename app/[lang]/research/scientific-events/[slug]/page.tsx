@@ -20,6 +20,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
+import { headers } from "next/headers";
 
 export const generateMetadata = async ({
   params,
@@ -83,7 +84,14 @@ export const generateMetadata = async ({
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
 
-  const news: ScientificEvent = await getEventBySlug(params.slug, lang);
+  const requestHeaders = headers();
+
+  const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
+  const news: ScientificEvent = await getEventBySlug(
+    params.slug,
+    lang,
+    clientIpAddress,
+  );
 
   const allEvents: { data: ScientificEvent[] } = await getAllEvents(
     lang,
@@ -117,21 +125,23 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
       <div className="flex items-start max-lg:flex-col mt-6 gap-6">
         <div className="w-[70%] max-lg:w-full">
-          <div className="h-[474px] max-lg:h-auto rounded-md bg-gray-50">
+          <div className="max-lg:h-auto rounded-md bg-gray-50">
             <div className="px-6 pt-5">
               <h1 className="text-xl pb-5 font-semibold max-sm:text-lg tracking-wide text-primary">
                 {news.name}
               </h1>
               <Image
                 width={890}
-                className="mx-auto block object-cover h-[800px] max-lg:h-auto rounded-xl shadow-lg"
+                className="mx-auto block h-auto rounded-xl shadow-lg"
                 height={369}
-                src={process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path}
+                src={
+                  process.env.NEXT_PUBLIC_URL_BACKEND + news?.image?.file_path
+                }
                 alt={news.name}
               />
             </div>
           </div>
-          <div className="mt-[450px] max-lg:mt-6">
+          <div className="mt-5 max-lg:mt-6">
             <div className="flex items-center gap-7 justify-center">
               <div className="flex items-center gap-1">
                 <BiCalendar className="text-gray-400" />
@@ -142,7 +152,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <span className="text-gray-200">|</span>
               <div className="flex items-center gap-1">
                 <EyeIcon className="text-gray-400" />
-                <p className="text-sm text-gray-500">230</p>
+                <p className="text-sm text-gray-500">{news.viewsCount}</p>
               </div>
             </div>
             <div className="mt-5">

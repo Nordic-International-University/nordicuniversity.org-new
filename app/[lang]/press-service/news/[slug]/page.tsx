@@ -157,7 +157,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <span className="text-gray-200">|</span>
               <div className="flex items-center gap-1">
                 <EyeIcon className="text-gray-400" />
-                <p className="text-sm text-gray-500">230</p>
+                <p className="text-sm text-gray-500">{news.viewsCount}</p>
               </div>
             </div>
             <div className="mt-5">

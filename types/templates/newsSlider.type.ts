@@ -4,6 +4,7 @@ export interface NewsItem {
   image: Image;
   title: string;
   description: string;
+  viewsCount: number;
   body: string;
   slug: string;
   time: string;

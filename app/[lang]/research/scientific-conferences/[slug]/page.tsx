@@ -18,9 +18,9 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-
-import { getEventBySlug } from "@/app/[lang]/research/scientific-conferences/[slug]/getNewsBySlug";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import { headers } from "next/headers";
+import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
 
 export const generateMetadata = async ({
   params,
@@ -102,8 +102,14 @@ export const generateMetadata = async ({
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
 
-  const events: ScientificEvent = await getEventBySlug(params.slug, lang);
+  const requestHeaders = headers();
 
+  const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
+  const events: ScientificEvent = await getEventBySlug(
+    params.slug,
+    lang,
+    clientIpAddress,
+  );
   const allEvents: { data: ScientificEvent[] } = await getAllEvents(
     lang,
     "CONFERENCES",
@@ -140,23 +146,23 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
       <div className="flex items-start max-lg:flex-col mt-6 gap-6">
         <div className="w-[70%] max-lg:w-full">
-          <div className="h-[474px] max-lg:h-auto rounded-md bg-gray-50">
-            <div className="px-6 max-sm:px-0 pt-5">
+          <div className="max-lg:h-auto rounded-md bg-gray-50">
+            <div className="px-6 pt-5">
               <h1 className="text-xl pb-5 font-semibold max-sm:text-lg tracking-wide text-primary">
                 {events.name}
               </h1>
               <Image
                 width={890}
-                className="mx-auto block object-cover h-[800px] max-lg:h-auto rounded-xl shadow-lg"
+                className="mx-auto block h-[800px] object-cover rounded-xl shadow-lg"
                 height={369}
                 src={
-                  process.env.NEXT_PUBLIC_URL_BACKEND + events.image.file_path
+                  process.env.NEXT_PUBLIC_URL_BACKEND + events?.image?.file_path
                 }
                 alt={events.name}
               />
             </div>
           </div>
-          <div className="mt-[450px] max-lg:mt-6">
+          <div className="mt-5 max-lg:mt-6">
             <div className="flex items-center gap-7 justify-center">
               <div className="flex items-center gap-1">
                 <BiCalendar className="text-gray-400" />
@@ -167,7 +173,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <span className="text-gray-200">|</span>
               <div className="flex items-center gap-1">
                 <EyeIcon className="text-gray-400" />
-                <p className="text-sm text-gray-500">230</p>
+                <p className="text-sm text-gray-500">{events.viewsCount}</p>
               </div>
             </div>
             <div className="mt-5">
@@ -180,6 +186,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               ></div>
             </div>
           </div>
+
           <div
             className={`${events.social_network_links ? "bg-gray-100" : ""} py-3 px-2 rounded-md mt-3 flex justify-center`}
           >
