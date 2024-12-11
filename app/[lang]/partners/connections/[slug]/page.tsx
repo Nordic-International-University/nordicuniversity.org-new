@@ -57,13 +57,12 @@ export async function generateMetadata({
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const requestHeaders = headers();
-  const nextRequestHeader = JSON.stringify(
-    Object.fromEntries(requestHeaders.entries()),
-  );
+  const clientIPAddress =
+    requestHeaders.get("x-forwarded-for")?.split(",")[0] || "unknown";
 
   const lang = await getCurrentLangServer();
   const news: Event = await getMeetingBySlug(params.slug, lang, {
-    nextRequest: nextRequestHeader,
+    client_ip_address: clientIPAddress,
   });
   const t = await getTranslations("partners");
 
