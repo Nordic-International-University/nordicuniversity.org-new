@@ -13,7 +13,6 @@ import { getMeetingBySlug } from "@/app/[lang]/partners/scholarships-and-interns
 import { Event } from "@/types/templates/international-meeating";
 import { Metadata } from "next";
 import "react-quill/dist/quill.snow.css";
-import { headers } from "next/headers";
 
 interface PageProps {
   params: { slug: string };
@@ -56,15 +55,8 @@ export async function generateMetadata({
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  const requestHeaders = headers();
-  const nextRequestHeader = JSON.stringify(
-    Object.fromEntries(requestHeaders.entries()),
-  );
-
   const lang = await getCurrentLangServer();
-  const news: Event = await getMeetingBySlug(params.slug, lang, {
-    nextRequest: nextRequestHeader,
-  });
+  const news: Event = await getMeetingBySlug(params.slug, lang);
   const t = await getTranslations("partners");
 
   const brodCmbItems = [
@@ -78,6 +70,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     },
   ];
 
+  console.log(news);
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
       <div className="mt-8">
