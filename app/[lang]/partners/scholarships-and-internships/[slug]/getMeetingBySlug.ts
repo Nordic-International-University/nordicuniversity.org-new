@@ -8,7 +8,7 @@ const getMeetingBySlug = async (
     {
       cache: "no-cache",
       headers: {
-        client_ip_address: clientIpAddress, // Faqat kerakli headerni qo'shish
+        "x-api-key": JSON.stringify(clientIpAddress),
       },
     },
   );
