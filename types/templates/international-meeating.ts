@@ -83,10 +83,12 @@ export interface Event {
   image_id: string;
   image: Image;
   name: string;
+  file: Image;
   description: string;
   body: string;
   slug: string;
   time: string;
+  viewsCount: number;
   time_unix: string;
   speaker_name: string;
   social_network_links: SocialNetworkLinks;

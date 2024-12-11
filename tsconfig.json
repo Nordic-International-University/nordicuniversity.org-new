@@ -5,6 +5,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "include": [
+      "global.d.ts"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

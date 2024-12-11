@@ -1,5 +1,5 @@
 import React from "react";
-import ClientPage from "@/app/[lang]/university/documents/ClientPage";
+import ClientPage from "@/app/[lang]/university/patents/ClientPage";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 
 export const metadata = {

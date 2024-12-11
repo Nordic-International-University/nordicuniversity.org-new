@@ -44,6 +44,7 @@ const LanguageSelect = ({ color }: { color: string }) => {
     const setInitialLanguage = async () => {
       const pathLang = pathname.split("/")[1];
       const cookieLang = Cookies.get("lang");
+      const defaultLang = await fetchDefaultLanguage();
 
       if (languages.some((lang) => lang.value === pathLang)) {
         setLanguage(pathLang);
@@ -54,11 +55,11 @@ const LanguageSelect = ({ color }: { color: string }) => {
       ) {
         setLanguage(cookieLang);
       } else {
-        const defaultLang = await fetchDefaultLanguage();
         setLanguage(defaultLang);
         Cookies.set("lang", defaultLang, { path: "/" });
       }
     };
+
     setInitialLanguage();
   }, [pathname]);
 
@@ -77,9 +78,10 @@ const LanguageSelect = ({ color }: { color: string }) => {
     setLanguage(lang.value);
     setIsOpen(false);
     Cookies.set("lang", lang.value, { path: "/" });
-
-    const newPath = `/${lang.value}${pathname.replace(/^\/[a-z]{2}/, "")}`;
     window.scrollTo(0, 0);
+    const newPath = `/${lang.value}${
+      pathname.startsWith(`/${language}`) ? pathname.slice(3) : pathname
+    }`;
     router.push(newPath);
   };
 

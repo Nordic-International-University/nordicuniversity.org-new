@@ -21,7 +21,7 @@ const ClientPage = ({ props }: any) => {
     },
     {
       url: "/university/documents",
-      name: t("document.section_title"),
+      name: t("document.subItems.5"),
     },
   ];
 

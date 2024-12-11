@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { Staff } from "@/types/templates/structure.types";
 import { TbFileCv } from "react-icons/tb";
+import "react-quill/dist/quill.snow.css";
 
 const StaffUserCard = ({
   staff,
@@ -27,7 +28,7 @@ const StaffUserCard = ({
   };
 
   return (
-    <div className="border shadow-md max-sm:h-full h-[300px] max-lg:h-auto border-opacity-40 border-gray-300 p-4 sm:p-6 rounded-sm">
+    <div className="border ql-editor shadow-md max-sm:h-full h-[300px] max-lg:h-auto border-opacity-40 border-gray-300 p-4 sm:p-6 rounded-sm">
       <div
         className={`${
           imagePosition === "right" ? "flex-row" : "flex-row-reverse"

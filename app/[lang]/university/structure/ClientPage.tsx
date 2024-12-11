@@ -67,11 +67,11 @@ const ClientPage = ({
 
   const breadcrumbItems = [
     {
-      url: "/university",
+      url: "/university/advantages",
       name: t("document.university"),
     },
     {
-      url: "/university/documents",
+      url: "/university/structure",
       name: t("structure.sectionName"),
     },
   ];

@@ -81,18 +81,24 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <span className="text-gray-200">|</span>
               <div className="flex items-center gap-1">
                 <EyeIcon className="text-gray-400" />
-                <p className="text-sm text-gray-500">230</p>
+                <p className="text-sm text-gray-500">{news.viewsCount}</p>
               </div>
             </div>
             <div className="mt-5">
-              <p className="text-lg leading-8 text-gray-800">
-                {news.description}
-              </p>
-              <div
-                className="mt-6 text-base leading-7 text-justify text-gray-700"
+              <p
+                className="mt-6"
                 dangerouslySetInnerHTML={{ __html: news.body }}
-              ></div>
+              ></p>
             </div>
+            {news?.file?.file_path && (
+              <div className="mt-4">
+                <iframe
+                  src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${news.file.file_path}`}
+                  width="100%"
+                  height="500px"
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">
