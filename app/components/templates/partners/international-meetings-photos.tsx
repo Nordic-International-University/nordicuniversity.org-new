@@ -50,7 +50,7 @@ const Partners = ({ props }: { props: ForumPhoto[] }) => {
                   className="px-6 w-full py-2 text-white bg-text_secondary hover:bg-tertiary rounded-lg transition duration-300"
                   type="primary"
                 >
-                  {t("details")}
+                  {t("detail")}
                 </Button>
               </div>
             </div>

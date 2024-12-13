@@ -42,11 +42,11 @@ const Albums = ({
 
   return (
     <article className="mt-7">
-      <div className="flex items-center justify-center gap-3 mb-5">
+      <div className="flex items-center max-sm:flex-col justify-center gap-3 mb-5">
         {props.map((item, index) => (
           <Button
             key={index}
-            className={`rounded px-10 text-md py-4 ${
+            className={`rounded max-sm:w-full px-10 text-md py-4 ${
               activeIndex === index
                 ? "bg-text_secondary text-white"
                 : "bg-[#DBF2FF]"
@@ -61,7 +61,6 @@ const Albums = ({
         ))}
       </div>
 
-      {/* Chunklangan rasmlarni ko'rsatish */}
       {chunkedImages.map((chunk, chunkIndex) => (
         <div key={chunkIndex} className="wrapper text-center">
           {chunk.map((image: any, index: number) => (

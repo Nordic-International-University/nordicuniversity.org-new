@@ -396,5 +396,19 @@
     "title": "Ma'lumot mavjud emas",
     "message": "Afsuski, so'ralgan ma'lumot topilmadi yoki mavjud emas.",
     "retryMessage": "Iltimos, keyinroq qayta urinib ko'ring yoki boshqa so'rov bilan murojaat qiling."
+  },
+  "searchType": {
+    "all": "Barchasi",
+    "faq": "Ko‘p beriladigan savollar",
+    "news": "Yangiliklar",
+    "science": "Ilm-fan",
+    "podcasts": "Podkastlar",
+    "fields": "Ta'lim yo'nalishlari",
+    "cooperation": "Hamkorlik aloqalari",
+    "eduResources": "Ta'lim resurslari",
+    "pressReleases": "Press-relizlar",
+    "nordicLife": "Nordic life jurnali",
+    "orgStructure": "Tashkiliy tuzilma",
+    "staff": "Xodimlar"
   }
 }

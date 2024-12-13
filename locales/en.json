@@ -59,7 +59,8 @@
         "Regulatory Documents",
         "Organizational Structure",
         "Requisites",
-        "Contact Us"
+        "Contact Us",
+        "Patents"
       ]
     },
     "advantages": {
@@ -307,7 +308,9 @@
       "sectionTitle": "International Scholarships and Internships"
     },
     "forums": {
-      "sectionTitle": "International Forums and Projects"
+      "sectionTitle": "International Forums and Projects",
+      "past": "Past",
+      "future": "Upcoming"
     },
     "formAlbums": {
       "sectionTitle": "Photo Albums of International Meetings",
@@ -365,6 +368,9 @@
     },
     "Press_releases": {
       "sectionTitle": "Press Releases"
+    },
+    "nordic-trend": {
+      "sectionTitle": "Nordic trend"
     }
   },
   "footer": {
@@ -390,6 +396,20 @@
     "title": "No Data Available",
     "message": "Unfortunately, the requested information was not found or is unavailable.",
     "retryMessage": "Please try again later or submit a different request."
+  },
+  "searchType": {
+    "all": "All",
+    "faq": "Frequently Asked Questions",
+    "news": "News",
+    "science": "Science",
+    "podcasts": "Podcasts",
+    "fields": "Educational Directions",
+    "cooperation": "Cooperation Relations",
+    "eduResources": "Educational Resources",
+    "pressReleases": "Press Releases",
+    "nordicLife": "Nordic Life Journal",
+    "orgStructure": "Organizational Structure",
+    "staff": "Staff"
   }
 }
 

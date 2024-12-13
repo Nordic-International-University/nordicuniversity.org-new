@@ -20,15 +20,13 @@ const AdmissionProcess = () => {
           <p className="text-secondary text-justify mt-4 text-[18px]">
             {t("admission_process.body")}
           </p>
-          <Link
-            href={"https://admission.nordicuniversity.org/"}
-            passHref
-            target={"_blank"}
+          <Button
+            target="_blank"
+            href={"https://qabul.nordicuniversity.org/"}
+            className="bg-text_secondary max-md:mt-6 px-5 rounded text-white mt-14"
           >
-            <Button className="bg-text_secondary max-md:mt-6 px-5 rounded text-white mt-14">
-              {t("admission_process.button")}
-            </Button>
-          </Link>
+            {t("admission_process.button")}
+          </Button>
         </div>
         <Image
           className="h-64 w-auto max-md:w-full max-md:h-auto"
