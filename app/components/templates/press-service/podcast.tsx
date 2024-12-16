@@ -12,31 +12,10 @@ import React from "react";
 import Link from "next/link";
 import { podcastType } from "@/types/press-service/press-releases.types";
 import dayjs from "dayjs";
+import SocialLinks from "@/app/components/UI/SocialLinks";
 
 const Podcast = ({ props }: { props: podcastType[] | any }) => {
   const t = useTranslations("press-service");
-
-  const renderSocialLinks = (links: any) => {
-    const icons = {
-      instagram: <FaInstagram />,
-      telegram: <FaTelegram />,
-      youtube: <FaYoutube />,
-      twitter: <FaTwitter />,
-    };
-
-    return Object.entries(links).map(([key, value]) => {
-      if (!value) return null;
-      return (
-        <div
-          key={key}
-          rel="noopener noreferrer"
-          className="text-xl text-[#7A98C1] hover:text-blue-600"
-        >
-          {icons[key as keyof typeof icons]}
-        </div>
-      );
-    });
-  };
 
   return (
     <article className="mt-10 mb-10">
@@ -44,7 +23,7 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
         {props.map((item: podcastType, index: number) => (
           <Link
             target="_blank"
-            href={"/press-service/podcast"}
+            href={item.video_link}
             key={index}
             className="w-full p-4 border-[1px] border-gray-300 rounded-lg flex gap-6 items-stretch max-sm:flex-col max-sm:border-none max-sm:p-0"
           >
@@ -77,9 +56,10 @@ const Podcast = ({ props }: { props: podcastType[] | any }) => {
               </div>
               <div className="justify-center flex items-center gap-4">
                 <span className="h-[0.5px] w-full bg-tertiary"></span>
-                <div className="flex gap-4">
-                  {renderSocialLinks(item.social_network_links)}
-                </div>
+                <SocialLinks
+                  className="mt-0"
+                  social_network_links={item.social_network_links}
+                />
                 <span className="h-[0.5px] w-full bg-tertiary"></span>
               </div>
             </div>

@@ -11,11 +11,14 @@ export interface pressReleasesType {
   updatedAt: string;
 }
 
-interface SocialNetworkLinks {
-  instagram: string;
-  telegram: string;
-  youtube: string;
-  twitter: string;
+interface ISocialNetworkLinks {
+  instagram: string | null;
+  telegram: string | null;
+  facebook: string | null;
+  youtube: string | null;
+  twitter: string | null;
+  mail: string | null;
+  linkedin: string | null;
 }
 
 export interface podcastType {
@@ -27,7 +30,7 @@ export interface podcastType {
   title: string;
   slug: string;
   hashtags: string;
-  social_network_links: SocialNetworkLinks;
+  social_network_links: ISocialNetworkLinks;
   createdAt: string;
   updatedAt: string;
 }

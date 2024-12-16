@@ -34,11 +34,13 @@ interface FileSize {
 }
 
 interface SocialNetworkLinks {
-  instagram: string;
-  telegram: string;
-  facebook: string;
-  youtube: string;
-  twitter: string;
+  instagram: string | null;
+  telegram: string | null;
+  facebook: string | null;
+  youtube: string | null;
+  twitter: string | null;
+  mail: string | null;
+  linkedin: string | null;
 }
 
 interface ResumeFile {

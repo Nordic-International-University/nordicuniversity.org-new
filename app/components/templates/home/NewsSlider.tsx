@@ -77,7 +77,7 @@ const NewsSlider = ({
               },
             }}
             modules={[Navigation]}
-            className="w-full h-[404px] max-lg:h-full"
+            className="w-full h-[284px] max-lg:h-full"
           >
             {props?.map((item, index) => (
               <SwiperSlide key={index}>

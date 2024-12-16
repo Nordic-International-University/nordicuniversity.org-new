@@ -57,9 +57,10 @@ const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
         onCancel={handleCloseModal}
         footer={null}
         centered={true}
-        width="60%"
+        width="90vw" // Ekran kengligiga moslashuvchan o‘lcham
         destroyOnClose={true}
         title={selectedItem.name || t("defaultTitle")}
+        style={{ maxWidth: "100%", padding: 0 }} // Responsiv bo'lish uchun maxWidth va padding
       >
         <div className="relative w-full h-[80vh]">
           <iframe
@@ -68,6 +69,7 @@ const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
             height="100%"
             frameBorder="0"
             title="PDF Viewer"
+            style={{ borderRadius: "0.5rem", border: "none" }} // Yaxshi ko'rinish uchun
           ></iframe>
         </div>
       </Modal>

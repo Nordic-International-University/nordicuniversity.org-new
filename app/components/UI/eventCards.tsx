@@ -10,6 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
+import SocialLinks from "@/app/components/UI/SocialLinks";
 
 const EventCards = ({
   items,
@@ -60,27 +61,7 @@ const EventCards = ({
         <h3 className="text-tertiary text-[17px] font-semibold">
           SPIKER-{event?.speaker_name}
         </h3>
-        <div className="flex items-center mt-6 gap-2">
-          {event.social_network_links &&
-            Object.entries(event.social_network_links).map(
-              ([key, value]: any, idx) => (
-                <Link
-                  key={idx}
-                  href={value || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#7A98C1] z-10 hover:text-secondary"
-                  aria-label={key}
-                >
-                  {key === "facebook" && <FaFacebook className="text-2xl" />}
-                  {key === "telegram" && <FaTelegram className="text-2xl" />}
-                  {key === "youtube" && <FaYoutube className="text-2xl" />}
-                  {key === "instagram" && <FaInstagram className="text-2xl" />}
-                  {key === "twitter" && <FaTwitter className="text-2xl" />}
-                </Link>
-              ),
-            )}
-        </div>
+        <SocialLinks social_network_links={event?.social_network_links} />
       </div>
     </Link>
   );
