@@ -2,7 +2,6 @@ import React from "react";
 import BigArticlesCard from "@/app/components/Cards/BigArticlesCard";
 import { redirect } from "next/navigation";
 import RoundedSvg from "@/app/components/helpers/RoundeSvg";
-import { cache } from "sharp";
 
 export async function generateMetadata({
   params,
@@ -53,6 +52,7 @@ async function fetchVolumeAndArticles(volumeId: string) {
   try {
     const articleRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/article/user/volume/${volumeId}`,
+      { cache: "no-store" },
     );
 
     if (!articleRes.ok) {
@@ -62,13 +62,14 @@ async function fetchVolumeAndArticles(volumeId: string) {
 
     const articles = await articleRes.json();
 
+    console.log(articleRes);
     if (!articles || articles.length === 0) {
       return { articles: null, volume: null };
     }
 
     const volumeRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/volume/${volumeId}`,
-      { cache: "no-store" },
+      { cache: "no-cache" },
     );
 
     if (!volumeRes.ok) {
