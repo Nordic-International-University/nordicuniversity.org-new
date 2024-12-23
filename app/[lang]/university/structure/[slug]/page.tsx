@@ -52,7 +52,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
     <article className={`mt-12 max-lg:16 ${montserrat_font.className}`}>
       <div className="container">
         <div className="flex justify-between gap-7">
-          <ul className="flex flex-col min-w-[300px] max-lg:hidden gap-2">
+          <ul className="flex flex-col w-[350px] max-lg:hidden gap-2">
             {allStructuresByType.map((item, index) => (
               <Link key={index} href={`/university/structure/${item.slug}`}>
                 <li className="bg-[#DBF2FF] text-[#364E6B] rounded-md font-normal text-md py-1 pl-2">
@@ -61,7 +61,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
               </Link>
             ))}
           </ul>
-          <div>
+          <div className="w-[80%]">
             {staffData && (
               <>
                 <div>
