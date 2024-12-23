@@ -103,7 +103,11 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
 
-  const news: NewsItem = await getNewsBySlug(params.slug, lang);
+  const news: NewsItem = await getNewsBySlug(
+    params.slug,
+    lang,
+    clientIpAddress,
+  );
 
   const allNews: { data: NewsItem[] } = await getAllNews({
     lang,

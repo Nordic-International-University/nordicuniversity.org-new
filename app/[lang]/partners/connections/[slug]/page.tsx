@@ -59,7 +59,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
   const requestHeaders = headers();
   const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
-  console.log(clientIpAddress);
+
   const news: Event = await getMeetingBySlug(
     params.slug,
     lang,

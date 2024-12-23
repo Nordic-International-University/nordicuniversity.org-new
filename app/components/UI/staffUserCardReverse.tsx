@@ -30,10 +30,13 @@ const StaffUserCard = ({
               __html: staff.description,
             }}
           ></p>
-          <div className="flex items-center translate-y-4  w-full max-lg:mt-6 max-sm:justify-between max-sm:gap-3 gap-4">
+          <div className="flex items-center translate-y-4 mb-3 w-full max-lg:mt-6 max-sm:justify-between max-sm:gap-3 gap-4">
             <span className="w-24 max-sm:w-full sm:w-[200px] bg-[#46658B] h-0.5"></span>
             <div className="flex justify-center items-center gap-3 lg:gap-4">
-              <SocialLinks social_network_links={staff.social_network_links} />
+              <SocialLinks
+                className="mt-0"
+                social_network_links={staff.social_network_links}
+              />
               <Link
                 href={
                   process.env.NEXT_PUBLIC_URL_BACKEND +
@@ -55,7 +58,7 @@ const StaffUserCard = ({
             height={250}
             src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
             alt={staff.full_name}
-            className="rounded-full max-sm:object-contain max-sm:h-auto object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"
+            className="rounded-full max-sm:object-contain max-sm:mb-0 max-sm:h-auto object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"
           />{" "}
           <p className="text-xs mt-3 sm:text-md uppercase max-w-[299px] text-center block mx-auto font-semibold text-[#364E6B]">
             {staff.position}

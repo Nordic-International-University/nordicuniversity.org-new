@@ -45,6 +45,19 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
         Object.entries(social_network_links).map(([key, value], idx) => {
           if (!value) return null;
 
+          if (key === "mail") {
+            return (
+              <a
+                key={idx}
+                href={`mailto:${value}`}
+                className="text-[#7A98C1] z-10 hover:text-secondary"
+                aria-label={key}
+              >
+                {iconsMap[key] || null}
+              </a>
+            );
+          }
+
           return (
             <Link
               key={idx}
@@ -54,7 +67,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
               className="text-[#7A98C1] z-10 hover:text-secondary"
               aria-label={key}
             >
-              {iconsMap[key] || null}{" "}
+              {iconsMap[key] || null}
             </Link>
           );
         })}

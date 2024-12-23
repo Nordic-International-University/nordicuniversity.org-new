@@ -70,7 +70,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
                   </h1>
                   <BroadCamp items={[breadcrumbItems]} />
                 </div>
-                <div className="relative">
+                <div className="relative mt-3">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}
                     width={367}
@@ -112,7 +112,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
               <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-4">
                 {t("structure.employees")}
               </h2>
-              <div className="flex flex-col gap-6">
+              <div className="flex w-full flex-col gap-6">
                 {staffData.staffs &&
                   staffData.staffs.map((item: any, index: number) => (
                     <StaffUserCardReverse

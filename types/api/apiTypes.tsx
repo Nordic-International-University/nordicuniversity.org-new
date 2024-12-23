@@ -2,6 +2,7 @@ export interface getAllFaqsParameterTypes {
   page: string;
   limit: string;
   lang: string;
+  clientIpAddress?: string;
 }
 
 export interface getAllAlbumsByTypeProps {
