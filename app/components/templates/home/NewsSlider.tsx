@@ -83,7 +83,7 @@ const NewsSlider = ({
               <SwiperSlide key={index}>
                 <div className="flex max-lg:flex-col items-center max-lg:gap-3 gap-12 justify-between">
                   <Image
-                    className={`max-sm:h-auto max-lg:rounded-md max-lg:min-h-[270px] max-sm:object-cover transition-transform ${index === activeIndex ? "max-lg:translate-y-0" : "max-lg:translate-y-7"}`}
+                    className={`max-sm:h-auto max-lg:rounded-md max-w-[300px] object-cover h-[270px] max-sm:object-cover transition-transform ${index === activeIndex ? "max-lg:translate-y-0" : "max-lg:translate-y-7"}`}
                     height={400}
                     width={400}
                     src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}

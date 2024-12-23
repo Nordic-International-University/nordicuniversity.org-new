@@ -12,6 +12,7 @@ import { getNewsBySlug } from "@/app/[lang]/press-service/news/[slug]/getNewsByS
 import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
+import { headers } from "next/headers";
 
 export const generateMetadata = async ({
   params,
@@ -98,6 +99,9 @@ export const generateMetadata = async ({
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
+  const requestHeaders = headers();
+
+  const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
 
   const news: NewsItem = await getNewsBySlug(params.slug, lang);
 

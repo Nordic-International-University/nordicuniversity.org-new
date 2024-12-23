@@ -253,7 +253,28 @@ table td {
     transform: rotateX(180deg);
 }
 
+.ql-editor {
+    text-align: justify; /* Matnni ikki tomondan tekislaydi */
+}
 
+.ql-editor p {
+    display: inline; /* Har bir <p> inline ko'rinishda bo'ladi */
+}
+
+.ql-editor ol,
+.ql-editor ul {
+    display: inline-block; /* Listlarni inline qilib ko'rsatadi */
+    margin: 0; /* Marginlarni o'chirish */
+    padding-left: 20px; /* Ro'yxatlar uchun minimal bo'shliq */
+}
+
+/* Rasm uchun float va joylashuv */
+.float-image {
+    float: left; /* Rasmni chap tomonga joylashtiradi */
+    margin-right: 1.5rem; /* Matn va rasm o'rtasidagi bo'shliq */
+    margin-bottom: 1rem; /* Pastki bo'shliq */
+    border-radius: 0.5rem; /* Burchaklarni yumaloqlash */
+}
 
 .wrapper{
     --_gap: .5rem;

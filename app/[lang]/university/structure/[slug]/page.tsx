@@ -70,29 +70,42 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
                   </h1>
                   <BroadCamp items={[breadcrumbItems]} />
                 </div>
-                <div className="flex mt-4 justify-between max-lg:flex-col-reverse items-start gap-6">
-                  <div className="max-lg:w-full justify-between w-[60%]">
-                    <h2 className="text-secondary max-sm:hidden block text-lg leading-6 font-semibold">
-                      {t("structure.task")}
-                    </h2>
-                    <p
-                      className="ql-editor text-justify text-md tracking-wide mt-3 text-[#46658BCC]"
-                      dangerouslySetInnerHTML={{ __html: staffData.mission }}
-                    ></p>
-                  </div>
-                  <div className="relative max-lg:w-full">
-                    <Image
-                      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}
-                      width={367}
-                      height={200}
-                      className="w-[400px] rounded-xl h-[250px] max-lg:w-full mt-10 object-cover"
-                      alt={staffData.name}
-                    />
-                    <h2 className="text-secondary max-sm:block hidden absolute -bottom-5 left-[50%] bg-[#DBF2FF] px-24 rounded py-3 translate-x-[-50%] translate-[-50%] text-lg leading-6 font-normal">
-                      {t("structure.task")}
-                    </h2>
-                  </div>
+                <div className="relative">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}
+                    width={367}
+                    height={200}
+                    className="float-right ml-6 mb-4 rounded-lg"
+                    alt={staffData.name}
+                  />
+                  <p
+                    className="ql-editor inline text-justify"
+                    dangerouslySetInnerHTML={{ __html: staffData.mission }}
+                  ></p>
                 </div>
+                {/*<div className="flex mt-4 justify-between max-lg:flex-col-reverse items-start gap-6">*/}
+                {/*  <div className="max-lg:w-full justify-between w-[60%]">*/}
+                {/*    <h2 className="text-secondary max-sm:hidden block text-lg leading-6 font-semibold">*/}
+                {/*      {t("structure.task")}*/}
+                {/*    </h2>*/}
+                {/*    <p*/}
+                {/*      className="ql-editor text-justify text-md tracking-wide mt-3 text-[#46658BCC]"*/}
+                {/*      dangerouslySetInnerHTML={{ __html: staffData.mission }}*/}
+                {/*    ></p>*/}
+                {/*  </div>*/}
+                {/*  <div className="relative max-lg:w-full">*/}
+                {/*    <Image*/}
+                {/*      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}*/}
+                {/*      width={367}*/}
+                {/*      height={200}*/}
+                {/*      className="w-[400px] rounded-xl h-[250px] max-lg:w-full mt-10 object-cover"*/}
+                {/*      alt={staffData.name}*/}
+                {/*    />*/}
+                {/*    <h2 className="text-secondary max-sm:block hidden absolute -bottom-5 left-[50%] bg-[#DBF2FF] px-24 rounded py-3 translate-x-[-50%] translate-[-50%] text-lg leading-6 font-normal">*/}
+                {/*      {t("structure.task")}*/}
+                {/*    </h2>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
               </>
             )}
             <div className="mt-24 max-sm:mt-10">

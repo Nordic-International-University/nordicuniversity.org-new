@@ -90,15 +90,15 @@ const Nav: FC = () => {
       >
         <div className="container">
           <div className="flex items-center max-xl:py-6 justify-between">
-            <div className="flex max-xl:hidden items-center gap-4 flex-1 justify-start">
-              <ul className="flex items-center ">
+            <div className="flex max-xl:hidden items-center gap-5 flex-1 justify-start">
+              <ul className="flex items-center">
                 {menuItems
                   .slice(0, Math.ceil(menuItems.length / 2))
                   .map((menuItem: any, index: number) => (
                     <li
                       onMouseEnter={() => handleMouseEnter(menuItem)}
                       onMouseLeave={handleMouseLeave}
-                      className="relative text-white text-nowrap py-10 pr-4 text-lg "
+                      className="relative text-white text-nowrap py-10 p-6 text-lg "
                       key={index}
                     >
                       <Link
