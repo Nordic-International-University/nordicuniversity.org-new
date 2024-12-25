@@ -43,7 +43,7 @@ export default async function middleware(req: NextRequest) {
   //     console.error("Error during webmail redirection:", error);
   //     return NextResponse.next();
   //   }
-  // }
+  //// }
 
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
