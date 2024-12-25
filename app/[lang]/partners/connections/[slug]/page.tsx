@@ -94,7 +94,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <h1 className="text-xl max-lg:text-sm pb-5 font-semibold tracking-wide text-primary">
                 {news.name}
               </h1>
-
               <Image
                 width={890}
                 className="mx-auto block object-contain max-lg:h-auto w-full h-full rounded-xl shadow-lg"

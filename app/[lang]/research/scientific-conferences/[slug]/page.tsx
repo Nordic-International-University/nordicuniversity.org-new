@@ -52,7 +52,7 @@ export const generateMetadata = async ({
   }
 
   return {
-    title: `${event.name} - Ilmiy Konferensiya - Xalqaro Nordik Universiteti`,
+    title: `${event.name}`,
     description:
       event.description ||
       "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma’lumot oling.",
@@ -66,7 +66,7 @@ export const generateMetadata = async ({
       "Ilmiy yutuqlar",
     ],
     openGraph: {
-      title: `${event.name} - Ilmiy Konferensiya - Xalqaro Nordik Universiteti`,
+      title: `${event.name}`,
       description:
         event.description ||
         "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma’lumot oling.",

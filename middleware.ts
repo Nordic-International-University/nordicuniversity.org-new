@@ -8,7 +8,7 @@ const intlMiddleware = createMiddleware({
   localeDetection: false,
 });
 
-async function fetchDefaultLanguage() {
+async function fetchDefaultLanguage(): Promise<string> {
   try {
     console.log("Fetching default language...");
     const res = await fetch(
@@ -24,7 +24,7 @@ async function fetchDefaultLanguage() {
 }
 
 export default async function middleware(req: NextRequest) {
-  const cookieLang = req.cookies.get("lang")?.value || null;
+  const cookieLang = req.cookies.get("lang")?.value as string | null;
   const defaultLang = await fetchDefaultLanguage();
   const lang = cookieLang || defaultLang;
 
@@ -34,15 +34,16 @@ export default async function middleware(req: NextRequest) {
   console.log("Initial path:", url.pathname);
   console.log("Detected language:", lang);
 
-  if (pathnameParts[1] === "webmail") {
-    try {
-      const webmailUrl = new URL("https://web5.webspace.uz/webmail");
-      return NextResponse.redirect(webmailUrl.toString());
-    } catch (error) {
-      console.error("Error during webmail redirection:", error);
-      return NextResponse.next();
-    }
-  }
+  // if (pathnameParts[1] === "webmail") {
+  //   try {
+  //     const webmailUrl = new URL("https://web5.webspace.uz/webmail");
+  //     console.log("Redirecting to webmail:", webmailUrl.toString());
+  //     return NextResponse.redirect(webmailUrl.toString(), 301);
+  //   } catch (error) {
+  //     console.error("Error during webmail redirection:", error);
+  //     return NextResponse.next();
+  //   }
+  // }
 
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
@@ -50,8 +51,10 @@ export default async function middleware(req: NextRequest) {
       pathnameParts[1] = lang;
       url.pathname = pathnameParts.join("/");
 
-      console.log("Redirecting to correct locale:", url.pathname);
-      return NextResponse.redirect(url);
+      if (url.pathname !== req.nextUrl.pathname) {
+        console.log("Redirecting to correct locale:", url.pathname);
+        return NextResponse.redirect(url, 301);
+      }
     }
   } else {
     pathnameParts.unshift(lang);
@@ -59,12 +62,11 @@ export default async function middleware(req: NextRequest) {
 
     if (url.pathname !== req.nextUrl.pathname) {
       console.log("Redirecting to language-prefixed path:", url.pathname);
-      return NextResponse.redirect(url);
+      return NextResponse.redirect(url, 301);
     }
   }
 
   req.headers.set("Accept-Language", lang);
-
   return intlMiddleware(req);
 }
 

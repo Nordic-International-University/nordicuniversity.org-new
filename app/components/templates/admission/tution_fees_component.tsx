@@ -29,8 +29,8 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
 
   useEffect(() => {
-    const degreeFromQuery = searchParams.get("degree");
-    const typeFromQuery = searchParams.get("type");
+    const degreeFromQuery = searchParams.get("degree")?.toUpperCase(); // Katta harfga o‘tkazish
+    const typeFromQuery = searchParams.get("type")?.toUpperCase(); // Katta harfga o‘tkazish
 
     if (typeFromQuery && Object.keys(EnumEduDegree).includes(typeFromQuery)) {
       setSelectedEduType(typeFromQuery);
@@ -50,11 +50,12 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
   }, [searchParams, props, setState]);
 
   const handleDegreeChange = (degreeKey: string) => {
-    setSelectedDegree(degreeKey);
+    const normalizedDegreeKey = degreeKey.toUpperCase(); // Katta harfga aylantirish
+    setSelectedDegree(normalizedDegreeKey);
     refetched(false);
 
     const currentParams = new URLSearchParams(searchParams.toString());
-    currentParams.set("degree", degreeKey);
+    currentParams.set("degree", normalizedDegreeKey);
     const newUrl = `${pathname}?${currentParams.toString()}`;
     router.replace(newUrl);
   };
