@@ -49,6 +49,7 @@ const Nav: FC = () => {
 
   const closeHamburgerMenu = () => {
     setOpenMenu(false);
+    setActiveSubItems(null);
   };
 
   const getSubItems = (menuItemName: string) => {
@@ -57,12 +58,25 @@ const Nav: FC = () => {
   };
 
   useEffect(() => {
+    const body = document.body;
+
     if (openMenu) {
-      (document as any).querySelector("body").style.overflowY = "hidden";
+      // Skrollni bloklash
+      body.style.overflow = "hidden";
+      body.style.position = "fixed";
+      body.style.width = "100%";
     } else {
-      (document as any).querySelector("body").style.overflowY = "auto";
+      // Skrollni tiklash
+      body.style.overflow = "auto";
+      body.style.position = "static";
     }
-  });
+
+    return () => {
+      // Har ehtimolga qarshi tiklash
+      body.style.overflow = "auto";
+      body.style.position = "static";
+    };
+  }, [openMenu]);
 
   useEffect(() => {
     if (activeSubItems && subItemsRef.current) {
@@ -161,7 +175,7 @@ const Nav: FC = () => {
       </nav>
       {/*mobile menu*/}
       <div
-        className={`${openMenu ? "top-0" : "-top-[300%]"} transition-all ease-in-out z-40 bg-white w-full h-screen fixed`}
+        className={`${openMenu ? "top-0" : "-top-[300%]"} transition-all ease-in-out z-40 bg-white w-full h-screen overflow-auto fixed`}
       >
         <div className="p-4">
           <div className="flex item-center justify-between">
@@ -238,7 +252,7 @@ const Nav: FC = () => {
         <Image
           src={caricature}
           alt="caricature"
-          className="w-full absolute bottom-0"
+          className={`w-full bottom-0 ${openMenu ? "fixed" : "hidden"}`}
         />
       </div>
       <div
