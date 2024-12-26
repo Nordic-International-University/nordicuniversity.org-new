@@ -1,6 +1,7 @@
 export interface NewsItem {
   id: string;
   image_id: string;
+  keywords: string;
   image: Image;
   title: string;
   description: string;

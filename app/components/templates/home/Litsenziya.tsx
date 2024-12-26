@@ -10,15 +10,14 @@ import Image from "next/image";
 import { LitsenziyaPropsTypes } from "@/types/templates/litsenziya.types";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
-import Link from "next/link";
 import { CloseIcon } from "@nextui-org/shared-icons";
 
 const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("LICENSE");
   const [prevTab, setPrevTab] = useState("LICENSE");
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modalni boshqarish
-  const [iframeSrc, setIframeSrc] = useState(""); // Modalda ko‘rsatiladigan PDF yo‘li
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState("");
   const contentRef = useRef(null);
   const t = useTranslations("university");
 

@@ -56,9 +56,9 @@ const LeftSidebarAndComponent = ({
       </ul>
       <div className="w-4/5 max-lg:w-full">
         <div>
-          <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-3">
+          <h1 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-3">
             {sidebarTitle}
-          </h2>
+          </h1>
           <BroadCamp items={[broadCampItems]} />
         </div>
         <div ref={contentRef}>{children}</div>

@@ -20,7 +20,9 @@ export const generateMetadata = async ({
   params: { slug: string };
 }) => {
   const lang = await getCurrentLangServer();
-  const news = await getNewsBySlug(params.slug, lang);
+  const news: NewsItem = await getNewsBySlug(params.slug, lang);
+
+  const baseUrl = "https://nordicuniversity.org";
 
   if (!news) {
     return {
@@ -31,14 +33,22 @@ export const generateMetadata = async ({
         title: "Yangiliklar - Xalqaro Nordik Universiteti",
         description:
           "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
-        url: `https://nordicuniversity.org/${lang}/press-service/news`,
+        url: `${baseUrl}/${lang}/press-service/news`,
         type: "website",
         images: [
           {
-            url: "https://nordicuniversity.org/images/default-news.jpg", // Default image
+            url: `${baseUrl}/images/default-news.jpg`,
             alt: "Yangiliklar sahifasi",
           },
         ],
+      },
+      alternates: {
+        languages: {
+          uz: `${baseUrl}/uz/press-service/news`,
+          en: `${baseUrl}/en/press-service/news`,
+          ru: `${baseUrl}/ru/press-service/news`,
+        },
+        canonical: `${baseUrl}/press-service/news`,
       },
       structuredData: {
         "@context": "https://schema.org",
@@ -59,25 +69,35 @@ export const generateMetadata = async ({
       news.title,
       "Tadqiqotlar",
       "Ilmiy yangiliklar",
+      news.keywords,
     ],
     openGraph: {
       title: `${news.title} - Xalqaro Nordik Universiteti`,
       description:
         news.description || "Yangilik haqida batafsil ma'lumot oling.",
-      url: `https://nordicuniversity.org/${lang}/press-service/news/${params.slug}`,
+      url: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
       type: "article",
       images: [
         {
-          url: process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path,
+          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
           alt: news.title,
         },
       ],
+    },
+    alternates: {
+      languages: {
+        uz: `${baseUrl}/uz/press-service/news/${params.slug}`,
+        en: `${baseUrl}/en/press-service/news/${params.slug}`,
+        ru: `${baseUrl}/ru/press-service/news/${params.slug}`,
+      },
+      canonical: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
     },
     structuredData: {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
       headline: news.title,
-      description: news.description,
+      description:
+        news.description || "Yangilik haqida batafsil ma'lumot oling.",
       datePublished: news.createdAt,
       dateModified: news.updatedAt,
       author: {
@@ -89,10 +109,10 @@ export const generateMetadata = async ({
         name: "Xalqaro Nordik Universiteti",
         logo: {
           "@type": "ImageObject",
-          url: "https://nordicuniversity.org/logo.png",
+          url: `${baseUrl}/logo.png`,
         },
       },
-      image: process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path,
+      image: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
     },
   };
 };
@@ -139,22 +159,22 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
       <div className="flex items-start max-lg:flex-col mt-6 gap-6">
         <div className="w-[70%] max-lg:w-full">
-          <div className=" h-[474px] max-lg:h-auto rounded-md bg-gray-50">
-            <div className="px-6 max-sm:px-0 pt-5">
+          <div className="max-lg:h-auto rounded-md bg-gray-50">
+            <div className="px-6 max-sm:px-0 pt-5 mb-3">
               <h1 className="text-xl max-lg:text-sm pb-5 font-semibold tracking-wide text-primary">
                 {news.title}
               </h1>
 
               <Image
                 width={890}
-                className="mx-auto  block object-cover max-lg:h-auto h-[830px] rounded-xl shadow-lg"
+                className="mx-auto block object-contain max-lg:h-auto w-full h-full rounded-xl shadow-lg"
                 height={369}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + news.image.file_path}
                 alt={news.title}
               />
             </div>
           </div>
-          <div className="mt-[450px] max-lg:mt-5">
+          <div className="max-lg:mt-5">
             <div className="flex items-center gap-7 justify-center">
               <div className="flex items-center gap-1">
                 <BiCalendar className="text-gray-400" />
