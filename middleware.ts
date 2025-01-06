@@ -24,13 +24,6 @@ async function fetchDefaultLanguage(): Promise<string> {
 }
 
 export default async function middleware(req: NextRequest) {
-  const pathname = req.nextUrl.pathname;
-
-  if (pathname.startsWith("/google") && pathname.endsWith(".html")) {
-    console.log("Skipping middleware for Google verification file:", pathname);
-    return NextResponse.next();
-  }
-
   const cookieLang = req.cookies.get("lang")?.value as string | null;
   const defaultLang = await fetchDefaultLanguage();
   const lang = cookieLang || defaultLang;
@@ -40,6 +33,17 @@ export default async function middleware(req: NextRequest) {
 
   console.log("Initial path:", url.pathname);
   console.log("Detected language:", lang);
+
+  // if (pathnameParts[1] === "webmail") {
+  //   try {
+  //     const webmailUrl = new URL("https://web5.webspace.uz/webmail");
+  //     console.log("Redirecting to webmail:", webmailUrl.toString());
+  //     return NextResponse.redirect(webmailUrl.toString(), 301);
+  //   } catch (error) {
+  //     console.error("Error during webmail redirection:", error);
+  //     return NextResponse.next();
+  //   }
+  //// }
 
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
@@ -67,7 +71,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/((?!api|_next|_vercel|.*\\..*|public|webmail|google.*\\.html).*)",
-  ],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*|public|webmail).*)"],
 };
