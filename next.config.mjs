@@ -29,15 +29,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        // Google verification fayllarini o‘tkazib yuborish
+        // Google verification faylini redirectdan chiqarib tashlash
         source: "/google:filename(.+)?\\.html",
         destination: "/",
-        permanent: false,
-      },
-      {
-        // Boshqa HTML fayllar uchun redirect
-        source: "/:path*.html",
-        destination: "/",
+        has: [
+          {
+            type: "query",
+            key: "skip_redirect",
+            value: "true",
+          },
+        ],
         permanent: false,
       },
     ];
