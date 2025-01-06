@@ -1,5 +1,6 @@
 import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n.ts");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
@@ -28,7 +29,21 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Google verification fayllarini redirectdan chiqarib tashlash
+        source: "/google*.html",
+        destination: "/google-verification",
+        permanent: false,
+      },
+      {
+        // Boshqa .html fayllar uchun redirect
         source: "/:path*.html",
+        has: [
+          {
+            type: "query",
+            key: "google",
+            value: "true",
+          },
+        ],
         destination: "/",
         permanent: false,
       },
