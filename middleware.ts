@@ -26,8 +26,7 @@ async function fetchDefaultLanguage(): Promise<string> {
 export default async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
-  // Agar yo‘l Google verifikatsiya fayli bilan bog‘liq bo‘lsa, middlewareni o‘tkazib yuboramiz.
-  if (pathname.match(/^\/google.*\.html$/)) {
+  if (pathname.startsWith("/google") && pathname.endsWith(".html")) {
     console.log("Skipping middleware for Google verification file:", pathname);
     return NextResponse.next();
   }
@@ -69,7 +68,6 @@ export default async function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    // `google*.html` fayllarini `middleware`dan o‘tkazib yuboramiz.
     "/((?!api|_next|_vercel|.*\\..*|public|webmail|google.*\\.html).*)",
   ],
 };
