@@ -20,8 +20,8 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
       name: t("document.university"),
     },
     {
-      url: "/university/documents",
-      name: t("document.subItems.5"),
+      url: "/university/patents",
+      name: t("document.subItems.6"),
     },
   ];
 
@@ -30,7 +30,7 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
       translationKey="university.document"
-      sidebarTitle={t("document.subItems.5")}
+      sidebarTitle={t("document.subItems.6")}
     >
       <Patents props={props} />
     </LeftSidebarAndComponent>
