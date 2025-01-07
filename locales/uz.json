@@ -56,6 +56,7 @@
       },
       "subItems": [
         "Universitet ustunliklari",
+        "Yil sarhisobi",
         "Meyoriy hujjatlar",
         "Tashkiliy tuzilma",
         "Rekvizitlar",
@@ -132,6 +133,9 @@
       "map": "Xaritadan izlash",
       "email": "info@nordicuniversity.org",
       "hours": "Dushanba - Juma | 09:00 - 19:00"
+    },
+    "year_end_review": {
+      "sectionName": "Yil sarhisobi"
     }
   },
   "research": {

@@ -29,7 +29,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        // Google verification faylini redirectdan chiqarib tashlash
         source: "/google:filename(.+)?\\.html",
         destination: "/",
         has: [

@@ -10,10 +10,14 @@ const initialState: any = {
       },
       {
         name: "subItems.1",
-        url: "/university/documents",
+        url: "/university/year-end-review",
       },
       {
         name: "subItems.2",
+        url: "/university/documents",
+      },
+      {
+        name: "subItems.3",
         url: "/university/structure",
       },
 

@@ -56,6 +56,7 @@
       },
       "subItems": [
         "University Advantages",
+        "Annual Review",
         "Regulatory Documents",
         "Organizational Structure",
         "Requisites",
@@ -131,6 +132,9 @@
       "map": "Search on Map",
       "email": "info@nordicuniversity.org",
       "hours": "Monday - Friday | 09:00 - 19:00"
+    },
+    "year_end_review": {
+      "sectionName": "Annual Review"
     }
   },
   "research": {
