@@ -1,5 +1,7 @@
 import React from "react";
 import ClientPage from "@/app/[lang]/university/year-end-review/ClientPage";
+import { annualsItem } from "@/types/templates/annuals_and_review.types";
+import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 
 export const metadata = {
   title: "Rekvizitlar - Nordik Xalqaro Universiteti",
@@ -24,8 +26,17 @@ export const metadata = {
   },
 };
 
+const getAnnuals = async (): Promise<annualsItem[]> => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/university/annual-review?language=${await getCurrentLangServer()}`,
+  );
+  return response.json();
+};
+
 const Page = async () => {
-  return <ClientPage />;
+  const allAnnuals: annualsItem[] = await getAnnuals();
+
+  return <ClientPage allAnnuals={allAnnuals} />;
 };
 
 export default Page;
