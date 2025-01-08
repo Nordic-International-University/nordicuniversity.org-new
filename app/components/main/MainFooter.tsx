@@ -12,6 +12,8 @@ import { useRouter } from "next/navigation";
 import { getAllContacts } from "@/app/[lang]/university/contacts/sendMessage";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import { useTranslations } from "next-intl";
+import Script from "next/script";
+import UzTopRating from "@/app/components/UI/ratingCard";
 
 const jacquesFrancoisShadow = JacquesFrancoisShadow({
   subsets: ["latin"],
@@ -86,6 +88,7 @@ const MainFooter = () => {
                   {t("send")}
                 </Button>
               </form>
+              <UzTopRating />
             </div>
           </div>
           <div className="flex items-center max-sm:gap-3 max-sm:justify-between gap-16 justify-center mt-12">

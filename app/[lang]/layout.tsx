@@ -14,7 +14,6 @@ import { ConfigProvider } from "antd";
 import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
-import AccessibilityDrawer from "@/app/components/UI/acessibility";
 
 const getAllResources = async () => {
   const response = await fetch(
