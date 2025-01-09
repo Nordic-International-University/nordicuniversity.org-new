@@ -14,6 +14,7 @@ import { ConfigProvider } from "antd";
 import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
+import Script from "next/script";
 
 const getAllResources = async () => {
   const response = await fetch(
@@ -70,6 +71,20 @@ export default async function RootLayout({
           name="google-site-verification"
           content="8FJy9noEZAx-f0QKd8R0mFWvBPxym2l_FD-jw1WgSOk"
         />
+        <meta />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9955H9XVNY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9955H9XVNY');
+        `}
+        </Script>
       </Head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider locale={params.lang} messages={messages}>
