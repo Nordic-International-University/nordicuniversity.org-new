@@ -13,7 +13,6 @@ export interface getAllAlbumsByTypeProps {
 export enum EnumEduDegree {
   BACHELOR = "BACHELOR",
   MASTER = "MASTER",
-  DOCTORATE = "DOCTORATE",
 }
 
 export enum timeFilter {

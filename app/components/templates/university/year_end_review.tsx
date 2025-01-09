@@ -7,24 +7,26 @@ const YearEndReview: FC<{ allAnnuals: annualsItem[] }> = async ({
   allAnnuals,
 }) => {
   return (
-    <div className="grid-cols-3 mt-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
       {allAnnuals.map((item, index) => (
         <div
           key={index}
-          className="shadow-md w-72 max-md:w-full rounded-md hover:shadow-gray-400 transition-all hover:shadow-2xl overflow-hidden"
+          className="shadow-md rounded-md hover:shadow-gray-400 transition-all hover:shadow-2xl overflow-hidden"
         >
           <Image
             width={200}
             height={200}
-            className="mx-auto block w-full h-[250px] object-cover"
+            className="w-full h-[200px] sm:h-[250px] object-cover"
             alt={item.name}
             src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
           />
-          <h2 className="text-text_secondary pl-2 my-3">{item.name}</h2>
+          <h2 className="text-text_secondary px-2 my-3 text-center text-sm sm:text-base lg:text-lg">
+            {item.name}
+          </h2>
           <Button
             href={process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path}
             target="_blank"
-            className="bg-secondary py-[17px] text-white rounded-none font-bold text-lg w-full"
+            className="bg-secondary py-3 text-white font-bold text-sm sm:text-base w-full"
             size="middle"
           >
             PDF
