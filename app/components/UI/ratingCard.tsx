@@ -38,7 +38,7 @@ const UzTopRating = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden mt-7 float-end">
+    <div className="overflow-hidden float-end">
       <div id="uz-top-rating"></div>
 
       <noscript>

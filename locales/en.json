@@ -378,6 +378,7 @@
     }
   },
   "footer": {
+    "old": "Old version of web site",
     "phone": "Phone",
     "email": "Email",
     "excellence_in_teaching": "Striving for Excellence in Education",
