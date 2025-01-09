@@ -72,6 +72,8 @@ export default async function RootLayout({
           content="8FJy9noEZAx-f0QKd8R0mFWvBPxym2l_FD-jw1WgSOk"
         />
         <meta />
+      </Head>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9955H9XVNY"
           strategy="afterInteractive"
@@ -85,8 +87,6 @@ export default async function RootLayout({
           gtag('config', 'G-9955H9XVNY');
         `}
         </Script>
-      </Head>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider locale={params.lang} messages={messages}>
           <ConfigProvider
             locale={
