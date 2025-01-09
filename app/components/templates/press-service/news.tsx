@@ -11,13 +11,13 @@ const News = ({ props }: { props: NewsItem[] | any }) => {
 
   return (
     <article className="mt-10 mb-10">
-      <div className="flex flex-col max-sm:gap-8 gap-6 max-md:place-items-center">
+      <div className="flex flex-col max-sm:gap-8 gap-6">
         {props.map((item: NewsItem, index: number) => (
           <Link key={index} href={`/press-service/news/${item.slug}`}>
             <div className="w-full p-3 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[1px] flex gap-3 items-stretch">
               <Image
                 width={260}
-                className="max-sm:w-full h-[250px] object-cover min-w-[250px]"
+                className="max-sm:w-full h-[250px] object-cover w-[250px]"
                 height={300}
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
                 alt={item.title}
