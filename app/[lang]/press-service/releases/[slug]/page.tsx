@@ -12,12 +12,11 @@ interface ReleaseDetailProps {
   createdAt: string;
 }
 
-// Serverda ma'lumot olish funksiyasi
 async function getRelease(slug: string): Promise<ReleaseDetailProps> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/press/releases/${slug}?language=${await getCurrentLangServer()}`,
     {
-      next: { revalidate: 60 }, // SSR va ISR uchun revalidatsiya
+      next: { revalidate: 60 },
     },
   );
 
@@ -27,8 +26,6 @@ async function getRelease(slug: string): Promise<ReleaseDetailProps> {
 
   return res.json();
 }
-
-// Sahifa Componenti
 export default async function ReleasePage({
   params,
 }: {
@@ -47,16 +44,16 @@ export default async function ReleasePage({
             <FaClock className="mr-2" />
             <span>{release.time}</span>
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            {release.body}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{ __html: release.body }}
+            className="text-lg text-gray-700 leading-relaxed"
+          ></p>
         </div>
       </div>
     </article>
   );
 }
 
-// Metadata uchun funksiyalar
 export async function generateMetadata({
   params,
 }: {

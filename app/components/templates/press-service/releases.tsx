@@ -54,9 +54,10 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
                   <h2 className="max-sm:text-sm  line-clamp-1 font-semibold text-xl text-text_secondary">
                     {item.title}
                   </h2>
-                  <p className="text-sm mt-3 text-brodCrumbColor">
-                    {item.body}
-                  </p>
+                  <p
+                    className="text-sm mt-3 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: item.body }}
+                  ></p>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex text-[#7A98C1] items-center gap-2">
@@ -74,7 +75,10 @@ const Releases = ({ props }: { props: pressReleasesType[] }) => {
               <div className="flip-card-back absolute w-full h-full bg-[#5B7FAB] rounded-md flex flex-col justify-between p-4 text-white shadow-lg">
                 <div>
                   <h2 className="font-semibold text-lg">{item.title}</h2>
-                  <p className="text-sm mt-2">{item.body}</p>
+                  <p
+                    className="text-sm mt-2 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: item.body }}
+                  ></p>
                 </div>
                 <div className="flex justify-end">
                   <Button

@@ -31,20 +31,6 @@ export default async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
   const pathnameParts = url.pathname.split("/");
 
-  console.log("Initial path:", url.pathname);
-  console.log("Detected language:", lang);
-
-  // if (pathnameParts[1] === "webmail") {
-  //   try {
-  //     const webmailUrl = new URL("https://web5.webspace.uz/webmail");
-  //     console.log("Redirecting to webmail:", webmailUrl.toString());
-  //     return NextResponse.redirect(webmailUrl.toString(), 301);
-  //   } catch (error) {
-  //     console.error("Error during webmail redirection:", error);
-  //     return NextResponse.next();
-  //   }
-  //// }
-
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
     if (currentLocale !== lang) {
@@ -52,8 +38,7 @@ export default async function middleware(req: NextRequest) {
       url.pathname = pathnameParts.join("/");
 
       if (url.pathname !== req.nextUrl.pathname) {
-        console.log("Redirecting to correct locale:", url.pathname);
-        return NextResponse.redirect(url, 301);
+        return NextResponse.redirect(url, 307);
       }
     }
   } else {
@@ -61,8 +46,7 @@ export default async function middleware(req: NextRequest) {
     url.pathname = pathnameParts.join("/");
 
     if (url.pathname !== req.nextUrl.pathname) {
-      console.log("Redirecting to language-prefixed path:", url.pathname);
-      return NextResponse.redirect(url, 301);
+      return NextResponse.redirect(url, 307);
     }
   }
 
