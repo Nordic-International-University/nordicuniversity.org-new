@@ -16,7 +16,7 @@ const YearEndReview: FC<{ allAnnuals: annualsItem[] }> = async ({
           <Image
             width={200}
             height={200}
-            className="w-full h-[200px] sm:h-[250px] object-cover"
+            className="w-full h-[200px] sm:h-[400px] object-contain"
             alt={item.name}
             src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
           />
