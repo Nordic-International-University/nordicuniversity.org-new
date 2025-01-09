@@ -12,7 +12,11 @@ import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { CloseIcon } from "@nextui-org/shared-icons";
 
-const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
+const Litsenziya = ({
+  props,
+  sectionTitle,
+  documentButtons,
+}: LitsenziyaPropsTypes) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("LICENSE");
   const [prevTab, setPrevTab] = useState("LICENSE");
@@ -27,7 +31,7 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
 
   const handleTabChange = (item: any) => {
     setPrevTab(selectedTab);
-    setSelectedTab(item);
+    setSelectedTab(item.type);
   };
 
   const handleImageClick = (pdfPath: string) => {
@@ -57,22 +61,20 @@ const Litsenziya = ({ props, sectionTitle }: LitsenziyaPropsTypes) => {
         {sectionTitle}
       </h2>
       <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">
-        {Object.keys(props)
-          .filter((item) => props[item].length !== 0)
-          .map((item, index) => (
-            <Button
-              onClick={() => handleTabChange(item)}
-              key={index}
-              size="large"
-              className={`px-10 md:px-8 rounded text-sm md:text-md font-semibold ${
-                selectedTab === item
-                  ? "bg-text_secondary text-white"
-                  : "bg-text_tertiary text-text_secondary"
-              }`}
-            >
-              {t(`document.buttons.${item}`)}
-            </Button>
-          ))}
+        {documentButtons?.map((item, index) => (
+          <Button
+            onClick={() => handleTabChange(item)}
+            key={index}
+            size="large"
+            className={`px-10 md:px-8 rounded text-sm md:text-md font-semibold ${
+              selectedTab === item.type
+                ? "bg-text_secondary text-white"
+                : "bg-text_tertiary text-text_secondary"
+            }`}
+          >
+            {item.label}
+          </Button>
+        ))}
       </div>
       <div ref={contentRef}>
         <Swiper

@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
 
-const ClientPage = ({ props }: any) => {
+const ClientPage = ({ props, documentButtons }: any) => {
   const t = useTranslations("university");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.documentsSidebarItem,
@@ -31,6 +31,7 @@ const ClientPage = ({ props }: any) => {
       children={
         <Litsenziya
           props={props[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data}
+          documentButtons={documentButtons}
           sectionTitle={""}
         />
       }

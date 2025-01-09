@@ -42,9 +42,19 @@ const getHome = async (lang: string) => {
   return await response.json();
 };
 
+const getDocumentButtons = async (lang: string) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/university/normative-docs-types?language=${lang}`,
+  );
+  return await response.json();
+};
+
 const Page = async () => {
   const { sections } = await getHome(await getCurrentLangServer());
-  return <ClientPage props={sections} />;
+  const documentButtons = await getDocumentButtons(
+    await getCurrentLangServer(),
+  );
+  return <ClientPage props={sections} documentButtons={documentButtons} />;
 };
 
 export default Page;

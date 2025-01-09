@@ -3,6 +3,10 @@ export interface LitsenziyaPropsTypes {
     [key: string]: Document[];
   };
   sectionTitle: string;
+  documentButtons: {
+    label: string;
+    type: string;
+  }[];
 }
 
 interface Document {

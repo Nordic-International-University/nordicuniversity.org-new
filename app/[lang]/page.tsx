@@ -55,11 +55,19 @@ const getHome = async (lang: string) => {
   return await response.json();
 };
 
+const getDocumentButtons = async (lang: string) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/university/normative-docs-types?language=${lang}`,
+  );
+  return await response.json();
+};
+
 export default async function Home({ params: { lang } }: any) {
   if (!["en", "ru", "uz"].includes(lang)) {
     return notFound();
   }
 
+  const documentButtons = await getDocumentButtons(lang);
   const { sections } = await getHome(await getCurrentLangServer());
   return (
     <>
@@ -98,6 +106,7 @@ export default async function Home({ params: { lang } }: any) {
         <Litsenziya
           props={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data}
           sectionTitle={sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].title}
+          documentButtons={documentButtons}
         />
       </section>
       <PhotoGallery
