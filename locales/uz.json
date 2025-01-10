@@ -327,7 +327,7 @@
       "Work and Travel jarayonlari",
       "Imtihon jarayonlari",
       "Nordik life jurnal",
-      "Talabalar kodeks va qo’llanmalar",
+      "Talabalar uchun manbalar",
       "Fotojamlanma"
     ],
     "Work_and_travel": {
@@ -349,7 +349,7 @@
       "sectionTitle": "Nordik life jurnal"
     },
     "CodesAndManuals": {
-      "sectionTitle": "Talabalar uchun kodeks va qo’llanmalar",
+      "sectionTitle": "Talabalar uchun manbalar",
       "CODES": "Kodeks",
       "MANUALS": "Qo’llanma"
     },

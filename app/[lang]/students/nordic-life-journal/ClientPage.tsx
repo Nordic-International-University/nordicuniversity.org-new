@@ -31,7 +31,7 @@ const ClientPage = ({
     const fetchData = async () => {
       const result = await getLiveJournals({
         page: `${currentPage}`,
-        limit: "6",
+        limit: "9",
         lang: getCurrentLangClient(),
       });
       setData(result);
