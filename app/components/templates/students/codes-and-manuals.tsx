@@ -1,25 +1,39 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Button, Modal } from "antd";
-import { CodesAndManualsProps } from "@/types/templates/codes-and-manuals.types";
 import { useTranslations } from "next-intl";
 import { PiFilePdfDuotone } from "react-icons/pi";
 import gsap from "gsap";
 
+interface CodesAndManualsProps {
+  id: string;
+  name: string;
+  file: {
+    file_path: string;
+  };
+  image: {
+    file_path: string;
+  };
+}
+
 const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
   const t = useTranslations("student.CodesAndManuals");
 
-  const itemRefs = useRef<HTMLDivElement[]>([]);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      itemRefs.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, stagger: 0.2, duration: 0.4, ease: "power3.out" },
-    );
-  }, [props.length]);
+    if (itemRefs.current) {
+      gsap.fromTo(
+        itemRefs.current.filter(Boolean),
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 0.4, ease: "power3.out" },
+      );
+    }
+  }, [props]);
+
+  console.log(props);
 
   const showModal = (pdfUrl: string) => {
     setSelectedPdf(pdfUrl);
@@ -37,19 +51,19 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
         {props.map((item, index) => (
           <div
             className="max-w-[300px] max-sm:w-full h-[450px]"
-            key={index}
+            key={item.id}
             ref={(el: any) => (itemRefs.current[index] = el)}
           >
             <Image
               width={300}
               height={500}
-              src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
-              alt={item.type}
+              src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+              alt={item.name}
               className="h-[400px] max-sm:w-full"
             />
             <div className="flex mt-4 items-center justify-between">
               <h2 className="max-sm:text-sm text-xl text-text_secondary">
-                {t(item.type)}
+                {item.name}
               </h2>
               <Button
                 icon={<PiFilePdfDuotone />}
@@ -57,7 +71,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
                 type="primary"
                 onClick={() =>
                   showModal(
-                    process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path,
+                    `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`,
                   )
                 }
               >
@@ -71,7 +85,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
       {/* Modal for displaying PDF */}
       <Modal
         title="PDF Document"
-        visible={isModalVisible}
+        open={isModalVisible}
         onCancel={handleCancel}
         footer={null}
         width="60%"

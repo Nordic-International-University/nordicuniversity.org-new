@@ -6,7 +6,7 @@ export const getAllCodesAndManuals = async ({
   limit,
 }: getAllFaqsParameterTypes) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/students/normative-docs?page=${page}&limit=${limit}`,
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/students/normative-docs?language=${lang}&page=${page}&limit=${limit}`,
   );
   return await response.json();
 };

@@ -15,10 +15,9 @@ import { getAllCodesAndManuals } from "@/app/[lang]/students/codes-and-manuals/g
 import CodesAndManuals from "@/app/components/templates/students/codes-and-manuals";
 import { CodesAndManualsProps } from "@/types/templates/codes-and-manuals.types";
 
-const ClientPage = ({ props }: { props: nordicLife<CodesAndManualsProps> }) => {
+const ClientPage = ({ props }: { props: CodesAndManualsProps[] | any }) => {
   const [data, setData] = useState(props);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(data.totalPages || 1);
   const t = useTranslations("student");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.students.studentsSidebarItems,
@@ -32,7 +31,6 @@ const ClientPage = ({ props }: { props: nordicLife<CodesAndManualsProps> }) => {
         lang: getCurrentLangClient(),
       });
       setData(result);
-      setTotalPages(result.totalPages);
     };
 
     fetchData();
@@ -56,12 +54,12 @@ const ClientPage = ({ props }: { props: nordicLife<CodesAndManualsProps> }) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("CodesAndManuals.sectionTitle")}
     >
-      <CodesAndManuals props={data.data} />
-      <CustomPagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
+      <CodesAndManuals props={data} />
+      {/*<CustomPagination*/}
+      {/*  currentPage={currentPage}*/}
+      {/*  totalPages={totalPages}*/}
+      {/*  onPageChange={setCurrentPage}*/}
+      {/*/>*/}
     </LeftSidebarAndComponent>
   );
 };
