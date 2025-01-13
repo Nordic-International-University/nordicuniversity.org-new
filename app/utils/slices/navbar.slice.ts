@@ -21,10 +21,6 @@ const initialState: any = {
         url: "/university/structure",
       },
       {
-        name: "subItems.6",
-        url: "/university/patents",
-      },
-      {
         name: "subItems.4",
         url: "/university/requisites",
       },
@@ -49,6 +45,10 @@ const initialState: any = {
       {
         name: "subItems.3",
         url: "/research/tasimo-olympiad",
+      },
+      {
+        name: "subItems.4",
+        url: "/research/patents",
       },
     ],
   },

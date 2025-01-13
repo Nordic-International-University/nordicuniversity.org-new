@@ -60,8 +60,7 @@
         "Regulatory Documents",
         "Organizational Structure",
         "Requisites",
-        "Contact Us",
-        "Patents"
+        "Contact Us"
       ]
     },
     "advantages": {
@@ -143,7 +142,8 @@
       "Scientific E-Journal",
       "Scientific Events",
       "Scientific Conferences",
-      "Tasimo Olympiad"
+      "Tasimo Olympiad",
+      "Patents"
     ],
     "eJournal": {
       "button": "Visit this site to submit articles!",

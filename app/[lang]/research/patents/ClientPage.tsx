@@ -9,19 +9,19 @@ import { nordicLiveJournalProps } from "@/types/templates/nordiklieve.types";
 import Patents from "@/app/components/templates/university/patents";
 
 const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
-  const t = useTranslations("university");
+  const t = useTranslations("research");
   const subItemDocument = useSelector(
-    (state: RootState) => state.sideBar.university.documentsSidebarItem,
+    (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
 
   const brodCmbItems = [
     {
       url: "",
-      name: t("document.university"),
+      name: t("title"),
     },
     {
-      url: "/university/patents",
-      name: t("document.subItems.6"),
+      url: "/research/patents",
+      name: t("subItems.4"),
     },
   ];
 
@@ -29,8 +29,8 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
     <LeftSidebarAndComponent
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      translationKey="university.document"
-      sidebarTitle={t("document.subItems.6")}
+      translationKey="research"
+      sidebarTitle={t("subItems.4")}
     >
       <Patents props={props} />
     </LeftSidebarAndComponent>

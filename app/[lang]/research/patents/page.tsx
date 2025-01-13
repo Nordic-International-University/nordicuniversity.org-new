@@ -1,5 +1,5 @@
 import React from "react";
-import ClientPage from "@/app/[lang]/university/patents/ClientPage";
+import ClientPage from "@/app/[lang]/research/patents/ClientPage";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { nordicLiveJournalProps } from "@/types/templates/nordiklieve.types";
 
