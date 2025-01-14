@@ -7,7 +7,6 @@ import { Dropdown, Modal, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
-import { SearchIcon } from "@nextui-org/shared-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import {
@@ -15,7 +14,6 @@ import {
   handleOpenSearchModal,
 } from "@/app/utils/slices/search.slice";
 import SearchModal from "@/app/components/UI/searchModal";
-import { BiCommand } from "react-icons/bi";
 import SearchInput from "@/app/components/main/searchInput";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { useTranslations } from "next-intl";
@@ -30,11 +28,11 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   );
   const { isOpenSearch } = useSelector((state: RootState) => state.search);
   const dispatch = useDispatch();
-  const items: any = props.slice(4, props.length - 1).map((item, index) => {
+  const items: any = props.slice(4, props.length).map((item, index) => {
     return {
       label: (
         <Link target="_blank" href={item.link}>
-          {item.name}
+          {item.name.toUpperCase()}
         </Link>
       ),
       key: index.toString(),
