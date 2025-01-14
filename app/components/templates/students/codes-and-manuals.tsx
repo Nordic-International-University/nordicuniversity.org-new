@@ -47,7 +47,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
 
   return (
     <article className="mt-10 mb-10">
-      <div className="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-6 grid max-md:place-items-center">
+      <div className="grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-14 grid max-md:place-items-center">
         {props.map((item, index) => (
           <div
             className="max-w-[300px] max-sm:w-full h-[450px]"
@@ -61,13 +61,13 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
               alt={item.name}
               className="h-[400px] max-sm:w-full"
             />
-            <div className="flex mt-4 items-center justify-between">
+            <div className="mt-4 items-center justify-between">
               <h2 className="max-sm:text-sm text-xl text-text_secondary">
                 {item.name}
               </h2>
               <Button
                 icon={<PiFilePdfDuotone />}
-                className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
+                className="px-8 max-sm:px-4 w-full mt-3 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
                 type="primary"
                 onClick={() =>
                   showModal(
