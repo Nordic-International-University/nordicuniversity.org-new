@@ -2,31 +2,26 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import { IoMdArrowBack } from "react-icons/io";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Button, Modal } from "antd";
 import Image from "next/image";
 import { LitsenziyaPropsTypes } from "@/types/templates/litsenziya.types";
-import { useTranslations } from "next-intl";
-import gsap from "gsap";
 import { CloseIcon } from "@nextui-org/shared-icons";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 
 const Litsenziya = ({
   props,
   sectionTitle,
   documentButtons,
 }: LitsenziyaPropsTypes) => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("LICENSE");
   const [prevTab, setPrevTab] = useState("LICENSE");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [iframeSrc, setIframeSrc] = useState("");
   const contentRef = useRef(null);
-
-  const handleSlideChange = (swiper: any) => {
-    setActiveIndex(swiper.activeIndex);
-  };
 
   const handleTabChange = (item: any) => {
     setPrevTab(selectedTab);
@@ -43,22 +38,6 @@ const Litsenziya = ({
     setIframeSrc("");
   };
 
-  useEffect(() => {
-    const direction = selectedTab > prevTab ? 100 : -100;
-    gsap.fromTo(
-      contentRef.current,
-      { x: direction, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" },
-    );
-  }, [selectedTab]);
-
-  console.log(props["MEMORANDUMS"].length);
-
-  console.log(props);
-
-  const totalPages = Math.ceil(props["MEMORANDUMS"].length / 3);
-
-  console.log(props["MEMORANDUMS"].length);
   return (
     <article className="mt-12 px-4 md:px-8 max-sm:px-0">
       <h2 className="text-center max-sm:text-lg max-sm:text-left text-tertiary text-2xl md:text-3xl font-semibold pb-7 max-lg:hidden">
@@ -88,17 +67,22 @@ const Litsenziya = ({
         </div>
       )}
 
-      <div ref={contentRef}>
+      <div ref={contentRef} className="relative">
         <Swiper
           key={selectedTab}
           direction="horizontal"
           spaceBetween={20}
           slidesPerView={1}
-          initialSlide={0}
-          onSlideChange={handleSlideChange}
+          autoplay={{
+            delay: 2000,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
           navigation={{
-            prevEl: ".swiper-up-litsenziya",
-            nextEl: ".swiper-down-litsenziya",
+            prevEl: ".custom-prev-button",
+            nextEl: ".custom-next-button",
           }}
           breakpoints={{
             640: {
@@ -111,10 +95,10 @@ const Litsenziya = ({
               slidesPerView: 3,
             },
           }}
-          modules={[Navigation]}
-          className="w-full  max-md:h-full"
+          modules={[Navigation, Autoplay, Pagination]}
+          className="w-full max-md:h-full"
         >
-          {props[selectedTab].map((item, index) => (
+          {props[selectedTab]?.map((item, index) => (
             <SwiperSlide key={index}>
               <Image
                 onClick={() =>
@@ -131,29 +115,13 @@ const Litsenziya = ({
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      {props[selectedTab].length > 3 && (
-        <div className="flex items-center justify-center mt-6 gap-6">
-          <div className="cursor-pointer">
-            <IoMdArrowBack className="text-lg text-text_secondary swiper-up-litsenziya" />
-          </div>
-          <div className="flex items-center gap-2">
-            {Array.from({ length: totalPages }).map((_, pageIndex) => (
-              <div
-                key={pageIndex}
-                className={`h-2 w-2 rounded-full ${
-                  activeIndex === pageIndex
-                    ? "bg-text_secondary"
-                    : "bg-text_secondary opacity-45"
-                }`}
-              />
-            ))}
-          </div>
-          <div className="cursor-pointer">
-            <IoMdArrowBack className="text-lg rotate-180 text-text_secondary swiper-down-litsenziya" />
-          </div>
+        <div className="custom-prev-button absolute top-1/2 left-2 transform -translate-y-1/2 cursor-pointer z-10">
+          <IoMdArrowBack className="text-3xl text-text_secondary" />
         </div>
-      )}
+        <div className="custom-next-button absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer z-10">
+          <IoMdArrowForward className="text-3xl text-text_secondary" />
+        </div>
+      </div>
 
       {/* Modal */}
       <Modal
