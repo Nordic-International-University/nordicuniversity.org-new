@@ -25,6 +25,7 @@ const Litsenziya = ({
   const contentRef = useRef(null);
   const t = useTranslations("university");
 
+  console.log(documentButtons);
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };

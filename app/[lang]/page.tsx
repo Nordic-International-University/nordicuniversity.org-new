@@ -58,6 +58,9 @@ const getHome = async (lang: string) => {
 const getDocumentButtons = async (lang: string) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/university/normative-docs-types?language=${lang}`,
+    {
+      cache: "no-cache",
+    },
   );
   return await response.json();
 };
