@@ -72,6 +72,8 @@ export default async function Home({ params: { lang } }: any) {
 
   const documentButtons = await getDocumentButtons(lang);
   const { sections } = await getHome(await getCurrentLangServer());
+
+  sections[SectionTypeEnum.NORMATIVE_DOCUMENTATION].data;
   return (
     <>
       <Hero />

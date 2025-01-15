@@ -23,9 +23,7 @@ const Litsenziya = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [iframeSrc, setIframeSrc] = useState("");
   const contentRef = useRef(null);
-  const t = useTranslations("university");
 
-  console.log(documentButtons);
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
@@ -54,29 +52,42 @@ const Litsenziya = ({
     );
   }, [selectedTab]);
 
-  const totalPages = Math.ceil(props[selectedTab].length / 3);
+  console.log(props["MEMORANDUMS"].length);
 
+  console.log(props);
+
+  const totalPages = Math.ceil(props["MEMORANDUMS"].length / 3);
+
+  console.log(props["MEMORANDUMS"].length);
   return (
     <article className="mt-12 px-4 md:px-8 max-sm:px-0">
       <h2 className="text-center max-sm:text-lg max-sm:text-left text-tertiary text-2xl md:text-3xl font-semibold pb-7 max-lg:hidden">
         {sectionTitle}
       </h2>
-      <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">
-        {documentButtons?.map((item, index) => (
-          <Button
-            onClick={() => handleTabChange(item)}
-            key={index}
-            size="large"
-            className={`px-10 md:px-8 rounded text-sm md:text-md font-semibold ${
-              selectedTab === item.type
-                ? "bg-text_secondary text-white"
-                : "bg-text_tertiary text-text_secondary"
-            }`}
-          >
-            {item.label}
-          </Button>
-        ))}
-      </div>
+      {documentButtons?.length > 0 && (
+        <div className="flex flex-wrap justify-center items-center mb-6 gap-3 md:gap-5">
+          {documentButtons.map((item, index) => {
+            const isButtonVisible = props[item.type]?.length > 0;
+            return (
+              isButtonVisible && (
+                <Button
+                  onClick={() => handleTabChange(item)}
+                  key={index}
+                  size="large"
+                  className={`px-10 md:px-8 rounded text-sm md:text-md font-semibold ${
+                    selectedTab === item.type
+                      ? "bg-text_secondary text-white"
+                      : "bg-text_tertiary text-text_secondary"
+                  }`}
+                >
+                  {item.label}
+                </Button>
+              )
+            );
+          })}
+        </div>
+      )}
+
       <div ref={contentRef}>
         <Swiper
           key={selectedTab}
@@ -101,7 +112,7 @@ const Litsenziya = ({
             },
           }}
           modules={[Navigation]}
-          className="w-full h-[350px] max-md:h-full md:h-[450px] lg:h-[550px]"
+          className="w-full  max-md:h-full"
         >
           {props[selectedTab].map((item, index) => (
             <SwiperSlide key={index}>
