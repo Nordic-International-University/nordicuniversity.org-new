@@ -129,7 +129,7 @@
 }
 
 .ql-editor a {
-    color: #1d4ed8; /* Siz xohlagan rangni tanlang, masalan Tailwind CSS'dagi blue-700 */
+    color: #1d4ed8;
 }
 
 .slide {
@@ -257,16 +257,6 @@ table td {
     text-align: justify; /* Matnni ikki tomondan tekislaydi */
 }
 
-.ql-editor p {
-    display: inline; /* Har bir <p> inline ko'rinishda bo'ladi */
-}
-
-.ql-editor ol,
-.ql-editor ul {
-    display: inline-block; /* Listlarni inline qilib ko'rsatadi */
-    margin: 0; /* Marginlarni o'chirish */
-    padding-left: 20px; /* Ro'yxatlar uchun minimal bo'shliq */
-}
 
 /* Rasm uchun float va joylashuv */
 .float-image {
