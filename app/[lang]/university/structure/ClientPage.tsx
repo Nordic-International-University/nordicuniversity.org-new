@@ -36,6 +36,7 @@ const ClientPage = ({
     SectionType.RECTORATE,
   );
 
+  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       const result: any = await getAllStructureByType(
@@ -54,15 +55,20 @@ const ClientPage = ({
   useEffect(() => {
     if (structureButtonData) {
       const fetchData = async () => {
-        const result: any = await getAllStructuresBySlug(
-          getCurrentLangClient(),
-          structureButtonData,
-        );
-        setContent(result);
+        try {
+          const result: any = await getAllStructuresBySlug(
+            getCurrentLangClient(),
+            structureButtonData,
+          );
+          setContent(result);
+        } catch (error) {
+          console.error("Error fetching structure data:", error);
+        }
       };
 
       fetchData();
     }
+    console.log(structureButtonData);
   }, [structureButtonData]);
 
   const breadcrumbItems = [

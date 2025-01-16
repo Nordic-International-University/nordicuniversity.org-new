@@ -61,7 +61,7 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
               </Link>
             ))}
           </ul>
-          <div className="w-[80%]">
+          <div className="w-[80%] max-sm:w-full">
             {staffData && (
               <>
                 <div>

@@ -38,8 +38,11 @@ const UniversityInfoTable = ({
     setIsMounted(true);
   }, []);
 
+  console.log(structureTypeData);
+
   const handleChangeStructureType = useCallback((type: any) => {
     handleChangeStructure(type);
+    console.log(type);
   }, []);
 
   const handleMenuClick = ({ key }: { key: string }) => {
@@ -153,7 +156,9 @@ const UniversityInfoTable = ({
                 .filter((item) => item.staffs.length > 0)
                 .map((item, index) => (
                   <Button
-                    onClick={() => setStructureButtonData(item.slug)}
+                    onClick={() => {
+                      setStructureButtonData(item.slug);
+                    }}
                     className={`rounded px-6 md:px-12 py-3 md:py-5 text-sm md:text-md ${
                       structureButtonData === item.slug
                         ? "bg-[#46658B] text-white"
