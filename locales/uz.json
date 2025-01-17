@@ -185,6 +185,9 @@
     }
   },
   "admission": {
+    "faq": {
+      "text": "Xalqaro Nordik universiteti bo‘yicha ko‘p beriladigan savollarga bag‘ishlangan ushbu rukunda abiturientlar kirish jarayoni, hujjatlar ro‘yxati, imtiyozlar, ta'lim dasturlari va boshqa zarur ma’lumotlarni qisqa va aniq shaklda topishlari mumkin."
+    },
     "subItems": [
       "Qabul jarayonlari",
       "Ko’p beriladigan savollar",

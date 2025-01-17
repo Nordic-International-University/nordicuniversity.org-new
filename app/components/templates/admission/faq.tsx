@@ -4,20 +4,22 @@ import faqImage from "@/public/images/admisssion-images/faq.jpg";
 import { Faq } from "@/types/admission/faq.types";
 import Image from "next/image";
 import { QuestionOutlined } from "@ant-design/icons";
+import { useTranslations } from "next-intl";
 
 const Faq = ({ data }: { data: Faq[] }) => {
+  const t = useTranslations("admission.faq");
+
   return (
     <article className="mt-6 max-md:mt-12">
       <div className="flex items-start max-md:flex-col justify-between">
-        <ul className="flex flex-col gap-3">
-          {data.map((item, index) => (
-            <li className="text-tertiary font-medium text-[17px]">
-              {index + 1}. {item.question}
-            </li>
-          ))}
-        </ul>
+        <p
+          className="text-[18px] w-full
+         text-tertiary font-medium max-md:text-sm "
+        >
+          {t("text")}
+        </p>
         <Image
-          className="w-1/3 h-auto max-md:hidden block"
+          className="w-1/3 h-[200px] object-cover object-bottom max-md:hidden block"
           src={faqImage}
           alt="faq"
         />

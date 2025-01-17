@@ -184,6 +184,9 @@
     }
   },
   "admission": {
+    "faq": {
+      "text": "In this section dedicated to frequently asked questions about the International Nordic University, prospective students can find concise and clear information on the admission process, required documents, benefits, academic programs, and other essential details."
+    },
     "subItems": [
       "Admission Process",
       "Frequently Asked Questions",
