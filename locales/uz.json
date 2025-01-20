@@ -29,11 +29,11 @@
     "instagram": "Instagram",
     "print": "Chop etish"
   },
-"other": {
+  "other": {
     "all": "Barchasini ko‘rish"
   },
   "nav": {
-    "more":"YANA"
+    "more": "YANA"
   },
   "menu": {
     "university": "Universitet",
@@ -140,6 +140,7 @@
   "research": {
     "title": "Ilm fan",
     "subItems": [
+      "Doktarantura",
       "Ilmiy elektron jurnal",
       "Ilmiy tadbirlar",
       "Ilmiy konferensiyalar",
@@ -182,6 +183,22 @@
         "farmon": "Olimpiada O‘zbekiston Respublikasi Prezidentining 2023-yil 11-sentyabrdagi “O‘zbekiston – 2030” strategiyasi to‘g‘risida”gi PF-158-sonli Farmoni hamda O‘zbekiston Respublikasi Prezidentining 2020-yil 7-maydagi “Matematika sohasidagi taʼlim sifatini oshirish va ilmiy-tadqiqotlarni rivojlantirish chora-tadbirlari to‘g‘risida”gi PQ-4708-son qarorida belgilangan vazifalar ijrosini taʼminlash maqsadida tashkil qilindi",
         "description": "Mazkur Olimpiada umumiy o'rta ta'lim tashkilotlari, akademik litsey va kasb-hunar maktablari o'quvchilari o'rtasida Matematika fanidan hududiy-saralash, respublika va xalqaro bosqichi (uch bosqichli) o'tkaziladi."
       }
+    },
+
+    "doctorate": {
+      "main_title": "Universitetda\noliy ta’limdan keyingi ta’lim\nfaoliyati ko‘rsatkichlari",
+      "description": "O\n‘zbekiston Respublikasi Oliy ta’lim fan va\ninnovatsiyalar vazirligining 2023 yil 6 noyabrdagi\n№ 156360 sonli lisenziyasiga muvofiq Xalqaro\nNordik Universitetida 6 ta ixtisosliklar bo‘yicha oliy\nta’limdan keyingi ta’lim institutlarida faoliyat olib\nborishga ruxsat berilgan",
+      "center_title": "Doktorant\nva mustaqil izlanuvchilar qabulini yillar kesimida qabul qilnganlik\nholati ma’lumoti",
+      "table_headers": {
+        "years": "Yillar",
+        "doctorate_dsc": "Doktorantlar soni (DSc)",
+        "doctorate_phd": "Doktorantlar soni (PhD)",
+        "researcher_dsc": "Mustaqil izlanuvchilar soni (DSc)",
+        "researcher_phd": "Mustaqil izlanuvchilar soni (PhD)",
+        "total": "Jami yillar kesimida"
+      },
+      "years_label": "yillar",
+      "bottom_title": "Qabul jarayonlari O‘zbekiston Respublikasi Prezidentining 2017-yil 16-fevraldagi “Oliy o‘quv yurtidan\nkeyingi ta’lim tizimini takomillashtirish chora-tadbirlari to‘g‘risida”gi PF-4958-sonli Farmoni va O‘zbekiston\nRespublikasi Vazirlar Mahkamasining 2017-yil 22-maydagi “Oliy ta’limdan keyingi ta’lim tizimini\ntakomillashtirish chora-tadbirlari to‘g‘risida”gi 304-son Qarorlari asosida Oliy ta’limdan keyingi ta’limni\nmuvofiqlashtirishning yagona elektron tizimi <a href='https://daraja.ilmiy.uz' rel='noreferrer' target='_blank' class='text-blue-500 underline'>(daraja ilmiy uz)</a> sayti orqali amalga oshiriladi."
     }
   },
   "admission": {
@@ -292,7 +309,7 @@
     "certificate": {
       "sectionTitle": "Xorijiy tillarni bilish sertifikati",
       "description": "<strong>MAGISTRATURA</strong> mutaxassisliklariga hamda <strong>OLIY TA'LIMDAN KEYINGI TA'LIM</strong> ixtisosliklariga talab etiladigan <strong>XORIJIY TILLARNI BILISH DARAJASI</strong>ni baholovchi milliy\nva xalqaro tan olingan <strong>SERTIFIKATLAR RO'YXATI</strong>",
-      "certificate_type":"Milliy sertifikat"
+      "certificate_type": "Milliy sertifikat"
     },
     "recourse": {
       "sectionTitle": "Ta’lim resurslari"

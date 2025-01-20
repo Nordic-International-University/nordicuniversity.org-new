@@ -61,18 +61,15 @@ const Nav: FC = () => {
     const body = document.body;
 
     if (openMenu) {
-      // Skrollni bloklash
       body.style.overflow = "hidden";
       body.style.position = "fixed";
       body.style.width = "100%";
     } else {
-      // Skrollni tiklash
       body.style.overflow = "auto";
       body.style.position = "static";
     }
 
     return () => {
-      // Har ehtimolga qarshi tiklash
       body.style.overflow = "auto";
       body.style.position = "static";
     };

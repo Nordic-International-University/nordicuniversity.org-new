@@ -139,13 +139,29 @@
   "research": {
     "title": "Science",
     "subItems": [
+      "Doctorate",
       "Scientific E-Journal",
       "Scientific Events",
       "Scientific Conferences",
       "Tasimo Olympiad",
       "Patents"
     ],
-    "eJournal": {
+  "doctorate": {
+    "main_title": "Indicators of postgraduate education\nactivities at the university",
+    "description": "According to license № 156360 issued on November 6, 2023, by the Ministry of Higher Education, Science, and Innovation of the Republic of Uzbekistan, Nordic International University is authorized to operate in postgraduate education institutions in 6 specializations.",
+    "center_title": "State of admission of doctoral students\nand independent researchers\nby years",
+    "table_headers": {
+      "years": "Years",
+      "doctorate_dsc": "Number of doctoral students (DSc)",
+      "doctorate_phd": "Number of doctoral students (PhD)",
+      "researcher_dsc": "Number of independent researchers (DSc)",
+      "researcher_phd": "Number of independent researchers (PhD)",
+      "total": "Total over the years"
+    },
+    "years_label": "years",
+    "bottom_title": "Admission processes are carried out in accordance with the Presidential Decree № PF-4958 of February 16, 2017, \"On measures to improve the system of postgraduate education\" and the Resolution of the Cabinet of Ministers of the Republic of Uzbekistan № 304 of May 22, 2017, \"On measures to improve the system of postgraduate education\" through the Unified Electronic System for Coordination of Postgraduate Education <a href='https://daraja.ilmiy.uz' rel='noreferrer' target='_blank' class='text-blue-500 underline'>(daraja ilmiy uz)</a>."
+  },
+"eJournal": {
       "button": "Visit this site to submit articles!",
       "sectionTitle": "Scientific E-Journal",
       "description": "Scientific and practical e-journal \"<strong>Nordic</strong>\"\nThe International Nordik University has received the right to publish the scientific and practical e-journal \"Nordic\" based on Certificate No. 057211 of the Agency of Information and Mass Communications under the Presidential Administration of the Republic of Uzbekistan. Articles are published in Uzbek, Russian, English, and Finnish languages. <br/> <br/> The Nordic scientific and practical e-journal operates with the ISSN-3030-3400 international standard.",

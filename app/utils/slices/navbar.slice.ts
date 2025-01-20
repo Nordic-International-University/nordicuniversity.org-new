@@ -32,22 +32,26 @@ const initialState: any = {
     researchSidebarItems: [
       {
         name: "subItems.0",
-        url: "/research/scientific-ejournal",
+        url: "/research/doctorate",
       },
       {
         name: "subItems.1",
-        url: "/research/scientific-events",
+        url: "/research/scientific-ejournal",
       },
       {
         name: "subItems.2",
-        url: "/research/scientific-conferences",
+        url: "/research/scientific-events",
       },
       {
         name: "subItems.3",
-        url: "/research/tasimo-olympiad",
+        url: "/research/scientific-conferences",
       },
       {
         name: "subItems.4",
+        url: "/research/tasimo-olympiad",
+      },
+      {
+        name: "subItems.5",
         url: "/research/patents",
       },
     ],
