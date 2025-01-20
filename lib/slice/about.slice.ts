@@ -142,6 +142,11 @@ const initialState = {
       country: "O‘zbekiston",
     },
     {
+      name: "Alijon Ergashev",
+      title: "Iqtisodiyot fanlari boʻyicha falsafa doktori (PhD)",
+      country: "O‘zbekiston",
+    },
+    {
       name: "Musoxon Isakov",
       title: "Iqtisodiyot fanlari nomzodi, dotsent",
       country: "O‘zbekiston",
