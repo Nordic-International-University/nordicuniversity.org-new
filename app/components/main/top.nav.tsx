@@ -62,15 +62,15 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
       className={`py-4 ${navClass} border-b-[0.1px] resources-translate border-white border-opacity-30 z-20 transition-colors bg-opacity-50`}
     >
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center max-lg:gap-3 justify-between">
           <div className="flex items-center gap-8">
-            <div className="flex items-center max-lg:hidden gap-5">
+            <div className="flex items-center gap-5">
               <div
                 onClick={() => dispatch(handleOpenSearchModal())}
-                className="px-4 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#1E4A7D] transition-opacity duration-200 rounded-full cursor-pointer"
+                className="px-4 max-lg:px-2 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#1E4A7D] transition-opacity duration-200 rounded-full cursor-pointer"
               >
                 <IoMdSearch className="text-white text-xl" />
-                <div className="flex text-white font-semibold items-center gap-1">
+                <div className="flex text-white font-semibold max-lg:hidden items-center gap-1">
                   {/*<BiCommand className="text-white text-lg" />*/}
                   <span>CTRL</span>
                   <span>+</span>
@@ -89,7 +89,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
 
                 <SearchModal searchModal={searchText} />
               </Modal>
-              <ul className="flex items-center text-white gap-5">
+              <ul className="flex items-center max-lg:hidden text-white gap-5">
                 {props.slice(0, 4).map((resource, index) => (
                   <Link
                     className="uppercase"
@@ -101,7 +101,11 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                   </Link>
                 ))}
               </ul>
-              <Dropdown menu={{ items }} trigger={["click"]}>
+              <Dropdown
+                className="max-lg:hidden block"
+                menu={{ items }}
+                trigger={["click"]}
+              >
                 <div
                   className="cursor-pointer  text-white"
                   onClick={(e) => e.preventDefault()}
