@@ -4,7 +4,13 @@ import { Button, Modal } from "antd";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
+const Patents = ({
+  props,
+  buttonText,
+}: {
+  props: nordicLiveJournalProps[];
+  buttonText: string;
+}) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState({ name: "", filePath: "" });
 
@@ -46,7 +52,7 @@ const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
                   )
                 }
               >
-                {t("read")}
+                {buttonText}
               </Button>
             </div>
           </div>
@@ -57,10 +63,10 @@ const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
         onCancel={handleCloseModal}
         footer={null}
         centered={true}
-        width="90vw" // Ekran kengligiga moslashuvchan o‘lcham
+        width="90vw"
         destroyOnClose={true}
         title={selectedItem.name || t("defaultTitle")}
-        style={{ maxWidth: "100%", padding: 0 }} // Responsiv bo'lish uchun maxWidth va padding
+        style={{ maxWidth: "100%", padding: 0 }}
       >
         <div className="relative w-full h-[80vh]">
           <iframe
@@ -69,7 +75,7 @@ const Patents = ({ props }: { props: nordicLiveJournalProps[] }) => {
             height="100%"
             frameBorder="0"
             title="PDF Viewer"
-            style={{ borderRadius: "0.5rem", border: "none" }} // Yaxshi ko'rinish uchun
+            style={{ borderRadius: "0.5rem", border: "none" }}
           ></iframe>
         </div>
       </Modal>

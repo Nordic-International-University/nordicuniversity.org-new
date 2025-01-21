@@ -10,7 +10,6 @@ import Patents from "@/app/components/templates/university/patents";
 
 const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
   const t = useTranslations("research");
-  const button = useTranslations("buttons");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
@@ -22,7 +21,7 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
     },
     {
       url: "/research/patents",
-      name: t("subItems.5"),
+      name: t("subItems.6"),
     },
   ];
 
@@ -31,9 +30,9 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
       translationKey="research"
-      sidebarTitle={t("subItems.5")}
+      sidebarTitle={t("subItems.6")}
     >
-      <Patents buttonText={button("read")} props={props} />
+      <Patents buttonText="PDF" props={props} />
     </LeftSidebarAndComponent>
   );
 };
