@@ -129,6 +129,9 @@ export async function generateMetadata({
 const ArticleDetail = async ({ params }: { params: { slug: string } }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/article/user/slug/${params.slug}`,
+    {
+      cache: "no-cache",
+    },
   );
   const data = await response.json();
 
