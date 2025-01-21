@@ -15,6 +15,7 @@ import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
 import Script from "next/script";
+import SnowEffect from "@/app/components/UI/snowEffect";
 
 const getAllResources = async () => {
   const response = await fetch(
@@ -157,6 +158,11 @@ export default async function RootLayout({
             }
           >
             <StoreProvider>
+              <div id="snow-container">
+                {" "}
+                <SnowEffect />
+              </div>
+
               <TopNav props={resources} networks={networks.data} />
               <Nav />
               <main className="flex-grow">{children}</main>
