@@ -38,12 +38,12 @@ const Patents = ({
               src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
               alt={item.name}
             />
-            <div className="flex mt-4 items-center justify-between">
+            <div className="mt-4 items-center justify-between">
               <h2 className="max-sm:text-sm line-clamp-1 text-md text-text_secondary">
                 {item.name}
               </h2>
               <Button
-                className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
+                className="px-8 max-sm:px-4 w-full mt-2 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
                 type="primary"
                 onClick={() =>
                   handleOpenModal(
