@@ -1,7 +1,6 @@
 "use client";
 
 import tasimo_home from "@/public/images/research-images/IMAGE 2024-08-20 12_11_26 1.jpg";
-import statistics from "@/public/images/research-images/tasimo.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "antd";
@@ -12,8 +11,8 @@ const TasimoOlympiad = () => {
 
   return (
     <article>
-      <div className="flex mt-4 gap-3 mb-10 items-start justify-between">
-        <div className="w-1/2">
+      <div className="flex mt-4 max-lg:flex-col-reverse gap-3 mb-10 items-start justify-between">
+        <div className="w-1/2 max-lg: max-lg:mt-20 max-md:mt-5 max-lg:w-full">
           <p className="text-text_secondary font-medium">
             {t("tasimo_olympiad.farmon")}
           </p>
@@ -26,6 +25,7 @@ const TasimoOlympiad = () => {
             {button("detail")}
           </Button>
         </div>
+        <hr className="w-full bg-black h-[0.5px] max-md:block hidden" />
         <div className="relative w-full">
           <Image
             src={tasimo_home}

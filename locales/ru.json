@@ -221,8 +221,8 @@
       "sectionTitle": "Стоимость контрактного обучения",
       "degrees": {
         "FULL_TIME": "ОЧНАЯ",
-        "PART_TIME": "ЗАОЧНАЯ",
-        "SPECIAL_PART_TIME": "СПЕЦИАЛЬНАЯ ЗАОЧНАЯ",
+        "PART_TIME": "Заочная (обычный)",
+        "SPECIAL_PART_TIME": "Заочная (со стажем)",
         "DOCTORATE": "Докторантура"
       },
       "degreeDirection": {
@@ -378,7 +378,7 @@
   },
   "press-service": {
     "last_news": "Последние новости",
-    "subItems": ["Новости", "Пресс-релизы", "Подкасты Nordik", "Тренды Nordik"],
+    "subItems": ["Новости", "Пресс-релизы", "Подкасты Nordik", "Медиатека"],
     "title": "Пресс-служба",
     "news": {
       "sectionTitle": "Новости",
@@ -388,7 +388,7 @@
       "sectionTitle": "Пресс-релизы"
     },
     "nordic-trend": {
-      "sectionTitle": "Нордик тренд"
+      "sectionTitle": "Медиатека"
     }
   },
   "footer": {

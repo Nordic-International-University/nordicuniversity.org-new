@@ -54,8 +54,8 @@ const StaffUserCard = ({
         </div>
         <div className="max-lg:w-full">
           <Image
-            width={250}
-            height={250}
+            width={1000}
+            height={1000}
             src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
             alt={staff.full_name}
             className="rounded-full max-sm:object-contain max-sm:mb-0 max-sm:h-auto object-cover max-lg:mb-4 max-lg:w-full max-lg:rounded-none h-52 w-52 mx-auto"

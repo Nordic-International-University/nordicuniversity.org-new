@@ -11,10 +11,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "react-quill/dist/quill.snow.css";
-import { DownCircleFilled } from "@ant-design/icons";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa";
 import StaffUserCardReverse from "@/app/components/UI/staffUserCardReverse";
+import { DownCircleFilled } from "@ant-design/icons";
 
 const UniversityInfoTable = ({
   data,
@@ -23,6 +23,7 @@ const UniversityInfoTable = ({
   setStructureButtonData,
   handleChangeStructure,
   selectedStructureType,
+  rectorateContent,
 }: {
   data: UniversitySection[];
   structureTypeData: structureByType[];
@@ -30,6 +31,7 @@ const UniversityInfoTable = ({
   structureButtonData: any;
   setStructureButtonData: any;
   selectedStructureType: string;
+  rectorateContent: any;
 }) => {
   const [isMounted, setIsMounted] = useState(false);
   const swiperRef = useRef<SwiperRef>(null);
@@ -47,6 +49,7 @@ const UniversityInfoTable = ({
 
   const handleMenuClick = ({ key }: { key: string }) => {
     handleChangeStructureType(key);
+    console.log(key);
   };
 
   const dropdownMenu = (
@@ -82,10 +85,16 @@ const UniversityInfoTable = ({
     <article className="mt-12 mb-14">
       <div className="flex flex-col w-full md:flex-row gap-7 items-start">
         <div className="hidden items-center max-sm:flex gap-4 w-full justify-between">
-          <div className="md:hidden max-sm:w-1/2">
+          <div
+            className={`md:hidden ${
+              selectedStructureType === SectionType.RECTORATE
+                ? "max-sm:w-1/2"
+                : "max-sm:w-full"
+            }`}
+          >
             <Dropdown overlay={dropdownMenu} trigger={["click"]}>
               <div>
-                <Button className="w-full py-5 text-lg rounded px-6 md:py-[24.4px] bg-[#46658B] text-white flex items-center justify-between">
+                <Button className="w-full  py-5 text-lg rounded px-6 md:py-[24.4px] bg-[#46658B] text-white flex items-center justify-between">
                   {data.find((item) => item.type === selectedStructureType)
                     ?.label || "Select"}
                   <DownCircleFilled />
@@ -93,20 +102,21 @@ const UniversityInfoTable = ({
               </div>
             </Dropdown>
           </div>
-          <div className="hidden max-sm:w-1/2 flex-wrap max-md:flex justify-center gap-4 md:gap-7">
+
+          <div
+            className={`hidden max-sm:w-1/2 ${selectedStructureType === SectionType.RECTORATE ? "" : "max-md:hidden"} flex-wrap max-md:flex justify-center gap-4 md:gap-7`}
+          >
             {selectedStructureType === SectionType.RECTORATE ? (
               <Dropdown
                 overlay={
                   <Menu
-                    // onClick={({ key }) =>
-                    //   // handleChangeStructure(key.toLocaleUpperCase())
-                    // }
-                    items={structureTypeData
-                      .filter((item) => item.staffs && item.staffs.length > 0)
-                      .map((item) => ({
-                        key: item.slug,
-                        label: item.name,
-                      }))}
+                    onClick={(key) => {
+                      setStructureButtonData(key.key);
+                    }}
+                    items={structureTypeData?.map((item: any) => ({
+                      key: item.slug,
+                      label: item.name,
+                    }))}
                   />
                 }
                 className="w-full"
@@ -122,13 +132,7 @@ const UniversityInfoTable = ({
                 </div>
               </Dropdown>
             ) : (
-              <Button
-                className={`rounded px-6 md:px-12 py-3 w-full md:py-[24.4px] bg-[#DBF2FF] text-[#46658B]`}
-                size="large"
-              >
-                {data.find((item) => item.type === selectedStructureType)
-                  ?.label || "Select Option"}
-              </Button>
+              ""
             )}
           </div>
         </div>
@@ -196,49 +200,39 @@ const UniversityInfoTable = ({
                     modules={[]}
                     className="w-full h-auto"
                   >
-                    {structureTypeData.map((item: any) =>
-                      item.staffs.map((staff: any, index: number) => (
+                    {rectorateContent?.staffs?.map(
+                      (staff: any, index: number) => (
                         <SwiperSlide key={index}>
                           <StaffUserCardReverse
                             imagePosition="right"
                             staff={staff}
                           />
                         </SwiperSlide>
-                      )),
+                      ),
                     )}
                   </Swiper>
                   <div className="flex gap-4 justify-center mt-4">
-                    {/* Left Arrow Button */}
                     <button
                       onClick={handlePrev}
                       className="p-2 bg-[#DBF2FF] text-[#46658B] rounded-full hover:bg-[#46658B] hover:text-white"
                     >
                       <FaChevronLeft size={15} />
                     </button>
-
-                    {/* Dots for Pagination */}
                     <div className="flex gap-3 items-center">
-                      {structureTypeData.map((item: any, index: number) =>
-                        item.staffs.map((staff: any, staffIndex: number) => (
+                      {rectorateContent?.staffs?.map(
+                        (staff: any, staffIndex: number) => (
                           <span
                             key={staffIndex}
-                            onClick={() =>
-                              handleDotClick(
-                                index * item.staffs.length + staffIndex,
-                              )
-                            }
+                            onClick={() => handleDotClick(staffIndex)}
                             className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                              activeIndex ===
-                              index * item.staffs.length + staffIndex
+                              activeIndex === staffIndex
                                 ? "bg-[#46658B]"
                                 : "bg-[#DBF2FF]"
                             }`}
                           />
-                        )),
+                        ),
                       )}
                     </div>
-
-                    {/* Right Arrow Button */}
                     <button
                       onClick={handleNext}
                       className="p-2 bg-[#DBF2FF] text-[#46658B] rounded-full hover:bg-[#46658B] hover:text-white"

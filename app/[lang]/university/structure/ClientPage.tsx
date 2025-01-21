@@ -30,8 +30,9 @@ const ClientPage = ({
     (state: RootState) => state.sideBar.university.documentsSidebarItem,
   );
   const [data, setData] = useState<structureByType[]>(structureTypeByTypeData);
-  const [_, setContent] = useState<structureBySLug[]>([]);
-  const [structureButtonData, setStructureButtonData] = useState<string>("");
+  const [content, setContent] = useState<structureBySLug[]>([]);
+  const [structureButtonData, setStructureButtonData] =
+    useState<string>("rectorate");
   const [selectedStructureType, setSelectedStructureType] = useState(
     SectionType.RECTORATE,
   );
@@ -60,6 +61,7 @@ const ClientPage = ({
             getCurrentLangClient(),
             structureButtonData,
           );
+          console.log("ozgardi");
           setContent(result);
         } catch (error) {
           console.error("Error fetching structure data:", error);
@@ -68,7 +70,6 @@ const ClientPage = ({
 
       fetchData();
     }
-    console.log(structureButtonData);
   }, [structureButtonData]);
 
   const breadcrumbItems = [
@@ -90,6 +91,7 @@ const ClientPage = ({
       sidebarTitle={t("structure.sectionName")}
     >
       <Structure
+        rectorateContent={content}
         structureButtonData={structureButtonData}
         setStructureButtonData={setStructureButtonData}
         selectedStructureType={selectedStructureType}

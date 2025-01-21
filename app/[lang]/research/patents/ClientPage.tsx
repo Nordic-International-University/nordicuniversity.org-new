@@ -21,7 +21,7 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
     },
     {
       url: "/research/patents",
-      name: t("subItems.4"),
+      name: t("subItems.5"),
     },
   ];
 
@@ -30,7 +30,7 @@ const ClientPage = ({ props }: { props: nordicLiveJournalProps[] }) => {
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
       translationKey="research"
-      sidebarTitle={t("subItems.4")}
+      sidebarTitle={t("subItems.5")}
     >
       <Patents props={props} />
     </LeftSidebarAndComponent>

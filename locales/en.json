@@ -219,8 +219,8 @@
       "sectionTitle": "Tuition Fees for Educational Programs",
       "degrees": {
         "FULL_TIME": "FULL-TIME",
-        "PART_TIME": "PART-TIME",
-        "SPECIAL_PART_TIME": "SPECIAL PART-TIME",
+        "PART_TIME": "Part-time (ordinary)",
+        "SPECIAL_PART_TIME": "Part-time (with experience)",
         "DOCTORATE": "Doctorate"
       },
       "degreeDirection": {
@@ -383,7 +383,7 @@
       "News",
       "Press Releases",
       "Nordik Podcasts",
-      "Nordik Trends"
+      "Mediatheque"
     ],
     "title": "Press Service",
     "news": {
@@ -394,7 +394,7 @@
       "sectionTitle": "Press Releases"
     },
     "nordic-trend": {
-      "sectionTitle": "Nordic trend"
+      "sectionTitle": "Mediatheque"
     }
   },
   "footer": {

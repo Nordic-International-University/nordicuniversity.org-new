@@ -221,8 +221,8 @@
       "sectionTitle": "Ta’lim yo’nalishining kontrakt narxlari",
       "degrees": {
         "FULL_TIME": "KUNDUZGI",
-        "PART_TIME": "SIRTQI",
-        "SPECIAL_PART_TIME": "MAXSUS SIRTQI",
+        "PART_TIME": "SIRTQI (ODDIY)",
+        "SPECIAL_PART_TIME": "Sirtqi (stajli)",
         "DOCTORATE": "Doktarantura"
       },
       "degreeDirection": {
@@ -384,7 +384,7 @@
       "Yangiliklar",
       "Press relizlar",
       "Nordikda podcast",
-      "Nordik Trend"
+      "Mediateka"
     ],
     "title": "Matbuot xizmati",
     "news": {
@@ -395,7 +395,7 @@
       "sectionTitle": "Press relizlar"
     },
     "nordic-trend": {
-      "sectionTitle": "Nordik trend"
+      "sectionTitle": "Mediateka"
     }
   },
   "footer": {

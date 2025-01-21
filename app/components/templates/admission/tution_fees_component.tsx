@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Button, Dropdown, Menu } from "antd";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { EnumEduDegree } from "@/types/api/apiTypes";
 import Image from "next/image";
 import { DownOutlined } from "@ant-design/icons";
@@ -29,8 +29,8 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
 
   useEffect(() => {
-    const degreeFromQuery = searchParams.get("degree")?.toUpperCase(); // Katta harfga o‘tkazish
-    const typeFromQuery = searchParams.get("type")?.toUpperCase(); // Katta harfga o‘tkazish
+    const degreeFromQuery = searchParams.get("degree")?.toUpperCase();
+    const typeFromQuery = searchParams.get("type")?.toUpperCase();
 
     if (typeFromQuery && Object.keys(EnumEduDegree).includes(typeFromQuery)) {
       setSelectedEduType(typeFromQuery);
