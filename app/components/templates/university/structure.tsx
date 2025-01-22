@@ -155,7 +155,7 @@ const UniversityInfoTable = ({
           <hr className="w-full bg-black h-[1px]" />
           <Button
             href="/university/structure-schema"
-            className="bg-[#DBF2FF]"
+            className="hidden bg-[#DBF2FF]"
             size="large"
           >
             daraxt ko'rinishida
