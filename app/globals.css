@@ -10,6 +10,22 @@
     padding: 0 20px;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+.diagram-container {
+    height: 100%;
+}
+
+
 @media print {
 
     body * {

@@ -264,7 +264,10 @@ const Nav: FC = () => {
       >
         <div className="container pt-48 bottom-0 ease-linear mx-auto py-8 text-white">
           <hr className="bg-white opacity-30 w-full mb-4" />
-          <div ref={subItemsRef} className="flex items-center gap-12">
+          <div
+            ref={subItemsRef}
+            className="flex items-center flex-wrap gap-x-12 gap-y-5"
+          >
             {activeSubItems &&
               getSubItems(activeSubItems).map((subItem: any, index: number) => {
                 return (

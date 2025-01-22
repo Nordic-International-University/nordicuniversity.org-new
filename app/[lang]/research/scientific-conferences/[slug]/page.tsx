@@ -30,6 +30,7 @@ export const generateMetadata = async ({
   const lang = await getCurrentLangServer();
   const event = await getEventBySlug(params.slug, lang);
 
+  console.log(event);
   if (!event) {
     return {
       title: "Ilmiy Konferensiyalar - Xalqaro Nordik Universiteti",

@@ -68,3 +68,37 @@ export interface buttonsType {
 export interface researchEventProps {
   props: ResearchEvents[];
 }
+
+export interface ISymposiumTypeForUser {
+  id: string;
+  name: string;
+  slug: string;
+  symposiums?: ISymposiumForUser[];
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface ISymposiumForUser {
+  id: string;
+  symposium_type_id: string;
+  symposium_type?: ISymposiumTypeForUser;
+  name: string;
+  year: number;
+  file_id: string;
+  file?: Image;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface ISymposiumResponse {
+  id: string;
+  name: string;
+  slug: string;
+  symposiums: ISymposiumForUser[];
+}
+
+export interface ScientificCouncilProps {
+  data: ISymposiumResponse;
+  buttons: ISymposiumTypeForUser[];
+  setSlug: (slug: string) => void;
+}

@@ -22,7 +22,7 @@ const ClientPage = ({
   const [data, setData] = useState(initialData.data);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
-  const [time, setTime] = useState("past");
+  const [time, setTime] = useState("future");
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
@@ -37,8 +37,13 @@ const ClientPage = ({
         3,
         time,
       );
-      setData(result.data);
-      setTotalPages(result.totalPages || 1);
+      if (result.data.length === 0 && time === "future") {
+        setTime("past");
+        setCurrentPage(1);
+      } else {
+        setData(result.data);
+        setTotalPages(result.totalPages || 1);
+      }
     };
     fetchData();
   }, [currentPage, time]);

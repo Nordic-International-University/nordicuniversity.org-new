@@ -152,6 +152,14 @@ const UniversityInfoTable = ({
               {item.label}
             </Button>
           ))}
+          <hr className="w-full bg-black h-[1px]" />
+          <Button
+            href="/university/structure-schema"
+            className="bg-[#DBF2FF]"
+            size="large"
+          >
+            daraxt ko'rinishida
+          </Button>
         </div>
         <div className="w-full md:w-4/5">
           <div className="flex flex-wrap max-md:hidden justify-center gap-4 md:gap-7">

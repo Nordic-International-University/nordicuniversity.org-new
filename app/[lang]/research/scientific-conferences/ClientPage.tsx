@@ -19,7 +19,7 @@ const ClientPage = ({ initialData }: any) => {
   const [data, setData] = useState(initialData.data);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(initialData.totalPages || 1);
-  const [time, setTime] = useState("past");
+  const [time, setTime] = useState("future");
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,

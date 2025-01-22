@@ -58,6 +58,10 @@ const initialState: any = {
         name: "subItems.6",
         url: "/research/certificates",
       },
+      {
+        name: "subItems.7",
+        url: "/research/scientific-council",
+      },
     ],
   },
   admission: {

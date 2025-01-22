@@ -140,13 +140,14 @@
   "research": {
     "title": "Ilm fan",
     "subItems": [
-      "Doktarantura",
+      "Doktorantura",
       "Ilmiy elektron jurnal",
       "Ilmiy tadbirlar",
       "Ilmiy konferensiyalar",
       "Tasimo olimpiadasi",
       "Patentlar",
-      "Guvohnomalar (malakaviy)"
+      "Guvohnomalar (malakaviy)",
+      "Ilmiy kengash"
     ],
     "eJournal": {
       "button": "Maqolalar topshirish!",
@@ -224,7 +225,7 @@
         "FULL_TIME": "KUNDUZGI",
         "PART_TIME": "SIRTQI (ODDIY)",
         "SPECIAL_PART_TIME": "Sirtqi (stajli)",
-        "DOCTORATE": "Doktarantura"
+        "DOCTORATE": "Doktorantura"
       },
       "degreeDirection": {
         "BACHELOR": "Bakalavr",

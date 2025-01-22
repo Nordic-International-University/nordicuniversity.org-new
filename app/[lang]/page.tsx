@@ -10,6 +10,8 @@ import { SectionTypeEnum } from "@/types/home/home.megaMenu.types";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import NordicPattern from "@/public/images/home-images/Nordic_patterns.jpg";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Xalqaro Nordik Universiteti",
@@ -81,7 +83,8 @@ export default async function Home({ params: { lang } }: any) {
         sectionTitle={sections[SectionTypeEnum.NEWS].title}
         props={sections[SectionTypeEnum.NEWS].data}
       />
-      <section className="bg-secondary-gradient py-14 shadow-inner block max-lg:hidden">
+      <section className="relative overflow-hidden shadow-inner block max-lg:hidden">
+        <Image className="absolute" src={NordicPattern} alt="pattern" />
         <DoubleSLider
           url={{
             all: "/research/scientific-events",
