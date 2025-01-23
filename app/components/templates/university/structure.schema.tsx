@@ -19,7 +19,7 @@ const StructureSchema = ({ data }: any) => {
       isReadOnly: true,
       allowVerticalScroll: true,
       padding: 20,
-      allowZoom: false,
+      allowZoom: true,
     });
 
     // Node shabloni

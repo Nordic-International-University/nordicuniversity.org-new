@@ -26,6 +26,8 @@ const ScientificCouncil = ({
     setSlug(slug);
   };
 
+  console.log(data);
+
   useEffect(() => {
     setActiveButton(slug);
   });
@@ -49,13 +51,13 @@ const ScientificCouncil = ({
       </div>
 
       {/* Symposium Cards */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3">
         {data.map((item) => (
           <div
             key={item.id}
             className="w-full bg-white shadow-md rounded-lg border hover:shadow-lg transition"
           >
-            <div className="p-4">
+            <div className="p-4 flex flex-col justify-between w-full">
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 {item.name}
               </h3>
@@ -67,7 +69,9 @@ const ScientificCouncil = ({
                   <Button
                     className="bg-secondary max-sm:px-6 max-sm:py-4 text-white text-lg px-10 py-5"
                     target="_blank"
-                    href={item.file.file_path}
+                    href={
+                      process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path
+                    }
                   >
                     PDF
                   </Button>
