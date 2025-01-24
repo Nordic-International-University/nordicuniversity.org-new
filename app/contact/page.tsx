@@ -52,9 +52,9 @@ const Contact = () => {
                   <FaPhone className="w-6 h-6 text-white" />
                   <a
                     className="text-white text-base font-normal"
-                    href="tel:+99855 508 44 00"
+                    href="tel:+998 90 215 50 44"
                   >
-                    +998 90 215 56 55
+                    +998 90 215 50 44
                   </a>
                 </div>
                 <div className="flex gap-[25px] max-sm:gap-3 items-center">

@@ -31,17 +31,19 @@ const Page = () => {
         "Tahririyat kengashi raisi: iqtisodiyot fanlari doktori, professor",
     },
     {
-      id: 2,
-      image: image_oybek,
-      name: "Oybek Raximberdiyev",
-      title: "Tahririyat kengashi mas’ul kotibir",
-    },
-    {
       id: 3,
       image: image_odil,
       name: "Odil Qo’ysinov",
       title: "Bosh muharrir: pedagogika fanlari doktori, professor",
     },
+
+    {
+      id: 2,
+      image: image_oybek,
+      name: "Oybek Raximberdiyev",
+      title: "Tahririyat kengashi mas’ul kotibi",
+    },
+
     {
       id: 4,
       image: image_aziz,
@@ -141,6 +143,8 @@ const Page = () => {
                       >
                         <div className="relative w-full h-[205px] max-sm:h-[400px]">
                           <Image
+                            width={1000}
+                            height={1000}
                             src={item.image}
                             alt={item.name}
                             className="w-full h-full object-cover"

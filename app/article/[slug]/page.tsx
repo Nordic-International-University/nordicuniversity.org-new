@@ -68,8 +68,6 @@ export async function generateMetadata({
     };
   }
 
-  const authors = data.coAuthors?.map((author: any) => author.full_name);
-
   return {
     title: data.title || "Default Title",
     description: data.abstract || data.description || "Default Description",
