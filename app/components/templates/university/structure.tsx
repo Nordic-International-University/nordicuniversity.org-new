@@ -74,6 +74,8 @@ const UniversityInfoTable = ({
     }
   };
 
+  //ss
+
   const handleDotClick = (index: number) => {
     if (swiperRef.current) {
       swiperRef.current.swiper.slideTo(index);
