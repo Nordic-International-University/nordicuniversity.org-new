@@ -74,7 +74,7 @@ const UniversityInfoTable = ({
     }
   };
 
-  //ss
+  //ssss
 
   const handleDotClick = (index: number) => {
     if (swiperRef.current) {
