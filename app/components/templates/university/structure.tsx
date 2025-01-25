@@ -15,6 +15,7 @@ import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa";
 import StaffUserCardReverse from "@/app/components/UI/staffUserCardReverse";
 import { DownCircleFilled } from "@ant-design/icons";
+import { useTranslations } from "next-intl";
 
 const UniversityInfoTable = ({
   data,
@@ -36,6 +37,7 @@ const UniversityInfoTable = ({
   const [isMounted, setIsMounted] = useState(false);
   const swiperRef = useRef<SwiperRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const t = useTranslations("university.structure");
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -44,12 +46,10 @@ const UniversityInfoTable = ({
 
   const handleChangeStructureType = useCallback((type: any) => {
     handleChangeStructure(type);
-    console.log(type);
   }, []);
 
   const handleMenuClick = ({ key }: { key: string }) => {
     handleChangeStructureType(key);
-    console.log(key);
   };
 
   const dropdownMenu = (
@@ -155,10 +155,10 @@ const UniversityInfoTable = ({
           <hr className="w-full bg-black h-[1px]" />
           <Button
             href="/university/structure-schema"
-            className="hidden bg-[#DBF2FF]"
+            className="bg-[#DBF2FF] text-[#46658B]"
             size="large"
           >
-            daraxt ko'rinishida
+            {t("tree")}
           </Button>
         </div>
         <div className="w-full md:w-4/5">

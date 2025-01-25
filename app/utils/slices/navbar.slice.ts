@@ -162,6 +162,10 @@ const initialState: any = {
         name: "subItems.3",
         url: "/press-service/nordic-trend",
       },
+      {
+        name: "subItems.4",
+        url: "/press-service/nordic-and-mass-media",
+      },
     ],
   },
 };

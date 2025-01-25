@@ -1,6 +1,7 @@
 import React from "react";
 import StructureSchema from "@/app/components/templates/university/structure.schema";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import OrgChartPage from "@/app/components/templates/university/structure.schema";
 
 export const metadata = {
   title: "Rekvizitlar - Nordik Xalqaro Universiteti",
@@ -39,7 +40,7 @@ const getAllStructuresTree = async (lang: string) => {
 const Page = async () => {
   const data = await getAllStructuresTree(await getCurrentLangServer());
   console.log(data);
-  return <StructureSchema data={data} />;
+  return <OrgChartPage data={data} />;
 };
 
 export default Page;

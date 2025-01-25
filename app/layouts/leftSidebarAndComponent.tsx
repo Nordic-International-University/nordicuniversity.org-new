@@ -21,6 +21,9 @@ const LeftSidebarAndComponent = ({
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   const activeIndex = useMemo(() => {
+    if (!sidebarItems || sidebarItems.length === 0) {
+      return -1;
+    }
     return sidebarItems.findIndex((item) => router.includes(item.url));
   }, [router, sidebarItems]);
 

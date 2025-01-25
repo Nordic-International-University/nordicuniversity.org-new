@@ -77,7 +77,8 @@
     "structure": {
       "sectionName": "Tashkiliy tuzilma",
       "task": "Vazifalari",
-      "employees": "Xodimlar"
+      "employees": "Xodimlar",
+      "tree": "Ierarxiya"
     },
     "requisites": {
       "sectionName": "Rekvizitlar",
@@ -349,7 +350,7 @@
     "subItems": [
       "Work and Travel jarayonlari",
       "Imtihon jarayonlari",
-      "Nordik life jurnal",
+      "Nordik life jurnali",
       "Talabalar uchun manbalar",
       "Fotojamlanma"
     ],
@@ -385,8 +386,9 @@
     "subItems": [
       "Yangiliklar",
       "Press relizlar",
-      "Nordikda podcast",
-      "Mediateka"
+      "Podkastlar",
+      "Mediateka",
+      "Nordik va OAV"
     ],
     "title": "Matbuot xizmati",
     "news": {

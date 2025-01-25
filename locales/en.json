@@ -77,7 +77,8 @@
     "structure": {
       "sectionName": "Organizational Structure",
       "task": "Tasks",
-      "employees": "Employees"
+      "employees": "Employees",
+      "tree": "Hierarchy"
     },
     "requisites": {
       "sectionName": "Requisites",
@@ -385,7 +386,8 @@
       "News",
       "Press Releases",
       "Nordik Podcasts",
-      "Mediatheque"
+      "Mediatheque",
+      "Nordic and Mass media"
     ],
     "title": "Press Service",
     "news": {

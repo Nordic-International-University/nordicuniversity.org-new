@@ -79,7 +79,7 @@ const Events = ({ props, sectionTitle }: EventsTypeProps) => {
         {props.map((item, index) => (
           <Link
             href={`/partners/forum-and-projects/${item.slug}`}
-            className="flex items-center max-sm:shadow-md max-sm:bg-box_color max-sm:p-5 max-sm:rounded-md max-sm:bg-opacity-40 sm:bg w-[530px] gap-6"
+            className="flex items-center max-sm:shadow-md max-sm:bg-box_color max-sm:p-5 max-sm:rounded-md max-sm:w-full max-sm:bg-opacity-40 sm:bg w-[530px] gap-6"
             key={index}
           >
             <div
