@@ -8,7 +8,7 @@ import {
 import { getAllMassMedia } from "@/app/[lang]/press-service/nordic-and-mass-media/api";
 
 const Page = async () => {
-  const data: nordicLife<nordicLiveJournalProps> = await getAllMassMedia(
+  const data: nordicLiveJournalProps[] = await getAllMassMedia(
     await getCurrentLangServer(),
   );
   return <ClientPage props={data} />;
