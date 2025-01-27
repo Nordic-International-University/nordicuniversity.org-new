@@ -24,19 +24,17 @@ const getAllResources = async () => {
       cache: "no-cache",
     },
   );
-  const json = await response.json();
-  return json;
+  return await response.json();
 };
 
 const getAllNetworks = async () => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/social-network?page=1&limit=4`,
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/social-network?page=1&limit=10`,
     {
       cache: "no-cache",
     },
   );
-  const json = await response.json();
-  return json;
+  return await response.json();
 };
 
 const inter = Montserrat({
