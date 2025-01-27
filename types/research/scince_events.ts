@@ -55,6 +55,7 @@ export interface ScientificEvent {
   time_unix: string;
   speaker_name: string;
   social_network_links: SocialNetworkLinks[];
+  images: ImageData[];
   createdAt: string;
   updatedAt: string;
 }

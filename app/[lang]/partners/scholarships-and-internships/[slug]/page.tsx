@@ -14,6 +14,7 @@ import { getAllMeeting } from "@/app/[lang]/partners/connections/getAllMeeting";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { Event } from "@/types/templates/international-meeating";
 import { headers } from "next/headers";
+import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
@@ -106,6 +107,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 />
               </div>
             )}
+            <SinglePageGallery images={news.images} />
           </div>
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">

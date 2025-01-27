@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
 import { headers } from "next/headers";
+import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
 export const generateMetadata = async ({
   params,
@@ -191,6 +192,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 ),
               )}
           </div>
+          <SinglePageGallery images={news.images} />
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal

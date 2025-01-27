@@ -1,3 +1,5 @@
+import { ImageData } from "@/types/templates/single.image.galleery.types";
+
 export interface NewsItem {
   id: string;
   image_id: string;
@@ -9,6 +11,7 @@ export interface NewsItem {
   body: string;
   slug: string;
   time: string;
+  images: ImageData[];
   time_unix: number;
   createdAt: string;
   updatedAt: string;

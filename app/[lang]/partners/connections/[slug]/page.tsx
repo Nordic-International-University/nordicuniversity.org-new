@@ -14,6 +14,7 @@ import { Event } from "@/types/templates/international-meeating";
 import { Metadata } from "next";
 import "react-quill/dist/quill.snow.css";
 import { headers } from "next/headers";
+import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
 interface PageProps {
   params: { slug: string };
@@ -131,6 +132,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               />
             </div>
           )}
+          <SinglePageGallery images={news.images} />
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal

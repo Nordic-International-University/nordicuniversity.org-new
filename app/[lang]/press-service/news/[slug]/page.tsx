@@ -13,6 +13,7 @@ import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 import { headers } from "next/headers";
+import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
 export const generateMetadata = async ({
   params,
@@ -198,6 +199,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               ></div>
             </div>
           </div>
+          <SinglePageGallery images={news.images} />
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal

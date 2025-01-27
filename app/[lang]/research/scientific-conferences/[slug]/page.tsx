@@ -21,6 +21,7 @@ import {
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { headers } from "next/headers";
 import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
+import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
 export const generateMetadata = async ({
   params,
@@ -213,6 +214,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 ),
               )}
           </div>
+          <SinglePageGallery images={events.images} />
         </div>
         <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal

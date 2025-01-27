@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
-import { Dropdown, Modal, Space } from "antd";
+import { Dropdown, Modal, Select, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
@@ -56,6 +56,13 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [dispatch]);
+
+  const handleSelectChange = (value: string) => {
+    const selectedLink = props.find((resource) => resource.name === value);
+    if (selectedLink) {
+      window.open(selectedLink.link, "_blank");
+    }
+  };
 
   return (
     <div
@@ -123,22 +130,44 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
             <SocialMedia color="white" />
           </div>
         </div>
-        <div className="max-lg:flex hidden max-lg:mt-6 items-center gap-5">
-          <ul
-            className="flex flex-wrap text-[11px] items-center justify-center
+        <div className="max-md:mt-6 items-center gap-5">
+          <div className="hidden max-md:hidden max-lg:flex md:mt-6 items-center gap-5">
+            <ul
+              className="flex flex-wrap text-[11px] items-center justify-center
            text-white gap-5"
-          >
-            {props.map((resource, index) => (
-              <Link
-                href={resource.link}
-                key={index}
-                className="uppercase"
-                target="_blank"
-              >
-                <li>{resource.name}</li>
-              </Link>
-            ))}
-          </ul>
+            >
+              {props.map((resource, index) => (
+                <Link
+                  href={resource.link}
+                  key={index}
+                  className="uppercase"
+                  target="_blank"
+                >
+                  <li>{resource.name}</li>
+                </Link>
+              ))}
+            </ul>
+          </div>
+
+          {/* Small screens */}
+          <div className="md:hidden flex items-center gap-5">
+            <Select
+              className="w-full text-[11px] border-gray-300 rounded-lg placeholder-gray-500"
+              placeholder="Select a resource"
+              onChange={handleSelectChange}
+              defaultValue={props[0]?.name}
+              options={props.map((resource) => ({
+                label: resource.name,
+                value: resource.name,
+              }))}
+              style={{
+                backgroundColor: "black", // Transparent background
+                color: "white", // Text color
+                border: "1px solid rgba(255, 255, 255, 0.3)", // Border style
+                borderRadius: "8px", // Rounded corners
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

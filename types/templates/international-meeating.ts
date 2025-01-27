@@ -1,3 +1,5 @@
+import { ImageDetails } from "@/types/templates/single.image.galleery.types";
+
 interface FileSize {
   bytes: number;
   kb: string;
@@ -93,6 +95,7 @@ export interface Event {
   speaker_name: string;
   social_network_links: SocialNetworkLinks;
   createdAt: string;
+  images: ImageDetails[];
   updatedAt: string;
   latestItems: Event[];
 }
