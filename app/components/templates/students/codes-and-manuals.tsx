@@ -50,7 +50,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
       <div className="grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-14 grid max-md:place-items-center">
         {props.map((item, index) => (
           <div
-            className="max-w-[300px] max-sm:w-full h-[450px]"
+            className="max-w-[300px] max-sm:w-full"
             key={item.id}
             ref={(el: any) => (itemRefs.current[index] = el)}
           >

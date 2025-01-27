@@ -197,7 +197,7 @@ export default function OrgChartPage({ data }: OrgChartProps) {
           border: "1px solid lightgray",
         }}
       ></div>
-      <div className="absolute w-48 h-[70px] top-0 z-50 left-0 bg-white"></div>
+      <div className="absolute w-48 h-[70px] top-1 z-10 left-0 bg-white"></div>
     </div>
   );
 }
