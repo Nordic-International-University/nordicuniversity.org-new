@@ -33,8 +33,6 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
     }
   }, [props]);
 
-  console.log(props);
-
   const showModal = (pdfUrl: string) => {
     setSelectedPdf(pdfUrl);
     setIsModalVisible(true);
@@ -50,7 +48,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
       <div className="grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-14 grid max-md:place-items-center">
         {props.map((item, index) => (
           <div
-            className="max-w-[300px] max-sm:w-full"
+            className="max-w-[300px] max-sm:shadow-md max-sm:w-full"
             key={item.id}
             ref={(el: any) => (itemRefs.current[index] = el)}
           >
@@ -62,27 +60,41 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
               className="h-[400px] max-sm:w-full"
             />
             <div className="mt-4 items-center justify-between">
-              <h2 className="max-sm:text-sm text-xl text-text_secondary">
+              <h2 className="max-sm:text-sm max-sm:pl-2 text-xl text-text_secondary">
                 {item.name}
               </h2>
-              <Button
-                icon={<PiFilePdfDuotone />}
-                className="px-8 max-sm:px-4 w-full mt-3 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
-                type="primary"
-                onClick={() =>
-                  showModal(
-                    `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`,
-                  )
-                }
-              >
-                PDF
-              </Button>
+              <div className="hidden md:block">
+                {/* Modal ochish uchun tugma (faqat katta ekranlar uchun) */}
+                <Button
+                  icon={<PiFilePdfDuotone />}
+                  className="px-8 max-sm:px-4 w-full mt-3 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
+                  type="primary"
+                  onClick={() =>
+                    showModal(
+                      `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`,
+                    )
+                  }
+                >
+                  PDF
+                </Button>
+              </div>
+              <div className="block md:hidden">
+                {/* Havola orqali ochish (faqat kichik ekranlar uchun) */}
+                <a
+                  href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-2 max-sm:px-4 w-full mt-3 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary inline-flex items-center justify-center"
+                >
+                  <PiFilePdfDuotone className="mr-2" />
+                  PDF
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Modal for displaying PDF */}
       <Modal
         title="PDF Document"
         open={isModalVisible}

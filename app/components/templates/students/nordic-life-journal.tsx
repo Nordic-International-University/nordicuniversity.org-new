@@ -35,17 +35,33 @@ const NordicLifeJournal = ({ props }: { props: nordicLiveJournalProps[] }) => {
               <h2 className="max-sm:text-sm text-xl text-text_secondary">
                 {item.name}
               </h2>
-              <Button
-                className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
-                type="primary"
-                onClick={() =>
-                  handleOpenModal(
-                    process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path,
-                  )
-                }
-              >
-                {t("read")}
-              </Button>
+              <div className="hidden md:block">
+                {/* Modal orqali ochish (faqat katta ekranlar uchun) */}
+                <Button
+                  className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
+                  type="primary"
+                  onClick={() =>
+                    handleOpenModal(
+                      process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path,
+                    )
+                  }
+                >
+                  {t("read")}
+                </Button>
+              </div>
+              <div className="block md:hidden">
+                {/* Havola orqali ochish (kichik ekranlar uchun) */}
+                <a
+                  href={
+                    process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary inline-block text-center"
+                >
+                  {t("read")}
+                </a>
+              </div>
             </div>
           </div>
         ))}
