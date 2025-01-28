@@ -3,6 +3,7 @@ import crypto from "crypto";
 import { exec } from "child_process";
 
 const SECRET = process.env.SECRET_KEY || "secret";
+const SCRIPT_PATH = "/var/www/nordicuniversity/webhook.sh";
 
 export async function POST(req: Request) {
   try {
@@ -25,7 +26,8 @@ export async function POST(req: Request) {
     if (body.ref === "refs/heads/main") {
       console.log("Deploying...");
 
-      exec("sh deploy.sh", (error, stdout, stderr) => {
+      // Webhook skriptini ishga tushirish
+      exec(`sh ${SCRIPT_PATH}`, (error, stdout, stderr) => {
         if (error) {
           console.error(`Deployment error: ${error.message}`);
           return;
