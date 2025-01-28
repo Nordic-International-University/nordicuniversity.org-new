@@ -21,6 +21,7 @@ const jacquesFrancoisShadow = JacquesFrancoisShadow({
 
 const MainFooter = () => {
   const [inputText, setInputText] = useState("");
+  const fullYear = new Date().getFullYear();
   const router = useRouter();
   const [data, setData] = useState<any>({
     phone_1: "",
@@ -110,7 +111,9 @@ const MainFooter = () => {
         <div className="container">
           <div className="flex items-center max-lg:justify-center justify-between py-3">
             <div className="flex items-center gap-9">
-              <h2 className="text-white text-center">{t("university_name")}</h2>
+              <h2 className="text-white text-center">
+                {t("university_name") + " " + fullYear}
+              </h2>
               <h2 className="text-white block max-lg:hidden">
                 {t("rights_reserved")}
               </h2>
