@@ -161,10 +161,10 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 value: resource.name,
               }))}
               style={{
-                backgroundColor: "black", // Transparent background
-                color: "white", // Text color
-                border: "1px solid rgba(255, 255, 255, 0.3)", // Border style
-                borderRadius: "8px", // Rounded corners
+                backgroundColor: "black",
+                color: "white",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                borderRadius: "8px",
               }}
             />
           </div>

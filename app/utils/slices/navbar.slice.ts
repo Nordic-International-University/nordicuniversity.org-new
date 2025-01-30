@@ -98,6 +98,10 @@ const initialState: any = {
         name: "subItems.3",
         url: "/education/contract-prices",
       },
+      {
+        name: "subItems.4",
+        url: "/education/academic-process",
+      },
     ],
   },
   partners: {
