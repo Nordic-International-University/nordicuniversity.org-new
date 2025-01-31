@@ -10,7 +10,7 @@ const Doctorate = ({
   allDDoctorateField,
   allDoctorateCount,
 }: doctorateProps) => {
-  const t = useTranslations("research.doctorate").raw;
+  const t = useTranslations("research.doctorate");
 
   return (
     <section>
@@ -20,7 +20,9 @@ const Doctorate = ({
             <h2 className="text-text_secondary font-semibold text-xl">
               {t("main_title")}
             </h2>
-            <p className="mt-3">{t("description")}</p>
+            <p className="mt-3">
+              {t("description", { fieldCount: allDDoctorateField.length || 6 })}
+            </p>
             <ul className="mt-4">
               {allDDoctorateField.reverse().map((item) => (
                 <li className="font-semibold">

@@ -151,7 +151,7 @@
     ],
   "doctorate": {
     "main_title": "Indicators of postgraduate education\nactivities at the university",
-    "description": "According to license № 156360 issued on November 6, 2023, by the Ministry of Higher Education, Science, and Innovation of the Republic of Uzbekistan, Nordic International University is authorized to operate in postgraduate education institutions in 6 specializations.",
+    "description": "In accordance with the license of the Ministry of Higher Education, Science, and Innovations of the Republic of Uzbekistan № 156360 dated November 6, 2023, the Nordic International University is authorized to operate in postgraduate educational institutions in {fieldCount} fields and {fieldCount} specializations.",
     "center_title": "State of admission of doctoral students\nand independent researchers\nby years",
     "table_headers": {
       "years": "Years",
@@ -288,23 +288,23 @@
       "overview": {
         "title": "Faculties, Departments, and Offices",
         "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices.",
-        "bachelor": "Bachelor's: <strong>19</strong> fields.",
-        "master": "Master's: <strong>13</strong> fields.",
-        "doctorate": "Doctorate: <strong>6</strong> fields.",
+        "bachelor": "Bachelor's: <strong>{count}</strong> fields.",
+        "master": "Master's: <strong>{count}</strong> fields.",
+        "doctorate": "Doctorate: <strong>{count}</strong> fields.",
         "demand": "All our fields of study are in high demand in various sectors."
       },
       "levels": [
         {
           "name": "Bachelor",
-          "description": "You have the opportunity to study in one of 19 educational directions, participate in joint programs, and obtain a diploma from two countries. In the summer, you can participate in a contract-based \"work and travel\" program."
+          "description": "You have the opportunity to study in one of {count} educational directions, participate in joint programs, and obtain a diploma from two countries. In the summer, you can participate in a contract-based \"work and travel\" program."
         },
         {
           "name": "Master's",
-          "description": "Complete one of 13 educational programs and obtain a master's degree. International practical programs and qualified professors will help you become a specialist."
+          "description": "Complete one of {count} educational programs and obtain a master's degree. International practical programs and qualified professors will help you become a specialist."
         },
         {
           "name": "Doctorate",
-          "description": "After higher education, there is the opportunity to pursue a doctorate (PhD and DSc) in 6 directions and engage in independent research."
+          "description": "After higher education, there is the opportunity to pursue a doctorate (PhD and DSc) in {count} directions and engage in independent research."
         }
       ]
 
@@ -406,7 +406,7 @@
     "old": "Old version of web site",
     "phone": "Phone",
     "email": "Email",
-    "excellence_in_teaching": "Striving for Excellence in Education",
+    "excellence_in_teaching": "Nordic - Excellence in Education",
     "send": "Send",
     "university_name": "International Nordik University",
     "rights_reserved": "All rights reserved",

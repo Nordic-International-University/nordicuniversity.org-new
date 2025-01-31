@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
-import { Dropdown, Modal, Select, Space } from "antd";
+import { Dropdown, MenuProps, Modal, Select, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
@@ -57,12 +57,16 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
     };
   }, [dispatch]);
 
-  const handleSelectChange = (value: string) => {
-    const selectedLink = props.find((resource) => resource.name === value);
-    if (selectedLink) {
-      window.open(selectedLink.link, "_blank");
-    }
-  };
+  const menu: MenuProps["items"] = props.map((item) => {
+    return {
+      label: (
+        <Link href={item.link} target="_blank">
+          {item.name}
+        </Link>
+      ),
+      key: item.id,
+    };
+  });
 
   return (
     <div
@@ -148,25 +152,19 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
               ))}
             </ul>
           </div>
-
-          {/* Small screens */}
           <div className="md:hidden flex items-center gap-5">
-            <Select
-              className="w-full text-[11px] border-gray-300 rounded-lg placeholder-gray-500"
-              placeholder="Select a resource"
-              onChange={handleSelectChange}
-              defaultValue={props[0]?.name}
-              options={props.map((resource) => ({
-                label: resource.name,
-                value: resource.name,
-              }))}
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                border: "1px solid rgba(255, 255, 255, 0.3)",
-                borderRadius: "8px",
-              }}
-            />
+            <Dropdown
+              className="w-full text-center"
+              menu={{ items: menu }}
+              trigger={["click"]}
+            >
+              <a onClick={(e) => e.preventDefault()}>
+                <Space className="text-white font-bold">
+                  {useTranslations()("education.recourse.sectionTitle")}
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
           </div>
         </div>
       </div>

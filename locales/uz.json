@@ -190,7 +190,7 @@
 
     "doctorate": {
       "main_title": "Universitetda\noliy ta’limdan keyingi ta’lim\nfaoliyati ko‘rsatkichlari",
-      "description": "O\n‘zbekiston Respublikasi Oliy ta’lim fan va\ninnovatsiyalar vazirligining 2023 yil 6 noyabrdagi\n№ 156360 sonli lisenziyasiga muvofiq Xalqaro\nNordik Universitetida 6 ta ixtisosliklar bo‘yicha oliy\nta’limdan keyingi ta’lim institutlarida faoliyat olib\nborishga ruxsat berilgan",
+      "description": "O\n‘zbekiston Respublikasi Oliy ta’lim fan va\ninnovatsiyalar vazirligining 2023 yil 6 noyabrdagi\n№ 156360 sonli lisenziyasiga muvofiq Xalqaro\nNordik Universitetida {fieldCount} ta yo‘nalish {fieldCount} ta ixtisosliklar bo‘yicha oliy\nta’limdan keyingi ta’lim institutlarida faoliyat olib\nborishga ruxsat berilgan",
       "center_title": "Doktorant\nva mustaqil izlanuvchilar qabulini yillar kesimida qabul qilnganlik\nholati ma’lumoti",
       "table_headers": {
         "years": "Yillar",
@@ -290,23 +290,23 @@
       "overview": {
         "title": "Fakultetlar, Kafedralar va Departamentlar",
         "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
-        "bachelor": "Bakalavr bosqichi <strong>19ta</strong> yo’nalish.",
-        "master": "Masgistratura bosqichi <strong>13ta</strong> yo’nalish.",
-        "doctorate": "Doktorantura bosqichi <strong>6ta</strong> yo’nalish.",
+        "bachelor": "Bakalavr bosqichi {count}ta yo’nalish.",
+        "master": "Masgistratura bosqichi {count}ta yo’nalish.",
+        "doctorate": "Doktorantura bosqichi {count}ta yo’nalish.",
         "demand": "Barcha ta'lim yo'nalishlarimiz bugungi kunda barcha sohalarda yuqori talabga ega."
       },
       "levels": [
         {
           "name": "Bakalavr",
-          "description": "19 ta ta'lim yo'nalishidan birida o'qish imkoniyati, qo'shma dasturlar va ikki mamlakat diplomini olish imkoniyati sizni kutmoqda. Yoz oylarida kontrakt uchun \"work and travel\" dasturida qatnashish imkoniyati beriladi."
+          "description": "{count} ta ta'lim yo'nalishidan birida o'qish imkoniyati, qo'shma dasturlar va ikki mamlakat diplomini olish imkoniyati sizni kutmoqda. Yoz oylarida kontrakt uchun \"work and travel\" dasturida qatnashish imkoniyati beriladi."
         },
         {
           "name": "Magistratura",
-          "description": "13 ta ta'lim yo'nalishidan birini yakunlab magistratura darajasini qo'lga kiriting. Xalqaro amaliyot dasturlari, malakali professor-o'qituvchilar sizga mutaxassis bo'lishda yordam berishadi."
+          "description": "{count} ta ta'lim yo'nalishidan birini yakunlab magistratura darajasini qo'lga kiriting. Xalqaro amaliyot dasturlari, malakali professor-o'qituvchilar sizga mutaxassis bo'lishda yordam berishadi."
         },
         {
           "name": "Doktorantura",
-          "description": "Oliy ta'limdan keyingi ta'lim institutlarida 6 ta yo'nalish bo'yicha doktorantura hamda mustaqil izlanuvchilikda (Phd hamda DSc) tahsil olish imkoniyati mavjud."
+          "description": "Oliy ta'limdan keyingi ta'lim institutlarida {count} ta yo'nalish bo'yicha doktorantura hamda mustaqil izlanuvchilikda (Phd hamda DSc) tahsil olish imkoniyati mavjud."
         }
       ]
     },
