@@ -244,7 +244,7 @@
   },
   "education": {
     "subItems": [
-      "Education Levels",
+      "Levels of Education",
       "Educational Resources",
       "Foreign Language Proficiency Certificate",
       "Fields of Study",
@@ -283,14 +283,14 @@
       "register": "Register"
     },
     "educationLevels": {
-      "sectionTitle": "Education Levels",
+      "sectionTitle": "Levels of Education",
       "breadcrumb": "Education",
       "overview": {
-        "title": "Faculties, Departments, and Offices",
-        "description": "The International Nordik University offers Bachelor's (full-time, part-time, and special part-time), Master's, Doctorate programs, 6 departments, and 8 offices.",
-        "bachelor": "Bachelor's: <strong>{count}</strong> fields.",
-        "master": "Master's: <strong>{count}</strong> fields.",
-        "doctorate": "Doctorate: <strong>{count}</strong> fields.",
+        "title": "Potential",
+        "description": "The university has 2 faculties, 8 departments, 11 divisions, and 7 centers.",
+        "bachelor": "Bachelor's degree - {count} academic programs.",
+        "master": "Master's degree - {count} specializations.",
+        "doctorate": "Doctorate - consists of {count} specializations.",
         "demand": "All our fields of study are in high demand in various sectors."
       },
       "levels": [

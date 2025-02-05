@@ -12,79 +12,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Level: FC<{ fieldCount: EducationLevels }> = ({ fieldCount }) => {
   const t = useTranslations("education.educationLevels");
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
-  const imageRef = useRef(null);
-  const lineRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        textRef.current,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-        },
-      );
-
-      gsap.fromTo(
-        imageRef.current,
-        { opacity: 0, y: -100 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-        },
-      );
-
-      gsap.fromTo(
-        lineRef.current,
-        { width: "0%" },
-        {
-          width: "100%",
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: lineRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-        },
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, [t]);
 
   return (
-    <article className="mt-12" ref={containerRef}>
+    <article className="mt-12">
       <div className="flex items-start max-md:flex-col-reverse gap-4 justify-between">
-        <div ref={textRef}>
+        <div>
           <strong className="text-secondary text-[18px]">
             {t("overview.title")}
           </strong>
           <p className="text-brodCrumbColor opacity-70 mt-4 text-[18px]">
             {t("overview.description")}
           </p>
-
-          {/* Education Levels */}
           <div className="flex flex-col font-medium mt-3 gap-1">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 bg-white border-[2px] rounded-full border-tertiary"></span>
@@ -132,11 +70,10 @@ const Level: FC<{ fieldCount: EducationLevels }> = ({ fieldCount }) => {
           className="h-72 w-auto max-md:w-full max-md:h-auto"
           src={image}
           alt="admission_image"
-          ref={imageRef}
         />
       </div>
 
-      <hr ref={lineRef} className="bg-[#7A98C1] h-[2px] mt-10 w-full" />
+      <hr className="bg-[#7A98C1] h-[2px] mt-10 w-full" />
     </article>
   );
 };

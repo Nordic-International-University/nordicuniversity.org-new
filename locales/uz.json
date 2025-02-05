@@ -246,7 +246,7 @@
   },
   "education": {
     "subItems": [
-      "Ta'lim darajalari",
+      "Ta'lim bosqichlari",
       "Ta'lim resurslari",
       "Xorijiy tillarni bilish sertifikati",
       "Ta'lim yo'nalishlari",
@@ -285,14 +285,14 @@
       "register": "Ro'yxatdan o’tish"
     },
     "educationLevels": {
-      "sectionTitle": "Ta’lim darajalari",
+      "sectionTitle": "Ta’lim bosqichlari",
       "breadcrumb": "Ta’lim",
       "overview": {
-        "title": "Fakultetlar, Kafedralar va Departamentlar",
-        "description": "Xalqaro Nordik Universitetida Bakalavr (kunduzgi, sirtqi va maxsus sirtqi), Magistratura fakulteti, Doktorantura, 6 ta kafedra va 8 ta department mavjud.",
-        "bachelor": "Bakalavr bosqichi {count}ta yo’nalish.",
-        "master": "Masgistratura bosqichi {count}ta yo’nalish.",
-        "doctorate": "Doktorantura bosqichi {count}ta yo’nalish.",
+        "title": "Mavjud salohiyat",
+        "description": "Universitetda 2 ta fakultet, 8 ta kafedra, 11 ta departament va 7 markaz faoliyat yuritadi.",
+        "bachelor": "Bakalavriat bosqichi - {count} ta ta'lim yo’nalishi.",
+        "master": "Masgistratura bosqichi - {count} ta mutaxassislik.",
+        "doctorate": "Doktorantura bosqichi - {count} ta ixtisoslikdan tarkib topgan",
         "demand": "Barcha ta'lim yo'nalishlarimiz bugungi kunda barcha sohalarda yuqori talabga ega."
       },
       "levels": [

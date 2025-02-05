@@ -16,7 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ClientPage: FC<{ data: EducationLevels }> = ({ data }) => {
   const t = useTranslations("education");
-  const animationContainerRef = useRef<HTMLDivElement>(null);
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.education.educationSidebarItems,
@@ -33,28 +32,6 @@ const ClientPage: FC<{ data: EducationLevels }> = ({ data }) => {
     },
   ];
 
-  // GSAP animatsiya qo'shish
-  useEffect(() => {
-    if (animationContainerRef.current) {
-      gsap.fromTo(
-        animationContainerRef.current,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: animationContainerRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-        },
-      );
-    }
-  }, []);
-
   return (
     <>
       <LeftSidebarAndComponent
@@ -66,12 +43,8 @@ const ClientPage: FC<{ data: EducationLevels }> = ({ data }) => {
         <Level fieldCount={data} />
       </LeftSidebarAndComponent>
 
-      {/* Animatsiya qismi */}
       <div className="container">
-        <div
-          className="mt-[70px] max-sm:mt-10 max-lg:flex-col gap-4 flex items-center justify-between"
-          ref={animationContainerRef}
-        >
+        <div className="mt-[70px] max-sm:mt-10 max-lg:flex-col gap-4 flex items-center justify-between">
           {Array.from({ length: 3 }).map((_, index) => (
             <div key={index} className="w-[430px] max-md:w-full">
               <div className="flex items-center gap-2">

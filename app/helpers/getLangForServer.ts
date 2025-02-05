@@ -21,7 +21,6 @@ export const getCurrentLangServer = async () => {
   if (lang) {
     return lang;
   } else {
-    // If no language is set in cookies, fetch the default language
     return await fetchDefaultLanguage();
   }
 };
