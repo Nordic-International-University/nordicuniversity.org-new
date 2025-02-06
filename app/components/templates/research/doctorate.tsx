@@ -11,6 +11,7 @@ const Doctorate = ({
   allDoctorateCount,
 }: doctorateProps) => {
   const t = useTranslations("research.doctorate");
+  const bottom = useTranslations("research.doctorate").raw;
 
   return (
     <section>
@@ -46,7 +47,7 @@ const Doctorate = ({
           <DoctorateTable allDoctorateCount={allDoctorateCount} />
           <p
             className="mt-5"
-            dangerouslySetInnerHTML={{ __html: t("bottom_title") }}
+            dangerouslySetInnerHTML={{ __html: bottom("bottom_title") }}
           ></p>
         </div>
       </article>
