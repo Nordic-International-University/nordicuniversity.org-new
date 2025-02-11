@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import navReducer from "@/app/utils/reducers/navbar.reducer";
+import axios from "axios";
 
 const initialState: any = {
   university: {
@@ -226,10 +227,45 @@ initialState.menuItems = [
   },
 ];
 
+export const fetchSubPages = createAsyncThunk<any, string>(
+  "menu/fetchSubPages",
+  async (language, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(
+        `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/subpages?language=${language}`,
+      );
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue("Failed to fetch subpages");
+    }
+  },
+);
+
 const SidebarItem = createSlice({
   name: "sideBarItems",
   initialState,
   reducers: navReducer,
+  extraReducers: (builder) => {
+    builder.addCase(fetchSubPages.fulfilled, (state, action) => {
+      const subPages = action.payload;
+
+      subPages.forEach((subPage: any) => {
+        const menuIndex = state.menuItems.findIndex(
+          (menuItem: any) => menuItem.transKey === subPage.related_page,
+        );
+
+        if (menuIndex !== -1) {
+          const baseUrl = state.menuItems[menuIndex].url.split("/")[1];
+          state.menuItems[menuIndex].subItems.push({
+            name: subPage.name,
+            url: `/${baseUrl}/dynamic/${subPage.slug}`,
+            id: subPage.id,
+          });
+        }
+      });
+    });
+  },
 });
 
 export default SidebarItem.reducer;

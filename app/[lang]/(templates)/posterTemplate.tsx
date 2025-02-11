@@ -5,13 +5,7 @@ import { gsap } from "gsap";
 import NoDataComponent from "@/app/components/UI/no-data";
 import { useTranslations } from "next-intl";
 
-const ScholarshipsAndInternships = ({
-  props,
-  path,
-}: {
-  props: any;
-  path?: string;
-}) => {
+const PosterTemplate = ({ data, path }: { data: any; path: string }) => {
   const listRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("buttons");
 
@@ -23,16 +17,16 @@ const ScholarshipsAndInternships = ({
         { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 },
       );
     }
-  }, [props.data]);
+  }, [data.data]);
 
-  if (props.data.length === 0) {
+  if (data.length === 0) {
     return <NoDataComponent />;
   }
 
   return (
     <article className="mt-10">
       <div className="flex flex-col gap-6" ref={listRef}>
-        {props?.data.map((item: any, index: number) => (
+        {data?.map((item: any, index: number) => (
           <div
             key={item.id || index}
             className="p-4 sm:p-5 rounded-lg h-[260px] max-sm:h-auto flex flex-col sm:flex-row border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white gap-4 mb-5"
@@ -56,7 +50,7 @@ const ScholarshipsAndInternships = ({
                 </p>
               </div>
               <Button
-                href={`${path + item.slug}`}
+                href={`/dynamic/${item.slug}`}
                 className="text-white font-medium text-base md:text-lg mt-auto py-2 px-8 bg-gradient-to-r from-[#284B82] to-[#032E63] hover:from-[#3C5C94] hover:to-[#284B82] rounded-md flex items-center gap-2"
               >
                 {t("see")}
@@ -69,4 +63,4 @@ const ScholarshipsAndInternships = ({
   );
 };
 
-export default ScholarshipsAndInternships;
+export default PosterTemplate;

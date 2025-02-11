@@ -1,12 +1,23 @@
 "use client";
 
-import React, { useRef, useLayoutEffect, useMemo } from "react";
+import React, {
+  useRef,
+  useLayoutEffect,
+  useMemo,
+  useState,
+  useEffect,
+} from "react";
 import Link from "next/link";
 import BroadCamp from "@/app/components/UI/broadCump";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { gsap } from "gsap";
-import { LayoutSidebarProps } from "@/types/templates/layout.types";
+import {
+  LayoutSidebarProps,
+  sideBarItemTypes,
+} from "@/types/templates/layout.types";
+import { getSubPages } from "@/app/layouts/getSubPages";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
 const LeftSidebarAndComponent = ({
   children,
@@ -19,13 +30,41 @@ const LeftSidebarAndComponent = ({
   const t = useTranslations(translationKey);
   const linkRefs = useRef<Array<HTMLLIElement | null>>([]);
   const contentRef = useRef<HTMLDivElement | null>(null);
+  const [subMenuItems, setSubMenuItems] = useState<
+    Array<sideBarItemTypes | null>
+  >([]);
+
+  useEffect(() => {
+    const getAllSubMenuItems = async () => {
+      const subMenuItems = await getSubPages(
+        getCurrentLangClient(),
+        translationKey,
+      );
+      setSubMenuItems(
+        subMenuItems.map((item: any) => {
+          return {
+            name: item.name,
+            url: `${router.includes("dynamic") ? "" : "dynamic/"}${item.slug}`,
+            id: item.id,
+            index: item.id,
+          };
+        }),
+      );
+    };
+
+    getAllSubMenuItems();
+  }, []);
+
+  const combinedItems = useMemo(() => {
+    return [...sidebarItems, ...subMenuItems];
+  }, [sidebarItems, subMenuItems]);
 
   const activeIndex = useMemo(() => {
-    if (!sidebarItems || sidebarItems.length === 0) {
+    if (!combinedItems || combinedItems.length === 0) {
       return -1;
     }
-    return sidebarItems.findIndex((item) => router.includes(item.url));
-  }, [router, sidebarItems]);
+    return combinedItems.findIndex((item: any) => router.includes(item.url));
+  }, [router, combinedItems]);
 
   useLayoutEffect(() => {
     if (contentRef.current) {
@@ -40,7 +79,7 @@ const LeftSidebarAndComponent = ({
   return (
     <div className="flex mt-12 gap-6 items-start container justify-between">
       <ul className="w-[20%] max-lg:hidden flex flex-col gap-2.5 relative">
-        {sidebarItems.map((item, index) => (
+        {combinedItems.map((item: any, index) => (
           <Link key={index} href={item.url} className="w-full">
             <div className="flex items-center">
               <li
@@ -51,7 +90,7 @@ const LeftSidebarAndComponent = ({
                     : "text-tertiary underline"
                 }`}
               >
-                {t(item.name)}
+                {item.id ? item.name : t(item.name)}
               </li>
             </div>
           </Link>

@@ -22,12 +22,12 @@ const getAllDegrees = async ({
       cache: "no-store",
     },
   );
-  const json = await response.json();
-  return json;
+  return await response.json();
 };
 
 const ClientPage = () => {
-  const t = useTranslations("admission");
+  const t = useTranslations("education");
+  const amission = useTranslations("admission");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.education.educationSidebarItems,
   );
@@ -48,11 +48,11 @@ const ClientPage = () => {
   const brodCmbItems = [
     {
       url: "/education/level",
-      name: t("title"),
+      name: t("educationLevels.breadcrumb"),
     },
     {
       url: "/education/contract-prices",
-      name: t("degree_price.sectionTitle"),
+      name: amission("degree_price.sectionTitle"),
     },
   ];
 
@@ -68,7 +68,7 @@ const ClientPage = () => {
         />
       }
       sidebarItems={subItemDocument}
-      sidebarTitle={t("degree_price.sectionTitle")}
+      sidebarTitle={amission("degree_price.sectionTitle")}
     ></LeftSidebarAndComponent>
   );
 };

@@ -11,11 +11,12 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import caricature from "@/public/images/home-images/mobile_image.png";
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/app/utils/store/Store";
+import { AppDispatch, RootState } from "@/app/utils/store/Store";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { setActiveMenu } from "@/app/utils/slices/menuItem.slice";
 import SocialMedia from "@/app/components/UI/socialMedia";
+import { fetchSubPages } from "@/app/utils/slices/navbar.slice";
 
 const Nav: FC = () => {
   const pathname = usePathname();
@@ -26,11 +27,15 @@ const Nav: FC = () => {
   const t = useTranslations(transKey);
   const tMenu = useTranslations("menu");
   const subItemsRef = useRef<HTMLDivElement | null>(null);
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const handleAccordionToggle = (menuItemName: string) => {
     setActiveSubItems((prev) => (prev === menuItemName ? null : menuItemName));
   };
+
+  useEffect(() => {
+    dispatch(fetchSubPages("uz"));
+  }, [dispatch]);
 
   const handleMouseEnter = (menuItemName: any) => {
     setActiveSubItems(menuItemName.name);
@@ -277,7 +282,7 @@ const Nav: FC = () => {
                       href={subItem.url}
                       className="hover:underline"
                     >
-                      {t(subItem.name)}
+                      {subItem.id ? subItem.name : t(subItem.name)}
                     </Link>
                   </div>
                 );
