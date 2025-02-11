@@ -34,7 +34,6 @@ export default async function middleware(req: NextRequest) {
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
     if (currentLocale !== lang) {
-      pathnameParts[1] = lang;
       url.pathname = pathnameParts.join("/");
 
       if (url.pathname !== req.nextUrl.pathname) {
