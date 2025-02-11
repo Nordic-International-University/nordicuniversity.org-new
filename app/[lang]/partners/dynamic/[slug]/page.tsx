@@ -1,5 +1,5 @@
 import React from "react";
-import DynamicSubPage from "@/app/components/layouts/dynamic/page";
+import DynamicSubPage from "@/app/components/layouts/dynamic/DynamicSubPage";
 
 const Page = () => {
   return (

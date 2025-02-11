@@ -8,8 +8,6 @@ import dayjs from "dayjs";
 import { EyeIcon } from "@nextui-org/shared-icons";
 import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
-import { getNewsBySlug } from "@/app/[lang]/press-service/news/[slug]/getNewsBySlug";
-import { getAllNews } from "@/app/[lang]/press-service/news/getAllNews";
 import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 import { headers } from "next/headers";
