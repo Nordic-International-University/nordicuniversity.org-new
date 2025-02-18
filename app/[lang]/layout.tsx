@@ -156,11 +156,6 @@ export default async function RootLayout({
             }
           >
             <StoreProvider>
-              <div id="snow-container">
-                {" "}
-                <SnowEffect />
-              </div>
-
               <TopNav props={resources} networks={networks.data} />
               <Nav />
               <main className="flex-grow">{children}</main>
