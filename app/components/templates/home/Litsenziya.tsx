@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -66,7 +66,6 @@ const Litsenziya = ({
           })}
         </div>
       )}
-
       <div ref={contentRef} className="relative">
         <Swiper
           key={selectedTab}
@@ -122,8 +121,6 @@ const Litsenziya = ({
           <IoMdArrowForward className="text-3xl text-text_secondary" />
         </div>
       </div>
-
-      {/* Modal */}
       <Modal
         open={isModalOpen}
         onCancel={closeModal}
