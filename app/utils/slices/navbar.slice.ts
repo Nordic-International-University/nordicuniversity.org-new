@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import navReducer from "@/app/utils/reducers/navbar.reducer";
 import axios from "axios";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
 const initialState: any = {
   university: {
@@ -229,10 +230,10 @@ initialState.menuItems = [
 
 export const fetchSubPages = createAsyncThunk<any, string>(
   "menu/fetchSubPages",
-  async (language, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/subpages?language=${language}`,
+        `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/subpages?language=${getCurrentLangClient()}`,
       );
       console.log(response);
       return response.data;
@@ -249,6 +250,12 @@ const SidebarItem = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchSubPages.fulfilled, (state, action) => {
       const subPages = action.payload;
+
+      state.menuItems.forEach((menuItem: any) => {
+        menuItem.subItems = menuItem.subItems.filter(
+          (item: any) => !item.url.includes("/dynamic/"),
+        );
+      });
 
       subPages.forEach((subPage: any) => {
         const menuIndex = state.menuItems.findIndex(

@@ -79,9 +79,8 @@ const LanguageSelect = ({ color }: { color: string }) => {
     setIsOpen(false);
     Cookies.set("lang", lang.value, { path: "/" });
     window.scrollTo(0, 0);
-    const newPath = `/${lang.value}${
-      pathname.startsWith(`/${language}`) ? pathname.slice(3) : pathname
-    }`;
+    const currentPath = pathname.split("/").slice(2).join("/") || "";
+    const newPath = `/${lang.value}/${currentPath}`;
     router.push(newPath);
   };
 

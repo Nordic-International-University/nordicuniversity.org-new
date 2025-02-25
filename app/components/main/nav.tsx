@@ -28,7 +28,6 @@ const Nav: FC = () => {
   const tMenu = useTranslations("menu");
   const subItemsRef = useRef<HTMLDivElement | null>(null);
   const dispatch: AppDispatch = useDispatch();
-
   const handleAccordionToggle = (menuItemName: string) => {
     setActiveSubItems((prev) => (prev === menuItemName ? null : menuItemName));
   };
@@ -238,7 +237,7 @@ const Nav: FC = () => {
                                 href={subItem.url}
                                 className="text-text_secondary"
                               >
-                                {t(subItem.name)}
+                                {subItem.id ? subItem.name : t(subItem.name)}
                               </Link>
                             </li>
                           ),

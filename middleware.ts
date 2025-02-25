@@ -33,20 +33,16 @@ export default async function middleware(req: NextRequest) {
 
   if (locales.includes(pathnameParts[1])) {
     const currentLocale = pathnameParts[1];
+
     if (currentLocale !== lang) {
+      pathnameParts[1] = lang;
       url.pathname = pathnameParts.join("/");
-
-      if (url.pathname !== req.nextUrl.pathname) {
-        return NextResponse.redirect(url, 307);
-      }
-    }
-  } else {
-    pathnameParts.unshift(lang);
-    url.pathname = pathnameParts.join("/");
-
-    if (url.pathname !== req.nextUrl.pathname) {
       return NextResponse.redirect(url, 307);
     }
+  } else {
+    // ✅ Til yo‘q bo‘lsa, uni qo‘shamiz
+    url.pathname = `/${lang}${url.pathname}`;
+    return NextResponse.redirect(url, 307);
   }
 
   req.headers.set("Accept-Language", lang);
