@@ -17,6 +17,7 @@ import gsap from "gsap";
 import { setActiveMenu } from "@/app/utils/slices/menuItem.slice";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { fetchSubPages } from "@/app/utils/slices/navbar.slice";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
 const Nav: FC = () => {
   const pathname = usePathname();
@@ -33,8 +34,9 @@ const Nav: FC = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchSubPages("uz"));
-  }, [dispatch]);
+    const currentLang = getCurrentLangClient();
+    dispatch(fetchSubPages(currentLang));
+  }, []);
 
   const handleMouseEnter = (menuItemName: any) => {
     setActiveSubItems(menuItemName.name);
@@ -240,7 +242,6 @@ const Nav: FC = () => {
                                 {subItem.id ? subItem.name : t(subItem.name)}
                               </Link>
                             </li>
-                            //asdasd
                           ),
                         )}
                       </ul>

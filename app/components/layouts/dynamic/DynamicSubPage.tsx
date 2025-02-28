@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ComponentType, FC, useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
@@ -16,6 +16,7 @@ const DynamicSubPage: FC<{
 }> = ({ transKey, reduxSelector, pageSelector, broadCampTransKey }) => {
   const { slug: subPage_slug } = useParams();
   const t = useTranslations(transKey);
+  const path = usePathname();
   const [subPageData, setSubPageData] = useState<any>(null);
   const [TemplateComponent, setTemplateComponent] = useState<ComponentType<{
     data: any;
@@ -48,15 +49,13 @@ const DynamicSubPage: FC<{
   }, [subPage_slug]);
 
   const broadCampItems = [
-    { url: "", name: t(broadCampTransKey) },
+    { url: `${path.split("/")[2]}/level`, name: t(broadCampTransKey) },
     {
-      url: `/subpages/${subPage_slug}`,
+      url: `${subPage_slug}`,
       name: subPageData?.subPage_title || "Loading...",
     },
   ];
 
-  console.log(subPageData);
-  // @ts-ignore
   return (
     <LeftSidebarAndComponent
       translationKey={transKey}

@@ -129,16 +129,16 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     clientIpAddress,
   );
 
-  console.log(news);
-  const t = await getTranslations("press-service");
   const last = await getTranslations("partners");
 
   const brodCmbItems = [
     {
-      url: `/press-service/news/${news.slug}`,
-      name: news.name,
+      url: `/dynamic/${news.slug}`,
+      name: <p className="line-clamp-1">{news.name}</p>,
     },
   ];
+
+  console.log(news);
 
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
@@ -218,8 +218,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-col gap-1 mt-3">
               {news.latestItems.map((item: NewsItem, index: number) => (
                 <MinimalCard
-                  url="/press-service/news"
-                  subTitle={item.body}
+                  url="/dynamic"
+                  subTitle={item.description}
                   key={index}
                   image={item.image}
                   title={item.title}
