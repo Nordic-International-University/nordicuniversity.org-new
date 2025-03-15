@@ -15,7 +15,6 @@ import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
 import Script from "next/script";
-import SnowEffect from "@/app/components/UI/snowEffect";
 
 const getAllResources = async () => {
   const response = await fetch(

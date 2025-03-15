@@ -40,7 +40,6 @@ export default async function middleware(req: NextRequest) {
       return NextResponse.redirect(url, 307);
     }
   } else {
-    // ✅ Til yo‘q bo‘lsa, uni qo‘shamiz
     url.pathname = `/${lang}${url.pathname}`;
     return NextResponse.redirect(url, 307);
   }

@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 const getCurrentLangClient = () => {
   if (typeof window === "undefined") {
-    return "uz"; // SSR bo'lsa, default til qaytariladi
+    return "uz";
   }
 
   const lang = Cookies.get("lang");
