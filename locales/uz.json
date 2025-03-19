@@ -161,7 +161,7 @@
       "breadcrumb": {
         "event": "Ilmiy tadbir",
         "scientific_events": "Ilmiy tadbirlar",
-        "last": "So'ngi tadbirlar"
+        "last": "So'nggi tadbirlar"
       },
       "events": {
         "upcoming": "Kelgusi tadbirlar",
@@ -328,7 +328,7 @@
       "Xalqaro uchrashuvlardan fotolavhalar"
     ],
     "connections": {
-      "last": "So'ngilari",
+      "last": "So'nggilari",
       "sectionTitle": "Xalqaro hamkorlik aloqalari",
       "past": "O’tgan tadbirlar",
       "future": "Kelgusi tadbirlar"
@@ -383,7 +383,7 @@
     }
   },
   "press-service": {
-    "last_news": "So'ngi yangiliklar",
+    "last_news": "So'nggi yangiliklar",
     "subItems": [
       "Yangiliklar",
       "Press relizlar",
@@ -409,7 +409,7 @@
     "email": "Email",
     "excellence_in_teaching": "Ta'limda mukammallik sari",
     "send": "Yuborish",
-    "university_name": "Xalqaro nordik universiteti",
+    "university_name": "Xalqaro Nordik universiteti",
     "rights_reserved": "Barcha huquqlar himoyalangan",
     "site_developers": "Sayt yaratuvchilari: IT departamenti"
   },
@@ -421,7 +421,8 @@
     "detail": "Batafsil...",
     "see_all": "Barchasini ko‘rish",
     "see": "Ko‘rish",
-    "read": "O‘qish"
+    "read": "O‘qish",
+    "green_university": "Yashil universitet"
   },
   "noDataComponent": {
     "title": "Ma'lumot mavjud emas",

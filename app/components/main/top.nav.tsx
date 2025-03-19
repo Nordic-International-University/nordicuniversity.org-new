@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import LanguageSelect from "@/app/components/UI/language.select";
 import Link from "next/link";
-import { Dropdown, MenuProps, Modal, Select, Space } from "antd";
+import { Button, Dropdown, MenuProps, Modal, Select, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 import { Timetable } from "@/types/templates/partners.types";
@@ -22,13 +22,14 @@ import { IoMdSearch } from "react-icons/io";
 const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
   const t = useTranslations("nav");
+  const buttons = useTranslations("buttons");
   const [searchText, _] = useState("");
   const menuItems = useSelector(
     (state: RootState) => state.menuSlice.activeMenu,
   );
   const { isOpenSearch } = useSelector((state: RootState) => state.search);
   const dispatch = useDispatch();
-  const items: any = props.slice(4, props.length).map((item, index) => {
+  const items: any = props.slice(3, props.length).map((item, index) => {
     return {
       label: (
         <Link target="_blank" href={item.link}>
@@ -81,13 +82,20 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 className="px-4 max-lg:px-2 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#1E4A7D] transition-opacity duration-200 rounded-full cursor-pointer"
               >
                 <IoMdSearch className="text-white text-xl" />
-                <div className="flex text-white font-semibold max-lg:hidden items-center gap-1">
-                  {/*<BiCommand className="text-white text-lg" />*/}
-                  <span>CTRL</span>
-                  <span>+</span>
-                  <span>K</span>
-                </div>
+                {/*<div className="flex text-white font-semibold max-lg:hidden items-center gap-1">*/}
+                {/*  /!*<BiCommand className="text-white text-lg" />*!/*/}
+                {/*  /!*<span>CTRL</span>*!/*/}
+                {/*  /!*<span>+</span>*!/*/}
+                {/*  /!*<span>K</span>*!/*/}
+                {/*</div>*/}
               </div>
+              <Button
+                href="https://www.green.nordicuniversity.org/"
+                target="_blank"
+                className="bg-[#406c44] rounded-2xl border-none text-white"
+              >
+                {buttons("green_university")}
+              </Button>
 
               <Modal
                 onCancel={() => dispatch(handleCloseSearchModal())}
@@ -101,7 +109,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 <SearchModal searchModal={searchText} />
               </Modal>
               <ul className="flex items-center max-lg:hidden text-white gap-5">
-                {props.slice(0, 4).map((resource, index) => (
+                {props.slice(0, 3).map((resource, index) => (
                   <Link
                     className="uppercase"
                     href={resource.link}
