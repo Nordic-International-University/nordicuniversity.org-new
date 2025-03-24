@@ -92,7 +92,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
               <Button
                 href="https://www.green.nordicuniversity.org/"
                 target="_blank"
-                className="bg-[#406c44] rounded-2xl border-none text-white"
+                className="bg-[#406c44] rounded-2xl uppercase border-none text-white"
               >
                 {buttons("green_university")}
               </Button>
