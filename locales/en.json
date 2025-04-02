@@ -138,6 +138,9 @@
     }
   },
   "research": {
+    "audio": {
+      "text": "Audio books"
+    },
     "title": "Science",
     "subItems": [
       "Doctorate",

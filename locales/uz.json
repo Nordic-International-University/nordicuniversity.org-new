@@ -139,6 +139,9 @@
     }
   },
   "research": {
+    "audio": {
+      "text": "Audio kitoblar"
+    },
     "title": "Ilm fan",
     "subItems": [
       "Doktorantura",

@@ -7,7 +7,6 @@ import AudioBooks from "@/app/components/templates/research/audio.books";
 
 const ClientPage = ({ initialData }: any) => {
   const t = useTranslations("research");
-  const language = useTranslations("partners.connections");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
@@ -19,7 +18,7 @@ const ClientPage = ({ initialData }: any) => {
     },
     {
       url: "/research/scientific-conferences",
-      name: t("scienceConferences.breadcrumb.scientific_conferences"),
+      name: t("audio.text"),
     },
   ];
 
@@ -28,7 +27,7 @@ const ClientPage = ({ initialData }: any) => {
       translationKey="research"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("scienceConferences.breadcrumb.scientific_conferences")}
+      sidebarTitle={t("audio.text")}
     >
       <AudioBooks data={initialData} />
     </LeftSidebarAndComponent>
