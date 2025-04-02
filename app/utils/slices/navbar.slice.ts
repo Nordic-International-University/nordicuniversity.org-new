@@ -64,10 +64,6 @@ const initialState: any = {
         name: "subItems.7",
         url: "/research/scientific-council",
       },
-      {
-        name: "subItems.8",
-        url: "/research/audio-books",
-      },
     ],
   },
   admission: {
@@ -175,6 +171,10 @@ const initialState: any = {
       {
         name: "subItems.4",
         url: "/press-service/nordic-and-mass-media",
+      },
+      {
+        name: "subItems.5",
+        url: "/press-service/audio-books",
       },
     ],
   },

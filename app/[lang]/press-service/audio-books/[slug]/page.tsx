@@ -6,16 +6,14 @@ import Image from "next/image";
 import {
   FaPlay,
   FaPause,
-  FaMusic,
   FaShareAlt,
   FaVolumeUp,
   FaTimes,
   FaStepForward,
   FaStepBackward,
-  FaListUl,
 } from "react-icons/fa";
 import { AudioBookDetailType } from "@/types/research/scince_events";
-import { getAudioBookDetailBySlug } from "@/app/[lang]/research/audio-books/api";
+import { getAudioBookDetailBySlug } from "@/app/[lang]/press-service/audio-books/api";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import { useTranslations } from "next-intl";
 

@@ -12,7 +12,7 @@ const AudioBooks = ({ data }: { data: ApiResponse<AudioBooksTypeItem[]> }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {data?.data?.map((item) => (
           <Link
-            href={`/research/audio-books/${item.slug}`}
+            href={`/press-service/audio-books/${item.slug}`}
             key={item.id}
             className="bg-white shadow-md rounded-2xl overflow-hidden transition-transform"
           >
