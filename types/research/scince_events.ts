@@ -98,8 +98,53 @@ export interface ISymposiumResponse {
   symposiums: ISymposiumForUser[];
 }
 
-export interface ScientificCouncilProps {
-  data: ISymposiumResponse;
-  buttons: ISymposiumTypeForUser[];
-  setSlug: (slug: string) => void;
+export interface AudioBooksTypeItem {
+  author_name: string;
+  id: string;
+  name: string;
+  slug: string;
+  year: number;
+  audio: AudioFile;
+  image: Image;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  totalCount: number;
+  totalPages: number;
+  currentPage: number;
+}
+
+export interface AudioBookDetailType {
+  id: string;
+  name: string;
+  slug: string;
+  image: Image;
+  year: number;
+  count_of_audio: number;
+  total_duration: number;
+  audio_books: AudioBooksTypeItem[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface AudioFile {
+  id: string;
+  file_name: string;
+  file_path: string;
+  is_image: boolean;
+  is_audio: boolean | null;
+  duration: number | null;
+  content_type: string;
+  extension: string;
+  file_size: {
+    bytes: number;
+    kb: string;
+    mb: string;
+    gb: string;
+  };
+  createdAt: string;
+  updatedAt: string;
 }

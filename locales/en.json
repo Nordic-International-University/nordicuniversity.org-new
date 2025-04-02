@@ -441,6 +441,11 @@
     "nordicLife": "Nordic Life Journal",
     "orgStructure": "Organizational Structure",
     "staff": "Staff"
+  },
+  "audio_books": {
+    "album": "Album",
+    "trackCount": "{count} tracks",
+    "durationMinutes": "Duration {minutes} min."
   }
 }
 

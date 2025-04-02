@@ -148,7 +148,8 @@
       "Tasimo olimpiadasi",
       "Patentlar",
       "Guvohnomalar (malakaviy)",
-      "Ilmiy kengash"
+      "Ilmiy kengash",
+      "Audio kitoblar"
     ],
     "eJournal": {
       "button": "Maqolalar topshirish!",
@@ -442,5 +443,11 @@
     "nordicLife": "Nordic life jurnali",
     "orgStructure": "Tashkiliy tuzilma",
     "staff": "Xodimlar"
+  },
+  "audio_books": {
+    "album": "Albomi",
+    "trackCount": "{count} ta audio",
+    "durationMinutes": "Davomiyligi {minutes} daqiqa"
   }
+
 }

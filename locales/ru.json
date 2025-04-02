@@ -442,5 +442,11 @@
     "nordicLife": "Журнал Nordic Life",
     "orgStructure": "Организационная структура",
     "staff": "Сотрудники"
+  },
+  "audio_books": {
+    "album": "Альбом",
+    "trackCount": "{count} треков",
+    "durationMinutes": "Длительность {minutes} мин."
   }
+
 }

@@ -64,6 +64,10 @@ const initialState: any = {
         name: "subItems.7",
         url: "/research/scientific-council",
       },
+      {
+        name: "subItems.8",
+        url: "/research/audio-books",
+      },
     ],
   },
   admission: {
