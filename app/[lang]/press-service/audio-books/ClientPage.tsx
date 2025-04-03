@@ -6,9 +6,9 @@ import { RootState } from "@/app/utils/store/Store";
 import AudioBooks from "@/app/components/templates/research/audio.books";
 
 const ClientPage = ({ initialData }: any) => {
-  const t = useTranslations("research");
+  const t = useTranslations("press-service");
   const subItemDocument = useSelector(
-    (state: RootState) => state.sideBar.university.researchSidebarItems,
+    (state: RootState) => state.sideBar.press_service.pressServiceSidebarItems,
   );
 
   const brodCmbItems = [
@@ -17,17 +17,17 @@ const ClientPage = ({ initialData }: any) => {
       name: t("title"),
     },
     {
-      url: "/research/scientific-conferences",
-      name: t("audio.text"),
+      url: "",
+      name: t("subItems.5"),
     },
   ];
 
   return (
     <LeftSidebarAndComponent
-      translationKey="research"
+      translationKey="press-service"
       broadCampItems={brodCmbItems}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("audio.text")}
+      sidebarTitle={t("subItems.5")}
     >
       <AudioBooks data={initialData} />
     </LeftSidebarAndComponent>
