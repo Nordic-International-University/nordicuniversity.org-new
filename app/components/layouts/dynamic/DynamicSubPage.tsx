@@ -7,6 +7,9 @@ import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
+import { Pagination } from "antd";
+
+const PAGE_SIZE = 6;
 
 const DynamicSubPage: FC<{
   transKey: string;
@@ -17,10 +20,13 @@ const DynamicSubPage: FC<{
   const { slug: subPage_slug } = useParams();
   const t = useTranslations(transKey);
   const path = usePathname();
+
   const [subPageData, setSubPageData] = useState<any>(null);
   const [TemplateComponent, setTemplateComponent] = useState<ComponentType<{
     data: any;
   }> | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar[pageSelector][`${reduxSelector}`],
   );
@@ -56,6 +62,17 @@ const DynamicSubPage: FC<{
     },
   ];
 
+  const totalItems = subPageData?.data?.length || 0;
+  const paginatedData = subPageData?.data?.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE,
+  );
+
+  const onChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // sahifani tepaga qaytarish
+  };
+
   return (
     <LeftSidebarAndComponent
       translationKey={transKey}
@@ -63,10 +80,24 @@ const DynamicSubPage: FC<{
       sidebarItems={subItemDocument}
       sidebarTitle={subPageData?.subPage_title}
     >
-      {TemplateComponent ? (
-        <div>{<TemplateComponent data={subPageData.data} />}</div>
+      {TemplateComponent && subPageData ? (
+        <>
+          <TemplateComponent data={paginatedData} />
+
+          {totalItems > PAGE_SIZE && (
+            <div className="mt-6 flex justify-center">
+              <Pagination
+                current={currentPage}
+                total={totalItems}
+                pageSize={PAGE_SIZE}
+                onChange={onChange}
+                showSizeChanger={false}
+              />
+            </div>
+          )}
+        </>
       ) : (
-        +(<p>Loading content...</p>)
+        <p className="text-center text-muted">Loading content...</p>
       )}
     </LeftSidebarAndComponent>
   );

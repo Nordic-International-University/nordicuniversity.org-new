@@ -34,6 +34,7 @@ export interface annualsItem {
   name: string;
   file: File;
   image: Image;
+  source_link?: string;
   createdAt: string;
   updatedAt: string;
 }
