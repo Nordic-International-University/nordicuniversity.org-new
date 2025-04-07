@@ -25,7 +25,7 @@ const YearEndReview: FC<{ data: annualsItem[] }> = ({ data }) => {
           </div>
 
           <div className="p-4">
-            <h2 className="text-center text-text_secondary text-base sm:text-lg font-semibold mb-4">
+            <h2 className="text-center text-text_secondary line-clamp-1 text-base sm:text-lg font-semibold mb-4">
               {item.name}
             </h2>
 
