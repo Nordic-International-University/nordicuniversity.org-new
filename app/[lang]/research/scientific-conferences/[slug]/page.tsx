@@ -220,7 +220,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               lang +
-              "/research/scientific-events/" +
+              "/research/scientific-conferences/" +
               params.slug
             }
           />
