@@ -14,6 +14,7 @@ export interface NewsItem {
   images: ImageData[];
   time_unix: number;
   createdAt: string;
+  latestItems?: NewsItem[];
   updatedAt: string;
 }
 

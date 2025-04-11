@@ -33,7 +33,7 @@ export const generateMetadata = async ({
         title: "Yangiliklar - Xalqaro Nordik Universiteti",
         description:
           "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
-        url: `${baseUrl}/${lang}/press-service/news`,
+        url: `${baseUrl}/${lang}/press-service`,
         type: "website",
         images: [
           {
@@ -75,7 +75,7 @@ export const generateMetadata = async ({
       title: `${news.title} - Xalqaro Nordik Universiteti`,
       description:
         news.description || "Yangilik haqida batafsil ma'lumot oling.",
-      url: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
+      url: `${baseUrl}/${lang}/dynamic/${params.slug}`,
       type: "article",
       images: [
         {
@@ -86,11 +86,11 @@ export const generateMetadata = async ({
     },
     alternates: {
       languages: {
-        uz: `${baseUrl}/uz/press-service/news/${params.slug}`,
-        en: `${baseUrl}/en/press-service/news/${params.slug}`,
-        ru: `${baseUrl}/ru/press-service/news/${params.slug}`,
+        uz: `${baseUrl}/uz/dynamic/${params.slug}`,
+        en: `${baseUrl}/en/dynamic/${params.slug}`,
+        ru: `${baseUrl}/ru/dynamic/${params.slug}`,
       },
-      canonical: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
+      canonical: `${baseUrl}/${lang}/dynamic/${params.slug}`,
     },
     structuredData: {
       "@context": "https://schema.org",
@@ -206,7 +206,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               (await getCurrentLangServer()) +
-              "/press-service/news/" +
+              "/dynamic" +
               params.slug
             }
           />

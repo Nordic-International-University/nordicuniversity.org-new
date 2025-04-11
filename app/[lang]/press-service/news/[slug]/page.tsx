@@ -130,12 +130,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     clientIpAddress,
   );
 
-  const allNews: { data: NewsItem[] } = await getAllNews({
-    lang,
-    page: "1",
-    limit: "4",
-  });
-
   const t = await getTranslations("press-service");
 
   const brodCmbItems = [
@@ -216,7 +210,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
               <h2 className="text-xl">{t("last_news")}</h2>
             </div>
             <div className="flex flex-col gap-1 mt-3">
-              {allNews.data.map((item: NewsItem, index: number) => (
+              {news?.latestItems?.map((item: NewsItem, index: number) => (
                 <MinimalCard
                   url="/press-service/news"
                   subTitle={item.body}

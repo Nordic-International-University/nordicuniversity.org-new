@@ -70,7 +70,7 @@ const DynamicSubPage: FC<{
 
   const onChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // sahifani tepaga qaytarish
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
