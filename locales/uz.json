@@ -42,7 +42,8 @@
     "science": "Ilm-fan",
     "partnership": "Hamkorlik",
     "students": "Talabalarga",
-    "press": "Matbuot xizmati"
+    "press": "Matbuot xizmati",
+    "school":"Nordik maktabi"
   },
   "university": {
     "document": {
@@ -407,6 +408,14 @@
       "sectionTitle": "Mediateka"
     }
   },
+  "nordic_school": {
+    "title": "Nordik maktabi",
+    "subItems": [
+      "Maktab haqida",
+      "Maktab gallereyasi",
+      "Maktab kontakti"
+    ]
+  },
   "footer": {
     "old": "Saytning eski versiyasi",
     "phone": "Telefon",
@@ -453,5 +462,4 @@
     "trackCount": "{count} ta audio",
     "durationMinutes": "Davomiyligi {minutes} daqiqa"
   }
-
 }

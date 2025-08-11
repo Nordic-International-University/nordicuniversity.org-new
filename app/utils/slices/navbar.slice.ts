@@ -178,6 +178,22 @@ const initialState: any = {
       },
     ],
   },
+  nordic_school: {
+    nordicSchoolSidebarItems: [
+      {
+        name: "subItems.0",
+        url: "/nordic-school/about",
+      },
+      {
+        name: "subItems.1",
+        url: "/nordic-school/gallery",
+      },
+      {
+        name: "subItems.2",
+        url: "/nordic-school/contacts",
+      },
+    ],
+  },
 };
 
 initialState.menuItems = [
@@ -229,6 +245,13 @@ initialState.menuItems = [
     url: "/press-service/news",
     transKey: "press-service",
     subItems: initialState.press_service.pressServiceSidebarItems,
+  },
+  {
+    name: "NORDIK MAKTABI",
+    menuTransKey: "school",
+    url: "/press-service/news",
+    transKey: "nordic_school",
+    subItems: initialState.nordic_school.nordicSchoolSidebarItems,
   },
 ];
 
