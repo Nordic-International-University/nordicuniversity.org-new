@@ -112,7 +112,10 @@ const About = () => {
           </Row>
         </motion.div>
 
-        {/* Video Section */}
+        {/* Video Section ddd*/}
+        {/* Video Section ddd*/}
+        {/* Video Section ddd*/}
+        {/* Video Section ddd*/}
         <motion.div className="mb-16" variants={itemVariants}>
           <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-600 to-indigo-600">
             <div className="flex flex-col md:flex-row items-center gap-8 p-4">
