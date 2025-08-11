@@ -249,7 +249,7 @@ initialState.menuItems = [
   {
     name: "NORDIK MAKTABI",
     menuTransKey: "school",
-    url: "/press-service/news",
+    url: "/nordic-school/about",
     transKey: "nordic_school",
     subItems: initialState.nordic_school.nordicSchoolSidebarItems,
   },

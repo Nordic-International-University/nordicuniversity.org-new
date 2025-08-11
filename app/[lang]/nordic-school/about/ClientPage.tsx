@@ -21,7 +21,7 @@ const ClientPage = ({ props }: { props: ContactInfo | any }) => {
       name: tDoc("title"),
     },
     {
-      url: "/university/contacts",
+      url: "",
       name: t("subItems.0"),
     },
   ];

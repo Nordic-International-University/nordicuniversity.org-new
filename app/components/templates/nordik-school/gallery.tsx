@@ -84,12 +84,6 @@ const Gallery = () => {
       title: "Finlyandiya ta'limi: Nima uchun u eng yaxshi?",
       description: "Finlyandiya ta'lim tizimining sirlari.",
     },
-    {
-      type: "video",
-      url: "https://youtube.com/shorts/i0acMouzf3w?feature=share",
-      title: "Nordik Universitetiga tashrif",
-      description: "Finlyandiya Tashqi Ishlar Vaziri tashrifi.",
-    },
   ];
 
   return (

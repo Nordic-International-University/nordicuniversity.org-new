@@ -262,6 +262,7 @@ const About = () => {
         <motion.div className="text-center mt-16" variants={itemVariants}>
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button
+              href="/nordic-school/contacts"
               type="primary"
               size="large"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 border-0 hover:from-blue-700 hover:to-indigo-700 px-8 py-2 h-auto text-base"
