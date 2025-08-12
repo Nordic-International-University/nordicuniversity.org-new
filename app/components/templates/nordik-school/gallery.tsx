@@ -1,21 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
 import { ImageIcon } from "lucide-react";
-import { Card, Typography, Row, Col } from "antd";
+import { Card, Row, Col } from "antd";
 
-const { Title, Paragraph } = Typography;
-
-// Define the custom colors
 const colors = {
   darkBlue: "rgba(3, 46, 99, 1)",
   breadcrumb: "#003161",
   anyColor: "#0C3169",
   textSecondary: "#0b4075",
-  lightBlue: "#e0f2fe", // A very light blue for subtle accents
+  lightBlue: "#e0f2fe",
 };
 
-// Function to extract YouTube video ID from URL
-const getYouTubeVideoId = (url: string) => {
+const getYouTubeVideoId = (url: any) => {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
   return match && match[2].length === 11 ? match[2] : null;
@@ -59,31 +55,24 @@ const Gallery = () => {
   };
 
   const mediaItems = [
-    {
-      type: "video",
-      url: "https://www.youtube.com/watch?v=Phz-ejKcx74",
-      title: "Finlyandiya ta'lim tizimi tajribasi",
-      description: "Finlyandiyaning ta'lim sohasidagi yutuqlari.",
-    },
-    {
-      type: "image",
-      src: "/images/image2.jpg",
-      alt: "Library Study Area",
-      title: "Maktab binosi",
-      description: "O'quvchilar uchun tinch va qulay o'quv joyi.",
-    },
-    {
-      type: "video",
-      url: "https://www.youtube.com/watch?v=Hy-OL6GDkZ8",
-      title: "Finlyandiya maktablari",
-      description: "Finlyandiya maktablarining boshqa davlatlardan ustunligi.",
-    },
-    {
-      type: "video",
-      url: "https://www.youtube.com/watch?v=XQ_agxK6fLs",
-      title: "Finlyandiya ta'limi: Nima uchun u eng yaxshi?",
-      description: "Finlyandiya ta'lim tizimining sirlari.",
-    },
+    { type: "image", src: "/images/0.jpg" },
+    { type: "image", src: "/images/2.png" },
+    { type: "image", src: "/images/3.jpg" },
+    { type: "image", src: "/images/4.jpg" },
+    { type: "image", src: "/images/5.jpg" },
+    { type: "image", src: "/images/6.png" },
+    { type: "image", src: "/images/7.jpg" },
+    { type: "image", src: "/images/8.png" },
+    { type: "image", src: "/images/9.jpg" },
+    { type: "image", src: "/images/10.jpg" },
+    { type: "image", src: "/images/12.jpg" },
+    { type: "image", src: "/images/13.jpg" },
+    { type: "image", src: "/images/14.jpg" },
+    { type: "image", src: "/images/15.png" },
+    { type: "image", src: "/images/19.jpg" },
+    { type: "video", url: "https://www.youtube.com/watch?v=Phz-ejKcx74" },
+    { type: "video", url: "https://www.youtube.com/watch?v=Hy-OL6GDkZ8" },
+    { type: "video", url: "https://www.youtube.com/watch?v=XQ_agxK6fLs" },
   ];
 
   return (
@@ -94,20 +83,6 @@ const Gallery = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Hero Section */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <Title
-            level={1}
-            className="!text-4xl md:!text-5xl !font-light !text-gray-800 !mb-6"
-          >
-            Maktab Galereyasi
-          </Title>
-          <Paragraph className="!text-lg !text-gray-600 max-w-2xl mx-auto !mb-0">
-            Maktabimizdagi hayajonli lahzalar va yutuqlarni kashf eting
-          </Paragraph>
-        </motion.div>
-
-        {/* Media Gallery Grid */}
         <motion.div variants={itemVariants}>
           <Row gutter={[24, 24]}>
             {mediaItems.map((item, index) => (
@@ -128,7 +103,7 @@ const Gallery = () => {
                         <>
                           <img
                             src={item.src || "/placeholder.svg"}
-                            alt={item.alt}
+                            alt=""
                             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
                           <div
@@ -142,22 +117,13 @@ const Gallery = () => {
                         <iframe
                           width="100%"
                           height="100%"
-                          src={`https://www.youtube.com/embed/${getYouTubeVideoId(item.url as any)}`}
-                          title={item.title}
+                          src={`https://www.youtube.com/embed/${getYouTubeVideoId(item.url)}`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                           className="absolute inset-0 w-full h-full"
                         ></iframe>
                       )}
-                    </div>
-                    <div className="p-4">
-                      <Title level={4} className="!mb-2 !text-gray-800">
-                        {item.title}
-                      </Title>
-                      <Paragraph className="!text-gray-600 !text-sm">
-                        {item.description}
-                      </Paragraph>
                     </div>
                   </Card>
                 </motion.div>

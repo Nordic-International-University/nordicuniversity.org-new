@@ -42,7 +42,8 @@
     "science": "Science",
     "partnership": "Partnership",
     "students": "For Students",
-    "press": "Press Service"
+    "press": "Press Service",
+    "school":"Nordic School"
   },
   "university": {
     "document": {
@@ -404,6 +405,113 @@
     },
     "nordic-trend": {
       "sectionTitle": "Mediatheque"
+    }
+  },
+  "nordic_school": {
+    "title": "Nordic School",
+    "subItems": [
+      "About the School",
+      "School Gallery",
+      "School Contacts"
+    ],
+    "description": "A modern educational institution established based on the most advanced educational experience of Finland and other Nordic countries",
+    "videos": {
+      "video1_title": "Welcome words from Ms. Aino Puro, Coordinator of Nordic International University and International Education Expert from Finland",
+      "video2_title": "Congratulations from Mr. Petri Lounaskorpi, Member of the International Nordic School Council",
+      "video3_title": "A major report dedicated to the opening of the International Nordic School on UzReport channel"
+    },
+    "about": {
+      "title": "About the School",
+      "paragraph1": "The Nordic International School is established under Nordic International University in Tashkent. The cornerstone of the School was put on 11 June 2025 during the visit of Her Excellency Ms. Elina Valtonen, Minister for Foreign Affairs of the Republic of Finland, to Nordic International University.",
+      "paragraph2": "This School is an integral part of the International Education Hub and cluster established on the base of Nordic International University, drawing upon the educational experience and achievements of Finland and other Nordic countries. Its development is planned to proceed dynamically, making full use of the University’s entire potential—its tangible and intangible resources, academic and research base, faculty members, international cooperation networks, and more."
+    },
+    "goals": {
+      "title": "Goals and Objectives",
+      "paragraph1": "The Nordic International School will not only serve as an institution providing high-quality school education for the youth of Uzbekistan, but will also become a center that shares Finland’s and other Nordic countries’ most advanced expertise, know-how, and innovations in school education with other public and private schools in Uzbekistan, organizes teacher training and seminars with the participation of foreign specialists, and implements scientific projects.",
+      "paragraph2": "The School will also establish close cooperation with the relevant ministries, agencies, and institutions of the Republic of Uzbekistan."
+    },
+    "advantages": {
+      "title": "Our Advantages",
+      "features": {
+        "international_standards": {
+          "title": "International Standards",
+          "description": "The most advanced teaching methods of Finland and Nordic countries"
+        },
+        "qualified_teachers": {
+          "title": "Qualified Teachers",
+          "description": "Trainings and seminars with the participation of foreign specialists"
+        },
+        "modern_education": {
+          "title": "Modern Education",
+          "description": "Innovative approaches and the latest technologies"
+        }
+      }
+    },
+    "contact_button": "Contact Us",
+    "contact": {
+      "title": "Contact Us",
+      "description": "Do you have questions? Contact us and get all the information",
+      "contact_info": {
+        "title": "Contact Information",
+        "email": {
+          "title": "Email",
+          "value": "info@nis-tashkent.org"
+        },
+        "main_phone": {
+          "title": "Main Phone",
+          "value": "+998 90 091 85 88"
+        },
+        "additional_phone": {
+          "title": "Additional Phone",
+          "value": "+998 90 350 50 54"
+        },
+        "address": {
+          "title": "Address",
+          "line1": "Nordic International School",
+          "line2": "Tashkent city, Chilanzar district, Bunyodkor street, 8/2-house"
+        }
+      },
+      "form": {
+        "title": "Send Message",
+        "fields": {
+          "first_name": {
+            "label": "First Name",
+            "placeholder": "Your first name",
+            "error": "Please enter your first name!"
+          },
+          "last_name": {
+            "label": "Last Name",
+            "placeholder": "Your last name",
+            "error": "Please enter your last name!"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "email@example.com",
+            "error": "Please enter your email!",
+            "format_error": "Please enter a valid email!"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "placeholder": "+998 90 123 45 67",
+            "error": "Please enter your phone number!"
+          },
+          "subject": {
+            "label": "Subject",
+            "placeholder": "Message subject",
+            "error": "Please enter the subject!"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Write your message here...",
+            "error": "Please write your message!"
+          }
+        },
+        "submit_button": "Send Message",
+        "success_message": "Your message has been sent successfully!"
+      },
+      "location": {
+        "title": "Our Location"
+      }
     }
   },
   "footer": {

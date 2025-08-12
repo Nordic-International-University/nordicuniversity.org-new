@@ -414,7 +414,106 @@
       "Maktab haqida",
       "Maktab gallereyasi",
       "Maktab kontakti"
-    ]
+    ],
+    "description": "Finlyandiya va boshqa Nordik davlatlarining eng ilg'or ta'lim tajribasi asosida tashkil etilgan zamonaviy ta'lim muassasasi",
+    "videos": {
+      "video1_title": "Xaqaro Nordic Universiteti Koordinatori, Finlyandiyalik Xalqaro Ta'lim Eksperti Aino Puro xonimdan tabrik so'zlari",
+      "video2_title": "Xalqaro Nordic Maktabi kengashi a'zosi Janob Petri Lounaskorpi'dan qutlov so'zlari",
+      "video3_title": "UzReport kanalida Xalqaro Nordic Maktabining ochilishiga bag'ishlangan katta reportaj"
+    },
+    "about": {
+      "title": "Maktab haqida",
+      "paragraph1": "Xalqaro Nordik Maktabi, Toshkentdagi Xalqaro Nordik Universiteti qoshida tashkil etilmoqda. Ushbu maktabni tashkil etilishiga Finlyandiya Respublikasining Tashqi Ishlar Vaziri Elina Valtonen xonimning 2025 yil 11 iyunda tashrifi davomida tamal toshi qo'yildi.",
+      "paragraph2": "Maktab Xalqaro Nordik Universiteti negizida tashkil topgan, Finlyandiya va boshqa Nordik davlatlar ta'lim tajribasi va yutuqlariga asoslangan Xalqaro Ta'lim Habi va klasterining ajralmas bir qismi hisoblanadi."
+    },
+    "goals": {
+      "title": "Maqsad va Vazifalar",
+      "paragraph1": "Maktab nafaqat O'zbekiston yoshlari uchun sifatli maktab ta'limini ta'minlab beradigan maskan, balki maktab ta'limi sohasida Finlyandiya va boshqa Nordik davlatlarining eng ilg'or tajriba, know-how va innovatsiyalarni o'rtoqlashadigan markaz.",
+      "paragraph2": "O'qituvchilar uchun xorijiy mutaxassislar ishtirokida trening va seminarlar tashkil qiladi va O'zbekiston Respublikasidagi tegishli Vazirlik va idoralar bilan yaqindan hamkorlik yo'lga qo'yadi."
+    },
+    "advantages": {
+      "title": "Bizning Afzalliklarimiz",
+      "features": {
+        "international_standards": {
+          "title": "Xalqaro Standartlar",
+          "description": "Finlyandiya va Nordik davlatlarining eng ilg'or ta'lim metodlari"
+        },
+        "qualified_teachers": {
+          "title": "Malakali O'qituvchilar",
+          "description": "Xorijiy mutaxassislar ishtirokida trening va seminarlar"
+        },
+        "modern_education": {
+          "title": "Zamonaviy Ta'lim",
+          "description": "Innovatsion yondashuvlar va eng so'nggi texnologiyalar"
+        }
+      }
+    },
+    "contact_button": "Biz bilan bog'lanish",
+    "contact": {
+      "title": "Biz bilan bog'lanish",
+      "description": "Savollaringiz bormi? Biz bilan bog'laning va barcha ma'lumotlarni oling",
+      "contact_info": {
+        "title": "Kontakt ma'lumotlari",
+        "email": {
+          "title": "Email",
+          "value": "info@nis-tashkent.org"
+        },
+        "main_phone": {
+          "title": "Asosiy telefon",
+          "value": "+998 90 091 85 88"
+        },
+        "additional_phone": {
+          "title": "Qo'shimcha telefon",
+          "value": "+998 90 350 50 54"
+        },
+        "address": {
+          "title": "Manzil",
+          "line1": "Xalqaro Nordik Maktabi",
+          "line2": "Toshkent sh, Chilonzor tumani Bunyodkor ko'ch, 8/2-uy"
+        }
+      },
+      "form": {
+        "title": "Xabar yuborish",
+        "fields": {
+          "first_name": {
+            "label": "Ism",
+            "placeholder": "Ismingiz",
+            "error": "Iltimos, ismingizni kiriting!"
+          },
+          "last_name": {
+            "label": "Familiya",
+            "placeholder": "Familiyangiz",
+            "error": "Iltimos, familiyangizni kiriting!"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "email@example.com",
+            "error": "Iltimos, emailingizni kiriting!",
+            "format_error": "Iltimos, to'g'ri email kiriting!"
+          },
+          "phone": {
+            "label": "Telefon raqam",
+            "placeholder": "+998 90 123 45 67",
+            "error": "Iltimos, telefon raqamingizni kiriting!"
+          },
+          "subject": {
+            "label": "Mavzu",
+            "placeholder": "Xabar mavzusi",
+            "error": "Iltimos, mavzuni kiriting!"
+          },
+          "message": {
+            "label": "Xabar",
+            "placeholder": "Xabaringizni bu yerga yozing...",
+            "error": "Iltimos, xabaringizni yozing!"
+          }
+        },
+        "submit_button": "Xabar yuborish",
+        "success_message": "Xabaringiz muvaffaqiyatli yuborildi!"
+      },
+      "location": {
+        "title": "Bizning joylashuvimiz"
+      }
+    }
   },
   "footer": {
     "old": "Saytning eski versiyasi",

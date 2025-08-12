@@ -2,19 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Play,
-  ExternalLink,
-  Globe,
-  Users,
-  BookOpen,
-  Award,
-} from "lucide-react";
+import { Globe, Users, BookOpen, Award } from "lucide-react";
 import { Button, Card, Typography, Row, Col, Space } from "antd";
+import { useTranslations } from "next-intl";
 
 const { Title, Paragraph } = Typography;
 
 const About = () => {
+  const t = useTranslations();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const containerVariants = {
@@ -40,14 +35,6 @@ const About = () => {
     },
   };
 
-  const handleVideoClick = () => {
-    setIsVideoPlaying(true);
-    window.open(
-      "https://youtube.com/shorts/NXyolQ38gxM?si=djXkaARNsLfnGyoZ",
-      "_blank",
-    );
-  };
-
   return (
     <div className="min-h-screen mt-6 bg-gray-50">
       <motion.div
@@ -62,15 +49,88 @@ const About = () => {
             level={1}
             className="!text-4xl md:!text-5xl !font-light !text-gray-800 !mb-6"
           >
-            Xalqaro Nordik Maktabi
+            {t("nordic_school.title")}
           </Title>
           <Paragraph className="!text-lg !text-gray-600 max-w-2xl mx-auto !mb-0">
-            Finlyandiya va boshqa Nordik davlatlarining eng ilg'or ta'lim
-            tajribasi asosida tashkil etilgan zamonaviy ta'lim muassasasi
+            {t("nordic_school.description")}
           </Paragraph>
         </motion.div>
 
         {/* Images Section */}
+        <motion.div className="mb-16" variants={itemVariants}>
+          <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-600 to-indigo-600">
+            <div className="flex flex-col md:flex-row items-center gap-8 p-4">
+              <div className="flex-1 text-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Video 1 */}
+                  <div>
+                    <Title
+                      level={5}
+                      className="!text-white !mb-2 flex items-center"
+                      style={{ minHeight: "60px" }} // Sarlavha balandligi tenglashadi
+                    >
+                      {t("nordic_school.videos.video1_title")}
+                    </Title>
+                    <iframe
+                      width="100%"
+                      height="250"
+                      src="https://www.youtube.com/embed/NXyolQ38gxM"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="rounded-lg shadow-md"
+                    ></iframe>
+                  </div>
+
+                  {/* Video 2 */}
+                  <div>
+                    <Title
+                      level={5}
+                      className="!text-white !mb-2 flex items-center"
+                      style={{ minHeight: "60px" }}
+                    >
+                      {t("nordic_school.videos.video2_title")}
+                    </Title>
+                    <iframe
+                      width="100%"
+                      height="250"
+                      src="https://www.youtube.com/embed/i0acMouzf3w"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="rounded-lg shadow-md"
+                    ></iframe>
+                  </div>
+
+                  {/* Video 3 */}
+                  <div>
+                    <Title
+                      level={5}
+                      className="!text-white !mb-2 flex items-center"
+                      style={{ minHeight: "60px" }}
+                    >
+                      {t("nordic_school.videos.video3_title")}
+                    </Title>
+                    <iframe
+                      width="100%"
+                      height="250"
+                      src="https://www.youtube.com/embed/-BK43uEb1bU"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="rounded-lg shadow-md"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+
+        {/* Main Content */}
         <motion.div className="mb-16" variants={itemVariants}>
           <Row gutter={[24, 24]}>
             <Col xs={24} md={8}>
@@ -79,7 +139,7 @@ const About = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/images/about.png"
+                  src="/images/35.png"
                   alt="Nordic School Building"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
@@ -91,7 +151,7 @@ const About = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/images/11.png"
+                  src="/images/34.png"
                   alt="Students Learning"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
@@ -103,7 +163,7 @@ const About = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/images/22.png"
+                  src="/images/11.png"
                   alt="Educational Environment"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
@@ -112,42 +172,6 @@ const About = () => {
           </Row>
         </motion.div>
 
-        {/* Video Section ddd*/}
-        {/* Video Section ddd*/}
-        {/* Video Section ddd*/}
-        {/* Video Section ddd*/}
-        <motion.div className="mb-16" variants={itemVariants}>
-          <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-600 to-indigo-600">
-            <div className="flex flex-col md:flex-row items-center gap-8 p-4">
-              <div className="flex-1 text-white">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <iframe
-                    width="100%"
-                    height="250"
-                    src="https://www.youtube.com/embed/NXyolQ38gxM"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="rounded-lg shadow-md"
-                  ></iframe>
-                  <iframe
-                    width="100%"
-                    height="250"
-                    src="https://www.youtube.com/embed/i0acMouzf3w"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="rounded-lg shadow-md"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </motion.div>
-
-        {/* Main Content */}
         <motion.div className="mb-16" variants={itemVariants}>
           <Row gutter={[32, 32]}>
             <Col xs={24} lg={12}>
@@ -157,21 +181,14 @@ const About = () => {
                     <BookOpen className="w-5 h-5 text-blue-600" />
                   </div>
                   <Title level={3} className="!mb-0 !text-gray-800">
-                    Maktab haqida
+                    {t("nordic_school.about.title")}
                   </Title>
                 </Space>
                 <Paragraph className="!text-gray-600 !mb-4">
-                  Xalqaro Nordik Maktabi, Toshkentdagi Xalqaro Nordik
-                  Universiteti qoshida tashkil etilmoqda. Ushbu maktabni tashkil
-                  etilishiga Finlyandiya Respublikasining Tashqi Ishlar Vaziri
-                  Elina Valtonen xonimning 2025 yil 11 iyunda tashrifi davomida
-                  tamal toshi qo'yildi.
+                  {t("nordic_school.about.paragraph1")}
                 </Paragraph>
                 <Paragraph className="!text-gray-600 !mb-0">
-                  Maktab Xalqaro Nordik Universiteti negizida tashkil topgan,
-                  Finlyandiya va boshqa Nordik davlatlar ta'lim tajribasi va
-                  yutuqlariga asoslangan Xalqaro Ta'lim Habi va klasterining
-                  ajralmas bir qismi hisoblanadi.
+                  {t("nordic_school.about.paragraph2")}
                 </Paragraph>
               </Card>
             </Col>
@@ -182,21 +199,14 @@ const About = () => {
                     <Award className="w-5 h-5 text-indigo-600" />
                   </div>
                   <Title level={3} className="!mb-0 !text-gray-800">
-                    Maqsad va Vazifalar
+                    {t("nordic_school.goals.title")}
                   </Title>
                 </Space>
                 <Paragraph className="!text-gray-600 !mb-4">
-                  Maktab nafaqat O'zbekiston yoshlari uchun sifatli maktab
-                  ta'limini ta'minlab beradigan maskan, balki maktab ta'limi
-                  sohasida Finlyandiya va boshqa Nordik davlatlarining eng
-                  ilg'or tajriba, know-how va innovatsiyalarni o'rtoqlashadigan
-                  markaz.
+                  {t("nordic_school.goals.paragraph1")}
                 </Paragraph>
                 <Paragraph className="!text-gray-600 !mb-0">
-                  O'qituvchilar uchun xorijiy mutaxassislar ishtirokida trening
-                  va seminarlar tashkil qiladi va O'zbekiston Respublikasidagi
-                  tegishli Vazirlik va idoralar bilan yaqindan hamkorlik yo'lga
-                  qo'yadi.
+                  {t("nordic_school.goals.paragraph2")}
                 </Paragraph>
               </Card>
             </Col>
@@ -209,27 +219,30 @@ const About = () => {
             level={2}
             className="!text-center !mb-12 !text-gray-800 !font-light"
           >
-            Bizning Afzalliklarimiz
+            {t("nordic_school.advantages.title")}
           </Title>
           <Row gutter={[24, 24]}>
             {[
               {
                 icon: Globe,
-                title: "Xalqaro Standartlar",
-                description:
-                  "Finlyandiya va Nordik davlatlarining eng ilg'or ta'lim metodlari",
+                titleKey:
+                  "nordic_school.advantages.features.international_standards.title",
+                descriptionKey:
+                  "nordic_school.advantages.features.international_standards.description",
               },
               {
                 icon: Users,
-                title: "Malakali O'qituvchilar",
-                description:
-                  "Xorijiy mutaxassislar ishtirokida trening va seminarlar",
+                titleKey:
+                  "nordic_school.advantages.features.qualified_teachers.title",
+                descriptionKey:
+                  "nordic_school.advantages.features.qualified_teachers.description",
               },
               {
                 icon: BookOpen,
-                title: "Zamonaviy Ta'lim",
-                description:
-                  "Innovatsion yondashuvlar va eng so'nggi texnologiyalar",
+                titleKey:
+                  "nordic_school.advantages.features.modern_education.title",
+                descriptionKey:
+                  "nordic_school.advantages.features.modern_education.description",
               },
             ].map((feature, index) => (
               <Col xs={24} md={8} key={index}>
@@ -246,10 +259,10 @@ const About = () => {
                       <feature.icon className="w-6 h-6 text-white" />
                     </motion.div>
                     <Title level={4} className="!mb-4 !text-gray-800">
-                      {feature.title}
+                      {t(feature.titleKey)}
                     </Title>
                     <Paragraph className="!text-gray-600 !mb-0">
-                      {feature.description}
+                      {t(feature.descriptionKey)}
                     </Paragraph>
                   </Card>
                 </motion.div>
@@ -267,7 +280,7 @@ const About = () => {
               size="large"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 border-0 hover:from-blue-700 hover:to-indigo-700 px-8 py-2 h-auto text-base"
             >
-              Biz bilan bog'lanish
+              {t("nordic_school.contact_button")}
             </Button>
           </motion.div>
         </motion.div>

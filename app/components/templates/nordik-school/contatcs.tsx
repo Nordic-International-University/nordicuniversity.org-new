@@ -13,6 +13,7 @@ import {
   Space,
   message,
 } from "antd";
+import { useTranslations } from "next-intl";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -26,6 +27,7 @@ const colors = {
 };
 
 const Contact = () => {
+  const t = useTranslations();
   const [form] = Form.useForm();
 
   const containerVariants = {
@@ -64,27 +66,27 @@ const Contact = () => {
 
   const onFinish = (values: any) => {
     console.log("Form values:", values);
-    message.success("Xabaringiz muvaffaqiyatli yuborildi!");
+    message.success(t("nordic_school.contact.form.success_message"));
     form.resetFields();
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
-      value: "info@nis-tashkent.org",
+      titleKey: "nordic_school.contact.contact_info.email.title",
+      valueKey: "nordic_school.contact.contact_info.email.value",
       href: "mailto:info@nis-tashkent.org",
     },
     {
       icon: Phone,
-      title: "Asosiy telefon",
-      value: "+998 90 091 85 88",
+      titleKey: "nordic_school.contact.contact_info.main_phone.title",
+      valueKey: "nordic_school.contact.contact_info.main_phone.value",
       href: "tel:+998900918588",
     },
     {
       icon: Phone,
-      title: "Qo'shimcha telefon",
-      value: "+998 90 350 50 54",
+      titleKey: "nordic_school.contact.contact_info.additional_phone.title",
+      valueKey: "nordic_school.contact.contact_info.additional_phone.value",
       href: "tel:+998903505054",
     },
   ];
@@ -103,11 +105,10 @@ const Contact = () => {
             level={1}
             className="!text-4xl md:!text-5xl !font-light !text-gray-800 !mb-6"
           >
-            Biz bilan bog'lanish
+            {t("nordic_school.contact.title")}
           </Title>
           <Paragraph className="!text-lg !text-gray-600 max-w-2xl mx-auto !mb-0">
-            Savollaringiz bormi? Biz bilan bog'laning va barcha ma'lumotlarni
-            oling
+            {t("nordic_school.contact.description")}
           </Paragraph>
         </motion.div>
 
@@ -116,7 +117,7 @@ const Contact = () => {
           <Col xs={24} lg={10}>
             <motion.div variants={itemVariants}>
               <Title level={3} className="!mb-8 !text-gray-800 !font-light">
-                Kontakt ma'lumotlari
+                {t("nordic_school.contact.contact_info.title")}
               </Title>
               <Space direction="vertical" size="large" className="w-full">
                 {contactInfo.map((info, index) => (
@@ -138,13 +139,13 @@ const Contact = () => {
                         </div>
                         <div>
                           <Text className="text-gray-500 text-sm block">
-                            {info.title}
+                            {t(info.titleKey)}
                           </Text>
                           <a
                             href={info.href}
                             className="text-gray-800 hover:text-blue-600 transition-colors duration-200 text-base font-medium"
                           >
-                            {info.value}
+                            {t(info.valueKey)}
                           </a>
                         </div>
                       </Space>
@@ -172,12 +173,18 @@ const Contact = () => {
                       </div>
                       <div>
                         <Text className="text-gray-500 text-sm block">
-                          Manzil
+                          {t(
+                            "nordic_school.contact.contact_info.address.title",
+                          )}
                         </Text>
                         <Text className="text-gray-800 text-base font-medium">
-                          Xalqaro Nordik Maktabi
+                          {t(
+                            "nordic_school.contact.contact_info.address.line1",
+                          )}
                           <br />
-                          Toshkent, O'zbekiston
+                          {t(
+                            "nordic_school.contact.contact_info.address.line2",
+                          )}
                         </Text>
                       </div>
                     </Space>
@@ -197,7 +204,7 @@ const Contact = () => {
             >
               <Card className="border-0 shadow-md">
                 <Title level={3} className="!mb-6 !text-gray-800 !font-light">
-                  Xabar yuborish
+                  {t("nordic_school.contact.form.title")}
                 </Title>
                 <Form
                   form={form}
@@ -209,30 +216,45 @@ const Contact = () => {
                     <Col xs={24} sm={12}>
                       <Form.Item
                         name="firstName"
-                        label="Ism"
+                        label={t(
+                          "nordic_school.contact.form.fields.first_name.label",
+                        )}
                         rules={[
                           {
                             required: true,
-                            message: "Iltimos, ismingizni kiriting!",
+                            message: t(
+                              "nordic_school.contact.form.fields.first_name.error",
+                            ),
                           },
                         ]}
                       >
-                        <Input placeholder="Ismingiz" className="rounded-lg" />
+                        <Input
+                          placeholder={t(
+                            "nordic_school.contact.form.fields.first_name.placeholder",
+                          )}
+                          className="rounded-lg"
+                        />
                       </Form.Item>
                     </Col>
                     <Col xs={24} sm={12}>
                       <Form.Item
                         name="lastName"
-                        label="Familiya"
+                        label={t(
+                          "nordic_school.contact.form.fields.last_name.label",
+                        )}
                         rules={[
                           {
                             required: true,
-                            message: "Iltimos, familiyangizni kiriting!",
+                            message: t(
+                              "nordic_school.contact.form.fields.last_name.error",
+                            ),
                           },
                         ]}
                       >
                         <Input
-                          placeholder="Familiyangiz"
+                          placeholder={t(
+                            "nordic_school.contact.form.fields.last_name.placeholder",
+                          )}
                           className="rounded-lg"
                         />
                       </Form.Item>
@@ -243,20 +265,28 @@ const Contact = () => {
                     <Col xs={24} sm={12}>
                       <Form.Item
                         name="email"
-                        label="Email"
+                        label={t(
+                          "nordic_school.contact.form.fields.email.label",
+                        )}
                         rules={[
                           {
                             required: true,
-                            message: "Iltimos, emailingizni kiriting!",
+                            message: t(
+                              "nordic_school.contact.form.fields.email.error",
+                            ),
                           },
                           {
                             type: "email",
-                            message: "Iltimos, to'g'ri email kiriting!",
+                            message: t(
+                              "nordic_school.contact.form.fields.email.format_error",
+                            ),
                           },
                         ]}
                       >
                         <Input
-                          placeholder="email@example.com"
+                          placeholder={t(
+                            "nordic_school.contact.form.fields.email.placeholder",
+                          )}
                           className="rounded-lg"
                         />
                       </Form.Item>
@@ -264,16 +294,22 @@ const Contact = () => {
                     <Col xs={24} sm={12}>
                       <Form.Item
                         name="phone"
-                        label="Telefon raqam"
+                        label={t(
+                          "nordic_school.contact.form.fields.phone.label",
+                        )}
                         rules={[
                           {
                             required: true,
-                            message: "Iltimos, telefon raqamingizni kiriting!",
+                            message: t(
+                              "nordic_school.contact.form.fields.phone.error",
+                            ),
                           },
                         ]}
                       >
                         <Input
-                          placeholder="+998 90 123 45 67"
+                          placeholder={t(
+                            "nordic_school.contact.form.fields.phone.placeholder",
+                          )}
                           className="rounded-lg"
                         />
                       </Form.Item>
@@ -282,27 +318,41 @@ const Contact = () => {
 
                   <Form.Item
                     name="subject"
-                    label="Mavzu"
+                    label={t("nordic_school.contact.form.fields.subject.label")}
                     rules={[
-                      { required: true, message: "Iltimos, mavzuni kiriting!" },
+                      {
+                        required: true,
+                        message: t(
+                          "nordic_school.contact.form.fields.subject.error",
+                        ),
+                      },
                     ]}
                   >
-                    <Input placeholder="Xabar mavzusi" className="rounded-lg" />
+                    <Input
+                      placeholder={t(
+                        "nordic_school.contact.form.fields.subject.placeholder",
+                      )}
+                      className="rounded-lg"
+                    />
                   </Form.Item>
 
                   <Form.Item
                     name="message"
-                    label="Xabar"
+                    label={t("nordic_school.contact.form.fields.message.label")}
                     rules={[
                       {
                         required: true,
-                        message: "Iltimos, xabaringizni yozing!",
+                        message: t(
+                          "nordic_school.contact.form.fields.message.error",
+                        ),
                       },
                     ]}
                   >
                     <TextArea
                       rows={6}
-                      placeholder="Xabaringizni bu yerga yozing..."
+                      placeholder={t(
+                        "nordic_school.contact.form.fields.message.placeholder",
+                      )}
                       className="rounded-lg"
                     />
                   </Form.Item>
@@ -323,7 +373,7 @@ const Contact = () => {
                           borderColor: colors.darkBlue,
                         }}
                       >
-                        Xabar yuborish
+                        {t("nordic_school.contact.form.submit_button")}
                       </Button>
                     </motion.div>
                   </Form.Item>
@@ -345,7 +395,7 @@ const Contact = () => {
             level={3}
             className="!mb-8 !text-gray-800 !font-light text-center"
           >
-            Bizning joylashuvimiz
+            {t("nordic_school.contact.location.title")}
           </Title>
           <Card className="border-0 shadow-md overflow-hidden">
             <div className="relative w-full h-96 md:h-[500px]">
