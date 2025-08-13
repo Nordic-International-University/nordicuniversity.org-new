@@ -87,7 +87,7 @@ const Contact = () => {
       icon: Phone,
       titleKey: "nordic_school.contact.contact_info.additional_phone.title",
       valueKey: "nordic_school.contact.contact_info.additional_phone.value",
-      href: "tel:+998903505054",
+      href: "tel:+998908304913",
     },
   ];
 
