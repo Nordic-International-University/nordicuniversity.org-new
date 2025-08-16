@@ -30,6 +30,10 @@ const initialState: any = {
         name: "subItems.5",
         url: "/university/contacts",
       },
+      {
+        name: "subItems.6",
+        url: "/university/nordic-way",
+      },
     ],
     researchSidebarItems: [
       {
