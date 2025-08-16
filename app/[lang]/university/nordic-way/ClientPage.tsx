@@ -30,7 +30,7 @@ const ClientPage = () => {
       broadCampItems={brodCmbItems}
       children={<NordicWay />}
       sidebarItems={subItemDocument}
-      sidebarTitle={t("advantages.section_title")}
+      sidebarTitle={t("document.subItems.6")}
     ></LeftSidebarAndComponent>
   );
 };
