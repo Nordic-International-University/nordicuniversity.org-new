@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Button, Modal } from "antd";
+import { Button, Modal, message } from "antd"; // message import qilindi
 import { useTranslations } from "next-intl";
-import { PiFilePdfDuotone } from "react-icons/pi";
+import { PiFilePdfDuotone, PiCopySimpleDuotone } from "react-icons/pi";
 import gsap from "gsap";
 
 interface CodesAndManualsProps {
@@ -43,6 +43,15 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
     setSelectedPdf(null);
   };
 
+  // ✅ URL copy funksiyasi
+  const handleCopyUrl = () => {
+    if (selectedPdf) {
+      navigator.clipboard.writeText(selectedPdf).then(() => {
+        message.success("URL copied to clipboard!");
+      });
+    }
+  };
+
   return (
     <article className="mt-10 mb-10">
       <div className="grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-14 grid max-md:place-items-center">
@@ -64,7 +73,6 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
                 {item.name}
               </h2>
               <div className="hidden md:block">
-                {/* Modal ochish uchun tugma (faqat katta ekranlar uchun) */}
                 <Button
                   icon={<PiFilePdfDuotone />}
                   className="px-8 max-sm:px-4 w-full mt-3 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
@@ -79,7 +87,6 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
                 </Button>
               </div>
               <div className="block md:hidden">
-                {/* Havola orqali ochish (faqat kichik ekranlar uchun) */}
                 <a
                   href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`}
                   target="_blank"
@@ -101,8 +108,17 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
         onCancel={handleCancel}
         footer={null}
         width="60%"
-        destroyOnClose
       >
+        <div className="flex justify-end mb-4">
+          {/* ✅ Copy URL tugmasi */}
+          <Button
+            icon={<PiCopySimpleDuotone />}
+            onClick={handleCopyUrl}
+            type="default"
+          >
+            pdfning havolasini nusxalash
+          </Button>
+        </div>
         <div className="flex justify-center">
           {selectedPdf && (
             <iframe
