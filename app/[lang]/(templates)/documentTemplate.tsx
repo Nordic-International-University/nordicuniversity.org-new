@@ -47,7 +47,7 @@ const YearEndReview: FC<{ data: annualsItem[] }> = ({ data }) => {
                 <Button
                   href={item.source_link}
                   target="_blank"
-                  className="bg-primary text-secodnary font-semibold w-full"
+                  className="bg-secondary text-white font-semibold w-full"
                   size="middle"
                 >
                   {t("online_read")}

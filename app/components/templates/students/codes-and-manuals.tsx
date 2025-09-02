@@ -69,7 +69,7 @@ const CodesAndManuals = ({ props }: { props: CodesAndManualsProps[] }) => {
               className="h-[400px] max-sm:w-full"
             />
             <div className="mt-4 items-center justify-between">
-              <h2 className="max-sm:text-sm max-sm:pl-2 text-xl text-text_secondary">
+              <h2 className="max-sm:text-sm max-sm:pl-2 text-xl line-clamp-1 text-text_secondary">
                 {item.name}
               </h2>
               <div className="hidden md:block">
