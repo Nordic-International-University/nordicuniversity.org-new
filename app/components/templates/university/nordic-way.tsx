@@ -5,7 +5,7 @@ const NordicWay = () => {
     <div className="w-full mt-6">
       <section className="w-full">
         <Image
-          src="/images/Prospect_uz4.png"
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-1.png"
           alt="Nordic Way Prospect Section 4"
           width={1200}
           height={800}
@@ -14,8 +14,8 @@ const NordicWay = () => {
       </section>
       <section className="w-full">
         <Image
-          src="/images/Prospect_uz3.png"
-          alt="Nordic Way Prospect Section 3"
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-2.png"
+          alt="Nordic Way Prospect Section 4"
           width={1200}
           height={800}
           className="w-full h-auto object-cover"
@@ -23,8 +23,8 @@ const NordicWay = () => {
       </section>
       <section className="w-full">
         <Image
-          src="/images/Prospect_uz2.png"
-          alt="Nordic Way Prospect Section 2"
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-3.png"
+          alt="Nordic Way Prospect Section 4"
           width={1200}
           height={800}
           className="w-full h-auto object-cover"
@@ -33,20 +33,28 @@ const NordicWay = () => {
       {/* Section 1 */}
       <section className="w-full">
         <Image
-          src="/images/Prospect_uz.png"
-          alt="Nordic Way Prospect Main Section"
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-4.png"
+          alt="Nordic Way Prospect Section 4"
           width={1200}
           height={800}
           className="w-full h-auto object-cover"
-          priority
         />
       </section>
 
       {/* Section 2 */}
       <section className="w-full">
         <Image
-          src="/images/Prospect_uz1.png"
-          alt="Nordic Way Prospect Section 1"
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-5.png"
+          alt="Nordic Way Prospect Section 4"
+          width={1200}
+          height={800}
+          className="w-full h-auto object-cover"
+        />
+      </section>
+      <section className="w-full">
+        <Image
+          src="/images/university-images/nordic-way/prospekt oxiri 11.09.2025-6.png"
+          alt="Nordic Way Prospect Section 4"
           width={1200}
           height={800}
           className="w-full h-auto object-cover"
