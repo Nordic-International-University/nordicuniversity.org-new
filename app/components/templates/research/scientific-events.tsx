@@ -16,64 +16,22 @@ const ScientificEvents = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideChange = (swiper: any) => {
-    setActiveIndex(swiper.activeIndex);
-  };
-
-  if (!props || props.length === 0) {
-    return <NoDataComponent />;
-  }
-
   const renderEvents = () => {
-    if (props.length > 3) {
-      return (
-        <Swiper
-          direction="horizontal"
-          spaceBetween={30}
-          slidesPerView={1}
-          centeredSlides={true}
-          onSlideChange={handleSlideChange}
-          navigation={{
-            prevEl: ".swiperNumericDown",
-            nextEl: ".swiperNumericUp",
-          }}
-          breakpoints={{
-            1024: {
-              slidesPerView: 1,
-              spaceBetween: 30,
-            },
-            300: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-          }}
-          modules={[Navigation]}
-          className="h-[243px] max-lg:h-auto"
-        >
-          {props.map((event, index) => (
-            <SwiperSlide
-              className="h-[243px] max-lg:h-auto"
-              key={event.id || index}
-            >
-              <EventCards
-                path="/research/scientific-conferences/"
-                items={event}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      );
-    } else {
-      return (
-        <div className="gap-3 flex flex-col">
-          {props.map((event, index) => (
-            <div className="border-2 border-[#7A98C1] rounded max-lg:p-0 p-4">
-              <EventCards path={url} items={event} key={event.id || index} />
-            </div>
-          ))}
-        </div>
-      );
-    }
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+        {props.map((event, index) => (
+          <div
+            key={event.id || index}
+            className="border-2 border-[#7A98C1] rounded p-4"
+          >
+            <EventCards
+              path="/research/scientific-conferences/"
+              items={event}
+            />
+          </div>
+        ))}
+      </div>
+    );
   };
 
   return <article className="mt-12">{renderEvents()}</article>;
