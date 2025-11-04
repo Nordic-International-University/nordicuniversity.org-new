@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/new-books-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-27</news:publication_date>
+      <news:title>Новые книги в Нордике!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/new-books-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-27</news:publication_date>
+      <news:title>Новые книги в Нордике!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/new-books-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-27</news:publication_date>
+      <news:title>Новые книги в Нордике!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/bitiruvchi-2025-tantanasi-katta-hayot-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-06</news:publication_date>
+      <news:title>"Bitiruvchi-2025" tantanasi: katta hayot sari yangi qadamlar!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/bitiruvchi-2025-tantanasi-katta-hayot-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-06</news:publication_date>
+      <news:title>"Bitiruvchi-2025" tantanasi: katta hayot sari yangi qadamlar!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/bitiruvchi-2025-tantanasi-katta-hayot-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-06</news:publication_date>
+      <news:title>"Bitiruvchi-2025" tantanasi: katta hayot sari yangi qadamlar!</news:title>
+    </news:news>
+  </url>
+</urlset>
