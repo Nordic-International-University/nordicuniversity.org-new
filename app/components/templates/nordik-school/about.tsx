@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, Users, BookOpen, Award } from "lucide-react";
 import { Button, Card, Typography, Row, Col, Space } from "antd";
@@ -10,7 +9,6 @@ const { Title, Paragraph } = Typography;
 
 const About = () => {
   const t = useTranslations();
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -62,12 +60,30 @@ const About = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 p-4">
               <div className="flex-1 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Title
+                      level={5}
+                      className="!text-white !mb-2 flex items-center"
+                      style={{ minHeight: "60px" }}
+                    >
+                      {t("nordic_school.president_visit.subtitle")}
+                    </Title>
+                    <video
+                      src="/video/video.mp4"
+                      poster="/images/nordic-school-images/Screenshot_8.png"
+                      className="h-64"
+                      controls
+                      width="100%"
+                    >
+                      Video yuklanmadi
+                    </video>
+                  </div>
                   {/* Video 1 */}
                   <div>
                     <Title
                       level={5}
                       className="!text-white !mb-2 flex items-center"
-                      style={{ minHeight: "60px" }} // Sarlavha balandligi tenglashadi
+                      style={{ minHeight: "60px" }}
                     >
                       {t("nordic_school.videos.video1_title")}
                     </Title>
@@ -213,7 +229,52 @@ const About = () => {
           </Row>
         </motion.div>
 
-        {/* Features Grid */}
+        {/* main */}
+
+        {/* President Visit Section */}
+        <motion.div className="mb-16" variants={itemVariants}>
+          <Title
+            level={2}
+            className="!text-center !mb-8 !text-gray-800 !font-light"
+          >
+            {t("nordic_school.president_visit.title")}
+          </Title>
+
+          {/* Image Grid 3x2 */}
+          <Row gutter={[16, 16]} className="mb-8">
+            {[
+              "Screenshot_4.png",
+              "Screenshot_5.png",
+              "Screenshot_7.png",
+              "Screenshot_8.png",
+              "Screenshot_9.png",
+              "Screenshot_11.png",
+            ].map((image, index) => (
+              <Col xs={24} sm={12} md={8} key={index}>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={`/images/nordic-school-images/${image}`}
+                    alt={`President visit ${index + 1}`}
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+
+          <Card className="h-full border-0 shadow-md">
+            <Title level={4} className="!mb-4 !text-gray-800">
+              {t("nordic_school.president_visit.subtitle")}
+            </Title>
+            <Paragraph className="!text-gray-600 !mb-0">
+              {t("nordic_school.president_visit.description")}
+            </Paragraph>
+          </Card>
+        </motion.div>
+
         <motion.div variants={itemVariants}>
           <Title
             level={2}

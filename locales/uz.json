@@ -449,6 +449,11 @@
         }
       }
     },
+    "president_visit": {
+      "title": "Finlandiya Prezidenti Xalqaro Nordik universiteti maktabida",
+      "subtitle": "Nordik xalqaro maktabi o'quvchilari Finlandiya Prezidenti Aleksandr Stubb bilan uchrashish sharafiga muyassar bo'ldilar",
+      "description": "Bir guruh o'quvchilar davlat rahbariga maktabni tanishtirish jarayonida hamrohlik qildilar. Prezident ularga o'z faoliyati, davlat boshqaruvi va tashqi siyosatning ahamiyati haqida qiziqarli ma'lumotlar berdi hamda barcha savollariga samimiy javob qaytardi."
+    },
     "contact_button": "Biz bilan bog'lanish",
     "contact": {
       "title": "Biz bilan bog'lanish",
