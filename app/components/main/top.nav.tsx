@@ -18,6 +18,7 @@ import SearchInput from "@/app/components/main/searchInput";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { useTranslations } from "next-intl";
 import { IoMdSearch } from "react-icons/io";
+import { IoMusicalNotes } from "react-icons/io5";
 
 const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const pathname = usePathname();
@@ -138,6 +139,9 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
             </div>
           </div>
           <div className="flex items-center max-md:w-auto max-lg:justify-between max-lg:w-full gap-6">
+            <Link href="/anthem" className="px-3 py-2 flex items-center gap-2 bg-[#1E4A7D] hover:bg-[#164070] transition-all duration-200 rounded-full cursor-pointer">
+              <IoMusicalNotes className="text-white text-xl" />
+            </Link>
             <LanguageSelect color={"white"} />
 
             <div className="max-md:hidden block">

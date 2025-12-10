@@ -43,7 +43,7 @@
     "partnership": "Сотрудничество",
     "students": "Студентам",
     "press": "Пресс-служба",
-    "school":"Школа Нордик"
+    "school": "Школа Нордик"
   },
   "university": {
     "document": {
@@ -154,7 +154,6 @@
       "Сертификаты (квалифицированные)",
       "Научный совет"
     ],
-
     "doctorate": {
       "main_title": "Показатели деятельности в сфере\nпослевузовского образования\nв университете",
       "description": "В соответствии с лицензией Министерства высшего образования, науки и инноваций Республики Узбекистан № 156360 от 6 ноября 2023 года, в Международном Нордик Университете разрешено проводить деятельность в учреждениях послевузовского образования по {fieldCount} направлениям и {fieldCount} специальностям.",
@@ -170,7 +169,6 @@
       "years_label": "годы",
       "bottom_title": "Процессы приёма осуществляются в соответствии с Указом Президента Республики Узбекистан № PF-4958 от 16 февраля 2017 года «О мерах по совершенствованию системы послевузовского образования» и Постановлением Кабинета Министров Республики Узбекистан № 304 от 22 мая 2017 года «О мерах по совершенствованию системы послевузовского образования» через Единую электронную систему координации послевузовского образования <a href='https://daraja.ilmiy.uz' rel='noreferrer' target='_blank' class='text-blue-500 underline'>(daraja ilmiy uz)</a>."
     },
-
     "eJournal": {
       "button": "Посетите этот сайт, чтобы отправить статьи!",
       "sectionTitle": "Научный электронный журнал",
@@ -566,6 +564,12 @@
     "album": "Альбом",
     "trackCount": "{count} треков",
     "durationMinutes": "Длительность {minutes} мин."
+  },
+  "anthem": {
+    "pageTitle": "Гимн Международного Нордик Университета",
+    "subtitle": "Гимн Международного Нордик университета воплощает наши ценности, традиции и дух нашего сообщества. Этот гимн стал дорогой традицией на выпускных церемониях, встречах выпускников и важных университетских мероприятиях.",
+    "description": "Гимн отражает основные ценности университета - науку, инновации и международное сотрудничество - и напоминает нам о нашем общем опыте и приверженности совершенству.",
+    "audioFile": "/NIU anthem.mp3",
+    "lyrics": "Hearts filled with noble dreams are rising high,\nWith love for our homeland, courage comes alive.\nYou shaped the mirror of thought like shining light,\nYou guide the fate of my nation to new heights.\n\nChorus\nNordic — the spirit of dreams that never fall,\nSpread your wings for us, dear Nordic, hear our call!\n\nFrom northern lands you came to bless our home,\nWelcome, O beacon where knowledge brightly glows.\nUpon the world stage you lift my pride so high,\nBy the wisdom nurtured in your warm embrace.\n\nChorus\nBlessed are your steps, beloved Nordic bright,\nNordic — the spirit of dreams that never die!\n\nYou are the foundation of a joyful future,\nA sacred bird of fortune resting on our shoulders.\nFor your noble mission we stand ready always,\nO land of science and learning — my Uzbekistan!\n\nChorus\nBlessed are your steps, your vision shining bright,\nSpread your wings for us, dear Nordic, guiding light!"
   }
-
 }

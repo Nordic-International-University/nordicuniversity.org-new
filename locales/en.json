@@ -43,7 +43,7 @@
     "partnership": "Partnership",
     "students": "For Students",
     "press": "Press Service",
-    "school":"Nordic School"
+    "school": "Nordic School"
   },
   "university": {
     "document": {
@@ -154,22 +154,22 @@
       "Sertificates (quallified)",
       "Scientific Council"
     ],
-  "doctorate": {
-    "main_title": "Indicators of postgraduate education\nactivities at the university",
-    "description": "In accordance with the license of the Ministry of Higher Education, Science, and Innovations of the Republic of Uzbekistan № 156360 dated November 6, 2023, the Nordic International University is authorized to operate in postgraduate educational institutions in {fieldCount} fields and {fieldCount} specializations.",
-    "center_title": "State of admission of doctoral students\nand independent researchers\nby years",
-    "table_headers": {
-      "years": "Years",
-      "doctorate_dsc": "Number of doctoral students (DSc)",
-      "doctorate_phd": "Number of doctoral students (PhD)",
-      "researcher_dsc": "Number of independent researchers (DSc)",
-      "researcher_phd": "Number of independent researchers (PhD)",
-      "total": "Total over the years"
+    "doctorate": {
+      "main_title": "Indicators of postgraduate education\nactivities at the university",
+      "description": "In accordance with the license of the Ministry of Higher Education, Science, and Innovations of the Republic of Uzbekistan № 156360 dated November 6, 2023, the Nordic International University is authorized to operate in postgraduate educational institutions in {fieldCount} fields and {fieldCount} specializations.",
+      "center_title": "State of admission of doctoral students\nand independent researchers\nby years",
+      "table_headers": {
+        "years": "Years",
+        "doctorate_dsc": "Number of doctoral students (DSc)",
+        "doctorate_phd": "Number of doctoral students (PhD)",
+        "researcher_dsc": "Number of independent researchers (DSc)",
+        "researcher_phd": "Number of independent researchers (PhD)",
+        "total": "Total over the years"
+      },
+      "years_label": "years",
+      "bottom_title": "Admission processes are carried out in accordance with the Presidential Decree № PF-4958 of February 16, 2017, \"On measures to improve the system of postgraduate education\" and the Resolution of the Cabinet of Ministers of the Republic of Uzbekistan № 304 of May 22, 2017, \"On measures to improve the system of postgraduate education\" through the Unified Electronic System for Coordination of Postgraduate Education <a href='https://daraja.ilmiy.uz' rel='noreferrer' target='_blank' class='text-blue-500 underline'>(daraja ilmiy uz)</a>."
     },
-    "years_label": "years",
-    "bottom_title": "Admission processes are carried out in accordance with the Presidential Decree № PF-4958 of February 16, 2017, \"On measures to improve the system of postgraduate education\" and the Resolution of the Cabinet of Ministers of the Republic of Uzbekistan № 304 of May 22, 2017, \"On measures to improve the system of postgraduate education\" through the Unified Electronic System for Coordination of Postgraduate Education <a href='https://daraja.ilmiy.uz' rel='noreferrer' target='_blank' class='text-blue-500 underline'>(daraja ilmiy uz)</a>."
-  },
-"eJournal": {
+    "eJournal": {
       "button": "Visit this site to submit articles!",
       "sectionTitle": "Scientific E-Journal",
       "description": "Scientific and practical e-journal \"<strong>Nordic</strong>\"\nThe International Nordik University has received the right to publish the scientific and practical e-journal \"Nordic\" based on Certificate No. 057211 of the Agency of Information and Mass Communications under the Presidential Administration of the Republic of Uzbekistan. Articles are published in Uzbek, Russian, English, and Finnish languages. <br/> <br/> The Nordic scientific and practical e-journal operates with the ISSN-3030-3400 international standard.",
@@ -312,12 +312,11 @@
           "description": "After higher education, there is the opportunity to pursue a doctorate (PhD and DSc) in {count} directions and engage in independent research."
         }
       ]
-
     },
     "certificate": {
       "sectionTitle": "Foreign Language Proficiency Certificate",
       "description": "<strong>MASTER'S</strong> and <strong>POSTGRADUATE EDUCATION</strong> require national or internationally recognized <strong>foreign language proficiency certificates</strong>.",
-      "certificate_type":"National certificate"
+      "certificate_type": "National certificate"
     },
     "recourse": {
       "sectionTitle": "Educational Resources"
@@ -565,6 +564,118 @@
     "album": "Album",
     "trackCount": "{count} tracks",
     "durationMinutes": "Duration {minutes} min."
+  },
+  "anthem": {
+    "pageTitle": "Nordic International University Anthem",
+    "subtitle": "The Nordic International University anthem embodies our values, traditions, and community spirit. This anthem has become a cherished tradition at graduation ceremonies, alumni gatherings, and important university events.",
+    "description": "The anthem reflects the university's core values - scholarship, innovation, and international cooperation - and reminds us of our shared experiences and commitment to excellence.",
+    "audioFile": "/NIU anthem.mp3",
+    "lyrics": "Hearts filled with noble dreams are rising high,\nWith love for our homeland, courage comes alive.\nYou shaped the mirror of thought like shining light,\nYou guide the fate of my nation to new heights.\n\nChorus\nNordic — the spirit of dreams that never fall,\nSpread your wings for us, dear Nordic, hear our call!\n\nFrom northern lands you came to bless our home,\nWelcome, O beacon where knowledge brightly glows.\nUpon the world stage you lift my pride so high,\nBy the wisdom nurtured in your warm embrace.\n\nChorus\nBlessed are your steps, beloved Nordic bright,\nNordic — the spirit of dreams that never die!\n\nYou are the foundation of a joyful future,\nA sacred bird of fortune resting on our shoulders.\nFor your noble mission we stand ready always,\nO land of science and learning — my Uzbekistan!\n\nChorus\nBlessed are your steps, your vision shining bright,\nSpread your wings for us, dear Nordic, guiding light!",
+    "lyricsWithTimings": [
+      {
+        "time": 8.0,
+        "text": "Hearts filled with noble dreams are rising high,"
+      },
+      {
+        "time": 12.5,
+        "text": "With love for our homeland, courage comes alive."
+      },
+      {
+        "time": 17.0,
+        "text": "You shaped the mirror of thought like shining light,"
+      },
+      {
+        "time": 21.5,
+        "text": "You guide the fate of my nation to new heights."
+      },
+      {
+        "time": 26.0,
+        "text": ""
+      },
+      {
+        "time": 27.0,
+        "text": "Chorus"
+      },
+      {
+        "time": 28.5,
+        "text": "Nordic — the spirit of dreams that never fall,"
+      },
+      {
+        "time": 33.0,
+        "text": "Spread your wings for us, dear Nordic, hear our call!"
+      },
+      {
+        "time": 37.5,
+        "text": ""
+      },
+      {
+        "time": 39.0,
+        "text": "From northern lands you came to bless our home,"
+      },
+      {
+        "time": 43.5,
+        "text": "Welcome, O beacon where knowledge brightly glows."
+      },
+      {
+        "time": 48.0,
+        "text": "Upon the world stage you lift my pride so high,"
+      },
+      {
+        "time": 52.5,
+        "text": "By the wisdom nurtured in your warm embrace."
+      },
+      {
+        "time": 57.0,
+        "text": ""
+      },
+      {
+        "time": 58.0,
+        "text": "Chorus"
+      },
+      {
+        "time": 59.5,
+        "text": "Blessed are your steps, beloved Nordic bright,"
+      },
+      {
+        "time": 64.0,
+        "text": "Nordic — the spirit of dreams that never die!"
+      },
+      {
+        "time": 68.5,
+        "text": ""
+      },
+      {
+        "time": 70.0,
+        "text": "You are the foundation of a joyful future,"
+      },
+      {
+        "time": 74.5,
+        "text": "A sacred bird of fortune resting on our shoulders."
+      },
+      {
+        "time": 79.0,
+        "text": "For your noble mission we stand ready always,"
+      },
+      {
+        "time": 83.5,
+        "text": "O land of science and learning — my Uzbekistan!"
+      },
+      {
+        "time": 88.0,
+        "text": ""
+      },
+      {
+        "time": 89.0,
+        "text": "Chorus"
+      },
+      {
+        "time": 90.5,
+        "text": "Blessed are your steps, your vision shining bright,"
+      },
+      {
+        "time": 95.0,
+        "text": "Spread your wings for us, dear Nordic, guiding light!"
+      }
+    ]
   }
 }
-

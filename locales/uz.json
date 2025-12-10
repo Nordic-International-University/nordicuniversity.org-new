@@ -43,7 +43,7 @@
     "partnership": "Hamkorlik",
     "students": "Talabalarga",
     "press": "Matbuot xizmati",
-    "school":"Nordik maktabi"
+    "school": "Nordik maktabi"
   },
   "university": {
     "document": {
@@ -192,7 +192,6 @@
         "description": "Mazkur Olimpiada umumiy o'rta ta'lim tashkilotlari, akademik litsey va kasb-hunar maktablari o'quvchilari o'rtasida Matematika fanidan hududiy-saralash, respublika va xalqaro bosqichi (uch bosqichli) o'tkaziladi."
       }
     },
-
     "doctorate": {
       "main_title": "Universitetda\noliy ta’limdan keyingi ta’lim\nfaoliyati ko‘rsatkichlari",
       "description": "O\n‘zbekiston Respublikasi Oliy ta’lim fan va\ninnovatsiyalar vazirligining 2023 yil 6 noyabrdagi\n№ 156360 sonli lisenziyasiga muvofiq Xalqaro\nNordik Universitetida {fieldCount} ta yo‘nalish {fieldCount} ta ixtisosliklar bo‘yicha oliy\nta’limdan keyingi ta’lim institutlarida faoliyat olib\nborishga ruxsat berilgan",
@@ -566,5 +565,110 @@
     "album": "Albomi",
     "trackCount": "{count} ta audio",
     "durationMinutes": "Davomiyligi {minutes} daqiqa"
+  },
+  "anthem": {
+    "pageTitle": "Xalqaro Nordik universiteti madhiyasi",
+    "subtitle": "Xalqaro Nordik universiteti madhiyasi universitetimizning qadriyatlari, an'analari va jamoamiz ruhini ifodalaydi. Bu madhiya bitirish marosimlarida, bitiruvchilar yig'ilishlarida va muhim universitet tadbirlarida qadrli an'anaga aylangan.",
+    "description": "Madhiya universitetimizning asosiy qadriyatlarini - ilm-fan, innovatsiya va xalqaro hamkorlikni aks ettiradi va bizning umumiy tajribalarimiz va mukammallikka bo'lgan sadoqatimizni eslatib turadi.",
+    "audioFile": "/NORDIK-MADHIYAS_.mp3",
+    "lyrics": "Ulugʻ niyyatlardan jo'shar yuraklar,\nYurt ishqi bag'ishlar g'ayrat-shijoat.\nTafakkur oynasin yaratding nurdek,\nSen sabab tolega hamqadam yurtim!\n\nNaqorat\nYengilmas orzular gʻoyasi - Nordik,\nQanot boʻl bizlarga, qadrdon Nordik!\n\nShimoliy ellardan kelding yurtimga,\nXush kelding, yurtimga ta'lim maskani.\nKeng jahon sahnida baland gʻururim.\nBagʻringda yetishgan donolar sabab.\n\nNaqorat\nQadamlari qutlug, qadrli Nordik,\nYengilmas orzular gʻoyasi - Nordik!\n\nKelajak baxtiga boʻlding poydevor,\nBoshimga humodek qo'ngan o'zingsan.\nBuyuk xizmatingga tayyormiz mudom,\nIlm-fan maskani, jon O'zbekiston!\n\nNaqorat\nQadamlari qutlug, g'oyasi Nordik,\nQanot bo'l bizlarga, qadrdon Nordik!",
+    "lyricsWithTimings": [
+      {
+        "time": 16,
+        "text": "Ulugʻ niyyatlardan jo'shar yuraklar,"
+      },
+      {
+        "time": 21.5,
+        "text": "Yurt ishqi bag'ishlar g'ayrat-shijoat."
+      },
+      {
+        "time": 26,
+        "text": "Tafakkur oynasin yaratding nurdek,"
+      },
+      {
+        "time": 31,
+        "text": "Sen sabab tolega hamqadam yurtim!"
+      },
+      {
+        "time": 42,
+        "text": "Yengilmas orzular gʻoyasi - Nordik,"
+      },
+      {
+        "time": 48,
+        "text": "Qanot boʻl bizlarga, qadrdon Nordik!"
+      },
+      {
+        "time": 57,
+        "text": ""
+      },
+      {
+        "time": 58,
+        "text": "Shimoliy ellardan kelding yurtimga,"
+      },
+      {
+        "time": 64,
+        "text": "Xush kelding, yurtimga ta'lim maskani."
+      },
+      {
+        "time": 69,
+        "text": "Keng jahon sahnida baland gʻururim."
+      },
+      {
+        "time": 74,
+        "text": "Bagʻringda yetishgan donolar sabab."
+      },
+      {
+        "time": 76,
+        "text": ""
+      },
+      {
+        "time": 77,
+        "text": "Naqorat"
+      },
+      {
+        "time": 81,
+        "text": "Qadamlari qutlug, qadrli Nordik,"
+      },
+      {
+        "time": 85,
+        "text": "Yengilmas orzular gʻoyasi - Nordik!"
+      },
+      {
+        "time": 87,
+        "text": ""
+      },
+      {
+        "time": 92,
+        "text": "Kelajak baxtiga boʻlding poydevor,"
+      },
+      {
+        "time": 96,
+        "text": "Boshimga humodek qo'ngan o'zingsan."
+      },
+      {
+        "time": 101,
+        "text": "Buyuk xizmatingga tayyormiz mudom,"
+      },
+      {
+        "time": 105,
+        "text": "Ilm-fan maskani, jon O'zbekiston!"
+      },
+      {
+        "time": 109,
+        "text": ""
+      },
+      {
+        "time": 113,
+        "text": "Naqorat"
+      },
+      {
+        "time": 117,
+        "text": "Qadamlari qutlug, g'oyasi Nordik,"
+      },
+      {
+        "time": 121,
+        "text": "Qanot bo'l bizlarga, qadrdon Nordik!"
+      }
+    ]
   }
 }
