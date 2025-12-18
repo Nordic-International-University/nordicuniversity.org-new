@@ -34,18 +34,58 @@ const DynamicSubPage: FC<{
   useEffect(() => {
     const fetchSubPageData = async () => {
       try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/subpages/data/${subPage_slug}?language=${getCurrentLangClient()}&page=1&limit=100`,
-        );
+        const apiUrl = `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/subpages/data/${subPage_slug}?language=${getCurrentLangClient()}&page=1&limit=100`;
+
+        console.log('DynamicSubPage fetching from:', apiUrl);
+
+        const response = await fetch(apiUrl);
+
+        // Check content type and response status
+        const contentType = response.headers.get("content-type");
+        console.log('DynamicSubPage Response status:', response.status);
+        console.log('DynamicSubPage Response content-type:', contentType);
+
+        if (!response.ok) {
+          console.error(`DynamicSubPage API error - Status: ${response.status}`);
+          setSubPageData({ error: true, message: `Server xatosi: ${response.status}` });
+          return;
+        }
+
+        if (!contentType || !contentType.includes("application/json")) {
+          console.error('DynamicSubPage received non-JSON response');
+          setSubPageData({ error: true, message: "Server noto'g'ri format qaytardi" });
+          return;
+        }
+
         const data = await response.json();
-        if (data && data.data.length > 0) {
+        console.log('DynamicSubPage data received:', data);
+        console.log('Data structure check:', {
+          hasData: !!data,
+          hasDataProperty: !!data?.data,
+          dataType: typeof data?.data,
+          isArray: Array.isArray(data?.data),
+          dataLength: data?.data?.length,
+          templateType: data?.template_type
+        });
+
+        if (data && data.data) {
           setSubPageData(data);
           import(`@/app/[lang]/(templates)/${data.template_type}`)
             .then((mod) => setTemplateComponent(() => mod.default))
-            .catch((err) => console.error("Template load error:", err));
+            .catch((err) => {
+              console.error("Template load error:", err);
+              setSubPageData({ error: true, message: "Template yuklashda xatolik" });
+            });
+        } else {
+          console.error('Data validation failed:', {
+            data,
+            reason: !data ? 'No data' : !data.data ? 'No data.data' : 'data.data empty or not array'
+          });
+          setSubPageData({ error: true, message: "Ma'lumot topilmadi" });
         }
       } catch (error) {
-        console.error("Failed to fetch subpage data:", error);
+        console.error("DynamicSubPage fetch error:", error);
+        setSubPageData({ error: true, message: "Ma'lumot yuklashda xatolik yuz berdi" });
       }
     };
 
@@ -62,16 +102,19 @@ const DynamicSubPage: FC<{
     },
   ];
 
-  const totalItems = subPageData?.data?.length || 0;
-  const paginatedData = subPageData?.data?.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE,
-  );
+  const totalItems = Array.isArray(subPageData?.data) ? subPageData.data.length : 0;
+  const paginatedData = Array.isArray(subPageData?.data)
+    ? subPageData.data.slice(
+      (currentPage - 1) * PAGE_SIZE,
+      currentPage * PAGE_SIZE,
+    )
+    : [];
 
   const onChange = (page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  console.log(subPageData, 'sub')
 
   return (
     <LeftSidebarAndComponent
@@ -80,9 +123,20 @@ const DynamicSubPage: FC<{
       sidebarItems={subItemDocument}
       sidebarTitle={subPageData?.subPage_title}
     >
-      {TemplateComponent && subPageData ? (
+      {subPageData?.error ? (
+        <div className="text-center py-8">
+          <p className="text-red-500 font-semibold mb-2">Xatolik yuz berdi</p>
+          <p className="text-gray-600">{subPageData.message}</p>
+          <p className="text-sm text-gray-500 mt-2">Backend server ishlamayotgan bo'lishi mumkin</p>
+        </div>
+      ) : TemplateComponent && subPageData ? (
         <>
-          <TemplateComponent data={paginatedData} />
+          {/* AboutTemplate uses full data object, others use paginated array */}
+          {subPageData.template_type === 'aboutTemplate' ? (
+            <TemplateComponent data={subPageData} />
+          ) : (
+            <TemplateComponent data={paginatedData} />
+          )}
 
           {totalItems > PAGE_SIZE && (
             <div className="mt-6 flex justify-center">

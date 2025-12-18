@@ -13,6 +13,7 @@ import { NewsItem } from "@/types/templates/newsSlider.type";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 import { getTemplateDataBySlug } from "@/app/[lang]/dynamic/[slug]/getNewsBySlug";
+import AboutTemplate from "@/app/[lang]/(templates)/aboutTemplate";
 
 export const generateMetadata = async ({
   params,
@@ -58,6 +59,13 @@ export const generateMetadata = async ({
           "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
       },
     };
+  }
+
+  if (news.template_type === "aboutTemplate") {
+    return {
+      title: `${news.subPage_name || "About"} - Xalqaro Nordik Universiteti`,
+      description: "Xalqaro Nordik Universiteti",
+    }
   }
 
   return {
@@ -129,6 +137,16 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     clientIpAddress,
   );
 
+  // Handle case where API returns null (error or not found)
+  if (!news) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Sahifa topilmadi</h1>
+        <p className="text-gray-500">So'ralgan sahifa mavjud emas yoki server xatosi yuz berdi.</p>
+      </div>
+    );
+  }
+
   const last = await getTranslations("partners");
 
   const brodCmbItems = [
@@ -139,6 +157,10 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   ];
 
   console.log(news);
+
+  if (news?.template_type === "aboutTemplate") {
+    return <AboutTemplate data={news} />;
+  }
 
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">

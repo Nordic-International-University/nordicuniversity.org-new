@@ -14,6 +14,20 @@ async function fetchDefaultLanguage(): Promise<string> {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/language`,
     );
+
+    // Check if response is OK and content-type is JSON
+    const contentType = res.headers.get("content-type");
+
+    if (!res.ok) {
+      console.error(`Language API returned status ${res.status}`);
+      return "uz";
+    }
+
+    if (!contentType || !contentType.includes("application/json")) {
+      console.error("Language API returned non-JSON response");
+      return "uz";
+    }
+
     const data = await res.json();
     console.log("Default language fetched:", data.language);
     return data.language || "uz";
