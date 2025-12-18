@@ -42,8 +42,6 @@ const DynamicSubPage: FC<{
 
         // Check content type and response status
         const contentType = response.headers.get("content-type");
-        console.log('DynamicSubPage Response status:', response.status);
-        console.log('DynamicSubPage Response content-type:', contentType);
 
         if (!response.ok) {
           console.error(`DynamicSubPage API error - Status: ${response.status}`);
@@ -58,15 +56,6 @@ const DynamicSubPage: FC<{
         }
 
         const data = await response.json();
-        console.log('DynamicSubPage data received:', data);
-        console.log('Data structure check:', {
-          hasData: !!data,
-          hasDataProperty: !!data?.data,
-          dataType: typeof data?.data,
-          isArray: Array.isArray(data?.data),
-          dataLength: data?.data?.length,
-          templateType: data?.template_type
-        });
 
         if (data && data.data) {
           setSubPageData(data);
@@ -114,7 +103,6 @@ const DynamicSubPage: FC<{
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  console.log(subPageData, 'sub')
 
   return (
     <LeftSidebarAndComponent
@@ -131,13 +119,11 @@ const DynamicSubPage: FC<{
         </div>
       ) : TemplateComponent && subPageData ? (
         <>
-          {/* AboutTemplate uses full data object, others use paginated array */}
           {subPageData.template_type === 'aboutTemplate' ? (
             <TemplateComponent data={subPageData} />
           ) : (
             <TemplateComponent data={paginatedData} />
           )}
-
           {totalItems > PAGE_SIZE && (
             <div className="mt-6 flex justify-center">
               <Pagination

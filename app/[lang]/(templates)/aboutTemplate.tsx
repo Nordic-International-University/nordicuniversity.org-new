@@ -1,13 +1,6 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
-
-// Import ReactQuill dynamically to avoid SSR issues
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-
-// Import ReactQuill styles
-import "react-quill/dist/quill.bubble.css";
 
 interface AboutTemplateProps {
     data: {
@@ -41,13 +34,11 @@ const AboutTemplate: React.FC<AboutTemplateProps> = ({ data }) => {
 
     return (
         <article className="container mx-auto px-4 lg:px-8 py-8">
-            <h1 className="text-3xl font-bold mb-6 text-primary">{data.subPage_title}</h1>
+
             <div className="prose max-w-none text-gray-800">
-                <ReactQuill
-                    value={data.data.content}
-                    readOnly={true}
-                    theme="bubble"
-                    modules={{ toolbar: false }}
+                <div
+                    dangerouslySetInnerHTML={{ __html: data.data.content }}
+                    className="preview-content"
                 />
             </div>
         </article>
