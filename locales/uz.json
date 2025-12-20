@@ -1,5 +1,9 @@
 {
   "socialMediaCard": {
+    "hero": {
+      "download_program": "Malayziya dasturini yuklab olish",
+      "about_program": "Malayziya dasturi haqida"
+    },
     "telegram": {
       "title": "Universitetning Telegram'dagi rasmiy kanalini kuzatib boring",
       "button": "A'zo bo'lish"

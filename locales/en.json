@@ -1,5 +1,9 @@
 {
   "socialMediaCard": {
+    "hero": {
+      "download_program": "Download program (Malaysia)",
+      "about_program": "About the Malaysia program"
+    },
     "telegram": {
       "title": "Follow the official channel on Telegram",
       "button": "Subscribe"

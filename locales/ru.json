@@ -1,5 +1,9 @@
 {
   "socialMediaCard": {
+    "hero": {
+      "download_program": "Скачать программу (Малайзия)",
+      "about_program": "О программе Малайзии"
+    },
     "telegram": {
       "title": "Следите за нашим официальным каналом в Telegram",
       "button": "Подписаться"
