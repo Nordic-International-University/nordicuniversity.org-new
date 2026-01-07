@@ -413,11 +413,7 @@
   },
   "nordic_school": {
     "title": "Nordic International School",
-    "subItems": [
-      "About the School",
-      "School Gallery",
-      "School Contacts"
-    ],
+    "subItems": ["About the School", "School Gallery", "School Contacts"],
     "description": "A modern educational institution established based on the most advanced educational experience of Finland and other Nordic countries",
     "videos": {
       "video1_title": "Welcome words from Ms. Aino Puro, Coordinator of Nordic International University and International Education Expert from Finland",
@@ -571,115 +567,11 @@
   },
   "anthem": {
     "pageTitle": "Nordic International University Anthem",
-    "subtitle": "The Nordic International University anthem embodies our values, traditions, and community spirit. This anthem has become a cherished tradition at graduation ceremonies, alumni gatherings, and important university events.",
-    "description": "The anthem reflects the university's core values - scholarship, innovation, and international cooperation - and reminds us of our shared experiences and commitment to excellence.",
-    "audioFile": "/NIU anthem.mp3",
-    "lyrics": "Hearts filled with noble dreams are rising high,\nWith love for our homeland, courage comes alive.\nYou shaped the mirror of thought like shining light,\nYou guide the fate of my nation to new heights.\n\nChorus\nNordic — the spirit of dreams that never fall,\nSpread your wings for us, dear Nordic, hear our call!\n\nFrom northern lands you came to bless our home,\nWelcome, O beacon where knowledge brightly glows.\nUpon the world stage you lift my pride so high,\nBy the wisdom nurtured in your warm embrace.\n\nChorus\nBlessed are your steps, beloved Nordic bright,\nNordic — the spirit of dreams that never die!\n\nYou are the foundation of a joyful future,\nA sacred bird of fortune resting on our shoulders.\nFor your noble mission we stand ready always,\nO land of science and learning — my Uzbekistan!\n\nChorus\nBlessed are your steps, your vision shining bright,\nSpread your wings for us, dear Nordic, guiding light!",
-    "lyricsWithTimings": [
-      {
-        "time": 19.0,
-        "text": "Hearts filled with noble dreams are rising high,"
-      },
-      {
-        "time": 12.5,
-        "text": "With love for our homeland, courage comes alive."
-      },
-      {
-        "time": 17.0,
-        "text": "You shaped the mirror of thought like shining light,"
-      },
-      {
-        "time": 21.5,
-        "text": "You guide the fate of my nation to new heights."
-      },
-      {
-        "time": 26.0,
-        "text": ""
-      },
-      {
-        "time": 27.0,
-        "text": "Chorus"
-      },
-      {
-        "time": 28.5,
-        "text": "Nordic — the spirit of dreams that never fall,"
-      },
-      {
-        "time": 33.0,
-        "text": "Spread your wings for us, dear Nordic, hear our call!"
-      },
-      {
-        "time": 37.5,
-        "text": ""
-      },
-      {
-        "time": 39.0,
-        "text": "From northern lands you came to bless our home,"
-      },
-      {
-        "time": 43.5,
-        "text": "Welcome, O beacon where knowledge brightly glows."
-      },
-      {
-        "time": 48.0,
-        "text": "Upon the world stage you lift my pride so high,"
-      },
-      {
-        "time": 52.5,
-        "text": "By the wisdom nurtured in your warm embrace."
-      },
-      {
-        "time": 57.0,
-        "text": ""
-      },
-      {
-        "time": 58.0,
-        "text": "Chorus"
-      },
-      {
-        "time": 59.5,
-        "text": "Blessed are your steps, beloved Nordic bright,"
-      },
-      {
-        "time": 64.0,
-        "text": "Nordic — the spirit of dreams that never die!"
-      },
-      {
-        "time": 68.5,
-        "text": ""
-      },
-      {
-        "time": 70.0,
-        "text": "You are the foundation of a joyful future,"
-      },
-      {
-        "time": 74.5,
-        "text": "A sacred bird of fortune resting on our shoulders."
-      },
-      {
-        "time": 79.0,
-        "text": "For your noble mission we stand ready always,"
-      },
-      {
-        "time": 83.5,
-        "text": "O land of science and learning — my Uzbekistan!"
-      },
-      {
-        "time": 88.0,
-        "text": ""
-      },
-      {
-        "time": 89.0,
-        "text": "Chorus"
-      },
-      {
-        "time": 90.5,
-        "text": "Blessed are your steps, your vision shining bright,"
-      },
-      {
-        "time": 95.0,
-        "text": "Spread your wings for us, dear Nordic, guiding light!"
-      }
-    ]
+    "audioFile": "/audio/anthem.mp3",
+    "author": "Author — Jontemir Jondor",
+    "composer": "Composer — Honored Cultural Worker of Uzbekistan Avazbek Mallaboyev",
+    "lyrics": "Hearts ablaze with noble dreams that soar,\nLove for our homeland fuels our courage evermore.\nYou shaped the mirror of thought with shining light,\nGuiding my nation's destiny to loftier heights.\n\nChorus:\nNordic — the spirit of dreams that never fall,\nNordic, spread your wings and hear our call!\n\nFrom northern lands you came to our home,\nWelcome, our homeland's cradle of learning and flame.\nUpon the world's vast stage, our pride stands tall,\nFor minds you nurtured now enlighten all.\n\nChorus:\nBlessed be your steps, beloved Nordic bright,\nNordic — the spirit of dreams that never die!\n\nYou are the cornerstone of a joyful tomorrow,\nA sacred bird of fortune easing our sorrow.\nFor your noble mission, we stand side by side,\nO land of knowledge and science — Uzbekistan, our pride!\n\nChorus:\nBlessed be your steps, your vision shining bright,\nSpread your wings, dear Nordic, be our guiding light!",
+    "aboutTitle": "About the Anthem",
+    "aboutText": "Our anthem is a symbol of unity and inspiration! The Nordic International University Anthem celebrates the high values, strong traditions, and unified spirit of our institution. Singing our anthem together at graduation ceremonies, grand openings, and important events has become a cherished tradition.\n\nThis anthem embodies the core pillars of our university — science, innovation, and international cooperation, inspiring each of us to move confidently towards excellence."
   }
 }
