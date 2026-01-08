@@ -1,14 +1,18 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function AnthemPage() {
   const t = useTranslations("anthem");
+  const locale = useLocale();
 
   // Get lyrics and split into lines
   const lyrics = t("lyrics");
   const lines = lyrics.split("\n");
+
+  // Determine audio file based on locale
+  const audioFile = locale === "uz" ? "/NORDIK-MADHIYAS_.mp3" : "/NIU anthem.mp3";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
@@ -20,11 +24,13 @@ export default function AnthemPage() {
           </h1>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#1E4A7D] to-transparent mx-auto mb-8"></div>
 
-          {/* Author and Composer Info */}
-          <div className="max-w-3xl mx-auto space-y-2 mb-8">
-            <p className="text-lg text-gray-700 font-medium">{t("author")}</p>
-            <p className="text-lg text-gray-700 font-medium">{t("composer")}</p>
-          </div>
+          {/* Author and Composer Info - Only show in Uzbek */}
+          {locale === "uz" && (
+            <div className="max-w-3xl mx-auto space-y-2 mb-8">
+              <p className="text-lg text-gray-700 font-medium">{t("author")}</p>
+              <p className="text-lg text-gray-700 font-medium">{t("composer")}</p>
+            </div>
+          )}
         </div>
 
         {/* Audio Player Section */}
@@ -41,7 +47,7 @@ export default function AnthemPage() {
             </div>
           </div>
           <audio controls className="w-full anthem-audio">
-            <source src={t("audioFile")} type="audio/mpeg" />
+            <source src={audioFile} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
