@@ -12,7 +12,8 @@ export default function AnthemPage() {
   const lines = lyrics.split("\n");
 
   // Determine audio file based on locale
-  const audioFile = locale === "uz" ? "/NORDIK-MADHIYAS_.mp3" : "/Nordik madhiyasi (8).mp3";
+  const audioFile =
+    locale === "uz" ? "/NORDIK-MADHIYAS_.mp3" : "/new_madhiya.mp3";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
@@ -28,7 +29,9 @@ export default function AnthemPage() {
           {locale === "uz" && (
             <div className="max-w-3xl mx-auto space-y-2 mb-8">
               <p className="text-lg text-gray-700 font-medium">{t("author")}</p>
-              <p className="text-lg text-gray-700 font-medium">{t("composer")}</p>
+              <p className="text-lg text-gray-700 font-medium">
+                {t("composer")}
+              </p>
             </div>
           )}
         </div>
