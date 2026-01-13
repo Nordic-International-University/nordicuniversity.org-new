@@ -12,7 +12,7 @@ export default function AnthemPage() {
   const lines = lyrics.split("\n");
 
   // Determine audio file based on locale
-  const audioFile = locale === "uz" ? "/NORDIK-MADHIYAS_.mp3" : "/NIU anthem.mp3";
+  const audioFile = locale === "uz" ? "/NORDIK-MADHIYAS_.mp3" : "/Nordik madhiyasi (8).mp3";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
