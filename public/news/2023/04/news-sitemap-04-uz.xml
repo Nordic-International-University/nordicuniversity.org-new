@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
+      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
+      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
+      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
     </news:news>
   </url>
   <url>
@@ -67,36 +67,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
+      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
+      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-jamoasi-bir-oila-bolib-ertangi-kun-uchun-ovoz-berdilar</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/bugun-ozbekiston-xalqi-uchun-muhim-kun</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti jamoasi bir oila bo‘lib ertangi kun uchun ovoz berdilar!</news:title>
+      <news:title>Bugun O‘zbekiston xalqi uchun muhim kun!</news:title>
     </news:news>
   </url>
   <url>
@@ -397,6 +397,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/malaka-oshirish-kursi-doirasida-seminar-trening-otkazilmoqda</loc>
     <news:news>
       <news:publication>
@@ -463,39 +496,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/23-aprel-butunjahon-kitoblar-va-mualliflik-huquqi-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>23-aprel – Butunjahon kitoblar va mualliflik huquqi kuni</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/bmtning-ozbekistondagi-kommunikatsiyalar-guruhi-finlyandiyalik-oquvchilar-uchun-interaktiv-trening-otkazdi</loc>
     <news:news>
       <news:publication>
@@ -526,6 +526,39 @@
       </news:publication>
       <news:publication_date>2023-04-21</news:publication_date>
       <news:title>BMTning O‘zbekistondagi kommunikatsiyalar guruhi Finlyandiyalik o‘quvchilar uchun interaktiv trening o‘tkazdi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
     </news:news>
   </url>
   <url>
@@ -595,69 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnuni-tanlang-kelajagingizni-birga-yaratamiz</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>XNUni tanlang! Kelajagingizni birga yaratamiz!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
     </news:news>
   </url>
   <url>
@@ -694,6 +694,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/bugun-19-apreldan-muddatidan-oldin-ovoz-berish-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Bugun, 19-apreldan muddatidan oldin ovoz berish boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mustaqil-izlanuvchilik</loc>
     <news:news>
       <news:publication>
@@ -724,72 +757,6 @@
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
       <news:title>Mustaqil izlanuvchilik</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/hissiy-intellekt-va-uni-qanday-yaxshilash-mumkin</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Hissiy intellekt va uni qanday yaxshilash mumkin?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
     </news:news>
   </url>
   <url>
@@ -826,36 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnuda-xalqaro-talabalar-safi-kengayadi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+      <news:title>XNUda xalqaro talabalar safi kengayadi!</news:title>
     </news:news>
   </url>
   <url>
@@ -892,36 +859,69 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-oquvchilari-samarqandda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu o‘quvchilari Samarqandda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
+      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
+      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
+      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
     </news:news>
   </url>
   <url>
@@ -958,36 +958,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
+      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
+      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ilm-eshigini-tanlang-qolgan-eshiklar-ozi-ochiladi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/fin-yoshlari-bilan-erkin-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Ilm eshigini tanlang! Qolgan eshiklar o‘zi ochiladi!</news:title>
+      <news:title>Fin yoshlari bilan erkin muloqot!</news:title>
     </news:news>
   </url>
   <url>
@@ -1504,39 +1504,6 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ekspertimiz-nuqtai-nazari-gazetauzda</loc>
     <news:news>
       <news:publication>
@@ -1567,6 +1534,39 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
       </news:publication>
       <news:publication_date>2023-04-06</news:publication_date>
       <news:title>Ekspertimiz nuqtai nazari – "Gazeta.uz"da!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/universitetimizda-qozogistonlik-pedagoglar-uchun-xalqaro-oquv-kursi-yuqori-saviyada-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>Universitetimizda Qozog‘istonlik pedagoglar uchun xalqaro o‘quv kursi yuqori saviyada o‘tkazildi.</news:title>
     </news:news>
   </url>
   <url>
@@ -1636,36 +1636,36 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
     </news:news>
   </url>
   <url>
@@ -1702,36 +1702,36 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-doirasida-zamonaviy-talim-texnologiyalari-boyicha-qimmatli-saboqlar-taqdim-etildi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-tinglovchilari-uchun-zamonaviy-pedagogik-yondashuvlar-va-hissiy-intellektni-rivojlantirish-boyicha-mahorat-darslari-otkazildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi doirasida zamonaviy ta’lim texnologiyalari bo‘yicha qimmatli saboqlar taqdim etildi.</news:title>
+      <news:title>Xalqaro o‘quv kursi tinglovchilari uchun zamonaviy pedagogik yondashuvlar va hissiy intellektni rivojlantirish bo‘yicha mahorat darslari o‘tkazildi.</news:title>
     </news:news>
   </url>
   <url>
@@ -1801,39 +1801,6 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xnuda-qozogiston-maktab-direktorlari-va-pedagoglari-uchun-xalqaro-oquv-kursi-tashkil-etildi</loc>
     <news:news>
       <news:publication>
@@ -1864,6 +1831,39 @@ Latviya poytaxti Riga Boltiqbo‘yi davlatlari ichidagi eng katta shahar hisobla
       </news:publication>
       <news:publication_date>2023-04-01</news:publication_date>
       <news:title>XNUda Qozog‘iston maktab direktorlari va pedagoglari uchun xalqaro o‘quv kursi tashkil etildi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-oquv-kursi-orqali-qozogistonlik-pedagoglar-zamonaviy-raqamli-talim-texnologiyalarini-organmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>Xalqaro o‘quv kursi orqali Qozog‘istonlik pedagoglar zamonaviy raqamli ta’lim texnologiyalarini o‘rganmoqda.</news:title>
     </news:news>
   </url>
 </urlset>

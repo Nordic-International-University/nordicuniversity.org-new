@@ -166,39 +166,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nordic-rector-sherzod-mustafakulov-author-of-the-best-articles</loc>
     <news:news>
       <news:publication>
@@ -229,6 +196,39 @@
       </news:publication>
       <news:publication_date>2025-01-24</news:publication_date>
       <news:title>Rector of Nordic Sherzod Mustafakulov – Author of "Best Articles"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/a-scientific-and-methodological-seminar-was-held-for-doctoral-students-and-research-assistants</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Scientific and Methodological Seminar for PhD Students and Researchers</news:title>
     </news:news>
   </url>
   <url>
@@ -265,39 +265,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/master-class-in-fergana-innovation-and-experiments-in-poetry</loc>
     <news:news>
       <news:publication>
@@ -328,6 +295,39 @@
       </news:publication>
       <news:publication_date>2025-01-22</news:publication_date>
       <news:title>Masterclass in Fergana: Innovation and Experimentation in Poetry</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/protecting-students-and-youth-from-social-and-economic-losses-is-a-priority</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Protecting Youth from Social and Economic Losses - on focus</news:title>
     </news:news>
   </url>
   <url>
@@ -562,39 +562,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/holiday-in-the-nordics</loc>
     <news:news>
       <news:publication>
@@ -625,6 +592,39 @@
       </news:publication>
       <news:publication_date>2025-01-14</news:publication_date>
       <news:title>Exciting celebration at Nordic!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/new-skills-and-experiences-are-used-in-teaching-foreign-languages</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Intensive training New skills and experiences will be used in teaching foreign languages</news:title>
     </news:news>
   </url>
   <url>
@@ -694,39 +694,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nozima-has-a-prestigious-scholarship</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nozima-has-a-prestigious-scholarship</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nozima-has-a-prestigious-scholarship</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/new-cooperation-for-opportunities-for-young-people</loc>
     <news:news>
       <news:publication>
@@ -760,36 +727,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nozima-has-a-prestigious-scholarship</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>The Rector had a conversation with master's students heading to America</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nozima-has-a-prestigious-scholarship</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>The Rector had a conversation with master's students heading to America</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/nozima-has-a-prestigious-scholarship</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>The Rector had a conversation with master's students heading to America</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima is a prestigious scholarship recipient!</news:title>
     </news:news>
   </url>
   <url>
@@ -826,69 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>The Rector had a conversation with master's students heading to America</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>The Rector had a conversation with master's students heading to America</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-rector-spoke-with-the-graduate-students-who-are-going-to-america</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/erasmus-grants-were-obtained</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus+ Grants Are Secured</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/erasmus-grants-were-obtained</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus+ Grants Are Secured</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/erasmus-grants-were-obtained</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus+ Grants Are Secured</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>The Rector had a conversation with master's students heading to America</news:title>
     </news:news>
   </url>
   <url>
@@ -925,6 +859,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/erasmus-grants-were-obtained</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus+ Grants Are Secured</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/erasmus-grants-were-obtained</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus+ Grants Are Secured</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/erasmus-grants-were-obtained</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus+ Grants Are Secured</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/qualifying-for-the-work-and-travel-program-is-starting</loc>
     <news:news>
       <news:publication>
@@ -955,6 +922,39 @@
       </news:publication>
       <news:publication_date>2025-01-08</news:publication_date>
       <news:title>Qualifying for the "Work and travel" program is starting!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-activities-of-the-publishing-house-of-the-international-nordic-university-have-expanded</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>The range of activities of Nordic International University Press has expanded!</news:title>
     </news:news>
   </url>
   <url>

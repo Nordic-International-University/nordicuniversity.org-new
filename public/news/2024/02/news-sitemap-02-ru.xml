@@ -133,39 +133,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>Мы передаем вам наши любимые книги!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>Мы передаем вам наши любимые книги!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>Мы передаем вам наши любимые книги!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/music-quiz-intellektualnye-obsuzhdeniya-i-uvlekatelnoe-sopernichestvo</loc>
     <news:news>
       <news:publication>
@@ -229,6 +196,39 @@
       </news:publication>
       <news:publication_date>2024-02-23</news:publication_date>
       <news:title>Программа студенческого обмена начинает реализацию</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>Мы передаем вам наши любимые книги!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>Мы передаем вам наши любимые книги!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/my-peredaem-vam-nashi-lyubimye-knigi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>Мы передаем вам наши любимые книги!</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/tvori-dobro-dlya-lyudej-ibo-net-nichego-luchshe-etogo</loc>
     <news:news>
       <news:publication>
@@ -493,6 +460,39 @@
       </news:publication>
       <news:publication_date>2024-02-14</news:publication_date>
       <news:title>“Твори добро для людей, ибо нет ничего лучше этого…”</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/14-fevralya-1483-1530-segodnya-den-rozhdeniya-zahiriddina-muhammada-babura</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>14 февраля (1483 – 1530), Сегодня день рождения Захириддина Мухаммада Бабура.</news:title>
     </news:news>
   </url>
   <url>
@@ -826,39 +826,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mezhdunarodnyj-press-klub-organizuet-sessiyu-na-temu-vnimanie-k-molodomu-pokoleniyu-eto-vnimanie-k-budushemu</loc>
     <news:news>
       <news:publication>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2024-02-01</news:publication_date>
       <news:title>Международный Пресс-клуб организует сессию на тему “Внимание к молодому поколению – это внимание к будущему”</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/v-chest-dnej-rozhdeniya-alishera-navoi-i-babura-mirzo-9-i-14-fevralya-obuyavlyaetsya-konkurs-videorolikov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>В честь дней рождения Алишера Навои и Бабура Мирзо (9 и 14 февраля) объявляется "Конкурс видеороликов".</news:title>
     </news:news>
   </url>
 </urlset>

@@ -364,39 +364,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Открытый урок превратился в праздник литературы!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Открытый урок превратился в праздник литературы!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Открытый урок превратился в праздник литературы!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/zabota-i-podarki-detyam-ot-nordika</loc>
     <news:news>
       <news:publication>
@@ -427,6 +394,39 @@
       </news:publication>
       <news:publication_date>2025-06-02</news:publication_date>
       <news:title>Забота и подарки детям от Нордика!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Открытый урок превратился в праздник литературы!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Открытый урок превратился в праздник литературы!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/otkrytyj-urok-prevratilsya-v-prazdnik-literatury</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Открытый урок превратился в праздник литературы!</news:title>
     </news:news>
   </url>
 </urlset>

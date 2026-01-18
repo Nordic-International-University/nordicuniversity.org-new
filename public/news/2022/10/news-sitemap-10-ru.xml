@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/garantirovannoe-studenchestvo</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Гарантированное студенчество!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/garantirovannoe-studenchestvo</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Гарантированное студенчество!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/garantirovannoe-studenchestvo</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Гарантированное студенчество!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/vnimaniyu-studentov-zaochnoj-formy-obucheniya</loc>
     <news:news>
       <news:publication>
@@ -64,6 +31,39 @@
       </news:publication>
       <news:publication_date>2022-10-31</news:publication_date>
       <news:title>Вниманию студентов заочной формы обучения</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/garantirovannoe-studenchestvo</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Гарантированное студенчество!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/garantirovannoe-studenchestvo</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Гарантированное студенчество!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/garantirovannoe-studenchestvo</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Гарантированное студенчество!</news:title>
     </news:news>
   </url>
   <url>
@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/zhivoe-obshenie-so-studentami</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Живое общение со студентами</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/zhivoe-obshenie-so-studentami</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Живое общение со студентами</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/zhivoe-obshenie-so-studentami</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Живое общение со студентами</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/shiroko-ispolzuyutsya-zarubezhnye-metody-obucheniya</loc>
     <news:news>
       <news:publication>
@@ -166,36 +133,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/zhivoe-obshenie-so-studentami</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Живое общение со студентами</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/zhivoe-obshenie-so-studentami</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Живое общение со студентами</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/zhivoe-obshenie-so-studentami</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Живое общение со студентами</news:title>
     </news:news>
   </url>
   <url>
@@ -232,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/obrazovatelnye-proekty-budut-realizovany-sovmestno-s-yunisef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Образовательные проекты будут реализованы совместно с ЮНИСЕФ.</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/vnimaniyu-studentov</loc>
     <news:news>
       <news:publication>
@@ -262,39 +262,6 @@
       </news:publication>
       <news:publication_date>2022-10-26</news:publication_date>
       <news:title>Вниманию студентов</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/studenty-na-psihologicheskom-treninge</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Студенты на психологическом тренинге</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/studenty-na-psihologicheskom-treninge</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Студенты на психологическом тренинге</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/studenty-na-psihologicheskom-treninge</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Студенты на психологическом тренинге</news:title>
     </news:news>
   </url>
   <url>
@@ -364,6 +331,72 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/studenty-na-psihologicheskom-treninge</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Студенты на психологическом тренинге</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/studenty-na-psihologicheskom-treninge</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Студенты на психологическом тренинге</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/studenty-na-psihologicheskom-treninge</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Студенты на психологическом тренинге</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/byli-predstavleny-samye-effektivnye-metody-izucheniya-yazyka</loc>
     <news:news>
       <news:publication>
@@ -427,39 +460,6 @@
       </news:publication>
       <news:publication_date>2022-10-24</news:publication_date>
       <news:title>Отношение студентов к их учебной деятельности изменяется.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
     </news:news>
   </url>
   <url>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Совмещайте образование со спортом и искусством!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Совмещайте образование со спортом и искусством!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Совмещайте образование со спортом и искусством!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/sovremennye-professii-trebuyutsya-cifrovye-znaniya</loc>
     <news:news>
       <news:publication>
@@ -661,36 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Совмещайте образование со спортом и искусством!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Совмещайте образование со спортом и искусством!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/sovmeshajte-obrazovanie-so-sportom-i-iskusstvom</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Совмещайте образование со спортом и искусством!</news:title>
     </news:news>
   </url>
   <url>
@@ -793,6 +760,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/sostoyalsya-vizit-predstavitelej-nauchno-issledovatelskogo-instituta-iamo-iz-germanii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Состоялся визит представителей научно-исследовательского института IAMO из Германии.</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/studentam-obuchayut-metodam-i-instrumentam-provedeniya-prezentacij</loc>
     <news:news>
       <news:publication>
@@ -823,39 +823,6 @@
       </news:publication>
       <news:publication_date>2022-10-19</news:publication_date>
       <news:title>Студентам обучают методам и инструментам проведения презентаций.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Представители школы Foundation - среди учащихся</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Представители школы Foundation - среди учащихся</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Представители школы Foundation - среди учащихся</news:title>
     </news:news>
   </url>
   <url>
@@ -925,6 +892,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Представители школы Foundation - среди учащихся</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Представители школы Foundation - среди учащихся</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/predstaviteli-shkoly-foundation-sredi-uchashihsya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Представители школы Foundation - среди учащихся</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nachalis-dni-znakomstva-studentov-s-universitetom</loc>
     <news:news>
       <news:publication>
@@ -955,39 +955,6 @@
       </news:publication>
       <news:publication_date>2022-10-17</news:publication_date>
       <news:title>Начались дни знакомства студентов с университетом.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/den-otkrytyh-dverej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>День открытых дверей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/den-otkrytyh-dverej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>День открытых дверей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/den-otkrytyh-dverej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>День открытых дверей</news:title>
     </news:news>
   </url>
   <url>
@@ -1054,6 +1021,39 @@
       </news:publication>
       <news:publication_date>2022-10-14</news:publication_date>
       <news:title>Очередной мастер-класс от преподавателей Международного университета Нордик.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/den-otkrytyh-dverej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>День открытых дверей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/den-otkrytyh-dverej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>День открытых дверей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/den-otkrytyh-dverej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>День открытых дверей</news:title>
     </news:news>
   </url>
   <url>
@@ -1156,39 +1156,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Занятия в нашей школе Foundation начались.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Занятия в нашей школе Foundation начались.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Занятия в нашей школе Foundation начались.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mirovye-rynki-otkrylis-dlya-uzbekistana</loc>
     <news:news>
       <news:publication>
@@ -1219,6 +1186,39 @@
       </news:publication>
       <news:publication_date>2022-10-11</news:publication_date>
       <news:title>Мировые рынки открылись для Узбекистана.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Занятия в нашей школе Foundation начались.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Занятия в нашей школе Foundation начались.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/zanyatiya-v-nashej-shkole-foundation-nachalis</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Занятия в нашей школе Foundation начались.</news:title>
     </news:news>
   </url>
   <url>
@@ -1321,39 +1321,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Объективе МУН — финские молодёжи.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Объективе МУН — финские молодёжи.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Объективе МУН — финские молодёжи.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/5-oktyabrya-tekushego-goda-delegaciya-finskih-prepodavatelej-i-studentov-posetila-gosudarstvennuyu-inspekciyu-kontrolya-za-kachestvom-obrazovaniya</loc>
     <news:news>
       <news:publication>
@@ -1387,36 +1354,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Объективе МУН — финские молодёжи.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Объективе МУН — финские молодёжи.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/obuektive-mun-—-finskie-molodyozhi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Объективе МУН — финские молодёжи.</news:title>
     </news:news>
   </url>
   <url>
@@ -1450,6 +1417,39 @@
       </news:publication>
       <news:publication_date>2022-10-05</news:publication_date>
       <news:title>Определены правила внедрения дистанционного образования в высших учебных заведениях.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/predstaviteli-shkoly-helsingin-suomalainen-yhteiskoulu-syk-posetili-nash-universitet</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Представители школы Helsingin Suomalainen Yhteiskoulu (SYK) посетили наш университет.</news:title>
     </news:news>
   </url>
   <url>

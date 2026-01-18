@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/guaranteed-student-enrollment</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Guaranteed student enrollment!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/guaranteed-student-enrollment</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Guaranteed student enrollment!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/guaranteed-student-enrollment</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Guaranteed student enrollment!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/attention-to-part-time-education-students</loc>
     <news:news>
       <news:publication>
@@ -64,6 +31,39 @@
       </news:publication>
       <news:publication_date>2022-10-31</news:publication_date>
       <news:title>Attention to part-time education students</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/guaranteed-student-enrollment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Guaranteed student enrollment!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/guaranteed-student-enrollment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Guaranteed student enrollment!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/guaranteed-student-enrollment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Guaranteed student enrollment!</news:title>
     </news:news>
   </url>
   <url>
@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/live-interaction-with-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Live interaction with students</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/live-interaction-with-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Live interaction with students</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/live-interaction-with-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Live interaction with students</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/foreign-teaching-practices-are-being-widely-utilized</loc>
     <news:news>
       <news:publication>
@@ -166,36 +133,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/live-interaction-with-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Live interaction with students</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/live-interaction-with-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Live interaction with students</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/live-interaction-with-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Live interaction with students</news:title>
     </news:news>
   </url>
   <url>
@@ -232,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/educational-projects-will-be-implemented-in-collaboration-with-unicef</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>Educational projects will be implemented in collaboration with UNICEF.</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/attention-students</loc>
     <news:news>
       <news:publication>
@@ -262,39 +262,6 @@
       </news:publication>
       <news:publication_date>2022-10-26</news:publication_date>
       <news:title>Attention, students</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/students-at-a-psychological-training-session</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Students at a psychological training session</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/students-at-a-psychological-training-session</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Students at a psychological training session</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/students-at-a-psychological-training-session</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Students at a psychological training session</news:title>
     </news:news>
   </url>
   <url>
@@ -364,6 +331,72 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/students-at-a-psychological-training-session</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Students at a psychological training session</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/students-at-a-psychological-training-session</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Students at a psychological training session</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/students-at-a-psychological-training-session</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Students at a psychological training session</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/the-most-effective-methods-for-language-learning-were-taught</loc>
     <news:news>
       <news:publication>
@@ -427,39 +460,6 @@
       </news:publication>
       <news:publication_date>2022-10-24</news:publication_date>
       <news:title>Students' attitudes toward their educational activities are being transformed.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
     </news:news>
   </url>
   <url>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/integrate-education-with-sports-and-art</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Integrate education with sports and art!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/integrate-education-with-sports-and-art</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Integrate education with sports and art!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/integrate-education-with-sports-and-art</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Integrate education with sports and art!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/modern-professions-digital-skills-are-required</loc>
     <news:news>
       <news:publication>
@@ -661,36 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/integrate-education-with-sports-and-art</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Integrate education with sports and art!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/integrate-education-with-sports-and-art</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Integrate education with sports and art!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/integrate-education-with-sports-and-art</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Integrate education with sports and art!</news:title>
     </news:news>
   </url>
   <url>
@@ -793,6 +760,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/a-visit-by-representatives-of-germanys-iamo-research-institute-took-place</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>A visit by representatives of Germany's IAMO Research Institute took place.</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/students-are-being-taught-methods-and-tools-for-delivering-presentations</loc>
     <news:news>
       <news:publication>
@@ -823,39 +823,6 @@
       </news:publication>
       <news:publication_date>2022-10-19</news:publication_date>
       <news:title>Students are being taught methods and tools for delivering presentations.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-school-representatives-among-the-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation School representatives - among the students</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-school-representatives-among-the-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation School representatives - among the students</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/foundation-school-representatives-among-the-students</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation School representatives - among the students</news:title>
     </news:news>
   </url>
   <url>
@@ -925,6 +892,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-school-representatives-among-the-students</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation School representatives - among the students</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-school-representatives-among-the-students</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation School representatives - among the students</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/foundation-school-representatives-among-the-students</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation School representatives - among the students</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/student-orientation-days-at-the-university-have-begun</loc>
     <news:news>
       <news:publication>
@@ -955,39 +955,6 @@
       </news:publication>
       <news:publication_date>2022-10-17</news:publication_date>
       <news:title>Student orientation days at the university have begun.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/open-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Open Day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/open-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Open Day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/open-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Open Day</news:title>
     </news:news>
   </url>
   <url>
@@ -1054,6 +1021,39 @@
       </news:publication>
       <news:publication_date>2022-10-14</news:publication_date>
       <news:title>Next master class from the professors and lecturers of Nordic International University.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/open-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Open Day</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/open-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Open Day</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/open-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Open Day</news:title>
     </news:news>
   </url>
   <url>
@@ -1156,39 +1156,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>The classes at our Foundation school have started.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>The classes at our Foundation school have started.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>The classes at our Foundation school have started.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/global-markets-have-opened-for-uzbekistan</loc>
     <news:news>
       <news:publication>
@@ -1219,6 +1186,39 @@
       </news:publication>
       <news:publication_date>2022-10-11</news:publication_date>
       <news:title>Global markets have opened for Uzbekistan.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>The classes at our Foundation school have started.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>The classes at our Foundation school have started.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-classes-at-our-foundation-school-have-started</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>The classes at our Foundation school have started.</news:title>
     </news:news>
   </url>
   <url>
@@ -1321,39 +1321,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Through the lens of NIU — Finnish youth.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Through the lens of NIU — Finnish youth.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>Through the lens of NIU — Finnish youth.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/on-october-5th-of-this-year-a-delegation-of-finnish-teachers-and-students-visited-the-state-inspection-for-the-quality-control-of-education</loc>
     <news:news>
       <news:publication>
@@ -1387,36 +1354,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Through the lens of NIU — Finnish youth.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Through the lens of NIU — Finnish youth.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/through-the-lens-of-niu-—-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>Through the lens of NIU — Finnish youth.</news:title>
     </news:news>
   </url>
   <url>
@@ -1450,6 +1417,39 @@
       </news:publication>
       <news:publication_date>2022-10-05</news:publication_date>
       <news:title>The procedures for implementing distance education in higher education institutions have been established.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/representatives-from-helsingin-suomalainen-yhteiskoulu-syk-visited-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Representatives from Helsingin Suomalainen Yhteiskoulu (SYK) visited our university.</news:title>
     </news:news>
   </url>
   <url>

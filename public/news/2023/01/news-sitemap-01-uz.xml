@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-vakillari-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU vakillari - Finlandiyada</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-vakillari-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU vakillari - Finlandiyada</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-vakillari-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU vakillari - Finlandiyada</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/universitetimiz-rahbariyati-zarafshon-shahri-yoshlari-bilan-uchrashdi</loc>
     <news:news>
       <news:publication>
@@ -64,6 +31,39 @@
       </news:publication>
       <news:publication_date>2023-01-30</news:publication_date>
       <news:title>Universitetimiz rahbariyati - Zarafshon shahri yoshlari bilan uchrashdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-vakillari-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU vakillari - Finlandiyada</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-vakillari-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU vakillari - Finlandiyada</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-vakillari-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU vakillari - Finlandiyada</news:title>
     </news:news>
   </url>
   <url>
@@ -166,6 +166,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/bizni-navoiy-viloyatida-kuting</loc>
     <news:news>
       <news:publication>
@@ -229,39 +262,6 @@
       </news:publication>
       <news:publication_date>2023-01-28</news:publication_date>
       <news:title>Zarafshon shahrida maorif xodimlari bilan uchrashuv o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-rahbariyati-maorif-xodimlari-davrasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>XNU rahbariyati - maorif xodimlari davrasida</news:title>
     </news:news>
   </url>
   <url>
@@ -397,6 +397,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/magistratura-mutaxassisliklari</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Magistratura mutaxassisliklari</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/magistratura-mutaxassisliklari</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Magistratura mutaxassisliklari</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/magistratura-mutaxassisliklari</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Magistratura mutaxassisliklari</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talim-samaradorligini-baholash-muhim-omil</loc>
     <news:news>
       <news:publication>
@@ -496,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/magistratura-mutaxassisliklari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Magistratura mutaxassisliklari</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/magistratura-mutaxassisliklari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Magistratura mutaxassisliklari</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/magistratura-mutaxassisliklari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Magistratura mutaxassisliklari</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/angliyaning-nufuzli-universiteti-bilan-hamkorlik-ornatildi</loc>
     <news:news>
       <news:publication>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-oquv-kursi-zamonaviy-bilim-va-tajribalar-organilmoqda</loc>
     <news:news>
       <news:publication>
@@ -658,6 +625,39 @@
       </news:publication>
       <news:publication_date>2023-01-25</news:publication_date>
       <news:title>Xalqaro o‘quv kursi: zamonaviy bilim va tajribalar o‘rganilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/qozogistonlik-pedagoglarning-malakasi-oshirilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Qozog‘istonlik pedagoglarning malakasi oshirilmoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -793,36 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
+      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
+      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
+      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
     </news:news>
   </url>
   <url>
@@ -859,36 +859,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
+      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
+      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/finlandiyaning-big-ear-games-kompaniyasi-bilan-hamkorlik-ornatildi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/musiqa-talimi-yonalishi-talabasi-boling</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Finlandiyaning Big Ear Games kompaniyasi bilan hamkorlik o‘rnatildi</news:title>
+      <news:title>Musiqa ta'limi yo‘nalishi talabasi bo‘ling!</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/boshlangich-talim-yonalishida-oqishni-tavsiya-qilamiz</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-01-18</news:publication_date>
       <news:title>BOSHLANG‘ICH TA'LIM yo‘nalishida o‘qishni tavsiya qilamiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/psixologiya-amaliy-psixologiya-sohasida-oquvchilar-va-talabalar-uchun-samarali-oqitish-baholash-hamda-motivatsiya-tizimlarini-organing</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Psixologiya (amaliy psixologiya) sohasida o‘quvchilar va talabalar uchun samarali o‘qitish, baholash hamda motivatsiya tizimlarini o‘rganing!</news:title>
     </news:news>
   </url>
   <url>
@@ -1123,39 +1123,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/musiqa-talimi-yetuk-ustozlar-tomonidan-beriladi</loc>
     <news:news>
       <news:publication>
@@ -1222,6 +1189,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universitetida-qishki-qabul-boshlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Xalqaro Nordik universitetida QISHKI QABUL boshlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/qishki-qabulga-start-berilmoqda</loc>
     <news:news>
       <news:publication>
@@ -1252,39 +1252,6 @@
       </news:publication>
       <news:publication_date>2023-01-09</news:publication_date>
       <news:title>Qishki qabulga start berilmoqda!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -1321,36 +1288,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/oliy-talim-muassasalari-bilan-hamkorlik-kengaymoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Oliy ta'lim muassasalari bilan hamkorlik kengaymoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -1384,6 +1351,39 @@
       </news:publication>
       <news:publication_date>2023-01-06</news:publication_date>
       <news:title>O‘quv jarayonlari qachon boshlanadi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/iamo-direktori-bilan-uchrashuv-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>IAMO direktori bilan uchrashuv bo‘lib o‘tdi</news:title>
     </news:news>
   </url>
   <url>

@@ -199,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/honorary-doctorate-awarded</loc>
     <news:news>
       <news:publication>
@@ -262,39 +295,6 @@
       </news:publication>
       <news:publication_date>2023-02-22</news:publication_date>
       <news:title>Significant Agreements Reached</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/finnish-language-and-culture-center-grand-opening-at-niu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>"Finnish Language and Culture Center" Grand Opening at NIU</news:title>
     </news:news>
   </url>
   <url>
@@ -496,39 +496,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-school-students-at-ice-city</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation School Students at Ice City</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-school-students-at-ice-city</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation School Students at Ice City</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/foundation-school-students-at-ice-city</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation School Students at Ice City</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/meeting-of-the-nordic-international-university-council-is-underway</loc>
     <news:news>
       <news:publication>
@@ -562,36 +529,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-school-students-at-ice-city</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>At the "Nazm va Navo" evening</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation School Students at Ice City</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-school-students-at-ice-city</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>At the "Nazm va Navo" evening</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation School Students at Ice City</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/foundation-school-students-at-ice-city</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>At the "Nazm va Navo" evening</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation School Students at Ice City</news:title>
     </news:news>
   </url>
   <url>
@@ -628,6 +595,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>At the "Nazm va Navo" evening</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>At the "Nazm va Navo" evening</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/at-the-nazm-va-navo-evening</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>At the "Nazm va Navo" evening</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/expanding-collaboration-with-financial-institutions</loc>
     <news:news>
       <news:publication>
@@ -658,72 +658,6 @@
       </news:publication>
       <news:publication_date>2023-02-14</news:publication_date>
       <news:title>Expanding Collaboration with Financial Institutions</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/alternative-energy-a-practical-solution</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Alternative Energy – A Practical Solution</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/alternative-energy-a-practical-solution</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Alternative Energy – A Practical Solution</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/alternative-energy-a-practical-solution</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Alternative Energy – A Practical Solution</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
     </news:news>
   </url>
   <url>
@@ -760,6 +694,72 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/missed-the-deadline-admissions-are-still-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Missed the Deadline? ADMISSIONS ARE STILL OPEN</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/alternative-energy-a-practical-solution</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Alternative Energy – A Practical Solution</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/alternative-energy-a-practical-solution</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Alternative Energy – A Practical Solution</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/alternative-energy-a-practical-solution</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Alternative Energy – A Practical Solution</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/masters-degree-entrance-exams-in-progress</loc>
     <news:news>
       <news:publication>
@@ -793,39 +793,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/expanded-meeting-of-niu-staff-held</loc>
     <news:news>
       <news:publication>
@@ -856,6 +823,39 @@
       </news:publication>
       <news:publication_date>2023-02-10</news:publication_date>
       <news:title>Expanded Meeting of NIU Staff Held</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/golibjon-quvvatov-elected-chairman-of-nius-primary-trade-union-committee</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>G‘olibjon Quvvatov Elected Chairman of NIU’s Primary Trade Union Committee</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/attention-applicants-for-independent-research-studies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Attention Applicants for Independent Research Studies!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/attention-applicants-for-independent-research-studies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Attention Applicants for Independent Research Studies!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/attention-applicants-for-independent-research-studies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Attention Applicants for Independent Research Studies!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/join-our-english-language-courses</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-02-08</news:publication_date>
       <news:title>Join Our English Language Courses!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/attention-applicants-for-independent-research-studies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Attention Applicants for Independent Research Studies!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/attention-applicants-for-independent-research-studies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Attention Applicants for Independent Research Studies!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/attention-applicants-for-independent-research-studies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Attention Applicants for Independent Research Studies!</news:title>
     </news:news>
   </url>
   <url>
@@ -1057,39 +1057,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/monologchallenge-winner-announced</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" Winner Announced!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/monologchallenge-winner-announced</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" Winner Announced!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/monologchallenge-winner-announced</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" Winner Announced!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/good-luck-to-all-applicants</loc>
     <news:news>
       <news:publication>
@@ -1120,6 +1087,39 @@
       </news:publication>
       <news:publication_date>2023-02-04</news:publication_date>
       <news:title>Good luck to all applicants!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/monologchallenge-winner-announced</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" Winner Announced!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/monologchallenge-winner-announced</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" Winner Announced!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/monologchallenge-winner-announced</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" Winner Announced!</news:title>
     </news:news>
   </url>
   <url>
@@ -1189,36 +1189,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/attention-all-students</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Attention all students!</news:title>
+      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/attention-all-students</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Attention all students!</news:title>
+      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/attention-all-students</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Attention all students!</news:title>
+      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
     </news:news>
   </url>
   <url>
@@ -1255,36 +1255,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/attention-all-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
+      <news:title>Attention all students!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/attention-all-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
+      <news:title>Attention all students!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/our-library-is-expanding-with-finnish-language-textbooks</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/attention-all-students</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Our Library is Expanding with Finnish Language Textbooks</news:title>
+      <news:title>Attention all students!</news:title>
     </news:news>
   </url>
 </urlset>

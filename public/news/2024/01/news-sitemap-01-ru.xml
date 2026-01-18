@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>С чего лучше начать написание научной статьи?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>С чего лучше начать написание научной статьи?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>С чего лучше начать написание научной статьи?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/v-odnom-iz-samyh-drevnih-muzeev-centralnoj-azii</loc>
     <news:news>
       <news:publication>
@@ -163,6 +130,39 @@
       </news:publication>
       <news:publication_date>2024-01-27</news:publication_date>
       <news:title>В одном из самых древних музеев Центральной Азии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>С чего лучше начать написание научной статьи?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>С чего лучше начать написание научной статьи?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/s-chego-luchshe-nachat-napisanie-nauchnoj-stati</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>С чего лучше начать написание научной статьи?</news:title>
     </news:news>
   </url>
   <url>
@@ -232,39 +232,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/v-klube-zakovat-ozhivlyonnaya-studencheskaya-liga</loc>
     <news:news>
       <news:publication>
@@ -298,6 +265,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/vstrecha-rektora-i-studentov-proshla-v-druzheskoj-atmosfere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>Встреча ректора и студентов прошла в дружеской атмосфере</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/prorektory-mun-i-uzgumya-v-stokgolme-proveli-druzheskuyu-vstrechu-s-poslom-uzbekistana-v-shvecii-nodirom-ganievym</loc>
     <news:news>
       <news:publication>
@@ -328,6 +328,39 @@
       </news:publication>
       <news:publication_date>2024-01-23</news:publication_date>
       <news:title>Проректоры МУН и УзГУМЯ в Стокгольме провели дружескую встречу с послом Узбекистана в Швеции Нодиром Ганиевым.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
     </news:news>
   </url>
   <url>
@@ -394,39 +427,6 @@
       </news:publication>
       <news:publication_date>2024-01-22</news:publication_date>
       <news:title>В 2-м учебном корпусе МУН также проходят итоговые экзамены по предметам, изученным за семестр, для студентов заочной формы обучения.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/procedura-oformleniya-statej-po-trebovaniyam-imrad</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Процедура оформления статей по требованиям IMRAD</news:title>
     </news:news>
   </url>
   <url>
@@ -529,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/uzbekskie-prepodavateli-inostrannyh-yazykov-v-finlyandii</loc>
     <news:news>
       <news:publication>
@@ -592,6 +559,39 @@
       </news:publication>
       <news:publication_date>2024-01-19</news:publication_date>
       <news:title>Узбекские преподаватели иностранных языков – в Финляндии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/kniga-puankare-v-centre-obsuzhdenij-knigolyubov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>Книга "Пуанкаре" – в центре обсуждений книголюбов</news:title>
     </news:news>
   </url>
   <url>
@@ -826,39 +826,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/prepodavatelyam-mun-vrucheny-svidetelstva-ministerstva-vysshego-obrazovaniya-nauki-i-innovacij-za-publikaciyu-novyh-uchebnyh-materialov</loc>
     <news:news>
       <news:publication>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2024-01-09</news:publication_date>
       <news:title>Преподавателям МУН вручены свидетельства Министерства высшего образования, науки и инноваций за публикацию новых учебных материалов.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nachinaetsya-otbor-na-programmu-work-and-travel</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>Начинается отбор на программу "Work and Travel"!</news:title>
     </news:news>
   </url>
   <url>

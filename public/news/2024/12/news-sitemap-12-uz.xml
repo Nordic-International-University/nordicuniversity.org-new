@@ -133,72 +133,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nordikda-smoothie-viktorinasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nordikda-smoothie-viktorinasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nordikda-smoothie-viktorinasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talabamiz-yil-ayoli</loc>
     <news:news>
       <news:publication>
@@ -229,6 +163,39 @@
       </news:publication>
       <news:publication_date>2024-12-24</news:publication_date>
       <news:title>Talabamiz "Yil ayoli"!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/professor-oqituvchilar-uchun-seminar-trening-haftaligi-otkazilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Professor-o‘qituvchilar uchun seminar-trening haftaligi o‘tkazilmoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -265,36 +232,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nordikda-smoothie-viktorinasi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Nordikda Yangi yil bazmi!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nordikda-smoothie-viktorinasi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Nordikda Yangi yil bazmi!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/nordikda-smoothie-viktorinasi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Nordikda Yangi yil bazmi!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Nordikda "Smoothie" viktorinasi!</news:title>
     </news:news>
   </url>
   <url>
@@ -328,6 +295,39 @@
       </news:publication>
       <news:publication_date>2024-12-21</news:publication_date>
       <news:title>Talabamiz - yilning eng yaxshi ilmiy izlanuvchilari safida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Nordikda Yangi yil bazmi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Nordikda Yangi yil bazmi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nordikda-yangi-yil-bazmi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Nordikda Yangi yil bazmi!</news:title>
     </news:news>
   </url>
   <url>
@@ -397,39 +397,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/yangi-asr-avlodi-nashriyotidan-yangi-asarlar-korgazmasi</loc>
     <news:news>
       <news:publication>
@@ -496,6 +463,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/barqaror-rivojlanish-maqsadlari-sdgs-boyicha-seminarimizga-qoshiling</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Barqaror rivojlanish maqsadlari (SDGs) bo‘yicha seminarimizga qo‘shiling!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xnu-delegatsiyasi-janubiy-koreyaning-seul-shahrida-otkazilayotgan-iclei-sharqiy-osiyo-hisobot-sessiyasida-ishtirok-etishmoqda</loc>
     <news:news>
       <news:publication>
@@ -529,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ilk-sahna-asari-taqdim-etildi</loc>
     <news:news>
       <news:publication>
@@ -592,6 +559,39 @@
       </news:publication>
       <news:publication_date>2024-12-16</news:publication_date>
       <news:title>Ilk sahna asari taqdim etildi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nordik-universitetida-ezgulik-axloqiy-goyalar-targibotiga-asoslangan-marifat-ulashib-loyihasi-doirasida-navbatdagi-adabiy-uchrashuv-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>Nordik universitetida ezgulik, axloqiy g‘oyalar targ‘ibotiga asoslangan “Ma’rifat ulashib” loyihasi doirasida navbatdagi adabiy uchrashuv o‘tkazildi</news:title>
     </news:news>
   </url>
   <url>

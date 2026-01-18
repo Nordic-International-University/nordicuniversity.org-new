@@ -67,39 +67,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/5th-meeting-of-the-nordic-international-university-council</loc>
     <news:news>
       <news:publication>
@@ -130,6 +97,39 @@
       </news:publication>
       <news:publication_date>2023-03-30</news:publication_date>
       <news:title>5th Meeting of the Nordic International University Council</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/niu-welcomes-durbek-ahmedov-a-member-of-the-legislative-chamber-of-the-oliy-majlis-of-uzbekistan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>NIU welcomes Durbek Ahmedov, a Member of the Legislative Chamber of the Oliy Majlis of Uzbekistan!</news:title>
     </news:news>
   </url>
   <url>
@@ -199,39 +199,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/webinar-for-professors-researchers-and-students</loc>
     <news:news>
       <news:publication>
@@ -265,69 +232,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/studying-finlands-experience-in-ensuring-the-rule-of-law</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/flipping-through-todays-newspapers</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Flipping Through Today’s Newspapers</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/flipping-through-todays-newspapers</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Flipping Through Today’s Newspapers</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/flipping-through-todays-newspapers</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Flipping Through Today’s Newspapers</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Studying Finland’s Experience in Ensuring the Rule of Law!</news:title>
     </news:news>
   </url>
   <url>
@@ -364,6 +298,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/flipping-through-todays-newspapers</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Flipping Through Today’s Newspapers</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/flipping-through-todays-newspapers</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Flipping Through Today’s Newspapers</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/flipping-through-todays-newspapers</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Flipping Through Today’s Newspapers</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/welcome-to-the-leader-of-students-union-contest</loc>
     <news:news>
       <news:publication>
@@ -394,6 +361,39 @@
       </news:publication>
       <news:publication_date>2023-03-25</news:publication_date>
       <news:title>Welcome to the "Leader of Students’ Union" Contest!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/a-journey-filled-with-culture-literature-and-entertainment</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>A Journey Filled with Culture, Literature, and Entertainment!</news:title>
     </news:news>
   </url>
   <url>
@@ -760,39 +760,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/a-day-full-of-new-energy-and-inspiration</loc>
     <news:news>
       <news:publication>
@@ -856,6 +823,39 @@
       </news:publication>
       <news:publication_date>2023-03-11</news:publication_date>
       <news:title>Our Professors Have Gained Experience in Applying BOS Technologies!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/stepping-into-adulthood-begins-with-practice</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Stepping into Adulthood – Begins with Practice!</news:title>
     </news:news>
   </url>
   <url>
@@ -1189,39 +1189,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/a-cultural-trip-to-the-literary-and-educational-hub</loc>
     <news:news>
       <news:publication>
@@ -1255,36 +1222,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/you-are-invited-to-the-festive-evening-you-are-sacred-and-cherished-woman</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>You are invited to the festive evening "You are sacred and cherished, woman"!</news:title>
     </news:news>
   </url>
   <url>
@@ -1318,6 +1285,39 @@
       </news:publication>
       <news:publication_date>2023-03-01</news:publication_date>
       <news:title>Collaboration established with a prestigious Italian university</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/educational-trip-to-the-scientific-and-educational-memorial-complex</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Educational trip to the Scientific and Educational Memorial Complex</news:title>
     </news:news>
   </url>
 </urlset>

@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-representatives-in-finland</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU Representatives in Finland</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-representatives-in-finland</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU Representatives in Finland</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-representatives-in-finland</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-30</news:publication_date>
-      <news:title>XNU Representatives in Finland</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/university-leadership-meets-with-the-youth-of-zarafshan-city</loc>
     <news:news>
       <news:publication>
@@ -64,6 +31,39 @@
       </news:publication>
       <news:publication_date>2023-01-30</news:publication_date>
       <news:title>University Leadership Meets with the Youth of Zarafshan City</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-representatives-in-finland</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU Representatives in Finland</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-representatives-in-finland</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU Representatives in Finland</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-representatives-in-finland</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-30</news:publication_date>
+      <news:title>XNU Representatives in Finland</news:title>
     </news:news>
   </url>
   <url>
@@ -166,6 +166,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/niu-leadership-meets-with-educators</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>NIU Leadership Meets with Educators</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/niu-leadership-meets-with-educators</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>NIU Leadership Meets with Educators</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/niu-leadership-meets-with-educators</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-28</news:publication_date>
+      <news:title>NIU Leadership Meets with Educators</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/meet-us-in-navoi-region</loc>
     <news:news>
       <news:publication>
@@ -229,39 +262,6 @@
       </news:publication>
       <news:publication_date>2023-01-28</news:publication_date>
       <news:title>A Meeting with Educators Held in Zarafshan City</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/niu-leadership-meets-with-educators</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>NIU Leadership Meets with Educators</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/niu-leadership-meets-with-educators</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>NIU Leadership Meets with Educators</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/niu-leadership-meets-with-educators</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-28</news:publication_date>
-      <news:title>NIU Leadership Meets with Educators</news:title>
     </news:news>
   </url>
   <url>
@@ -397,6 +397,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/masters-degree-programs</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Master’s Degree Programs</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/masters-degree-programs</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Master’s Degree Programs</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/masters-degree-programs</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-26</news:publication_date>
+      <news:title>Master’s Degree Programs</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/assessing-educational-efficiency-a-key-factor</loc>
     <news:news>
       <news:publication>
@@ -496,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/masters-degree-programs</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Master’s Degree Programs</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/masters-degree-programs</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Master’s Degree Programs</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/masters-degree-programs</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-26</news:publication_date>
-      <news:title>Master’s Degree Programs</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/collaboration-established-with-a-prestigious-uk-university</loc>
     <news:news>
       <news:publication>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-25</news:publication_date>
-      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/international-training-course-exploring-modern-knowledge-and-experience</loc>
     <news:news>
       <news:publication>
@@ -658,6 +625,39 @@
       </news:publication>
       <news:publication_date>2023-01-25</news:publication_date>
       <news:title>International Training Course: Exploring Modern Knowledge and Experience</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/kazakhstani-educators-enhance-their-skills</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-25</news:publication_date>
+      <news:title>Kazakhstani Educators Enhance Their Skills</news:title>
     </news:news>
   </url>
   <url>
@@ -793,36 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/become-a-student-of-the-music-education-program</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Become a Student of the Music Education Program!</news:title>
+      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/become-a-student-of-the-music-education-program</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Become a Student of the Music Education Program!</news:title>
+      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/become-a-student-of-the-music-education-program</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Become a Student of the Music Education Program!</news:title>
+      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
     </news:news>
   </url>
   <url>
@@ -859,36 +859,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/become-a-student-of-the-music-education-program</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
+      <news:title>Become a Student of the Music Education Program!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/become-a-student-of-the-music-education-program</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
+      <news:title>Become a Student of the Music Education Program!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/partnership-established-with-finlands-big-ear-games-company</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/become-a-student-of-the-music-education-program</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-01-20</news:publication_date>
-      <news:title>Partnership Established with Finland’s Big Ear Games Company</news:title>
+      <news:title>Become a Student of the Music Education Program!</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-18</news:publication_date>
-      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/we-recommend-studying-in-the-primary-education-program</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-01-18</news:publication_date>
       <news:title>We recommend studying in the "Primary Education" program!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/explore-effective-teaching-assessment-and-motivation-systems-for-students-in-the-field-of-psychology-applied-psychology</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-18</news:publication_date>
+      <news:title>Explore effective teaching, assessment, and motivation systems for students in the field of Psychology (Applied Psychology)!</news:title>
     </news:news>
   </url>
   <url>
@@ -1123,39 +1123,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-10</news:publication_date>
-      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/music-education-will-be-taught-by-renowned-masters</loc>
     <news:news>
       <news:publication>
@@ -1222,6 +1189,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/winter-admission-at-nordic-international-university-is-now-open</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-10</news:publication_date>
+      <news:title>Winter Admission at Nordic International University is Now Open!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/winter-admission-is-starting</loc>
     <news:news>
       <news:publication>
@@ -1252,39 +1252,6 @@
       </news:publication>
       <news:publication_date>2023-01-09</news:publication_date>
       <news:title>Winter Admission is Starting!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-01-07</news:publication_date>
-      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
     </news:news>
   </url>
   <url>
@@ -1321,36 +1288,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/meeting-with-the-iamo-director</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>Meeting with the IAMO Director</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/meeting-with-the-iamo-director</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>Meeting with the IAMO Director</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/meeting-with-the-iamo-director</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/collaboration-with-higher-education-institutions-expands</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-01-06</news:publication_date>
-      <news:title>Meeting with the IAMO Director</news:title>
+      <news:publication_date>2023-01-07</news:publication_date>
+      <news:title>Collaboration with Higher Education Institutions Expands</news:title>
     </news:news>
   </url>
   <url>
@@ -1384,6 +1351,39 @@
       </news:publication>
       <news:publication_date>2023-01-06</news:publication_date>
       <news:title>When will classes begin</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/meeting-with-the-iamo-director</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>Meeting with the IAMO Director</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/meeting-with-the-iamo-director</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>Meeting with the IAMO Director</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/meeting-with-the-iamo-director</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-01-06</news:publication_date>
+      <news:title>Meeting with the IAMO Director</news:title>
     </news:news>
   </url>
   <url>

@@ -166,39 +166,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-24</news:publication_date>
-      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nordik-rektori-sherzod-mustafakulov-eng-yaxshi-maqolalar-muallifi</loc>
     <news:news>
       <news:publication>
@@ -229,6 +196,39 @@
       </news:publication>
       <news:publication_date>2025-01-24</news:publication_date>
       <news:title>Nordik rektori Sherzod Mustafakulov - "Eng yaxshi maqolalar" muallifi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/doktorant-va-ilmiy-izlanuvchilar-uchun-ilmiy-uslubiy-seminar-otkazildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24</news:publication_date>
+      <news:title>Doktorant va ilmiy izlanuvchilar uchun ilmiy-uslubiy seminar o‘tkazildi</news:title>
     </news:news>
   </url>
   <url>
@@ -265,39 +265,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-22</news:publication_date>
-      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/fargonada-mahorat-darsi-sheriyatda-innovatsiya-va-eksperimentlar</loc>
     <news:news>
       <news:publication>
@@ -328,6 +295,39 @@
       </news:publication>
       <news:publication_date>2025-01-22</news:publication_date>
       <news:title>Farg‘onada mahorat darsi: she’riyatda innovatsiya va eksperimentlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/talaba-yoshlarni-ijtimoiy-iqtisodiy-yoqotishlardan-asrash-eʼtiborda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-22</news:publication_date>
+      <news:title>Talaba-yoshlarni ijtimoiy, iqtisodiy yo‘qotishlardan asrash - eʼtiborda</news:title>
     </news:news>
   </url>
   <url>
@@ -562,39 +562,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-14</news:publication_date>
-      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nordikda-bayram</loc>
     <news:news>
       <news:publication>
@@ -625,6 +592,39 @@
       </news:publication>
       <news:publication_date>2025-01-14</news:publication_date>
       <news:title>Nordikda bayram!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xorijiy-tillarni-oqitishda-yangi-konikma-va-tajribalardan-foydalaniladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-14</news:publication_date>
+      <news:title>Xorijiy tillarni o‘qitishda yangi ko‘nikma va tajribalardan foydalaniladi</news:title>
     </news:news>
   </url>
   <url>
@@ -694,39 +694,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-10</news:publication_date>
-      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/yoshlarga-imkoniyatlar-uchun-yangi-hamkorlik</loc>
     <news:news>
       <news:publication>
@@ -760,36 +727,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/nozima-nufuzli-stipendiya-sohibi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2025-01-09</news:publication_date>
-      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
+      <news:publication_date>2025-01-10</news:publication_date>
+      <news:title>Nozima nufuzli stipendiya sohibasi!</news:title>
     </news:news>
   </url>
   <url>
@@ -826,69 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/rektor-amerikaga-yol-olayotgan-magistrantlar-bilan-suhbatlashdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-08</news:publication_date>
-      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
+      <news:publication_date>2025-01-09</news:publication_date>
+      <news:title>Rektor Amerikaga yo‘l olayotgan magistrantlar bilan suhbatlashdi</news:title>
     </news:news>
   </url>
   <url>
@@ -925,6 +859,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/erasmus-grantlari-qolga-kiritildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Erasmus grantlari qo‘lga kiritildi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/work-and-travel-dasturi-uchun-saralash-boshlanmoqda</loc>
     <news:news>
       <news:publication>
@@ -955,6 +922,39 @@
       </news:publication>
       <news:publication_date>2025-01-08</news:publication_date>
       <news:title>"Work and travel" dasturi uchun saralash boshlanmoqda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-nashriyotining-faoliyat-turlari-kengaydi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-08</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti nashriyotining faoliyat turlari kengaydi!</news:title>
     </news:news>
   </url>
   <url>

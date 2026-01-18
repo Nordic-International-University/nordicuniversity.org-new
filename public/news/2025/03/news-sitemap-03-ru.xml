@@ -463,39 +463,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/masterclass-an-invaluable-experience-for-future-programmers</loc>
     <news:news>
       <news:publication>
@@ -526,6 +493,39 @@
       </news:publication>
       <news:publication_date>2025-03-20</news:publication_date>
       <news:title>Мастер-класс: бесценный опыт для будущих программистов</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>ТаSIMO - 2025: ожидается участие молодежи из 48 стран!</news:title>
     </news:news>
   </url>
   <url>
@@ -859,36 +859,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
+      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
+      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
+      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
     </news:news>
   </url>
   <url>
@@ -925,36 +925,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
+      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
+      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/proveden-nauchno-prakticheskij-seminar-dlya-doktorantov-i-samostoyatelnyh-soiskatelej</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Проведен научно-практический семинар для докторантов и самостоятельных соискателей</news:title>
+      <news:title>Представители YTO International в Нордике: изучены возможности сотрудничества</news:title>
     </news:news>
   </url>
   <url>

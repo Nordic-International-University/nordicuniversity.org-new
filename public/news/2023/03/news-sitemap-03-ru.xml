@@ -67,39 +67,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-30</news:publication_date>
-      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/pyatoe-zasedanie-soveta-mezhdunarodnogo-universiteta-nordic</loc>
     <news:news>
       <news:publication>
@@ -130,6 +97,39 @@
       </news:publication>
       <news:publication_date>2023-03-30</news:publication_date>
       <news:title>Пятое заседание Совета Международного университета Nordic</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/v-nash-universitet-posetit-deputat-olij-mazhlisa-respubliki-uzbekistan-durbek-ahmedov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-30</news:publication_date>
+      <news:title>В наш университет посетит депутат Олий Мажлиса Республики Узбекистан Дурбек Ахмедов!</news:title>
     </news:news>
   </url>
   <url>
@@ -199,39 +199,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-27</news:publication_date>
-      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/vebinar-dlya-professorov-issledovatelej-i-studentov</loc>
     <news:news>
       <news:publication>
@@ -265,69 +232,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/izuchenie-opyta-finlyandii-v-obespechenii-verhovenstva-zakona</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/listaya-segodnyashnie-gazety</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Листая сегодняшние газеты</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/listaya-segodnyashnie-gazety</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Листая сегодняшние газеты</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/listaya-segodnyashnie-gazety</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-25</news:publication_date>
-      <news:title>Листая сегодняшние газеты</news:title>
+      <news:publication_date>2023-03-27</news:publication_date>
+      <news:title>Изучение опыта Финляндии в обеспечении верховенства закона!</news:title>
     </news:news>
   </url>
   <url>
@@ -364,6 +298,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/listaya-segodnyashnie-gazety</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Листая сегодняшние газеты</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/listaya-segodnyashnie-gazety</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Листая сегодняшние газеты</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/listaya-segodnyashnie-gazety</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Листая сегодняшние газеты</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/vstrechajte-konkurs-leader-of-students-union</loc>
     <news:news>
       <news:publication>
@@ -394,6 +361,39 @@
       </news:publication>
       <news:publication_date>2023-03-25</news:publication_date>
       <news:title>Встречайте конкурс "Leader of Students’ Union"!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/duhovnoe-literaturnoe-i-razvlekatelnoe-puteshestvie-ostavilo-nezabyvaemye-vpechatleniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-25</news:publication_date>
+      <news:title>Духовное, литературное и развлекательное путешествие оставило незабываемые впечатления!</news:title>
     </news:news>
   </url>
   <url>
@@ -760,39 +760,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-11</news:publication_date>
-      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/polucheny-novye-sily-i-vpechatleniya</loc>
     <news:news>
       <news:publication>
@@ -856,6 +823,39 @@
       </news:publication>
       <news:publication_date>2023-03-11</news:publication_date>
       <news:title>Наши преподаватели освоили применение BOS-технологий!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/pervyj-shag-vo-vzrosluyu-zhizn-nachinaetsya-s-praktiki</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-11</news:publication_date>
+      <news:title>Первый шаг во взрослую жизнь – начинается с практики!</news:title>
     </news:news>
   </url>
   <url>
@@ -1189,39 +1189,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-03-02</news:publication_date>
-      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/organizovana-ekskursiya-v-centr-literatury-i-prosvesheniya</loc>
     <news:news>
       <news:publication>
@@ -1255,36 +1222,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/priglashaem-na-prazdnichnyj-vecher-ty-svyata-i-neprikosnovenna-zhenshina</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-03-01</news:publication_date>
-      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
+      <news:publication_date>2023-03-02</news:publication_date>
+      <news:title>Приглашаем на праздничный вечер "Ты свята и неприкосновенна, женщина"!</news:title>
     </news:news>
   </url>
   <url>
@@ -1318,6 +1285,39 @@
       </news:publication>
       <news:publication_date>2023-03-01</news:publication_date>
       <news:title>Установлено сотрудничество с престижным университетом Италии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ekskursiya-v-nauchno-prosvetitelskij-memorialnyj-kompleks</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-03-01</news:publication_date>
+      <news:title>Экскурсия в научно-просветительский мемориальный комплекс</news:title>
     </news:news>
   </url>
 </urlset>

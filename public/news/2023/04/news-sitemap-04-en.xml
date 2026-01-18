@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
+      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
+      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
+      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
     </news:news>
   </url>
   <url>
@@ -67,36 +67,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
+      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
+      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-international-nordic-university-team-voted-as-one-united-family-for-a-brighter-future</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/today-is-a-historic-day-for-the-people-of-uzbekistan</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-30</news:publication_date>
-      <news:title>The International Nordic University team voted as one united family for a brighter future!</news:title>
+      <news:title>Today is a historic day for the people of Uzbekistan!</news:title>
     </news:news>
   </url>
   <url>
@@ -397,6 +397,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/april-23-world-book-and-copyright-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>April 23 – World Book and Copyright Day</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/april-23-world-book-and-copyright-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>April 23 – World Book and Copyright Day</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/april-23-world-book-and-copyright-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-23</news:publication_date>
+      <news:title>April 23 – World Book and Copyright Day</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/seminar-training-held-as-part-of-the-professional-development-course</loc>
     <news:news>
       <news:publication>
@@ -463,39 +496,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/april-23-world-book-and-copyright-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>April 23 – World Book and Copyright Day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/april-23-world-book-and-copyright-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>April 23 – World Book and Copyright Day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/april-23-world-book-and-copyright-day</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-23</news:publication_date>
-      <news:title>April 23 – World Book and Copyright Day</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/un-communications-group-in-uzbekistan-conducts-interactive-training-for-finnish-students</loc>
     <news:news>
       <news:publication>
@@ -526,6 +526,39 @@
       </news:publication>
       <news:publication_date>2023-04-21</news:publication_date>
       <news:title>UN Communications Group in Uzbekistan Conducts Interactive Training for Finnish Students!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/choose-niu-lets-build-your-future-together</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>Choose NIU! Let’s build your future together!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/choose-niu-lets-build-your-future-together</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>Choose NIU! Let’s build your future together!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/choose-niu-lets-build-your-future-together</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-20</news:publication_date>
+      <news:title>Choose NIU! Let’s build your future together!</news:title>
     </news:news>
   </url>
   <url>
@@ -595,69 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/choose-niu-lets-build-your-future-together</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>Choose NIU! Let’s build your future together!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/choose-niu-lets-build-your-future-together</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>Choose NIU! Let’s build your future together!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/choose-niu-lets-build-your-future-together</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-20</news:publication_date>
-      <news:title>Choose NIU! Let’s build your future together!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/early-voting-begins-today-april-19</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Early Voting Begins Today, April 19!</news:title>
+      <news:title>Emotional Intelligence and How to Improve It?</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/early-voting-begins-today-april-19</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Early Voting Begins Today, April 19!</news:title>
+      <news:title>Emotional Intelligence and How to Improve It?</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/early-voting-begins-today-april-19</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Early Voting Begins Today, April 19!</news:title>
+      <news:title>Emotional Intelligence and How to Improve It?</news:title>
     </news:news>
   </url>
   <url>
@@ -694,6 +694,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/early-voting-begins-today-april-19</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Early Voting Begins Today, April 19!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/early-voting-begins-today-april-19</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Early Voting Begins Today, April 19!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/early-voting-begins-today-april-19</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-19</news:publication_date>
+      <news:title>Early Voting Begins Today, April 19!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/attention-applicants-for-independent-research</loc>
     <news:news>
       <news:publication>
@@ -724,72 +757,6 @@
       </news:publication>
       <news:publication_date>2023-04-19</news:publication_date>
       <news:title>Attention Applicants for Independent Research!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Emotional Intelligence and How to Improve It?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Emotional Intelligence and How to Improve It?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/emotional-intelligence-and-how-to-improve-it</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-19</news:publication_date>
-      <news:title>Emotional Intelligence and How to Improve It?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-expands-its-international-student-community</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNU Expands Its International Student Community!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-expands-its-international-student-community</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNU Expands Its International Student Community!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-expands-its-international-student-community</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>XNU Expands Its International Student Community!</news:title>
     </news:news>
   </url>
   <url>
@@ -826,36 +793,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-expands-its-international-student-community</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+      <news:title>XNU Expands Its International Student Community!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-expands-its-international-student-community</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+      <news:title>XNU Expands Its International Student Community!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-expands-its-international-student-community</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-18</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+      <news:title>XNU Expands Its International Student Community!</news:title>
     </news:news>
   </url>
   <url>
@@ -892,36 +859,69 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/open-dialogue-with-finnish-youth</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-students-visit-samarkand</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-18</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu Students Visit Samarkand!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Open Dialogue with Finnish Youth!</news:title>
+      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/open-dialogue-with-finnish-youth</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Open Dialogue with Finnish Youth!</news:title>
+      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/open-dialogue-with-finnish-youth</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Open Dialogue with Finnish Youth!</news:title>
+      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
     </news:news>
   </url>
   <url>
@@ -958,36 +958,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/open-dialogue-with-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
+      <news:title>Open Dialogue with Finnish Youth!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/open-dialogue-with-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
+      <news:title>Open Dialogue with Finnish Youth!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/choose-the-door-to-knowledge-the-rest-will-open-by-themselves</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/open-dialogue-with-finnish-youth</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-17</news:publication_date>
-      <news:title>Choose the Door to Knowledge! The Rest Will Open by Themselves!</news:title>
+      <news:title>Open Dialogue with Finnish Youth!</news:title>
     </news:news>
   </url>
   <url>
@@ -1486,39 +1486,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-06</news:publication_date>
-      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/our-experts-perspective-featured-on-gazetauz</loc>
     <news:news>
       <news:publication>
@@ -1549,6 +1516,39 @@
       </news:publication>
       <news:publication_date>2023-04-06</news:publication_date>
       <news:title>Our Expert’s Perspective – Featured on "Gazeta.uz"!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/an-international-training-course-for-kazakhstani-educators-was-successfully-conducted-at-our-university</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-06</news:publication_date>
+      <news:title>An international training course for Kazakhstani educators was successfully conducted at our university.</news:title>
     </news:news>
   </url>
   <url>
@@ -1618,36 +1618,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
+      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
+      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
+      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
     </news:news>
   </url>
   <url>
@@ -1684,36 +1684,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
+      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
+      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/as-part-of-the-international-training-course-valuable-insights-into-modern-educational-technologies-were-provided</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/as-part-of-the-international-training-course-masterclasses-on-modern-pedagogical-approaches-and-emotional-intelligence-development-were-conducted</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-04-03</news:publication_date>
-      <news:title>As part of the international training course, valuable insights into modern educational technologies were provided.</news:title>
+      <news:title>As part of the international training course, masterclasses on modern pedagogical approaches and emotional intelligence development were conducted.</news:title>
     </news:news>
   </url>
   <url>
@@ -1783,39 +1783,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-04-01</news:publication_date>
-      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/niu-has-launched-an-international-training-course-for-school-principals-and-educators-from-kazakhstan</loc>
     <news:news>
       <news:publication>
@@ -1846,6 +1813,39 @@
       </news:publication>
       <news:publication_date>2023-04-01</news:publication_date>
       <news:title>NIU has launched an international training course for school principals and educators from Kazakhstan.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-international-course-helps-kazakhstani-educators-master-modern-digital-education-technologies</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-04-01</news:publication_date>
+      <news:title>The international course helps Kazakhstani educators master modern digital education technologies.</news:title>
     </news:news>
   </url>
 </urlset>

@@ -463,39 +463,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/masterclass-an-invaluable-experience-for-future-programmers</loc>
     <news:news>
       <news:publication>
@@ -526,6 +493,39 @@
       </news:publication>
       <news:publication_date>2025-03-20</news:publication_date>
       <news:title>Masterclass: An Invaluable Experience for Future Programmers</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-youth-from-48-countries-are-expected-to-participate</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: Youth from 48 countries are expected to participate!</news:title>
     </news:news>
   </url>
   <url>
@@ -859,36 +859,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
+      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
+      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
+      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
     </news:news>
   </url>
   <url>
@@ -925,36 +925,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
+      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
+      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/a-scientific-practical-seminar-held-for-doctoral-students-and-independent-researchers</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-representatives-explore-collaboration-opportunities-with-niu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>A scientific-practical seminar held for doctoral students and independent researchers</news:title>
+      <news:title>YTO International representatives explore collaboration opportunities with NIU</news:title>
     </news:news>
   </url>
   <url>

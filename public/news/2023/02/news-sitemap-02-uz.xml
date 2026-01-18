@@ -199,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-22</news:publication_date>
+      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/faxriy-doktor-ilmiy-unvoni-topshirildi</loc>
     <news:news>
       <news:publication>
@@ -262,39 +295,6 @@
       </news:publication>
       <news:publication_date>2023-02-22</news:publication_date>
       <news:title>Muhim kelishuvlar amalga oshirildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnuda-fin-tili-va-madaniyati-markazi-tantanali-ochildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-22</news:publication_date>
-      <news:title>XNUda "Fin tili va madaniyati markazi" tantanali ochildi</news:title>
     </news:news>
   </url>
   <url>
@@ -496,39 +496,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-15</news:publication_date>
-      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-kengashining-yigilishi-bolib-otmoqda</loc>
     <news:news>
       <news:publication>
@@ -562,36 +529,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nazm-va-navo-kechasida</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>"Nazm va navo" kechasida</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nazm-va-navo-kechasida</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>"Nazm va navo" kechasida</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nazm-va-navo-kechasida</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabi-tinglovchilari-ice-cityda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2023-02-14</news:publication_date>
-      <news:title>"Nazm va navo" kechasida</news:title>
+      <news:publication_date>2023-02-15</news:publication_date>
+      <news:title>Foundation maktabi tinglovchilari - Ice Cityda</news:title>
     </news:news>
   </url>
   <url>
@@ -628,6 +595,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nazm-va-navo-kechasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>"Nazm va navo" kechasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nazm-va-navo-kechasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>"Nazm va navo" kechasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nazm-va-navo-kechasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-14</news:publication_date>
+      <news:title>"Nazm va navo" kechasida</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/moliyaviy-tashkilotlar-bilan-hamkorlik-kengaymoqda</loc>
     <news:news>
       <news:publication>
@@ -658,72 +658,6 @@
       </news:publication>
       <news:publication_date>2023-02-14</news:publication_date>
       <news:title>Moliyaviy tashkilotlar bilan hamkorlik kengaymoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/muqobil-energetika-maqbul-yechim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Muqobil energetika - maqbul yechim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/muqobil-energetika-maqbul-yechim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Muqobil energetika - maqbul yechim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/muqobil-energetika-maqbul-yechim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Muqobil energetika - maqbul yechim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-13</news:publication_date>
-      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -760,6 +694,72 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/hujjat-topshirishga-ulgurmadingizmi-qabulimiz-davom-etmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Hujjat topshirishga ulgurmadingizmi? QABULIMIZ davom etmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/muqobil-energetika-maqbul-yechim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Muqobil energetika - maqbul yechim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/muqobil-energetika-maqbul-yechim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Muqobil energetika - maqbul yechim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/muqobil-energetika-maqbul-yechim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-13</news:publication_date>
+      <news:title>Muqobil energetika - maqbul yechim</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/magistraturaga-kirish-imtihonlari-otkazilmoqda</loc>
     <news:news>
       <news:publication>
@@ -793,39 +793,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-10</news:publication_date>
-      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xnu-xodimlarining-kengaytirilgan-yigilishi-otkazildi</loc>
     <news:news>
       <news:publication>
@@ -856,6 +823,39 @@
       </news:publication>
       <news:publication_date>2023-02-10</news:publication_date>
       <news:title>XNU xodimlarining kengaytirilgan yig‘ilishi o‘tkazildi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/quvvatov-golibjon-xnu-boshlangich-kasaba-uyushma-qomitasi-raisi-etib-saylandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-10</news:publication_date>
+      <news:title>Quvvatov G‘olibjon XNU boshlang‘ich kasaba uyushma qo‘mitasi raisi etib saylandi</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-08</news:publication_date>
-      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ingliz-tili-kurslariga-taklif-qilamiz</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-02-08</news:publication_date>
       <news:title>Ingliz tili kurslariga taklif qilamiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mustaqil-izlanuvchilikka-hujjat-topshirmoqchi-bolgan-talabgorlar-diqqatiga</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-08</news:publication_date>
+      <news:title>Mustaqil izlanuvchilikka hujjat topshirmoqchi bo‘lgan talabgorlar diqqatiga!</news:title>
     </news:news>
   </url>
   <url>
@@ -1063,39 +1063,6 @@ Foreign Languages TV | Iqtisodiyot va Pedagogika fakulteti dekani Elshod Umarovn
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/monologchallenge-golibi-aniqlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/monologchallenge-golibi-aniqlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/monologchallenge-golibi-aniqlandi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-02-04</news:publication_date>
-      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/barcha-talabgorlarga-omad-tilaymiz</loc>
     <news:news>
       <news:publication>
@@ -1126,6 +1093,39 @@ Foreign Languages TV | Iqtisodiyot va Pedagogika fakulteti dekani Elshod Umarovn
       </news:publication>
       <news:publication_date>2023-02-04</news:publication_date>
       <news:title>Barcha talabgorlarga omad tilaymiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/monologchallenge-golibi-aniqlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/monologchallenge-golibi-aniqlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/monologchallenge-golibi-aniqlandi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-02-04</news:publication_date>
+      <news:title>"MonologChallenge" g‘olibi aniqlandi!</news:title>
     </news:news>
   </url>
   <url>
@@ -1195,36 +1195,36 @@ Foreign Languages TV | Iqtisodiyot va Pedagogika fakulteti dekani Elshod Umarovn
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/barcha-talabalar-diqqatiga</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Barcha talabalar diqqatiga!</news:title>
+      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/barcha-talabalar-diqqatiga</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Barcha talabalar diqqatiga!</news:title>
+      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/barcha-talabalar-diqqatiga</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Barcha talabalar diqqatiga!</news:title>
+      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
     </news:news>
   </url>
   <url>
@@ -1261,36 +1261,36 @@ Foreign Languages TV | Iqtisodiyot va Pedagogika fakulteti dekani Elshod Umarovn
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/barcha-talabalar-diqqatiga</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
+      <news:title>Barcha talabalar diqqatiga!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/barcha-talabalar-diqqatiga</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
+      <news:title>Barcha talabalar diqqatiga!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kutubxonamiz-fin-tili-darsliklari-bilan-boyitilmoqda</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/barcha-talabalar-diqqatiga</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-02-01</news:publication_date>
-      <news:title>Kutubxonamiz fin tili darsliklari bilan boyitilmoqda</news:title>
+      <news:title>Barcha talabalar diqqatiga!</news:title>
     </news:news>
   </url>
 </urlset>
