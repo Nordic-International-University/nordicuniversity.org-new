@@ -60,7 +60,7 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                       alt={partner.name}
                       width={140}
                       height={70}
-                      className="object-contain w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
+                      className="object-contain w-full h-full group-hover:grayscale transition-all duration-300"
                     />
                   </div>
                 </Link>
@@ -93,7 +93,7 @@ const PartnersSlider: React.FC<PartnersSliderProps> = ({
                       alt={partner.name}
                       width={140}
                       height={70}
-                      className="object-contain w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
+                      className="object-contain w-full h-full group-hover:grayscale transition-all duration-300"
                     />
                   </div>
                 </Link>
