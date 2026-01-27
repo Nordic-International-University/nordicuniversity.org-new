@@ -1,33 +1,63 @@
-# Dockerfile
-FROM node:20-alpine
+# Stage 1: Dependencies + Build tools
+FROM node:20-alpine AS deps
 
-# Install system dependencies
-RUN apk add --no-cache libc6-compat python3 make g++
+# Install build dependencies (temporary)
+RUN apk add --no-cache \
+    libc6-compat \
+    python3 \
+    make \
+    g++
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
 COPY package.json package-lock.json* ./
 
-# Install dependencies
 RUN npm ci --legacy-peer-deps
 
-# Copy all files
+# Stage 2: Builder
+FROM node:20-alpine AS builder
+
+# Only runtime dependencies
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+# Copy node_modules from deps
+COPY --from=deps /app/node_modules ./node_modules
+
+# Copy source
 COPY . .
 
-# Copy .env file
-COPY .env .env
-
-# Build application
+# Build
 RUN npm run build
 
-# Expose port
-EXPOSE 3778
+# Stage 3: Runner (PRODUCTION)
+FROM node:20-alpine AS runner
 
-# Set environment variables
+# Only runtime dependencies
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
 ENV NODE_ENV=production
 ENV PORT=3778
 
-# Start application
+# Create user
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy only production files
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./next.config.mjs
+COPY --from=builder --chown=nextjs:nodejs /app/i18n.ts ./i18n.ts
+COPY --from=builder --chown=nextjs:nodejs /app/locales ./locales
+COPY --from=builder --chown=nextjs:nodejs /app/middleware.ts ./middleware.ts
+
+USER nextjs
+
+EXPOSE 3778
+
 CMD ["npm", "start"]
