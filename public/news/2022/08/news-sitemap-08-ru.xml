@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ekonomika-otrasli-i-sfery</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-08-23</news:publication_date>
-      <news:title>Экономика (отрасли и сферы)</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ekonomika-otrasli-i-sfery</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-08-23</news:publication_date>
-      <news:title>Экономика (отрасли и сферы)</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ekonomika-otrasli-i-sfery</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-08-23</news:publication_date>
-      <news:title>Экономика (отрасли и сферы)</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/o-nas-na-oficialnyh-kanalah</loc>
     <news:news>
       <news:publication>
@@ -163,6 +130,39 @@
       </news:publication>
       <news:publication_date>2022-08-23</news:publication_date>
       <news:title>О нас на официальных каналах</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ekonomika-otrasli-i-sfery</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-08-23</news:publication_date>
+      <news:title>Экономика (отрасли и сферы)</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ekonomika-otrasli-i-sfery</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-08-23</news:publication_date>
+      <news:title>Экономика (отрасли и сферы)</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ekonomika-otrasli-i-sfery</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-08-23</news:publication_date>
+      <news:title>Экономика (отрасли и сферы)</news:title>
     </news:news>
   </url>
   <url>

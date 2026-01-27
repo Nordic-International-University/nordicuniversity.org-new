@@ -133,39 +133,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>We are sharing our favorite books with you!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>We are sharing our favorite books with you!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-23</news:publication_date>
-      <news:title>We are sharing our favorite books with you!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/music-quiz-engaging-debates-and-intellectual-competition</loc>
     <news:news>
       <news:publication>
@@ -229,6 +196,39 @@
       </news:publication>
       <news:publication_date>2024-02-23</news:publication_date>
       <news:title>Student Exchange Program Launches!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>We are sharing our favorite books with you!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>We are sharing our favorite books with you!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/we-are-sharing-our-favorite-books-with-you</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-23</news:publication_date>
+      <news:title>We are sharing our favorite books with you!</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-14</news:publication_date>
-      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/do-good-for-the-people-for-there-is-nothing-better-than-this</loc>
     <news:news>
       <news:publication>
@@ -493,6 +460,39 @@
       </news:publication>
       <news:publication_date>2024-02-14</news:publication_date>
       <news:title>“Do good for the people, for there is nothing better than this…”</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/february-14-1483-1530-today-is-the-birth-anniversary-of-zahiriddin-muhammad-babur</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-14</news:publication_date>
+      <news:title>February 14 (1483 – 1530), Today is the birth anniversary of Zahiriddin Muhammad Babur.</news:title>
     </news:news>
   </url>
   <url>
@@ -826,39 +826,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-02-01</news:publication_date>
-      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/the-international-press-club-is-organizing-a-session-on-attention-to-the-younger-generation-attention-to-the-future</loc>
     <news:news>
       <news:publication>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2024-02-01</news:publication_date>
       <news:title>The International Press Club is organizing a session on “Attention to the Younger Generation – Attention to the Future”</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/in-honor-of-the-birthdays-of-alisher-navoi-and-babur-mirzo-february-9-and-14-we-announce-the-video-contest</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-02-01</news:publication_date>
+      <news:title>In honor of the birthdays of Alisher Navoi and Babur Mirzo (February 9 and 14), we announce the "Video Contest".</news:title>
     </news:news>
   </url>
 </urlset>

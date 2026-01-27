@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-ilmiy-seminarida-ilk-himoya-ishi-yoqlandi</loc>
     <news:news>
       <news:publication>
@@ -100,6 +67,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-ilmiy-seminarida-dissertatsiya-himoyasi-otkaziladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>XNU Ilmiy seminarida dissertatsiya himoyasi o‘tkaziladi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/diydor-shirin</loc>
     <news:news>
       <news:publication>
@@ -130,39 +130,6 @@
       </news:publication>
       <news:publication_date>2023-05-26</news:publication_date>
       <news:title>Diydor shirin...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
     </news:news>
   </url>
   <url>
@@ -199,6 +166,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/surxondaryo-talim-delegatsiyasi-finlandiyada</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Surxondaryo ta'lim delegatsiyasi – Finlandiyada</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/bugun-toshkent-viloyatining-bostonliq-tumanida-yoshlar-oromgohida-oliy-talim-muassasalarining-yoshlar-bilan-ishlashga-masul-vakillari-uchun-oquv-seminar-boshlandi</loc>
     <news:news>
       <news:publication>
@@ -229,6 +229,39 @@
       </news:publication>
       <news:publication_date>2023-05-24</news:publication_date>
       <news:title>Bugun Toshkent viloyatining Bo‘stonliq tumanida, "Yoshlar oromgohi"da oliy ta'lim muassasalarining yoshlar bilan ishlashga mas'ul vakillari uchun o‘quv seminar boshlandi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
     </news:news>
   </url>
   <url>
@@ -295,39 +328,6 @@
       </news:publication>
       <news:publication_date>2023-05-23</news:publication_date>
       <news:title>Finlandiyada ta'lim olish yoki Fin tizimi bo‘yicha ta'limni O‘zbekistonda olishni istaysizmi!?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-talabalari-finlandiyada-sport-va-dostlik-muhitida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>XNU talabalari Finlandiyada sport va do‘stlik muhitida</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/work-and-travel-dasturi-amalda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>"Work and Travel" dasturi - amalda!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/work-and-travel-dasturi-amalda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>"Work and Travel" dasturi - amalda!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/work-and-travel-dasturi-amalda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>"Work and Travel" dasturi - amalda!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xotira-uygonsa-gozaldir</loc>
     <news:news>
       <news:publication>
@@ -526,6 +493,39 @@
       </news:publication>
       <news:publication_date>2023-05-20</news:publication_date>
       <news:title>"Uch avlod uchrashuvi"da faxriy ustozlar va yetuk mutaxassislar bitiruvchilarga hayotiy saboqlar berdilar.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/work-and-travel-dasturi-amalda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>"Work and Travel" dasturi - amalda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/work-and-travel-dasturi-amalda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>"Work and Travel" dasturi - amalda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/work-and-travel-dasturi-amalda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>"Work and Travel" dasturi - amalda!</news:title>
     </news:news>
   </url>
   <url>
@@ -760,36 +760,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
+      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
+      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
+      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
     </news:news>
   </url>
   <url>
@@ -826,36 +826,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
+      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
+      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/yangi-ozbekiston-gazetasida-finlandiyaga-talim-safari-taassurotlari-yoritildi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/talim-integratsiyalashuvi-doirasida-hamkorlik-memorandumlari-imzolandi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>"Yangi O‘zbekiston" gazetasida Finlandiyaga ta'lim safari taassurotlari yoritildi</news:title>
+      <news:title>Ta'lim integratsiyalashuvi doirasida hamkorlik memorandumlari imzolandi</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talabamiz-top-1-xotira-egasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talabamiz-top-1-xotira-egasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talabamiz-top-1-xotira-egasi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-taklif-etadi-yonalishingizni-tanlang-va-talim-oling</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-05-03</news:publication_date>
       <news:title>Xalqaro Nordik universiteti taklif etadi: yo‘nalishingizni tanlang va ta'lim oling!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talabamiz-top-1-xotira-egasi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talabamiz-top-1-xotira-egasi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/talabamiz-top-1-xotira-egasi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Talabamiz "Top-1" xotira egasi</news:title>
     </news:news>
   </url>
   <url>

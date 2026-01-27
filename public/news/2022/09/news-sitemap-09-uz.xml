@@ -199,39 +199,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mobil-talim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobil ta'lim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mobil-talim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobil ta'lim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mobil-talim</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobil ta'lim</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/matbuot-nashrlarida</loc>
     <news:news>
       <news:publication>
@@ -262,6 +229,39 @@
       </news:publication>
       <news:publication_date>2022-09-14</news:publication_date>
       <news:title>Matbuot nashrlarida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mobil-talim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobil ta'lim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mobil-talim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobil ta'lim</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mobil-talim</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobil ta'lim</news:title>
     </news:news>
   </url>
   <url>
@@ -331,39 +331,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/rasmiy-ochilish-marosimi</loc>
     <news:news>
       <news:publication>
@@ -394,6 +361,39 @@
       </news:publication>
       <news:publication_date>2022-09-08</news:publication_date>
       <news:title>Rasmiy ochilish marosimi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ochilish-tadbirida-ozbekiston-respublikasi-prezidentining-matbuot-kotibi-sherzod-asadov-tabriklash-uchun-sozga-chiqdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>Ochilish tadbirida O‘zbekiston Respublikasi Prezidentining Matbuot kotibi Sherzod Asadov tabriklash uchun so‘zga chiqdi.</news:title>
     </news:news>
   </url>
   <url>

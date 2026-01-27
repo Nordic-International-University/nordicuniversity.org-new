@@ -34,6 +34,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talim-krediti-kelajakka-sarmoya</loc>
     <news:news>
       <news:publication>
@@ -100,36 +133,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kun-tarixi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>Kun tarixi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kun-tarixi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>Kun tarixi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/maxsus-mehmon-bilan-jonli-muloqot-bolib-otadi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/kun-tarixi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Maxsus mehmon bilan jonli muloqot bo‘lib o‘tadi</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>Kun tarixi</news:title>
     </news:news>
   </url>
   <url>
@@ -163,39 +196,6 @@
       </news:publication>
       <news:publication_date>2022-11-26</news:publication_date>
       <news:title>Finlyandiyalik ekspertlar ishtirokida seminar-trening boshlandi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kun-tarixi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>Kun tarixi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kun-tarixi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>Kun tarixi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kun-tarixi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>Kun tarixi</news:title>
     </news:news>
   </url>
   <url>
@@ -265,39 +265,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mehnat-migratsiyasi-boyicha-xalqaro-forum-2022</loc>
     <news:news>
       <news:publication>
@@ -361,6 +328,39 @@
       </news:publication>
       <news:publication_date>2022-11-22</news:publication_date>
       <news:title>Fin ta'lim tizimi tajribalari o‘rganilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-forum-doirasida-imzolash-marosimi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>Xalqaro forum doirasida imzolash marosimi bo‘lib o‘tdi</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mehnatlar-etirof-topganda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Mehnatlar e'tirof topganda...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mehnatlar-etirof-topganda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Mehnatlar e'tirof topganda...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mehnatlar-etirof-topganda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Mehnatlar e'tirof topganda...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/hamkorlikka-oid-muhim-takliflar-organilmoqda</loc>
     <news:news>
       <news:publication>
@@ -493,6 +460,39 @@
       </news:publication>
       <news:publication_date>2022-11-16</news:publication_date>
       <news:title>Hamkorlikka oid muhim takliflar o‘rganilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mehnatlar-etirof-topganda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Mehnatlar e'tirof topganda...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mehnatlar-etirof-topganda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Mehnatlar e'tirof topganda...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mehnatlar-etirof-topganda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Mehnatlar e'tirof topganda...</news:title>
     </news:news>
   </url>
   <url>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/bizda-maxsus-mehmon</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>Bizda - maxsus mehmon!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/bizda-maxsus-mehmon</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>Bizda - maxsus mehmon!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/bizda-maxsus-mehmon</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>Bizda - maxsus mehmon!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ielts-tayyorlov-kursida-oqing-va-orzuingizdagi-joylarga-boring</loc>
     <news:news>
       <news:publication>
@@ -661,36 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/bizda-maxsus-mehmon</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>Bizda - maxsus mehmon!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/bizda-maxsus-mehmon</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>Bizda - maxsus mehmon!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/bizda-maxsus-mehmon</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>Bizda - maxsus mehmon!</news:title>
     </news:news>
   </url>
   <url>
@@ -793,36 +760,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/professor-oqituvchimiz-kelajak-liderlariga-mahorat-darsi-otkazdi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Professor-o‘qituvchimiz "Kelajak liderlari"ga mahorat darsi o‘tkazdi</news:title>
     </news:news>
   </url>
   <url>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2022-11-09</news:publication_date>
       <news:title>Erasmus+ axborot ko‘mak seminariga taklif etamiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/yilning-eng-yaxshi-tarbiyachilari-talabalarimiz</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Yilning eng yaxshi tarbiyachilari - talabalarimiz!</news:title>
     </news:news>
   </url>
   <url>
@@ -1090,39 +1090,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ozbekiston-finlyandiya-hamkorligida-yangi-yonalishlarga-yol-ochilmoqda</loc>
     <news:news>
       <news:publication>
@@ -1153,6 +1120,39 @@
       </news:publication>
       <news:publication_date>2022-11-02</news:publication_date>
       <news:title>O‘zbekiston - Finlyandiya hamkorligida yangi yo‘nalishlarga yo‘l ochilmoqda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/xalqaro-nordik-universiteti-xalqaro-hamkorlik-uchun-platforma</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Xalqaro Nordik universiteti - xalqaro hamkorlik uchun platforma</news:title>
     </news:news>
   </url>
   <url>

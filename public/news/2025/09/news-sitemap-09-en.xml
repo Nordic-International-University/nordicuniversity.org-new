@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-09-25</news:publication_date>
-      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-09-25</news:publication_date>
-      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-09-25</news:publication_date>
-      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/new-areas-of-cooperation-with-latvia-defined</loc>
     <news:news>
       <news:publication>
@@ -196,6 +163,39 @@
       </news:publication>
       <news:publication_date>2025-09-25</news:publication_date>
       <news:title>Congratulations on the honorable award!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-09-25</news:publication_date>
+      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-09-25</news:publication_date>
+      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/cooperation-with-denmark-new-international-projects-starting-at-nordic</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-09-25</news:publication_date>
+      <news:title>Cooperation with Denmark: New International Projects Starting at Nordic</news:title>
     </news:news>
   </url>
   <url>

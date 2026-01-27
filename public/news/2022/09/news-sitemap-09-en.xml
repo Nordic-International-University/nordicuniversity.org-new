@@ -199,39 +199,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mobile-education</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobile education</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mobile-education</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobile education</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mobile-education</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Mobile education</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/in-the-press-publications</loc>
     <news:news>
       <news:publication>
@@ -262,6 +229,39 @@
       </news:publication>
       <news:publication_date>2022-09-14</news:publication_date>
       <news:title>In the press publications</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mobile-education</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobile education</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mobile-education</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobile education</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mobile-education</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Mobile education</news:title>
     </news:news>
   </url>
   <url>
@@ -331,39 +331,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/official-opening-ceremony</loc>
     <news:news>
       <news:publication>
@@ -394,6 +361,39 @@
       </news:publication>
       <news:publication_date>2022-09-08</news:publication_date>
       <news:title>Official opening ceremony</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/at-the-opening-ceremony-sherzod-asadov-the-press-secretary-of-the-president-of-the-republic-of-uzbekistan-took-the-floor-to-deliver-a-congratulatory-speech</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>At the opening ceremony, Sherzod Asadov, the Press Secretary of the President of the Republic of Uzbekistan, took the floor to deliver a congratulatory speech.</news:title>
     </news:news>
   </url>
   <url>

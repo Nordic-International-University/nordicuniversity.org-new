@@ -364,39 +364,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-06-02</news:publication_date>
-      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nordikdan-bolajonlarga-mehr-eʼtibor-va-sovgalar</loc>
     <news:news>
       <news:publication>
@@ -427,6 +394,39 @@
       </news:publication>
       <news:publication_date>2025-06-02</news:publication_date>
       <news:title>Nordikdan bolajonlarga mehr-eʼtibor va sovg‘alar!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ochiq-dars-adabiyot-bayramiga-aylandi-✨</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-02</news:publication_date>
+      <news:title>Ochiq dars adabiyot bayramiga aylandi! ✨</news:title>
     </news:news>
   </url>
 </urlset>

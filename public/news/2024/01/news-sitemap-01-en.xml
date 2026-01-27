@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/how-to-begin-writing-a-scientific-article</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>How to Begin Writing a Scientific Article?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/how-to-begin-writing-a-scientific-article</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>How to Begin Writing a Scientific Article?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/how-to-begin-writing-a-scientific-article</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-27</news:publication_date>
-      <news:title>How to Begin Writing a Scientific Article?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/in-one-of-the-oldest-museums-in-central-asia</loc>
     <news:news>
       <news:publication>
@@ -163,6 +130,39 @@
       </news:publication>
       <news:publication_date>2024-01-27</news:publication_date>
       <news:title>In One of the Oldest Museums in Central Asia</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/how-to-begin-writing-a-scientific-article</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>How to Begin Writing a Scientific Article?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/how-to-begin-writing-a-scientific-article</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>How to Begin Writing a Scientific Article?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/how-to-begin-writing-a-scientific-article</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-27</news:publication_date>
+      <news:title>How to Begin Writing a Scientific Article?</news:title>
     </news:news>
   </url>
   <url>
@@ -232,39 +232,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-24</news:publication_date>
-      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/the-zakovat-clubs-student-league-is-heating-up</loc>
     <news:news>
       <news:publication>
@@ -298,6 +265,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-meeting-between-the-rector-and-students-was-held-in-a-warm-atmosphere</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-24</news:publication_date>
+      <news:title>The meeting between the rector and students was held in a warm atmosphere</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/the-vice-rectors-of-niu-and-uzswlu-held-a-friendly-meeting-in-stockholm-with-uzbekistans-ambassador-to-sweden-nodir-ganiyev</loc>
     <news:news>
       <news:publication>
@@ -328,6 +328,39 @@
       </news:publication>
       <news:publication_date>2024-01-23</news:publication_date>
       <news:title>The vice-rectors of NIU and UzSWLU held a friendly meeting in Stockholm with Uzbekistan’s Ambassador to Sweden, Nodir G‘aniyev.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-22</news:publication_date>
+      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
     </news:news>
   </url>
   <url>
@@ -394,39 +427,6 @@
       </news:publication>
       <news:publication_date>2024-01-22</news:publication_date>
       <news:title>Final exams for part-time students covering subjects studied throughout the semester are also being held at NIU's second academic building.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/article-formatting-procedure-according-to-imrad-requirements</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-22</news:publication_date>
-      <news:title>Article Formatting Procedure According to IMRAD Requirements</news:title>
     </news:news>
   </url>
   <url>
@@ -529,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-19</news:publication_date>
-      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/uzbek-foreign-language-professors-in-finland</loc>
     <news:news>
       <news:publication>
@@ -592,6 +559,39 @@
       </news:publication>
       <news:publication_date>2024-01-19</news:publication_date>
       <news:title>Uzbek Foreign Language Professors – in Finland</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-book-poincare-discussed-by-book-enthusiasts</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-19</news:publication_date>
+      <news:title>The Book "Poincare" – Discussed by Book Enthusiasts</news:title>
     </news:news>
   </url>
   <url>
@@ -826,39 +826,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-01-09</news:publication_date>
-      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/professors-of-niu-were-awarded-certificates-by-the-ministry-of-higher-education-science-and-innovation-for-the-publication-of-new-educational-materials</loc>
     <news:news>
       <news:publication>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2024-01-09</news:publication_date>
       <news:title>Professors of NIU were awarded certificates by the Ministry of Higher Education, Science, and Innovation for the publication of new educational materials.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/the-selection-for-the-work-and-travel-program-has-begun</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-09</news:publication_date>
+      <news:title>The selection for the "Work and Travel" program has begun!</news:title>
     </news:news>
   </url>
   <url>

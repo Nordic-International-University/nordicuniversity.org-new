@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>Защита диссертации на научном семинаре XNU</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>Защита диссертации на научном семинаре XNU</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-27</news:publication_date>
-      <news:title>Защита диссертации на научном семинаре XNU</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nauchnyj-seminar-v-xnu-sostoyalas-pervaya-uspeshnaya-zashita-dissertacii</loc>
     <news:news>
       <news:publication>
@@ -100,6 +67,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>Защита диссертации на научном семинаре XNU</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>Защита диссертации на научном семинаре XNU</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/zashita-dissertacii-na-nauchnom-seminare-xnu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-27</news:publication_date>
+      <news:title>Защита диссертации на научном семинаре XNU</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/priyatnaya-vstrecha</loc>
     <news:news>
       <news:publication>
@@ -130,39 +130,6 @@
       </news:publication>
       <news:publication_date>2023-05-26</news:publication_date>
       <news:title>Приятная встреча...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-25</news:publication_date>
-      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
     </news:news>
   </url>
   <url>
@@ -199,6 +166,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/obrazovatelnaya-delegaciya-surhandari-—-v-finlyandii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-25</news:publication_date>
+      <news:title>Образовательная делегация Сурхандарьи — в Финляндии</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/segodnya-v-bostanlykskom-rajone-tashkentskoj-oblasti-v-«lagere-molodyozhi»-nachalsya-uchebnyj-seminar-dlya-predstavitelej-vuzov-otvetstvennyh-za-rabotu-s-molodezhyu</loc>
     <news:news>
       <news:publication>
@@ -229,6 +229,39 @@
       </news:publication>
       <news:publication_date>2023-05-24</news:publication_date>
       <news:title>Сегодня в Бостанлыкском районе Ташкентской области, в «Лагере молодёжи», начался учебный семинар для представителей вузов, ответственных за работу с молодежью.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-23</news:publication_date>
+      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
     </news:news>
   </url>
   <url>
@@ -295,39 +328,6 @@
       </news:publication>
       <news:publication_date>2023-05-23</news:publication_date>
       <news:title>Хотите учиться в Финляндии или получить образование по финской системе в Узбекистане?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/studenty-xnu-v-finlyandii-sport-i-druzheskaya-atmosfera</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-23</news:publication_date>
-      <news:title>Студенты XNU в Финляндии: спорт и дружеская атмосфера</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/programma-work-and-travel-v-dejstvii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>Программа "Work and Travel" в действии!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/programma-work-and-travel-v-dejstvii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>Программа "Work and Travel" в действии!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/programma-work-and-travel-v-dejstvii</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-20</news:publication_date>
-      <news:title>Программа "Work and Travel" в действии!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/prekrasno-kogda-probuzhdaetsya-pamyat</loc>
     <news:news>
       <news:publication>
@@ -526,6 +493,39 @@
       </news:publication>
       <news:publication_date>2023-05-20</news:publication_date>
       <news:title>На встрече "Трёх поколений" ветераны и специалисты поделились жизненными советами с выпускниками.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/programma-work-and-travel-v-dejstvii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>Программа "Work and Travel" в действии!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/programma-work-and-travel-v-dejstvii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>Программа "Work and Travel" в действии!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/programma-work-and-travel-v-dejstvii</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-20</news:publication_date>
+      <news:title>Программа "Work and Travel" в действии!</news:title>
     </news:news>
   </url>
   <url>
@@ -760,36 +760,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
+      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
+      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
+      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
     </news:news>
   </url>
   <url>
@@ -826,36 +826,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
+      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
+      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/v-gazete-yangi-uzbekiston-osvesheny-vpechatleniya-ot-obrazovatelnoj-poezdki-v-finlyandiyu</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/podpisany-memorandumy-o-sotrudnichestve-v-ramkah-integracii-obrazovaniya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2023-05-08</news:publication_date>
-      <news:title>В газете "Янги Узбекистон" освещены впечатления от образовательной поездки в Финляндию</news:title>
+      <news:title>Подписаны меморандумы о сотрудничестве в рамках интеграции образования</news:title>
     </news:news>
   </url>
   <url>
@@ -925,39 +925,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2023-05-03</news:publication_date>
-      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mezhdunarodnyj-nordik-universitet-predlagaet-vyberite-svoe-napravlenie-i-obuchajtes</loc>
     <news:news>
       <news:publication>
@@ -988,6 +955,39 @@
       </news:publication>
       <news:publication_date>2023-05-03</news:publication_date>
       <news:title>Международный Нордик университет предлагает: выберите свое направление и обучайтесь!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nash-student-—-obladatel-pamyati-top-1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-05-03</news:publication_date>
+      <news:title>Наш студент — обладатель памяти "Топ-1"</news:title>
     </news:news>
   </url>
   <url>

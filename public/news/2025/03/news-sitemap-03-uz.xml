@@ -463,39 +463,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-03-20</news:publication_date>
-      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/master-klass-bolajak-dasturchilar-uchun-bebaho-tajriba</loc>
     <news:news>
       <news:publication>
@@ -526,6 +493,39 @@
       </news:publication>
       <news:publication_date>2025-03-20</news:publication_date>
       <news:title>Master-klass: bo‘lajak dasturchilar uchun bebaho tajriba</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/tasimo-2025-48-mamlakat-yoshlari-qatnashishi-kutilmoqda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-03-20</news:publication_date>
+      <news:title>TasIMO-2025: 48 mamlakat yoshlari qatnashishi kutilmoqda!</news:title>
     </news:news>
   </url>
   <url>
@@ -859,36 +859,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
+      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
+      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
+      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
     </news:news>
   </url>
   <url>
@@ -925,36 +925,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
+      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
+      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nordik-tadqiqotchilari-ilmiy-amaliy-seminarda</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/yto-international-vakillari-nordikda-hamkorlik-imkoniyatlari-organildi</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-03-13</news:publication_date>
-      <news:title>Nordik tadqiqotchilari ilmiy-amaliy seminarda</news:title>
+      <news:title>YTO International vakillari Nordikda: hamkorlik imkoniyatlari o‘rganildi</news:title>
     </news:news>
   </url>
   <url>

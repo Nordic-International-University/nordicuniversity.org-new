@@ -199,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-19</news:publication_date>
+      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-19</news:publication_date>
+      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-10-19</news:publication_date>
+      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/e-voh-2025-adabiyot-nuri-qalblarni-birlashtirdi</loc>
     <news:news>
       <news:publication>
@@ -265,36 +298,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2025-10-19</news:publication_date>
-      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+      <news:publication_date>2025-10-17</news:publication_date>
+      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2025-10-19</news:publication_date>
-      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+      <news:publication_date>2025-10-17</news:publication_date>
+      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ozbek-tili-va-adabiyoti-fidoyilari-e-voh-olimpiadasida</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2025-10-19</news:publication_date>
-      <news:title>Преданные узбекскому языку и литературе на олимпиаде «Э вох»</news:title>
+      <news:publication_date>2025-10-17</news:publication_date>
+      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
     </news:news>
   </url>
   <url>
@@ -328,39 +361,6 @@
       </news:publication>
       <news:publication_date>2025-10-17</news:publication_date>
       <news:title>Специальный гость из США в Нордике!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-17</news:publication_date>
-      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-17</news:publication_date>
-      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/malayziyada-talabalik-hayoti-ilmiy-va-madaniy-yuksalish-sari</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-17</news:publication_date>
-      <news:title>Студенческая жизнь в Малайзии: на пути к научному и культурному подъему</news:title>
     </news:news>
   </url>
   <url>

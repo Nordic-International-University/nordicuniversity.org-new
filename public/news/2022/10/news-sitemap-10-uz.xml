@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kafolatlangan-talabalik</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Kafolatlangan talabalik!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kafolatlangan-talabalik</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Kafolatlangan talabalik!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kafolatlangan-talabalik</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-31</news:publication_date>
-      <news:title>Kafolatlangan talabalik!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/sirtqi-talim-shaklida-tahsil-olayotgan-talabalar-diqqatiga</loc>
     <news:news>
       <news:publication>
@@ -64,6 +31,39 @@
       </news:publication>
       <news:publication_date>2022-10-31</news:publication_date>
       <news:title>Sirtqi ta'lim shaklida tahsil olayotgan talabalar diqqatiga</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kafolatlangan-talabalik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Kafolatlangan talabalik!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kafolatlangan-talabalik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Kafolatlangan talabalik!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/kafolatlangan-talabalik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-31</news:publication_date>
+      <news:title>Kafolatlangan talabalik!</news:title>
     </news:news>
   </url>
   <url>
@@ -100,39 +100,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talabalar-bilan-jonli-muloqot</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Talabalar bilan jonli muloqot</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talabalar-bilan-jonli-muloqot</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Talabalar bilan jonli muloqot</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talabalar-bilan-jonli-muloqot</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-28</news:publication_date>
-      <news:title>Talabalar bilan jonli muloqot</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/oqitishning-xorijiy-tajribalaridan-keng-foydalanilmoqda</loc>
     <news:news>
       <news:publication>
@@ -166,36 +133,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talabalar-bilan-jonli-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Talabalar bilan jonli muloqot</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talabalar-bilan-jonli-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Talabalar bilan jonli muloqot</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/talabalar-bilan-jonli-muloqot</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-27</news:publication_date>
-      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+      <news:publication_date>2022-10-28</news:publication_date>
+      <news:title>Talabalar bilan jonli muloqot</news:title>
     </news:news>
   </url>
   <url>
@@ -232,6 +199,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/unicef-bilan-talim-loyihalari-amalga-oshiriladi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-27</news:publication_date>
+      <news:title>UNICEF bilan ta'lim loyihalari amalga oshiriladi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talabalar-diqqatiga</loc>
     <news:news>
       <news:publication>
@@ -262,39 +262,6 @@
       </news:publication>
       <news:publication_date>2022-10-26</news:publication_date>
       <news:title>Talabalar diqqatiga</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talabalar-psixologik-treningda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Talabalar - psixologik treningda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talabalar-psixologik-treningda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Talabalar - psixologik treningda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talabalar-psixologik-treningda</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-25</news:publication_date>
-      <news:title>Talabalar - psixologik treningda</news:title>
     </news:news>
   </url>
   <url>
@@ -364,6 +331,72 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talabalar-psixologik-treningda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Talabalar - psixologik treningda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talabalar-psixologik-treningda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Talabalar - psixologik treningda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/talabalar-psixologik-treningda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-25</news:publication_date>
+      <news:title>Talabalar - psixologik treningda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-24</news:publication_date>
+      <news:title>"Orientation week"</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/til-organishning-eng-samarali-usullari-orgatildi</loc>
     <news:news>
       <news:publication>
@@ -427,39 +460,6 @@
       </news:publication>
       <news:publication_date>2022-10-24</news:publication_date>
       <news:title>Talabalarning o‘z ta'lim faoliyatlariga munosabatlari o‘zgartirilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/orientation-week</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-24</news:publication_date>
-      <news:title>"Orientation week"</news:title>
     </news:news>
   </url>
   <url>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-21</news:publication_date>
-      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/zamonaviy-kasblar-raqamli-bilimlar-talab-etiladi</loc>
     <news:news>
       <news:publication>
@@ -661,36 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/talimni-sport-va-sanat-bilan-uygunlashtiring</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-20</news:publication_date>
-      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+      <news:publication_date>2022-10-21</news:publication_date>
+      <news:title>Ta'limni sport va san'at bilan uyg‘unlashtiring!</news:title>
     </news:news>
   </url>
   <url>
@@ -793,6 +760,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/germaniyaning-iamo-ilmiy-tadqiqot-instituti-vakillarining-tashrifi-bolib-otdi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-20</news:publication_date>
+      <news:title>Germaniyaning IAMO ilmiy-tadqiqot instituti vakillarining tashrifi bo‘lib o‘tdi</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talabalarga-taqdimot-qilishning-usul-va-vositalari-orgatilmoqda</loc>
     <news:news>
       <news:publication>
@@ -823,39 +823,6 @@
       </news:publication>
       <news:publication_date>2022-10-19</news:publication_date>
       <news:title>Talabalarga taqdimot qilishning usul va vositalari o’rgatilmoqda</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-18</news:publication_date>
-      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
     </news:news>
   </url>
   <url>
@@ -925,6 +892,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabi-vakillari-oquvchilar-orasida</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-18</news:publication_date>
+      <news:title>Foundation maktabi vakillari - o‘quvchilar orasida</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/talabalarning-universitet-bilan-tanishish-kunlari-boshlandi</loc>
     <news:news>
       <news:publication>
@@ -955,39 +955,6 @@
       </news:publication>
       <news:publication_date>2022-10-17</news:publication_date>
       <news:title>Talabalarning universitet bilan tanishish kunlari boshlandi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/ochiq-eshiklar-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Ochiq eshiklar kuni</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/ochiq-eshiklar-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Ochiq eshiklar kuni</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/ochiq-eshiklar-kuni</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-14</news:publication_date>
-      <news:title>Ochiq eshiklar kuni</news:title>
     </news:news>
   </url>
   <url>
@@ -1054,6 +1021,39 @@
       </news:publication>
       <news:publication_date>2022-10-14</news:publication_date>
       <news:title>Xalqaro Nordik universiteti professor-o‘qituvchilaridan navbatdagi master-klass</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/ochiq-eshiklar-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Ochiq eshiklar kuni</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/ochiq-eshiklar-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Ochiq eshiklar kuni</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/ochiq-eshiklar-kuni</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-14</news:publication_date>
+      <news:title>Ochiq eshiklar kuni</news:title>
     </news:news>
   </url>
   <url>
@@ -1156,39 +1156,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-11</news:publication_date>
-      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/ozbekiston-uchun-dunyo-bozorlari-ochildi</loc>
     <news:news>
       <news:publication>
@@ -1219,6 +1186,39 @@
       </news:publication>
       <news:publication_date>2022-10-11</news:publication_date>
       <news:title>"O‘zbekiston uchun dunyo bozorlari ochildi"</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/foundation-maktabimiz-darslariga-start-berildi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-11</news:publication_date>
+      <news:title>Foundation maktabimiz darslariga start berildi.</news:title>
     </news:news>
   </url>
   <url>
@@ -1321,39 +1321,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-10-06</news:publication_date>
-      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/joriy-yilning-5-oktyabr-kuni-taʼlim-sifatini-nazorat-qilish-davlat-inspeksiyasi-finlyandiyalik-oqituvchilar-va-talabalar-tashrif-buyurishdi</loc>
     <news:news>
       <news:publication>
@@ -1387,36 +1354,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/xnu-obyektivida-finlyandiyalik-yoshlar</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-10-05</news:publication_date>
-      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
+      <news:publication_date>2022-10-06</news:publication_date>
+      <news:title>XNU ob'yektivida - finlyandiyalik yoshlar</news:title>
     </news:news>
   </url>
   <url>
@@ -1450,6 +1417,39 @@
       </news:publication>
       <news:publication_date>2022-10-05</news:publication_date>
       <news:title>Oliy ta’lim muassasalarida masofaviy ta’limni joriy etish tartibi belgilandi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/helsingin-suomalainen-yhteiskoulu-syk-maktabi-vakillari-universitetimizda</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-10-05</news:publication_date>
+      <news:title>Helsingin Suomalainen Yhteiskoulu (SYK) maktabi vakillari universitetimizda.</news:title>
     </news:news>
   </url>
   <url>

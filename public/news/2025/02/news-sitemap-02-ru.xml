@@ -331,6 +331,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/urok-navoijskogo-uchenogo-sdelaem-navoi-dostoyaniem-svoego-serdca</loc>
     <news:news>
       <news:publication>
@@ -394,39 +427,6 @@
       </news:publication>
       <news:publication_date>2025-02-12</news:publication_date>
       <news:title>В Нордике прошла встреча с представителями Азиатско-Тихоокеанского университета (АПУ)</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/novye-shagi-na-puti-mezhdunarodnogo-sotrudnichestva-v-nordik-universitete</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Новые шаги на пути международного сотрудничества в Нордик университете</news:title>
     </news:news>
   </url>
   <url>

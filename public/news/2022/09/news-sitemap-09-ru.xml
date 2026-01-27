@@ -199,39 +199,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mobilnoe-obuchenie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Мобильное обучение</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mobilnoe-obuchenie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Мобильное обучение</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mobilnoe-obuchenie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-14</news:publication_date>
-      <news:title>Мобильное обучение</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/v-publikaciyah-gazet-i-zhurnalov</loc>
     <news:news>
       <news:publication>
@@ -262,6 +229,39 @@
       </news:publication>
       <news:publication_date>2022-09-14</news:publication_date>
       <news:title>В публикациях газет и журналов</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mobilnoe-obuchenie</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Мобильное обучение</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mobilnoe-obuchenie</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Мобильное обучение</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mobilnoe-obuchenie</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-14</news:publication_date>
+      <news:title>Мобильное обучение</news:title>
     </news:news>
   </url>
   <url>
@@ -331,39 +331,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-09-08</news:publication_date>
-      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/torzhestvennaya-ceremoniya-otkrytiya</loc>
     <news:news>
       <news:publication>
@@ -394,6 +361,39 @@
       </news:publication>
       <news:publication_date>2022-09-08</news:publication_date>
       <news:title>Торжественная церемония открытия</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/na-ceremonii-otkrytiya-s-pozdravitelnoj-rechyu-vystupil-press-sekretar-prezidenta-respubliki-uzbekistan-sherzod-asadov</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-09-08</news:publication_date>
+      <news:title>На церемонии открытия с поздравительной речью выступил пресс-секретарь Президента Республики Узбекистан Шерзод Асадов.</news:title>
     </news:news>
   </url>
   <url>

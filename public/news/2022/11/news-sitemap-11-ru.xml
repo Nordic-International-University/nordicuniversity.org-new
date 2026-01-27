@@ -34,6 +34,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-29</news:publication_date>
+      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/kredit-na-obrazovanie-investiciya-v-budushee</loc>
     <news:news>
       <news:publication>
@@ -100,36 +133,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/istoriya-dnya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>История дня</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/istoriya-dnya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>История дня</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/sostoitsya-zhivaya-beseda-so-specialnym-gostem</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/istoriya-dnya</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-29</news:publication_date>
-      <news:title>Состоится живая беседа со специальным гостем.</news:title>
+      <news:publication_date>2022-11-26</news:publication_date>
+      <news:title>История дня</news:title>
     </news:news>
   </url>
   <url>
@@ -163,39 +196,6 @@
       </news:publication>
       <news:publication_date>2022-11-26</news:publication_date>
       <news:title>Семинар-тренинг с участием экспертов из Финляндии начался</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/istoriya-dnya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>История дня</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/istoriya-dnya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>История дня</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/istoriya-dnya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-26</news:publication_date>
-      <news:title>История дня</news:title>
     </news:news>
   </url>
   <url>
@@ -265,39 +265,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-22</news:publication_date>
-      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/mezhdunarodnyj-forum-po-trudovoj-migracii-2022</loc>
     <news:news>
       <news:publication>
@@ -361,6 +328,39 @@
       </news:publication>
       <news:publication_date>2022-11-22</news:publication_date>
       <news:title>Опыт финской системы образования изучается.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/v-ramkah-mezhdunarodnogo-foruma-sostoyalas-ceremoniya-podpisaniya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-22</news:publication_date>
+      <news:title>В рамках международного форума состоялась церемония подписания</news:title>
     </news:news>
   </url>
   <url>
@@ -430,39 +430,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/kogda-trud-priznan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Когда труд признан...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/kogda-trud-priznan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Когда труд признан...</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/kogda-trud-priznan</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-16</news:publication_date>
-      <news:title>Когда труд признан...</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/rassmatrivayutsya-vazhnye-predlozheniya-po-sotrudnichestvu</loc>
     <news:news>
       <news:publication>
@@ -493,6 +460,39 @@
       </news:publication>
       <news:publication_date>2022-11-16</news:publication_date>
       <news:title>Рассматриваются важные предложения по сотрудничеству</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/kogda-trud-priznan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Когда труд признан...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/kogda-trud-priznan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Когда труд признан...</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/kogda-trud-priznan</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-16</news:publication_date>
+      <news:title>Когда труд признан...</news:title>
     </news:news>
   </url>
   <url>
@@ -595,39 +595,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/u-nas-osobennyj-gost</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>У нас особенный гость!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/u-nas-osobennyj-gost</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>У нас особенный гость!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/u-nas-osobennyj-gost</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-11</news:publication_date>
-      <news:title>У нас особенный гость!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/uchites-na-podgotovitelnyh-kursah-ielts-i-idite-k-svoej-mechte</loc>
     <news:news>
       <news:publication>
@@ -661,36 +628,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/u-nas-osobennyj-gost</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>У нас особенный гость!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/u-nas-osobennyj-gost</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>У нас особенный гость!</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/u-nas-osobennyj-gost</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-10</news:publication_date>
-      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
+      <news:publication_date>2022-11-11</news:publication_date>
+      <news:title>У нас особенный гость!</news:title>
     </news:news>
   </url>
   <url>
@@ -793,36 +760,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/nash-professor-prepodavatel-provyol-master-klass-dlya-liderov-budushego</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2022-11-09</news:publication_date>
-      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
+      <news:publication_date>2022-11-10</news:publication_date>
+      <news:title>Наш профессор-преподаватель провёл мастер-класс для "Лидеров будущего"</news:title>
     </news:news>
   </url>
   <url>
@@ -889,6 +856,39 @@
       </news:publication>
       <news:publication_date>2022-11-09</news:publication_date>
       <news:title>Приглашаем на информационно-поддерживающий семинар Erasmus+!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/luchshie-vospitateli-goda-—-nashi-studenty</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-09</news:publication_date>
+      <news:title>Лучшие воспитатели года — наши студенты!</news:title>
     </news:news>
   </url>
   <url>
@@ -1090,39 +1090,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2022-11-02</news:publication_date>
-      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/otkryvayutsya-novye-napravleniya-v-sotrudnichestve-uzbekistana-i-finlyandii</loc>
     <news:news>
       <news:publication>
@@ -1153,6 +1120,39 @@
       </news:publication>
       <news:publication_date>2022-11-02</news:publication_date>
       <news:title>Открываются новые направления в сотрудничестве Узбекистана и Финляндии</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/mezhdunarodnyj-universitet-nordik-—-platforma-dlya-mezhdunarodnogo-sotrudnichestva</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2022-11-02</news:publication_date>
+      <news:title>Международный университет Нордик  — платформа для международного сотрудничества</news:title>
     </news:news>
   </url>
   <url>

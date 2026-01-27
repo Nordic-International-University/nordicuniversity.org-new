@@ -331,6 +331,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-02-12</news:publication_date>
+      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/navoiyshunos-olim-sabogi-navoiyni-konglimiz-mulkiga-aylantiraylik</loc>
     <news:news>
       <news:publication>
@@ -394,39 +427,6 @@
       </news:publication>
       <news:publication_date>2025-02-12</news:publication_date>
       <news:title>Nordikda Osiyo Tinch okeani universiteti (APU) vakillari bilan uchrashuv bo‘lib o‘tdi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/nordik-universitetida-xalqaro-hamkorlik-sari-yangi-qadamlar</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-02-12</news:publication_date>
-      <news:title>Nordik universitetida xalqaro hamkorlik sari yangi qadamlar</news:title>
     </news:news>
   </url>
   <url>

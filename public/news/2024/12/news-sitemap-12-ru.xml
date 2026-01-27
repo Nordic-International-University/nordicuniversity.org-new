@@ -133,72 +133,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/viktorina-po-nordic-smoothie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Викторина по "Nordic Smoothie"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/viktorina-po-nordic-smoothie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Викторина по "Nordic Smoothie"</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/viktorina-po-nordic-smoothie</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-24</news:publication_date>
-      <news:title>Викторина по "Nordic Smoothie"</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/nasha-studentka-«zhenshina-goda»</loc>
     <news:news>
       <news:publication>
@@ -229,6 +163,39 @@
       </news:publication>
       <news:publication_date>2024-12-24</news:publication_date>
       <news:title>Наша студентка - «Женщина года»!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/provoditsya-nedelya-seminarov-obucheniya-dlya-professorov-prepodavatelej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Проводится неделя семинаров-обучения для профессоров-преподавателей</news:title>
     </news:news>
   </url>
   <url>
@@ -265,36 +232,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <loc>https://nordicuniversity.org/uz/press-service/news/viktorina-po-nordic-smoothie</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>uz</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Новогодняя вечеринка в Нордик!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Викторина по "Nordic Smoothie"</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <loc>https://nordicuniversity.org/ru/press-service/news/viktorina-po-nordic-smoothie</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>ru</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Новогодняя вечеринка в Нордик!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Викторина по "Nordic Smoothie"</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <loc>https://nordicuniversity.org/en/press-service/news/viktorina-po-nordic-smoothie</loc>
     <news:news>
       <news:publication>
         <news:name>Noric International University</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2024-12-21</news:publication_date>
-      <news:title>Новогодняя вечеринка в Нордик!</news:title>
+      <news:publication_date>2024-12-24</news:publication_date>
+      <news:title>Викторина по "Nordic Smoothie"</news:title>
     </news:news>
   </url>
   <url>
@@ -328,6 +295,39 @@
       </news:publication>
       <news:publication_date>2024-12-21</news:publication_date>
       <news:title>Наш студент вошел в число лучших исследователей года</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Новогодняя вечеринка в Нордик!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Новогодняя вечеринка в Нордик!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/novogodnyaya-vecherinka-v-nordik</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-21</news:publication_date>
+      <news:title>Новогодняя вечеринка в Нордик!</news:title>
     </news:news>
   </url>
   <url>
@@ -397,39 +397,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-18</news:publication_date>
-      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/vystavka-novyh-rabot-ot-izdatelstva-«yangi-asr-avlodi»</loc>
     <news:news>
       <news:publication>
@@ -496,6 +463,39 @@
     </news:news>
   </url>
   <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/prisoedinyajtes-k-nashemu-seminaru-po-celyam-ustojchivogo-razvitiya</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-18</news:publication_date>
+      <news:title>Присоединяйтесь к нашему семинару по Целям устойчивого развития!</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/delegaciya-mezhdunarodnogo-universiteta-severnyh-stran-prinimaet-uchastie-v-otchetnoj-sessii-iclei-po-vostochnoj-azii-kotoraya-prohodit-v-seule-respublika-yuzhnaya-koreya</loc>
     <news:news>
       <news:publication>
@@ -529,39 +529,6 @@
     </news:news>
   </url>
   <url>
-    <loc>https://nordicuniversity.org/uz/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>uz</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/ru/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>ru</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://nordicuniversity.org/en/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Noric International University</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2024-12-16</news:publication_date>
-      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://nordicuniversity.org/uz/press-service/news/predstavlen-pervyj-spektakl</loc>
     <news:news>
       <news:publication>
@@ -592,6 +559,39 @@
       </news:publication>
       <news:publication_date>2024-12-16</news:publication_date>
       <news:title>Представлен первый спектакль!</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/uz/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>uz</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/ru/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://nordicuniversity.org/en/press-service/news/v-nordik-universitete-sostoyalas-ocherednaya-literaturnaya-vstrecha-v-ramkah-proekta-maurifat-ulashib-osnovannogo-na-propagande-dobra-i-nravstvennyh-idej</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Noric International University</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-16</news:publication_date>
+      <news:title>В Нордик университете состоялась очередная литературная встреча в рамках проекта "Маърифат улашиб" основанного на пропаганде добра и нравственных идей</news:title>
     </news:news>
   </url>
   <url>
