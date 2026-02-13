@@ -29,16 +29,14 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/google:filename(.+)?\\.html",
+        source: "/:lang(uz|en|ru)/patents/:path*",
+        destination: "/:lang/partners/:path*",
+        permanent: true,
+      },
+      {
+        source: "/public/Files/:path*",
         destination: "/",
-        has: [
-          {
-            type: "query",
-            key: "skip_redirect",
-            value: "true",
-          },
-        ],
-        permanent: false,
+        permanent: true,
       },
     ];
   },

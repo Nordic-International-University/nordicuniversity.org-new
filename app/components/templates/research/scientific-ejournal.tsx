@@ -1,102 +1,125 @@
+"use client";
+
 import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import journal from "@/public/images/research-images/journal.png";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Button } from "antd";
+import { HiOutlineArrowRight, HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 
 const ScientificEjournal = ({ volumes }: { volumes: any[] }) => {
   const t = useTranslations("research.eJournal").raw;
 
   return (
-    <article className="mt-8">
-      <div className="flex max-md:flex-col-reverse items-start gap-6">
-        <div className="flex max-md:flex-col-reverse max-md:flex-row items-start gap-6">
-          <div className="flex-1">
-            <p
-              className="text-tertiary mb-5 font-medium text-justify text-[17px]"
-              dangerouslySetInnerHTML={{ __html: t("description") }}
-            ></p>
-            <strong
-              className="font-semibold text-tertiary text-[17px]"
-              dangerouslySetInnerHTML={{ __html: t("davr") }}
-            ></strong>
-          </div>
-          <div className="w-full max-w-[500px]">
+    <article className="mt-6">
+      {/* Hero section */}
+      <div className="flex max-md:flex-col-reverse items-start gap-8">
+        <div className="flex-1">
+          <div
+            className="text-gray-600 text-base leading-7 text-justify"
+            dangerouslySetInnerHTML={{ __html: t("description") }}
+          />
+          <div
+            className="mt-4 text-text_secondary font-semibold text-base leading-7"
+            dangerouslySetInnerHTML={{ __html: t("davr") }}
+          />
+        </div>
+
+        {/* Journal image + button */}
+        <div className="w-full max-w-[420px] max-md:max-w-full flex-shrink-0">
+          <div className="border border-gray-200 rounded-xl overflow-hidden
+            hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200">
             <Image
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full h-auto object-cover"
               src={journal}
               alt="journal"
-              layout="responsive" // Agar Next.js Image komponentini ishlatayotgan bo‘lsangiz
-              // sizga kerakli bo‘lgan propslarni qo‘shing, masalan:
-              // width={500}
-              // height={366}
             />
-            <Button
+            <Link
               href="https://journal.nordicuniversity.org/"
-              className="bg-text_secondary w-full text-white font-semibold py-4 px-4 rounded-b-lg shadow-md hover:shadow-lg hover:bg-secondary-dark focus:ring-4 focus:ring-secondary-light transition-all duration-300"
+              target="_blank"
+              className="flex items-center justify-center gap-2 w-full py-3.5 px-4
+                bg-text_secondary text-white text-sm font-medium
+                hover:bg-text_secondary/90 transition-colors"
             >
               {t("button")}
-            </Button>
+              <HiOutlineArrowRight className="text-base" />
+            </Link>
           </div>
         </div>
       </div>
-      <p className="w-full text-tertiary mt-5 text-[17px]">{t("body")}</p>
 
-      <div className="mt-8">
-        <Swiper
-          modules={[Navigation]}
-          navigation={{
-            nextEl: ".swiper-button-nexts",
-            prevEl: ".swiper-button-prevs",
-          }}
-          watchSlidesProgress
-          updateOnWindowResize
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1280: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-          }}
-          slidesPerView={4}
-          className="-translate-x-20 max-lg:translate-x-0"
-        >
-          {volumes
-            ?.sort(
-              (a: any, b: any) => a.title.slice(0, 1) - b.title.slice(0, 1),
-            )
-            ?.map((item: any) => (
-              <SwiperSlide
-                className="relative group flex justify-center items-center"
-                key={item.id}
-              >
-                <Image
-                  className="h-full w-full object-cover min-w-[100px]"
-                  src={`${process.env.NEXT_PUBLIC_URL_JOURNAL}${item?.image?.file_path}`}
-                  width={700}
-                  height={600}
-                  alt="volume"
-                  loading="lazy"
-                />
-              </SwiperSlide>
-            ))}
-        </Swiper>
-      </div>
+      {/* Body text */}
+      <p className="text-gray-600 text-base leading-7 mt-6">{t("body")}</p>
+
+      {/* Volumes carousel */}
+      {volumes?.length > 0 && (
+        <div className="mt-10 relative">
+          <div className="flex items-center justify-between mb-5">
+            <h3 className="text-text_secondary font-semibold text-lg">
+              {t("sectionTitle")}
+            </h3>
+            <div className="flex items-center gap-2">
+              <button className="ejournal-prev w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center
+                text-gray-500 hover:border-text_secondary hover:text-text_secondary transition-colors">
+                <HiOutlineChevronLeft className="text-lg" />
+              </button>
+              <button className="ejournal-next w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center
+                text-gray-500 hover:border-text_secondary hover:text-text_secondary transition-colors">
+                <HiOutlineChevronRight className="text-lg" />
+              </button>
+            </div>
+          </div>
+
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              nextEl: ".ejournal-next",
+              prevEl: ".ejournal-prev",
+            }}
+            watchSlidesProgress
+            updateOnWindowResize
+            breakpoints={{
+              320: { slidesPerView: 1.5, spaceBetween: 12 },
+              480: { slidesPerView: 2, spaceBetween: 16 },
+              640: { slidesPerView: 2.5, spaceBetween: 16 },
+              1024: { slidesPerView: 3, spaceBetween: 20 },
+              1280: { slidesPerView: 4, spaceBetween: 20 },
+            }}
+          >
+            {volumes
+              ?.sort(
+                (a: any, b: any) => a.title.slice(0, 1) - b.title.slice(0, 1),
+              )
+              ?.map((item: any) => (
+                <SwiperSlide key={item.id}>
+                  <div className="border border-gray-200 rounded-xl overflow-hidden bg-white
+                    hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        fill
+                        className="object-cover"
+                        src={`${process.env.NEXT_PUBLIC_URL_JOURNAL}${item?.image?.file_path}`}
+                        alt={item.title || "volume"}
+                        loading="lazy"
+                      />
+                    </div>
+                    {item.title && (
+                      <div className="px-3 py-2.5 text-center">
+                        <p className="text-sm font-medium text-text_secondary line-clamp-1">
+                          {item.title}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        </div>
+      )}
     </article>
   );
 };

@@ -18,9 +18,9 @@ import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 export const generateMetadata = async ({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; lang: string };
 }) => {
-  const lang = await getCurrentLangServer();
+  const lang = params.lang;
   const news: NewsItem = await getNewsBySlug(params.slug, lang);
 
   const baseUrl = "https://nordicuniversity.org";

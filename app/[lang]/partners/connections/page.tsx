@@ -3,37 +3,17 @@ import ClientPage from "@/app/[lang]/partners/connections/ClientPage";
 import { getAllMeeting } from "./getAllMeeting";
 import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
-import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata: Metadata = {
-  title: "Xalqaro Nordik Universiteti - Hamkorlik Aloqalari",
-  description:
-    "Xalqaro Nordik Universitetining xalqaro hamkorlik aloqalari haqida batafsil ma'lumot. Hamkor universitetlar va o'quv dasturlari haqida bilib oling.",
-  keywords:
-    "hamkorlik, xalqaro aloqalar, universitet hamkorligi, ta'lim hamkorligi",
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Xalqaro Nordik Universiteti - Hamkorlik Aloqalari",
     description:
-      "Xalqaro Nordik Universitetining xalqaro hamkorlik aloqalari haqida batafsil ma'lumot.",
-    url: "https://nordicuniversity.org/uz/partners/connections",
-    type: "website",
-    images: [
-      {
-        url: "/public/seo/b835e3f5732864ec87f6e171a6ae53bd.jpg",
-        alt: "Hamkorlik Aloqalari",
-      },
-    ],
-  },
-  alternates: {
-    languages: {
-      uz: "https://nordicuniversity.org/uz/partners/connections",
-      en: "https://nordicuniversity.org/en/partners/connections",
-      ru: "https://nordicuniversity.org/ru/partners/connections",
-    },
-    canonical: "https://nordicuniversity.org/uz/partners/connections",
-  },
-  robots: "index, follow",
-};
+      "Xalqaro Nordik Universitetining xalqaro hamkorlik aloqalari haqida batafsil ma'lumot. Hamkor universitetlar va o'quv dasturlari haqida bilib oling.",
+    lang: params.lang,
+    path: "/partners/connections",
+  });
+}
 
 const Page = async () => {
   const initialData = await getAllMeeting({

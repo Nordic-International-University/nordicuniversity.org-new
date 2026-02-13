@@ -5,10 +5,9 @@ import LeftSidebarAndComponent from "@/app/layouts/leftSidebarAndComponent";
 import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
-import ScientificEjournal from "@/app/components/templates/research/scientific-ejournal";
 import TasimoOlympiad from "@/app/components/templates/research/tasimo-olympiad";
 
-const ClientPage = ({ data }: { data: any[] }) => {
+const ClientPage = () => {
   const t = useTranslations("research");
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
@@ -20,7 +19,7 @@ const ClientPage = ({ data }: { data: any[] }) => {
       name: t("title"),
     },
     {
-      url: "/university/documents",
+      url: "/research/tasimo-olympiad",
       name: t("tasimoOlympiad.breadcrumb.tasimo_olympiad"),
     },
   ];
@@ -29,10 +28,11 @@ const ClientPage = ({ data }: { data: any[] }) => {
     <LeftSidebarAndComponent
       translationKey="research"
       broadCampItems={brodCmbItems}
-      children={<TasimoOlympiad />}
       sidebarItems={subItemDocument}
       sidebarTitle={t("tasimoOlympiad.breadcrumb.tasimo_olympiad")}
-    ></LeftSidebarAndComponent>
+    >
+      <TasimoOlympiad />
+    </LeftSidebarAndComponent>
   );
 };
 

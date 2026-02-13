@@ -16,15 +16,16 @@ import "react-quill/dist/quill.snow.css";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 
-interface PageProps {
-  params: { slug: string };
-}
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
-  const lang = await getCurrentLangServer();
+}: {
+  params: { slug: string; lang: string };
+}): Promise<Metadata> {
+  const lang = params.lang;
   const event: Event = await getMeetingBySlug(params.slug, lang);
+  const baseUrl = "https://nordicuniversity.org";
+  const pagePath = `/partners/connections/${params.slug}`;
 
   return {
     title: event.name,
@@ -32,7 +33,7 @@ export async function generateMetadata({
     openGraph: {
       title: event.name,
       description: event.description,
-      url: `https://nordicuniversity.org/${lang}/partners/connections/${params.slug}`,
+      url: `${baseUrl}/${lang}${pagePath}`,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${event.image.file_path}`,
@@ -50,9 +51,14 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `https://nordicuniversity.org/${lang}/partners/connections/${params.slug}`,
+      canonical: `${baseUrl}/${lang}${pagePath}`,
+      languages: {
+        uz: `${baseUrl}/uz${pagePath}`,
+        en: `${baseUrl}/en${pagePath}`,
+        ru: `${baseUrl}/ru${pagePath}`,
+        "x-default": `${baseUrl}/uz${pagePath}`,
+      },
     },
-    metadataBase: new URL("https://nordicuniversity.org"),
   };
 }
 
@@ -139,7 +145,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             shareUrl={
               "https://nordicuniversity.org/" +
               (await getCurrentLangServer()) +
-              "/patents/connections/" +
+              "/partners/connections/" +
               params.slug
             }
           />

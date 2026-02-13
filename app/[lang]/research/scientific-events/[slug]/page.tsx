@@ -10,45 +10,27 @@ import ShareModal from "@/app/components/UI/shareSocialMediaModal";
 import SocialMediaCard from "@/app/components/UI/socialCard";
 import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
-import MinimalCard from "@/app/components/UI/smallNewsCard";
 import Link from "next/link";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTelegram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
+import SocialLinks from "@/app/components/UI/SocialLinks";
 
 export const generateMetadata = async ({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; lang: string };
 }) => {
-  const lang = await getCurrentLangServer();
+  const lang = params.lang;
   const event = await getEventBySlug(params.slug, lang);
+  const baseUrl = "https://nordicuniversity.org";
+  const pagePath = `/research/scientific-events/${params.slug}`;
 
   if (!event) {
     return {
       title: "Ilmiy tadbirlar - Xalqaro Nordik Universiteti",
       description:
-        "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to‘liq ma’lumot. Ilmiy izlanishlar natijalarini baham ko‘rish uchun eng yaxshi maydon.",
-      openGraph: {
-        title: "Ilmiy tadbirlar - Xalqaro Nordik Universiteti",
-        description:
-          "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to‘liq ma’lumot. Ilmiy izlanishlar natijalarini baham ko‘rish uchun eng yaxshi maydon.",
-        url: `https://nordicuniversity.org/${lang}/research/scientific-events`,
-        type: "website",
-        images: [
-          {
-            url: "https://nordicuniversity.org/images/scientific-events.jpg",
-            alt: "Ilmiy tadbir sahifasi",
-          },
-        ],
-      },
+        "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to'liq ma'lumot.",
     };
   }
 
@@ -57,20 +39,12 @@ export const generateMetadata = async ({
     description:
       event.description ||
       "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
-    keywords: [
-      "Ilmiy tadbir",
-      "Xalqaro Nordik Universiteti",
-      "Ilmiy izlanishlar",
-      "Tadqiqot va rivojlanish",
-      "Innovatsion tadbirlar",
-      event.name,
-    ],
     openGraph: {
       title: `${event.name} - Ilmiy tadbir - Xalqaro Nordik Universiteti`,
       description:
         event.description ||
         "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
-      url: `https://nordicuniversity.org/${lang}/research/scientific-events/${params.slug}`,
+      url: `${baseUrl}/${lang}${pagePath}`,
       type: "article",
       images: [
         {
@@ -79,6 +53,15 @@ export const generateMetadata = async ({
         },
       ],
     },
+    alternates: {
+      canonical: `${baseUrl}/${lang}${pagePath}`,
+      languages: {
+        uz: `${baseUrl}/uz${pagePath}`,
+        en: `${baseUrl}/en${pagePath}`,
+        ru: `${baseUrl}/ru${pagePath}`,
+        "x-default": `${baseUrl}/uz${pagePath}`,
+      },
+    },
   };
 };
 
@@ -86,8 +69,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();
 
   const requestHeaders = headers();
-
   const clientIpAddress = requestHeaders.get("x-forwarded-for") || "";
+
   const news: ScientificEvent = await getEventBySlug(
     params.slug,
     lang,
@@ -118,109 +101,115 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
       <div className="mt-8">
-        <h2 className="text-tertiary max-sm:text-center max-md:text-md capitalize max-sm:text-lg text-2xl font-bold pb-3">
+        <h2 className="text-text_secondary max-sm:text-center max-sm:text-lg text-2xl font-bold pb-3">
           {t("scinceEvent.breadcrumb.event")}
         </h2>
         <BroadCamp items={[brodCmbItems]} />
       </div>
 
-      <div className="flex items-start max-lg:flex-col mt-6 gap-6">
+      <div className="flex items-start max-lg:flex-col mt-8 gap-8">
+        {/* Main content */}
         <div className="w-[70%] max-lg:w-full">
-          <div className="max-lg:h-auto rounded-md bg-gray-50">
-            <div className="px-6 pt-5">
-              <h1 className="text-xl pb-5 font-semibold max-sm:text-lg tracking-wide text-primary">
-                {news.name}
-              </h1>
-              <Image
-                width={890}
-                className="mx-auto block h-auto rounded-xl shadow-lg"
-                height={369}
-                src={
-                  process.env.NEXT_PUBLIC_URL_BACKEND + news?.image?.file_path
-                }
-                alt={news.name}
-              />
-            </div>
+          {/* Hero image */}
+          <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
+            <Image
+              fill
+              className="object-cover"
+              src={
+                process.env.NEXT_PUBLIC_URL_BACKEND + news?.image?.file_path
+              }
+              alt={news.name}
+            />
           </div>
-          <div className="mt-5 max-lg:mt-6">
-            <div className="flex items-center gap-7 justify-center">
-              <div className="flex items-center gap-1">
-                <BiCalendar className="text-gray-400" />
-                <p className="text-sm text-gray-500">
-                  {dayjs(news.time).format("MMMM DD , YYYY")}
-                </p>
-              </div>
-              <span className="text-gray-200">|</span>
-              <div className="flex items-center gap-1">
-                <EyeIcon className="text-gray-400" />
-                <p className="text-sm text-gray-500">{news.viewsCount}</p>
-              </div>
+
+          {/* Title */}
+          <h1 className="text-xl md:text-2xl font-bold text-text_secondary mt-6 leading-snug">
+            {news.name}
+          </h1>
+
+          {/* Meta info */}
+          <div className="flex items-center gap-5 mt-4 pb-5 border-b border-gray-200">
+            <div className="flex items-center gap-1.5">
+              <BiCalendar className="text-gray-400 text-base" />
+              <span className="text-sm text-gray-500">
+                {dayjs(news.time).format("MMMM DD, YYYY")}
+              </span>
             </div>
-            <div className="mt-5">
-              <p className="text-lg leading-8 text-gray-800">
-                {news.description}
-              </p>
-              <div
-                className="mt-6 text-base leading-7 text-justify text-gray-700"
-                dangerouslySetInnerHTML={{ __html: news.body }}
-              ></div>
+            <div className="flex items-center gap-1.5">
+              <EyeIcon className="text-gray-400 text-base" />
+              <span className="text-sm text-gray-500">{news.viewsCount}</span>
             </div>
           </div>
 
+          {/* Description */}
+          {news.description && (
+            <p className="text-base leading-7 text-gray-700 mt-5">
+              {news.description}
+            </p>
+          )}
+
+          {/* Body */}
           <div
-            className={`${news.social_network_links ? "bg-gray-100" : ""} py-3 px-2 rounded-md mt-3 flex justify-center`}
-          >
-            {news.social_network_links &&
-              Object.entries(news.social_network_links).map(
-                ([key, value]: any, idx) => (
-                  <Link
-                    key={idx}
-                    href={value || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#7A98C1] hover:text-secondary"
-                    aria-label={key}
-                  >
-                    {key === "facebook" && <FaFacebook className="text-2xl" />}
-                    {key === "telegram" && <FaTelegram className="text-2xl" />}
-                    {key === "youtube" && <FaYoutube className="text-2xl" />}
-                    {key === "instagram" && (
-                      <FaInstagram className="text-2xl" />
-                    )}
-                    {key === "twitter" && <FaTwitter className="text-2xl" />}
-                  </Link>
-                ),
-              )}
-          </div>
+            className="mt-5 text-base leading-7 text-justify text-gray-700 prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: news.body }}
+          />
+
+          {/* Social links */}
+          {news.social_network_links && (
+            <div className="mt-6 pt-5 border-t border-gray-200">
+              <SocialLinks social_network_links={news.social_network_links} className="mt-0" />
+            </div>
+          )}
+
+          {/* Gallery */}
           <SinglePageGallery images={news.images} />
         </div>
+
+        {/* Sidebar */}
         <div className="w-[27%] max-lg:w-full sticky top-4">
           <ShareModal
-            shareUrl={
-              "https://nordicuniversity.org/" +
-              lang +
-              "/research/scientific-events/" +
-              params.slug
-            }
+            shareUrl={`https://nordicuniversity.org/${lang}/research/scientific-events/${params.slug}`}
           />
-          <div className="bg-gray-50 mt-3 rounded-md">
-            <div className="flex items-center gap-1.5 pl-4 pt-3">
-              <span className="w-2 h-3 bg-text_secondary rounded-3xl block"></span>
-              <h2 className="text-xl">{t("scinceEvent.breadcrumb.last")}</h2>
+
+          {/* Latest events */}
+          <div className="mt-4 border border-gray-200 rounded-xl overflow-hidden">
+            <div className="flex items-center gap-2 px-5 py-3.5 border-b border-gray-100 bg-gray-50">
+              <span className="w-1.5 h-5 bg-text_secondary rounded-full block"></span>
+              <h2 className="text-base font-semibold text-gray-800">
+                {t("scinceEvent.breadcrumb.last")}
+              </h2>
             </div>
-            <div className="flex flex-col gap-1 mt-3">
+            <div className="divide-y divide-gray-100">
               {allEvents.data.map((item, index) => (
-                <MinimalCard
-                  url="/research/scientific-events"
-                  subTitle={item.body}
+                <Link
                   key={index}
-                  image={item.image}
-                  title={item.name}
-                  slug={item.slug}
-                />
+                  href={`/research/scientific-events/${item.slug}`}
+                  className="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="w-16 h-16 relative flex-shrink-0 rounded-lg overflow-hidden">
+                    <Image
+                      fill
+                      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${item.image.file_path}`}
+                      alt={item.name}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[13px] font-medium text-gray-800 line-clamp-2 leading-snug">
+                      {item.name}
+                    </p>
+                    <div className="flex items-center gap-1 mt-1.5 text-gray-400">
+                      <BiCalendar className="text-xs" />
+                      <span className="text-xs">
+                        {dayjs(item.time).format("DD.MM.YYYY")}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
+
           <SocialMediaCard />
         </div>
       </div>

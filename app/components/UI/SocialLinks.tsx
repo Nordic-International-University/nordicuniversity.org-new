@@ -21,14 +21,20 @@ interface ISocialNetworkLinks {
 }
 
 interface SocialLinksProps {
-  social_network_links: ISocialNetworkLinks;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  social_network_links: ISocialNetworkLinks | any;
   className?: string;
 }
 
 const SocialLinks: React.FC<SocialLinksProps> = ({
-  social_network_links,
+  social_network_links: rawLinks,
   className = "mt-5",
 }) => {
+  // Normalize: if array, merge all objects; if single object, use as-is
+  const social_network_links: Record<string, string | null> = Array.isArray(rawLinks)
+    ? rawLinks.reduce((acc, item) => ({ ...acc, ...item }), {})
+    : rawLinks;
+
   const iconsMap: { [key: string]: JSX.Element } = {
     facebook: <FaFacebook className="text-2xl" />,
     telegram: <FaTelegram className="text-2xl" />,

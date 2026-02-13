@@ -37,7 +37,6 @@ const ClientPage = ({
     SectionType.RECTORATE,
   );
 
-  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       const result: any = await getAllStructureByType(
@@ -61,7 +60,6 @@ const ClientPage = ({
             getCurrentLangClient(),
             structureButtonData,
           );
-          console.log("ozgardi");
           setContent(result);
         } catch (error) {
           console.error("Error fetching structure data:", error);

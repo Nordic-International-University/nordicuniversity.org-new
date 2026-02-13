@@ -10,29 +10,17 @@ import {
   getAllStructureByType,
   getAllStructureTypes,
 } from "@/app/[lang]/university/structure/apiCalls";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Universitetning tashkiliy tuzilmasi - Nordik Xalqaro Universiteti",
-  description:
-    "Nordik Xalqaro Universitetining tashkiliy tuzilmasi: rektorat, fakultetlar, bo'limlar va boshqa muhim tuzilmalarning ro'yxati va batafsil ma'lumotlar. Bizning universitetning ichki tuzilmasi haqida ma'lumot oling.",
-  alternates: {
-    canonical: "https://nordicuniversity.org/uz/university/structure",
-  },
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Universitetning tashkiliy tuzilmasi - Nordik Xalqaro Universiteti",
     description:
       "Nordik Xalqaro Universitetining tashkiliy tuzilmasi: rektorat, fakultetlar, bo'limlar va boshqa muhim tuzilmalarning ro'yxati va batafsil ma'lumotlar. Bizning universitetning ichki tuzilmasi haqida ma'lumot oling.",
-    url: "https://nordicuniversity.org/uz/university/structure",
-    siteName: "Nordik Xalqaro Universiteti",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Universitetning tashkiliy tuzilmasi - Nordik Xalqaro Universiteti",
-    description:
-      "Nordik Xalqaro Universitetining tashkiliy tuzilmasi: rektorat, fakultetlar, bo'limlar va boshqa muhim tuzilmalarning ro'yxati va batafsil ma'lumotlar. Bizning universitetning ichki tuzilmasi haqida ma'lumot oling.",
-  },
-};
+    lang: params.lang,
+    path: "/university/structure",
+  });
+}
 
 const Page = async () => {
   const allStructureTypes: UniversitySection[] = await getAllStructureTypes(

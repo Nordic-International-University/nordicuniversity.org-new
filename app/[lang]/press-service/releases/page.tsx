@@ -2,26 +2,17 @@ import React from "react";
 import ClientPage from "@/app/[lang]/press-service/releases/ClientPage";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { getAllReleases } from "@/app/[lang]/press-service/releases/getAllReleases";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Press Relizlar - Xalqaro Nordik Universiteti",
-  description:
-    "Xalqaro Nordik Universitetining so'nggi press relizlari. Universitetimizdagi yangiliklar va muhim tadbirlar haqida bilib oling.",
-  keywords: [
-    "Press relizlar",
-    "Xalqaro Nordik Universiteti press relizlari",
-    "Universitet press relizlari",
-    "Yangiliklar",
-    "Xalqaro universitet yangiliklari",
-  ],
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Press Relizlar - Xalqaro Nordik Universiteti",
     description:
       "Xalqaro Nordik Universitetining so'nggi press relizlari. Universitetimizdagi yangiliklar va muhim tadbirlar haqida bilib oling.",
-    url: "https://nordicuniversity.org/press-service/releases",
-    type: "website",
-  },
-};
+    lang: params.lang,
+    path: "/press-service/releases",
+  });
+}
 
 const Page = async () => {
   const data = await getAllReleases({

@@ -8,5 +8,6 @@
     <sitemap><loc>https://nordicuniversity.org/sitemap-events.xml</loc></sitemap>
     <sitemap><loc>https://nordicuniversity.org/sitemap-scholarships_and_internships.xml</loc></sitemap>
     <sitemap><loc>https://nordicuniversity.org/sitemap-connections.xml</loc></sitemap>
-    <sitemap><loc>https://nordicuniversity.org/sitemap-forum-and-projects.xml </loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-forum-and-projects.xml</loc></sitemap>
+    <sitemap><loc>https://nordicuniversity.org/sitemap-static.xml</loc></sitemap>
 </sitemapindex>

@@ -9,11 +9,14 @@ import Scientific_events from "@/app/components/templates/research/scientific-ev
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
-import { buttonsType } from "@/types/research/scince_events";
-import TimeFilterButtons from "@/app/components/UI/changeFeature";
-import { timeFilter } from "@/types/api/apiTypes";
+import { ScientificEvent } from "@/types/research/scince_events";
+import { nordicLife } from "@/types/templates/nordiklieve.types";
 
-const ClientPage = ({ initialData }: any) => {
+const ClientPage = ({
+  initialData,
+}: {
+  initialData: nordicLife<ScientificEvent>;
+}) => {
   const t = useTranslations("research");
   const language = useTranslations("partners.connections");
   const [data, setData] = useState(initialData.data);
@@ -24,19 +27,24 @@ const ClientPage = ({ initialData }: any) => {
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await getAllEvents(
         getCurrentLangClient(),
         "CONFERENCES",
         currentPage,
-        100,
+        3,
         time,
       );
-      setData(result.data);
-      setTotalPages(result.totalPages || 1);
+      if (result.data.length === 0 && time === "future") {
+        setTime("past");
+        setCurrentPage(1);
+      } else {
+        setData(result.data);
+        setTotalPages(result.totalPages || 1);
+      }
     };
-
     fetchData();
   }, [currentPage, time]);
 
@@ -58,14 +66,41 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("scienceConferences.breadcrumb.scientific_conferences")}
     >
-      <TimeFilterButtons
-        time={time}
-        timeFilter={timeFilter}
-        t={language}
-        setTime={setTime}
-        setCurrentPage={setCurrentPage}
+      {/* Time filter tabs */}
+      <div className="flex items-center gap-3 mt-8">
+        <button
+          className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200 ${
+            time === "future"
+              ? "bg-text_secondary text-white"
+              : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+          }`}
+          onClick={() => {
+            setTime("future");
+            setCurrentPage(1);
+          }}
+        >
+          {language("future")}
+        </button>
+        <button
+          className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200 ${
+            time === "past"
+              ? "bg-text_secondary text-white"
+              : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+          }`}
+          onClick={() => {
+            setTime("past");
+            setCurrentPage(1);
+          }}
+        >
+          {language("past")}
+        </button>
+      </div>
+
+      <Scientific_events
+        url="/research/scientific-conferences/"
+        props={data}
       />
-      <Scientific_events url="/research/scientific-conferences/" props={data} />
+
       {totalPages > 3 && (
         <CustomPagination
           currentPage={currentPage}

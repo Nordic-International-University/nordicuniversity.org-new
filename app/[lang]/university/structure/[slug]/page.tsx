@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import SocialLinks from "@/app/components/UI/SocialLinks";
 
-// Staff Card Component for detail page
+// Staff Card
 const StaffDetailCard = ({
   staff,
   index,
@@ -36,63 +36,54 @@ const StaffDetailCard = ({
   const isEven = index % 2 === 0;
 
   return (
-    <div className="group bg-white rounded-2xl border border-tertiary/10 overflow-hidden hover:shadow-xl hover:shadow-text_secondary/10 transition-all duration-500">
-      <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-        {/* Image Section */}
-        <div className="md:w-1/3 relative">
-          <div className="aspect-square md:aspect-auto md:h-full relative overflow-hidden bg-gradient-to-br from-text_secondary/10 to-tertiary/10">
-            <Image
-              width={400}
-              height={400}
-              src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
-              alt={staff.full_name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            {/* Gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t from-tertiary/60 via-transparent to-transparent md:bg-gradient-to-${isEven ? 'r' : 'l'} md:from-transparent md:to-tertiary/10`} />
-          </div>
-        </div>
+    <div className={`flex max-md:flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"}
+      border border-gray-200 rounded-xl bg-white overflow-hidden h-[320px] max-md:h-auto
+      hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200`}>
+      {/* Image */}
+      <div className="md:w-[260px] flex-shrink-0 relative max-md:h-56">
+        <Image
+          fill
+          src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.image.file_path}`}
+          alt={staff.full_name}
+          className="object-cover"
+        />
+      </div>
 
-        {/* Content Section */}
-        <div className="md:w-2/3 p-6 lg:p-8 flex flex-col justify-center">
-          {/* Position */}
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-8 h-1 bg-gradient-to-r from-text_secondary to-text_secondary/50 rounded-full" />
-            <span className="text-text_secondary text-sm font-semibold uppercase tracking-wider">
-              {staff.position}
-            </span>
-          </div>
+      {/* Content */}
+      <div className="flex-1 p-5 lg:p-6 flex flex-col min-h-0">
+        <span className="text-text_secondary text-sm font-semibold uppercase tracking-wider flex-shrink-0">
+          {staff.position}
+        </span>
 
-          {/* Name */}
-          <h3 className="text-tertiary text-xl lg:text-2xl font-bold mb-4 group-hover:text-text_secondary transition-colors">
-            {staff.full_name}
-          </h3>
+        <h3 className="text-text_secondary text-xl font-bold mt-1.5 mb-3 flex-shrink-0">
+          {staff.full_name}
+        </h3>
 
-          {/* Description */}
+        {/* Scrollable description */}
+        <div className="flex-1 min-h-0 overflow-y-auto pr-1">
           <div
-            className="ql-editor text-tertiary/70 text-sm lg:text-base leading-relaxed line-clamp-4"
+            className="ql-editor text-gray-500 text-[15px] leading-relaxed"
             dangerouslySetInnerHTML={{ __html: staff.description }}
           />
+        </div>
 
-          {/* Footer */}
-          <div className="flex items-center justify-between mt-6 pt-6 border-t border-tertiary/10">
-            <SocialLinks
-              className="!mt-0"
-              social_network_links={staff.social_network_links}
-            />
+        <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
+          <SocialLinks
+            className="!mt-0"
+            social_network_links={staff.social_network_links}
+          />
 
-            {staff.resume_file && (
-              <Link
-                href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.resume_file.file_path}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-text_secondary text-white rounded-xl text-sm font-medium hover:bg-text_secondary/90 hover:shadow-lg transition-all"
-              >
-                <FileText className="w-4 h-4" />
-                <span>CV</span>
-              </Link>
-            )}
-          </div>
+          {staff.resume_file && (
+            <Link
+              href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.resume_file.file_path}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-text_secondary text-white rounded-lg text-sm font-medium hover:bg-text_secondary/90 transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              <span>CV</span>
+            </Link>
+          )}
         </div>
       </div>
     </div>
@@ -139,68 +130,54 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
   return (
     <article className="mt-8 mb-16">
       <div className="container">
-        {/* Breadcrumb */}
-        <BroadCamp items={[breadcrumbItems]} />
+        {/* Header */}
+        <div className="mb-6">
+          <BroadCamp items={[breadcrumbItems]} />
+          <Link
+            href="/university/structure"
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-text_secondary mt-4 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="text-sm font-medium">{t("structure.sectionName")}</span>
+          </Link>
+        </div>
 
-        {/* Back Button */}
-        <Link
-          href="/university/structure"
-          className="inline-flex items-center gap-2 text-tertiary/60 hover:text-text_secondary mt-4 mb-6 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span className="text-sm font-medium">{t("structure.sectionName")}</span>
-        </Link>
-
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-10">
           {/* Sidebar */}
-          <div className="lg:w-72 flex-shrink-0">
+          <div className="lg:w-64 flex-shrink-0">
             <div className="lg:sticky lg:top-24">
-              {/* Section Title */}
-              <div className="hidden lg:flex items-center gap-3 mb-4 pb-4 border-b border-tertiary/10">
-                <div className="w-10 h-10 rounded-xl bg-text_secondary/10 flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-text_secondary" />
-                </div>
-                <span className="text-tertiary font-semibold text-sm">
-                  {t("structure.sectionName")}
-                </span>
-              </div>
-
-              {/* Navigation List */}
-              <nav className="hidden lg:block space-y-2 max-h-[60vh] overflow-y-auto pr-2">
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex flex-col max-h-[65vh] overflow-y-auto">
                 {allStructuresByType.map((item, index) => (
                   <Link
                     key={index}
                     href={`/university/structure/${item.slug}`}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
+                    className={`py-2.5 px-3 text-[15px] font-medium border-l-2 transition-all duration-200 ${
                       item.slug === slug
-                        ? "bg-text_secondary text-white shadow-lg shadow-text_secondary/20"
-                        : "bg-box_color text-tertiary hover:bg-text_secondary/10 hover:text-text_secondary"
+                        ? "border-text_secondary text-text_secondary bg-text_secondary/5"
+                        : "border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-800"
                     }`}
                   >
-                    <span
-                      className="text-sm font-medium line-clamp-1 flex-1"
-                      dangerouslySetInnerHTML={{ __html: item.name }}
-                    />
-                    <ChevronRight className={`w-4 h-4 flex-shrink-0 ${item.slug === slug ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity`} />
+                    <span dangerouslySetInnerHTML={{ __html: item.name }} />
                   </Link>
                 ))}
               </nav>
 
               {/* Mobile Dropdown */}
-              <details className="lg:hidden bg-box_color rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-tertiary font-medium">
+              <details className="lg:hidden border border-gray-200 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-gray-700 text-base font-medium bg-gray-50">
                   <span>{t("structure.sectionName")}</span>
-                  <ChevronRight className="w-5 h-5 transition-transform details-open:rotate-90" />
+                  <ChevronRight className="w-5 h-5" />
                 </summary>
-                <div className="px-2 pb-2 max-h-60 overflow-y-auto">
+                <div className="max-h-60 overflow-y-auto">
                   {allStructuresByType.map((item, index) => (
                     <Link
                       key={index}
                       href={`/university/structure/${item.slug}`}
-                      className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
+                      className={`block px-4 py-2.5 text-sm border-b border-gray-100 last:border-b-0 transition-colors ${
                         item.slug === slug
-                          ? "bg-text_secondary text-white"
-                          : "text-tertiary hover:bg-white"
+                          ? "bg-text_secondary/5 text-text_secondary font-medium"
+                          : "text-gray-600 hover:bg-gray-50"
                       }`}
                     >
                       <span dangerouslySetInnerHTML={{ __html: item.name }} />
@@ -215,64 +192,49 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
           <div className="flex-1 min-w-0">
             {staffData && (
               <>
-                {/* Hero Section */}
-                <div className="relative rounded-2xl overflow-hidden mb-10">
-                  {/* Background Image */}
-                  <div className="relative h-64 lg:h-80">
-                    <Image
-                      src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}
-                      fill
-                      className="object-cover"
-                      alt={staffData.name}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-tertiary via-tertiary/60 to-tertiary/20" />
+                {/* Page Title */}
+                <h1 className="text-text_secondary text-2xl lg:text-[28px] font-bold mb-2">
+                  {staffData.name}
+                </h1>
+                {staffData.staffs && staffData.staffs.length > 0 && (
+                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-8">
+                    <Users className="w-4 h-4" />
+                    <span>{staffData.staffs.length} {t("structure.employees").toLowerCase()}</span>
                   </div>
+                )}
 
-                  {/* Content Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                    <h1 className="text-white text-2xl lg:text-3xl font-bold mb-2">
-                      {staffData.name}
-                    </h1>
-                    {staffData.staffs && staffData.staffs.length > 0 && (
-                      <div className="flex items-center gap-2 text-white/80 text-sm">
-                        <Users className="w-4 h-4" />
-                        <span>{staffData.staffs.length} {t("structure.employees").toLowerCase()}</span>
-                      </div>
-                    )}
-                  </div>
+                {/* Image */}
+                <div className="rounded-xl overflow-hidden border border-gray-200 mb-8">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staffData.image.file_path}`}
+                    width={1000}
+                    height={500}
+                    className="w-full h-auto object-cover max-h-[360px]"
+                    alt={staffData.name}
+                  />
                 </div>
 
-                {/* Mission Section */}
+                {/* Mission */}
                 {staffData.mission && (
-                  <div className="bg-white rounded-2xl border border-tertiary/10 p-6 lg:p-8 mb-10">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 rounded-xl bg-text_secondary/10 flex items-center justify-center">
-                        <FileText className="w-5 h-5 text-text_secondary" />
-                      </div>
-                      <h2 className="text-tertiary text-xl font-bold">
-                        {t("structure.task")}
-                      </h2>
-                    </div>
+                  <div className="mb-10">
+                    <h2 className="text-text_secondary text-xl font-bold mb-4">
+                      {t("structure.task")}
+                    </h2>
                     <div
-                      className="ql-editor text-tertiary/80 leading-relaxed"
+                      className="ql-editor text-gray-600 text-base leading-relaxed"
                       dangerouslySetInnerHTML={{ __html: staffData.mission }}
                     />
                   </div>
                 )}
 
-                {/* Staff Section */}
+                {/* Staff */}
                 {staffData.staffs && staffData.staffs.length > 0 && (
                   <div>
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 rounded-xl bg-text_secondary/10 flex items-center justify-center">
-                        <Users className="w-5 h-5 text-text_secondary" />
-                      </div>
-                      <h2 className="text-tertiary text-xl font-bold">
-                        {t("structure.employees")}
-                      </h2>
-                    </div>
+                    <h2 className="text-text_secondary text-xl font-bold mb-5">
+                      {t("structure.employees")}
+                    </h2>
 
-                    <div className="space-y-6">
+                    <div className="flex flex-col gap-5">
                       {staffData.staffs.map((staff: Staff, index: number) => (
                         <StaffDetailCard
                           key={staff.id}
@@ -284,19 +246,19 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
                   </div>
                 )}
 
-                {/* Navigation Between Items */}
+                {/* Navigation */}
                 {(prevItem || nextItem) && (
-                  <div className="flex items-center justify-between mt-12 pt-8 border-t border-tertiary/10">
+                  <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-200">
                     {prevItem ? (
                       <Link
                         href={`/university/structure/${prevItem.slug}`}
-                        className="group flex items-center gap-3 text-tertiary hover:text-text_secondary transition-colors"
+                        className="group flex items-center gap-3 text-gray-500 hover:text-text_secondary transition-colors"
                       >
-                        <div className="w-10 h-10 rounded-full bg-box_color group-hover:bg-text_secondary/10 flex items-center justify-center transition-colors">
-                          <ArrowLeft className="w-5 h-5" />
+                        <div className="w-9 h-9 rounded-full border border-gray-200 group-hover:border-text_secondary/30 flex items-center justify-center transition-colors">
+                          <ArrowLeft className="w-4 h-4" />
                         </div>
                         <div className="max-w-[200px]">
-                          <span className="text-xs text-tertiary/50 block">Oldingi</span>
+                          <span className="text-xs text-gray-400 block">Oldingi</span>
                           <span
                             className="text-sm font-medium line-clamp-1"
                             dangerouslySetInnerHTML={{ __html: prevItem.name }}
@@ -310,17 +272,17 @@ const Page = async ({ params: { slug } }: singleStructurePageParams) => {
                     {nextItem && (
                       <Link
                         href={`/university/structure/${nextItem.slug}`}
-                        className="group flex items-center gap-3 text-tertiary hover:text-text_secondary transition-colors text-right"
+                        className="group flex items-center gap-3 text-gray-500 hover:text-text_secondary transition-colors text-right"
                       >
                         <div className="max-w-[200px]">
-                          <span className="text-xs text-tertiary/50 block">Keyingi</span>
+                          <span className="text-xs text-gray-400 block">Keyingi</span>
                           <span
                             className="text-sm font-medium line-clamp-1"
                             dangerouslySetInnerHTML={{ __html: nextItem.name }}
                           />
                         </div>
-                        <div className="w-10 h-10 rounded-full bg-box_color group-hover:bg-text_secondary/10 flex items-center justify-center transition-colors">
-                          <ChevronRight className="w-5 h-5" />
+                        <div className="w-9 h-9 rounded-full border border-gray-200 group-hover:border-text_secondary/30 flex items-center justify-center transition-colors">
+                          <ChevronRight className="w-4 h-4" />
                         </div>
                       </Link>
                     )}

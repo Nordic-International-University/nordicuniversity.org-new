@@ -77,31 +77,37 @@ const LeftSidebarAndComponent = ({
   }, [router]);
 
   return (
-    <div className="flex mt-12 gap-6 items-start container justify-between">
-      <ul className="w-[20%] max-lg:hidden flex flex-col gap-2.5 relative">
-        {combinedItems.map((item: any, index) => (
-          <Link key={index} href={item.url} className="w-full">
-            <div className="flex items-center">
+    <div className="container mt-10 flex items-start gap-10 max-lg:gap-0">
+      {/* Sidebar */}
+      <aside className="w-[230px] flex-shrink-0 max-lg:hidden sticky top-6">
+        <nav className="flex flex-col">
+          {combinedItems.map((item: any, index) => (
+            <Link key={index} href={item.url}>
               <li
                 ref={(el: any) => (linkRefs.current[index] = el)}
-                className={`py-1 w-full text-md text-text_secondary font-medium top-1 rounded-lg pl-2 relative z-10 ${
-                  activeIndex === index
-                    ? "text-tertiary bg-text_tertiary"
-                    : "text-tertiary underline"
-                }`}
+                className={`list-none py-2.5 px-3 text-[18px] font-medium border-l-2 transition-all duration-200
+                  ${
+                    activeIndex === index
+                      ? "border-text_secondary text-text_secondary bg-text_secondary/5"
+                      : "border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-800"
+                  }`}
               >
                 {item.id ? item.name : t(item.name)}
               </li>
-            </div>
-          </Link>
-        ))}
-      </ul>
-      <div className="w-4/5 max-lg:w-full">
-        <div>
-          <h1 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-semibold pb-3">
+            </Link>
+          ))}
+        </nav>
+      </aside>
+
+      {/* Content */}
+      <div className="flex-1 min-w-0 max-lg:w-full">
+        <div className="mb-6">
+          <h1 className="text-text_secondary text-2xl max-sm:text-lg font-bold">
             {sidebarTitle}
           </h1>
-          <BroadCamp items={[broadCampItems]} />
+          <div className="mt-3">
+            <BroadCamp items={[broadCampItems]} />
+          </div>
         </div>
         <div ref={contentRef}>{children}</div>
       </div>

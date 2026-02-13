@@ -1,4 +1,3 @@
-import Head from "next/head";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
@@ -9,16 +8,15 @@ import MainFooter from "@/app/components/main/MainFooter";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { StoreProvider } from "@/app/utils/provider/storeProvider";
-import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import { ConfigProvider } from "antd";
 import uzLatn from "antd/locale/uz_UZ";
 import ruLatn from "antd/locale/ru_RU";
 import enLatn from "antd/locale/en_US";
 import Script from "next/script";
 
-const getAllResources = async () => {
+const getAllResources = async (lang: string) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/education/resources?language=${await getCurrentLangServer()}`,
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/education/resources?language=${lang}`,
     {
       cache: "no-cache",
     },
@@ -41,38 +39,53 @@ const inter = Montserrat({
   weight: ["300", "400", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "Nordik Xalqaro Universiteti - Bosh sahifa",
-  description:
-    "Nordik Xalqaro Universitetiga xush kelibsiz. Kelajakdagi global yetakchilar uchun innovatsion ta'lim va dinamik akademik muhitni kashf qiling.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    title: "Nordik Xalqaro Universiteti - Bosh sahifa",
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string };
+}): Promise<Metadata> {
+  return {
+    metadataBase: new URL("https://nordicuniversity.org"),
+    title: "Nordic International University",
     description:
-      "Nordik Xalqaro Universitetining rasmiy veb-sahifasi. Kelajakdagi global yetakchilar uchun innovatsion ta'lim markazi.",
-    url: "https://nordicuniversity.org",
-    siteName: "Nordik Xalqaro Universiteti",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Xalqaro Nordik Universiteti kampusi",
-      },
-    ],
-    locale: "uz_UZ",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Xalqaro Nordik Universiteti - Bosh sahifa",
-    description:
-      "Xalqaro Nordik Universitetining rasmiy veb-sahifasi. Innovatsion ta'lim va global yetakchilik markazi.",
-    images: ["/images/twitter-image.jpg"],
-  },
-};
+      "Nordic International University rasmiy veb-sahifasi. Kelajakdagi global yetakchilar uchun innovatsion ta'lim va dinamik akademik muhitni kashf qiling.",
+    icons: {
+      icon: "/favicon.ico",
+    },
+    verification: {
+      google: "8FJy9noEZAx-f0QKd8R0mFWvBPxym2l_FD-jw1WgSOk",
+    },
+    openGraph: {
+      title: "Nordic International University",
+      description:
+        "Nordic International University rasmiy veb-sahifasi. Kelajakdagi global yetakchilar uchun innovatsion ta'lim markazi.",
+      url: `https://nordicuniversity.org/${params.lang}`,
+      siteName: "Nordic International University",
+      images: [
+        {
+          url: "/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Nordic International University",
+        },
+      ],
+      locale:
+        params.lang === "uz"
+          ? "uz_UZ"
+          : params.lang === "ru"
+            ? "ru_RU"
+            : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Nordic International University",
+      description:
+        "Nordic International University rasmiy veb-sahifasi. Innovatsion ta'lim va global yetakchilik markazi.",
+      images: ["/images/og-image.jpg"],
+    },
+  };
+}
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -85,30 +98,10 @@ export default async function RootLayout({
 }: RootLayoutProps) {
   const messages = await getMessages();
   const networks = await getAllNetworks();
-  const resources = await getAllResources();
+  const resources = await getAllResources(params.lang);
 
   return (
     <html lang={params.lang}>
-      <Head>
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-KQ46PHQB');
-          `,
-          }}
-        />
-        <meta
-          name="google-site-verification"
-          content="8FJy9noEZAx-f0QKd8R0mFWvBPxym2l_FD-jw1WgSOk"
-        />
-        <meta />
-      </Head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Script
           id="google-tag-manager"

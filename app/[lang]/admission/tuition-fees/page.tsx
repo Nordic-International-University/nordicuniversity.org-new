@@ -1,29 +1,15 @@
 import ClientPage from "@/app/[lang]/admission/tuition-fees/ClientPage";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title:
-    "Ta'lim yo‘nalishining kontrakt narxlari - Xalqaro Nordik Universiteti",
-  description:
-    "Xalqaro Nordik Universitetida bakalavr, magistratura va doktorantura dasturlarining kontrakt narxlari va davomiylik muddati haqida to‘liq ma’lumot. Ta’lim yo‘nalishlari, dasturlar va ularning narxlari bilan tanishing.",
-  keywords: [
-    "Kontrakt narxlari",
-    "Ta'lim yo‘nalishlari",
-    "Bakalavr kontrakt",
-    "Magistratura narxlari",
-    "Doktorantura dasturlari",
-    "Xalqaro Nordik Universiteti",
-    "Ta’lim narxlari",
-    "O‘quv reja",
-  ],
-  openGraph: {
-    title:
-      "Ta'lim yo‘nalishining kontrakt narxlari - Xalqaro Nordik Universiteti",
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
+    title: "Ta'lim yo'nalishining kontrakt narxlari - Xalqaro Nordik Universiteti",
     description:
-      "Xalqaro Nordik Universitetida bakalavr, magistratura va doktorantura dasturlarining kontrakt narxlari va davomiylik muddati haqida to‘liq ma’lumot. Ta’lim yo‘nalishlari, dasturlar va ularning narxlari bilan tanishing.",
-    url: "https://nordicuniversity.org/admission/tuition-fees",
-    type: "website",
-  },
-};
+      "Xalqaro Nordik Universitetida bakalavr, magistratura va doktorantura dasturlarining kontrakt narxlari va davomiylik muddati haqida to'liq ma'lumot. Ta'lim yo'nalishlari, dasturlar va ularning narxlari bilan tanishing.",
+    lang: params.lang,
+    path: "/admission/tuition-fees",
+  });
+}
 
 const Page = async () => {
   return <ClientPage />;

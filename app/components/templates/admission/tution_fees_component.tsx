@@ -1,12 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Button, Dropdown, Menu } from "antd";
 import React, { useState, useEffect } from "react";
 import { EnumEduDegree } from "@/types/api/apiTypes";
 import Image from "next/image";
-import { DownOutlined } from "@ant-design/icons";
+import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { HiOutlineDownload, HiChevronDown } from "react-icons/hi";
 
 interface TutionFeesComponentProps {
   props: any;
@@ -27,6 +27,7 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
 
   const [selectedDegree, setSelectedDegree] = useState<string>("FULL_TIME");
   const [selectedEduType, setSelectedEduType] = useState<string>("BACHELOR");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const degreeFromQuery = searchParams.get("degree")?.toUpperCase();
@@ -50,9 +51,10 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
   }, [searchParams, props, setState]);
 
   const handleDegreeChange = (degreeKey: string) => {
-    const normalizedDegreeKey = degreeKey.toUpperCase(); // Katta harfga aylantirish
+    const normalizedDegreeKey = degreeKey.toUpperCase();
     setSelectedDegree(normalizedDegreeKey);
     refetched(false);
+    setDropdownOpen(false);
 
     const currentParams = new URLSearchParams(searchParams.toString());
     currentParams.set("degree", normalizedDegreeKey);
@@ -71,125 +73,134 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
     currentParams.set("type", eduType);
     currentParams.set("degree", newDegree);
     const newUrl = `${pathname}?${currentParams.toString()}`;
-
-    console.log("Updating URL to:", newUrl);
     router.replace(newUrl);
   };
 
-  const menu = (
-    <Menu onClick={(item: any) => handleDegreeChange(item.key)}>
-      {Object.keys(props).map((degreeKey) => (
-        <Menu.Item key={degreeKey}>{t(`degrees.${degreeKey}`)}</Menu.Item>
-      ))}
-    </Menu>
-  );
-
   return (
-    <article className="mt-16 max-sm:mt-0">
-      <div className="flex gap-5 max-sm:flex-col ">
-        <div className="flex flex-col mt-[73px] w-full md:w-1/4 gap-3 md:gap-5">
+    <article className="mt-12 max-sm:mt-0">
+      <div className="flex gap-5 max-sm:flex-col">
+        {/* Left sidebar — edu type buttons */}
+        <div className="flex flex-col mt-[73px] w-full md:w-1/4 gap-3 md:gap-4">
           {Object.keys(EnumEduDegree).map((item, index) => (
-            <Button
+            <button
               key={index}
               className={`${
                 item === selectedEduType
                   ? "bg-text_secondary text-white"
-                  : "bg-text_tertiary text-text_secondary"
-              } w-full md:px-12 px-6 py-2 uppercase border-none rounded-sm font-semibold text-sm md:text-base`}
-              type="primary"
+                  : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+              } w-full md:px-12 px-6 py-2.5 uppercase rounded-lg font-semibold text-sm md:text-base transition-colors duration-200`}
               onClick={() => handleEduTypeChange(item)}
             >
-              {t(`degreeDirection.${item}`)}{" "}
-            </Button>
+              {t(`degreeDirection.${item}`)}
+            </button>
           ))}
         </div>
 
         <div className="w-full">
-          <div>
-            <div className="flex justify-center gap-5 mb-8 max-sm:hidden">
-              {Object.keys(props).map((degreeKey) => (
-                <Button
-                  className={`${
-                    selectedDegree === degreeKey
-                      ? "bg-text_secondary text-white"
-                      : "bg-text_tertiary text-text_secondary"
-                  } px-12 uppercase border-none rounded-sm font-semibold`}
-                  size="large"
-                  key={degreeKey}
-                  onClick={() => handleDegreeChange(degreeKey)}
-                >
-                  {t(`degrees.${degreeKey}`)}
-                </Button>
-              ))}
-            </div>
-            <div className="sm:hidden w-full flex mb-5 justify-center">
-              <Dropdown
-                overlay={menu}
-                className="w-full bg-tertiary text-white"
-                trigger={["click"]}
+          {/* Degree buttons — desktop */}
+          <div className="flex justify-center gap-4 mb-8 max-sm:hidden">
+            {Object.keys(props).map((degreeKey) => (
+              <button
+                className={`${
+                  selectedDegree === degreeKey
+                    ? "bg-text_secondary text-white"
+                    : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+                } px-10 py-2.5 uppercase rounded-lg font-semibold text-base transition-colors duration-200`}
+                key={degreeKey}
+                onClick={() => handleDegreeChange(degreeKey)}
               >
-                <Button>
-                  {selectedDegree
-                    ? t(`degrees.${selectedDegree}`)
-                    : t("select_degree")}{" "}
-                  <DownOutlined />
-                </Button>
-              </Dropdown>
-            </div>
+                {t(`degrees.${degreeKey}`)}
+              </button>
+            ))}
           </div>
 
+          {/* Degree dropdown — mobile */}
+          <div className="sm:hidden w-full mb-5 relative">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="w-full bg-gray-100 text-text_secondary px-4 py-2.5 rounded-lg font-medium text-sm
+                flex items-center justify-between"
+            >
+              {selectedDegree
+                ? t(`degrees.${selectedDegree}`)
+                : t("select_degree")}
+              <HiChevronDown className={`text-lg transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            {dropdownOpen && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-hidden">
+                {Object.keys(props).map((degreeKey) => (
+                  <button
+                    key={degreeKey}
+                    onClick={() => handleDegreeChange(degreeKey)}
+                    className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors
+                      ${selectedDegree === degreeKey
+                        ? "bg-text_secondary/10 text-text_secondary"
+                        : "text-gray-600 hover:bg-gray-50"
+                      }`}
+                  >
+                    {t(`degrees.${degreeKey}`)}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Program cards */}
           <div className="flex-1 flex flex-wrap md:flex-col gap-4">
             {props[selectedDegree]?.map((program: any, index: number) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row p-4 border border-gray-200 rounded mb-4 gap-5 w-full md:w-auto"
+                className="flex flex-col md:flex-row border border-gray-200 rounded-xl overflow-hidden
+                  hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200 w-full md:w-auto"
               >
-                <Image
-                  width={300}
-                  height={300}
-                  className="w-full h-[200px] md:w-[250px] md:h-[250px] object-cover"
-                  src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${program.image.file_path}`}
-                  alt={program.name}
-                />
-                <div className="w-full">
-                  <h3 className="text-[#364E6B] text-lg md:text-[18px] mb-3 md:mb-5 font-semibold">
+                <div className="w-full h-[200px] md:w-[250px] md:h-auto relative flex-shrink-0">
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={`${process.env.NEXT_PUBLIC_URL_BACKEND}${program.image.file_path}`}
+                    alt={program.name}
+                  />
+                </div>
+                <div className="w-full p-5">
+                  <h3 className="text-text_secondary text-lg md:text-[18px] mb-4 font-semibold leading-snug">
                     {program.name}
                   </h3>
-                  <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal ">
-                    <strong>{t("program_info.contract")}:</strong>{" "}
-                    <span className="underline ml-2 ">
+                  <p className="text-sm md:text-base pb-2.5 text-gray-700">
+                    <strong>{t("program_info.contract")}:</strong>
+                    <span className="ml-2 text-text_secondary font-semibold">
                       {program.price.toLocaleString()}{" "}
                       {t("program_info.currency")}
                     </span>
                   </p>
-                  <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
+                  <p className="text-sm md:text-base pb-2.5 text-gray-700">
                     <strong>{t("program_info.duration")}:</strong>
-                    <span className="underline ml-2">
-                      {" "}
+                    <span className="ml-2">
                       {program.duration} {t("program_info.year")}
                     </span>
                   </p>
-                  <p className="text-sm md:text-base pb-2 md:pb-3 text-[#364E6B] font-normal">
+                  <p className="text-sm md:text-base pb-2.5 text-gray-700">
                     <strong>{t("program_info.language")}:</strong>
-                    <span className="underline ml-2">{program.field_lang}</span>
+                    <span className="ml-2">{program.field_lang}</span>
                   </p>
-                  <div className="flex justify-center lg:block">
-                    <Button
+
+                  {program.curriculum?.file_path && (
+                    <Link
                       target="_blank"
                       href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${program.curriculum.file_path}`}
-                      className="bg-text_secondary text-white px-4 py-2 md:px-5 font-semibold rounded"
-                      type="primary"
+                      className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 bg-text_secondary text-white
+                        text-sm font-semibold rounded-lg hover:bg-text_secondary/90 transition-colors"
                     >
+                      <HiOutlineDownload className="text-base" />
                       {t("program_info.program_plan")}
-                    </Button>
-                  </div>
+                    </Link>
+                  )}
 
-                  <div className="flex text-[#46658B] mt-6 md:mt-10 items-center gap-3 w-full">
-                    <div className="flex-1 h-[1px] bg-[#46658B]"></div>
-                    <span className="text-xs md:text-base">
+                  <div className="flex text-gray-400 mt-6 items-center gap-3 w-full">
+                    <div className="flex-1 h-[1px] bg-gray-200"></div>
+                    <span className="text-xs md:text-sm font-medium">
                       {program.field_code}
                     </span>
-                    <div className="flex-1 h-[1px] bg-[#46658B]"></div>
+                    <div className="flex-1 h-[1px] bg-gray-200"></div>
                   </div>
                 </div>
               </div>
@@ -200,7 +211,5 @@ const TutionFeesComponent: React.FC<TutionFeesComponentProps> = ({
     </article>
   );
 };
-
-//sadsad
 
 export default TutionFeesComponent;

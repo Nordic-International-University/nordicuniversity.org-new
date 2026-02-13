@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaClock,
-  FaFacebook,
-  FaInstagram,
-  FaTelegram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
 import { ScientificEvent } from "@/types/research/scince_events";
 import SocialLinks from "@/app/components/UI/SocialLinks";
+import { BiCalendar } from "react-icons/bi";
 
 const EventCards = ({
   items,
@@ -19,49 +12,42 @@ const EventCards = ({
   items: ScientificEvent;
   path: string;
 }) => {
-  const [event, setEvent] = useState<any>(null);
-
-  useEffect(() => {
-    if (items) {
-      setEvent(items);
-    }
-  }, [items]);
-
-  if (!event) return null;
+  if (!items) return null;
 
   return (
     <Link
-      href={event?.slug ? `${path + event.slug}` : "#"}
-      className="flex items-start max-lg:flex-col gap-5"
+      href={items?.slug ? `${path + items.slug}` : "#"}
+      className="group flex items-start max-lg:flex-col gap-5 p-5"
     >
-      <Image
-        width={405}
-        height={303}
-        className="max-lg:w-full object-cover min-w-[255px] h-[253px]"
-        src={
-          event?.image?.file_path
-            ? process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path
-            : "/default-image.jpg"
-        }
-        alt={event?.name || "Default Name"}
-      />
-      <div className="max-sm:p-3">
-        <div className="max-md:mb-5">
-          <h2 className="text-secondary text-[18px] max-lg:pr-0 max-lg:text-left pr-40 mb-2 max-md:pb-0 font-semibold line-clamp-2">
-            {event?.name}
-          </h2>
-        </div>
-        <p className="text-[#7A98C1] max-lg:text-left text-md mb-2 line-clamp-2">
-          {event?.description}
+      <div className="w-full h-[220px] lg:w-[260px] lg:h-[200px] relative flex-shrink-0 rounded-lg overflow-hidden">
+        <Image
+          fill
+          className="object-cover"
+          src={
+            items?.image?.file_path
+              ? process.env.NEXT_PUBLIC_URL_BACKEND + items.image.file_path
+              : "/default-image.jpg"
+          }
+          alt={items?.name || "Event"}
+        />
+      </div>
+      <div className="flex-1">
+        <h2 className="text-lg text-text_secondary font-semibold line-clamp-2 leading-snug">
+          {items?.name}
+        </h2>
+        <p className="text-gray-500 text-sm mt-2 line-clamp-2 leading-relaxed">
+          {items?.description}
         </p>
-        <div className="flex text-[#7A98C1] pb-4 items-center gap-2">
-          <FaClock />
-          <h2>{event?.time}</h2>
+        <div className="flex items-center gap-1.5 text-gray-400 mt-3">
+          <BiCalendar className="text-sm" />
+          <span className="text-xs">{items?.time}</span>
         </div>
-        <h3 className="text-tertiary text-[17px] font-semibold">
-          SPIKER-{event?.speaker_name}
-        </h3>
-        <SocialLinks social_network_links={event?.social_network_links} />
+        {items?.speaker_name && (
+          <p className="text-text_secondary text-sm font-semibold mt-3">
+            SPIKER — {items.speaker_name}
+          </p>
+        )}
+        <SocialLinks social_network_links={items?.social_network_links} />
       </div>
     </Link>
   );

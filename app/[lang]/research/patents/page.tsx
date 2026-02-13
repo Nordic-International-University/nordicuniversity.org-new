@@ -6,6 +6,16 @@ import {
   nordicLiveJournalProps,
 } from "@/types/templates/nordiklieve.types";
 import { getPatents } from "@/app/[lang]/research/patents/api";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
+
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
+    title: "Patentlar - Xalqaro Nordik Universiteti",
+    description: "Xalqaro Nordik Universitetining patentlari.",
+    lang: params.lang,
+    path: "/research/patents",
+  });
+}
 
 const Page = async () => {
   const data: nordicLife<nordicLiveJournalProps> = await getPatents(

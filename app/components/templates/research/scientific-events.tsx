@@ -1,9 +1,5 @@
 import { ScientificEvent } from "@/types/research/scince_events";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import React, { useState } from "react";
-import { Navigation } from "swiper/modules";
+import React from "react";
 import NoDataComponent from "@/app/components/UI/no-data";
 import EventCards from "@/app/components/UI/eventCards";
 
@@ -14,15 +10,18 @@ const ScientificEvents = ({
   props: ScientificEvent[];
   url: string;
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  if (props.length === 0) {
+    return <NoDataComponent />;
+  }
 
-  const renderEvents = () => {
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+  return (
+    <article className="mt-8">
+      <div className="grid grid-cols-1 gap-5">
         {props.map((event, index) => (
           <div
             key={event.id || index}
-            className="border-2 border-[#7A98C1] rounded p-4"
+            className="border border-gray-200 rounded-xl overflow-hidden bg-white
+              hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200"
           >
             <EventCards
               path="/research/scientific-conferences/"
@@ -31,10 +30,8 @@ const ScientificEvents = ({
           </div>
         ))}
       </div>
-    );
-  };
-
-  return <article className="mt-12">{renderEvents()}</article>;
+    </article>
+  );
 };
 
 export default ScientificEvents;

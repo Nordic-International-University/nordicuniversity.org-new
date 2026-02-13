@@ -1,47 +1,51 @@
 import Image from "next/image";
-import { Button } from "antd";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 import { useTranslations } from "next-intl";
-import { FaClock } from "react-icons/fa";
 import React from "react";
 import Link from "next/link";
+import { BiCalendar } from "react-icons/bi";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 const News = ({ props }: { props: NewsItem[] | any }) => {
   const t = useTranslations("press-service");
 
   return (
-    <article className="mt-10 mb-10">
-      <div className="flex flex-col max-sm:gap-8 gap-6">
+    <article className="mt-8 mb-10">
+      <div className="flex flex-col gap-5">
         {props.map((item: NewsItem, index: number) => (
-          <Link key={index} href={`/press-service/news/${item.slug}`}>
-            <div className="w-full p-3 max-sm:border-none max-sm:p-0 max-sm:flex-col border-[1px] flex gap-3 items-stretch">
+          <Link
+            key={index}
+            href={`/press-service/news/${item.slug}`}
+            className="group flex max-sm:flex-col border border-gray-200 rounded-xl overflow-hidden bg-white
+              hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200"
+          >
+            <div className="w-full h-[220px] sm:w-[260px] sm:h-auto relative flex-shrink-0">
               <Image
-                width={260}
-                className="max-sm:w-full h-[250px] object-cover min-w-[250px]"
-                height={300}
+                fill
+                className="object-cover"
                 src={process.env.NEXT_PUBLIC_URL_BACKEND + item.image.file_path}
                 alt={item.title}
               />
+            </div>
 
-              <div className="w-full flex flex-col">
-                <div className="flex-grow">
-                  <h2 className="max-sm:text-sm pb-4 text-xl text-text_secondary">
-                    {item.title}
-                  </h2>
-                  <p className="line-clamp-2"> {item.description}</p>
-                  <div className="flex text-[#7A98C1] mt-3 pb-4 items-center gap-2">
-                    <FaClock />
-                    <h2>{item.time}</h2>
-                  </div>
+            <div className="flex flex-col justify-between flex-1 p-5">
+              <div>
+                <h2 className="text-lg font-semibold text-text_secondary leading-snug line-clamp-2">
+                  {item.title}
+                </h2>
+                <p className="text-gray-500 text-sm mt-2.5 line-clamp-2 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+              <div className="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-1.5 text-gray-400">
+                  <BiCalendar className="text-sm" />
+                  <span className="text-xs">{item.time}</span>
                 </div>
-                <div className="max-sm:justify-start flex justify-end max-sm:mt-0 mt-4">
-                  <Button
-                    className="px-8 max-sm:w-full max-sm:px-4 max-sm:text-sm rounded-sm text-xl text-white bg-text_secondary"
-                    type="primary"
-                  >
-                    {t("news.button")}
-                  </Button>
-                </div>
+                <span className="inline-flex items-center gap-1.5 text-text_secondary text-sm font-medium group-hover:gap-2.5 transition-all">
+                  {t("news.button")}
+                  <HiOutlineArrowRight className="text-sm" />
+                </span>
               </div>
             </div>
           </Link>

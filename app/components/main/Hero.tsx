@@ -10,7 +10,6 @@ const Hero = () => {
         src={logo}
         alt="logo"
       />
-
       <video
         className="w-full absolute  top-0 h-screen object-cover"
         autoPlay

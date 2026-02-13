@@ -5,37 +5,17 @@ import {
   getAllDoctorateCount,
 } from "@/app/[lang]/research/doctorate/doctorate.api";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
-import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata: Metadata = {
-  title: "Nordik Xalqaro Universiteti - Doktorantura",
-  description:
-    "Nordik Xalqaro Universitetining doktorantura dasturlari haqida batafsil ma'lumot. Ilmiy izlanishlar va akademik rivojlanish uchun imkoniyatlar.",
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Nordik Xalqaro Universiteti - Doktorantura",
     description:
       "Nordik Xalqaro Universitetining doktorantura dasturlari haqida batafsil ma'lumot. Ilmiy izlanishlar va akademik rivojlanish uchun imkoniyatlar.",
-    url: "https://nordicuniversity.org/research/doctorate",
-    siteName: "Nordik Xalqaro Universiteti",
-    images: [
-      {
-        url: "/images/research-images/doctorate.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Doktorantura dasturlari",
-      },
-    ],
-    locale: "uz_UZ",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Nordik Xalqaro Universiteti - Doktorantura",
-    description:
-      "Nordik Xalqaro Universitetining doktorantura dasturlari haqida batafsil ma'lumot. Ilmiy izlanishlar va akademik rivojlanish uchun imkoniyatlar.",
-    images: ["/images/research-images/doctorate.jpg"],
-  },
-};
+    lang: params.lang,
+    path: "/research/doctorate",
+  });
+}
 
 const Page = async () => {
   const lang = await getCurrentLangServer();

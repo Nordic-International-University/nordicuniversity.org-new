@@ -5,7 +5,7 @@ const getAllDoctorate = async (lang: string) => {
     );
     return response.json();
   } catch (err) {
-    console.log(err);
+    return [];
   }
 };
 
@@ -16,7 +16,7 @@ const getAllDoctorateCount = async (lang: string) => {
     );
     return response.json();
   } catch (err) {
-    console.log(err);
+    return { doctorate_dsc: 0, doctorate_phd: 0, researcher_dsc: 0, researcher_phd: 0 };
   }
 };
 

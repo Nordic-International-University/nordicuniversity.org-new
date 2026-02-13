@@ -1,6 +1,8 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import tv from "@/public/images/student-image/tv.png";
 import Image from "next/image";
+import tv from "@/public/images/student-image/tv.png";
 
 const WorkAndTravel = () => {
   const t = useTranslations("student.Work_and_travel").raw;
@@ -9,41 +11,45 @@ const WorkAndTravel = () => {
     "https://www.youtube.com/embed/zvjfcI73Tw0?autoplay=1&loop=1&playlist=zvjfcI73Tw0";
 
   return (
-    <article className="mt-10">
-      <div className="flex max-md:flex-col items-start gap-9 justify-between relative">
-        <div>
-          <p
-            className="text-[#46658B] text-justify font-medium text-[17px]"
+    <article className="mt-8">
+      <div className="flex max-md:flex-col items-start gap-8">
+        <div className="flex-1">
+          <div
+            className="text-sm leading-relaxed"
+            style={{ color: "rgba(11,64,117,0.7)" }}
             dangerouslySetInnerHTML={{ __html: t("description") }}
-          ></p>
-          <p className="mt-6 max-md:hidden text-justify block font-semibold italic text-[#46658B] text-[17px]">
+          />
+          <p
+            className="mt-6 max-md:hidden text-sm leading-relaxed font-semibold italic"
+            style={{ color: "rgba(11,64,117,0.6)" }}
+          >
             {t("body")}
           </p>
         </div>
 
-        {/* Image container with relative positioning */}
-        <div className="relative w-full max-w-[600px] mx-auto">
-          {/* TV Image */}
+        {/* TV with embedded video */}
+        <div className="relative w-full max-w-[500px] flex-shrink-0 mx-auto">
           <Image
-            width={600}
-            height={600}
-            className="max-md:block mx-auto"
+            width={500}
+            height={500}
+            className="w-full"
             src={tv}
             alt="tv"
           />
-
-          {/* YouTube Video iframe with absolute positioning */}
           <iframe
             src={videoUrl}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
-            className="absolute top-[11%] left-[8%] w-[85%] h-[47.5%]" // Adjust the size and position here
+            className="absolute top-[11%] left-[8%] w-[85%] h-[47.5%]"
             title="YouTube Video"
-          ></iframe>
+          />
         </div>
 
-        <p className="mt-6 max-sm:mt-0 hidden text-justify max-md:block font-semibold italic text-[#46658B] text-[17px]">
+        <p
+          className="mt-4 hidden max-md:block text-sm leading-relaxed font-semibold italic"
+          style={{ color: "rgba(11,64,117,0.6)" }}
+        >
           {t("body")}
         </p>
       </div>

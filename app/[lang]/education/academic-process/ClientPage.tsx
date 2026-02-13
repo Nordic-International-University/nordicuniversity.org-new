@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/utils/store/Store";
 import { timeFilter } from "@/types/api/apiTypes";
-import ScholarshipsAndInternships from "@/app/components/templates/partners/scholarships-and-internships";
+import AcademicProcessList from "@/app/components/templates/education/academic-process-list";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
 import { getAllAcademicProcesses } from "@/app/[lang]/education/academic-process/getAllAcademicProcces";
@@ -54,7 +54,7 @@ const ClientPage = ({ initialData }: any) => {
       sidebarItems={subItemDocument}
       sidebarTitle={t("subItems.4")}
     >
-      <ScholarshipsAndInternships
+      <AcademicProcessList
         path="/education/academic-process/"
         props={data}
       />

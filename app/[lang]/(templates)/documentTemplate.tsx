@@ -2,20 +2,22 @@
 
 import React, { FC } from "react";
 import Image from "next/image";
-import { Button, Flex } from "antd";
+import Link from "next/link";
 import { annualsItem } from "@/types/templates/annuals_and_review.types";
 import { useTranslations } from "next-intl";
+import { HiOutlineDocumentText, HiOutlineExternalLink } from "react-icons/hi";
 
 const YearEndReview: FC<{ data: annualsItem[] }> = ({ data }) => {
   const t = useTranslations("buttons");
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
       {data.map((item, index) => (
         <div
           key={index}
-          className="shadow-md rounded-md hover:shadow-xl transition-all overflow-hidden bg-white"
+          className="border border-gray-200 rounded-xl overflow-hidden bg-white
+            hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200"
         >
-          <div className="relative w-full aspect-[1.3] bg-gray-100">
+          <div className="relative w-full aspect-[1.3] bg-gray-50">
             <Image
               fill
               className="object-cover"
@@ -25,35 +27,39 @@ const YearEndReview: FC<{ data: annualsItem[] }> = ({ data }) => {
           </div>
 
           <div className="p-4">
-            <h2 className="text-center text-text_secondary line-clamp-1 text-base sm:text-lg font-semibold mb-4">
+            <h2 className="text-center text-text_secondary line-clamp-1 text-base font-semibold mb-4">
               {item.name}
             </h2>
 
-            <Flex gap={5} className="w-full">
+            <div className="flex gap-2 w-full">
               {item?.file?.file_path && (
-                <Button
+                <Link
                   href={
                     process.env.NEXT_PUBLIC_URL_BACKEND + item.file.file_path
                   }
                   target="_blank"
-                  className="bg-secondary text-white font-semibold w-full"
-                  size="middle"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5
+                    bg-text_secondary text-white text-sm font-medium rounded-lg
+                    hover:bg-text_secondary/90 transition-colors"
                 >
+                  <HiOutlineDocumentText className="text-base" />
                   PDF
-                </Button>
+                </Link>
               )}
 
               {item?.source_link && (
-                <Button
+                <Link
                   href={item.source_link}
                   target="_blank"
-                  className="bg-secondary text-white font-semibold w-full"
-                  size="middle"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5
+                    bg-gray-100 text-text_secondary text-sm font-medium rounded-lg
+                    hover:bg-gray-200 transition-colors"
                 >
+                  <HiOutlineExternalLink className="text-base" />
                   {t("online_read")}
-                </Button>
+                </Link>
               )}
-            </Flex>
+            </div>
           </div>
         </div>
       ))}

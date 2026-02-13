@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { RootState } from "@/app/utils/store/Store";
 import { useSelector } from "react-redux";
 import { ContactInfo } from "@/types/templates/contacts.types";
-import About from "@/app/components/templates/nordik-school/about";
 import Gallery from "@/app/components/templates/nordik-school/gallery";
 
 const ClientPage = ({ props }: { props: ContactInfo | any }) => {

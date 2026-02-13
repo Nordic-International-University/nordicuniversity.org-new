@@ -57,12 +57,23 @@ export default async function ReleasePage({
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; lang: string };
 }): Promise<Metadata> {
   const release = await getRelease(params.slug);
+  const baseUrl = "https://nordicuniversity.org";
+  const pagePath = `/press-service/releases/${params.slug}`;
 
   return {
     title: release.title,
     description: release.body.slice(0, 160),
+    alternates: {
+      canonical: `${baseUrl}/${params.lang}${pagePath}`,
+      languages: {
+        uz: `${baseUrl}/uz${pagePath}`,
+        en: `${baseUrl}/en${pagePath}`,
+        ru: `${baseUrl}/ru${pagePath}`,
+        "x-default": `${baseUrl}/uz${pagePath}`,
+      },
+    },
   };
 }

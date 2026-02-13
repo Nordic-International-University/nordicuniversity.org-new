@@ -1,34 +1,17 @@
 import React from "react";
 import ClientPage from "@/app/[lang]/education/resources/ClientPage";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Ta'lim resurslari - Xalqaro Nordik Universiteti",
-  description:
-    "Xalqaro Nordik Universitetining ta'lim resurslari bo'yicha to'liq ma’lumot. Dars jadvali, o'quv dasturlari va boshqa foydali ta'lim manbalariga osongina kirish imkoniyati.",
-  keywords: [
-    "Ta'lim resurslari",
-    "Dars jadvali",
-    "O'quv dasturlari",
-    "Ta'lim manbalari",
-    "Universitet resurslari",
-    "Online o'quv materiallari",
-    "Ta'lim vositalari",
-    "Dars materiallari",
-    "Xalqaro Nordik Universiteti",
-    "Resurslar va vositalar",
-    "O'quv materiallari",
-    "Universitet xizmatlari",
-    "Akademik resurslar",
-  ],
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Ta'lim resurslari - Xalqaro Nordik Universiteti",
     description:
-      "Xalqaro Nordik Universitetining ta'lim resurslari bo'yicha to'liq ma’lumot. Dars jadvali, o'quv dasturlari va boshqa foydali ta'lim manbalariga osongina kirish imkoniyati.",
-    url: "https://nordicuniversity.org/education/resources",
-    type: "website",
-  },
-};
+      "Xalqaro Nordik Universitetining ta'lim resurslari bo'yicha to'liq ma'lumot. Dars jadvali, o'quv dasturlari va boshqa foydali ta'lim manbalariga osongina kirish imkoniyati.",
+    lang: params.lang,
+    path: "/education/resources",
+  });
+}
 
 const getALlResources = async () => {
   const response = await fetch(

@@ -10,8 +10,9 @@ import {
   nordicLiveJournalProps,
 } from "@/types/templates/nordiklieve.types";
 import Patents from "@/app/components/templates/university/patents";
-import { Pagination } from "antd";
+import CustomPagination from "@/app/components/UI/custom.pagination";
 import { getPatents } from "@/app/[lang]/research/patents/api";
+import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 
 const ClientPage = ({
   props,
@@ -21,29 +22,24 @@ const ClientPage = ({
   const t = useTranslations("research");
   const button = useTranslations("buttons");
 
-  // State
   const [data, setData] = useState(props?.data || []);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalItems, setTotalItems] = useState(props?.totalCount || 0);
-  const [loading, setLoading] = useState(false);
-
-  // Fetch Data Function
-  const fetchData = async (page: number) => {
-    setLoading(true);
-    try {
-      const response = await getPatents("uz", page, 6);
-      setData(response.data || []);
-      setTotalItems(response.totalCount || 0);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [totalPages, setTotalPages] = useState(
+    Math.ceil((props?.totalCount || 0) / 6),
+  );
 
   const subItemDocument = useSelector(
     (state: RootState) => state.sideBar.university.researchSidebarItems,
   );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getPatents(getCurrentLangClient(), currentPage, 6);
+      setData(response.data || []);
+      setTotalPages(Math.ceil((response.totalCount || 0) / 6));
+    };
+    fetchData();
+  }, [currentPage]);
 
   const brodCmbItems = [
     {
@@ -56,11 +52,6 @@ const ClientPage = ({
     },
   ];
 
-  // Fetch data when the page changes
-  useEffect(() => {
-    fetchData(currentPage);
-  }, [currentPage]);
-
   return (
     <LeftSidebarAndComponent
       broadCampItems={brodCmbItems}
@@ -68,20 +59,15 @@ const ClientPage = ({
       translationKey="research"
       sidebarTitle={t("subItems.5")}
     >
-      {/* Render Patents */}
       <Patents buttonText={button("read")} props={data} />
 
-      {/* Pagination */}
-      <div className="flex justify-center mt-4">
-        <Pagination
-          current={currentPage}
-          total={totalItems}
-          pageSize={6}
-          onChange={(page) => setCurrentPage(page)}
-          showSizeChanger={false}
-          showQuickJumper
+      {totalPages > 1 && (
+        <CustomPagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
         />
-      </div>
+      )}
     </LeftSidebarAndComponent>
   );
 };

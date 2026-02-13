@@ -2,29 +2,16 @@ import React from "react";
 import StructureSchema from "@/app/components/templates/university/structure.schema";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
 import OrgChartPage from "@/app/components/templates/university/structure.schema";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Rekvizitlar - Nordik Xalqaro Universiteti",
-  description:
-    "Nordik Xalqaro Universitetining rekvizitlari: bank rekvizitlari, rasmiy manzil, STIR, IFUT, MFO va boshqa muhim ma'lumotlar. Universitetimiz haqidagi barcha rekvizitlar ushbu sahifada mavjud.",
-  alternates: {
-    canonical: "https://nordicuniversity.org/uz/university/requisites",
-  },
-  openGraph: {
-    title: "Rekvizitlar - Nordik Xalqaro Universiteti",
-    description:
-      "Nordik Xalqaro Universitetining rekvizitlari: bank rekvizitlari, rasmiy manzil, STIR, IFUT, MFO va boshqa muhim ma'lumotlar. Universitetimiz haqidagi barcha rekvizitlar ushbu sahifada mavjud.",
-    url: "https://nordicuniversity.org/uz/university/requisites",
-    siteName: "Nordik Xalqaro Universiteti",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rekvizitlar - Nordik Xalqaro Universiteti",
-    description:
-      "Nordik Xalqaro Universitetining rekvizitlari: bank rekvizitlari, rasmiy manzil, STIR, IFUT, MFO va boshqa muhim ma'lumotlar. Universitetimiz haqidagi barcha rekvizitlar ushbu sahifada mavjud.",
-  },
-};
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
+    title: "Tashkiliy tuzilma sxemasi - Nordik Xalqaro Universiteti",
+    description: "Nordik Xalqaro Universitetining tashkiliy tuzilma sxemasi.",
+    lang: params.lang,
+    path: "/university/structure-schema",
+  });
+}
 
 const getAllStructuresTree = async (lang: string) => {
   try {

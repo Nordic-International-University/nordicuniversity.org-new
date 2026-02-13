@@ -65,14 +65,13 @@ const getIconForType = (type: SectionType) => {
   }
 };
 
-// Modern Staff Card Component
 const StaffCard = ({ staff }: { staff: Staff }) => {
   return (
-    <div className="bg-white rounded-2xl border border-tertiary/10 overflow-hidden shadow-xl">
-      <div className="flex flex-col lg:flex-row" style={{ minHeight: '420px' }}>
-        {/* Image Section */}
-        <div className="lg:w-2/5 relative">
-          <div className="h-64 lg:h-full relative overflow-hidden bg-gradient-to-br from-text_secondary/20 to-tertiary/20">
+    <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+      <div className="flex flex-col lg:flex-row" style={{ minHeight: "400px" }}>
+        {/* Image */}
+        <div className="lg:w-[38%] relative">
+          <div className="h-64 lg:h-full relative overflow-hidden bg-gray-100">
             <Image
               width={500}
               height={600}
@@ -80,41 +79,25 @@ const StaffCard = ({ staff }: { staff: Staff }) => {
               alt={staff.full_name}
               className="w-full h-full object-cover"
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-tertiary/80 via-tertiary/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white/10" />
-
-            {/* Position badge on mobile */}
-            <div className="absolute bottom-4 left-4 right-4 lg:hidden">
-              <span className="inline-block px-4 py-2 bg-white/95 backdrop-blur-sm rounded-xl text-text_secondary text-sm font-semibold shadow-lg">
-                {staff.position}
-              </span>
-            </div>
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="lg:w-3/5 p-6 lg:p-8 flex flex-col justify-center">
-          {/* Position - Desktop */}
-          <div className="hidden lg:flex items-center gap-3 mb-4">
-            <div className="w-10 h-1 bg-gradient-to-r from-text_secondary to-text_secondary/50 rounded-full" />
-            <span className="text-text_secondary text-sm font-semibold uppercase tracking-wider">
-              {staff.position}
-            </span>
-          </div>
+        {/* Content */}
+        <div className="lg:w-[62%] p-6 lg:p-8 flex flex-col justify-center">
+          <span className="text-text_secondary text-sm font-semibold uppercase tracking-wider">
+            {staff.position}
+          </span>
 
-          {/* Name */}
-          <h3 className="text-tertiary text-2xl lg:text-3xl font-bold mb-4">
+          <h3 className="text-text_secondary text-2xl lg:text-[28px] font-bold mt-2 mb-4">
             {staff.full_name}
           </h3>
 
-          {/* Description */}
           <div
-            className="ql-editor text-tertiary/70 text-sm lg:text-base leading-relaxed line-clamp-5"
+            className="ql-editor text-gray-500 text-base leading-relaxed line-clamp-5"
             dangerouslySetInnerHTML={{ __html: staff.description }}
           />
 
-          {/* Footer */}
-          <div className="flex items-center justify-between mt-6 pt-6 border-t border-tertiary/10">
+          <div className="flex items-center justify-between mt-6 pt-5 border-t border-gray-200">
             <SocialLinks
               className="!mt-0"
               social_network_links={staff.social_network_links}
@@ -125,7 +108,7 @@ const StaffCard = ({ staff }: { staff: Staff }) => {
                 href={`${process.env.NEXT_PUBLIC_URL_BACKEND}${staff.resume_file.file_path}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 bg-text_secondary text-white rounded-xl text-sm font-medium hover:bg-text_secondary/90 hover:shadow-lg hover:shadow-text_secondary/30 transition-all"
+                className="flex items-center gap-2 px-5 py-2.5 bg-text_secondary text-white rounded-lg text-sm font-medium hover:bg-text_secondary/90 transition-colors"
               >
                 <FileText className="w-4 h-4" />
                 <span>CV</span>
@@ -158,18 +141,23 @@ const Structure = ({
   const [isMounted, setIsMounted] = useState(false);
   const swiperRef = useRef<SwiperRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
-  const [subDropdownOpen, setSubDropdownOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const t = useTranslations("university.structure");
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const handleChangeStructureType = useCallback((type: any) => {
-    handleChangeStructure(type);
-    setMobileDropdownOpen(false);
-  }, [handleChangeStructure]);
+  const handleChangeStructureType = useCallback(
+    (type: any) => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        handleChangeStructure(type);
+        setTimeout(() => setIsAnimating(false), 50);
+      }, 150);
+    },
+    [handleChangeStructure],
+  );
 
   const handlePrev = () => {
     swiperRef.current?.swiper.slidePrev();
@@ -181,235 +169,159 @@ const Structure = ({
 
   return (
     <article className="mt-8 mb-14">
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Sidebar */}
-        <div className="lg:w-64 flex-shrink-0">
-          {/* Mobile Dropdown */}
-          <div className="lg:hidden mb-4">
-            <button
-              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-              className="w-full flex items-center justify-between px-5 py-4 bg-text_secondary text-white rounded-xl font-medium"
-            >
-              <span className="flex items-center gap-3">
-                {getIconForType(selectedStructureType as SectionType)}
-                {data.find((item) => item.type === selectedStructureType)?.label}
-              </span>
-              <ChevronDown className={`w-5 h-5 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
+      {/* Horizontal Tabs — type selection */}
+      <div className="flex flex-wrap items-center gap-2 border-b border-gray-200 pb-3 mb-6">
+        {data.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => handleChangeStructureType(item.type)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              selectedStructureType === item.type
+                ? "bg-text_secondary text-white"
+                : "text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+            }`}
+          >
+            {getIconForType(item.type)}
+            {item.label}
+          </button>
+        ))}
+        <Link
+          href="/university/structure-schema"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 transition-all duration-200"
+        >
+          <GitBranch className="w-4 h-4" />
+          {t("tree")}
+        </Link>
+      </div>
 
-            {mobileDropdownOpen && (
-              <div className="mt-2 bg-white rounded-xl border border-tertiary/10 shadow-lg overflow-hidden">
-                {data.map((item, index) => (
+      {/* Content with fade animation */}
+      <div
+        className={`transition-all duration-200 ${isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}
+      >
+        {selectedStructureType === SectionType.RECTORATE &&
+          structureTypeData.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {structureTypeData
+                .filter((item) => item.staffs.length > 0)
+                .map((item, index) => (
                   <button
                     key={index}
-                    onClick={() => handleChangeStructureType(item.type)}
-                    className={`w-full flex items-center gap-3 px-5 py-3 text-left transition-colors ${
-                      selectedStructureType === item.type
-                        ? 'bg-text_secondary/10 text-text_secondary'
-                        : 'text-tertiary hover:bg-box_color'
+                    onClick={() => setStructureButtonData(item.slug)}
+                    className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      structureButtonData === item.slug
+                        ? "bg-gray-800 text-white"
+                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                     }`}
                   >
-                    {getIconForType(item.type)}
-                    {item.label}
+                    {item.name}
                   </button>
                 ))}
-              </div>
-            )}
-          </div>
-
-          {/* Desktop Sidebar */}
-          <div className="hidden lg:block sticky top-24 space-y-3">
-            {data.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleChangeStructureType(item.type)}
-                className={`w-full flex items-center gap-3 px-5 py-4 rounded-xl font-medium transition-all duration-300 ${
-                  selectedStructureType === item.type
-                    ? 'bg-text_secondary text-white shadow-lg shadow-text_secondary/30'
-                    : 'bg-box_color text-tertiary hover:bg-text_secondary/10 hover:text-text_secondary'
-                }`}
-              >
-                {getIconForType(item.type)}
-                {item.label}
-              </button>
-            ))}
-
-            <div className="pt-4 border-t border-tertiary/10">
-              <Link
-                href="/university/structure-schema"
-                className="w-full flex items-center gap-3 px-5 py-4 rounded-xl font-medium bg-tertiary/5 text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300"
-              >
-                <GitBranch className="w-5 h-5" />
-                {t("tree")}
-              </Link>
             </div>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="flex-1 min-w-0">
-          {/* Sub-category tabs for Rectorate */}
-          {selectedStructureType === SectionType.RECTORATE && structureTypeData.length > 0 && (
-            <>
-              {/* Mobile Sub-dropdown */}
-              <div className="lg:hidden mb-6">
-                <button
-                  onClick={() => setSubDropdownOpen(!subDropdownOpen)}
-                  className="w-full flex items-center justify-between px-5 py-4 bg-box_color text-tertiary rounded-xl font-medium"
-                >
-                  <span>
-                    {structureTypeData.find((item) => item.slug === structureButtonData)?.name || "Tanlang"}
-                  </span>
-                  <ChevronDown className={`w-5 h-5 transition-transform ${subDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
-
-                {subDropdownOpen && (
-                  <div className="mt-2 bg-white rounded-xl border border-tertiary/10 shadow-lg overflow-hidden max-h-60 overflow-y-auto">
-                    {structureTypeData
-                      .filter((item) => item.staffs.length > 0)
-                      .map((item, index) => (
-                        <button
-                          key={index}
-                          onClick={() => {
-                            setStructureButtonData(item.slug);
-                            setSubDropdownOpen(false);
-                          }}
-                          className={`w-full px-5 py-3 text-left transition-colors ${
-                            structureButtonData === item.slug
-                              ? 'bg-text_secondary/10 text-text_secondary'
-                              : 'text-tertiary hover:bg-box_color'
-                          }`}
-                        >
-                          {item.name}
-                        </button>
-                      ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Desktop Tabs */}
-              <div className="hidden lg:flex flex-wrap gap-3 mb-8">
-                {structureTypeData
-                  .filter((item) => item.staffs.length > 0)
-                  .map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setStructureButtonData(item.slug)}
-                      className={`px-5 py-3 rounded-xl font-medium text-sm transition-all duration-300 ${
-                        structureButtonData === item.slug
-                          ? 'bg-text_secondary text-white shadow-lg shadow-text_secondary/20'
-                          : 'bg-box_color text-tertiary hover:bg-text_secondary/10'
-                      }`}
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-              </div>
-            </>
           )}
 
-          {/* Content Area */}
-          {selectedStructureType === SectionType.RECTORATE ? (
-            isMounted && rectorateContent?.staffs?.length > 0 ? (
-              <div className="relative">
-                <style>{swiperStyles}</style>
-                <Swiper
-                  ref={swiperRef}
-                  modules={[EffectFade, Autoplay]}
-                  effect="fade"
-                  fadeEffect={{ crossFade: true }}
-                  speed={800}
-                  autoplay={{ delay: 8000, disableOnInteraction: true }}
-                  onSlideChange={({ activeIndex }) => setActiveIndex(activeIndex)}
-                  className="w-full structure-swiper"
-                >
-                  {rectorateContent.staffs.map((staff: Staff, index: number) => (
-                    <SwiperSlide key={index}>
-                      <StaffCard staff={staff} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+        {/* Content Area */}
+        {selectedStructureType === SectionType.RECTORATE ? (
+          isMounted && rectorateContent?.staffs?.length > 0 ? (
+            <div className="relative">
+              <style>{swiperStyles}</style>
+              <Swiper
+                ref={swiperRef}
+                modules={[EffectFade, Autoplay]}
+                effect="fade"
+                fadeEffect={{ crossFade: true }}
+                speed={800}
+                autoplay={{ delay: 8000, disableOnInteraction: true }}
+                onSlideChange={({ activeIndex }) => setActiveIndex(activeIndex)}
+                className="w-full structure-swiper"
+              >
+                {rectorateContent.staffs.map((staff: Staff, index: number) => (
+                  <SwiperSlide key={index}>
+                    <StaffCard staff={staff} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-                {/* Navigation */}
-                {rectorateContent.staffs.length > 1 && (
-                  <div className="flex items-center justify-center gap-4 mt-6">
-                    <button
-                      onClick={handlePrev}
-                      className="w-12 h-12 rounded-full bg-box_color text-tertiary flex items-center justify-center hover:bg-text_secondary hover:text-white transition-all duration-300"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-
-                    <div className="flex items-center gap-2">
-                      {rectorateContent.staffs.map((_: any, idx: number) => (
-                        <button
-                          key={idx}
-                          onClick={() => swiperRef.current?.swiper.slideTo(idx)}
-                          className={`h-2 rounded-full transition-all duration-300 ${
-                            activeIndex === idx
-                              ? 'w-8 bg-text_secondary'
-                              : 'w-2 bg-tertiary/20 hover:bg-tertiary/40'
-                          }`}
-                        />
-                      ))}
-                    </div>
-
-                    <button
-                      onClick={handleNext}
-                      className="w-12 h-12 rounded-full bg-box_color text-tertiary flex items-center justify-center hover:bg-text_secondary hover:text-white transition-all duration-300"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center py-16 text-center">
-                <div className="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-tertiary/40" />
-                </div>
-                <p className="text-tertiary/50">Ma'lumot topilmadi</p>
-              </div>
-            )
-          ) : (
-            /* List view for other types */
-            <div className="grid gap-4">
-              {structureTypeData.length > 0 ? (
-                structureTypeData.map((item, index) => (
-                  <Link
-                    key={item.slug}
-                    href={`/university/structure/${item.slug}`}
-                    className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-tertiary/10 hover:border-text_secondary/30 hover:shadow-lg transition-all duration-300"
+              {/* Navigation */}
+              {rectorateContent.staffs.length > 1 && (
+                <div className="flex items-center justify-center gap-4 mt-6">
+                  <button
+                    onClick={handlePrev}
+                    className="w-10 h-10 rounded-full border border-gray-200 text-gray-500 flex items-center justify-center hover:bg-text_secondary hover:text-white hover:border-text_secondary transition-all duration-200"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-text_secondary/10 text-text_secondary flex items-center justify-center flex-shrink-0 group-hover:bg-text_secondary group-hover:text-white transition-all duration-300">
-                      <span className="font-bold">{String(index + 1).padStart(2, '0')}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3
-                        className="text-tertiary font-medium group-hover:text-text_secondary transition-colors line-clamp-1"
-                        dangerouslySetInnerHTML={{ __html: item.name }}
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+
+                  <div className="flex items-center gap-2">
+                    {rectorateContent.staffs.map((_: any, idx: number) => (
+                      <button
+                        key={idx}
+                        onClick={() => swiperRef.current?.swiper.slideTo(idx)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          activeIndex === idx
+                            ? "w-8 bg-text_secondary"
+                            : "w-2 bg-gray-300 hover:bg-gray-400"
+                        }`}
                       />
-                      {item.staffs.length > 0 && (
-                        <p className="text-tertiary/50 text-sm mt-1">
-                          {item.staffs.length} xodim
-                        </p>
-                      )}
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-tertiary/30 group-hover:text-text_secondary group-hover:translate-x-1 transition-all flex-shrink-0" />
-                  </Link>
-                ))
-              ) : (
-                <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <div className="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center mb-4">
-                    <Building2 className="w-8 h-8 text-tertiary/40" />
+                    ))}
                   </div>
-                  <p className="text-tertiary/50">Ma'lumot topilmadi</p>
+
+                  <button
+                    onClick={handleNext}
+                    className="w-10 h-10 rounded-full border border-gray-200 text-gray-500 flex items-center justify-center hover:bg-text_secondary hover:text-white hover:border-text_secondary transition-all duration-200"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
                 </div>
               )}
             </div>
-          )}
-        </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-3">
+                <Users className="w-7 h-7 text-gray-400" />
+              </div>
+              <p className="text-gray-400 text-base">Ma'lumot topilmadi</p>
+            </div>
+          )
+        ) : (
+          /* List view for other types */
+          <div className="flex flex-col gap-3">
+            {structureTypeData.length > 0 ? (
+              structureTypeData.map((item, index) => (
+                <Link
+                  key={item.slug}
+                  href={`/university/structure/${item.slug}`}
+                  className="group flex items-center gap-4 py-4 px-5 rounded-xl border border-gray-200 bg-white
+                  hover:border-text_secondary/20 hover:shadow-sm transition-all duration-200"
+                >
+                  <span className="text-text_secondary/30 text-lg font-bold flex-shrink-0 w-8 text-center">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <h3
+                      className="text-gray-800 text-base font-medium group-hover:text-text_secondary transition-colors line-clamp-1"
+                      dangerouslySetInnerHTML={{ __html: item.name }}
+                    />
+                    {item.staffs.length > 0 && (
+                      <p className="text-gray-400 text-sm mt-0.5">
+                        {item.staffs.length} xodim
+                      </p>
+                    )}
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-text_secondary group-hover:translate-x-1 transition-all flex-shrink-0" />
+                </Link>
+              ))
+            ) : (
+              <div className="flex flex-col items-center justify-center py-16 text-center">
+                <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-3">
+                  <Building2 className="w-7 h-7 text-gray-400" />
+                </div>
+                <p className="text-gray-400 text-base">Ma'lumot topilmadi</p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
+      {/* end fade animation wrapper */}
     </article>
   );
 };

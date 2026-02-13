@@ -5,26 +5,17 @@ import {
   getALlTrends,
   VideoResponse,
 } from "@/app/[lang]/press-service/nordic-trend/getAllReleases";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Nordic Trend - Xalqaro Nordik Universiteti",
-  description:
-    "Xalqaro Nordik Universitetining eng so'nggi nordic trend videolarini tomosha qiling. Universitetdagi trendlarni va yangiliklarni kuzatib boring.",
-  keywords: [
-    "Nordic Trend",
-    "Xalqaro Nordik Universiteti trendlari",
-    "Universitet videolari",
-    "Nordic trendlar",
-    "Universitet yangiliklari",
-  ],
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Nordic Trend - Xalqaro Nordik Universiteti",
     description:
       "Xalqaro Nordik Universitetining eng so'nggi nordic trend videolarini tomosha qiling. Universitetdagi trendlarni va yangiliklarni kuzatib boring.",
-    url: "https://nordicuniversity.org/press-service/nordic-trend",
-    type: "website",
-  },
-};
+    lang: params.lang,
+    path: "/press-service/nordic-trend",
+  });
+}
 
 const Page = async () => {
   const data: VideoResponse = await getALlTrends({

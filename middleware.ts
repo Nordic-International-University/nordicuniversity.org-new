@@ -3,63 +3,37 @@ import createMiddleware from "next-intl/middleware";
 import { locales } from "./i18n.config";
 
 const intlMiddleware = createMiddleware({
-  defaultLocale: "en",
+  defaultLocale: "uz",
   locales,
   localeDetection: false,
+  localePrefix: "always",
 });
 
-async function fetchDefaultLanguage(): Promise<string> {
-  try {
-    console.log("Fetching default language...");
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/core/language`,
-    );
+export default function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-    // Check if response is OK and content-type is JSON
-    const contentType = res.headers.get("content-type");
-
-    if (!res.ok) {
-      console.error(`Language API returned status ${res.status}`);
-      return "uz";
-    }
-
-    if (!contentType || !contentType.includes("application/json")) {
-      console.error("Language API returned non-JSON response");
-      return "uz";
-    }
-
-    const data = await res.json();
-    console.log("Default language fetched:", data.language);
-    return data.language || "uz";
-  } catch (error) {
-    console.error("Failed to fetch default language:", error);
-    return "uz";
+  // Clean double slashes: /uz//university → /uz/university (308)
+  if (pathname !== "/" && pathname.includes("//")) {
+    const cleaned = pathname.replace(/\/\/+/g, "/");
+    const url = req.nextUrl.clone();
+    url.pathname = cleaned;
+    return NextResponse.redirect(url, 308);
   }
-}
 
-export default async function middleware(req: NextRequest) {
-  const cookieLang = req.cookies.get("lang")?.value as string | null;
-  const defaultLang = await fetchDefaultLanguage();
-  const lang = cookieLang || defaultLang;
+  const pathSegments = pathname.split("/");
+  const firstSegment = pathSegments[1];
 
+  // If URL already has a valid locale prefix — serve as-is, no redirect
+  if (locales.includes(firstSegment)) {
+    return intlMiddleware(req);
+  }
+
+  // No locale prefix → redirect to user's preferred language (cookie) or default uz
+  const cookieLang = req.cookies.get("lang")?.value;
+  const lang = cookieLang && locales.includes(cookieLang) ? cookieLang : "uz";
   const url = req.nextUrl.clone();
-  const pathnameParts = url.pathname.split("/");
-
-  if (locales.includes(pathnameParts[1])) {
-    const currentLocale = pathnameParts[1];
-
-    if (currentLocale !== lang) {
-      pathnameParts[1] = lang;
-      url.pathname = pathnameParts.join("/");
-      return NextResponse.redirect(url, 307);
-    }
-  } else {
-    url.pathname = `/${lang}${url.pathname}`;
-    return NextResponse.redirect(url, 307);
-  }
-
-  req.headers.set("Accept-Language", lang);
-  return intlMiddleware(req);
+  url.pathname = `/${lang}${pathname === "/" ? "" : pathname}`;
+  return NextResponse.redirect(url, 307);
 }
 
 export const config = {

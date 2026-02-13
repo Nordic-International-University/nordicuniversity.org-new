@@ -9,7 +9,7 @@ import Scientific_events from "@/app/components/templates/research/scientific-ev
 import { getAllEvents } from "@/app/[lang]/research/scientific-events/getAllEvents";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
 import CustomPagination from "@/app/components/UI/custom.pagination";
-import { buttonsType, ScientificEvent } from "@/types/research/scince_events";
+import { ScientificEvent } from "@/types/research/scince_events";
 import { nordicLife } from "@/types/templates/nordiklieve.types";
 
 const ClientPage = ({
@@ -59,25 +59,6 @@ const ClientPage = ({
     },
   ];
 
-  const buttons: buttonsType[] = [
-    {
-      label: language("future"),
-      className: time === "future" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
-      onClick: () => {
-        setTime("future");
-        setCurrentPage(1);
-      },
-    },
-    {
-      label: language("past"),
-      className: time === "past" ? "bg-[#46658B] text-white" : "bg-[#DBF2FF]",
-      onClick: () => {
-        setTime("past");
-        setCurrentPage(1);
-      },
-    },
-  ];
-
   return (
     <LeftSidebarAndComponent
       translationKey="research"
@@ -85,18 +66,38 @@ const ClientPage = ({
       sidebarItems={subItemDocument}
       sidebarTitle={t("scinceEvent.breadcrumb.scientific_events")}
     >
-      <div className="flex items-center gap-4 justify-center mt-10">
-        {buttons.map((button, index) => (
-          <button
-            key={index}
-            className={`${button.className} rounded py-3 max-sm:px-5 px-9 text-md max-sm:text-sm font-semibold`}
-            onClick={button.onClick}
-          >
-            {button.label}
-          </button>
-        ))}
+      {/* Time filter tabs */}
+      <div className="flex items-center gap-3 mt-8">
+        <button
+          className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200 ${
+            time === "future"
+              ? "bg-text_secondary text-white"
+              : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+          }`}
+          onClick={() => {
+            setTime("future");
+            setCurrentPage(1);
+          }}
+        >
+          {language("future")}
+        </button>
+        <button
+          className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200 ${
+            time === "past"
+              ? "bg-text_secondary text-white"
+              : "bg-gray-100 text-text_secondary hover:bg-gray-200"
+          }`}
+          onClick={() => {
+            setTime("past");
+            setCurrentPage(1);
+          }}
+        >
+          {language("past")}
+        </button>
       </div>
+
       <Scientific_events url="/research/scientific-events/" props={data} />
+
       {totalPages > 3 && (
         <CustomPagination
           currentPage={currentPage}

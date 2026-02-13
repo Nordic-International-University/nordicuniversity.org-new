@@ -9,7 +9,14 @@ import "swiper/css/navigation";
 import { Modal } from "antd";
 import Image from "next/image";
 import { LitsenziyaPropsTypes } from "@/types/templates/litsenziya.types";
-import { X, ChevronLeft, ChevronRight, FileText, Award, ScrollText } from "lucide-react";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  FileText,
+  Award,
+  ScrollText,
+} from "lucide-react";
 
 const Litsenziya = ({
   props,
@@ -57,14 +64,10 @@ const Litsenziya = ({
 
       <div className="relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-lg:mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-text_secondary/10 text-text_secondary text-sm font-medium mb-4">
-            <Award className="w-4 h-4" />
-          </div>
-          <h2 className="text-tertiary text-4xl max-lg:text-3xl max-sm:text-2xl font-bold">
-            {sectionTitle}
-          </h2>
-        </div>
+
+        <h2 className="text-tertiary text-4xl pb-10 max-lg:text-3xl max-sm:text-2xl font-bold">
+          {sectionTitle}
+        </h2>
 
         {/* Modern Tab Navigation */}
         {documentButtons?.length > 0 && (
@@ -121,17 +124,14 @@ const Litsenziya = ({
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {props[selectedTab]?.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                className="!w-[320px] max-sm:!w-[280px]"
-              >
+              <SwiperSlide key={index} className="!w-[320px] max-sm:!w-[280px]">
                 <div
                   className="group relative cursor-pointer"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   onClick={() =>
                     handleImageClick(
-                      `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`
+                      `${process.env.NEXT_PUBLIC_URL_BACKEND}${item.file.file_path}`,
                     )
                   }
                 >

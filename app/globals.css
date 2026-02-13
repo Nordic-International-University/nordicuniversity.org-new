@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Nav submenu animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
 
 .container {
     width: 1500px;
@@ -564,6 +602,170 @@ aside {
     }
 }
 
+
+/* ===== Accessibility Modes ===== */
+
+/* Font size (5 steps: 0=normal) */
+html.a11y-font-1 { font-size: 110% !important; }
+html.a11y-font-2 { font-size: 125% !important; }
+html.a11y-font-3 { font-size: 150% !important; }
+html.a11y-font-4 { font-size: 180% !important; }
+
+/* Line height (4 steps: 0=normal) */
+html.a11y-lh-1 { line-height: 1.7 !important; }
+html.a11y-lh-1 * { line-height: 1.7 !important; }
+html.a11y-lh-2 { line-height: 2.0 !important; }
+html.a11y-lh-2 * { line-height: 2.0 !important; }
+html.a11y-lh-3 { line-height: 2.4 !important; }
+html.a11y-lh-3 * { line-height: 2.4 !important; }
+
+/* Letter spacing (3 steps: 0=normal) */
+html.a11y-ls-1 * { letter-spacing: 0.05em !important; }
+html.a11y-ls-2 * { letter-spacing: 0.1em !important; }
+html.a11y-ls-3 * { letter-spacing: 0.18em !important; }
+
+/* A11y range slider styling */
+.a11y-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(11,64,117,0.1);
+    outline: none;
+}
+.a11y-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0b4075;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(11,64,117,0.3);
+}
+.a11y-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0b4075;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(11,64,117,0.3);
+}
+
+/* Word spacing */
+html.a11y-word-spacing * { word-spacing: 0.2em !important; }
+
+/* Align text left */
+html.a11y-text-left * {
+    text-align: left !important;
+}
+
+/* Grayscale (color blind) */
+html.a11y-grayscale {
+    filter: grayscale(100%) !important;
+}
+
+/* Invert colors */
+html.a11y-invert {
+    filter: invert(100%) hue-rotate(180deg) !important;
+}
+html.a11y-invert img,
+html.a11y-invert video,
+html.a11y-invert iframe {
+    filter: invert(100%) hue-rotate(180deg) !important;
+}
+
+/* Dark mode */
+html.a11y-dark {
+    filter: invert(90%) hue-rotate(180deg) !important;
+}
+html.a11y-dark img,
+html.a11y-dark video,
+html.a11y-dark iframe {
+    filter: invert(100%) hue-rotate(180deg) !important;
+}
+
+/* Sepia / warm tone */
+html.a11y-sepia {
+    filter: sepia(40%) !important;
+}
+
+/* Blue light filter */
+html.a11y-blue-filter {
+    filter: sepia(20%) saturate(70%) !important;
+}
+
+/* High contrast */
+html.a11y-high-contrast {
+    filter: contrast(1.5) !important;
+}
+
+/* Low saturation */
+html.a11y-low-saturation {
+    filter: saturate(30%) !important;
+}
+
+/* Underline links */
+html.a11y-underline-links a {
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    text-decoration-thickness: 2px !important;
+}
+
+/* Highlight links */
+html.a11y-highlight-links a {
+    background-color: rgba(255, 255, 0, 0.35) !important;
+    padding: 1px 3px !important;
+    border-radius: 2px !important;
+}
+
+/* Big cursor */
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath fill='black' stroke='white' stroke-width='1' d='M5 3l14 8-6 1.5L9 19z'/%3E%3C/svg%3E") 4 2, auto !important;
+}
+
+/* Readable font */
+html.a11y-readable-font,
+html.a11y-readable-font * {
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: 0.03em !important;
+    word-spacing: 0.1em !important;
+}
+
+/* Stop animations */
+html.a11y-stop-animations *,
+html.a11y-stop-animations *::before,
+html.a11y-stop-animations *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}
+
+/* Focus highlight */
+html.a11y-focus-highlight *:focus {
+    outline: 3px solid #ff6600 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 5px rgba(255, 102, 0, 0.3) !important;
+}
+
+/* Image borders — highlight images */
+html.a11y-img-border img {
+    border: 3px solid #0b4075 !important;
+    border-radius: 4px !important;
+}
+
+/* Hide images */
+html.a11y-hide-images img {
+    opacity: 0.05 !important;
+}
+
+/* Reading guide line */
+html.a11y-reading-guide .a11y-reading-guide-bar {
+    display: block !important;
+}
 
 /* Preview content styles - preserve editor layout */
 .preview-content {

@@ -1,41 +1,16 @@
 import React from "react";
 import ClientPage from "@/app/[lang]/research/scientific-ejournal/ClientPage";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
-export const metadata = {
-  title: "Ilmiy elektron jurnal - Xalqaro Nordik Universiteti",
-  description:
-    "“Nordic” ilmiy-amaliy elektron jurnali Xalqaro Nordik Universiteti tomonidan chop etiladi. Jurnal o‘zbek, rus, ingliz va fin tillarida maqolalarni nashr etib, zamonaviy ilmiy tadqiqotlarning natijalarini e’lon qilish va ilmiy nufuzni oshirishga xizmat qiladi. Bir yilda 5 ta son nashr etiladi va ISSN-3030-3400 raqami orqali standart talablariga mos keladi.",
-  keywords: [
-    "Ilmiy elektron jurnal",
-    "Nordic ilmiy jurnali",
-    "ISSN 3030-3400",
-    "Ilmiy maqolalar",
-    "Elektron jurnal",
-    "Xalqaro Nordik Universiteti",
-    "Ilmiy tadqiqotlar",
-    "Innovatsion tadqiqotlar",
-    "Ilmiy maqola nashri",
-    "O‘zbekiston jurnali",
-    "O‘zbek, rus, ingliz, fin tillarida maqolalar",
-    "Professor-o‘qituvchilar tadqiqotlari",
-    "Talabalar uchun ilmiy resurslar",
-    "Maqolalar topshirish",
-    "Elektron nashr",
-  ],
-  openGraph: {
+export async function generateMetadata({ params }: { params: { lang: string } }) {
+  return buildSeoMetadata({
     title: "Ilmiy elektron jurnal - Xalqaro Nordik Universiteti",
     description:
       "“Nordic” ilmiy-amaliy elektron jurnali Xalqaro Nordik Universiteti tomonidan chop etiladi. Jurnal o‘zbek, rus, ingliz va fin tillarida maqolalarni nashr etib, zamonaviy ilmiy tadqiqotlarning natijalarini e’lon qilish va ilmiy nufuzni oshirishga xizmat qiladi. Bir yilda 5 ta son nashr etiladi va ISSN-3030-3400 raqami orqali standart talablariga mos keladi.",
-    url: "https://nordicuniversity.org/research/scientific-ejournal",
-    type: "website",
-    images: [
-      {
-        url: "/public/images/research-images/journal.ppg",
-        alt: "Ilmiy elektron jurnal sahifasi",
-      },
-    ],
-  },
-};
+    lang: params.lang,
+    path: "/research/scientific-ejournal",
+  });
+}
 
 const getAllVolumes = async () => {
   try {

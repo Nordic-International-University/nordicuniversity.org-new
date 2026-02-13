@@ -1,34 +1,130 @@
 "use client";
 
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import university_logo from "@/public/university_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import menu from "@/public/images/home-images/hamburger_menu.png";
-import { CloseIcon } from "@nextui-org/shared-icons";
-import LanguageSelect from "@/app/components/UI/language.select";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import caricature from "@/public/images/home-images/mobile_image.png";
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/app/utils/store/Store";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
 import { setActiveMenu } from "@/app/utils/slices/menuItem.slice";
 import SocialMedia from "@/app/components/UI/socialMedia";
 import { fetchSubPages } from "@/app/utils/slices/navbar.slice";
 import getCurrentLangClient from "@/app/helpers/getCurrentLang";
+import LanguageSelect from "@/app/components/UI/language.select";
+import { HiOutlineX, HiOutlineChevronDown } from "react-icons/hi";
+import { HiOutlineBars3 } from "react-icons/hi2";
+
+const HOVER_OPEN_DELAY = 200;
+const HOVER_CLOSE_DELAY = 300;
 
 const Nav: FC = () => {
   const pathname = usePathname();
   const [activeSubItems, setActiveSubItems] = useState<string | null>(null);
+  const [visibleSubmenu, setVisibleSubmenu] = useState<string | null>(null);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [itemsReady, setItemsReady] = useState(false);
   const menuItems = useSelector((state: RootState) => state.sideBar.menuItems);
   const [transKey, setTransKey] = useState<string | null>(null);
   const t = useTranslations(transKey);
   const tMenu = useTranslations("menu");
-  const subItemsRef = useRef<HTMLDivElement | null>(null);
   const dispatch: AppDispatch = useDispatch();
+
+  const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  const clearTimers = useCallback(() => {
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current);
+      openTimerRef.current = null;
+    }
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  }, []);
+
+  const handleMenuItemEnter = useCallback(
+    (menuItem: any) => {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = null;
+      }
+      if (openTimerRef.current) {
+        clearTimeout(openTimerRef.current);
+        openTimerRef.current = null;
+      }
+
+      openTimerRef.current = setTimeout(() => {
+        setItemsReady(false);
+        setActiveSubItems(menuItem.name);
+        setVisibleSubmenu(menuItem.name);
+        setTransKey(menuItem.transKey);
+        dispatch(setActiveMenu(true));
+        openTimerRef.current = null;
+      }, HOVER_OPEN_DELAY);
+    },
+    [dispatch],
+  );
+
+  const handleMenuItemLeave = useCallback(() => {
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current);
+      openTimerRef.current = null;
+    }
+
+    closeTimerRef.current = setTimeout(() => {
+      setActiveSubItems(null);
+      setVisibleSubmenu(null);
+      setItemsReady(false);
+      dispatch(setActiveMenu(false));
+      closeTimerRef.current = null;
+    }, HOVER_CLOSE_DELAY);
+  }, [dispatch]);
+
+  const handleSubmenuEnter = useCallback(() => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  }, []);
+
+  const handleSubmenuLeave = useCallback(() => {
+    closeTimerRef.current = setTimeout(() => {
+      setActiveSubItems(null);
+      setVisibleSubmenu(null);
+      setItemsReady(false);
+      dispatch(setActiveMenu(false));
+      closeTimerRef.current = null;
+    }, HOVER_CLOSE_DELAY);
+  }, [dispatch]);
+
+  // Measure content height & trigger item animations when submenu changes
+  useEffect(() => {
+    if (visibleSubmenu && contentRef.current) {
+      // Measure after render
+      requestAnimationFrame(() => {
+        if (contentRef.current) {
+          setContentHeight(contentRef.current.scrollHeight);
+        }
+        // Trigger staggered fade-in after a frame
+        requestAnimationFrame(() => {
+          setItemsReady(true);
+        });
+      });
+    } else {
+      setContentHeight(0);
+      setItemsReady(false);
+    }
+  }, [visibleSubmenu]);
+
+  useEffect(() => {
+    return () => clearTimers();
+  }, [clearTimers]);
+
   const handleAccordionToggle = (menuItemName: string) => {
     setActiveSubItems((prev) => (prev === menuItemName ? null : menuItemName));
   };
@@ -38,92 +134,64 @@ const Nav: FC = () => {
     dispatch(fetchSubPages(currentLang));
   }, []);
 
-  const handleMouseEnter = (menuItemName: any) => {
-    setActiveSubItems(menuItemName.name);
-    setTransKey(menuItemName.transKey);
-    dispatch(setActiveMenu(true));
-  };
-
-  const handleMouseLeave = () => {
-    setActiveSubItems(null);
-    dispatch(setActiveMenu(false));
-  };
-
-  const openHamburgerMenu = () => {
-    setOpenMenu(true);
-  };
-
-  const closeHamburgerMenu = () => {
-    setOpenMenu(false);
-    setActiveSubItems(null);
-  };
-
   const getSubItems = (menuItemName: string) => {
     const menuItem = menuItems.find((item: any) => item.name === menuItemName);
     return menuItem ? menuItem.subItems : [];
   };
 
   useEffect(() => {
-    const body = document.body;
-
     if (openMenu) {
-      body.style.overflow = "hidden";
-      body.style.position = "fixed";
-      body.style.width = "100%";
+      document.body.style.overflow = "hidden";
     } else {
-      body.style.overflow = "auto";
-      body.style.position = "static";
+      document.body.style.overflow = "";
     }
-
     return () => {
-      body.style.overflow = "auto";
-      body.style.position = "static";
+      document.body.style.overflow = "";
     };
   }, [openMenu]);
-
-  useEffect(() => {
-    if (activeSubItems && subItemsRef.current) {
-      gsap.fromTo(
-        subItemsRef.current.children,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.1,
-          duration: 0.5,
-        },
-      );
-    }
-  }, [activeSubItems]);
 
   const isHomePage = /^\/(uz|en|ru)?\/?$/.test(pathname);
   const navClass =
     isHomePage || activeSubItems ? "sm:bg-nav_opacity" : "bg-primary-gradient";
 
+  // Reorder: swap "education" (Ta'lim) and "press" (Matbuot xizmati)
+  const reorderedItems = React.useMemo(() => {
+    if (menuItems.length === 0) return menuItems;
+    const items = [...menuItems];
+    const eduIdx = items.findIndex((m: any) => m.menuTransKey === "education");
+    const pressIdx = items.findIndex((m: any) => m.menuTransKey === "press");
+    if (eduIdx !== -1 && pressIdx !== -1) {
+      [items[eduIdx], items[pressIdx]] = [items[pressIdx], items[eduIdx]];
+    }
+    return items;
+  }, [menuItems]);
+
+  const splitIndex = Math.floor(reorderedItems.length / 2);
+  const isSubmenuOpen = !!visibleSubmenu;
+
   return (
     <>
       <nav
-        className={`bg-opacity-95 ${isHomePage ? "bg-nav_opacity" : "max-sm:bg-primary-gradient"} ${navClass} z-[18]`}
+        className={`${isHomePage ? "bg-nav_opacity" : "max-sm:bg-primary-gradient"} ${navClass} z-[18] transition-colors`}
       >
         <div className="container">
-          <div className="flex items-center max-xl:py-6 justify-between">
-            <div className="flex max-xl:hidden items-center gap-5 flex-1 justify-start">
+          <div className="relative flex items-center justify-between max-xl:py-5">
+            {/* Left menu items */}
+            <div className="hidden xl:flex items-center">
               <ul className="flex items-center">
-                {menuItems
-                  .slice(0, Math.ceil(menuItems.length / 2))
+                {reorderedItems
+                  .slice(0, splitIndex)
                   .map((menuItem: any, index: number) => (
                     <li
-                      onMouseEnter={() => handleMouseEnter(menuItem)}
-                      onMouseLeave={handleMouseLeave}
-                      className="relative text-white text-nowrap py-10 p-6 text-lg "
+                      onMouseEnter={() => handleMenuItemEnter(menuItem)}
+                      onMouseLeave={handleMenuItemLeave}
+                      className="relative py-8 px-4 first:pl-0"
                       key={index}
                     >
                       <Link
-                        className={`relative ${
-                          pathname.split("/")[2] === menuItem.url.split("/")[1]
-                            ? "after:w-full"
-                            : "after:w-0"
-                        } after:content-[''] uppercase after:absolute after:left-0 after:-bottom-[43px] after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        className={`text-white/90 hover:text-white text-[15px] font-medium uppercase tracking-wide transition-colors relative
+                          after:content-[''] after:absolute after:left-0 after:-bottom-[33px] after:h-[2px] after:bg-white after:transition-all after:duration-300
+                          ${pathname.split("/")[2] === menuItem.url.split("/")[1] ? "after:w-full text-white" : "after:w-0"}`}
                         href={menuItem.url}
                       >
                         {tMenu(`${menuItem.menuTransKey}`)}
@@ -132,39 +200,54 @@ const Nav: FC = () => {
                   ))}
               </ul>
             </div>
-            <div className="flex justify-center">
+
+            {/* Logo — always centered */}
+            <div className="hidden xl:block absolute left-1/2 -translate-x-1/2 z-10">
               <Link href="/">
                 <Image
-                  className="max-xl:w-[170px]"
-                  width={220}
+                  width={200}
                   src={university_logo}
                   alt="universitet logosi"
                 />
               </Link>
             </div>
-            <Image
-              className="hidden max-xl:block"
-              src={menu}
-              onClick={openHamburgerMenu}
-              alt="menu"
-            />
-            <div className="flex max-xl:hidden z-10 sticky items-center gap-4 flex-1 justify-end">
+
+            {/* Mobile logo */}
+            <div className="xl:hidden">
+              <Link href="/">
+                <Image
+                  width={160}
+                  src={university_logo}
+                  alt="universitet logosi"
+                />
+              </Link>
+            </div>
+
+            {/* Mobile hamburger */}
+            <button
+              className="xl:hidden w-10 h-10 flex items-center justify-center
+                rounded-lg text-white hover:bg-white/10 transition-colors"
+              onClick={() => setOpenMenu(true)}
+            >
+              <HiOutlineBars3 className="text-2xl" />
+            </button>
+
+            {/* Right menu items */}
+            <div className="hidden xl:flex items-center justify-end">
               <ul className="flex items-center">
-                {menuItems
-                  .slice(Math.ceil(menuItems.length / 2))
-                  .map((menuItem: any, index: any) => (
+                {reorderedItems
+                  .slice(splitIndex)
+                  .map((menuItem: any, index: number) => (
                     <li
-                      onMouseEnter={() => handleMouseEnter(menuItem)}
-                      onMouseLeave={handleMouseLeave}
-                      className="relative text-white text-nowrap py-10 pr-0 pl-10 text-lg"
+                      onMouseEnter={() => handleMenuItemEnter(menuItem)}
+                      onMouseLeave={handleMenuItemLeave}
+                      className="relative py-8 pl-8 last:pr-0"
                       key={index}
                     >
                       <Link
-                        className={`relative ${
-                          pathname.split("/")[2] === menuItem.url.split("/")[1]
-                            ? "after:w-full"
-                            : "after:w-0"
-                        } after:content-[''] uppercase after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:bg-white after:transition-all after:duration-300`}
+                        className={`text-white/90 hover:text-white text-[15px] font-medium uppercase tracking-wide transition-colors relative
+                          after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:bg-white after:transition-all after:duration-300
+                          ${pathname.split("/")[2] === menuItem.url.split("/")[1] ? "after:w-full text-white" : "after:w-0"}`}
                         href={menuItem.url}
                       >
                         {tMenu(`${menuItem.menuTransKey}`)}
@@ -176,120 +259,244 @@ const Nav: FC = () => {
           </div>
         </div>
       </nav>
-      {/*mobile menu*/}
-      <div
-        className={`${openMenu ? "top-0" : "-top-[300%]"} transition-all ease-in-out z-40 bg-white w-full h-screen overflow-auto fixed`}
-      >
-        <div className="p-4">
-          <div className="flex item-center justify-between">
-            <div className="static z-50">
-              <LanguageSelect color="black" />
-            </div>
-            <SocialMedia color="black" />
-          </div>
-          <div className="px-12">
-            <h2 className="text-center pt-[45px] font-[600] text-text_secondary">
-              Xalqaro Nordik <br className="max-sm:hidden block" /> Universiteti
-            </h2>
-            <hr className="bg-text_secondary h-0.5 mt-[28px]" />
-            <div className="mt-[35px]">
-              <CloseIcon
-                className="text-text_secondary sticky z-40 text-2xl"
-                onClick={closeHamburgerMenu}
-              />
-              <ul className="mt-[30px] sticky z-50">
-                {menuItems.map((menuItem: any, index: number) => (
-                  <li key={index} className="mb-4">
-                    <div
-                      className="flex items-center justify-between cursor-pointer"
-                      onClick={() => {
-                        handleAccordionToggle(menuItem.name);
-                        setTransKey(menuItem.transKey);
-                      }}
-                    >
-                      <div className="flex items-center gap-2">
-                        <h2 className="text-lg text-text_secondary font-semibold">
-                          {tMenu(`${menuItem.menuTransKey}`)}
-                        </h2>
-                      </div>
-                      {activeSubItems === menuItem.name ? (
-                        <FaChevronUp className="text-xl text-text_secondary transition-transform duration-300" />
-                      ) : (
-                        <FaChevronDown className="text-xl text-text_secondary transition-transform duration-300" />
-                      )}
-                    </div>
 
-                    <div
-                      className={`overflow-hidden ${
-                        activeSubItems === menuItem.name
-                          ? "max-h-[1000px]"
-                          : "max-h-0"
-                      }`}
-                    >
-                      <ul className="mt-2">
-                        {menuItem.subItems.map(
-                          (subItem: any, subIndex: number) => (
-                            <li
-                              onClick={() => closeHamburgerMenu()}
-                              key={subIndex}
-                              className="py-1 flex  items-center gap-2.5"
-                            >
-                              <span className="bg-text_secondary h-1.5 w-1.5 rounded-full"></span>
-                              <Link
-                                href={subItem.url}
-                                className="text-text_secondary"
-                              >
-                                {subItem.id ? subItem.name : t(subItem.name)}
-                              </Link>
-                            </li>
-                          ),
-                        )}
-                      </ul>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <Image
-          src={caricature}
-          alt="caricature"
-          className={`w-full bottom-0 ${openMenu ? "fixed" : "hidden"}`}
-        />
-      </div>
+      {/* Desktop submenu dropdown */}
       <div
-        className={`bg-[#272945] max-lg:hidden block absolute w-full min-h-[328px] z-[13] transition-all duration-500 ${
-          activeSubItems ? "top-0 opacity-100" : "top-[-100%] opacity-0"
-        }`}
-        onMouseEnter={() => {
-          setActiveSubItems(activeSubItems);
-          dispatch(setActiveMenu(true));
+        className="max-lg:hidden block absolute w-full z-[13]"
+        style={{
+          top: 0,
+          height: isSubmenuOpen ? `${contentHeight}px` : "0px",
+          opacity: isSubmenuOpen ? 1 : 0,
+          pointerEvents: isSubmenuOpen ? "auto" : "none",
+          transition: "height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease",
+          overflow: "hidden",
         }}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleSubmenuEnter}
+        onMouseLeave={handleSubmenuLeave}
       >
-        <div className="container pt-48 bottom-0 ease-linear mx-auto py-8 text-white">
-          <hr className="bg-white opacity-30 w-full mb-4" />
+        {/* Layered background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to bottom, #060d1a, rgba(10,22,40,0.98), rgba(14,31,61,0.95))",
+            backdropFilter: "blur(20px)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse at top, rgba(11,64,117,0.15), transparent 70%)",
+          }}
+        />
+
+        <div ref={contentRef} className="relative container" style={{ paddingTop: "176px", paddingBottom: "48px" }}>
+          {/* Gradient line */}
+          <div className="relative" style={{ height: "1px", marginBottom: "32px", overflow: "hidden" }}>
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(to right, transparent, rgba(56,189,248,0.25), transparent)",
+              }}
+            />
+          </div>
+
+          {/* Active menu title */}
           <div
-            ref={subItemsRef}
-            className="flex items-center flex-wrap gap-x-12 gap-y-5"
+            style={{
+              marginBottom: "24px",
+              opacity: itemsReady ? 1 : 0,
+              transform: itemsReady ? "translateY(0)" : "translateY(-8px)",
+              transition: "opacity 0.35s ease, transform 0.35s ease",
+            }}
           >
-            {activeSubItems &&
-              getSubItems(activeSubItems).map((subItem: any, index: number) => {
-                return (
-                  <div key={index} className="py-2 flex">
-                    <Link
-                      onClick={handleMouseLeave}
-                      href={subItem.url}
-                      className="hover:underline"
+            <span
+              style={{
+                fontSize: "11px",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "3px",
+                color: "rgba(56,189,248,0.6)",
+              }}
+            >
+              {visibleSubmenu &&
+                tMenu(
+                  reorderedItems.find((m: any) => m.name === visibleSubmenu)
+                    ?.menuTransKey || "",
+                )}
+            </span>
+          </div>
+
+          {/* Sub-items grid */}
+          <div
+            key={visibleSubmenu}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "4px 24px",
+            }}
+          >
+            {visibleSubmenu &&
+              getSubItems(visibleSubmenu).map(
+                (subItem: any, index: number) => (
+                  <Link
+                    key={index}
+                    onClick={() => {
+                      clearTimers();
+                      setActiveSubItems(null);
+                      setVisibleSubmenu(null);
+                      setItemsReady(false);
+                      dispatch(setActiveMenu(false));
+                    }}
+                    href={subItem.url}
+                    className="group"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      padding: "10px 16px",
+                      borderRadius: "8px",
+                      opacity: itemsReady ? 1 : 0,
+                      transform: itemsReady
+                        ? "translateY(0)"
+                        : "translateY(14px)",
+                      transition: `opacity 0.4s ease ${index * 40}ms, transform 0.4s ease ${index * 40}ms, background-color 0.2s ease`,
+                    }}
+                  >
+                    <span
+                      className="group-hover:shadow-[0_0_8px_rgba(56,189,248,0.5)]"
+                      style={{
+                        width: "5px",
+                        height: "5px",
+                        borderRadius: "50%",
+                        backgroundColor: "rgba(56,189,248,0.35)",
+                        transition: "all 0.3s ease",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontSize: "14px",
+                        color: "rgba(255,255,255,0.6)",
+                        transition: "all 0.2s ease",
+                      }}
+                      className="group-hover:!text-white group-hover:translate-x-0.5"
                     >
                       {subItem.id ? subItem.name : t(subItem.name)}
-                    </Link>
-                  </div>
-                );
-              })}
+                    </span>
+                  </Link>
+                ),
+              )}
           </div>
-          <hr className="bg-white opacity-30 mt-4 w-full" />
+
+          {/* Bottom line */}
+          <div
+            style={{
+              marginTop: "32px",
+              height: "1px",
+              background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={`fixed inset-0 z-40 transition-opacity duration-300 ${
+          openMenu
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div
+          className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+          onClick={() => {
+            setOpenMenu(false);
+            setActiveSubItems(null);
+          }}
+        />
+
+        <div
+          className={`absolute top-0 right-0 w-full max-w-[380px] h-full bg-white shadow-2xl
+            transition-transform duration-300 ease-out overflow-y-auto ${
+              openMenu ? "translate-x-0" : "translate-x-full"
+            }`}
+        >
+          <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <LanguageSelect color="black" />
+            </div>
+            <button
+              onClick={() => {
+                setOpenMenu(false);
+                setActiveSubItems(null);
+              }}
+              className="w-9 h-9 flex items-center justify-center rounded-lg
+                text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+            >
+              <HiOutlineX className="text-xl" />
+            </button>
+          </div>
+
+          <div className="px-6 py-4">
+            {menuItems.map((menuItem: any, index: number) => (
+              <div key={index} className="border-b border-gray-50 last:border-0">
+                <button
+                  className="flex items-center justify-between w-full py-4"
+                  onClick={() => {
+                    handleAccordionToggle(menuItem.name);
+                    setTransKey(menuItem.transKey);
+                  }}
+                >
+                  <span className="text-[15px] text-text_secondary font-semibold">
+                    {tMenu(`${menuItem.menuTransKey}`)}
+                  </span>
+                  <HiOutlineChevronDown
+                    className={`text-gray-400 text-sm transition-transform duration-200 ${
+                      activeSubItems === menuItem.name ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-out ${
+                    activeSubItems === menuItem.name
+                      ? "max-h-[1000px] opacity-100 pb-3"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  {menuItem.subItems.map(
+                    (subItem: any, subIndex: number) => (
+                      <Link
+                        key={subIndex}
+                        href={subItem.url}
+                        onClick={() => {
+                          setOpenMenu(false);
+                          setActiveSubItems(null);
+                        }}
+                        className="flex items-center gap-2.5 py-2 px-1 text-sm text-gray-600
+                          hover:text-text_secondary transition-colors"
+                      >
+                        <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                        {subItem.id ? subItem.name : t(subItem.name)}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="px-6 py-5 border-t border-gray-100 mt-auto">
+            <SocialMedia color="black" />
+          </div>
         </div>
       </div>
     </>
