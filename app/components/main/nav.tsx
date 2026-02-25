@@ -175,7 +175,7 @@ const Nav: FC = () => {
         className={`${isHomePage ? "bg-nav_opacity" : "max-sm:bg-primary-gradient"} ${navClass} z-[18] transition-colors`}
       >
         <div className="container">
-          <div className="relative flex items-center justify-between max-xl:py-5">
+          <div className=" relative flex items-center justify-between max-xl:py-5">
             {/* Left menu items */}
             <div className="hidden xl:flex items-center">
               <ul className="flex items-center">
@@ -268,7 +268,8 @@ const Nav: FC = () => {
           height: isSubmenuOpen ? `${contentHeight}px` : "0px",
           opacity: isSubmenuOpen ? 1 : 0,
           pointerEvents: isSubmenuOpen ? "auto" : "none",
-          transition: "height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease",
+          transition:
+            "height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease",
           overflow: "hidden",
         }}
         onMouseEnter={handleSubmenuEnter}
@@ -278,32 +279,43 @@ const Nav: FC = () => {
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, #060d1a, rgba(10,22,40,0.98), rgba(14,31,61,0.95))",
+            background:
+              "linear-gradient(to bottom, #060d1a, rgba(10,22,40,0.98), rgba(14,31,61,0.95))",
             backdropFilter: "blur(20px)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(ellipse at top, rgba(11,64,117,0.15), transparent 70%)",
+            background:
+              "radial-gradient(ellipse at top, rgba(11,64,117,0.15), transparent 70%)",
           }}
         />
 
-        <div ref={contentRef} className="relative container" style={{ paddingTop: "176px", paddingBottom: "48px" }}>
+        <div
+          ref={contentRef}
+          className="relative container"
+          style={{ paddingTop: "176px", paddingBottom: "48px" }}
+        >
           {/* Gradient line */}
-          <div className="relative" style={{ height: "1px", marginBottom: "32px", overflow: "hidden" }}>
+          <div
+            className="relative"
+            style={{ height: "1px", marginBottom: "32px", overflow: "hidden" }}
+          >
             <div
               style={{
                 position: "absolute",
                 inset: 0,
-                background: "linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent)",
+                background:
+                  "linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent)",
               }}
             />
             <div
               style={{
                 position: "absolute",
                 inset: 0,
-                background: "linear-gradient(to right, transparent, rgba(56,189,248,0.25), transparent)",
+                background:
+                  "linear-gradient(to right, transparent, rgba(56,189,248,0.25), transparent)",
               }}
             />
           </div>
@@ -344,56 +356,54 @@ const Nav: FC = () => {
             }}
           >
             {visibleSubmenu &&
-              getSubItems(visibleSubmenu).map(
-                (subItem: any, index: number) => (
-                  <Link
-                    key={index}
-                    onClick={() => {
-                      clearTimers();
-                      setActiveSubItems(null);
-                      setVisibleSubmenu(null);
-                      setItemsReady(false);
-                      dispatch(setActiveMenu(false));
-                    }}
-                    href={subItem.url}
-                    className="group"
+              getSubItems(visibleSubmenu).map((subItem: any, index: number) => (
+                <Link
+                  key={index}
+                  onClick={() => {
+                    clearTimers();
+                    setActiveSubItems(null);
+                    setVisibleSubmenu(null);
+                    setItemsReady(false);
+                    dispatch(setActiveMenu(false));
+                  }}
+                  href={subItem.url}
+                  className="group"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    padding: "10px 16px",
+                    borderRadius: "8px",
+                    opacity: itemsReady ? 1 : 0,
+                    transform: itemsReady
+                      ? "translateY(0)"
+                      : "translateY(14px)",
+                    transition: `opacity 0.4s ease ${index * 40}ms, transform 0.4s ease ${index * 40}ms, background-color 0.2s ease`,
+                  }}
+                >
+                  <span
+                    className="group-hover:shadow-[0_0_8px_rgba(56,189,248,0.5)]"
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                      padding: "10px 16px",
-                      borderRadius: "8px",
-                      opacity: itemsReady ? 1 : 0,
-                      transform: itemsReady
-                        ? "translateY(0)"
-                        : "translateY(14px)",
-                      transition: `opacity 0.4s ease ${index * 40}ms, transform 0.4s ease ${index * 40}ms, background-color 0.2s ease`,
+                      width: "5px",
+                      height: "5px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(56,189,248,0.35)",
+                      transition: "all 0.3s ease",
+                      flexShrink: 0,
                     }}
+                  />
+                  <span
+                    style={{
+                      fontSize: "14px",
+                      color: "rgba(255,255,255,0.6)",
+                      transition: "all 0.2s ease",
+                    }}
+                    className="group-hover:!text-white group-hover:translate-x-0.5"
                   >
-                    <span
-                      className="group-hover:shadow-[0_0_8px_rgba(56,189,248,0.5)]"
-                      style={{
-                        width: "5px",
-                        height: "5px",
-                        borderRadius: "50%",
-                        backgroundColor: "rgba(56,189,248,0.35)",
-                        transition: "all 0.3s ease",
-                        flexShrink: 0,
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.6)",
-                        transition: "all 0.2s ease",
-                      }}
-                      className="group-hover:!text-white group-hover:translate-x-0.5"
-                    >
-                      {subItem.id ? subItem.name : t(subItem.name)}
-                    </span>
-                  </Link>
-                ),
-              )}
+                    {subItem.id ? subItem.name : t(subItem.name)}
+                  </span>
+                </Link>
+              ))}
           </div>
 
           {/* Bottom line */}
@@ -401,7 +411,8 @@ const Nav: FC = () => {
             style={{
               marginTop: "32px",
               height: "1px",
-              background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+              background:
+                "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
             }}
           />
         </div>
@@ -447,7 +458,10 @@ const Nav: FC = () => {
 
           <div className="px-6 py-4">
             {menuItems.map((menuItem: any, index: number) => (
-              <div key={index} className="border-b border-gray-50 last:border-0">
+              <div
+                key={index}
+                className="border-b border-gray-50 last:border-0"
+              >
                 <button
                   className="flex items-center justify-between w-full py-4"
                   onClick={() => {
@@ -472,23 +486,21 @@ const Nav: FC = () => {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  {menuItem.subItems.map(
-                    (subItem: any, subIndex: number) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.url}
-                        onClick={() => {
-                          setOpenMenu(false);
-                          setActiveSubItems(null);
-                        }}
-                        className="flex items-center gap-2.5 py-2 px-1 text-sm text-gray-600
+                  {menuItem.subItems.map((subItem: any, subIndex: number) => (
+                    <Link
+                      key={subIndex}
+                      href={subItem.url}
+                      onClick={() => {
+                        setOpenMenu(false);
+                        setActiveSubItems(null);
+                      }}
+                      className="flex items-center gap-2.5 py-2 px-1 text-sm text-gray-600
                           hover:text-text_secondary transition-colors"
-                      >
-                        <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
-                        {subItem.id ? subItem.name : t(subItem.name)}
-                      </Link>
-                    ),
-                  )}
+                    >
+                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                      {subItem.id ? subItem.name : t(subItem.name)}
+                    </Link>
+                  ))}
                 </div>
               </div>
             ))}

@@ -1,6 +1,38 @@
 import { Metadata } from "next";
 
 const BASE_URL = "https://nordicuniversity.org";
+
+interface BreadcrumbItem {
+  name: string;
+  url: string; // path without lang prefix, e.g. "/press-service/news"
+}
+
+export function buildBreadcrumbJsonLd(
+  items: BreadcrumbItem[],
+  lang: string,
+): string {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Bosh sahifa",
+        item: `${BASE_URL}/${lang}`,
+      },
+      ...items.map((item, index) => {
+        const cleanUrl = item.url.startsWith("/") ? item.url : `/${item.url}`;
+        return {
+          "@type": "ListItem",
+          position: index + 2,
+          name: item.name,
+          item: `${BASE_URL}/${lang}${cleanUrl}`,
+        };
+      }),
+    ],
+  });
+}
 const LOCALES = ["uz", "en", "ru"] as const;
 const OG_LOCALE_MAP: Record<string, string> = {
   uz: "uz_UZ",

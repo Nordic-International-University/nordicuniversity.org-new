@@ -41,7 +41,8 @@ const MainFooter = () => {
       {/* Main footer */}
       <div
         style={{
-          background: "linear-gradient(135deg, #061428 0%, #0b3060 50%, #0a2448 100%)",
+          background:
+            "linear-gradient(135deg, #061428 0%, #0b3060 50%, #0a2448 100%)",
         }}
       >
         <div className="container py-16">
@@ -167,7 +168,7 @@ const MainFooter = () => {
               </form>
 
               {/* Ratings */}
-              <div className="flex items-center gap-4 mt-8">
+              <div className="flex items-center justify-between gap-4 mt-8">
                 <UzTopRating />
                 <iframe
                   src="https://www.unirank.org/uz/uni/xalqaro-nordik-universiteti/ranking/"
@@ -209,7 +210,7 @@ const MainFooter = () => {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.2!2d69.2167!3d41.3111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b27e2049127%3A0xe21c98cd8cddb40!2sNordic%20International%20University!5e0!3m2!1sen!2s!4v1700000000000"
                   width="100%"
                   height="160"
-                  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.9)" }}
+                  style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

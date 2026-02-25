@@ -1,6 +1,27 @@
+# Nordic International University
+# https://nordicuniversity.org
+
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
+Disallow: /search/
+Disallow: /*.json$
+
+User-agent: Yandexbot
+Crawl-delay: 2
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /search/
+Disallow: /*.json$
+
+User-agent: bingbot
+Crawl-delay: 1
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /search/
+Disallow: /*.json$
 
 Sitemap: https://nordicuniversity.org/sitemap.xml

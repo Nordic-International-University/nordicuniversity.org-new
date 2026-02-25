@@ -4,6 +4,8 @@ import { CooperationPhotoGallery } from "@/types/templates/international-meeatin
 import { Image } from "antd";
 import { getTranslations } from "next-intl/server";
 import BroadCamp from "@/app/components/UI/broadCump";
+import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
 type props = React.FC<{ params: { slug: string } }>;
 
@@ -14,6 +16,33 @@ const getAllAlbumsBySlug = async (slug: string, lang: string) => {
   const json = await response.json();
   return json;
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; lang: string };
+}): Promise<Metadata> {
+  try {
+    const data: CooperationPhotoGallery = await getAllAlbumsBySlug(
+      params.slug,
+      params.lang,
+    );
+
+    return buildSeoMetadata({
+      title: `${data.name} - Nordic International University`,
+      description: `${data.name} — xalqaro uchrashuvlar fotogalereyasi, Nordic International University.`,
+      lang: params.lang,
+      path: `/partners/international-meetings-photos/${params.slug}`,
+    });
+  } catch {
+    return buildSeoMetadata({
+      title: "Fotogalereya - Nordic International University",
+      description: "Nordic International University xalqaro uchrashuvlar fotogalereyasi.",
+      lang: params.lang,
+      path: `/partners/international-meetings-photos/${params.slug}`,
+    });
+  }
+}
 
 const Page: props = async ({ params }) => {
   const data: CooperationPhotoGallery = await getAllAlbumsBySlug(

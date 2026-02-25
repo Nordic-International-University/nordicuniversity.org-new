@@ -24,6 +24,41 @@ import {
   ExternalLink,
 } from "lucide-react";
 import SocialLinks from "@/app/components/UI/SocialLinks";
+import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; lang: string };
+}): Promise<Metadata> {
+  const lang = params.lang;
+  const data: structureBySLug | any = await getAllStructuresBySlug(lang, params.slug);
+
+  if (!data) {
+    return buildSeoMetadata({
+      title: "Tashkiliy tuzilma - Nordic International University",
+      description: "Nordic International University tashkiliy tuzilmasi.",
+      lang,
+      path: "/university/structure",
+    });
+  }
+
+  return buildSeoMetadata({
+    title: `${data.name} - Nordic International University`,
+    description:
+      data.mission?.replace(/<[^>]*>/g, "").slice(0, 160) ||
+      "Nordic International University tashkiliy tuzilmasi haqida batafsil.",
+    lang,
+    path: `/university/structure/${params.slug}`,
+    image: data.image?.file_path
+      ? {
+          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${data.image.file_path}`,
+          alt: data.name,
+        }
+      : undefined,
+  });
+}
 
 // Staff Card
 const StaffDetailCard = ({

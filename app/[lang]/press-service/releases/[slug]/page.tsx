@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 import { FaClock } from "react-icons/fa";
 import { getCurrentLangServer } from "@/app/helpers/getLangForServer";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
 interface ReleaseDetailProps {
   id: string;
@@ -12,9 +13,9 @@ interface ReleaseDetailProps {
   createdAt: string;
 }
 
-async function getRelease(slug: string): Promise<ReleaseDetailProps> {
+async function getRelease(slug: string, lang: string): Promise<ReleaseDetailProps> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/press/releases/${slug}?language=${await getCurrentLangServer()}`,
+    `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/press/releases/${slug}?language=${lang}`,
     {
       next: { revalidate: 60 },
     },
@@ -26,12 +27,14 @@ async function getRelease(slug: string): Promise<ReleaseDetailProps> {
 
   return res.json();
 }
+
 export default async function ReleasePage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; lang: string };
 }) {
-  const release = await getRelease(params.slug);
+  const lang = await getCurrentLangServer();
+  const release = await getRelease(params.slug, lang);
 
   return (
     <article className="container">
@@ -59,21 +62,12 @@ export async function generateMetadata({
 }: {
   params: { slug: string; lang: string };
 }): Promise<Metadata> {
-  const release = await getRelease(params.slug);
-  const baseUrl = "https://nordicuniversity.org";
-  const pagePath = `/press-service/releases/${params.slug}`;
+  const release = await getRelease(params.slug, params.lang);
 
-  return {
-    title: release.title,
-    description: release.body.slice(0, 160),
-    alternates: {
-      canonical: `${baseUrl}/${params.lang}${pagePath}`,
-      languages: {
-        uz: `${baseUrl}/uz${pagePath}`,
-        en: `${baseUrl}/en${pagePath}`,
-        ru: `${baseUrl}/ru${pagePath}`,
-        "x-default": `${baseUrl}/uz${pagePath}`,
-      },
-    },
-  };
+  return buildSeoMetadata({
+    title: `${release.title} - Nordic International University`,
+    description: release.body.replace(/<[^>]*>/g, "").slice(0, 160),
+    lang: params.lang,
+    path: `/press-service/releases/${params.slug}`,
+  });
 }

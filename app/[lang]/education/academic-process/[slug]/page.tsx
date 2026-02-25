@@ -34,6 +34,7 @@ export async function generateMetadata({
       title: event.name,
       description: event.description,
       url: `${baseUrl}/${lang}${pagePath}`,
+      siteName: "Nordic International University",
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${event.image.file_path}`,

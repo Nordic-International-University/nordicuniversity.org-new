@@ -15,6 +15,42 @@ import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { Event } from "@/types/templates/international-meeating";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
+import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; lang: string };
+}): Promise<Metadata> {
+  const lang = params.lang;
+  const data: Event = await getMeetingBySlug(params.slug, lang);
+
+  if (!data) {
+    return buildSeoMetadata({
+      title: "Grantlar va stajirovkalar - Nordic International University",
+      description:
+        "Nordic International University grantlar va stajirovkalar dasturlari haqida ma'lumot.",
+      lang,
+      path: "/partners/scholarships-and-internships",
+    });
+  }
+
+  return buildSeoMetadata({
+    title: `${data.name} - Nordic International University`,
+    description:
+      data.body?.replace(/<[^>]*>/g, "").slice(0, 160) ||
+      "Grantlar va stajirovkalar haqida batafsil ma'lumot.",
+    lang,
+    path: `/partners/scholarships-and-internships/${params.slug}`,
+    image: data.image?.file_path
+      ? {
+          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${data.image.file_path}`,
+          alt: data.name,
+        }
+      : undefined,
+  });
+}
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();

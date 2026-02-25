@@ -15,6 +15,36 @@ import { meetingType, timeFilter } from "@/types/api/apiTypes";
 import { Event } from "@/types/templates/international-meeating";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
+import { Metadata } from "next";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; lang: string };
+}): Promise<Metadata> {
+  try {
+    const event: Event = await getMeetingBySlug(params.slug, params.lang);
+    const imageUrl = event?.image?.file_path
+      ? `${process.env.NEXT_PUBLIC_URL_BACKEND}${event.image.file_path}`
+      : undefined;
+
+    return buildSeoMetadata({
+      title: `${event.name} - Nordic International University`,
+      description: event.description || `${event.name} — Nordic International University.`,
+      lang: params.lang,
+      path: `/partners/forum-and-projects/${params.slug}`,
+      ...(imageUrl && { image: { url: imageUrl, alt: event.name } }),
+    });
+  } catch {
+    return buildSeoMetadata({
+      title: "Forum va loyihalar - Nordic International University",
+      description: "Nordic International University forum va loyihalar sahifasi.",
+      lang: params.lang,
+      path: `/partners/forum-and-projects/${params.slug}`,
+    });
+  }
+}
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const lang = await getCurrentLangServer();

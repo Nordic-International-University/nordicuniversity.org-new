@@ -79,7 +79,7 @@ const LeftSidebarAndComponent = ({
   return (
     <div className="container mt-10 flex items-start gap-10 max-lg:gap-0">
       {/* Sidebar */}
-      <aside className="w-[230px] flex-shrink-0 max-lg:hidden sticky top-6">
+      <aside className="w-[230px] flex-shrink-0 max-lg:hidden sticky top-24 self-start max-h-[calc(100vh-7rem)] overflow-y-auto" style={{ scrollbarWidth: "thin" }}>
         <nav className="flex flex-col">
           {combinedItems.map((item: any, index) => (
             <Link key={index} href={item.url}>

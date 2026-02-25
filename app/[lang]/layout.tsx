@@ -63,7 +63,7 @@ export async function generateMetadata({
       siteName: "Nordic International University",
       images: [
         {
-          url: "/images/og-image.jpg",
+          url: "https://nordicuniversity.org/images/og-image.jpg",
           width: 1200,
           height: 630,
           alt: "Nordic International University",
@@ -82,7 +82,7 @@ export async function generateMetadata({
       title: "Nordic International University",
       description:
         "Nordic International University rasmiy veb-sahifasi. Innovatsion ta'lim va global yetakchilik markazi.",
-      images: ["/images/og-image.jpg"],
+      images: ["https://nordicuniversity.org/images/og-image.jpg"],
     },
   };
 }
@@ -103,6 +103,61 @@ export default async function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Nordic International University",
+              url: "https://nordicuniversity.org",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `https://nordicuniversity.org/${params.lang}/search/{search_term_string}`,
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "Nordic International University",
+              alternateName: [
+                "Xalqaro Nordik Universiteti",
+                "Международный университет Нордик",
+              ],
+              url: "https://nordicuniversity.org",
+              logo: "https://nordicuniversity.org/university_logo.svg",
+              sameAs: [
+                "https://t.me/nordic_edu",
+                "https://www.youtube.com/@nordic_university",
+                "https://www.facebook.com/nordicuniversity.edu",
+                "https://www.linkedin.com/company/nordic-international-university/",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Amir Temur shox ko'chasi, 161",
+                addressLocality: "Toshkent",
+                addressCountry: "UZ",
+                postalCode: "100084",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+998555084400",
+                email: "info@nordicuniversity.org",
+                contactType: "admissions",
+                availableLanguage: ["uz", "en", "ru"],
+              },
+            }),
+          }}
+        />
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"

@@ -91,6 +91,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [active, setActive] = useState<A11yKey[]>([]);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
   const mobileRef = useRef<HTMLDivElement>(null);
   const guideRef = useRef<HTMLDivElement>(null);
@@ -103,6 +104,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
   const navClass = isHomePage || menuItems ? "nav-bg-opacity" : "bg-dark_blue_color";
 
   useEffect(() => {
+    setMounted(true);
     const s = loadA11y();
     setActive(s);
     s.forEach((k) => document.documentElement.classList.add(`a11y-${k}`));
@@ -347,7 +349,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 onClick={() => dispatch(handleOpenSearchModal())}
                 className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               >
-                <HiOutlineSearch className="text-white text-sm" />
+                <HiOutlineSearch className="text-white text-base" />
               </button>
 
               <button
@@ -357,7 +359,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
                 }`}
                 title={a("title")}
               >
-                <HiOutlineEye className="text-white text-sm" />
+                <HiOutlineEye className="text-white text-base" />
                 {active.length > 0 && (
                   <span
                     className="absolute -top-0.5 -right-0.5 rounded-full text-[8px] font-bold flex items-center justify-center text-white"
@@ -371,20 +373,20 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
               <Link
                 href="https://www.green.nordicuniversity.org/"
                 target="_blank"
-                className="px-3.5 py-1.5 bg-[#2d6a31] text-white text-xs font-medium rounded-full hover:bg-[#245828] transition-colors uppercase"
+                className="px-3.5 py-1.5 bg-[#2d6a31] text-white text-sm font-medium rounded-full hover:bg-[#245828] transition-colors uppercase"
               >
                 {buttons("green_university")}
               </Link>
 
               <div className="hidden lg:flex items-center gap-1">
                 {props.slice(0, 3).map((r, i) => (
-                  <Link key={i} href={r.link} target="_blank" className="px-2.5 py-1 text-white/80 hover:text-white text-xs uppercase transition-colors">
+                  <Link key={i} href={r.link} target="_blank" className="px-2.5 py-1 text-white/80 hover:text-white text-sm uppercase transition-colors">
                     {r.name}
                   </Link>
                 ))}
                 {props.length > 3 && (
                   <div ref={moreRef} className="relative">
-                    <button onClick={() => setMoreOpen(!moreOpen)} className="flex items-center gap-1 px-2.5 py-1 text-white/80 hover:text-white text-xs transition-colors">
+                    <button onClick={() => setMoreOpen(!moreOpen)} className="flex items-center gap-1 px-2.5 py-1 text-white/80 hover:text-white text-sm transition-colors">
                       {t("more")}
                       <HiOutlineChevronDown className={`text-[10px] transition-transform duration-200 ${moreOpen ? "rotate-180" : ""}`} />
                     </button>
@@ -404,7 +406,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
 
             <div className="flex items-center gap-2">
               <Link href="/anthem" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                <IoMusicalNotes className="text-white text-sm" />
+                <IoMusicalNotes className="text-white text-base" />
               </Link>
               <LanguageSelect color="white" />
               <div className="hidden md:block">
@@ -414,14 +416,14 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
           </div>
 
           <div className="md:hidden mt-2" ref={mobileRef}>
-            <button onClick={() => setMobileDropOpen(!mobileDropOpen)} className="flex items-center justify-center gap-1.5 w-full py-1.5 text-white/80 text-xs font-medium">
+            <button onClick={() => setMobileDropOpen(!mobileDropOpen)} className="flex items-center justify-center gap-1.5 w-full py-1.5 text-white/80 text-sm font-medium">
               {tEdu("education.recourse.sectionTitle")}
               <HiOutlineChevronDown className={`text-[10px] transition-transform duration-200 ${mobileDropOpen ? "rotate-180" : ""}`} />
             </button>
             {mobileDropOpen && (
               <div className="mt-1 bg-white/10 rounded-lg overflow-hidden backdrop-blur-sm">
                 {props.map((item, i) => (
-                  <Link key={i} href={item.link} target="_blank" onClick={() => setMobileDropOpen(false)} className="block px-4 py-2 text-xs text-white/90 hover:bg-white/10 uppercase transition-colors">
+                  <Link key={i} href={item.link} target="_blank" onClick={() => setMobileDropOpen(false)} className="block px-4 py-2 text-sm text-white/90 hover:bg-white/10 uppercase transition-colors">
                     {item.name}
                   </Link>
                 ))}
@@ -432,7 +434,7 @@ const TopNav = ({ props }: { props: Timetable[]; networks: any }) => {
       </div>
 
       {/* ─── Accessibility Drawer ─── */}
-      {createPortal(
+      {mounted && createPortal(
         <>
           <div
             className={`fixed inset-0 z-[9998] transition-opacity duration-300 ${drawerOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}

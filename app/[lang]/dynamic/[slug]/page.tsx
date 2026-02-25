@@ -14,6 +14,7 @@ import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 import { getTemplateDataBySlug } from "@/app/[lang]/dynamic/[slug]/getNewsBySlug";
 import AboutTemplate from "@/app/[lang]/(templates)/aboutTemplate";
 import Link from "next/link";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
 export const generateMetadata = async ({
   params,
@@ -23,78 +24,45 @@ export const generateMetadata = async ({
   const lang = params.lang;
   const news: any = await getTemplateDataBySlug(params.slug, lang);
 
-  const baseUrl = "https://nordicuniversity.org";
-
   if (!news) {
-    return {
-      title: "Yangiliklar - Xalqaro Nordik Universiteti",
+    return buildSeoMetadata({
+      title: "Nordic International University",
       description:
-        "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
-      openGraph: {
-        title: "Yangiliklar - Xalqaro Nordik Universiteti",
-        description:
-          "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
-        url: `${baseUrl}/${lang}/press-service`,
-        type: "website",
-        images: [
-          {
-            url: `${baseUrl}/images/default-news.jpg`,
-            alt: "Yangiliklar sahifasi",
-          },
-        ],
-      },
-      alternates: {
-        languages: {
-          uz: `${baseUrl}/uz/press-service/news`,
-          en: `${baseUrl}/en/press-service/news`,
-          ru: `${baseUrl}/ru/press-service/news`,
-        },
-        canonical: `${baseUrl}/press-service/news`,
-      },
-    };
+        "Nordic International University rasmiy veb-sahifasi.",
+      lang,
+      path: `/dynamic/${params.slug}`,
+    });
   }
 
   if (news.template_type === "aboutTemplate") {
-    return {
-      title: `${news.subPage_name || "About"} - Xalqaro Nordik Universiteti`,
-      description: "Xalqaro Nordik Universiteti",
-    };
+    return buildSeoMetadata({
+      title: `${news.subPage_name || "About"} - Nordic International University`,
+      description:
+        news.body?.replace(/<[^>]*>/g, "").slice(0, 160) ||
+        "Nordic International University haqida ma'lumot.",
+      lang,
+      path: `/dynamic/${params.slug}`,
+    });
   }
 
-  return {
-    title: `${news.name} - Xalqaro Nordik Universiteti`,
+  return buildSeoMetadata({
+    title: `${news.name} - Nordic International University`,
     description:
-      news.description || "Yangilik haqida batafsil ma'lumot oling.",
+      news.description || "Batafsil ma'lumot oling.",
+    lang,
+    path: `/dynamic/${params.slug}`,
     keywords: [
-      "Yangiliklar",
-      "Xalqaro Nordik Universiteti",
+      "Nordic International University",
       news.title,
-      "Tadqiqotlar",
-      "Ilmiy yangiliklar",
       news.keywords,
-    ],
-    openGraph: {
-      title: `${news.title} - Xalqaro Nordik Universiteti`,
-      description:
-        news.description || "Yangilik haqida batafsil ma'lumot oling.",
-      url: `${baseUrl}/${lang}/dynamic/${params.slug}`,
-      type: "article",
-      images: [
-        {
-          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news?.image?.file_path}`,
-          alt: news.title,
-        },
-      ],
-    },
-    alternates: {
-      languages: {
-        uz: `${baseUrl}/uz/dynamic/${params.slug}`,
-        en: `${baseUrl}/en/dynamic/${params.slug}`,
-        ru: `${baseUrl}/ru/dynamic/${params.slug}`,
-      },
-      canonical: `${baseUrl}/${lang}/dynamic/${params.slug}`,
-    },
-  };
+    ].filter(Boolean),
+    image: news?.image?.file_path
+      ? {
+          url: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
+          alt: news.title || news.name,
+        }
+      : undefined,
+  });
 };
 
 const Page = async ({ params }: { params: { slug: string } }) => {

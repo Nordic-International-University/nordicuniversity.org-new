@@ -14,6 +14,7 @@ import MinimalCard from "@/app/components/UI/smallNewsCard";
 import { NewsItem } from "@/types/templates/newsSlider.type";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
+import { buildBreadcrumbJsonLd } from "@/app/helpers/seoMetadata";
 
 export const generateMetadata = async ({
   params,
@@ -35,6 +36,7 @@ export const generateMetadata = async ({
         description:
           "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
         url: `${baseUrl}/${lang}/press-service/news`,
+        siteName: "Nordic International University",
         type: "website",
         images: [
           {
@@ -43,20 +45,21 @@ export const generateMetadata = async ({
           },
         ],
       },
+      twitter: {
+        card: "summary_large_image" as const,
+        title: "Yangiliklar - Xalqaro Nordik Universiteti",
+        description:
+          "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
+        images: [`${baseUrl}/images/default-news.jpg`],
+      },
       alternates: {
         languages: {
           uz: `${baseUrl}/uz/press-service/news`,
           en: `${baseUrl}/en/press-service/news`,
           ru: `${baseUrl}/ru/press-service/news`,
+          "x-default": `${baseUrl}/uz/press-service/news`,
         },
-        canonical: `${baseUrl}/press-service/news`,
-      },
-      structuredData: {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Yangiliklar - Xalqaro Nordik Universiteti",
-        description:
-          "Xalqaro Nordik Universitetining yangiliklari haqida to'liq ma'lumot.",
+        canonical: `${baseUrl}/${lang}/press-service/news`,
       },
     };
   }
@@ -77,6 +80,7 @@ export const generateMetadata = async ({
       description:
         news.description || "Yangilik haqida batafsil ma'lumot oling.",
       url: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
+      siteName: "Nordic International University",
       type: "article",
       images: [
         {
@@ -85,40 +89,28 @@ export const generateMetadata = async ({
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${news.title} - Xalqaro Nordik Universiteti`,
+      description:
+        news.description || "Yangilik haqida batafsil ma'lumot oling.",
+      images: [
+        `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
+      ],
+    },
     alternates: {
       languages: {
         uz: `${baseUrl}/uz/press-service/news/${params.slug}`,
         en: `${baseUrl}/en/press-service/news/${params.slug}`,
         ru: `${baseUrl}/ru/press-service/news/${params.slug}`,
+        "x-default": `${baseUrl}/uz/press-service/news/${params.slug}`,
       },
       canonical: `${baseUrl}/${lang}/press-service/news/${params.slug}`,
-    },
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      headline: news.title,
-      description:
-        news.description || "Yangilik haqida batafsil ma'lumot oling.",
-      datePublished: news.createdAt,
-      dateModified: news.updatedAt,
-      author: {
-        "@type": "Organization",
-        name: "Xalqaro Nordik Universiteti",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "Xalqaro Nordik Universiteti",
-        logo: {
-          "@type": "ImageObject",
-          url: `${baseUrl}/logo.png`,
-        },
-      },
-      image: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
     },
   };
 };
 
-const Page = async ({ params }: { params: { slug: string } }) => {
+const Page = async ({ params }: { params: { slug: string; lang: string } }) => {
   const lang = await getCurrentLangServer();
   const requestHeaders = headers();
 
@@ -143,8 +135,51 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     },
   ];
 
+  const baseUrl = "https://nordicuniversity.org";
+
+  const newsArticleJsonLd = news
+    ? JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        headline: news.title,
+        description:
+          news.description || "Yangilik haqida batafsil ma'lumot oling.",
+        datePublished: news.createdAt,
+        dateModified: news.updatedAt,
+        author: {
+          "@type": "Organization",
+          name: "Nordic International University",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Nordic International University",
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/university_logo.svg`,
+          },
+        },
+        image: `${process.env.NEXT_PUBLIC_URL_BACKEND}${news.image.file_path}`,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${baseUrl}/${lang}/press-service/news/${params.slug}`,
+        },
+      })
+    : null;
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(brodCmbItems, lang);
+
   return (
     <article className="container mx-auto px-4 lg:px-8" id="printable">
+      {newsArticleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: newsArticleJsonLd }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}
+      />
       <div className="mt-8">
         <h2 className="text-tertiary max-sm:text-center max-sm:text-lg text-2xl font-bold pb-3">
           {t("news.sectionTitle")}

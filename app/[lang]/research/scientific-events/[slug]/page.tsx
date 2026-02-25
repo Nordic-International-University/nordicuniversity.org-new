@@ -15,6 +15,7 @@ import { ScientificEvent } from "@/types/research/scince_events";
 import { headers } from "next/headers";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 import SocialLinks from "@/app/components/UI/SocialLinks";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
 export const generateMetadata = async ({
   params,
@@ -27,31 +28,42 @@ export const generateMetadata = async ({
   const pagePath = `/research/scientific-events/${params.slug}`;
 
   if (!event) {
-    return {
+    return buildSeoMetadata({
       title: "Ilmiy tadbirlar - Xalqaro Nordik Universiteti",
       description:
         "Xalqaro Nordik Universiteti tomonidan o'tkazilgan ilmiy tadbirlar haqida to'liq ma'lumot.",
-    };
+      lang,
+      path: `/research/scientific-events/${params.slug}`,
+    });
   }
 
+  const imageUrl = process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path;
+  const title = `${event.name} - Ilmiy tadbir - Nordic International University`;
+  const description =
+    event.description ||
+    "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.";
+
   return {
-    title: `${event.name} - Ilmiy tadbir - Xalqaro Nordik Universiteti`,
-    description:
-      event.description ||
-      "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
+    title,
+    description,
     openGraph: {
-      title: `${event.name} - Ilmiy tadbir - Xalqaro Nordik Universiteti`,
-      description:
-        event.description ||
-        "Mazkur ilmiy tadbir haqida batafsil ma'lumotni ko'ring.",
+      title,
+      description,
       url: `${baseUrl}/${lang}${pagePath}`,
+      siteName: "Nordic International University",
       type: "article",
       images: [
         {
-          url: process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path,
+          url: imageUrl,
           alt: event.name,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
     },
     alternates: {
       canonical: `${baseUrl}/${lang}${pagePath}`,

@@ -33,7 +33,7 @@ export default function middleware(req: NextRequest) {
   const lang = cookieLang && locales.includes(cookieLang) ? cookieLang : "uz";
   const url = req.nextUrl.clone();
   url.pathname = `/${lang}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(url, 307);
+  return NextResponse.redirect(url, 308);
 }
 
 export const config = {

@@ -15,6 +15,7 @@ import { headers } from "next/headers";
 import { getEventBySlug } from "@/app/[lang]/research/scientific-events/[slug]/getNewsBySlug";
 import SinglePageGallery from "@/app/components/UI/singlePageGallery";
 import SocialLinks from "@/app/components/UI/SocialLinks";
+import { buildSeoMetadata } from "@/app/helpers/seoMetadata";
 
 export const generateMetadata = async ({
   params,
@@ -27,31 +28,42 @@ export const generateMetadata = async ({
   const pagePath = `/research/scientific-conferences/${params.slug}`;
 
   if (!event) {
-    return {
+    return buildSeoMetadata({
       title: "Ilmiy Konferensiyalar - Xalqaro Nordik Universiteti",
       description:
         "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida to'liq ma'lumot.",
-    };
+      lang,
+      path: `/research/scientific-conferences/${params.slug}`,
+    });
   }
 
+  const imageUrl = process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path;
+  const title = `${event.name} - Nordic International University`;
+  const description =
+    event.description ||
+    "Nordic International University ilmiy konferensiyalari haqida batafsil ma'lumot oling.";
+
   return {
-    title: `${event.name} - Xalqaro Nordik Universiteti`,
-    description:
-      event.description ||
-      "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma'lumot oling.",
+    title,
+    description,
     openGraph: {
-      title: `${event.name} - Xalqaro Nordik Universiteti`,
-      description:
-        event.description ||
-        "Xalqaro Nordik Universitetining ilmiy konferensiyalari haqida batafsil ma'lumot oling.",
+      title,
+      description,
       url: `${baseUrl}/${lang}${pagePath}`,
+      siteName: "Nordic International University",
       type: "article",
       images: [
         {
-          url: process.env.NEXT_PUBLIC_URL_BACKEND + event.image.file_path,
+          url: imageUrl,
           alt: event.name,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
     },
     alternates: {
       canonical: `${baseUrl}/${lang}${pagePath}`,

@@ -490,9 +490,6 @@ code {
     transform: rotateY(180deg);
 }
 
-body {
-    overflow-y: hidden;
-}
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -523,16 +520,10 @@ body {
 
 html,
 body {
-    overflow-x: hidden;
-    /* Gorizontal scrollni to'liq to'xtatish */
+    overflow-x: clip;
+    /* Gorizontal scrollni to'xtatish, sticky buzilmasin */
     margin: 0;
     padding: 0;
-}
-
-section,
-aside {
-
-    overflow-x: hidden;
 }
 
 @layer base {
