@@ -28,9 +28,10 @@ export async function GET() {
         { next: { revalidate: 3600 } },
       );
       if (!res.ok) continue;
-      const data = await res.json();
+      const json = await res.json();
+      const items = Array.isArray(json) ? json : json?.data || [];
 
-      for (const item of data || []) {
+      for (const item of items) {
         const existing = itemsMap.get(item.id) || {
           slug_uz: "",
           slug_en: "",
